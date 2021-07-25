@@ -39,7 +39,7 @@
 
 ### Before you run the script, I strongly recommend that you read the Tips section.
 
-- Running the script and.
+- Run the script and select the option you want.
 
 <p align="center">
   <img width="780px" src="https://raw.githubusercontent.com/Oleg-Chashko/Shell-Script-Toolkit/main/Images/Running_script_2.png" />
@@ -58,6 +58,7 @@
 
 #### Installing the Xcode Command Line Tools:
 
+🟡 _Some functions require: Xcode or Xcode Command Line Tools._
 1. Press `Command` + `Space Bar` on your Mac Keyboard.
 2. Type in `Terminal`
 3. When you see Terminal in the Spotlight search list, click it to open the app.
@@ -67,7 +68,7 @@
 
 #### Uninstalling the Xcode Command Line Tools:
 
-🔴 _You will need a password to obtain elevated rights._<br>
+🔴 _You will need a password to obtain elevated rights._
 1. Input the following command string in Terminal: `sudo rm -rf /Library/Developer/CommandLineTools`
 2. Wait for the Xcode Command Line Tools package to uninstall, once everything is uninstalled, you can close the terminal window.
 
