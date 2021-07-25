@@ -43,7 +43,7 @@
   <br><br>
 
 <p align="center">
-  <img width="690px" src="https://raw.githubusercontent.com/Oleg-Chashko/Shell-Script-Toolkit/main/Images/Running_script_2.gif" />
+  <img width="920px" src="https://raw.githubusercontent.com/Oleg-Chashko/Shell-Script-Toolkit/main/Images/Running_script_2.png" />
 </p>
 <br>
 
@@ -64,43 +64,43 @@
 Press `Command` + `Space Bar` on your Mac Keyboard.
 
 <p align="center">
-  <img width="790px" src="https://raw.githubusercontent.com/Oleg-Chashko/Shell-Script-Toolkit/main/Images/Installing_XCLT_1.png" />
+  <img width="920px" src="https://raw.githubusercontent.com/Oleg-Chashko/Shell-Script-Toolkit/main/Images/Installing_XCLT_1.png" />
 </p>
 
 2. Type in `Terminal`
 
 <p align="center">
-  <img width="790px" src="https://raw.githubusercontent.com/Oleg-Chashko/Shell-Script-Toolkit/main/Images/Installing_XCLT_2.png" />
+  <img width="920px" src="https://raw.githubusercontent.com/Oleg-Chashko/Shell-Script-Toolkit/main/Images/Installing_XCLT_2.png" />
 </p>
 
 3. When you see Terminal in the Spotlight search list, click it to open the app.
 
 <p align="center">
-  <img width="790px" src="https://raw.githubusercontent.com/Oleg-Chashko/Shell-Script-Toolkit/main/Images/Installing_XCLT_3.png" />
+  <img width="920px" src="https://raw.githubusercontent.com/Oleg-Chashko/Shell-Script-Toolkit/main/Images/Installing_XCLT_3.png" />
 </p>
 
 4. Input the following command string in Terminal: `xcode-select --install`
 
 <p align="center">
-  <img width="790px" src="https://raw.githubusercontent.com/Oleg-Chashko/Shell-Script-Toolkit/main/Images/Installing_XCLT_4.png" />
+  <img width="920px" src="https://raw.githubusercontent.com/Oleg-Chashko/Shell-Script-Toolkit/main/Images/Installing_XCLT_4.png" />
 </p>
 
 5. Select confirm by clicking Install.
 
 <p align="center">
-  <img width="790px" src="https://raw.githubusercontent.com/Oleg-Chashko/Shell-Script-Toolkit/main/Images/Installing_XCLT_5.png" />
+  <img width="920px" src="https://raw.githubusercontent.com/Oleg-Chashko/Shell-Script-Toolkit/main/Images/Installing_XCLT_5.png" />
 </p>
 <p align="center">
-  <img width="790px" src="https://raw.githubusercontent.com/Oleg-Chashko/Shell-Script-Toolkit/main/Images/Installing_XCLT_6.png" />
+  <img width="920px" src="https://raw.githubusercontent.com/Oleg-Chashko/Shell-Script-Toolkit/main/Images/Installing_XCLT_6.png" />
 </p>
 <p align="center">
-  <img width="790px" src="https://raw.githubusercontent.com/Oleg-Chashko/Shell-Script-Toolkit/main/Images/Installing_XCLT_7.png" />
+  <img width="920px" src="https://raw.githubusercontent.com/Oleg-Chashko/Shell-Script-Toolkit/main/Images/Installing_XCLT_7.png" />
 </p>
 
 6. Wait for the Xcode Command Line Tools package to install, once everything is installed, press the `Done` button.
 
 <p align="center">
-  <img width="790px" src="https://raw.githubusercontent.com/Oleg-Chashko/Shell-Script-Toolkit/main/Images/Installing_XCLT_8.png" />
+  <img width="920px" src="https://raw.githubusercontent.com/Oleg-Chashko/Shell-Script-Toolkit/main/Images/Installing_XCLT_8.png" />
 </p>
 
 #### Uninstalling the Xcode Command Line Tools:
@@ -110,7 +110,7 @@ _You will need a password to obtain elevated rights._<br>
 2. Wait for the Xcode Command Line Tools package to uninstall, once everything is uninstalled, you can close the terminal window.
 
 <p align="center">
-  <img width="790px" src="https://raw.githubusercontent.com/Oleg-Chashko/Shell-Script-Toolkit/main/Images/Uninstalling_XCLT_1.png" />
+  <img width="920px" src="https://raw.githubusercontent.com/Oleg-Chashko/Shell-Script-Toolkit/main/Images/Uninstalling_XCLT_1.png" />
 </p>
 
 #### Terminal error: "zsh: permission denied"
