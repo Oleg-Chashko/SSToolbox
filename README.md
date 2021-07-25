@@ -16,28 +16,26 @@
 
 <p align="center">
   <a href="https://github.com/Oleg-Chashko/Shell-Script-Toolkit/releases/latest">
-  <img alt="Latest stable release" src="https://img.shields.io/github/release/Oleg-Chashko/Shell-Script-Toolkit.svg?style=flat-square&label=Release" />
+  <img alt="Latest stable release" src="https://img.shields.io/github/release/Oleg-Chashko/Shell-Script-Toolkit.svg?style=flat-square" />
 </a>
   <a href="https://github.com/Oleg-Chashko/Shell-Script-Toolkit/releases/latest/">
-  <img alt="Download count" src="https://img.shields.io/github/downloads/Oleg-Chashko/Shell-Script-Toolkit/total.svg?style=flat-square&label=Downloads" />
+  <img alt="Download count" src="https://img.shields.io/github/downloads/Oleg-Chashko/Shell-Script-Toolkit/total.svg?style=flat-square" />
 </a>
   <a href="https://github.com/Oleg-Chashko/Shell-Script-Toolkit/commits/master">
-  <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/Oleg-Chashko/Shell-Script-Toolkit.svg?style=flat-square&label=Last commit" />
+  <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/Oleg-Chashko/Shell-Script-Toolkit.svg?style=flat-square" />
 </a>
   <a href="https://github.com/Oleg-Chashko/Shell-Script-Toolkit/issues">
-  <img alt="GitHub issues" src="https://img.shields.io/github/issues-raw/Oleg-Chashko/Shell-Script-Toolkit.svg?style=flat-square&label=Open issues" />
+  <img alt="GitHub issues" src="https://img.shields.io/github/issues-raw/Oleg-Chashko/Shell-Script-Toolkit.svg?style=flat-square" />
 </a>
   <a href="https://github.com/Oleg-Chashko/Shell-Script-Toolkit/stargazers">
-  <img alt="Stars" src="https://img.shields.io/github/stars/Oleg-Chashko/Shell-Script-Toolkit.svg?style=flat-square&label=Stars" />
+  <img alt="Stars" src="https://img.shields.io/github/stars/Oleg-Chashko/Shell-Script-Toolkit.svg?style=flat-square" />
 </a>
   <a href="https://github.com/Oleg-Chashko/Shell-Script-Toolkit/network/members">
-  <img alt="Forks" src="https://img.shields.io/github/forks/Oleg-Chashko/Shell-Script-Toolkit.svg?style=flat-square&label=Forks" />
+  <img alt="Forks" src="https://img.shields.io/github/forks/Oleg-Chashko/Shell-Script-Toolkit.svg?style=flat-square" />
 </a>
 </p>
 
 ## Preview
-
-#### Currently: Uninstaller for AdGuard for Safari app extension.
 
 ### Before you run the script, I strongly recommend that you read the Tips section.
 
