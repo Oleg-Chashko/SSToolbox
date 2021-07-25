@@ -39,8 +39,7 @@
 
 ### Before you run the script, I strongly recommend that you read the Tips section.
 
-- Running the script and uninstalls the application.
-- You will receive the instructions in text version `(SV)` or version `(ADfA)` with text and Audio Description.
+- Running the script and.
   <br><br>
 
 <p align="center">
@@ -52,44 +51,66 @@
 
 - Easy to use.
 - Editing the script.
-- Standard version - `(SV)`
-- Audio Description of Actions - `(ADfA)`
 
 ## Download
 
 - (Standard version) [Download](https://github.com/Oleg-Chashko/Shell-Script-Toolkit/releases)
-- (Audio Description of Actions version) [Download](https://github.com/Oleg-Chashko/Shell-Script-Toolkit/releases)
 
 ## Tips
 
-#### Terminal error: “Operation not permitted”
+#### Installing the Xcode Command Line Tools:
+
+1. On your Mac open Terminal using Spotlight with these steps:<br>
+Press `Command` + `Space Bar` on your Mac Keyboard.
 
 <p align="center">
-  <img width="790px" src="https://raw.githubusercontent.com/Oleg-Chashko/Shell-Script-Toolkit/main/Images/Operation_not_permitted.png" />
+  <img width="790px" src="https://raw.githubusercontent.com/Oleg-Chashko/Shell-Script-Toolkit/main/Images/Installing_XCLT_1.png" />
 </p>
 
-#### Enabling Full Disk Access in macOS for the terminal:
-
-1. Pull down the ` Apple menu` and choose `System Preferences`.
-2. Choose `Security & Privacy` control panel.
-3. Now select the `Privacy` tab, then from the left-side menu select `Full Disk Access`.
-4. Click the lock icon in the lower left corner of the preference panel and authenticate with an admin level login.
-5. Now click the `[+]` plus button to add an application with full disk access.
+2. Type in `Terminal`
 
 <p align="center">
-  <img width="800px" src="https://raw.githubusercontent.com/Oleg-Chashko/Shell-Script-Toolkit/main/Images/Terminal_1.png" />
+  <img width="790px" src="https://raw.githubusercontent.com/Oleg-Chashko/Shell-Script-Toolkit/main/Images/Installing_XCLT_2.png" />
 </p>
 
-6. Navigate to the `/Applications/Utilities/` folder.
+3. When you see Terminal in the Spotlight search list, click it to open the app.
 
 <p align="center">
-  <img width="790px" src="https://raw.githubusercontent.com/Oleg-Chashko/Shell-Script-Toolkit/main/Images/Terminal_2.png" />
+  <img width="790px" src="https://raw.githubusercontent.com/Oleg-Chashko/Shell-Script-Toolkit/main/Images/Installing_XCLT_3.png" />
 </p>
 
-7. Choose `Terminal` to grant Terminal with `Full Disk Access` privileges.
+4. Input the following command string in Terminal: `xcode-select --install`
 
 <p align="center">
-  <img width="790px" src="https://raw.githubusercontent.com/Oleg-Chashko/Shell-Script-Toolkit/main/Images/Terminal_3.png" />
+  <img width="790px" src="https://raw.githubusercontent.com/Oleg-Chashko/Shell-Script-Toolkit/main/Images/Installing_XCLT_4.png" />
+</p>
+
+5. Select confirm by clicking Install.
+
+<p align="center">
+  <img width="790px" src="https://raw.githubusercontent.com/Oleg-Chashko/Shell-Script-Toolkit/main/Images/Installing_XCLT_5.png" />
+</p>
+<p align="center">
+  <img width="790px" src="https://raw.githubusercontent.com/Oleg-Chashko/Shell-Script-Toolkit/main/Images/Installing_XCLT_6.png" />
+</p>
+<p align="center">
+  <img width="790px" src="https://raw.githubusercontent.com/Oleg-Chashko/Shell-Script-Toolkit/main/Images/Installing_XCLT_7.png" />
+</p>
+
+6. Wait for the Xcode Command Line Tools package to install, once everything is installed, press the `Done` button.
+
+<p align="center">
+  <img width="790px" src="https://raw.githubusercontent.com/Oleg-Chashko/Shell-Script-Toolkit/main/Images/Installing_XCLT_8.png" />
+</p>
+
+#### Uninstalling the Xcode Command Line Tools:
+
+_You will need a password to obtain elevated rights._<br>
+1. Input the following command string in Terminal: `sudo rm -rf /Library/Developer/CommandLineTools`
+2. Wait for the Xcode Command Line Tools package to uninstall, once everything is uninstalled, you can close the terminal window.
+
+<p align="center">
+  <img width="790px" src="https://raw.githubusercontent.com/Oleg-Chashko/Shell-Script-Toolkit/main/Images/Uninstalling_XCLT_1.png" />
 </p>
 
 #### Terminal error: "zsh: permission denied"
