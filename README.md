@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img src="https://raw.githubusercontent.com/Oleg-Chashko/Shell-Script-Toolkit/main/Images/Shell_Script_Toolkit.png" alt="ReadySunValley" width="230"></a>
+  <img width="230px" src="https://raw.githubusercontent.com/Oleg-Chashko/Shell-Script-Toolkit/main/Images/Shell_Script_Toolkit.png" alt="Shell Script Toolkit"></a>
   <br>
   Shell Script Toolkit
   <br>
