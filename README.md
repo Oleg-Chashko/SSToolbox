@@ -56,7 +56,7 @@
 
 ## Tips
 
-#### Installing the Xcode Command Line Tools:
+#### Manual installation of the Xcode Command Line Tools:
 
 ⚠ Note: _Some functions require: Xcode or Xcode Command Line Tools._
 1. Press `Command` + `Space Bar` on your Mac Keyboard.
@@ -66,7 +66,7 @@
 5. Select confirm by clicking Install and accept the license agreement.
 6. Wait for the Xcode Command Line Tools package to install, once everything is installed, press the `Done` button.
 
-#### Uninstalling the Xcode Command Line Tools:
+#### Manual uninstallation of the Xcode Command Line Tools:
 
 ⚠ Note: _You will need a password to obtain elevated rights._
 1. Input the following command string in Terminal: `sudo rm -rf /Library/Developer/CommandLineTools`
