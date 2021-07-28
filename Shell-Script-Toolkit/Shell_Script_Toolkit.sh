@@ -4,8 +4,8 @@
 printf '\e[2t' && printf '\033[3;0;0t' && printf '\033[8;45;110t' && sleep 1 && printf '\e[5t' && printf '\e[1t'
 
 # Attribute
-GITHUB_URL="https://github.com/Oleg-Chashko/"
-RELEASE_VERSION="v.0.0.1 build [06.12.2021](SV)"
+GITHUB_URL="https://github.com/Oleg-Chashko"
+RELEASE_VERSION="v.0.0.2 build [07.28.2021]"
 ROOT_PASSWORD=0
 
 # Foreground
@@ -59,8 +59,8 @@ No_Attributes='\033[0m'
 
 # Menu
 show_Menu() {
-    echo "\n                           ${F_Blue}${Bold}Welcome to SSToolkit${No_Attributes}"
-    echo "                      ${Dim}${RELEASE_VERSION}${No_Attributes}"
+    echo "\n                     ${F_Blue}${Bold}Welcome to Shell Script Toolkit${No_Attributes}"
+    echo "                       ${Dim}${RELEASE_VERSION}${No_Attributes}"
     echo "                     ${Dim}${GITHUB_URL}${No_Attributes}\n"
 
     echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}1${F_Cyan}${Bold}: ${Italic}Show GateKeeper Status${No_Attributes}"
