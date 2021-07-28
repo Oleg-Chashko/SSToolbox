@@ -39,7 +39,7 @@
 
 ### Before you run the script, I strongly recommend that you read the Tips section.
 
-- Run the script and select the option you want.
+- Run the script and select the Command you want.
 
 <p align="center">
   <img width="780px" src="https://raw.githubusercontent.com/Oleg-Chashko/Shell-Script-Toolkit/main/Images/Running_script_2.png" />

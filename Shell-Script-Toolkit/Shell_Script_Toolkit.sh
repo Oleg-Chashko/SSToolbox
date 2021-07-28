@@ -38,6 +38,9 @@ No_Bold='\033[21m' # Reset Bold
 # Dim
 Dim='\033[2m'     # Dim
 No_Dim='\033[22m' # Reset Dim
+# Italic
+Italic='\033[3m'     # Italic
+No_Italic='\033[23m' # Reset Italic
 # Underline
 ULine='\033[4m'     # Underline
 No_ULine='\033[24m' # Reset Underlined
@@ -60,31 +63,32 @@ show_Menu() {
     echo "                      ${Dim}${RELEASE_VERSION}${No_Attributes}"
     echo "                     ${Dim}${GITHUB_URL}${No_Attributes}\n"
 
-    echo "${F_Green}${Bold}Option 1: ${F_Green}Show GateKeeper Status${No_Attributes}"
-    echo "   ${F_Red}${Bold}Means:${No_Attributes} Check GateKeeper status.\n"
+    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}1${F_Cyan}${Bold}: ${Italic}Show GateKeeper Status${No_Attributes}"
+    echo "  ${F_Green}${Bold}Meaning:${No_Attributes} Check GateKeeper status\n"
 
-    echo "${F_Green}${Bold}Option 2: ${F_Green}Enable GateKeeper${No_Attributes}"
-    echo "   ${F_Red}${Bold}Means:${No_Attributes} Enables GateKeeper.\n"
+    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}2${F_Cyan}${Bold}: ${Italic}Enable GateKeeper${No_Attributes}"
+    echo "  ${F_Green}${Bold}Meaning:${No_Attributes} Enables GateKeeper\n"
 
-    echo "${F_Green}${Bold}Option 3: ${F_Green}Disable GateKeeper${No_Attributes}"
-    echo "   ${F_Red}${Bold}Means:${No_Attributes} Disables GateKeeper."
-    echo "       ${F_Cyan}${Bold}>>${No_Attributes} Caution, your actions could lead to potential security and privacy issues.\n"
+    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}3${F_Cyan}${Bold}: ${Italic}Disable GateKeeper${No_Attributes}"
+    echo "  ${F_Green}${Bold}Meaning:${No_Attributes} Disables GateKeeper"
+    echo "     ${F_Red}${Bold}Note:${No_Attributes} Caution, your actions could lead to potential security and privacy issues\n"
 
-    echo "${F_Green}${Bold}Option 4: ${F_Green}Remove app from GateKeeper quarantine${No_Attributes}"
-    echo "   ${F_Red}${Bold}Means:${No_Attributes} Allows an individual quarantined app to run.\n"
+    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}4${F_Cyan}${Bold}: ${Italic}Remove app from GateKeeper quarantine${No_Attributes}"
+    echo "  ${F_Green}${Bold}Meaning:${No_Attributes} Allows an individual quarantined app to run\n"
 
-    echo "${F_Green}${Bold}Option 5: ${F_Green}Self-sign the app${No_Attributes}"
-    echo "   ${F_Red}${Bold}Means:${No_Attributes} If GateKeeper is on and your app quits unexpectedly, try self-signing.\n"
+    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}5${F_Cyan}${Bold}: ${Italic}Self-sign the app${No_Attributes}"
+    echo "  ${F_Green}${Bold}Meaning:${No_Attributes} If GateKeeper is on and your app quits unexpectedly, try self-signing"
+    echo "     ${F_Red}${Bold}Note:${No_Attributes} Require Xcode or Xcode Command Line Tools\n"
 
-    echo "${F_Green}${Bold}Option 6: ${F_Green}List apps from unknown sources${No_Attributes}"
-    echo "   ${F_Red}${Bold}Means:${No_Attributes} List apps from unknown sources you’ve approved for use.\n"
+    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}6${F_Cyan}${Bold}: ${Italic}List apps from unknown sources${No_Attributes}"
+    echo "  ${F_Green}${Bold}Meaning:${No_Attributes} List apps from unknown sources you’ve approved for use\n"
 
-    echo "${F_Green}${Bold}Option 7: ${F_Green}Restoring the Default Gatekeeper Database${No_Attributes}"
-    echo "   ${F_Red}${Bold}Means:${No_Attributes} Restoring the Default Gatekeeper Database."
-    echo "       ${F_Cyan}${Bold}>>${No_Attributes} After resetting all gatekeeper settings, reboot the system.\n"
+    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}7${F_Cyan}${Bold}: ${Italic}Restoring the Default Gatekeeper Database${No_Attributes}"
+    echo "  ${F_Green}${Bold}Meaning:${No_Attributes} Restoring the Default Gatekeeper Database"
+    echo "     ${F_Red}${Bold}Note:${No_Attributes} After resetting all gatekeeper settings, reboot the system\n"
 
-    echo "${F_Green}${Bold}Option 9: ${F_Green}Quit${No_Attributes}"
-    echo "   ${F_Red}${Bold}Means:${No_Attributes} Deleting macOS terminal command history and Terminal to quit.\n"
+    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}9${F_Cyan}${Bold}: ${Italic}Quit${No_Attributes}"
+    echo "  ${F_Green}${Bold}Meaning:${No_Attributes} Deleting terminal command history and Terminal to quit\n"
 }
 
 # Asks password.
@@ -123,7 +127,7 @@ enableGateKeeper() {
 # Disables gatekeeper
 disableGateKeeper() {
     echo "${F_Red}•${F_Green}You chose to disable GateKeeper.${No_Attributes}"
-    echo -e "    ${F_Red}>> Danger!${No_Attributes}"
+    echo -e "    ${F_Red}-> Danger!${No_Attributes}"
     echo -e "       Disabling GateKeeper is a very bad idea and creates."
     echo -e "       a major security hole in macOS\n"
     askPassword
@@ -188,9 +192,9 @@ quit() {
     read
 }
 
-# Shows invalid option message
+# Shows invalid Command message
 showInvalid() {
-    echo "${F_Red}•An unacceptable option has been selected: ${F_Red}${Bold}${SELECTED_OPTION}${No_Attributes}"
+    echo "${F_Red}•An unacceptable Command has been selected: ${F_Red}${Bold}${SELECTED_COMMAND}${No_Attributes}"
     continueMessage
 }
 
@@ -200,9 +204,9 @@ startScript() {
         clear
         show_Menu
 
-        read "?Please select an option: " SELECTED_OPTION
+        read "?Please select an Command: " SELECTED_COMMAND
 
-        case $SELECTED_OPTION in
+        case $SELECTED_COMMAND in
         1)
             clear
             showGateKeeperStatus
