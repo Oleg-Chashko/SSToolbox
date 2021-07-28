@@ -58,10 +58,15 @@ No_Hidden='\033[28m' # Reset Hidden
 No_Attributes='\033[0m'
 
 # Menu
-show_Menu() {
-    echo "\n                     ${F_Blue}${Bold}Welcome to Shell Script Toolkit${No_Attributes}"
-    echo "                       ${Dim}${RELEASE_VERSION}${No_Attributes}"
-    echo "                     ${Dim}${GITHUB_URL}${No_Attributes}\n"
+show_Menu(){
+    echo "\n                                     ${F_Blue}${Bold}Welcome to Shell Script Toolkit${No_Attributes}"
+    echo "                                       ${Dim}${RELEASE_VERSION}${No_Attributes}"
+    echo "                                     ${Dim}${GITHUB_URL}${No_Attributes}\n"
+
+    echo "                        ********************************************************"
+    echo "                        * ${F_Cyan}${Bold}Command ${F_Red}${Bold}i${F_Cyan}${Bold}: ${Italic}Installing the Xcode Command Line Tools${No_Attributes}   *"
+    echo "                        * ${F_Cyan}${Bold}Command ${F_Red}${Bold}u${F_Cyan}${Bold}: ${Italic}Uninstalling the Xcode Command Line Tools${No_Attributes} *"
+    echo "                        ********************************************************\n"
 
     echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}1${F_Cyan}${Bold}: ${Italic}Show GateKeeper Status${No_Attributes}"
     echo "  ${F_Green}${Bold}Meaning:${No_Attributes} Check GateKeeper status\n"
@@ -91,8 +96,8 @@ show_Menu() {
     echo "  ${F_Green}${Bold}Meaning:${No_Attributes} Deleting terminal command history and Terminal to quit\n"
 }
 
-# Asks password.
-askPassword() {
+# Asks password
+askPassword(){
     case $ROOT_PASSWORD in
     0)
         echo " ${F_Cyan}Please provide your password to proceed.${No_Attributes}\n"
@@ -101,14 +106,31 @@ askPassword() {
     esac
 }
 
-# Shows continue message.
-continueMessage() {
+# Shows continue message
+continueMessage(){
     echo "\n Press any key to return to the menu."
     read
 }
 
+# Installing the Xcode Command Line Tools
+installingXCLT(){
+    echo "${F_Red}•${F_Green}You choose to Install the Xcode Command Line Tools.${No_Attributes}\n"
+    askPassword
+    sudo xcode-select --install
+    continueMessage
+}
+
+# Uninstalling the Xcode Command Line Tools
+uninstallingXCLT(){
+    echo "${F_Red}•${F_Green}You choose to Uninstall the Xcode Command Line Tools.${No_Attributes}\n"
+    askPassword
+    sudo rm -rf /Library/Developer/CommandLineTools
+    echo " ${F_Red}Done.${No_Attributes}"
+    continueMessage
+}
+
 # Shows gatekeeper status
-showGateKeeperStatus() {
+showGateKeeperStatus(){
     echo "${F_Red}•${F_Green}You choose to show GateKeeper status.${No_Attributes}\n"
     askPassword
     sudo spctl --status
@@ -116,7 +138,7 @@ showGateKeeperStatus() {
 }
 
 # Enables gatekeeper
-enableGateKeeper() {
+enableGateKeeper(){
     echo "${F_Red}•${F_Green}You chose to enable GateKeeper. Good for you!${No_Attributes}\n"
     askPassword
     sudo spctl --master-enable
@@ -125,7 +147,7 @@ enableGateKeeper() {
 }
 
 # Disables gatekeeper
-disableGateKeeper() {
+disableGateKeeper(){
     echo "${F_Red}•${F_Green}You chose to disable GateKeeper.${No_Attributes}"
     echo -e "    ${F_Red}-> Danger!${No_Attributes}"
     echo -e "       Disabling GateKeeper is a very bad idea and creates."
@@ -137,7 +159,7 @@ disableGateKeeper() {
 }
 
 # Removes an app from gatekeeper quarantine
-removeAppFromGateKeeper() {
+removeAppFromGateKeeper(){
     echo "${F_Red}•${F_Green}You chose to remove the app from GateKeeper quarantine.${No_Attributes}\n"
     read "? Drag & drop the app on this window and then press Return: " FILEPATH
     askPassword
@@ -151,10 +173,8 @@ removeAppFromGateKeeper() {
 }
 
 # Self-signs an app
-selfSignApp() {
+selfSignApp(){
     echo "${F_Red}•${F_Green}You chose to self-sign an app.${No_Attributes}\n"
-    echo " ${F_Red}Mandatory:${No_Attributes} Xcode or Apple Command Line Tools to install, execute in the terminal: xcode-select --install"
-    echo " If you install Xcode, please start it at least once to complete the installation and agree to the license.\n"
     read "? Drag & drop the app on this window and then press Return: " FILEPATH
     askPassword
     sudo codesign -f -v -s - --deep "$FILEPATH"
@@ -163,7 +183,7 @@ selfSignApp() {
 }
 
 # List apps from unknown sources
-listAppsFromUnknownSources() {
+listAppsFromUnknownSources(){
     echo "${F_Red}•${F_Green}List apps from unknown sources.${No_Attributes}\n"
     askPassword
     sudo spctl --list | grep UNLABELED
@@ -171,16 +191,15 @@ listAppsFromUnknownSources() {
 }
 
 # Restoring the Default Gatekeeper Database
-restoringTheDefaultGatekeeperDatabase() {
+restoringTheDefaultGatekeeperDatabase(){
     echo "${F_Red}•${F_Green}Restoring the Default Gatekeeper Database.${No_Attributes}\n"
-    echo " ${F_Red}Mandatory:${No_Attributes} After resetting all gatekeeper settings, reboot the system.\n"
     askPassword
     sudo spctl --reset-default
     continueMessage
 }
 
 # Terminal to quit
-quit() {
+quit(){
     # Deleting macOS terminal command history and Terminal to quit
     echo "${F_Red}•${F_Green}Deleting macOS terminal command history.${No_Attributes}\n"
     askPassword
@@ -193,13 +212,13 @@ quit() {
 }
 
 # Shows invalid Command message
-showInvalid() {
+showInvalid(){
     echo "${F_Red}•An unacceptable Command has been selected: ${F_Red}${Bold}${SELECTED_COMMAND}${No_Attributes}"
     continueMessage
 }
 
 # Main function of the script
-startScript() {
+startScript(){
     while :; do
         clear
         show_Menu
@@ -207,6 +226,17 @@ startScript() {
         read "?Please select an Command: " SELECTED_COMMAND
 
         case $SELECTED_COMMAND in
+
+        i)
+            clear
+            installingXCLT
+            ;;
+
+        u)
+            clear
+            uninstallingXCLT
+            ;;
+
         1)
             clear
             showGateKeeperStatus
