@@ -104,17 +104,17 @@ showMenu() {
     echo "   ${F_Green}${Bold}Meaning:${No_Attributes} Flushes local DNS cache"
     echo "      ${F_Red}${Bold}Note:${No_Attributes} But DNS cache gets corrupted, then you can run into problems loading sites, with error 404\n"
 
-    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}11${F_Cyan}${Bold}: ${Italic}L${No_Attributes}"
-    echo "   ${F_Green}${Bold}Meaning:${No_Attributes} L\n"
+    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}11${F_Cyan}${Bold}: ${Italic}Show Firewall Status${No_Attributes}"
+    echo "   ${F_Green}${Bold}Meaning:${No_Attributes} Check Firewall status\n"
 
-    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}12${F_Cyan}${Bold}: ${Italic}L${No_Attributes}"
-    echo "   ${F_Green}${Bold}Meaning:${No_Attributes} L\n"
+    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}12${F_Cyan}${Bold}: ${Italic}Firewall Enable${No_Attributes}"
+    echo "   ${F_Green}${Bold}Meaning:${No_Attributes} Enables Firewall\n"
 
-    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}13${F_Cyan}${Bold}: ${Italic}L${No_Attributes}"
-    echo "   ${F_Green}${Bold}Meaning:${No_Attributes} L\n"
+    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}13${F_Cyan}${Bold}: ${Italic}Firewall Disable${No_Attributes}"
+    echo "   ${F_Green}${Bold}Meaning:${No_Attributes} Disables Firewall\n"
 
-    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}14${F_Cyan}${Bold}: ${Italic}L${No_Attributes}"
-    echo "   ${F_Green}${Bold}Meaning:${No_Attributes} L\n"
+    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}14${F_Cyan}${Bold}: ${Italic}Firewall List${No_Attributes}"
+    echo "   ${F_Green}${Bold}Meaning:${No_Attributes} List applications handled by firewall\n"
 
     echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}15${F_Cyan}${Bold}: ${Italic}L${No_Attributes}"
     echo "   ${F_Green}${Bold}Meaning:${No_Attributes} L\n"
@@ -245,7 +245,7 @@ restoringTheDefaultGatekeeperDatabase() {
 restartComputerNeedsConfirmation() {
     # Deleting macOS terminal command history
     echo "${F_Red} •${F_Green}Deleting macOS terminal command history.${No_Attributes}"
-    echo "${F_Red} •${F_Green}Restart computer.${No_Attributes}\n"
+    echo "${F_Red} •${F_Green}You choose to Restart computer.${No_Attributes}\n"
     askPassword
     sudo rm -rf .zsh_sessions
     sudo rm -rf .zsh_history
@@ -258,7 +258,7 @@ restartComputerNeedsConfirmation() {
 shutdownComputerNeedsConfirmation() {
     # Deleting macOS terminal command history
     echo "${F_Red} •${F_Green}Deleting macOS terminal command history.${No_Attributes}"
-    echo "${F_Red} •${F_Green}Shutdown computer.${No_Attributes}\n"
+    echo "${F_Red} •${F_Green}You choose to Shutdown computer.${No_Attributes}\n"
     askPassword
     sudo rm -rf .zsh_sessions
     sudo rm -rf .zsh_history
@@ -280,6 +280,38 @@ flushesLocalDNS() {
         sudo killall -HUP mDNSResponder
     fi
     sleep 1 && echo " ${F_Green}Done.${No_Attributes}"
+    continueMessage
+}
+
+# Show firewall status
+statusFirewall() {
+    echo "${F_Red} •${F_Green}You choose to Show firewall status.${No_Attributes}\n"
+    askPassword
+    sudo /usr/libexec/ApplicationFirewall/socketfilterfw --getglobalstate
+    continueMessage
+}
+
+# Enables firewall
+enableFirewall() {
+    echo "${F_Red} •${F_Green}You choose to Enable firewall.${No_Attributes}\n"
+    askPassword
+    sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setglobalstate on
+    continueMessage
+}
+
+# Disables firewall
+disableFirewall() {
+    echo "${F_Red} •${F_Green}You choose to Disable firewall.${No_Attributes}\n"
+    askPassword
+    sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setglobalstate off
+    continueMessage
+}
+
+# List applications handled by firewall
+listFirewall() {
+    echo "${F_Red} •${F_Green}You choose to List applications handled by firewall.${No_Attributes}\n"
+    askPassword
+    sudo /usr/libexec/ApplicationFirewall/socketfilterfw --list
     continueMessage
 }
 
@@ -375,6 +407,26 @@ startScript() {
         10)
             clear
             flushesLocalDNS
+            ;;
+
+        11)
+            clear
+            statusFirewall
+            ;;
+
+        12)
+            clear
+            enableFirewall
+            ;;
+
+        13)
+            clear
+            disableFirewall
+            ;;
+
+        14)
+            clear
+            listFirewall
             ;;
 
         *)
