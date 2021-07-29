@@ -96,12 +96,13 @@ showMenu() {
     echo "   ${F_Green}${Bold}Meaning:${No_Attributes} Restart computer (needs confirmation)"
     echo "      ${F_Red}${Bold}Note:${No_Attributes} Confirmation is required for to restart\n"
 
-    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}9${F_Cyan}${Bold}: ${Italic}Shutdown computer${No_Attributes}"
+    echo " ${F_Cyan}${Bold}Command ${F_Red}${Bold}9${F_Cyan}${Bold}: ${Italic}Shutdown computer${No_Attributes}"
     echo "   ${F_Green}${Bold}Meaning:${No_Attributes} Shutdown computer (needs confirmation)"
     echo "      ${F_Red}${Bold}Note:${No_Attributes} Confirmation is required for to shutdown\n"
 
-    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}10${F_Cyan}${Bold}: ${Italic}L${No_Attributes}"
-    echo "   ${F_Green}${Bold}Meaning:${No_Attributes} L\n"
+    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}10${F_Cyan}${Bold}: ${Italic}Flush DNS cache${No_Attributes}"
+    echo "   ${F_Green}${Bold}Meaning:${No_Attributes} Flushes local DNS cache"
+    echo "      ${F_Red}${Bold}Note:${No_Attributes} But DNS cache gets corrupted, then you can run into problems loading sites, with error 404\n"
 
     echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}11${F_Cyan}${Bold}: ${Italic}L${No_Attributes}"
     echo "   ${F_Green}${Bold}Meaning:${No_Attributes} L\n"
@@ -266,6 +267,22 @@ shutdownComputerNeedsConfirmation() {
     continueMessage
 }
 
+# Flushes local DNS
+flushesLocalDNS() {
+    VERSION=$(sw_vers -productVersion)
+    echo "${F_Red} •${F_Green}Flushing dns...${No_Attributes}\n"
+    askPassword
+    if echo $VERSION | grep -E '^10\.10(\.[0-3])?$' >/dev/null 2>&1; then
+        sudo discoveryutil mdnsflushcache
+    elif echo $VERSION | grep -E '^10\.6(\.[0-8])?$' >/dev/null 2>&1; then
+        sudo dscacheutil -flushcache
+    else
+        sudo killall -HUP mDNSResponder
+    fi
+    sleep 1 && echo " ${F_Green}Done.${No_Attributes}"
+    continueMessage
+}
+
 # Terminal to quit
 quit() {
     # Deleting macOS terminal command history and Terminal to quit
@@ -353,6 +370,11 @@ startScript() {
         9)
             clear
             shutdownComputerNeedsConfirmation
+            ;;
+
+        10)
+            clear
+            flushesLocalDNS
             ;;
 
         *)
