@@ -58,7 +58,7 @@ No_Hidden='\033[28m' # Reset Hidden
 No_Attributes='\033[0m'
 
 # Menu
-show_Menu(){
+showMenu() {
     echo "\n                                     ${F_Blue}${Bold}Welcome to Shell Script Toolkit${No_Attributes}"
     echo "                                       ${Dim}${RELEASE_VERSION}${No_Attributes}"
     echo "                                     ${Dim}${GITHUB_URL}${No_Attributes}\n"
@@ -92,12 +92,55 @@ show_Menu(){
     echo "  ${F_Green}${Bold}Meaning:${No_Attributes} Restoring the Default Gatekeeper Database"
     echo "     ${F_Red}${Bold}Note:${No_Attributes} After resetting all gatekeeper settings, reboot the system\n"
 
-    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}9${F_Cyan}${Bold}: ${Italic}Quit${No_Attributes}"
+    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}8${F_Cyan}${Bold}: ${Italic}Restart computer${No_Attributes}"
+    echo "  ${F_Green}${Bold}Meaning:${No_Attributes} Restart computer (needs confirmation)"
+    echo "     ${F_Red}${Bold}Note:${No_Attributes} Confirmation is required for to restart\n"
+
+
+    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}9${F_Cyan}${Bold}: ${Italic}Restart computer${No_Attributes}"
+    echo "  ${F_Green}${Bold}Meaning:${No_Attributes} Restart computer (without confirmation)"
+    echo "     ${F_Red}${Bold}Note:${No_Attributes} Confirmation is not required for to restart\n"
+
+    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}10${F_Cyan}${Bold}: ${Italic}L${No_Attributes}"
+    echo "  ${F_Green}${Bold}Meaning:${No_Attributes} L\n"
+
+    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}11${F_Cyan}${Bold}: ${Italic}L${No_Attributes}"
+    echo "  ${F_Green}${Bold}Meaning:${No_Attributes} L\n"
+
+    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}12${F_Cyan}${Bold}: ${Italic}L${No_Attributes}"
+    echo "  ${F_Green}${Bold}Meaning:${No_Attributes} L\n"
+
+    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}13${F_Cyan}${Bold}: ${Italic}L${No_Attributes}"
+    echo "  ${F_Green}${Bold}Meaning:${No_Attributes} L\n"
+
+    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}14${F_Cyan}${Bold}: ${Italic}L${No_Attributes}"
+    echo "  ${F_Green}${Bold}Meaning:${No_Attributes} L\n"
+
+    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}15${F_Cyan}${Bold}: ${Italic}L${No_Attributes}"
+    echo "  ${F_Green}${Bold}Meaning:${No_Attributes} L\n"
+
+    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}16${F_Cyan}${Bold}: ${Italic}L${No_Attributes}"
+    echo "  ${F_Green}${Bold}Meaning:${No_Attributes} L\n"
+
+    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}17${F_Cyan}${Bold}: ${Italic}L${No_Attributes}"
+    echo "  ${F_Green}${Bold}Meaning:${No_Attributes} L\n"
+
+    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}18${F_Cyan}${Bold}: ${Italic}L${No_Attributes}"
+    echo "  ${F_Green}${Bold}Meaning:${No_Attributes} L\n"
+
+    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}19${F_Cyan}${Bold}: ${Italic}L${No_Attributes}"
+    echo "  ${F_Green}${Bold}Meaning:${No_Attributes} L\n"
+
+    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}20${F_Cyan}${Bold}: ${Italic}L${No_Attributes}"
+    echo "  ${F_Green}${Bold}Meaning:${No_Attributes} L\n"
+
+    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}0${F_Cyan}${Bold}: ${Italic}Quit Shell Script Toolbox${No_Attributes}"
     echo "  ${F_Green}${Bold}Meaning:${No_Attributes} Deleting terminal command history and Terminal to quit\n"
+
 }
 
 # Asks password
-askPassword(){
+askPassword() {
     case $ROOT_PASSWORD in
     0)
         echo " ${F_Cyan}Please provide your password to proceed.${No_Attributes}\n"
@@ -107,22 +150,22 @@ askPassword(){
 }
 
 # Shows continue message
-continueMessage(){
+continueMessage() {
     echo "\n Press any key to return to the menu."
     read
 }
 
 # Installing the Xcode Command Line Tools
-installingXCLT(){
-    echo "${F_Red}•${F_Green}You choose to Install the Xcode Command Line Tools.${No_Attributes}\n"
+installingXCLT() {
+    echo "${F_Red} •${F_Green}You choose to Install the Xcode Command Line Tools.${No_Attributes}\n"
     askPassword
     sudo xcode-select --install
     continueMessage
 }
 
 # Uninstalling the Xcode Command Line Tools
-uninstallingXCLT(){
-    echo "${F_Red}•${F_Green}You choose to Uninstall the Xcode Command Line Tools.${No_Attributes}\n"
+uninstallingXCLT() {
+    echo "${F_Red} •${F_Green}You choose to Uninstall the Xcode Command Line Tools.${No_Attributes}\n"
     askPassword
     sudo rm -rf /Library/Developer/CommandLineTools
     echo " ${F_Red}Done.${No_Attributes}"
@@ -130,16 +173,16 @@ uninstallingXCLT(){
 }
 
 # Shows gatekeeper status
-showGateKeeperStatus(){
-    echo "${F_Red}•${F_Green}You choose to show GateKeeper status.${No_Attributes}\n"
+showGateKeeperStatus() {
+    echo "${F_Red} •${F_Green}You choose to show GateKeeper status.${No_Attributes}\n"
     askPassword
     sudo spctl --status
     continueMessage
 }
 
 # Enables gatekeeper
-enableGateKeeper(){
-    echo "${F_Red}•${F_Green}You chose to enable GateKeeper. Good for you!${No_Attributes}\n"
+enableGateKeeper() {
+    echo "${F_Red} •${F_Green}You chose to enable GateKeeper. Good for you!${No_Attributes}\n"
     askPassword
     sudo spctl --master-enable
     echo " ${F_Red}GateKeeper enabled.${No_Attributes}"
@@ -147,8 +190,8 @@ enableGateKeeper(){
 }
 
 # Disables gatekeeper
-disableGateKeeper(){
-    echo "${F_Red}•${F_Green}You chose to disable GateKeeper.${No_Attributes}"
+disableGateKeeper() {
+    echo "${F_Red} •${F_Green}You chose to disable GateKeeper.${No_Attributes}"
     echo -e "    ${F_Red}-> Danger!${No_Attributes}"
     echo -e "       Disabling GateKeeper is a very bad idea and creates."
     echo -e "       a major security hole in macOS\n"
@@ -159,8 +202,8 @@ disableGateKeeper(){
 }
 
 # Removes an app from gatekeeper quarantine
-removeAppFromGateKeeper(){
-    echo "${F_Red}•${F_Green}You chose to remove the app from GateKeeper quarantine.${No_Attributes}\n"
+removeAppFromGateKeeper() {
+    echo "${F_Red} •${F_Green}You chose to remove the app from GateKeeper quarantine.${No_Attributes}\n"
     read "? Drag & drop the app on this window and then press Return: " FILEPATH
     askPassword
     sudo xattr -r -d com.apple.quarantine "$FILEPATH"
@@ -173,8 +216,8 @@ removeAppFromGateKeeper(){
 }
 
 # Self-signs an app
-selfSignApp(){
-    echo "${F_Red}•${F_Green}You chose to self-sign an app.${No_Attributes}\n"
+selfSignApp() {
+    echo "${F_Red} •${F_Green}You chose to self-sign an app.${No_Attributes}\n"
     read "? Drag & drop the app on this window and then press Return: " FILEPATH
     askPassword
     sudo codesign -f -v -s - --deep "$FILEPATH"
@@ -183,25 +226,41 @@ selfSignApp(){
 }
 
 # List apps from unknown sources
-listAppsFromUnknownSources(){
-    echo "${F_Red}•${F_Green}List apps from unknown sources.${No_Attributes}\n"
+listAppsFromUnknownSources() {
+    echo "${F_Red} •${F_Green}List apps from unknown sources.${No_Attributes}\n"
     askPassword
     sudo spctl --list | grep UNLABELED
     continueMessage
 }
 
 # Restoring the Default Gatekeeper Database
-restoringTheDefaultGatekeeperDatabase(){
-    echo "${F_Red}•${F_Green}Restoring the Default Gatekeeper Database.${No_Attributes}\n"
+restoringTheDefaultGatekeeperDatabase() {
+    echo "${F_Red} •${F_Green}Restoring the Default Gatekeeper Database.${No_Attributes}\n"
     askPassword
     sudo spctl --reset-default
     continueMessage
 }
 
+# Restart computer (needs confirmation)
+restartComputerNeedsConfirmation() {
+    echo "${F_Red} •${F_Green}Restart computer.${No_Attributes}\n"
+    askPassword
+    sudo osascript -e 'tell app "loginwindow" to «event aevtrrst»'
+    continueMessage
+}
+
+# Restart computer (without confirmation)
+restartComputerWithoutConfirmation() {
+    echo "${F_Red} •${F_Green}Restart computer.${No_Attributes}\n"
+    askPassword
+    sudo osascript -e 'tell app "System Events" to restart'
+    continueMessage
+}
+
 # Terminal to quit
-quit(){
+quit() {
     # Deleting macOS terminal command history and Terminal to quit
-    echo "${F_Red}•${F_Green}Deleting macOS terminal command history.${No_Attributes}\n"
+    echo "${F_Red} •${F_Green}Deleting macOS terminal command history.${No_Attributes}\n"
     askPassword
     sudo rm -rf .zsh_sessions
     sudo rm -rf .zsh_history
@@ -212,16 +271,16 @@ quit(){
 }
 
 # Shows invalid Command message
-showInvalid(){
-    echo "${F_Red}•An unacceptable Command has been selected: ${F_Red}${Bold}${SELECTED_COMMAND}${No_Attributes}"
+showInvalid() {
+    echo "${F_Red} •An unacceptable Command has been selected: ${F_Red}${Bold}${SELECTED_COMMAND}${No_Attributes}"
     continueMessage
 }
 
 # Main function of the script
-startScript(){
+startScript() {
     while :; do
         clear
-        show_Menu
+        showMenu
 
         read "?Please select an Command: " SELECTED_COMMAND
 
@@ -235,6 +294,11 @@ startScript(){
         u)
             clear
             uninstallingXCLT
+            ;;
+
+        0)
+            clear
+            quit
             ;;
 
         1)
@@ -272,9 +336,14 @@ startScript(){
             restoringTheDefaultGatekeeperDatabase
             ;;
 
+        8)
+            clear
+            restartComputerNeedsConfirmation
+            ;;
+
         9)
             clear
-            quit
+            restartComputerWithoutConfirmation
             ;;
 
         *)
