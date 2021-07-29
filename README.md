@@ -84,7 +84,6 @@ Shell Script Toolkit
 |___•••
 |
 |___Quit Shell Script Toolbox
-
 ```
 
 ## Download
