@@ -81,6 +81,12 @@ Shell Script Toolkit
 |    |___Disable GateKeeper
 |    |___Firewall List
 |
+|___Show Hidden Files and Extensions
+|    |___Show Hidden Files
+|    |___Don't Show Hidden Files
+|    |___Show all file extensions
+|    |___Don't Show all File Extensions
+|
 |___•••
 |
 |___Quit Shell Script Toolbox
