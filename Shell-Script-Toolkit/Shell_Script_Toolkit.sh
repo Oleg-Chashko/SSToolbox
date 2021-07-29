@@ -267,7 +267,7 @@ shutdownComputerNeedsConfirmation() {
     continueMessage
 }
 
-# Flushes local DNS
+# Flushes local DNS cache
 flushesLocalDNS() {
     VERSION=$(sw_vers -productVersion)
     echo "${F_Red} •${F_Green}Flushing dns...${No_Attributes}\n"
