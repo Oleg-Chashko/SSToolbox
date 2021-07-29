@@ -68,74 +68,73 @@ showMenu() {
     echo "                        * ${F_Cyan}${Bold}Command ${F_Red}${Bold}u${F_Cyan}${Bold}: ${Italic}Uninstalling the Xcode Command Line Tools${No_Attributes} *"
     echo "                        ********************************************************\n"
 
-    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}1${F_Cyan}${Bold}: ${Italic}Show GateKeeper Status${No_Attributes}"
-    echo "  ${F_Green}${Bold}Meaning:${No_Attributes} Check GateKeeper status\n"
+    echo " ${F_Cyan}${Bold}Command ${F_Red}${Bold}1${F_Cyan}${Bold}: ${Italic}Show GateKeeper Status${No_Attributes}"
+    echo "   ${F_Green}${Bold}Meaning:${No_Attributes} Check GateKeeper status\n"
 
-    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}2${F_Cyan}${Bold}: ${Italic}Enable GateKeeper${No_Attributes}"
-    echo "  ${F_Green}${Bold}Meaning:${No_Attributes} Enables GateKeeper\n"
+    echo " ${F_Cyan}${Bold}Command ${F_Red}${Bold}2${F_Cyan}${Bold}: ${Italic}Enable GateKeeper${No_Attributes}"
+    echo "   ${F_Green}${Bold}Meaning:${No_Attributes} Enables GateKeeper\n"
 
-    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}3${F_Cyan}${Bold}: ${Italic}Disable GateKeeper${No_Attributes}"
-    echo "  ${F_Green}${Bold}Meaning:${No_Attributes} Disables GateKeeper"
-    echo "     ${F_Red}${Bold}Note:${No_Attributes} Caution, your actions could lead to potential security and privacy issues\n"
+    echo " ${F_Cyan}${Bold}Command ${F_Red}${Bold}3${F_Cyan}${Bold}: ${Italic}Disable GateKeeper${No_Attributes}"
+    echo "   ${F_Green}${Bold}Meaning:${No_Attributes} Disables GateKeeper"
+    echo "      ${F_Red}${Bold}Note:${No_Attributes} Caution, your actions could lead to potential security and privacy issues\n"
 
-    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}4${F_Cyan}${Bold}: ${Italic}Remove app from GateKeeper quarantine${No_Attributes}"
-    echo "  ${F_Green}${Bold}Meaning:${No_Attributes} Allows an individual quarantined app to run\n"
+    echo " ${F_Cyan}${Bold}Command ${F_Red}${Bold}4${F_Cyan}${Bold}: ${Italic}Remove app from GateKeeper quarantine${No_Attributes}"
+    echo "   ${F_Green}${Bold}Meaning:${No_Attributes} Allows an individual quarantined app to run\n"
 
-    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}5${F_Cyan}${Bold}: ${Italic}Self-sign the app${No_Attributes}"
-    echo "  ${F_Green}${Bold}Meaning:${No_Attributes} If GateKeeper is on and your app quits unexpectedly, try self-signing"
-    echo "     ${F_Red}${Bold}Note:${No_Attributes} Require Xcode or Xcode Command Line Tools\n"
+    echo " ${F_Cyan}${Bold}Command ${F_Red}${Bold}5${F_Cyan}${Bold}: ${Italic}Self-sign the app${No_Attributes}"
+    echo "   ${F_Green}${Bold}Meaning:${No_Attributes} If GateKeeper is on and your app quits unexpectedly, try self-signing"
+    echo "      ${F_Red}${Bold}Note:${No_Attributes} Require Xcode or Xcode Command Line Tools\n"
 
-    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}6${F_Cyan}${Bold}: ${Italic}List apps from unknown sources${No_Attributes}"
-    echo "  ${F_Green}${Bold}Meaning:${No_Attributes} List apps from unknown sources you’ve approved for use\n"
+    echo " ${F_Cyan}${Bold}Command ${F_Red}${Bold}6${F_Cyan}${Bold}: ${Italic}List apps from unknown sources${No_Attributes}"
+    echo "   ${F_Green}${Bold}Meaning:${No_Attributes} List apps from unknown sources you’ve approved for use\n"
 
-    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}7${F_Cyan}${Bold}: ${Italic}Restoring the Default Gatekeeper Database${No_Attributes}"
-    echo "  ${F_Green}${Bold}Meaning:${No_Attributes} Restoring the Default Gatekeeper Database"
-    echo "     ${F_Red}${Bold}Note:${No_Attributes} After resetting all gatekeeper settings, reboot the system\n"
+    echo " ${F_Cyan}${Bold}Command ${F_Red}${Bold}7${F_Cyan}${Bold}: ${Italic}Restoring the Default Gatekeeper Database${No_Attributes}"
+    echo "   ${F_Green}${Bold}Meaning:${No_Attributes} Restoring the Default Gatekeeper Database"
+    echo "      ${F_Red}${Bold}Note:${No_Attributes} After resetting all gatekeeper settings, reboot the system\n"
 
-    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}8${F_Cyan}${Bold}: ${Italic}Restart computer${No_Attributes}"
-    echo "  ${F_Green}${Bold}Meaning:${No_Attributes} Restart computer (needs confirmation)"
-    echo "     ${F_Red}${Bold}Note:${No_Attributes} Confirmation is required for to restart\n"
+    echo " ${F_Cyan}${Bold}Command ${F_Red}${Bold}8${F_Cyan}${Bold}: ${Italic}Restart computer${No_Attributes}"
+    echo "   ${F_Green}${Bold}Meaning:${No_Attributes} Restart computer (needs confirmation)"
+    echo "      ${F_Red}${Bold}Note:${No_Attributes} Confirmation is required for to restart\n"
 
-
-    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}9${F_Cyan}${Bold}: ${Italic}Restart computer${No_Attributes}"
-    echo "  ${F_Green}${Bold}Meaning:${No_Attributes} Restart computer (without confirmation)"
-    echo "     ${F_Red}${Bold}Note:${No_Attributes} Confirmation is not required for to restart\n"
+    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}9${F_Cyan}${Bold}: ${Italic}Shutdown computer${No_Attributes}"
+    echo "   ${F_Green}${Bold}Meaning:${No_Attributes} Shutdown computer (needs confirmation)"
+    echo "      ${F_Red}${Bold}Note:${No_Attributes} Confirmation is required for to shutdown\n"
 
     echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}10${F_Cyan}${Bold}: ${Italic}L${No_Attributes}"
-    echo "  ${F_Green}${Bold}Meaning:${No_Attributes} L\n"
+    echo "   ${F_Green}${Bold}Meaning:${No_Attributes} L\n"
 
     echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}11${F_Cyan}${Bold}: ${Italic}L${No_Attributes}"
-    echo "  ${F_Green}${Bold}Meaning:${No_Attributes} L\n"
+    echo "   ${F_Green}${Bold}Meaning:${No_Attributes} L\n"
 
     echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}12${F_Cyan}${Bold}: ${Italic}L${No_Attributes}"
-    echo "  ${F_Green}${Bold}Meaning:${No_Attributes} L\n"
+    echo "   ${F_Green}${Bold}Meaning:${No_Attributes} L\n"
 
     echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}13${F_Cyan}${Bold}: ${Italic}L${No_Attributes}"
-    echo "  ${F_Green}${Bold}Meaning:${No_Attributes} L\n"
+    echo "   ${F_Green}${Bold}Meaning:${No_Attributes} L\n"
 
     echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}14${F_Cyan}${Bold}: ${Italic}L${No_Attributes}"
-    echo "  ${F_Green}${Bold}Meaning:${No_Attributes} L\n"
+    echo "   ${F_Green}${Bold}Meaning:${No_Attributes} L\n"
 
     echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}15${F_Cyan}${Bold}: ${Italic}L${No_Attributes}"
-    echo "  ${F_Green}${Bold}Meaning:${No_Attributes} L\n"
+    echo "   ${F_Green}${Bold}Meaning:${No_Attributes} L\n"
 
     echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}16${F_Cyan}${Bold}: ${Italic}L${No_Attributes}"
-    echo "  ${F_Green}${Bold}Meaning:${No_Attributes} L\n"
+    echo "   ${F_Green}${Bold}Meaning:${No_Attributes} L\n"
 
     echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}17${F_Cyan}${Bold}: ${Italic}L${No_Attributes}"
-    echo "  ${F_Green}${Bold}Meaning:${No_Attributes} L\n"
+    echo "   ${F_Green}${Bold}Meaning:${No_Attributes} L\n"
 
     echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}18${F_Cyan}${Bold}: ${Italic}L${No_Attributes}"
-    echo "  ${F_Green}${Bold}Meaning:${No_Attributes} L\n"
+    echo "   ${F_Green}${Bold}Meaning:${No_Attributes} L\n"
 
     echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}19${F_Cyan}${Bold}: ${Italic}L${No_Attributes}"
-    echo "  ${F_Green}${Bold}Meaning:${No_Attributes} L\n"
+    echo "   ${F_Green}${Bold}Meaning:${No_Attributes} L\n"
 
     echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}20${F_Cyan}${Bold}: ${Italic}L${No_Attributes}"
-    echo "  ${F_Green}${Bold}Meaning:${No_Attributes} L\n"
+    echo "   ${F_Green}${Bold}Meaning:${No_Attributes} L\n"
 
-    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}0${F_Cyan}${Bold}: ${Italic}Quit Shell Script Toolbox${No_Attributes}"
-    echo "  ${F_Green}${Bold}Meaning:${No_Attributes} Deleting terminal command history and Terminal to quit\n"
+    echo " ${F_Cyan}${Bold}Command ${F_Red}${Bold}0${F_Cyan}${Bold}: ${Italic}Quit Shell Script Toolbox${No_Attributes}"
+    echo "   ${F_Green}${Bold}Meaning:${No_Attributes} Deleting terminal command history and Terminal to quit\n"
 
 }
 
@@ -243,17 +242,27 @@ restoringTheDefaultGatekeeperDatabase() {
 
 # Restart computer (needs confirmation)
 restartComputerNeedsConfirmation() {
+    # Deleting macOS terminal command history
+    echo "${F_Red} •${F_Green}Deleting macOS terminal command history.${No_Attributes}"
     echo "${F_Red} •${F_Green}Restart computer.${No_Attributes}\n"
     askPassword
+    sudo rm -rf .zsh_sessions
+    sudo rm -rf .zsh_history
+    sleep 1 && echo " ${F_Green}Done.${No_Attributes}"
     sudo osascript -e 'tell app "loginwindow" to «event aevtrrst»'
     continueMessage
 }
 
-# Restart computer (without confirmation)
-restartComputerWithoutConfirmation() {
-    echo "${F_Red} •${F_Green}Restart computer.${No_Attributes}\n"
+# Shutdown computer (needs confirmation)
+shutdownComputerNeedsConfirmation() {
+    # Deleting macOS terminal command history
+    echo "${F_Red} •${F_Green}Deleting macOS terminal command history.${No_Attributes}"
+    echo "${F_Red} •${F_Green}Shutdown computer.${No_Attributes}\n"
     askPassword
-    sudo osascript -e 'tell app "System Events" to restart'
+    sudo rm -rf .zsh_sessions
+    sudo rm -rf .zsh_history
+    sleep 1 && echo " ${F_Green}Done.${No_Attributes}"
+    sudo osascript -e 'tell app "loginwindow" to «event aevtrsdn»'
     continueMessage
 }
 
@@ -343,7 +352,7 @@ startScript() {
 
         9)
             clear
-            restartComputerWithoutConfirmation
+            shutdownComputerNeedsConfirmation
             ;;
 
         *)
