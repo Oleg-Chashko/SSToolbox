@@ -50,6 +50,43 @@
 - Easy to use.
 - Editing the script.
 
+#### A diagram of Toolkit structure is shown below:
+
+```
+Shell Script Toolkit
+|
+|___Xcode
+|    |___Installing the Xcode Command Line Tools
+|    |___Uninstalling the Xcode Command Line Tools
+|
+|___GateKeeper
+|    |___Show GateKeeper Status
+|    |___Enable GateKeeper
+|    |___Disable GateKeeper
+|    |___Remove app from GateKeeper quarantine
+|    |___Self-sign the app
+|    |___List apps from unknown sources
+|    |___Restoring the Default Gatekeeper Database
+|
+|___Restart and Shutdown Mac
+|    |___Restart computer
+|    |___Shutdown computer
+|
+|___DNS
+|    |___Flush DNS cache
+|
+|___Firewall
+|    |___Show Firewall Status
+|    |___Firewall Enable
+|    |___Disable GateKeeper
+|    |___Firewall List
+|
+|___•••
+|
+|___Quit Shell Script Toolbox
+
+```
+
 ## Download
 
 - (Standard version) [Download](https://github.com/Oleg-Chashko/Shell-Script-Toolkit/releases)

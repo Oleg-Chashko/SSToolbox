@@ -1,7 +1,7 @@
 #!/bin/zsh
 
 # Terminal window - minimize window, move to top/left corner, resize, wait a few seconds, bring to front and then restore window
-printf '\e[2t' && printf '\033[3;0;0t' && printf '\033[8;45;110t' && sleep 1 && printf '\e[5t' && printf '\e[1t'
+printf '\e[2t' && printf '\033[3;0;0t' && printf '\033[8;55;110t' && sleep 1 && printf '\e[5t' && printf '\e[1t'
 
 # Attribute
 GITHUB_URL="https://github.com/Oleg-Chashko"
