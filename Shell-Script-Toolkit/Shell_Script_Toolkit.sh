@@ -116,17 +116,17 @@ showMenu() {
     echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}14${F_Cyan}${Bold}: ${Italic}Firewall List${No_Attributes}"
     echo "   ${F_Green}${Bold}Meaning:${No_Attributes} List applications handled by firewall\n"
 
-    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}15${F_Cyan}${Bold}: ${Italic}L${No_Attributes}"
-    echo "   ${F_Green}${Bold}Meaning:${No_Attributes} L\n"
+    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}15${F_Cyan}${Bold}: ${Italic}Show Hidden Files${No_Attributes}"
+    echo "   ${F_Green}${Bold}Meaning:${No_Attributes} Show hidden files\n"
 
-    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}16${F_Cyan}${Bold}: ${Italic}L${No_Attributes}"
-    echo "   ${F_Green}${Bold}Meaning:${No_Attributes} L\n"
+    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}16${F_Cyan}${Bold}: ${Italic}Don't Show Hidden Files${No_Attributes}"
+    echo "   ${F_Green}${Bold}Meaning:${No_Attributes} Don't show hidden files\n"
 
-    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}17${F_Cyan}${Bold}: ${Italic}L${No_Attributes}"
-    echo "   ${F_Green}${Bold}Meaning:${No_Attributes} L\n"
+    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}17${F_Cyan}${Bold}: ${Italic}Show all File Extensions${No_Attributes}"
+    echo "   ${F_Green}${Bold}Meaning:${No_Attributes} Show all file extensions\n"
 
-    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}18${F_Cyan}${Bold}: ${Italic}L${No_Attributes}"
-    echo "   ${F_Green}${Bold}Meaning:${No_Attributes} L\n"
+    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}18${F_Cyan}${Bold}: ${Italic}Don't Show all File Extensions${No_Attributes}"
+    echo "   ${F_Green}${Bold}Meaning:${No_Attributes} Don't show all file extensions\n"
 
     echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}19${F_Cyan}${Bold}: ${Italic}L${No_Attributes}"
     echo "   ${F_Green}${Bold}Meaning:${No_Attributes} L\n"
@@ -315,6 +315,34 @@ listFirewall() {
     continueMessage
 }
 
+# Show hidden files
+showHiddenFiles() {
+    echo "${F_Red} •${F_Green}You choose to show hidden files.${No_Attributes}\n"
+    defaults write com.apple.finder AppleShowAllFiles true && killall Finder
+    continueMessage
+}
+
+# Don't show hidden files
+noShowHiddenFiles() {
+    echo "${F_Red} •${F_Green}You choose to don't show hidden files.${No_Attributes}\n"
+    defaults write com.apple.finder AppleShowAllFiles false && killall Finder
+    continueMessage
+}
+
+# Show all file extensions
+showExtensionsFiles() {
+    echo "${F_Red} •${F_Green}You choose to show all file extensions.${No_Attributes}\n"
+    defaults write NSGlobalDomain AppleShowAllExtensions true && killall Finder
+    continueMessage
+}
+
+# Don't show all file extensions
+noShowExtensionsFiles() {
+    echo "${F_Red} •${F_Green}You choose to don't show all file extensions.${No_Attributes}\n"
+    defaults write NSGlobalDomain AppleShowAllExtensions false && killall Finder
+    continueMessage
+}
+
 # Terminal to quit
 quit() {
     # Deleting macOS terminal command history and Terminal to quit
@@ -427,6 +455,26 @@ startScript() {
         14)
             clear
             listFirewall
+            ;;
+
+        15)
+            clear
+            showHiddenFiles
+            ;;
+
+        16)
+            clear
+            noShowHiddenFiles
+            ;;
+
+        17)
+            clear
+            showExtensionsFiles
+            ;;
+
+        18)
+            clear
+            noShowExtensionsFiles
             ;;
 
         *)
