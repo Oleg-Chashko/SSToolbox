@@ -1,7 +1,7 @@
 #!/bin/zsh
 
 # Terminal window - minimize window, move to top/left corner, resize, wait a few seconds, bring to front and then restore window
-printf '\e[2t' && printf '\033[3;0;0t' && printf '\033[8;55;110t' && sleep 1 && printf '\e[5t' && printf '\e[1t'
+printf '\e[2t' && printf '\033[3;0;0t' && printf '\033[8;55;115t' && sleep 1 && printf '\e[5t' && printf '\e[1t'
 
 # Attribute
 GITHUB_URL="https://github.com/Oleg-Chashko"
@@ -104,8 +104,8 @@ showMenu() {
     echo "   ${F_Green}${Bold}Meaning:${No_Attributes} Flushes local DNS cache"
     echo "      ${F_Red}${Bold}Note:${No_Attributes} But DNS cache gets corrupted, then you can run into problems loading sites, with error 404\n"
 
-    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}11${F_Cyan}${Bold}: ${Italic}Show Firewall Status${No_Attributes}"
-    echo "   ${F_Green}${Bold}Meaning:${No_Attributes} Check Firewall status\n"
+    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}11${F_Cyan}${Bold}: ${Italic}Show firewall status; Show whether block all is enabled or not; List applications handled by firewall${No_Attributes}"
+    echo "   ${F_Green}${Bold}Meaning:${No_Attributes} Check Firewall status; Check whether block all is enabled or not; List applications handled by firewall\n"
 
     echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}12${F_Cyan}${Bold}: ${Italic}Firewall Enable${No_Attributes}"
     echo "   ${F_Green}${Bold}Meaning:${No_Attributes} Enables Firewall\n"
@@ -113,31 +113,59 @@ showMenu() {
     echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}13${F_Cyan}${Bold}: ${Italic}Firewall Disable${No_Attributes}"
     echo "   ${F_Green}${Bold}Meaning:${No_Attributes} Disables Firewall\n"
 
-    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}14${F_Cyan}${Bold}: ${Italic}Firewall List${No_Attributes}"
-    echo "   ${F_Green}${Bold}Meaning:${No_Attributes} List applications handled by firewall\n"
+    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}14${F_Cyan}${Bold}: ${Italic}Block all connections Enable${No_Attributes}"
+    echo "   ${F_Green}${Bold}Meaning:${No_Attributes} Enables Block all connections\n"
 
-    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}15${F_Cyan}${Bold}: ${Italic}Show Hidden Files${No_Attributes}"
+    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}15${F_Cyan}${Bold}: ${Italic}Block all connections Disable${No_Attributes}"
+    echo "   ${F_Green}${Bold}Meaning:${No_Attributes} Disables Block all connections\n"
+
+    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}16${F_Cyan}${Bold}: ${Italic}Show Hidden Files${No_Attributes}"
     echo "   ${F_Green}${Bold}Meaning:${No_Attributes} Show hidden files\n"
 
-    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}16${F_Cyan}${Bold}: ${Italic}Don't Show Hidden Files${No_Attributes}"
+    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}17${F_Cyan}${Bold}: ${Italic}Don't Show Hidden Files${No_Attributes}"
     echo "   ${F_Green}${Bold}Meaning:${No_Attributes} Don't show hidden files\n"
 
-    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}17${F_Cyan}${Bold}: ${Italic}Show all File Extensions${No_Attributes}"
+    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}18${F_Cyan}${Bold}: ${Italic}Show all File Extensions${No_Attributes}"
     echo "   ${F_Green}${Bold}Meaning:${No_Attributes} Show all file extensions\n"
 
-    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}18${F_Cyan}${Bold}: ${Italic}Don't Show all File Extensions${No_Attributes}"
+    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}19${F_Cyan}${Bold}: ${Italic}Don't Show all File Extensions${No_Attributes}"
     echo "   ${F_Green}${Bold}Meaning:${No_Attributes} Don't show all file extensions\n"
-
-    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}19${F_Cyan}${Bold}: ${Italic}L${No_Attributes}"
-    echo "   ${F_Green}${Bold}Meaning:${No_Attributes} L\n"
 
     echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}20${F_Cyan}${Bold}: ${Italic}L${No_Attributes}"
     echo "   ${F_Green}${Bold}Meaning:${No_Attributes} L\n"
 
+    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}21${F_Cyan}${Bold}: ${Italic}L${No_Attributes}"
+    echo "   ${F_Green}${Bold}Meaning:${No_Attributes} L\n"
+
+    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}22${F_Cyan}${Bold}: ${Italic}L${No_Attributes}"
+    echo "   ${F_Green}${Bold}Meaning:${No_Attributes} L\n"
+
+    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}23${F_Cyan}${Bold}: ${Italic}L${No_Attributes}"
+    echo "   ${F_Green}${Bold}Meaning:${No_Attributes} L\n"
+
+    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}24${F_Cyan}${Bold}: ${Italic}L${No_Attributes}"
+    echo "   ${F_Green}${Bold}Meaning:${No_Attributes} L\n"
+
+    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}25${F_Cyan}${Bold}: ${Italic}L${No_Attributes}"
+    echo "   ${F_Green}${Bold}Meaning:${No_Attributes} L\n"
+
+    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}26${F_Cyan}${Bold}: ${Italic}L${No_Attributes}"
+    echo "   ${F_Green}${Bold}Meaning:${No_Attributes} L\n"
+
+    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}27${F_Cyan}${Bold}: ${Italic}L${No_Attributes}"
+    echo "   ${F_Green}${Bold}Meaning:${No_Attributes} L\n"
+
+    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}28${F_Cyan}${Bold}: ${Italic}L${No_Attributes}"
+    echo "   ${F_Green}${Bold}Meaning:${No_Attributes} L\n"
+
+    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}29${F_Cyan}${Bold}: ${Italic}L${No_Attributes}"
+    echo "   ${F_Green}${Bold}Meaning:${No_Attributes} L\n"
+
     echo " ${F_Cyan}${Bold}Command ${F_Red}${Bold}0${F_Cyan}${Bold}: ${Italic}Quit Shell Script Toolbox${No_Attributes}"
     echo "   ${F_Green}${Bold}Meaning:${No_Attributes} Deleting terminal command history and Terminal to quit\n"
-
 }
+
+# -----------------------------------------------------------------------------------------------------------------
 
 # Asks password
 askPassword() {
@@ -155,15 +183,22 @@ continueMessage() {
     read
 }
 
-# Installing the Xcode Command Line Tools
-installingXCLT() {
-    echo "${F_Red} •${F_Green}You choose to Install the Xcode Command Line Tools.${No_Attributes}\n"
-    askPassword
-    sudo xcode-select --install
+# Shows invalid Command message
+showInvalid() {
+    echo "${F_Red} •An unacceptable Command has been selected: ${F_Red}${Bold}${SELECTED_COMMAND}${No_Attributes}"
     continueMessage
 }
 
-# Uninstalling the Xcode Command Line Tools
+# -----------------------------------------------------------------------------------------------------------------
+
+# Command i: Installing the Xcode Command Line Tools
+installingXCLT() {
+    echo "${F_Red} •${F_Green}You choose to Install the Xcode Command Line Tools.${No_Attributes}\n"
+    xcode-select --install
+    continueMessage
+}
+
+# Command u: Uninstalling the Xcode Command Line Tools
 uninstallingXCLT() {
     echo "${F_Red} •${F_Green}You choose to Uninstall the Xcode Command Line Tools.${No_Attributes}\n"
     askPassword
@@ -172,15 +207,14 @@ uninstallingXCLT() {
     continueMessage
 }
 
-# Shows gatekeeper status
+# Command 1: Show GateKeeper Status
 showGateKeeperStatus() {
     echo "${F_Red} •${F_Green}You choose to show GateKeeper status.${No_Attributes}\n"
-    askPassword
-    sudo spctl --status
+    spctl --status
     continueMessage
 }
 
-# Enables gatekeeper
+# Command 2: Enable GateKeeper
 enableGateKeeper() {
     echo "${F_Red} •${F_Green}You chose to enable GateKeeper. Good for you!${No_Attributes}\n"
     askPassword
@@ -189,7 +223,7 @@ enableGateKeeper() {
     continueMessage
 }
 
-# Disables gatekeeper
+# Command 3: Disable GateKeeper
 disableGateKeeper() {
     echo "${F_Red} •${F_Green}You chose to disable GateKeeper.${No_Attributes}"
     echo -e "    ${F_Red}-> Danger!${No_Attributes}"
@@ -201,7 +235,7 @@ disableGateKeeper() {
     continueMessage
 }
 
-# Removes an app from gatekeeper quarantine
+# Command 4: Remove app from GateKeeper quarantine
 removeAppFromGateKeeper() {
     echo "${F_Red} •${F_Green}You chose to remove the app from GateKeeper quarantine.${No_Attributes}\n"
     read "? Drag & drop the app on this window and then press Return: " FILEPATH
@@ -215,7 +249,7 @@ removeAppFromGateKeeper() {
     continueMessage
 }
 
-# Self-signs an app
+# Command 5: Self-sign the app
 selfSignApp() {
     echo "${F_Red} •${F_Green}You chose to self-sign an app.${No_Attributes}\n"
     read "? Drag & drop the app on this window and then press Return: " FILEPATH
@@ -225,7 +259,7 @@ selfSignApp() {
     continueMessage
 }
 
-# List apps from unknown sources
+# Command 6: List apps from unknown sources
 listAppsFromUnknownSources() {
     echo "${F_Red} •${F_Green}List apps from unknown sources.${No_Attributes}\n"
     askPassword
@@ -233,7 +267,7 @@ listAppsFromUnknownSources() {
     continueMessage
 }
 
-# Restoring the Default Gatekeeper Database
+# Command 7: Restoring the Default Gatekeeper Database
 restoringTheDefaultGatekeeperDatabase() {
     echo "${F_Red} •${F_Green}Restoring the Default Gatekeeper Database.${No_Attributes}\n"
     askPassword
@@ -241,33 +275,31 @@ restoringTheDefaultGatekeeperDatabase() {
     continueMessage
 }
 
-# Restart computer (needs confirmation)
+# Command 8: Restart computer (needs confirmation)
 restartComputerNeedsConfirmation() {
     # Deleting macOS terminal command history
     echo "${F_Red} •${F_Green}Deleting macOS terminal command history.${No_Attributes}"
     echo "${F_Red} •${F_Green}You choose to Restart computer.${No_Attributes}\n"
-    askPassword
-    sudo rm -rf .zsh_sessions
-    sudo rm -rf .zsh_history
+    rm -rf .zsh_sessions
+    rm -rf .zsh_history
     sleep 1 && echo " ${F_Green}Done.${No_Attributes}"
-    sudo osascript -e 'tell app "loginwindow" to «event aevtrrst»'
+    osascript -e 'tell app "loginwindow" to «event aevtrrst»'
     continueMessage
 }
 
-# Shutdown computer (needs confirmation)
+# Command 9: Shutdown computer (needs confirmation)
 shutdownComputerNeedsConfirmation() {
     # Deleting macOS terminal command history
     echo "${F_Red} •${F_Green}Deleting macOS terminal command history.${No_Attributes}"
     echo "${F_Red} •${F_Green}You choose to Shutdown computer.${No_Attributes}\n"
-    askPassword
-    sudo rm -rf .zsh_sessions
-    sudo rm -rf .zsh_history
+    rm -rf .zsh_sessions
+    rm -rf .zsh_history
     sleep 1 && echo " ${F_Green}Done.${No_Attributes}"
-    sudo osascript -e 'tell app "loginwindow" to «event aevtrsdn»'
+    osascript -e 'tell app "loginwindow" to «event aevtrsdn»'
     continueMessage
 }
 
-# Flushes local DNS cache
+# Command 10: Flush DNS cache
 flushesLocalDNS() {
     VERSION=$(sw_vers -productVersion)
     echo "${F_Red} •${F_Green}Flushing dns...${No_Attributes}\n"
@@ -283,15 +315,18 @@ flushesLocalDNS() {
     continueMessage
 }
 
-# Show firewall status
+# Command 11: Show firewall status; Show whether block all is enabled or not; List applications handled by firewall
 statusFirewall() {
-    echo "${F_Red} •${F_Green}You choose to Show firewall status.${No_Attributes}\n"
-    askPassword
-    sudo /usr/libexec/ApplicationFirewall/socketfilterfw --getglobalstate
+    echo "${F_Red} •${F_Green}Show firewall status.${No_Attributes}"
+    /usr/libexec/ApplicationFirewall/socketfilterfw --getglobalstate
+    echo "\n${F_Red} •${F_Green}Show whether block all is enabled or not.${No_Attributes}"
+    /usr/libexec/ApplicationFirewall/socketfilterfw --getblockall
+    echo "\n${F_Red} •${F_Green}List applications handled by firewall.${No_Attributes}"
+    /usr/libexec/ApplicationFirewall/socketfilterfw --list
     continueMessage
 }
 
-# Enables firewall
+# Command 12: Firewall Enable
 enableFirewall() {
     echo "${F_Red} •${F_Green}You choose to Enable firewall.${No_Attributes}\n"
     askPassword
@@ -299,7 +334,7 @@ enableFirewall() {
     continueMessage
 }
 
-# Disables firewall
+# Command 13: Firewall Disable
 disableFirewall() {
     echo "${F_Red} •${F_Green}You choose to Disable firewall.${No_Attributes}\n"
     askPassword
@@ -307,39 +342,127 @@ disableFirewall() {
     continueMessage
 }
 
-# List applications handled by firewall
-listFirewall() {
-    echo "${F_Red} •${F_Green}You choose to List applications handled by firewall.${No_Attributes}\n"
+# Command 14: Block all connections Enable
+blockAllEnable() {
+    echo "${F_Red} •${F_Green}You choose to Enables Block all connections.${No_Attributes}\n"
     askPassword
-    sudo /usr/libexec/ApplicationFirewall/socketfilterfw --list
+    sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setblockall on
     continueMessage
 }
 
-# Show hidden files
+# Command 15: Block all connections Disable
+blockAllDisable() {
+    echo "${F_Red} •${F_Green}You choose to Disables Block all connections.${No_Attributes}\n"
+    askPassword
+    sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setblockall off
+    continueMessage
+}
+
+# Command 16: Show Hidden Files
 showHiddenFiles() {
     echo "${F_Red} •${F_Green}You choose to show hidden files.${No_Attributes}\n"
     defaults write com.apple.finder AppleShowAllFiles true && killall Finder
     continueMessage
 }
 
-# Don't show hidden files
+# Command 17: Don't Show Hidden Files
 noShowHiddenFiles() {
     echo "${F_Red} •${F_Green}You choose to don't show hidden files.${No_Attributes}\n"
     defaults write com.apple.finder AppleShowAllFiles false && killall Finder
     continueMessage
 }
 
-# Show all file extensions
+# Command 18: Show all File Extensions
 showExtensionsFiles() {
     echo "${F_Red} •${F_Green}You choose to show all file extensions.${No_Attributes}\n"
     defaults write NSGlobalDomain AppleShowAllExtensions true && killall Finder
     continueMessage
 }
 
-# Don't show all file extensions
+# Command 19: Don't Show all File Extensions
 noShowExtensionsFiles() {
     echo "${F_Red} •${F_Green}You choose to don't show all file extensions.${No_Attributes}\n"
     defaults write NSGlobalDomain AppleShowAllExtensions false && killall Finder
+    continueMessage
+}
+
+# Command 20:
+showExtensionsFiles() {
+    echo "${F_Red} •${F_Green}You choose to .${No_Attributes}\n"
+    askPassword
+    +
+    continueMessage
+}
+
+# Command 21:
+noShowExtensionsFiles() {
+    echo "${F_Red} •${F_Green}You choose to .${No_Attributes}\n"
+    askPassword
+    +
+    continueMessage
+}
+
+# Command 22:
+showExtensionsFiles() {
+    echo "${F_Red} •${F_Green}You choose to .${No_Attributes}\n"
+    askPassword
+    +
+    continueMessage
+}
+
+# Command 23:
+noShowExtensionsFiles() {
+    echo "${F_Red} •${F_Green}You choose to .${No_Attributes}\n"
+    askPassword
+    +
+    continueMessage
+}
+
+# Command 24:
+showExtensionsFiles() {
+    echo "${F_Red} •${F_Green}You choose to .${No_Attributes}\n"
+    askPassword
+    +
+    continueMessage
+}
+
+# Command 25:
+noShowExtensionsFiles() {
+    echo "${F_Red} •${F_Green}You choose to .${No_Attributes}\n"
+    askPassword
+    +
+    continueMessage
+}
+
+# Command 26:
+showExtensionsFiles() {
+    echo "${F_Red} •${F_Green}You choose to .${No_Attributes}\n"
+    askPassword
+    +
+    continueMessage
+}
+
+# Command 27:
+noShowExtensionsFiles() {
+    echo "${F_Red} •${F_Green}You choose to .${No_Attributes}\n"
+    askPassword
+    +
+    continueMessage
+}
+
+# Command 28:
+showExtensionsFiles() {
+    echo "${F_Red} •${F_Green}You choose to .${No_Attributes}\n"
+    askPassword
+    +
+    continueMessage
+}
+
+# Command 29:
+noShowExtensionsFiles() {
+    echo "${F_Red} •${F_Green}You choose to .${No_Attributes}\n"
+    askPassword
+    +
     continueMessage
 }
 
@@ -347,29 +470,22 @@ noShowExtensionsFiles() {
 quit() {
     # Deleting macOS terminal command history and Terminal to quit
     echo "${F_Red} •${F_Green}Deleting macOS terminal command history.${No_Attributes}\n"
-    askPassword
-    sudo rm -rf .zsh_sessions
-    sudo rm -rf .zsh_history
+    rm -rf .zsh_sessions
+    rm -rf .zsh_history
     sleep 1 && echo " ${F_Green}Done.${No_Attributes}"
     # Terminal to quit
     sleep 1 && osascript -e 'tell application "Terminal" to quit'
     read
 }
 
-# Shows invalid Command message
-showInvalid() {
-    echo "${F_Red} •An unacceptable Command has been selected: ${F_Red}${Bold}${SELECTED_COMMAND}${No_Attributes}"
-    continueMessage
-}
+# -----------------------------------------------------------------------------------------------------------------
 
 # Main function of the script
 startScript() {
     while :; do
         clear
         showMenu
-
         read "?Please select an Command: " SELECTED_COMMAND
-
         case $SELECTED_COMMAND in
 
         i)
@@ -454,27 +570,82 @@ startScript() {
 
         14)
             clear
-            listFirewall
+            blockAllEnable
             ;;
 
         15)
             clear
-            showHiddenFiles
+            blockAllDisable
             ;;
 
         16)
             clear
-            noShowHiddenFiles
+            showHiddenFiles
             ;;
 
         17)
             clear
-            showExtensionsFiles
+            noShowHiddenFiles
             ;;
 
         18)
             clear
+            showExtensionsFiles
+            ;;
+
+        19)
+            clear
             noShowExtensionsFiles
+            ;;
+
+        20)
+            clear
+            +
+            ;;
+
+        21)
+            clear
+            +
+            ;;
+
+        22)
+            clear
+            +
+            ;;
+
+        23)
+            clear
+            +
+            ;;
+
+        24)
+            clear
+            +
+            ;;
+
+        25)
+            clear
+            +
+            ;;
+
+        26)
+            clear
+            +
+            ;;
+
+        27)
+            clear
+            +
+            ;;
+
+        28)
+            clear
+            +
+            ;;
+
+        29)
+            clear
+            +
             ;;
 
         *)

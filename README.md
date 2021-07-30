@@ -76,10 +76,11 @@ Shell Script Toolkit
 |    |___Flush DNS cache
 |
 |___Firewall
-|    |___Show Firewall Status
+|    |___Show Firewall Status, Show whether block all is enabled or not and List applications handled by firewall
 |    |___Firewall Enable
 |    |___Disable GateKeeper
-|    |___Firewall List
+|    |___Block all connections Enable
+|    |___Block all connections Disable
 |
 |___Show Hidden Files and Extensions
 |    |___Show Hidden Files
