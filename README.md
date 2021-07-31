@@ -69,7 +69,7 @@ Shell Script Toolkit
 |    |___Flush DNS cache
 |
 |___Firewall
-|    |___Show Firewall information: (Block all is enabled or not, List applications and etc.)
+|    |___Show Firewall information: Block all is enabled or not, List applications and etc.
 |    |___Firewall Enable
 |    |___Firewall Disable
 |    |___Block all connections Enable
@@ -88,8 +88,8 @@ Shell Script Toolkit
 |    |___Show WiFi Network Password
 |
 |___Hostname
-|    |___Show Hostname information: (Computer Name, Hostname, local Hostname NetBIOS Name, etc.)
-|    |___Set a new Hostname
+|    |___Show Hostname information: Computer Name, Hostname, local Hostname NetBIOS Name, etc.
+|    |___Setting a new Hostname and getting information about the New current Hostname
 |
 |___•••
 |

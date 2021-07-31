@@ -146,8 +146,8 @@ showMenu() {
     echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}24${F_Cyan}${Bold}: ${Italic}Show Hostname information"
     echo "   ${F_Green}${Bold}Meaning:${No_Attributes} Show Hostname information (Computer Name, Hostname, local Hostname NetBIOS Name and etc.)\n"
 
-    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}25${F_Cyan}${Bold}: ${Italic}Set a new Hostname${No_Attributes}"
-    echo "   ${F_Green}${Bold}Meaning:${No_Attributes} Set a new hostname (Computer Name, Hostname, local Hostname and NetBIOS Name)\n"
+    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}25${F_Cyan}${Bold}: ${Italic}Setting a new Hostname and getting information about the New current Hostname${No_Attributes}"
+    echo "   ${F_Green}${Bold}Meaning:${No_Attributes} Setting a new Hostname (Computer Name, Hostname, local Hostname and NetBIOS Name)\n"
 
     echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}26${F_Cyan}${Bold}: ${Italic}L${No_Attributes}"
     echo "   ${F_Green}${Bold}Meaning:${No_Attributes} L\n"
@@ -486,9 +486,9 @@ showHostnameInformation() {
     continueMessage
 }
 
-# Command 25: Set a new Hostname
-setHostname() {
-    echo "${F_Red} •${F_Green}You choose to Set a new Hostname.${No_Attributes}\n"
+# Command 25: Setting a new Hostname and getting information about the New current Hostname
+settingHostnameAndInformationAboutTheNewCurrentHostname() {
+    echo "${F_Red} •${F_Green}You choose to Setting a new Hostname.${No_Attributes}\n"
     askPassword
 # gets named
     fullName=$(id -P $(stat -f%Su /dev/console) | cut -d : -f 8 | sed 's/ //g' | awk '{print tolower($0)}')
@@ -500,7 +500,7 @@ setHostname() {
     sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "$computerName"
     sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder
 # information about the new current hostname
-    echo "\n${F_Red} •${F_Green}Information about the new current Hostname.${No_Attributes}\n"
+    echo "\n${F_Red} •${F_Green}Getting information about the new current Hostname.${No_Attributes}\n"
     scutil --get ComputerName | awk '{print "Computer Name: ", $1}'
     scutil --get HostName | awk '{print "Hostname: ", $1}'
     scutil --get LocalHostName | awk '{print "local Hostname: ", $1}'
@@ -774,7 +774,7 @@ startScript() {
 
         25)
             clear
-            setHostname
+            settingHostnameAndInformationAboutTheNewCurrentHostname
             ;;
 
         26)
