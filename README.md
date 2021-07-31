@@ -47,53 +47,62 @@ A diagram of Toolkit structure is shown below:
 
 ```
 Shell Script Toolkit
-|
+∆
 |___Xcode
-|    |___Installing the Xcode Command Line Tools
-|    |___Uninstalling the Xcode Command Line Tools
+|    |___Command i: Installing the Xcode Command Line Tools
+|    |___Command u: Uninstalling the Xcode Command Line Tools
 |
 |___GateKeeper
-|    |___Show GateKeeper Status
-|    |___Enable GateKeeper
-|    |___Disable GateKeeper
-|    |___Remove app from GateKeeper quarantine
-|    |___Self-sign the app
-|    |___List apps from unknown sources
-|    |___Restoring the Default Gatekeeper Database
+|    |___Command 1: Show GateKeeper Status
+|    |___Command 2: Enable GateKeeper
+|    |___Command 3: Disable GateKeeper
+|    |___Command 4: Remove app from GateKeeper quarantine
+|    |___Command 5: Self-sign the app
+|    |___Command 6: List apps from unknown sources
+|    |___Command 7: Restoring the Default Gatekeeper Database
 |
 |___Restart and Shutdown
-|    |___Restart computer
-|    |___Shutdown computer
+|    |___Command 8: Restart computer
+|    |___Command 9: Shutdown computer
 |
 |___DNS
-|    |___Flush DNS cache
+|    |___Command 10: Flush DNS cache
 |
 |___Firewall
-|    |___Show Firewall information: Block all is enabled or not, List applications and etc.
-|    |___Firewall Enable
-|    |___Firewall Disable
-|    |___Block all connections Enable
-|    |___Block all connections Disable
+|    |___Command 11: Show Firewall information: Block all is enabled or not, List applications and etc.
+|    |___Command 12: Firewall Enable
+|    |___Command 13: Firewall Disable
+|    |___Command 14: Block all connections Enable
+|    |___Command 15: Block all connections Disable
 |
 |___Hidden Files and Extensions
-|    |___Show Hidden Files
-|    |___Don't Show Hidden Files
-|    |___Show all file extensions
-|    |___Don't Show all File Extensions
+|    |___Command 16: Show Hidden Files
+|    |___Command 17: Don't Show Hidden Files
+|    |___Command 18: Show all File Extensions
+|    |___Command 19: Don't Show all File Extensions
 |
 |___WiFi
-|    |___Show WiFi information and Scan Wireless Networks
-|    |___WiFi Enable
-|    |___WiFi Disable
-|    |___Show WiFi Network Password
+|    |___Command 20: Show WiFi information and Scan Wireless Networks
+|    |___Command 21: WiFi Enable
+|    |___Command 22: WiFi Disable
+|    |___Command 23: Show WiFi Network Password
 |
 |___Hostname
-|    |___Show Hostname information: Computer Name, Hostname, local Hostname NetBIOS Name, etc.
-|    |___Setting a new Hostname and getting information about the New current Hostname
+|    |___Command 24: Show Hostname information: Computer Name, Hostname, local Hostname NetBIOS Name, etc.
+|    |___Command 25: Setting a new Hostname and getting information about the New current Hostname
+|
+|___
+|    |___Command 26: 
+|    |___Command 27: 
+|    |___Command 28: 
+|    |___Command 29: 
+|
 |
 |___•••
 |
-|___Quit Shell Script Toolkit
+|___Quit
+|    |___Quit Shell Script Toolkit
+°
 ```
 
 ## Download
