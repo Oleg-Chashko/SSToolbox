@@ -1,7 +1,7 @@
 #!/bin/zsh
 
 # Terminal window - minimize window, move to top/left corner, resize, wait a few seconds, bring to front and then restore window
-printf '\e[2t' && printf '\033[3;0;0t' && printf '\033[8;55;115t' && sleep 1 && printf '\e[5t' && printf '\e[1t'
+printf '\e[2t' && printf '\033[3;0;0t' && printf '\033[8;55;120t' && sleep 1 && printf '\e[5t' && printf '\e[1t'
 
 # Attribute
 GITHUB_URL="https://github.com/Oleg-Chashko"
@@ -131,23 +131,23 @@ showMenu() {
     echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}19${F_Cyan}${Bold}: ${Italic}Don't Show all File Extensions${No_Attributes}"
     echo "   ${F_Green}${Bold}Meaning:${No_Attributes} Don't show all file extensions\n"
 
-    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}20${F_Cyan}${Bold}: ${Italic}L${No_Attributes}"
-    echo "   ${F_Green}${Bold}Meaning:${No_Attributes} L\n"
+    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}20${F_Cyan}${Bold}: ${Italic}WiFi Status and Scan Wireless Networks${No_Attributes}"
+    echo "   ${F_Green}${Bold}Meaning:${No_Attributes} WiFi Status and Scan Wireless Networks\n"
 
-    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}21${F_Cyan}${Bold}: ${Italic}L${No_Attributes}"
-    echo "   ${F_Green}${Bold}Meaning:${No_Attributes} L\n"
+    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}21${F_Cyan}${Bold}: ${Italic}WiFi Disable${No_Attributes}"
+    echo "   ${F_Green}${Bold}Meaning:${No_Attributes} Disables WiFi\n"
 
-    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}22${F_Cyan}${Bold}: ${Italic}L${No_Attributes}"
-    echo "   ${F_Green}${Bold}Meaning:${No_Attributes} L\n"
+    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}22${F_Cyan}${Bold}: ${Italic}WiFi Enable${No_Attributes}"
+    echo "   ${F_Green}${Bold}Meaning:${No_Attributes} Enables WiFi\n"
 
-    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}23${F_Cyan}${Bold}: ${Italic}L${No_Attributes}"
-    echo "   ${F_Green}${Bold}Meaning:${No_Attributes} L\n"
+    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}23${F_Cyan}${Bold}: ${Italic}Show WiFi Network Password${No_Attributes}"
+    echo "   ${F_Green}${Bold}Meaning:${No_Attributes} Show WiFi Network Password\n"
 
-    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}24${F_Cyan}${Bold}: ${Italic}L${No_Attributes}"
-    echo "   ${F_Green}${Bold}Meaning:${No_Attributes} L\n"
+    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}24${F_Cyan}${Bold}: ${Italic}Get the current Hostname information"
+    echo "   ${F_Green}${Bold}Meaning:${No_Attributes} Get the current Hostname information (Computer Name, Hostname, local Hostname and NetBIOS Name)\n"
 
-    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}25${F_Cyan}${Bold}: ${Italic}L${No_Attributes}"
-    echo "   ${F_Green}${Bold}Meaning:${No_Attributes} L\n"
+    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}25${F_Cyan}${Bold}: ${Italic}Set a new Hostname${No_Attributes}"
+    echo "   ${F_Green}${Bold}Meaning:${No_Attributes} Set a new hostname (Computer Name, Hostname, local Hostname and NetBIOS Name)\n"
 
     echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}26${F_Cyan}${Bold}: ${Italic}L${No_Attributes}"
     echo "   ${F_Green}${Bold}Meaning:${No_Attributes} L\n"
@@ -171,7 +171,7 @@ showMenu() {
 askPassword() {
     case $ROOT_PASSWORD in
     0)
-        echo " ${F_Cyan}Please provide your password to proceed.${No_Attributes}\n"
+        echo " ${F_Cyan}Please provide your Password to proceed.${No_Attributes}\n"
         ROOT_PASSWORD=1
         ;;
     esac
@@ -386,51 +386,70 @@ noShowExtensionsFiles() {
     continueMessage
 }
 
-# Command 20:
-showExtensionsFiles() {
-    echo "${F_Red} •${F_Green}You choose to .${No_Attributes}\n"
-    askPassword
-    +
+# Command 20: WiFi Status and Scan Wireless Networks
+wifiStatusAndScanWirelessNetworks() {
+    echo "${F_Red} •${F_Green}Show WiFi status.${No_Attributes}"
+    /System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport -I
+    echo "\n${F_Red} •${F_Green}Show scan wireless networks.${No_Attributes}"
+    /System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport -s
     continueMessage
 }
 
-# Command 21:
-noShowExtensionsFiles() {
-    echo "${F_Red} •${F_Green}You choose to .${No_Attributes}\n"
-    askPassword
-    +
+# Command 21: WiFi Disable
+wifiOff() {
+    echo "${F_Red} •${F_Green}You choose to Disables WiFi.${No_Attributes}\n"
+    networksetup -setairportpower en0 off
     continueMessage
 }
 
-# Command 22:
-showExtensionsFiles() {
-    echo "${F_Red} •${F_Green}You choose to .${No_Attributes}\n"
-    askPassword
-    +
+# Command 22: WiFi Enable
+wifiOn() {
+    echo "${F_Red} •${F_Green}You choose to Enables WiFi.${No_Attributes}\n"
+    networksetup -setairportpower en0 on
     continueMessage
 }
 
-# Command 23:
-noShowExtensionsFiles() {
-    echo "${F_Red} •${F_Green}You choose to .${No_Attributes}\n"
-    askPassword
-    +
+# Command 23: Show WiFi Network Password
+wifiShowPassword() {
+    echo "${F_Red} •${F_Green}You choose to WiFi Network Password.${No_Attributes}\n"
+    echo "${F_Cyan} Please provide your Login and Password to proceed.${No_Attributes}\n"
+    sleep 2
+    if [ -z "$1" ]
+    then
+        ssid="`/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport -I | awk '/ SSID/ {print substr($0, index($0, $2))}'`"
+    else
+        ssid=$1
+    fi
+    security find-generic-password -D "AirPort network password" -a "$ssid" -gw
     continueMessage
 }
 
-# Command 24:
-showExtensionsFiles() {
-    echo "${F_Red} •${F_Green}You choose to .${No_Attributes}\n"
-    askPassword
-    +
+# Command 24: Get the current Hostname information
+showHostname() {
+    echo "${F_Red} •${F_Green}You choose to get the current Hostname information.${No_Attributes}\n"
+    networksetup -listnetworkserviceorder | grep en0 | awk '{print "Network device: " $1, $2, $3, $4, $5}'
+    ipconfig getifaddr en0 | awk '{print "IP address: " $1}'
+    networksetup -getmacaddress en0 | awk '{print "MAC address: " $3}'
+    scutil --get ComputerName | awk '{print "Computer Name: ", $1}'
+    scutil --get HostName | awk '{print "Hostname: ", $1}'
+    scutil --get LocalHostName | awk '{print "local Hostname: ", $1}'
+    defaults read /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName | awk '{print "NetBIOS Name: " $1}'
+    echo "\n${F_Red} •${F_Green}Show list all network devices on mac.${No_Attributes}"
+    networksetup -listallhardwareports
+    echo "\n${F_Red} •${F_Green}Show IP Addresses of Devices on a Local Network.${No_Attributes}\n"
+    arp -a| grep en0 | awk '{print $1, $2, $3, $4}'
     continueMessage
 }
 
-# Command 25:
-noShowExtensionsFiles() {
-    echo "${F_Red} •${F_Green}You choose to .${No_Attributes}\n"
-    askPassword
-    +
+# Command 25: Set a new Hostname
+setHostname() {
+    echo "${F_Red} •${F_Green}You choose to Set a new Hostname.${No_Attributes}\n"
+    #askPassword
+    echo "Changing hostname to: $1"
+    sudo scutil --set ComputerName "$1" && \
+    sudo scutil --set HostName "$1" && \
+    sudo scutil --set LocalHostName "$1" && \
+    sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "$1"
     continueMessage
 }
 
@@ -600,32 +619,32 @@ startScript() {
 
         20)
             clear
-            +
+            wifiStatusAndScanWirelessNetworks
             ;;
 
         21)
             clear
-            +
+            wifiOff
             ;;
 
         22)
             clear
-            +
+            wifiOn
             ;;
 
         23)
             clear
-            +
+            wifiShowPassword
             ;;
 
         24)
             clear
-            +
+            showHostname
             ;;
 
         25)
             clear
-            +
+            setHostname
             ;;
 
         26)

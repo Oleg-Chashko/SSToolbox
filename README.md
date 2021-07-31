@@ -39,18 +39,15 @@
 
 ### Before you run the script, I strongly recommend that you read the Tips section.
 
+- The script will require you to enter a password and to install the Xcode or Xcode Command Line Tools.
 - Run the script and select the Command you want.
 
 <p align="center">
   <img width="780px" src="https://raw.githubusercontent.com/Oleg-Chashko/Shell-Script-Toolkit/main/Images/Running_script_2.png" />
 </p>
 
-#### Features
-
-- Easy to use.
-- Editing the script.
-
-#### A diagram of Toolkit structure is shown below:
+## Features
+A diagram of Toolkit structure is shown below:
 
 ```
 Shell Script Toolkit
