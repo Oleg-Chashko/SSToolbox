@@ -489,12 +489,22 @@ showHostnameInformation() {
 # Command 25: Set a new Hostname
 setHostname() {
     echo "${F_Red} •${F_Green}You choose to Set a new Hostname.${No_Attributes}\n"
-    #askPassword
-    echo "Changing hostname to: $1"
-    sudo scutil --set ComputerName "$1" && \
-    sudo scutil --set HostName "$1" && \
-    sudo scutil --set LocalHostName "$1" && \
-    sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "$1"
+    askPassword
+# gets named
+    fullName=$(id -P $(stat -f%Su /dev/console) | cut -d : -f 8 | sed 's/ //g' | awk '{print tolower($0)}')
+    computerName=$fullName
+# set all the name in all the places
+    sudo scutil --set ComputerName "$computerName"
+    sudo scutil --set HostName "$computerName"
+    sudo scutil --set LocalHostName "$computerName"
+    sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "$computerName"
+    sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder
+# information about the new current hostname
+    echo "\n${F_Red} •${F_Green}Information about the new current Hostname.${No_Attributes}\n"
+    scutil --get ComputerName | awk '{print "Computer Name: ", $1}'
+    scutil --get HostName | awk '{print "Hostname: ", $1}'
+    scutil --get LocalHostName | awk '{print "local Hostname: ", $1}'
+    defaults read /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName | awk '{print "NetBIOS Name: " $1}'
     continueMessage
 }
 
