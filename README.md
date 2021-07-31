@@ -97,11 +97,10 @@ Shell Script Toolkit
 |    |___Command 28: 
 |    |___Command 29: 
 |
-|
 |___•••
 |
 |___Quit
-|    |___Quit Shell Script Toolkit
+|    |___Command 0: Quit Shell Script Toolkit
 °
 ```
 
