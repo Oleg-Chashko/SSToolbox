@@ -83,7 +83,7 @@ Shell Script Toolkit
 |
 |___•••
 |
-|___Quit Shell Script Toolbox
+|___Quit Shell Script Toolkit
 ```
 
 ## Download

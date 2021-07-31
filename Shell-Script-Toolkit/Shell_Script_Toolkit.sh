@@ -161,7 +161,7 @@ showMenu() {
     echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}29${F_Cyan}${Bold}: ${Italic}L${No_Attributes}"
     echo "   ${F_Green}${Bold}Meaning:${No_Attributes} L\n"
 
-    echo " ${F_Cyan}${Bold}Command ${F_Red}${Bold}0${F_Cyan}${Bold}: ${Italic}Quit Shell Script Toolbox${No_Attributes}"
+    echo " ${F_Cyan}${Bold}Command ${F_Red}${Bold}0${F_Cyan}${Bold}: ${Italic}Quit Shell Script Toolkit${No_Attributes}"
     echo "   ${F_Green}${Bold}Meaning:${No_Attributes} Deleting terminal command history and Terminal to quit\n"
 }
 
@@ -205,6 +205,18 @@ uninstallingXCLT() {
     sudo rm -rf /Library/Developer/CommandLineTools
     echo " ${F_Red}Done.${No_Attributes}"
     continueMessage
+}
+
+# Command 0: Quit Shell Script Toolkit
+quitShellScriptToolkit() {
+    # Deleting macOS terminal command history and Terminal to quit
+    echo "${F_Red} •${F_Green}Deleting macOS terminal command history.${No_Attributes}\n"
+    rm -rf .zsh_sessions
+    rm -rf .zsh_history
+    sleep 1 && echo " ${F_Green}Done.${No_Attributes}"
+    # Terminal to quit
+    sleep 1 && osascript -e 'tell application "Terminal" to quit'
+    read
 }
 
 # Command 1: Show GateKeeper Status
@@ -485,18 +497,6 @@ noShowExtensionsFiles() {
     continueMessage
 }
 
-# Terminal to quit
-quit() {
-    # Deleting macOS terminal command history and Terminal to quit
-    echo "${F_Red} •${F_Green}Deleting macOS terminal command history.${No_Attributes}\n"
-    rm -rf .zsh_sessions
-    rm -rf .zsh_history
-    sleep 1 && echo " ${F_Green}Done.${No_Attributes}"
-    # Terminal to quit
-    sleep 1 && osascript -e 'tell application "Terminal" to quit'
-    read
-}
-
 # -----------------------------------------------------------------------------------------------------------------
 
 # Main function of the script
@@ -519,7 +519,7 @@ startScript() {
 
         0)
             clear
-            quit
+            quitShellScriptToolkit
             ;;
 
         1)
