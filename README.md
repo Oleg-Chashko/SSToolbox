@@ -61,7 +61,7 @@ Shell Script Toolkit
 |    |___List apps from unknown sources
 |    |___Restoring the Default Gatekeeper Database
 |
-|___Restart and Shutdown Mac
+|___Restart and Shutdown
 |    |___Restart computer
 |    |___Shutdown computer
 |
@@ -75,7 +75,7 @@ Shell Script Toolkit
 |    |___Block all connections Enable
 |    |___Block all connections Disable
 |
-|___Show Hidden Files and Extensions
+|___Hidden Files and Extensions
 |    |___Show Hidden Files
 |    |___Don't Show Hidden Files
 |    |___Show all file extensions

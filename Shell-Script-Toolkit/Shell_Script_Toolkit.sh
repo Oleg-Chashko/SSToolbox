@@ -161,6 +161,39 @@ showMenu() {
     echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}29${F_Cyan}${Bold}: ${Italic}L${No_Attributes}"
     echo "   ${F_Green}${Bold}Meaning:${No_Attributes} L\n"
 
+    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}30${F_Cyan}${Bold}: ${Italic}L${No_Attributes}"
+    echo "   ${F_Green}${Bold}Meaning:${No_Attributes} L\n"
+
+    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}31${F_Cyan}${Bold}: ${Italic}L${No_Attributes}"
+    echo "   ${F_Green}${Bold}Meaning:${No_Attributes} L\n"
+
+    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}32${F_Cyan}${Bold}: ${Italic}L${No_Attributes}"
+    echo "   ${F_Green}${Bold}Meaning:${No_Attributes} L\n"
+
+    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}33${F_Cyan}${Bold}: ${Italic}L${No_Attributes}"
+    echo "   ${F_Green}${Bold}Meaning:${No_Attributes} L\n"
+
+    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}34${F_Cyan}${Bold}: ${Italic}L${No_Attributes}"
+    echo "   ${F_Green}${Bold}Meaning:${No_Attributes} L\n"
+
+    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}35${F_Cyan}${Bold}: ${Italic}L${No_Attributes}"
+    echo "   ${F_Green}${Bold}Meaning:${No_Attributes} L\n"
+
+    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}36${F_Cyan}${Bold}: ${Italic}L${No_Attributes}"
+    echo "   ${F_Green}${Bold}Meaning:${No_Attributes} L\n"
+
+    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}37${F_Cyan}${Bold}: ${Italic}L${No_Attributes}"
+    echo "   ${F_Green}${Bold}Meaning:${No_Attributes} L\n"
+
+    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}38${F_Cyan}${Bold}: ${Italic}L${No_Attributes}"
+    echo "   ${F_Green}${Bold}Meaning:${No_Attributes} L\n"
+
+    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}39${F_Cyan}${Bold}: ${Italic}L${No_Attributes}"
+    echo "   ${F_Green}${Bold}Meaning:${No_Attributes} L\n"
+
+    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}40${F_Cyan}${Bold}: ${Italic}L${No_Attributes}"
+    echo "   ${F_Green}${Bold}Meaning:${No_Attributes} L\n"
+
     echo " ${F_Cyan}${Bold}Command ${F_Red}${Bold}0${F_Cyan}${Bold}: ${Italic}Quit Shell Script Toolkit${No_Attributes}"
     echo "   ${F_Green}${Bold}Meaning:${No_Attributes} Deleting terminal command history and Terminal to quit\n"
 }
@@ -497,6 +530,93 @@ noShowExtensionsFiles() {
     continueMessage
 }
 
+# Command 30:
+showExtensionsFiles() {
+    echo "${F_Red} •${F_Green}You choose to .${No_Attributes}\n"
+    askPassword
+    +
+    continueMessage
+}
+
+# Command 31:
+noShowExtensionsFiles() {
+    echo "${F_Red} •${F_Green}You choose to .${No_Attributes}\n"
+    askPassword
+    +
+    continueMessage
+}
+
+# Command 32:
+showExtensionsFiles() {
+    echo "${F_Red} •${F_Green}You choose to .${No_Attributes}\n"
+    askPassword
+    +
+    continueMessage
+}
+
+# Command 33:
+noShowExtensionsFiles() {
+    echo "${F_Red} •${F_Green}You choose to .${No_Attributes}\n"
+    askPassword
+    +
+    continueMessage
+}
+
+# Command 34:
+showExtensionsFiles() {
+    echo "${F_Red} •${F_Green}You choose to .${No_Attributes}\n"
+    askPassword
+    +
+    continueMessage
+}
+
+# Command 35:
+noShowExtensionsFiles() {
+    echo "${F_Red} •${F_Green}You choose to .${No_Attributes}\n"
+    askPassword
+    +
+    continueMessage
+}
+
+# Command 36:
+showExtensionsFiles() {
+    echo "${F_Red} •${F_Green}You choose to .${No_Attributes}\n"
+    askPassword
+    +
+    continueMessage
+}
+
+# Command 37:
+noShowExtensionsFiles() {
+    echo "${F_Red} •${F_Green}You choose to .${No_Attributes}\n"
+    askPassword
+    +
+    continueMessage
+}
+# Command 38:
+noShowExtensionsFiles() {
+    echo "${F_Red} •${F_Green}You choose to .${No_Attributes}\n"
+    askPassword
+    +
+    continueMessage
+}
+
+# Command 39:
+showExtensionsFiles() {
+    echo "${F_Red} •${F_Green}You choose to .${No_Attributes}\n"
+    askPassword
+    +
+    continueMessage
+}
+
+# Command 40:
+noShowExtensionsFiles() {
+    echo "${F_Red} •${F_Green}You choose to .${No_Attributes}\n"
+    askPassword
+    +
+    continueMessage
+}
+
 # -----------------------------------------------------------------------------------------------------------------
 
 # Main function of the script
@@ -663,6 +783,61 @@ startScript() {
             ;;
 
         29)
+            clear
+            +
+            ;;
+
+        30)
+            clear
+            +
+            ;;
+
+        31)
+            clear
+            +
+            ;;
+
+        32)
+            clear
+            +
+            ;;
+
+        33)
+            clear
+            +
+            ;;
+
+        34)
+            clear
+            +
+            ;;
+
+        35)
+            clear
+            +
+            ;;
+
+        36)
+            clear
+            +
+            ;;
+
+        37)
+            clear
+            +
+            ;;
+
+        38)
+            clear
+            +
+            ;;
+
+        39)
+            clear
+            +
+            ;;
+
+        40)
             clear
             +
             ;;
