@@ -69,9 +69,9 @@ Shell Script Toolkit
 |    |___Flush DNS cache
 |
 |___Firewall
-|    |___Show Firewall Status, Show whether block all is enabled or not and List applications handled by firewall
+|    |___Show Firewall information: (Block all is enabled or not, List applications and etc.)
 |    |___Firewall Enable
-|    |___Disable GateKeeper
+|    |___Firewall Disable
 |    |___Block all connections Enable
 |    |___Block all connections Disable
 |
@@ -80,6 +80,16 @@ Shell Script Toolkit
 |    |___Don't Show Hidden Files
 |    |___Show all file extensions
 |    |___Don't Show all File Extensions
+|
+|___WiFi
+|    |___Show WiFi information and Scan Wireless Networks
+|    |___WiFi Enable
+|    |___WiFi Disable
+|    |___Show WiFi Network Password
+|
+|___Hostname
+|    |___Show Hostname information: (Computer Name, Hostname, local Hostname NetBIOS Name, etc.)
+|    |___Set a new Hostname
 |
 |___•••
 |

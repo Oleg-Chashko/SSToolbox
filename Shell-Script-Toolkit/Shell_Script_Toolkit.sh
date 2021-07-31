@@ -104,8 +104,8 @@ showMenu() {
     echo "   ${F_Green}${Bold}Meaning:${No_Attributes} Flushes local DNS cache"
     echo "      ${F_Red}${Bold}Note:${No_Attributes} But DNS cache gets corrupted, then you can run into problems loading sites, with error 404\n"
 
-    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}11${F_Cyan}${Bold}: ${Italic}Show firewall status; Show whether block all is enabled or not; List applications handled by firewall${No_Attributes}"
-    echo "   ${F_Green}${Bold}Meaning:${No_Attributes} Check Firewall status; Check whether block all is enabled or not; List applications handled by firewall\n"
+    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}11${F_Cyan}${Bold}: ${Italic}Show Firewall information${No_Attributes}"
+    echo "   ${F_Green}${Bold}Meaning:${No_Attributes} Show Firewall information (Block all is enabled or not, List applications and etc.)\n"
 
     echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}12${F_Cyan}${Bold}: ${Italic}Firewall Enable${No_Attributes}"
     echo "   ${F_Green}${Bold}Meaning:${No_Attributes} Enables Firewall\n"
@@ -131,20 +131,20 @@ showMenu() {
     echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}19${F_Cyan}${Bold}: ${Italic}Don't Show all File Extensions${No_Attributes}"
     echo "   ${F_Green}${Bold}Meaning:${No_Attributes} Don't show all file extensions\n"
 
-    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}20${F_Cyan}${Bold}: ${Italic}WiFi Status and Scan Wireless Networks${No_Attributes}"
-    echo "   ${F_Green}${Bold}Meaning:${No_Attributes} WiFi Status and Scan Wireless Networks\n"
+    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}20${F_Cyan}${Bold}: ${Italic}Show WiFi information and Scan Wireless Networks${No_Attributes}"
+    echo "   ${F_Green}${Bold}Meaning:${No_Attributes} Show WiFi information and Scan Wireless Networks\n"
 
-    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}21${F_Cyan}${Bold}: ${Italic}WiFi Disable${No_Attributes}"
-    echo "   ${F_Green}${Bold}Meaning:${No_Attributes} Disables WiFi\n"
-
-    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}22${F_Cyan}${Bold}: ${Italic}WiFi Enable${No_Attributes}"
+    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}21${F_Cyan}${Bold}: ${Italic}WiFi Enable${No_Attributes}"
     echo "   ${F_Green}${Bold}Meaning:${No_Attributes} Enables WiFi\n"
+
+    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}22${F_Cyan}${Bold}: ${Italic}WiFi Disable${No_Attributes}"
+    echo "   ${F_Green}${Bold}Meaning:${No_Attributes} Disables WiFi\n"
 
     echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}23${F_Cyan}${Bold}: ${Italic}Show WiFi Network Password${No_Attributes}"
     echo "   ${F_Green}${Bold}Meaning:${No_Attributes} Show WiFi Network Password\n"
 
-    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}24${F_Cyan}${Bold}: ${Italic}Get the current Hostname information"
-    echo "   ${F_Green}${Bold}Meaning:${No_Attributes} Get the current Hostname information (Computer Name, Hostname, local Hostname and NetBIOS Name)\n"
+    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}24${F_Cyan}${Bold}: ${Italic}Show Hostname information"
+    echo "   ${F_Green}${Bold}Meaning:${No_Attributes} Show Hostname information (Computer Name, Hostname, local Hostname NetBIOS Name and etc.)\n"
 
     echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}25${F_Cyan}${Bold}: ${Italic}Set a new Hostname${No_Attributes}"
     echo "   ${F_Green}${Bold}Meaning:${No_Attributes} Set a new hostname (Computer Name, Hostname, local Hostname and NetBIOS Name)\n"
@@ -327,9 +327,9 @@ flushesLocalDNS() {
     continueMessage
 }
 
-# Command 11: Show firewall status; Show whether block all is enabled or not; List applications handled by firewall
-statusFirewall() {
-    echo "${F_Red} •${F_Green}Show firewall status.${No_Attributes}"
+# Command 11: Show Firewall information
+showFirewallInformation() {
+    echo "${F_Red} •${F_Green}Show firewall information.${No_Attributes}"
     /usr/libexec/ApplicationFirewall/socketfilterfw --getglobalstate
     echo "\n${F_Red} •${F_Green}Show whether block all is enabled or not.${No_Attributes}"
     /usr/libexec/ApplicationFirewall/socketfilterfw --getblockall
@@ -398,26 +398,26 @@ noShowExtensionsFiles() {
     continueMessage
 }
 
-# Command 20: WiFi Status and Scan Wireless Networks
-wifiStatusAndScanWirelessNetworks() {
-    echo "${F_Red} •${F_Green}Show WiFi status.${No_Attributes}"
+# Command 20: Show WiFi information and Scan Wireless Networks
+showWiFiInformationAndScanWirelessNetworks() {
+    echo "${F_Red} •${F_Green}Show WiFi information.${No_Attributes}"
     /System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport -I
     echo "\n${F_Red} •${F_Green}Show scan wireless networks.${No_Attributes}"
     /System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport -s
     continueMessage
 }
 
-# Command 21: WiFi Disable
-wifiOff() {
-    echo "${F_Red} •${F_Green}You choose to Disables WiFi.${No_Attributes}\n"
-    networksetup -setairportpower en0 off
-    continueMessage
-}
-
-# Command 22: WiFi Enable
+# Command 21: WiFi Enable
 wifiOn() {
     echo "${F_Red} •${F_Green}You choose to Enables WiFi.${No_Attributes}\n"
     networksetup -setairportpower en0 on
+    continueMessage
+}
+
+# Command 22: WiFi Disable
+wifiOff() {
+    echo "${F_Red} •${F_Green}You choose to Disables WiFi.${No_Attributes}\n"
+    networksetup -setairportpower en0 off
     continueMessage
 }
 
@@ -436,8 +436,8 @@ wifiShowPassword() {
     continueMessage
 }
 
-# Command 24: Get the current Hostname information
-showHostname() {
+# Command 24: Show Hostname information
+showHostnameInformation() {
     echo "${F_Red} •${F_Green}You choose to get the current Hostname information.${No_Attributes}\n"
     networksetup -listnetworkserviceorder | grep en0 | awk '{print "Network device: " $1, $2, $3, $4, $5}'
     ipconfig getifaddr en0 | awk '{print "IP address: " $1}'
@@ -574,7 +574,7 @@ startScript() {
 
         11)
             clear
-            statusFirewall
+            showFirewallInformation
             ;;
 
         12)
@@ -619,17 +619,17 @@ startScript() {
 
         20)
             clear
-            wifiStatusAndScanWirelessNetworks
+            showWiFiInformationAndScanWirelessNetworks
             ;;
 
         21)
             clear
-            wifiOff
+            wifiOn
             ;;
 
         22)
             clear
-            wifiOn
+            wifiOff
             ;;
 
         23)
@@ -639,7 +639,7 @@ startScript() {
 
         24)
             clear
-            showHostname
+            showHostnameInformation
             ;;
 
         25)
