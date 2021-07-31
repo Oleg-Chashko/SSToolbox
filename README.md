@@ -40,6 +40,7 @@
 ### Before you run the script, I strongly recommend that you read the Tips section.
 
 - The script will require you to enter a password and to install the Xcode or Xcode Command Line Tools.
+- The Xcode Command Line Tools can be installed using the "Shell Script Toolkit" or manually through the Terminal.
 - Run the script and select the Command you want.
 
 <p align="center">
