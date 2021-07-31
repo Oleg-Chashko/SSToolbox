@@ -94,7 +94,7 @@ Shell Script Toolkit
 
 ⚠ _You will need to enter a password to obtain elevated rights._<br>
 ⚠ _Some functions require Xcode or Xcode Command Line Tools._<br>
-🟢 The Xcode Command Line Tools can be installed using the Script or through the Terminal.<br>
+🟢 The Xcode Command Line Tools can be installed using the Script or manually through the Terminal<br>
 🟢 Before running the script, please read the "Tips" section.
 ## Tips
 #### Manual installation of the Xcode Command Line Tools:
