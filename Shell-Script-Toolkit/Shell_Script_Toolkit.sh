@@ -59,143 +59,97 @@ No_Attributes='\033[0m'
 
 # Menu
 showMenu() {
-    echo "\n                                     ${F_Blue}${Bold}Welcome to Shell Script Toolkit${No_Attributes}"
-    echo "                                       ${Dim}${RELEASE_VERSION}${No_Attributes}"
-    echo "                                     ${Dim}${GITHUB_URL}${No_Attributes}\n"
+    echo "\n                         ${F_Blue}${Bold}Welcome to Shell Script Toolkit${No_Attributes}"
+    echo "                           ${Dim}${RELEASE_VERSION}${No_Attributes}"
+    echo "                         ${Dim}${GITHUB_URL}${No_Attributes}\n"
 
-    echo "                        ********************************************************"
-    echo "                        * ${F_Cyan}${Bold}Command ${F_Red}${Bold}i${F_Cyan}${Bold}: ${Italic}Installing the Xcode Command Line Tools${No_Attributes}   *"
-    echo "                        * ${F_Cyan}${Bold}Command ${F_Red}${Bold}u${F_Cyan}${Bold}: ${Italic}Uninstalling the Xcode Command Line Tools${No_Attributes} *"
-    echo "                        ********************************************************\n"
+    echo "            *********************************************************"
+    echo "            * ${F_Cyan}${Bold}Command ${F_Red}${Bold}i${F_Cyan}${Bold}:${No_Attributes} ${F_Green}${Bold}Installing${No_Attributes} the Xcode Command Line Tools.   *"
+    echo "            * ${F_Cyan}${Bold}Command ${F_Red}${Bold}u${F_Cyan}${Bold}:${No_Attributes} ${F_Green}${Bold}Uninstalling${No_Attributes} the Xcode Command Line Tools. *"
+    echo "            *********************************************************\n"
 
-    echo " ${F_Cyan}${Bold}Command ${F_Red}${Bold}1${F_Cyan}${Bold}: ${Italic}Show GateKeeper Status${No_Attributes}"
-    echo "   ${F_Green}${Bold}Meaning:${No_Attributes} Check GateKeeper status\n"
+    echo "${F_Cyan}${Bold} Command ${F_Red}${Bold}1${F_Cyan}${Bold}: ${F_Green}Show GateKeeper Status.${No_Attributes}"
 
-    echo " ${F_Cyan}${Bold}Command ${F_Red}${Bold}2${F_Cyan}${Bold}: ${Italic}Enable GateKeeper${No_Attributes}"
-    echo "   ${F_Green}${Bold}Meaning:${No_Attributes} Enables GateKeeper\n"
+    echo "${F_Cyan}${Bold} Command ${F_Red}${Bold}2${F_Cyan}${Bold}: ${F_Green}Enable GateKeeper.${No_Attributes}"
 
-    echo " ${F_Cyan}${Bold}Command ${F_Red}${Bold}3${F_Cyan}${Bold}: ${Italic}Disable GateKeeper${No_Attributes}"
-    echo "   ${F_Green}${Bold}Meaning:${No_Attributes} Disables GateKeeper"
-    echo "      ${F_Red}${Bold}Note:${No_Attributes} Caution, your actions could lead to potential security and privacy issues\n"
+    echo "${F_Cyan}${Bold} Command ${F_Red}${Bold}3${F_Cyan}${Bold}: ${F_Green}Disable GateKeeper.${No_Attributes} Note: Caution, your actions could lead to potential security and privacy issues."
 
-    echo " ${F_Cyan}${Bold}Command ${F_Red}${Bold}4${F_Cyan}${Bold}: ${Italic}Remove app from GateKeeper quarantine${No_Attributes}"
-    echo "   ${F_Green}${Bold}Meaning:${No_Attributes} Allows an individual quarantined app to run\n"
+    echo "${F_Cyan}${Bold} Command ${F_Red}${Bold}4${F_Cyan}${Bold}: ${F_Green}Remove app from GateKeeper quarantine.${No_Attributes}"
 
-    echo " ${F_Cyan}${Bold}Command ${F_Red}${Bold}5${F_Cyan}${Bold}: ${Italic}Self-sign the app${No_Attributes}"
-    echo "   ${F_Green}${Bold}Meaning:${No_Attributes} If GateKeeper is on and your app quits unexpectedly, try self-signing"
-    echo "      ${F_Red}${Bold}Note:${No_Attributes} Require Xcode or Xcode Command Line Tools\n"
+    echo "${F_Cyan}${Bold} Command ${F_Red}${Bold}5${F_Cyan}${Bold}: ${F_Green}If GateKeeper is on and your app quits unexpectedly, try self-signing.${No_Attributes} Note: Require Xcode or Xcode Command Line Tools."
 
-    echo " ${F_Cyan}${Bold}Command ${F_Red}${Bold}6${F_Cyan}${Bold}: ${Italic}List apps from unknown sources${No_Attributes}"
-    echo "   ${F_Green}${Bold}Meaning:${No_Attributes} List apps from unknown sources you’ve approved for use\n"
+    echo "${F_Cyan}${Bold} Command ${F_Red}${Bold}6${F_Cyan}${Bold}: ${F_Green}List apps from unknown sources you’ve approved for use.${No_Attributes}"
 
-    echo " ${F_Cyan}${Bold}Command ${F_Red}${Bold}7${F_Cyan}${Bold}: ${Italic}Restoring the Default Gatekeeper Database${No_Attributes}"
-    echo "   ${F_Green}${Bold}Meaning:${No_Attributes} Restoring the Default Gatekeeper Database"
-    echo "      ${F_Red}${Bold}Note:${No_Attributes} After resetting all gatekeeper settings, reboot the system\n"
+    echo "${F_Cyan}${Bold} Command ${F_Red}${Bold}7${F_Cyan}${Bold}: ${F_Green}Restoring the Default Gatekeeper Database.${No_Attributes} Note: After resetting all gatekeeper settings, reboot the system."
 
-    echo " ${F_Cyan}${Bold}Command ${F_Red}${Bold}8${F_Cyan}${Bold}: ${Italic}Restart computer${No_Attributes}"
-    echo "   ${F_Green}${Bold}Meaning:${No_Attributes} Restart computer (needs confirmation)"
-    echo "      ${F_Red}${Bold}Note:${No_Attributes} Confirmation is required for to restart\n"
+    echo "${F_Cyan}${Bold} Command ${F_Red}${Bold}8${F_Cyan}${Bold}: ${F_Green}Restart computer.${No_Attributes} Note: Confirmation is required for to restart."
 
-    echo " ${F_Cyan}${Bold}Command ${F_Red}${Bold}9${F_Cyan}${Bold}: ${Italic}Shutdown computer${No_Attributes}"
-    echo "   ${F_Green}${Bold}Meaning:${No_Attributes} Shutdown computer (needs confirmation)"
-    echo "      ${F_Red}${Bold}Note:${No_Attributes} Confirmation is required for to shutdown\n"
+    echo "${F_Cyan}${Bold} Command ${F_Red}${Bold}9${F_Cyan}${Bold}: ${F_Green}Shutdown computer.${No_Attributes} Note: Confirmation is required for to shutdown."
 
-    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}10${F_Cyan}${Bold}: ${Italic}Flush DNS cache${No_Attributes}"
-    echo "   ${F_Green}${Bold}Meaning:${No_Attributes} Flushes local DNS cache"
-    echo "      ${F_Red}${Bold}Note:${No_Attributes} But DNS cache gets corrupted, then you can run into problems loading sites, with error 404\n"
+    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}10${F_Cyan}${Bold}: ${F_Green}Flushes local DNS cache.${No_Attributes} Note: But DNS cache gets corrupted, then you can run into problems loading sites, with error 404."
 
-    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}11${F_Cyan}${Bold}: ${Italic}Show Firewall information${No_Attributes}"
-    echo "   ${F_Green}${Bold}Meaning:${No_Attributes} Show Firewall information (Block all is enabled or not, List applications and etc.)\n"
+    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}11${F_Cyan}${Bold}: ${F_Green}Show Firewall information.${No_Attributes} Note: Block all is enabled or not, List applications and etc."
 
-    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}12${F_Cyan}${Bold}: ${Italic}Firewall Enable${No_Attributes}"
-    echo "   ${F_Green}${Bold}Meaning:${No_Attributes} Enables Firewall\n"
+    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}12${F_Cyan}${Bold}: ${F_Green}Firewall Enable.${No_Attributes}"
 
-    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}13${F_Cyan}${Bold}: ${Italic}Firewall Disable${No_Attributes}"
-    echo "   ${F_Green}${Bold}Meaning:${No_Attributes} Disables Firewall\n"
+    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}13${F_Cyan}${Bold}: ${F_Green}Firewall Disable.${No_Attributes}"
 
-    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}14${F_Cyan}${Bold}: ${Italic}Block all connections Enable${No_Attributes}"
-    echo "   ${F_Green}${Bold}Meaning:${No_Attributes} Enables Block all connections\n"
+    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}14${F_Cyan}${Bold}: ${F_Green}Block all connections Enable.${No_Attributes}"
 
-    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}15${F_Cyan}${Bold}: ${Italic}Block all connections Disable${No_Attributes}"
-    echo "   ${F_Green}${Bold}Meaning:${No_Attributes} Disables Block all connections\n"
+    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}15${F_Cyan}${Bold}: ${F_Green}Block all connections Disable.${No_Attributes}"
 
-    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}16${F_Cyan}${Bold}: ${Italic}Show Hidden Files${No_Attributes}"
-    echo "   ${F_Green}${Bold}Meaning:${No_Attributes} Show hidden files\n"
+    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}16${F_Cyan}${Bold}: ${F_Green}Show Hidden Files.${No_Attributes}"
 
-    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}17${F_Cyan}${Bold}: ${Italic}Don't Show Hidden Files${No_Attributes}"
-    echo "   ${F_Green}${Bold}Meaning:${No_Attributes} Don't show hidden files\n"
+    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}17${F_Cyan}${Bold}: ${F_Green}Don't Show Hidden Files.${No_Attributes}"
 
-    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}18${F_Cyan}${Bold}: ${Italic}Show all File Extensions${No_Attributes}"
-    echo "   ${F_Green}${Bold}Meaning:${No_Attributes} Show all file extensions\n"
+    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}18${F_Cyan}${Bold}: ${F_Green}Show all File Extensions.${No_Attributes}"
 
-    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}19${F_Cyan}${Bold}: ${Italic}Don't Show all File Extensions${No_Attributes}"
-    echo "   ${F_Green}${Bold}Meaning:${No_Attributes} Don't show all file extensions\n"
+    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}19${F_Cyan}${Bold}: ${F_Green}Don't Show all File Extensions.${No_Attributes}"
 
-    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}20${F_Cyan}${Bold}: ${Italic}Show WiFi information and Scan Wireless Networks${No_Attributes}"
-    echo "   ${F_Green}${Bold}Meaning:${No_Attributes} Show WiFi information and Scan Wireless Networks\n"
+    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}20${F_Cyan}${Bold}: ${F_Green}Show WiFi information and Scan Wireless Networks.${No_Attributes}"
 
-    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}21${F_Cyan}${Bold}: ${Italic}WiFi Enable${No_Attributes}"
-    echo "   ${F_Green}${Bold}Meaning:${No_Attributes} Enables WiFi\n"
+    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}21${F_Cyan}${Bold}: ${F_Green}WiFi Enable.${No_Attributes}"
 
-    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}22${F_Cyan}${Bold}: ${Italic}WiFi Disable${No_Attributes}"
-    echo "   ${F_Green}${Bold}Meaning:${No_Attributes} Disables WiFi\n"
+    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}22${F_Cyan}${Bold}: ${F_Green}WiFi Disable.${No_Attributes}"
 
-    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}23${F_Cyan}${Bold}: ${Italic}Show WiFi Network Password${No_Attributes}"
-    echo "   ${F_Green}${Bold}Meaning:${No_Attributes} Show WiFi Network Password\n"
+    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}23${F_Cyan}${Bold}: ${F_Green}Show WiFi Network Password.${No_Attributes}"
 
-    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}24${F_Cyan}${Bold}: ${Italic}Show Hostname information"
-    echo "   ${F_Green}${Bold}Meaning:${No_Attributes} Show Hostname information (Computer Name, Hostname, local Hostname NetBIOS Name and etc.)\n"
+    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}24${F_Cyan}${Bold}: ${F_Green}Show Hostname information.${No_Attributes} Note: Computer Name, Hostname, local Hostname NetBIOS Name and etc."
 
-    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}25${F_Cyan}${Bold}: ${Italic}Setting a new Hostname and getting information about the New current Hostname${No_Attributes}"
-    echo "   ${F_Green}${Bold}Meaning:${No_Attributes} Setting a new Hostname (Computer Name, Hostname, local Hostname and NetBIOS Name)\n"
+    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}25${F_Cyan}${Bold}: ${F_Green}Setting a new Hostname.${No_Attributes} Note: Computer Name, Hostname, local Hostname and NetBIOS Name."
 
-    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}26${F_Cyan}${Bold}: ${Italic}L${No_Attributes}"
-    echo "   ${F_Green}${Bold}Meaning:${No_Attributes} L\n"
+    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}26${F_Cyan}${Bold}: ${F_Green}Status Ping IPv4${No_Attributes}"
 
-    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}27${F_Cyan}${Bold}: ${Italic}L${No_Attributes}"
-    echo "   ${F_Green}${Bold}Meaning:${No_Attributes} L\n"
+    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}27${F_Cyan}${Bold}: ${F_Green}Status Ping IPv6${No_Attributes}"
 
-    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}28${F_Cyan}${Bold}: ${Italic}L${No_Attributes}"
-    echo "   ${F_Green}${Bold}Meaning:${No_Attributes} L\n"
+    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}28${F_Cyan}${Bold}: ${F_Green}Finding Routers on Local Networks.${No_Attributes} Note: Default Router IP Address List For Common Wireless Router Brands."
 
-    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}29${F_Cyan}${Bold}: ${Italic}L${No_Attributes}"
-    echo "   ${F_Green}${Bold}Meaning:${No_Attributes} L\n"
+    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}29${F_Cyan}${Bold}: ${F_Green}Status Traceroute IPv4.${No_Attributes}"
 
-    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}30${F_Cyan}${Bold}: ${Italic}L${No_Attributes}"
-    echo "   ${F_Green}${Bold}Meaning:${No_Attributes} L\n"
+    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}30${F_Cyan}${Bold}: ${F_Green}Status Traceroute IPv6.${No_Attributes}"
 
-    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}31${F_Cyan}${Bold}: ${Italic}L${No_Attributes}"
-    echo "   ${F_Green}${Bold}Meaning:${No_Attributes} L\n"
+    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}31${F_Cyan}${Bold}: ${F_Green}L${No_Attributes}"
 
-    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}32${F_Cyan}${Bold}: ${Italic}L${No_Attributes}"
-    echo "   ${F_Green}${Bold}Meaning:${No_Attributes} L\n"
+    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}32${F_Cyan}${Bold}: ${F_Green}L${No_Attributes}"
 
-    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}33${F_Cyan}${Bold}: ${Italic}L${No_Attributes}"
-    echo "   ${F_Green}${Bold}Meaning:${No_Attributes} L\n"
+    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}33${F_Cyan}${Bold}: ${F_Green}L${No_Attributes}"
 
-    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}34${F_Cyan}${Bold}: ${Italic}L${No_Attributes}"
-    echo "   ${F_Green}${Bold}Meaning:${No_Attributes} L\n"
+    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}34${F_Cyan}${Bold}: ${F_Green}L${No_Attributes}"
 
-    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}35${F_Cyan}${Bold}: ${Italic}L${No_Attributes}"
-    echo "   ${F_Green}${Bold}Meaning:${No_Attributes} L\n"
+    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}35${F_Cyan}${Bold}: ${F_Green}L${No_Attributes}"
 
-    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}36${F_Cyan}${Bold}: ${Italic}L${No_Attributes}"
-    echo "   ${F_Green}${Bold}Meaning:${No_Attributes} L\n"
+    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}36${F_Cyan}${Bold}: ${F_Green}L${No_Attributes}"
 
-    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}37${F_Cyan}${Bold}: ${Italic}L${No_Attributes}"
-    echo "   ${F_Green}${Bold}Meaning:${No_Attributes} L\n"
+    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}37${F_Cyan}${Bold}: ${F_Green}L${No_Attributes}"
 
-    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}38${F_Cyan}${Bold}: ${Italic}L${No_Attributes}"
-    echo "   ${F_Green}${Bold}Meaning:${No_Attributes} L\n"
+    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}38${F_Cyan}${Bold}: ${F_Green}L${No_Attributes}"
 
-    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}39${F_Cyan}${Bold}: ${Italic}L${No_Attributes}"
-    echo "   ${F_Green}${Bold}Meaning:${No_Attributes} L\n"
+    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}39${F_Cyan}${Bold}: ${F_Green}L${No_Attributes}"
 
-    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}40${F_Cyan}${Bold}: ${Italic}L${No_Attributes}"
-    echo "   ${F_Green}${Bold}Meaning:${No_Attributes} L\n"
+    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}40${F_Cyan}${Bold}: ${F_Green}L${No_Attributes}"
 
-    echo " ${F_Cyan}${Bold}Command ${F_Red}${Bold}0${F_Cyan}${Bold}: ${Italic}Quit Shell Script Toolkit${No_Attributes}"
-    echo "   ${F_Green}${Bold}Meaning:${No_Attributes} Deleting terminal command history and Terminal to quit\n"
+    echo "${F_Cyan}${Bold} Command ${F_Red}${Bold}0${F_Cyan}${Bold}: ${No_Attributes}${F_Green}${Bold}Quit.${No_Attributes} Note: Deleting terminal command history and Terminal to quit.\n"
+
 }
 
 # -----------------------------------------------------------------------------------------------------------------
@@ -459,9 +413,8 @@ wifiShowPassword() {
     echo "${F_Red} •${F_Green}You choose to WiFi Network Password.${No_Attributes}\n"
     echo "${F_Cyan} Please provide your Login and Password to proceed.${No_Attributes}\n"
     sleep 2
-    if [ -z "$1" ]
-    then
-        ssid="`/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport -I | awk '/ SSID/ {print substr($0, index($0, $2))}'`"
+    if [ -z "$1" ]; then
+        ssid="$(/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport -I | awk '/ SSID/ {print substr($0, index($0, $2))}')"
     else
         ssid=$1
     fi
@@ -482,7 +435,7 @@ showHostnameInformation() {
     echo "\n${F_Red} •${F_Green}Show list all network devices on mac.${No_Attributes}"
     networksetup -listallhardwareports
     echo "\n${F_Red} •${F_Green}Show IP Addresses of Devices on a Local Network.${No_Attributes}\n"
-    arp -a| grep en0 | awk '{print $1, $2, $3, $4}'
+    arp -a | grep en0 | awk '{print $1, $2, $3, $4}'
     continueMessage
 }
 
@@ -490,16 +443,16 @@ showHostnameInformation() {
 settingHostnameAndInformationAboutTheNewCurrentHostname() {
     echo "${F_Red} •${F_Green}You choose to Setting a new Hostname.${No_Attributes}\n"
     askPassword
-# gets named
+    # gets named
     fullName=$(id -P $(stat -f%Su /dev/console) | cut -d : -f 8 | sed 's/ //g' | awk '{print tolower($0)}')
     computerName=$fullName
-# set all the name in all the places
+    # set all the name in all the places
     sudo scutil --set ComputerName "$computerName"
     sudo scutil --set HostName "$computerName"
     sudo scutil --set LocalHostName "$computerName"
     sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "$computerName"
     sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder
-# information about the new current hostname
+    # information about the new current hostname
     echo "\n${F_Red} •${F_Green}Getting information about the new current Hostname.${No_Attributes}\n"
     scutil --get ComputerName | awk '{print "Computer Name: ", $1}'
     scutil --get HostName | awk '{print "Hostname: ", $1}'
@@ -508,43 +461,89 @@ settingHostnameAndInformationAboutTheNewCurrentHostname() {
     continueMessage
 }
 
-# Command 26:
-showExtensionsFiles() {
-    echo "${F_Red} •${F_Green}You choose to .${No_Attributes}\n"
-    askPassword
-    +
+# Command 26: Status Ping IPv4
+netStatusPingIPv4() {
+    echo "${F_Red} •${F_Green}You choose to net Status Ping IPv4.${No_Attributes}"
+    declare -a arr=("Google.com" "Youtube.com" "Facebook.com" "Instagram.com" "8.8.8.8" "8.8.4.4")
+    echo "\n****************************************************************************************************\n"
+    echo "* Host or IP address | Response time: Minimum/Average/Maximum/Standard_deviation in milliseconds *"
+    echo "\n****************************************************************************************************\n"
+    echo " ${F_Green}Testing...\n${No_Attributes}"
+    for i in "${arr[@]}"; do
+        time=$(ping -c 5 "$i" | tail -1 | awk '{print $4}')
+        echo "$i | response time | $time ms\n"
+    done
+    echo " ${F_Green}Finish...${No_Attributes}"
     continueMessage
 }
 
-# Command 27:
-noShowExtensionsFiles() {
-    echo "${F_Red} •${F_Green}You choose to .${No_Attributes}\n"
-    askPassword
-    +
+# Command 27: Status Ping IPv6
+netStatusPingIPv6() {
+    echo "${F_Red} •${F_Green}You choose to net Status Ping IPv6.${No_Attributes}"
+    declare -a arr=("Google.com" "Youtube.com" "Facebook.com" "Instagram.com" "2001:4860:4860::8888" "2001:4860:4860::8844")
+    echo "\n****************************************************************************************************\n"
+    echo "* Host or IP address | Response time: Minimum/Average/Maximum/Standard_deviation in milliseconds *"
+    echo "\n****************************************************************************************************\n"
+    echo " ${F_Green}Testing...\n${No_Attributes}"
+    for i in "${arr[@]}"; do
+        time=$(ping6 -c 5 "$i" | tail -1 | awk '{print $4}')
+        echo "$i | response time | $time ms\n"
+    done
+    echo " ${F_Green}Finish...${No_Attributes}"
     continueMessage
 }
 
-# Command 28:
-showExtensionsFiles() {
-    echo "${F_Red} •${F_Green}You choose to .${No_Attributes}\n"
-    askPassword
-    +
+# Command 28: Finding Routers on Local Networks
+findingRoutersOnLocalNetworks() {
+    echo "${F_Red} •${F_Green}You choose to Finding Routers on Local Networks.${No_Attributes}"
+    declare -a arr=("10.0.0.1" "10.0.0.2" "10.0.0.138" "10.0.1.1" "10.1.1.1" "10.1.10.1" "10.10.1.1" "10.90.90.90" "192.168.0.1" "192.168.0.3" "192.168.0.10" "192.168.0.30" "192.168.0.50" "192.168.0.100" "192.168.0.101" "192.168.0.227" "192.168.0.254" "192.168.1.1" "192.168.1.10" "192.168.1.99" "192.168.1.100" "192.168.1.200" "192.168.1.210" "192.168.1.254" "192.168.2.1" "192.168.2.254" "192.168.3.1" "192.168.4.1" "192.168.8.1" "192.168.10.1" "192.168.10.10" "192.168.10.50" "192.168.10.100" "192.168.11.1" "192.168.15.1" "192.168.16.1" "192.168.20.1" "192.168.30.1" "192.168.50.1" "192.168.55.1" "192.168.62.1" "192.168.100.1" "192.168.100.100" "192.168.102.1" "192.168.123.254" "192.168.168.168" "192.168.223.100" "192.168.251.1" "192.168.254.254" "200.200.200.5")
+    echo "\n****************************************************************************************************\n"
+    echo "* Router or IP address | Response time: Minimum/Average/Maximum/Standard_deviation in milliseconds *"
+    echo "\n****************************************************************************************************\n"
+    echo " ${F_Green}Finding Routers on Local Networks...\n${No_Attributes}"
+    for i in "${arr[@]}"; do
+        time=$(ping -c 5 "$i" | tail -1 | awk '{print $4}')
+        echo "$i | response time | $time ms\n"
+    done
+    echo " ${F_Green}Finish...${No_Attributes}"
     continueMessage
 }
 
-# Command 29:
-noShowExtensionsFiles() {
-    echo "${F_Red} •${F_Green}You choose to .${No_Attributes}\n"
-    askPassword
-    +
+# Command 29: Status Traceroute IPv4
+statusTracerouteIPv4() {
+    echo "${F_Red} •${F_Green}You choose to Status Traceroute IPv4.${No_Attributes}\n"
+    echo " ${F_Green}Testing...\n${No_Attributes}"
+    traceroute Google.com
+    echo "Done.\n"
+    traceroute Youtube.com
+    echo "Done.\n"
+    traceroute Facebook.com
+    echo "Done.\n"
+    traceroute Instagram.com
+    echo "Done.\n"
+    traceroute 8.8.8.8
+    echo "Done.\n"
+    traceroute 8.8.4.4
+    echo " ${F_Green}Finish...${No_Attributes}"
     continueMessage
 }
 
-# Command 30:
-showExtensionsFiles() {
-    echo "${F_Red} •${F_Green}You choose to .${No_Attributes}\n"
-    askPassword
-    +
+# Command 30: Status Traceroute IPv6
+statusTracerouteIPv6() {
+    echo "${F_Red} •${F_Green}You choose to Status Traceroute IPv6.${No_Attributes}\n"
+    echo " ${F_Green}Testing...\n${No_Attributes}"
+    traceroute6 Google.com
+    echo "Done.\n"
+    traceroute6 Youtube.com
+    echo "Done.\n"
+    traceroute6 Facebook.com
+    echo "Done.\n"
+    traceroute6 Instagram.com
+    echo "Done.\n"
+    traceroute6 2001:4860:4860::8888
+    echo "Done.\n"
+    traceroute6 2001:4860:4860::8844
+    echo " ${F_Green}Finish...${No_Attributes}"
     continueMessage
 }
 
@@ -779,27 +778,27 @@ startScript() {
 
         26)
             clear
-            +
+            netStatusPingIPv4
             ;;
 
         27)
             clear
-            +
+            netStatusPingIPv6
             ;;
 
         28)
             clear
-            +
+            findingRoutersOnLocalNetworks
             ;;
 
         29)
             clear
-            +
+            statusTracerouteIPv4
             ;;
 
         30)
             clear
-            +
+            statusTracerouteIPv6
             ;;
 
         31)
