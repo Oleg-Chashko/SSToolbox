@@ -106,7 +106,7 @@ Shell Script Toolkit
 
 ## Download
 
-- (Standard version) [Download](https://github.com/Oleg-Chashko/Shell-Script-Toolkit/releases)
+- (Latest stable release) [Download](https://github.com/Oleg-Chashko/Shell-Script-Toolkit/releases)
 
 ## Note
 
