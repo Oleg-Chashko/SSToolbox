@@ -158,7 +158,7 @@ showMenu() {
 askPassword() {
     case $ROOT_PASSWORD in
     0)
-        echo "\n${F_Red}•${F_Green}${Bold} Please provide your Password to proceed${No_Attributes}.\n"
+        echo "\n${F_Red}•${F_Green}${Bold} Please provide your Password to proceed.${No_Attributes}\n"
         ROOT_PASSWORD=1
         ;;
     esac
@@ -199,7 +199,7 @@ uninstallingXCLT() {
 # Command 0: Quit Shell Script Uninstaller
 quitShellScriptUninstaller() {
     # Deleting macOS terminal command history and Terminal to quit
-    echo "•${F_Red} Deleting macOS terminal command history${No_Attributes}."
+    echo "•${F_Red} Deleting macOS terminal command history.${No_Attributes}"
     rm -rf .zsh_sessions
     rm -rf .zsh_history
     sleep 1 && echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
@@ -217,7 +217,7 @@ showGateKeeperStatus() {
 
 # Command 2: Enable GateKeeper
 enableGateKeeper() {
-    echo "•${F_Red} You chose to enable GateKeeper. Good for you!${No_Attributes}"
+    echo "•${F_Red} You chose to enable GateKeeper.${No_Attributes}"
     askPassword
     sudo spctl --master-enable
     echo "\n•${F_Red} GateKeeper enabled.${No_Attributes}"
