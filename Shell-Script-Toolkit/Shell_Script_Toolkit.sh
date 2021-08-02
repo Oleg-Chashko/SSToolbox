@@ -158,7 +158,7 @@ showMenu() {
 askPassword() {
     case $ROOT_PASSWORD in
     0)
-        echo " ${F_Cyan}Please provide your Password to proceed.${No_Attributes}\n"
+        echo "\n${F_Red}•${F_Green}${Bold} Please provide your Password to proceed${No_Attributes}.\n"
         ROOT_PASSWORD=1
         ;;
     esac
@@ -194,13 +194,15 @@ uninstallingXCLT() {
     continueMessage
 }
 
-# Command 0: Quit Shell Script Toolkit
-quitShellScriptToolkit() {
+# -----------------------------------------------------------------------------------------------------------------
+
+# Command 0: Quit Shell Script Uninstaller
+quitShellScriptUninstaller() {
     # Deleting macOS terminal command history and Terminal to quit
-    echo "${F_Red} •${F_Green}Deleting macOS terminal command history.${No_Attributes}\n"
+    echo "•${F_Red} Deleting macOS terminal command history${No_Attributes}."
     rm -rf .zsh_sessions
     rm -rf .zsh_history
-    sleep 1 && echo " ${F_Green}Done.${No_Attributes}"
+    sleep 1 && echo "\n${F_Red}•${F_Green} Done${No_Attributes}."
     # Terminal to quit
     sleep 1 && osascript -e 'tell application "Terminal" to quit'
     read
