@@ -83,7 +83,7 @@ showMenu() {
     echo "${Dim}•${No_Attributes} Command ${F_Red}${Bold}13${No_Attributes}: Firewall Disable.                                                                                       ${No_Attributes}${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes} Command ${F_Red}${Bold}14${No_Attributes}: Block all connections Enable.                                                                           ${No_Attributes}${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes} Command ${F_Red}${Bold}15${No_Attributes}: Block all connections Disable.                                                                          ${No_Attributes}${Dim}•${No_Attributes}"
-    echo "${Dim}••${F_Green}${Bold}Files${No_Attributes}${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
+    echo "${Dim}••${F_Green}${Bold}Hidden Files and Extensions${No_Attributes}${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
     echo "${Dim}•${No_Attributes} Command ${F_Red}${Bold}16${No_Attributes}: Show Hidden Files.                                                                                      ${No_Attributes}${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes} Command ${F_Red}${Bold}17${No_Attributes}: Don't Show Hidden Files.                                                                                ${No_Attributes}${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes} Command ${F_Red}${Bold}18${No_Attributes}: Show all File Extensions.                                                                               ${No_Attributes}${Dim}•${No_Attributes}"
