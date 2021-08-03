@@ -109,7 +109,7 @@ showMenu() {
     echo "${Dim}•${No_Attributes} Command ${F_Red}${Bold}34${No_Attributes}: L                                                                                                       ${No_Attributes}${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes} Command ${F_Red}${Bold}35${No_Attributes}: L                                                                                                       ${No_Attributes}${Dim}•${No_Attributes}"
     echo "${Dim}••${F_Green}${Bold}Quit${No_Attributes}${Dim}•••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
-    echo "${Dim}•${No_Attributes} Command ${F_Red}${Bold}0${No_Attributes}:  ${F_Blue}${Bold}Quit.${No_Attributes} ${Bold}Note:${No_Attributes} Deleting terminal command history and Terminal to quit.                                     ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes} Command ${F_Red}${Bold}0${No_Attributes}:  ${F_Purple}${Bold}Quit.${No_Attributes} ${Bold}Note:${No_Attributes} Deleting terminal command history and Terminal to quit.                                     ${Dim}•${No_Attributes}"
     echo "${Dim}•••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
 }
 
