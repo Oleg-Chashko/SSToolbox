@@ -59,36 +59,36 @@ No_Attributes='\033[0m'
 
 # Menu
 showMenu() {
-    echo "\n                         ${F_Blue}${Bold}Welcome to Shell Script Toolkit${No_Attributes}"
-    echo "                           ${Dim}${RELEASE_VERSION}${No_Attributes}"
-    echo "                         ${Dim}${GITHUB_URL}${No_Attributes}\n"
+    echo "\n                                            ${F_Blue}${Bold}Welcome to Shell Script Toolkit${No_Attributes}"
+    echo "                                              ${Dim}${RELEASE_VERSION}${No_Attributes}"
+    echo "                                            ${Dim}${GITHUB_URL}${No_Attributes}\n"
 
-    echo "            ${Dim}•••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
-    echo "            ${Dim}•${No_Attributes} ${F_Cyan}${Bold}Command ${F_Red}${Bold}i${No_Attributes}: ${F_Green}${Bold}Installing${No_Attributes} the Xcode Command Line Tools.   ${Dim}•${No_Attributes}"
-    echo "            ${Dim}•${No_Attributes} ${F_Cyan}${Bold}Command ${F_Red}${Bold}u${No_Attributes}: ${F_Green}${Bold}Uninstalling${No_Attributes} the Xcode Command Line Tools. ${Dim}•${No_Attributes}"
-    echo "            ${Dim}•••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
+    echo "                               ${Dim}•••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
+    echo "                               ${Dim}•${No_Attributes} ${F_Cyan}${Bold}Command ${F_Red}${Bold}i${No_Attributes}: ${F_Green}${Bold}Installing${No_Attributes} the Xcode Command Line Tools.   ${Dim}•${No_Attributes}"
+    echo "                               ${Dim}•${No_Attributes} ${F_Cyan}${Bold}Command ${F_Red}${Bold}u${No_Attributes}: ${F_Green}${Bold}Uninstalling${No_Attributes} the Xcode Command Line Tools. ${Dim}•${No_Attributes}"
+    echo "                               ${Dim}•••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
 
     echo "${F_Cyan}${Bold} Command ${F_Red}${Bold}1${F_Cyan}${Bold}: ${F_Green}${Bold}Show GateKeeper Status.${No_Attributes}"
 
     echo "${F_Cyan}${Bold} Command ${F_Red}${Bold}2${F_Cyan}${Bold}: ${F_Green}${Bold}Enable GateKeeper.${No_Attributes}"
 
-    echo "${F_Cyan}${Bold} Command ${F_Red}${Bold}3${F_Cyan}${Bold}: ${F_Green}${Bold}Disable GateKeeper.${No_Attributes} ${F_Red}${Bold}Note:${No_Attributes}: Caution, your actions could lead to potential security and privacy issues."
+    echo "${F_Cyan}${Bold} Command ${F_Red}${Bold}3${F_Cyan}${Bold}: ${F_Green}${Bold}Disable GateKeeper. ${F_Red}${Bold}Note:${No_Attributes} These actions could lead to potential security and privacy issues."
 
     echo "${F_Cyan}${Bold} Command ${F_Red}${Bold}4${F_Cyan}${Bold}: ${F_Green}${Bold}Remove app from GateKeeper quarantine.${No_Attributes}"
 
-    echo "${F_Cyan}${Bold} Command ${F_Red}${Bold}5${F_Cyan}${Bold}: ${F_Green}${Bold}If GateKeeper is on and your app quits unexpectedly, try self-signing.${No_Attributes} ${F_Red}${Bold}Note:${No_Attributes} Require Xcode or Xcode Command Line Tools."
+    echo "${F_Cyan}${Bold} Command ${F_Red}${Bold}5${F_Cyan}${Bold}: ${F_Green}${Bold}If the app gives a warning that it is not signed, try self-signing. ${F_Red}${Bold}Note:${No_Attributes} Require Xcode or XcodeCLT."
 
     echo "${F_Cyan}${Bold} Command ${F_Red}${Bold}6${F_Cyan}${Bold}: ${F_Green}${Bold}List apps from unknown sources you’ve approved for use.${No_Attributes}"
 
     echo "${F_Cyan}${Bold} Command ${F_Red}${Bold}7${F_Cyan}${Bold}: ${F_Green}${Bold}Restoring the Default Gatekeeper Database.${No_Attributes}"
-    echo " ${Dim}•••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
-    echo "${F_Cyan}${Bold} Command ${F_Red}${Bold}8${F_Cyan}${Bold}: ${F_Green}${Bold}Restart computer.${No_Attributes} ${F_Red}${Bold}Note:${No_Attributes} Confirmation is required for to restart."
+    echo " ${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
+    echo "${F_Cyan}${Bold} Command ${F_Red}${Bold}8${F_Cyan}${Bold}: ${F_Green}${Bold}Restart computer. ${F_Red}${Bold}Note:${No_Attributes} Confirmation is required for to restart."
 
-    echo "${F_Cyan}${Bold} Command ${F_Red}${Bold}9${F_Cyan}${Bold}: ${F_Green}${Bold}Shutdown computer.${No_Attributes} ${F_Red}${Bold}Note:${No_Attributes} Confirmation is required for to shutdown."
-    echo " ${Dim}•••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
-    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}10${F_Cyan}${Bold}: ${F_Green}${Bold}Flushes local DNS cache.${No_Attributes} ${F_Red}${Bold}Note:${No_Attributes} But DNS cache gets corrupted, then you can run into problems loading sites, with error 404."
+    echo "${F_Cyan}${Bold} Command ${F_Red}${Bold}9${F_Cyan}${Bold}: ${F_Green}${Bold}Shutdown computer. ${F_Red}${Bold}Note:${No_Attributes} Confirmation is required for to shutdown."
+    echo " ${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
+    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}10${F_Cyan}${Bold}: ${F_Green}${Bold}Flushes local DNS cache. ${F_Red}${Bold}Note:${No_Attributes} To use when there are problems with loading sites, 404 error."
 
-    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}11${F_Cyan}${Bold}: ${F_Green}${Bold}Show Firewall information.${No_Attributes} ${F_Red}${Bold}Note:${No_Attributes} Block all is enabled or not, List applications and etc."
+    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}11${F_Cyan}${Bold}: ${F_Green}${Bold}Show Firewall information. ${F_Red}${Bold}Note:${No_Attributes} Block all is enabled or not, List applications and etc."
 
     echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}12${F_Cyan}${Bold}: ${F_Green}${Bold}Firewall Enable.${No_Attributes}"
 
@@ -97,7 +97,7 @@ showMenu() {
     echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}14${F_Cyan}${Bold}: ${F_Green}${Bold}Block all connections Enable.${No_Attributes}"
 
     echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}15${F_Cyan}${Bold}: ${F_Green}${Bold}Block all connections Disable.${No_Attributes}"
-    echo "${Dim}•••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
+    echo "${Dim}•••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
     echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}16${F_Cyan}${Bold}: ${F_Green}${Bold}Show Hidden Files.${No_Attributes}"
 
     echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}17${F_Cyan}${Bold}: ${F_Green}${Bold}Don't Show Hidden Files.${No_Attributes}"
@@ -105,7 +105,7 @@ showMenu() {
     echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}18${F_Cyan}${Bold}: ${F_Green}${Bold}Show all File Extensions.${No_Attributes}"
 
     echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}19${F_Cyan}${Bold}: ${F_Green}${Bold}Don't Show all File Extensions.${No_Attributes}"
-    echo "${Dim}•••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
+    echo "${Dim}•••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
     echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}20${F_Cyan}${Bold}: ${F_Green}${Bold}Show WiFi information and Scan Wireless Networks.${No_Attributes}"
 
     echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}21${F_Cyan}${Bold}: ${F_Green}${Bold}WiFi Enable.${No_Attributes}"
@@ -113,21 +113,21 @@ showMenu() {
     echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}22${F_Cyan}${Bold}: ${F_Green}${Bold}WiFi Disable.${No_Attributes}"
 
     echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}23${F_Cyan}${Bold}: ${F_Green}${Bold}Show WiFi Network Password.${No_Attributes}"
-    echo "${Dim}•••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
-    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}24${F_Cyan}${Bold}: ${F_Green}${Bold}Show Hostname information.${No_Attributes} ${F_Red}${Bold}Note:${No_Attributes} Computer Name, Hostname, local Hostname NetBIOS Name and etc."
+    echo "${Dim}•••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
+    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}24${F_Cyan}${Bold}: ${F_Green}${Bold}Show Hostname information. ${F_Red}${Bold}Note:${No_Attributes} Computer Name, Hostname, local Hostname NetBIOS Name and etc."
 
-    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}25${F_Cyan}${Bold}: ${F_Green}${Bold}Setting a new Hostname.${No_Attributes} ${F_Red}${Bold}Note:${No_Attributes} Computer Name, Hostname, local Hostname and NetBIOS Name."
-    echo "${Dim}•••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
+    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}25${F_Cyan}${Bold}: ${F_Green}${Bold}Setting a new Hostname. ${F_Red}${Bold}Note:${No_Attributes} Computer Name, Hostname, local Hostname and NetBIOS Name."
+    echo "${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
     echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}26${F_Cyan}${Bold}: ${F_Green}${Bold}Status Ping IPv4.${No_Attributes}"
 
     echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}27${F_Cyan}${Bold}: ${F_Green}${Bold}Status Ping IPv6.${No_Attributes}"
 
-    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}28${F_Cyan}${Bold}: ${F_Green}${Bold}Finding Routers on Local Networks.${No_Attributes} ${F_Red}${Bold}Note:${No_Attributes} Default Router IP Address List For Common Wireless Router Brands."
+    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}28${F_Cyan}${Bold}: ${F_Green}${Bold}Finding Routers on Local Networks. ${F_Red}${Bold}Note:${No_Attributes} Default IP Address List for Wireless Routers."
 
     echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}29${F_Cyan}${Bold}: ${F_Green}${Bold}Status Traceroute IPv4.${No_Attributes}"
 
     echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}30${F_Cyan}${Bold}: ${F_Green}${Bold}Status Traceroute IPv6.${No_Attributes}"
-    echo "${Dim}•••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
+    echo "${Dim}•••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
     echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}31${F_Cyan}${Bold}: ${F_Green}${Bold}L${No_Attributes}"
 
     echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}32${F_Cyan}${Bold}: ${F_Green}${Bold}L${No_Attributes}"
@@ -137,18 +137,8 @@ showMenu() {
     echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}34${F_Cyan}${Bold}: ${F_Green}${Bold}L${No_Attributes}"
 
     echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}35${F_Cyan}${Bold}: ${F_Green}${Bold}L${No_Attributes}"
-
-    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}36${F_Cyan}${Bold}: ${F_Green}${Bold}L${No_Attributes}"
-
-    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}37${F_Cyan}${Bold}: ${F_Green}${Bold}L${No_Attributes}"
-
-    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}38${F_Cyan}${Bold}: ${F_Green}${Bold}L${No_Attributes}"
-
-    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}39${F_Cyan}${Bold}: ${F_Green}${Bold}L${No_Attributes}"
-
-    echo "${F_Cyan}${Bold}Command ${F_Red}${Bold}40${F_Cyan}${Bold}: ${F_Green}${Bold}L${No_Attributes}"
-    echo "${Dim}•••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
-    echo "${F_Cyan}${Bold} Command ${F_Red}${Bold}0${F_Cyan}${Bold}: ${F_Green}${Bold}Quit.${No_Attributes} ${F_Red}${Bold}Note:${No_Attributes} Deleting terminal command history and Terminal to quit.\n"
+    echo "${Dim}•••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
+    echo "${F_Cyan}${Bold} Command ${F_Red}${Bold}0${F_Cyan}${Bold}: ${F_Blue}${Bold}Quit. ${F_Red}${Bold}Note:${No_Attributes} Deleting terminal command history and Terminal to quit.\n"
 
 }
 
@@ -196,8 +186,8 @@ uninstallingXCLT() {
 
 # -----------------------------------------------------------------------------------------------------------------
 
-# Command 0: Quit Shell Script Uninstaller
-quitShellScriptUninstaller() {
+# Command 0: Quit Shell Script Toolkit
+quitShellScriptToolkit() {
     # Deleting macOS terminal command history and Terminal to quit
     echo "•${F_Red} Deleting macOS terminal command history.${No_Attributes}"
     rm -rf .zsh_sessions
@@ -586,45 +576,6 @@ noShowExtensionsFiles() {
     continueMessage
 }
 
-# Command 36:
-showExtensionsFiles() {
-    echo "•${F_Red} You choose to .${No_Attributes}\n"
-    askPassword
-    +
-    continueMessage
-}
-
-# Command 37:
-noShowExtensionsFiles() {
-    echo "•${F_Red} You choose to .${No_Attributes}\n"
-    askPassword
-    +
-    continueMessage
-}
-# Command 38:
-noShowExtensionsFiles() {
-    echo "•${F_Red} You choose to .${No_Attributes}\n"
-    askPassword
-    +
-    continueMessage
-}
-
-# Command 39:
-showExtensionsFiles() {
-    echo "•${F_Red} You choose to .${No_Attributes}\n"
-    askPassword
-    +
-    continueMessage
-}
-
-# Command 40:
-noShowExtensionsFiles() {
-    echo "•${F_Red} You choose to .${No_Attributes}\n"
-    askPassword
-    +
-    continueMessage
-}
-
 # -----------------------------------------------------------------------------------------------------------------
 
 # Main function of the script
@@ -821,31 +772,6 @@ startScript() {
             ;;
 
         35)
-            clear
-            +
-            ;;
-
-        36)
-            clear
-            +
-            ;;
-
-        37)
-            clear
-            +
-            ;;
-
-        38)
-            clear
-            +
-            ;;
-
-        39)
-            clear
-            +
-            ;;
-
-        40)
             clear
             +
             ;;
