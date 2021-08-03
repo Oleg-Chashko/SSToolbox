@@ -60,7 +60,7 @@ No_Attributes='\033[0m'
 # Menu
 showMenu() {
     echo "\n                                            ${F_Blue}${Bold}Welcome to Shell Script Toolkit${No_Attributes}"
-    echo "                                              ${Dim}${RELEASE_VERSION}${No_Attributes}"
+    echo "                                               ${Dim}${RELEASE_VERSION}${No_Attributes}"
     echo "                                            ${Dim}${GITHUB_URL}${No_Attributes}\n"
 
     echo "                               ${Dim}•••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
@@ -362,14 +362,14 @@ noShowHiddenFiles() {
 
 # Command 18: Show all File Extensions
 showExtensionsFiles() {
-    echo "•${F_Red} You choose to show all file extensions.${No_Attributes}\n"
+    echo "•${F_Red} You choose to show all file extensions.${No_Attributes}"
     defaults write NSGlobalDomain AppleShowAllExtensions true && killall Finder
     continueMessage
 }
 
 # Command 19: Don't Show all File Extensions
 noShowExtensionsFiles() {
-    echo "•${F_Red} You choose to don't show all file extensions.${No_Attributes}\n"
+    echo "•${F_Red} You choose to don't show all file extensions.${No_Attributes}"
     defaults write NSGlobalDomain AppleShowAllExtensions false && killall Finder
     continueMessage
 }
@@ -537,7 +537,7 @@ statusTracerouteIPv6() {
 }
 
 # Command 31:
-noShowExtensionsFiles() {
+no() {
     echo "•${F_Red} You choose to .${No_Attributes}\n"
     askPassword
     +
@@ -545,7 +545,7 @@ noShowExtensionsFiles() {
 }
 
 # Command 32:
-showExtensionsFiles() {
+noo() {
     echo "•${F_Red} You choose to .${No_Attributes}\n"
     askPassword
     +
@@ -553,7 +553,7 @@ showExtensionsFiles() {
 }
 
 # Command 33:
-noShowExtensionsFiles() {
+nooo() {
     echo "•${F_Red} You choose to .${No_Attributes}\n"
     askPassword
     +
@@ -561,7 +561,7 @@ noShowExtensionsFiles() {
 }
 
 # Command 34:
-showExtensionsFiles() {
+noooo() {
     echo "•${F_Red} You choose to .${No_Attributes}\n"
     askPassword
     +
@@ -569,7 +569,7 @@ showExtensionsFiles() {
 }
 
 # Command 35:
-noShowExtensionsFiles() {
+nooooo() {
     echo "•${F_Red} You choose to .${No_Attributes}\n"
     askPassword
     +
