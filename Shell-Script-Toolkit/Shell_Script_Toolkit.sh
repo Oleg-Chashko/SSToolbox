@@ -107,7 +107,7 @@ showMenu() {
     echo "${Dim}•${No_Attributes} ${F_Cyan}Command ${F_Red}${Bold}32${No_Attributes}: L                                                                                                        ${No_Attributes}${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes} ${F_Cyan}Command ${F_Red}${Bold}33${No_Attributes}: L                                                                                                        ${No_Attributes}${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes} ${F_Cyan}Command ${F_Red}${Bold}34${No_Attributes}: L                                                                                                        ${No_Attributes}${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes} ${F_Cyan}Command ${F_Red}${Bold}35${No_Attributes}: L                                                                                                        ${No_Attributes}${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes} ${F_Cyan}Command ${F_Red}${Bold}35${No_Attributes}: Show Attachments as Icons in Apple Mail App                                                              ${No_Attributes}${Dim}•${No_Attributes}"
     echo "${Dim}••${F_Green}${Bold}Quit${No_Attributes}${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
     echo "${Dim}•${No_Attributes} ${F_Cyan}Command ${F_Red}${Bold}0${No_Attributes}:  ${F_Purple}${Bold}Quit.${No_Attributes} ${F_Green}${Bold}Note${No_Attributes}: Deleting terminal command history and Terminal to quit.                                      ${Dim}•${No_Attributes}"
     echo "${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
@@ -531,10 +531,9 @@ noooo() {
 }
 
 # Command 35:
-nooooo() {
-    echo "•${F_Red} Command 35: You choose to .${No_Attributes}\n"
-    askPassword
-    +
+showAttachmentsAsIcons() {
+    echo "•${F_Red} Command 35: You choose to Show Attachments as Icons in Apple Mail App.${No_Attributes}\n"
+    defaults write com.apple.mail DisableInlineAttachmentViewing -bool yes
     continueMessage
 }
 
@@ -735,7 +734,7 @@ startScript() {
 
         35)
             clear
-            +
+            showAttachmentsAsIcons
             ;;
 
         *)
