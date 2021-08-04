@@ -42,6 +42,7 @@
 </p>
 
 ## Features
+
 A diagram of Toolkit structure is shown below:
 
 ```
@@ -111,7 +112,7 @@ Shell Script Toolkit
 
 - (Latest stable release) [Download](https://github.com/Oleg-Chashko/Shell-Script-Toolkit/releases)
 
-## Note:${No_Attributes}
+## Note
 
 ⚠ _You will need to enter a password to obtain elevated rights._<br>
 ⚠ _Some functions require Xcode or Xcode Command Line Tools._<br>
