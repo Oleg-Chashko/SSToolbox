@@ -58,17 +58,15 @@ Shell Script Toolkit
 |    |___Command 4: Remove app from GateKeeper quarantine
 |    |___Command 5: Self-sign the app
 |    |___Command 6: List apps from unknown sources
-|    |___Command 7: Restoring the Default Gatekeeper Database
+|    |___Command 7: Restoring the Default GateKeeper Database
 |
 |___Restart and Shutdown
 |    |___Command 8: Restart computer
 |    |___Command 9: Shutdown computer
 |
-|___DNS
-|    |___Command 10: Flush DNS cache
-|
-|___Firewall
-|    |___Command 11: Show Firewall information: Block all is enabled or not, List applications and etc.
+|___DNS and Firewall
+|    |___Command 10: Flush Local DNS cache
+|    |___Command 11: Show Firewall information
 |    |___Command 12: Firewall Enable
 |    |___Command 13: Firewall Disable
 |    |___Command 14: Block all connections Enable
@@ -87,16 +85,22 @@ Shell Script Toolkit
 |    |___Command 23: Show WiFi Network Password
 |
 |___Hostname
-|    |___Command 24: Show Hostname information: Computer Name, Hostname, local Hostname NetBIOS Name, etc.
-|    |___Command 25: Setting a new Hostname and getting information about the New current Hostname
+|    |___Command 24: Show Hostname information
+|    |___Command 25: Setting a new Hostname and etc.
 |
 |___
-|    |___Command 26: 
-|    |___Command 27: 
-|    |___Command 28: 
-|    |___Command 29: 
+|    |___Command 26: Ping Test IPv4
+|    |___Command 27: Ping Test IPv6
+|    |___Command 28: Finding Routers on Local Networks
+|    |___Command 29: Traceroute Test IPv4
+|    |___Command 30: Traceroute Test IPv6
 |
-|___•••
+|___
+|    |___Command 31: •••
+|    |___Command 32: •••
+|    |___Command 33: •••
+|    |___Command 34: •••
+|    |___Command 35: •••
 |
 |___Quit
 |    |___Command 0: Quit Shell Script Toolkit
