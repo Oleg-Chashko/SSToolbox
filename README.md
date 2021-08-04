@@ -36,11 +36,16 @@
 </p>
 
 ## Preview
-Run the script and select the Command you want.
+#### Run the script and select the Command you want.
+
+<p align="center">
+  <img width="780px" src="https://raw.githubusercontent.com/Oleg-Chashko/Shell-Script-Toolkit/main/Images/Preview_Shell_Script_Uninstaller.png" />
+</p>
 
 <p align="center">
   <img width="780px" src="https://raw.githubusercontent.com/Oleg-Chashko/Shell-Script-Toolkit/main/Images/Running_script_2.png" />
 </p>
+<br>
 
 ## Features
 A diagram of Toolkit structure is shown below:
