@@ -38,16 +38,8 @@
 ## Preview
 
 <p align="center">
-  <img width="780px" src="https://raw.githubusercontent.com/Oleg-Chashko/Shell-Script-Toolkit/main/Images/Preview_Shell_Script_Toolkit.png" />
+  <img width="900px" src="https://raw.githubusercontent.com/Oleg-Chashko/Shell-Script-Toolkit/main/Images/Preview_Shell_Script_Toolkit.png" />
 </p>
-
-#### Run the script and select the Command you want.
-  <br>
-
-<p align="center">
-  <img width="780px" src="https://raw.githubusercontent.com/Oleg-Chashko/Shell-Script-Toolkit/main/Images/Running_script_2.png" />
-</p>
-<br>
 
 ## Features
 A diagram of Toolkit structure is shown below:
