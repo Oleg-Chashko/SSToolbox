@@ -42,6 +42,7 @@
 </p>
 
 #### Run the script and select the Command you want.
+  <br>
 
 <p align="center">
   <img width="780px" src="https://raw.githubusercontent.com/Oleg-Chashko/Shell-Script-Toolkit/main/Images/Running_script_2.png" />
