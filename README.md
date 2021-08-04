@@ -88,14 +88,14 @@ Shell Script Toolkit
 |    |___Command 24: Show Hostname information
 |    |___Command 25: Setting a new Hostname and etc.
 |
-|___
+|___Ping, Traceroute and Finding Routers
 |    |___Command 26: Ping Test IPv4
 |    |___Command 27: Ping Test IPv6
 |    |___Command 28: Finding Routers on Local Networks
 |    |___Command 29: Traceroute Test IPv4
 |    |___Command 30: Traceroute Test IPv6
 |
-|___
+|___XXXXXXXXX
 |    |___Command 31: •••
 |    |___Command 32: •••
 |    |___Command 33: •••
