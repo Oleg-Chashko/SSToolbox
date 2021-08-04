@@ -36,11 +36,12 @@
 </p>
 
 ## Preview
-#### Run the script and select the Command you want.
 
 <p align="center">
   <img width="780px" src="https://raw.githubusercontent.com/Oleg-Chashko/Shell-Script-Toolkit/main/Images/Preview_Shell_Script_Toolkit.png" />
 </p>
+
+#### Run the script and select the Command you want.
 
 <p align="center">
   <img width="780px" src="https://raw.githubusercontent.com/Oleg-Chashko/Shell-Script-Toolkit/main/Images/Running_script_2.png" />
