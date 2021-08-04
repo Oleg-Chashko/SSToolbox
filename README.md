@@ -39,7 +39,7 @@
 #### Run the script and select the Command you want.
 
 <p align="center">
-  <img width="780px" src="https://raw.githubusercontent.com/Oleg-Chashko/Shell-Script-Toolkit/main/Images/Preview_Shell_Script_Uninstaller.png" />
+  <img width="780px" src="https://raw.githubusercontent.com/Oleg-Chashko/Shell-Script-Toolkit/main/Images/Preview_Shell_Script_Toolkit.png" />
 </p>
 
 <p align="center">
