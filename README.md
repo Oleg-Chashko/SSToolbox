@@ -41,72 +41,86 @@
   <img width="900px" src="https://raw.githubusercontent.com/Oleg-Chashko/Shell-Script-Toolkit/main/Images/Preview_Shell_Script_Toolkit.png" />
 </p>
 
-## Features
+## Commands List
 
-A diagram of Toolkit structure is shown below:
+### Xcode
+| Command | Description | Note |
+| ------------- | ------------- | ------------- |
+| `i` | Installing the Xcode Command Line Tools | ••••• |
+| `u` | Uninstalling the Xcode Command Line Tools | ••••• |
 
-```
-Shell Script Toolkit
-∆
-|___Xcode
-|    |___Command i: Installing the Xcode Command Line Tools
-|    |___Command u: Uninstalling the Xcode Command Line Tools
-|
-|___GateKeeper
-|    |___Command 1: Show GateKeeper Status
-|    |___Command 2: Enable GateKeeper
-|    |___Command 3: Disable GateKeeper
-|    |___Command 4: Remove app from GateKeeper quarantine
-|    |___Command 5: Self-sign the app
-|    |___Command 6: List apps from unknown sources
-|    |___Command 7: Restoring the Default GateKeeper Database
-|
-|___Restart and Shutdown
-|    |___Command 8: Restart computer
-|    |___Command 9: Shutdown computer
-|
-|___DNS and Firewall
-|    |___Command 10: Flush Local DNS cache
-|    |___Command 11: Show Firewall information
-|    |___Command 12: Firewall Enable
-|    |___Command 13: Firewall Disable
-|    |___Command 14: Block all connections Enable
-|    |___Command 15: Block all connections Disable
-|
-|___Hidden Files and Extensions
-|    |___Command 16: Show Hidden Files
-|    |___Command 17: Don't Show Hidden Files
-|    |___Command 18: Show all File Extensions
-|    |___Command 19: Don't Show all File Extensions
-|
-|___WiFi
-|    |___Command 20: Show WiFi information and Scan Wireless Networks
-|    |___Command 21: WiFi Enable
-|    |___Command 22: WiFi Disable
-|    |___Command 23: Show WiFi Network Password
-|
-|___Hostname
-|    |___Command 24: Show Hostname information
-|    |___Command 25: Setting a new Hostname and etc.
-|
-|___Ping, Traceroute and Finding Routers
-|    |___Command 26: Ping Test IPv4
-|    |___Command 27: Ping Test IPv6
-|    |___Command 28: Finding Routers on Local Networks
-|    |___Command 29: Traceroute Test IPv4
-|    |___Command 30: Traceroute Test IPv6
-|
-|___XXXXXXXXX
-|    |___Command 31: •••
-|    |___Command 32: •••
-|    |___Command 33: •••
-|    |___Command 34: •••
-|    |___Command 35: •••
-|
-|___Quit
-|    |___Command 0: Quit Shell Script Toolkit
-°
-```
+### GateKeeper
+| Command | Description | Note |
+| ------------- | ------------- | ------------- |
+| `1` | Show GateKeeper Status | ••••• |
+| `2` | Enable GateKeeper | ••••• |
+| `3` | Disable GateKeeper | These actions could lead to potential security and privacy issues |
+| `4` | Remove app from GateKeeper quarantine | ••••• |
+| `5` | Self-sign the app | If the app gives a warning that it is not signed, try self-signing. Require Xcode or Xcode Command Line Tools |
+| `6` | List apps from unknown sources | ••••• |
+| `7` | Restoring the Default GateKeeper Database | ••••• |
+
+### Restart and Shutdown
+| Command | Description | Note |
+| ------------- | ------------- | ------------- |
+| `8` | Restart macOS | Confirmation is required for to restart |
+| `9` | Shutdown macOS | Confirmation is required for to shutdown |
+
+### DNS and Firewall
+| Command | Description | Note |
+| ------------- | ------------- | ------------- |
+| `10` | Flush Local DNS cache | To use when there are problems with loading sites, 404 error |
+| `11` | Show Firewall information | Block all is enabled or not, List applications and etc. |
+| `12` | Firewall Enable | ••••• |
+| `13` | Firewall Disable | ••••• |
+| `14` | Block all connections Enable | ••••• |
+| `15` | Block all connections Disable | ••••• |
+
+### Hidden Files and Extensions
+| Command | Description | Note |
+| ------------- | ------------- | ------------- |
+| `16` | Show Hidden Files | ••••• |
+| `17` | Don't Show Hidden Files | ••••• |
+| `18` | Show all File Extensions | ••••• |
+| `19` | Don't Show all File Extensions | ••••• |
+
+### WiFi
+| Command | Description | Note |
+| ------------- | ------------- | ------------- |
+| `20` | Show WiFi information and Scan Wireless Networks | ••••• |
+| `21` | Enable WiFi | ••••• |
+| `22` | Disable WiFi | ••••• |
+| `23` | Show WiFi Network Password | ••••• |
+
+### Hostname
+| Command | Description | Note |
+| ------------- | ------------- | ------------- |
+| `24` | Show Hostname information | Computer Name, Hostname, local Hostname NetBIOS Name and etc. |
+| `25` | Setting a new Hostname | Computer Name, Hostname, local Hostname and NetBIOS Name |
+
+### Ping, Traceroute and Finding Routers
+| Command | Description | Note |
+| ------------- | ------------- | ------------- |
+| `26` | Ping Test IPv4 | ••••• |
+| `27` | Ping Test IPv6 | ••••• |
+| `28` | Finding Routers on Local Networks | Default IP Address List for Wireless Routers |
+| `29` | Traceroute Test IPv4 | ••••• |
+| `30` | Traceroute Test IPv6 | ••••• |
+
+### XXXXXXXXX
+| Command | Description | Note |
+| ------------- | ------------- | ------------- |
+| `31` | ••••• | ••••• |
+| `32` | ••••• | ••••• |
+| `33` | ••••• | ••••• |
+| `34` | ••••• | ••••• |
+| `35` | Show Attachments as Icons in Apple Mail App | ••••• |
+
+### Quit
+| Command | Description | Note |
+| ------------- | ------------- | ------------- |
+| `0` | Quit Shell Script Toolkit | Deleting terminal command history and Terminal to quit |
+
 
 ## Download
 
