@@ -70,12 +70,12 @@ showMenu() {
     echo "${Dim}•${No_Attributes} ${F_Cyan}Command ${F_Red}${Bold}2${No_Attributes}:  Enable GateKeeper.                                                                                                 ${No_Attributes}${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes} ${F_Cyan}Command ${F_Red}${Bold}3${No_Attributes}:  Disable GateKeeper. ${F_Green}${Bold}Note${No_Attributes}: These actions could lead to potential security and privacy issues.                       ${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes} ${F_Cyan}Command ${F_Red}${Bold}4${No_Attributes}:  Remove app from GateKeeper quarantine.                                                                             ${No_Attributes}${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes} ${F_Cyan}Command ${F_Red}${Bold}5${No_Attributes}:  If the app gives a warning that it is not signed, try self-signing. ${F_Green}${Bold}Note${No_Attributes}: Require Xcode or XcodeCLT.               ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes} ${F_Cyan}Command ${F_Red}${Bold}5${No_Attributes}:  Self-sign the app. ${F_Green}${Bold}Note${No_Attributes}: Require Xcode or Xcode Command Line Tools.                                                ${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes} ${F_Cyan}Command ${F_Red}${Bold}6${No_Attributes}:  List apps from unknown sources you’ve approved for use.                                                            ${No_Attributes}${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes} ${F_Cyan}Command ${F_Red}${Bold}7${No_Attributes}:  Restoring the Default GateKeeper Database.                                                                         ${No_Attributes}${Dim}•${No_Attributes}"
     echo "${Dim}••${F_Green}${Bold}Restart and Shutdown${No_Attributes}${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
-    echo "${Dim}•${No_Attributes} ${F_Cyan}Command ${F_Red}${Bold}8${No_Attributes}:  Restart computer. ${F_Green}${Bold}Note${No_Attributes}: Confirmation is required for to restart.                                                   ${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes} ${F_Cyan}Command ${F_Red}${Bold}9${No_Attributes}:  Shutdown computer. ${F_Green}${Bold}Note${No_Attributes}: Confirmation is required for to shutdown.                                                 ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes} ${F_Cyan}Command ${F_Red}${Bold}8${No_Attributes}:  Restart macOS. ${F_Green}${Bold}Note${No_Attributes}: Confirmation is required for to restart.                                                      ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes} ${F_Cyan}Command ${F_Red}${Bold}9${No_Attributes}:  Shutdown macOS. ${F_Green}${Bold}Note${No_Attributes}: Confirmation is required for to shutdown.                                                    ${Dim}•${No_Attributes}"
     echo "${Dim}••${F_Green}${Bold}DNS and Firewall${No_Attributes}${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
     echo "${Dim}•${No_Attributes} ${F_Cyan}Command ${F_Red}${Bold}10${No_Attributes}: Flushes local DNS cache. ${F_Green}${Bold}Note${No_Attributes}: To use when there are problems with loading sites, 404 error.                       ${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes} ${F_Cyan}Command ${F_Red}${Bold}11${No_Attributes}: Show Firewall information. ${F_Green}${Bold}Note${No_Attributes}: Block all is enabled or not, List applications and etc.                           ${Dim}•${No_Attributes}"
@@ -90,8 +90,8 @@ showMenu() {
     echo "${Dim}•${No_Attributes} ${F_Cyan}Command ${F_Red}${Bold}19${No_Attributes}: Don't Show all File Extensions.                                                                                    ${No_Attributes}${Dim}•${No_Attributes}"
     echo "${Dim}••${F_Green}${Bold}WiFi${No_Attributes}${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
     echo "${Dim}•${No_Attributes} ${F_Cyan}Command ${F_Red}${Bold}20${No_Attributes}: Show WiFi information and Scan Wireless Networks.                                                                  ${No_Attributes}${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes} ${F_Cyan}Command ${F_Red}${Bold}21${No_Attributes}: WiFi Enable.                                                                                                       ${No_Attributes}${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes} ${F_Cyan}Command ${F_Red}${Bold}22${No_Attributes}: WiFi Disable.                                                                                                      ${No_Attributes}${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes} ${F_Cyan}Command ${F_Red}${Bold}21${No_Attributes}: Enable WiFi.                                                                                                       ${No_Attributes}${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes} ${F_Cyan}Command ${F_Red}${Bold}22${No_Attributes}: Disable WiFi.                                                                                                      ${No_Attributes}${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes} ${F_Cyan}Command ${F_Red}${Bold}23${No_Attributes}: Show WiFi Network Password.                                                                                        ${No_Attributes}${Dim}•${No_Attributes}"
     echo "${Dim}••${F_Green}${Bold}Hostname${No_Attributes}${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
     echo "${Dim}•${No_Attributes} ${F_Cyan}Command ${F_Red}${Bold}24${No_Attributes}: Show Hostname information. ${F_Green}${Bold}Note${No_Attributes}: Computer Name, Hostname, local Hostname NetBIOS Name and etc.                     ${Dim}•${No_Attributes}"
@@ -234,7 +234,7 @@ restoringTheDefaultGatekeeperDatabase() {
     continueMessage
 }
 
-# Command 8: Restart computer (needs confirmation)
+# Command 8: Restart macOS (needs confirmation)
 restartComputerNeedsConfirmation() {
     echo "•${F_Red} Command 8: You choose to Restart computer.${No_Attributes}"
     rm -rf .zsh_sessions
@@ -244,7 +244,7 @@ restartComputerNeedsConfirmation() {
     continueMessage
 }
 
-# Command 9: Shutdown computer (needs confirmation)
+# Command 9: Shutdown macOS (needs confirmation)
 shutdownComputerNeedsConfirmation() {
     echo "•${F_Red} Command 9: You choose to Shutdown computer.${No_Attributes}"
     rm -rf .zsh_sessions
@@ -415,7 +415,7 @@ settingHostnameAndInformationAboutTheNewCurrentHostname() {
 # Command 26: Ping Test IPv4
 netPingTestIPv4() {
     echo "•${F_Red} Command 26: You choose to net Ping test IPv4.${No_Attributes}"
-    declare -a arr=("Google.com" "Youtube.com" "Facebook.com" "Instagram.com" "8.8.8.8" "8.8.4.4")
+    declare -a arr=("Google.com" "Youtube.com" "Facebook.com" "Spotify.com" "8.8.8.8" "8.8.4.4")
     echo "\n${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
     echo "${Dim}•${No_Attributes} Server- or IP- address | Response time: Minimum/Average/Maximum/Standard_deviation in milliseconds ${Dim}•${No_Attributes}"
     echo "\n${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
@@ -431,7 +431,7 @@ netPingTestIPv4() {
 # Command 27: Ping Test IPv6
 netPingTestIPv6() {
     echo "•${F_Red} Command 27: You choose to net Ping test IPv6.${No_Attributes}"
-    declare -a arr=("Google.com" "Youtube.com" "Facebook.com" "Instagram.com" "2001:4860:4860::8888" "2001:4860:4860::8844")
+    declare -a arr=("Google.com" "Youtube.com" "Facebook.com" "Spotify.com" "2001:4860:4860::8888" "2001:4860:4860::8844")
     echo "\n${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
     echo "${Dim}•${No_Attributes} Server- or IP- address | Response time: Minimum/Average/Maximum/Standard_deviation in milliseconds ${Dim}•${No_Attributes}"
     echo "\n${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
@@ -470,7 +470,7 @@ tracerouteTestIPv4() {
     echo "${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
     traceroute Facebook.com
     echo "${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
-    traceroute Instagram.com
+    traceroute Spotify.com
     echo "${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
     traceroute 8.8.8.8
     echo "${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
@@ -489,7 +489,7 @@ tracerouteTestIPv6() {
     echo "${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
     traceroute6 Facebook.com
     echo "${F_Red}•${F_Green}${Bold} Done ${No_Attributes}\n"
-    traceroute6 Instagram.com
+    traceroute6 Spotify.com
     echo "${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
     traceroute6 2001:4860:4860::8888
     echo "${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
