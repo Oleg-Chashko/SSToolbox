@@ -43,56 +43,56 @@
 
 ## Commands List
 
-| Command | Description | Note |
-| ------------- | ------------- | ------------- |
-| **Xcode** | | |
-| `i` | Installing the Xcode Command Line Tools | ••••• |
-| `u` | Uninstalling the Xcode Command Line Tools | ••••• |
-| **GateKeeper** | | |
-| `1` | Show GateKeeper Status | ••••• |
-| `2` | Enable GateKeeper | ••••• |
-| `3` | Disable GateKeeper | These actions could lead to potential security and privacy issues |
-| `4` | Remove app from GateKeeper quarantine | ••••• |
-| `5` | Self-sign the app | If the app gives a warning that it is not signed, try self-signing. Require Xcode or Xcode Command Line Tools |
-| `6` | List apps from unknown sources | ••••• |
-| `7` | Restoring the Default GateKeeper Database | ••••• |
-| **Restart and Shutdown** | | |
-| `8` | Restart macOS | Confirmation is required for to restart |
-| `9` | Shutdown macOS | Confirmation is required for to shutdown |
-| **DNS and Firewall** | | |
-| `10` | Flush Local DNS cache | To use when there are problems with loading sites, 404 error |
-| `11` | Show Firewall information | Block all is enabled or not, List applications and etc. |
-| `12` | Firewall Enable | ••••• |
-| `13` | Firewall Disable | ••••• |
-| `14` | Block all connections Enable | ••••• |
-| `15` | Block all connections Disable | ••••• |
-| **Hidden Files and Extensions** | | |
-| `16` | Show Hidden Files | ••••• |
-| `17` | Don't Show Hidden Files | ••••• |
-| `18` | Show all File Extensions | ••••• |
-| `19` | Don't Show all File Extensions | ••••• |
-| **WiFi** | | |
-| `20` | Show WiFi information and Scan Wireless Networks | ••••• |
-| `21` | Enable WiFi | ••••• |
-| `22` | Disable WiFi | ••••• |
-| `23` | Show WiFi Network Password | ••••• |
-| **Hostname** | | |
-| `24` | Show Hostname information | Computer Name, Hostname, local Hostname NetBIOS Name and etc. |
-| `25` | Setting a new Hostname | Computer Name, Hostname, local Hostname and NetBIOS Name |
-| **Ping, Traceroute and Finding Routers** | | |
-| `26` | Ping Test IPv4 | ••••• |
-| `27` | Ping Test IPv6 | ••••• |
-| `28` | Finding Routers on Local Networks | Default IP Address List for Wireless Routers |
-| `29` | Traceroute Test IPv4 | ••••• |
-| `30` | Traceroute Test IPv6 | ••••• |
-| **XXXXXXXXX** | | |
-| `31` | ••••• | ••••• |
-| `32` | ••••• | ••••• |
-| `33` | ••••• | ••••• |
-| `34` | ••••• | ••••• |
-| `35` | Show Attachments as Icons in Apple Mail App | ••••• |
-| **Quit** | | |
-| `0` | Quit Shell Script Toolkit | Deleting terminal command history and Terminal to quit |
+|Command|Description|Note|
+|-|-|-|
+|**Xcode**|
+|`i`| Installing the Xcode Command Line Tools | ••••• |
+|`u`| Uninstalling the Xcode Command Line Tools | ••••• |
+|**GateKeeper**|
+|`1`| Show GateKeeper Status | ••••• |
+|`2`| Enable GateKeeper | ••••• |
+|`3`| Disable GateKeeper | These actions could lead to potential security and privacy issues |
+|`4`| Remove app from GateKeeper quarantine | ••••• |
+|`5`| Self-sign the app | If the app gives a warning that it is not signed, try self-signing. Require Xcode or Xcode Command Line Tools |
+|`6`| List apps from unknown sources | ••••• |
+|`7`| Restoring the Default GateKeeper Database | ••••• |
+|**Restart and Shutdown**|
+|`8`| Restart macOS | Confirmation is required for to restart |
+|`9`| Shutdown macOS | Confirmation is required for to shutdown |
+|**DNS and Firewall**|
+|`10`| Flush Local DNS cache | To use when there are problems with loading sites, 404 error |
+|`11`| Show Firewall information | Block all is enabled or not, List applications and etc. |
+|`12`| Firewall Enable | ••••• |
+|`13`| Firewall Disable | ••••• |
+|`14`| Block all connections Enable | ••••• |
+|`15`| Block all connections Disable | ••••• |
+|**Hidden Files and Extensions**|
+|`16`| Show Hidden Files | ••••• |
+|`17`| Don't Show Hidden Files | ••••• |
+|`18`| Show all File Extensions | ••••• |
+|`19`| Don't Show all File Extensions | ••••• |
+|**WiFi**|
+|`20`| Show WiFi information and Scan Wireless Networks | ••••• |
+|`21`| Enable WiFi | ••••• |
+|`22`| Disable WiFi | ••••• |
+|`23`| Show WiFi Network Password | ••••• |
+|**Hostname**|
+|`24`| Show Hostname information | Computer Name, Hostname, local Hostname NetBIOS Name and etc. |
+|`25`| Setting a new Hostname | Computer Name, Hostname, local Hostname and NetBIOS Name |
+|**Ping, Traceroute and Finding Routers**|
+|`26`| Ping Test IPv4 | ••••• |
+|`27`| Ping Test IPv6 | ••••• |
+|`28`| Finding Routers on Local Networks | Default IP Address List for Wireless Routers |
+|`29`| Traceroute Test IPv4 | ••••• |
+|`30`| Traceroute Test IPv6 | ••••• |
+|**XXXXXXXXX**|
+|`31`| ••••• | ••••• |
+|`32`| ••••• | ••••• |
+|`33`| ••••• | ••••• |
+|`34`| ••••• | ••••• |
+|`35`| Show Attachments as Icons in Apple Mail App | ••••• |
+|**Quit**|
+|`0`| Quit Shell Script Toolkit | Deleting terminal command history and Terminal to quit |
 
 ## Download
 
