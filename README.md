@@ -44,55 +44,55 @@
 ## Commands List
 
 |Command|Description|Note|
-|-|-|-|
-|**Xcode**|
-|`i`| Installing the Xcode Command Line Tools | ••••• |
-|`u`| Uninstalling the Xcode Command Line Tools | ••••• |
-|**GateKeeper**|
-|`1`| Show GateKeeper Status | ••••• |
-|`2`| Enable GateKeeper | ••••• |
-|`3`| Disable GateKeeper | These actions could lead to potential security and privacy issues |
-|`4`| Remove app from GateKeeper quarantine | ••••• |
-|`5`| Self-sign the app | If the app gives a warning that it is not signed, try self-signing. Require Xcode or Xcode Command Line Tools |
-|`6`| List apps from unknown sources | ••••• |
-|`7`| Restoring the Default GateKeeper Database | ••••• |
-|**Restart and Shutdown**|
-|`8`| Restart macOS | Confirmation is required for to restart |
-|`9`| Shutdown macOS | Confirmation is required for to shutdown |
-|**DNS and Firewall**|
-|`10`| Flush Local DNS cache | To use when there are problems with loading sites, 404 error |
-|`11`| Show Firewall information | Block all is enabled or not, List applications and etc. |
-|`12`| Firewall Enable | ••••• |
-|`13`| Firewall Disable | ••••• |
-|`14`| Block all connections Enable | ••••• |
-|`15`| Block all connections Disable | ••••• |
-|**Hidden Files and Extensions**|
-|`16`| Show Hidden Files | ••••• |
-|`17`| Don't Show Hidden Files | ••••• |
-|`18`| Show all File Extensions | ••••• |
-|`19`| Don't Show all File Extensions | ••••• |
-|**WiFi**|
-|`20`| Show WiFi information and Scan Wireless Networks | ••••• |
-|`21`| Enable WiFi | ••••• |
-|`22`| Disable WiFi | ••••• |
-|`23`| Show WiFi Network Password | ••••• |
-|**Hostname**|
-|`24`| Show Hostname information | Computer Name, Hostname, local Hostname NetBIOS Name and etc. |
-|`25`| Setting a new Hostname | Computer Name, Hostname, local Hostname and NetBIOS Name |
-|**Ping, Traceroute and Finding Routers**|
-|`26`| Ping Test IPv4 | ••••• |
-|`27`| Ping Test IPv6 | ••••• |
-|`28`| Finding Routers on Local Networks | Default IP Address List for Wireless Routers |
-|`29`| Traceroute Test IPv4 | ••••• |
-|`30`| Traceroute Test IPv6 | ••••• |
-|**XXXXXXXXX**|
-|`31`| ••••• | ••••• |
-|`32`| ••••• | ••••• |
-|`33`| ••••• | ••••• |
-|`34`| ••••• | ••••• |
-|`35`| Show Attachments as Icons in Apple Mail App | ••••• |
-|**Quit**|
-|`0`| Quit Shell Script Toolkit | Deleting terminal command history and Terminal to quit |
+|:----------:|----------|----------|
+|<font color=#006400>**Xcode**</font>|
+|<font color=#ff2222 size=5>**`i`**</font>| Installing the Xcode Command Line Tools | ••••• |
+|<font color=#ff2222 size=5>**`u`**</font>| Uninstalling the Xcode Command Line Tools | ••••• |
+|<font color=#006400>**GateKeeper**</font>|
+|<font color=#ff2222 size=5>**`1`**</font>| Show GateKeeper Status | ••••• |
+|<font color=#ff2222 size=5>**`2`**</font>| Enable GateKeeper | ••••• |
+|<font color=#ff2222 size=5>**`3`**</font>| Disable GateKeeper | These actions could lead to potential security and privacy issues |
+|<font color=#ff2222 size=5>**`4`**</font>| Remove app from GateKeeper quarantine | ••••• |
+|<font color=#ff2222 size=5>**`5`**</font>| Self-sign the app | If the app gives a warning that it is not signed, try self-signing. Require Xcode or Xcode Command Line Tools |
+|<font color=#ff2222 size=5>**`6`**</font>| List apps from unknown sources | ••••• |
+|<font color=#ff2222 size=5>**`7`**</font>| Restoring the Default GateKeeper Database | ••••• |
+|<font color=#006400>**Restart and Shutdown**</font>|
+|<font color=#ff2222 size=5>**`8`**</font>| Restart macOS | Confirmation is required for to restart |
+|<font color=#ff2222 size=5>**`9`**</font>| Shutdown macOS | Confirmation is required for to shutdown |
+|<font color=#006400>**DNS and Firewall**</font>|
+|<font color=#ff2222 size=5>**`10`**</font>| Flush Local DNS cache | To use when there are problems with loading sites, 404 error |
+|<font color=#ff2222 size=5>**`11`**</font>| Show Firewall information | Block all is enabled or not, List applications and etc. |
+|<font color=#ff2222 size=5>**`12`**</font>| Firewall Enable | ••••• |
+|<font color=#ff2222 size=5>**`13`**</font>| Firewall Disable | ••••• |
+|<font color=#ff2222 size=5>**`14`**</font>| Block all connections Enable | ••••• |
+|<font color=#ff2222 size=5>**`15`**</font>| Block all connections Disable | ••••• |
+|<font color=#006400>**Hidden Files and Extensions**</font>|
+|<font color=#ff2222 size=5>**`16`**</font>| Show Hidden Files | ••••• |
+|<font color=#ff2222 size=5>**`17`**</font>| Don't Show Hidden Files | ••••• |
+|<font color=#ff2222 size=5>**`18`**</font>| Show all File Extensions | ••••• |
+|<font color=#ff2222 size=5>**`19`**</font>| Don't Show all File Extensions | ••••• |
+|<font color=#006400>**WiFi**</font>|
+|<font color=#ff2222 size=5>**`20`**</font>| Show WiFi information and Scan Wireless Networks | ••••• |
+|<font color=#ff2222 size=5>**`21`**</font>| Enable WiFi | ••••• |
+|<font color=#ff2222 size=5>**`22`**</font>| Disable WiFi | ••••• |
+|<font color=#ff2222 size=5>**`23`**</font>| Show WiFi Network Password | ••••• |
+|<font color=#006400>**Hostname**</font>|
+|<font color=#ff2222 size=5>**`24`**</font>| Show Hostname information | Computer Name, Hostname, local Hostname NetBIOS Name and etc. |
+|<font color=#ff2222 size=5>**`25`**</font>| Setting a new Hostname | Computer Name, Hostname, local Hostname and NetBIOS Name |
+|<font color=#006400>**Ping, Traceroute and Finding Routers**</font>|
+|<font color=#ff2222 size=5>**`26`**</font>| Ping Test IPv4 | ••••• |
+|<font color=#ff2222 size=5>**`27`**</font>| Ping Test IPv6 | ••••• |
+|<font color=#ff2222 size=5>**`28`**</font>| Finding Routers on Local Networks | Default IP Address List for Wireless Routers |
+|<font color=#ff2222 size=5>**`29`**</font>| Traceroute Test IPv4 | ••••• |
+|<font color=#ff2222 size=5>**`30`**</font>| Traceroute Test IPv6 | ••••• |
+|<font color=#006400>**XXXXXXXXX**</font>|
+|<font color=#ff2222 size=5>**`31`**</font>| ••••• | ••••• |
+|<font color=#ff2222 size=5>**`32`**</font>| ••••• | ••••• |
+|<font color=#ff2222 size=5>**`33`**</font>| ••••• | ••••• |
+|<font color=#ff2222 size=5>**`34`**</font>| ••••• | ••••• |
+|<font color=#ff2222 size=5>**`35`**</font>| Show Attachments as Icons in Apple Mail App | ••••• |
+|<font color=#006400>**Quit**</font>|
+|<font color=#ff2222 size=5>**`0`**</font>| Quit Shell Script Toolkit | Deleting terminal command history and Terminal to quit |
 
 ## Download
 
