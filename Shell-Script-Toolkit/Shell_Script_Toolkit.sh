@@ -141,14 +141,14 @@ showInvalid() {
 
 # Command i: Installing the Xcode Command Line Tools
 installingXCLT() {
-    echo "•${F_Red} You choose to Install the Xcode Command Line Tools.${No_Attributes}\n"
+    echo "•${F_Red}${Bold} Command i: You choose to Install the Xcode Command Line Tools.${No_Attributes}\n"
     xcode-select --install
     continueMessage
 }
 
 # Command u: Uninstalling the Xcode Command Line Tools
 uninstallingXCLT() {
-    echo "•${F_Red} You choose to Uninstall the Xcode Command Line Tools.${No_Attributes}\n"
+    echo "•${F_Red}${Bold} Command u: You choose to Uninstall the Xcode Command Line Tools.${No_Attributes}\n"
     askPassword
     sudo rm -rf /Library/Developer/CommandLineTools
     echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
@@ -160,7 +160,7 @@ uninstallingXCLT() {
 # Command 0: Quit Shell Script Toolkit
 quitShellScriptToolkit() {
     # Deleting macOS terminal command history and Terminal to quit
-    echo "•${F_Red} Command 0: Deleting macOS terminal command history.${No_Attributes}"
+    echo "•${F_Red}${Bold} Command 0: Deleting macOS terminal command history.${No_Attributes}"
     rm -rf .zsh_sessions
     rm -rf .zsh_history
     sleep 1 && echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
@@ -171,14 +171,14 @@ quitShellScriptToolkit() {
 
 # Command 1: Show GateKeeper Status
 showGateKeeperStatus() {
-    echo "•${F_Red} Command 1: You choose to show GateKeeper status.${No_Attributes}\n"
+    echo "•${F_Red}${Bold} Command 1: You choose to show GateKeeper status.${No_Attributes}\n"
     spctl --status
     continueMessage
 }
 
 # Command 2: Enable GateKeeper
 enableGateKeeper() {
-    echo "•${F_Red} Command 2: You chose to enable GateKeeper.${No_Attributes}"
+    echo "•${F_Red}${Bold} Command 2: You chose to enable GateKeeper.${No_Attributes}"
     askPassword
     sudo spctl --master-enable
     echo "\n•${F_Red} GateKeeper enabled.${No_Attributes}"
@@ -187,7 +187,7 @@ enableGateKeeper() {
 
 # Command 3: Disable GateKeeper
 disableGateKeeper() {
-    echo "•${F_Red} Command 3: You chose to disable GateKeeper.${No_Attributes}"
+    echo "•${F_Red}${Bold} Command 3: You chose to disable GateKeeper.${No_Attributes}"
     askPassword
     sudo spctl --master-disable
     echo "\n•${F_Red} GateKeeper disabled.${No_Attributes}"
@@ -196,7 +196,7 @@ disableGateKeeper() {
 
 # Command 4: Remove app from GateKeeper quarantine
 removeAppFromGateKeeper() {
-    echo "•${F_Red} Command 4: You chose to remove the app from GateKeeper quarantine.${No_Attributes}\n"
+    echo "•${F_Red}${Bold} Command 4: You chose to remove the app from GateKeeper quarantine.${No_Attributes}\n"
     read "? Drag & drop the app on this window and then press Return: " FILEPATH
     askPassword
     sudo xattr -r -d com.apple.quarantine "$FILEPATH"
@@ -210,7 +210,7 @@ removeAppFromGateKeeper() {
 
 # Command 5: Self-sign the app
 selfSignApp() {
-    echo "•${F_Red} Command 5: You chose to self-sign an app.${No_Attributes}\n"
+    echo "•${F_Red}${Bold} Command 5: You chose to self-sign an app.${No_Attributes}\n"
     read "? Drag & drop the app on this window and then press Return: " FILEPATH
     askPassword
     sudo codesign -f -v -s - --deep "$FILEPATH"
@@ -220,7 +220,7 @@ selfSignApp() {
 
 # Command 6: List apps from unknown sources
 listAppsFromUnknownSources() {
-    echo "•${F_Red} Command 6: List apps from unknown sources.${No_Attributes}"
+    echo "•${F_Red}${Bold} Command 6: List apps from unknown sources.${No_Attributes}"
     askPassword
     sudo spctl --list | grep UNLABELED
     continueMessage
@@ -228,7 +228,7 @@ listAppsFromUnknownSources() {
 
 # Command 7: Restoring the Default Gatekeeper Database
 restoringTheDefaultGatekeeperDatabase() {
-    echo "•${F_Red} Command 7: Restoring the Default Gatekeeper Database.${No_Attributes}"
+    echo "•${F_Red}${Bold} Command 7: Restoring the Default Gatekeeper Database.${No_Attributes}"
     askPassword
     sudo spctl --reset-default
     continueMessage
@@ -236,7 +236,7 @@ restoringTheDefaultGatekeeperDatabase() {
 
 # Command 8: Restart macOS (needs confirmation)
 restartComputerNeedsConfirmation() {
-    echo "•${F_Red} Command 8: You choose to Restart computer.${No_Attributes}"
+    echo "•${F_Red}${Bold} Command 8: You choose to Restart computer.${No_Attributes}"
     rm -rf .zsh_sessions
     rm -rf .zsh_history
     sleep 1 && echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
@@ -246,7 +246,7 @@ restartComputerNeedsConfirmation() {
 
 # Command 9: Shutdown macOS (needs confirmation)
 shutdownComputerNeedsConfirmation() {
-    echo "•${F_Red} Command 9: You choose to Shutdown computer.${No_Attributes}"
+    echo "•${F_Red}${Bold} Command 9: You choose to Shutdown computer.${No_Attributes}"
     rm -rf .zsh_sessions
     rm -rf .zsh_history
     sleep 1 && echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
@@ -256,7 +256,7 @@ shutdownComputerNeedsConfirmation() {
 
 # Command 10: Flush DNS cache
 flushesLocalDNS() {
-    echo "•${F_Red} Command 10: Flushing dns...${No_Attributes}"
+    echo "•${F_Red}${Bold} Command 10: Flushing dns...${No_Attributes}"
     askPassword
     sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder
     echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
@@ -265,7 +265,7 @@ flushesLocalDNS() {
 
 # Command 11: Show Firewall information
 showFirewallInformation() {
-    echo "•${F_Red} Command 11:${No_Attributes}"
+    echo "•${F_Red}${Bold} Command 11:${No_Attributes}"
     echo "•${F_Red} Show firewall information.${No_Attributes}\n"
     /usr/libexec/ApplicationFirewall/socketfilterfw --getglobalstate
     echo "\n•${F_Red} Show whether block all is enabled or not.${No_Attributes}\n"
@@ -277,7 +277,7 @@ showFirewallInformation() {
 
 # Command 12: Firewall Enable
 enableFirewall() {
-    echo "•${F_Red} Command 12: You choose to Enable firewall.${No_Attributes}\n"
+    echo "•${F_Red}${Bold} Command 12: You choose to Enable firewall.${No_Attributes}\n"
     askPassword
     sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setglobalstate on
     continueMessage
@@ -285,7 +285,7 @@ enableFirewall() {
 
 # Command 13: Firewall Disable
 disableFirewall() {
-    echo "•${F_Red} Command 13: You choose to Disable firewall.${No_Attributes}\n"
+    echo "•${F_Red}${Bold} Command 13: You choose to Disable firewall.${No_Attributes}\n"
     askPassword
     sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setglobalstate off
     continueMessage
@@ -293,7 +293,7 @@ disableFirewall() {
 
 # Command 14: Block all connections Enable
 blockAllEnable() {
-    echo "•${F_Red} Command 14: You choose to Enables Block all connections.${No_Attributes}\n"
+    echo "•${F_Red}${Bold} Command 14: You choose to Enables Block all connections.${No_Attributes}\n"
     askPassword
     sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setblockall on
     continueMessage
@@ -301,7 +301,7 @@ blockAllEnable() {
 
 # Command 15: Block all connections Disable
 blockAllDisable() {
-    echo "•${F_Red} Command 15: You choose to Disables Block all connections.${No_Attributes}\n"
+    echo "•${F_Red}${Bold} Command 15: You choose to Disables Block all connections.${No_Attributes}\n"
     askPassword
     sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setblockall off
     continueMessage
@@ -309,59 +309,59 @@ blockAllDisable() {
 
 # Command 16: Show Hidden Files
 showHiddenFiles() {
-    echo "•${F_Red} Command 16: You choose to show hidden files.${No_Attributes}"
+    echo "•${F_Red}${Bold} Command 16: You choose to show hidden files.${No_Attributes}"
     defaults write com.apple.finder AppleShowAllFiles true && killall Finder
     continueMessage
 }
 
 # Command 17: Don't Show Hidden Files
 noShowHiddenFiles() {
-    echo "•${F_Red} Command 17: You choose to don't show hidden files.${No_Attributes}"
+    echo "•${F_Red}${Bold} Command 17: You choose to don't show hidden files.${No_Attributes}"
     defaults write com.apple.finder AppleShowAllFiles false && killall Finder
     continueMessage
 }
 
 # Command 18: Show all File Extensions
 showExtensionsFiles() {
-    echo "•${F_Red} Command 18: You choose to show all file extensions.${No_Attributes}"
+    echo "•${F_Red}${Bold} Command 18: You choose to show all file extensions.${No_Attributes}"
     defaults write NSGlobalDomain AppleShowAllExtensions true && killall Finder
     continueMessage
 }
 
 # Command 19: Don't Show all File Extensions
 noShowExtensionsFiles() {
-    echo "•${F_Red} Command 19: You choose to don't show all file extensions.${No_Attributes}"
+    echo "•${F_Red}${Bold} Command 19: You choose to don't show all file extensions.${No_Attributes}"
     defaults write NSGlobalDomain AppleShowAllExtensions false && killall Finder
     continueMessage
 }
 
 # Command 20: Show WiFi information and Scan Wireless Networks
 showWiFiInformationAndScanWirelessNetworks() {
-    echo "•${F_Red} Command 20:${No_Attributes}"
-    echo "•${F_Red} Show WiFi information.${No_Attributes}\n"
+    echo "•${F_Red}${Bold} Command 20: Show WiFi information and Scan Wireless Networks.${No_Attributes}"
+    echo "•${F_Red} WiFi information.${No_Attributes}\n"
     /System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport -I
-    echo "\n•${F_Red} Show scan wireless networks.${No_Attributes}\n"
+    echo "\n•${F_Red} Scan wireless networks.${No_Attributes}\n"
     /System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport -s
     continueMessage
 }
 
 # Command 21: WiFi Enable
 wifiOn() {
-    echo "•${F_Red} Command 21: You choose to Enables WiFi.${No_Attributes}"
+    echo "•${F_Red}${Bold} Command 21: You choose to Enables WiFi.${No_Attributes}"
     networksetup -setairportpower en0 on
     continueMessage
 }
 
 # Command 22: WiFi Disable
 wifiOff() {
-    echo "•${F_Red} Command 22: You choose to Disables WiFi.${No_Attributes}"
+    echo "•${F_Red}${Bold} Command 22: You choose to Disables WiFi.${No_Attributes}"
     networksetup -setairportpower en0 off
     continueMessage
 }
 
 # Command 23: Show WiFi Network Password
 wifiShowPassword() {
-    echo "•${F_Red} Command 23: You choose to WiFi Network Password.${No_Attributes}\n"
+    echo "•${F_Red}${Bold} Command 23: You choose to WiFi Network Password.${No_Attributes}\n"
     echo "•${F_Red} Please provide your Login and Password to proceed.${No_Attributes}\n"
     sleep 2
     if [ -z "$1" ]; then
@@ -375,7 +375,7 @@ wifiShowPassword() {
 
 # Command 24: Show Hostname information
 showHostnameInformation() {
-    echo "•${F_Red} Command 24: You choose to get the current Hostname information.${No_Attributes}\n"
+    echo "•${F_Red}${Bold} Command 24: You choose to get the current Hostname information.${No_Attributes}\n"
     networksetup -listnetworkserviceorder | grep en0 | awk '{print "Network device: " $1, $2, $3, $4, $5}'
     ipconfig getifaddr en0 | awk '{print "IP address: " $1}'
     networksetup -getmacaddress en0 | awk '{print "MAC address: " $3}'
@@ -392,7 +392,7 @@ showHostnameInformation() {
 
 # Command 25: Setting a new Hostname and getting information about the New current Hostname
 settingHostnameAndInformationAboutTheNewCurrentHostname() {
-    echo "•${F_Red} Command 25: You choose to Setting a new Hostname.${No_Attributes}"
+    echo "•${F_Red}${Bold} Command 25: You choose to Setting a new Hostname.${No_Attributes}"
     askPassword
     # gets named
     fullName=$(id -P $(stat -f%Su /dev/console) | cut -d : -f 8 | sed 's/ //g' | awk '{print tolower($0)}')
@@ -414,7 +414,7 @@ settingHostnameAndInformationAboutTheNewCurrentHostname() {
 
 # Command 26: Ping Test IPv4
 netPingTestIPv4() {
-    echo "•${F_Red} Command 26: You choose to net Ping test IPv4.${No_Attributes}"
+    echo "•${F_Red}${Bold} Command 26: You choose to net Ping test IPv4.${No_Attributes}"
     declare -a arr=("Google.com" "Youtube.com" "Facebook.com" "Spotify.com" "8.8.8.8" "8.8.4.4")
     echo "\n${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
     echo "${Dim}•${No_Attributes} Server- or IP- address | Response time: Minimum/Average/Maximum/Standard_deviation in milliseconds ${Dim}•${No_Attributes}"
@@ -430,7 +430,7 @@ netPingTestIPv4() {
 
 # Command 27: Ping Test IPv6
 netPingTestIPv6() {
-    echo "•${F_Red} Command 27: You choose to net Ping test IPv6.${No_Attributes}"
+    echo "•${F_Red}${Bold} Command 27: You choose to net Ping test IPv6.${No_Attributes}"
     declare -a arr=("Google.com" "Youtube.com" "Facebook.com" "Spotify.com" "2001:4860:4860::8888" "2001:4860:4860::8844")
     echo "\n${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
     echo "${Dim}•${No_Attributes} Server- or IP- address | Response time: Minimum/Average/Maximum/Standard_deviation in milliseconds ${Dim}•${No_Attributes}"
@@ -446,7 +446,7 @@ netPingTestIPv6() {
 
 # Command 28: Finding Routers on Local Networks
 findingRoutersOnLocalNetworks() {
-    echo "•${F_Red} Command 28 You choose to Finding Routers on Local Networks.${No_Attributes}"
+    echo "•${F_Red}${Bold} Command 28 You choose to Finding Routers on Local Networks.${No_Attributes}"
     declare -a arr=("10.0.0.1" "10.0.0.2" "10.0.0.138" "10.0.1.1" "10.1.1.1" "10.1.10.1" "10.10.1.1" "10.90.90.90" "192.168.0.1" "192.168.0.3" "192.168.0.10" "192.168.0.30" "192.168.0.50" "192.168.0.100" "192.168.0.101" "192.168.0.227" "192.168.0.254" "192.168.1.1" "192.168.1.10" "192.168.1.99" "192.168.1.100" "192.168.1.200" "192.168.1.210" "192.168.1.254" "192.168.2.1" "192.168.2.254" "192.168.3.1" "192.168.4.1" "192.168.8.1" "192.168.10.1" "192.168.10.10" "192.168.10.50" "192.168.10.100" "192.168.11.1" "192.168.15.1" "192.168.16.1" "192.168.20.1" "192.168.30.1" "192.168.50.1" "192.168.55.1" "192.168.62.1" "192.168.100.1" "192.168.100.100" "192.168.102.1" "192.168.123.254" "192.168.168.168" "192.168.223.100" "192.168.251.1" "192.168.254.254" "200.200.200.5")
     echo "\n${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
     echo "${Dim}•${No_Attributes} Router- or IP- address | Response time: Minimum/Average/Maximum/Standard_deviation in milliseconds ${Dim}•${No_Attributes}"
@@ -462,7 +462,7 @@ findingRoutersOnLocalNetworks() {
 
 # Command 29: Traceroute Test IPv4
 tracerouteTestIPv4() {
-    echo "•${F_Red} Command 29: You choose to Traceroute test IPv4.${No_Attributes}\n"
+    echo "•${F_Red}${Bold} Command 29: You choose to Traceroute test IPv4.${No_Attributes}\n"
     echo "•${F_Red} Testing...\n${No_Attributes}"
     traceroute Google.com
     echo "${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
@@ -481,7 +481,7 @@ tracerouteTestIPv4() {
 
 # Command 30: Traceroute Test IPv6
 tracerouteTestIPv6() {
-    echo "•${F_Red} Command 30: You choose to Traceroute test IPv6.${No_Attributes}\n"
+    echo "•${F_Red}${Bold} Command 30: You choose to Traceroute test IPv6.${No_Attributes}\n"
     echo "•${F_Red} Testing...\n${No_Attributes}"
     traceroute6 Google.com
     echo "${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
@@ -500,7 +500,7 @@ tracerouteTestIPv6() {
 
 # Command 31:
 no() {
-    echo "•${F_Red} Command 31: You choose to .${No_Attributes}\n"
+    echo "•${F_Red}${Bold} Command 31: You choose to .${No_Attributes}\n"
     askPassword
     +
     continueMessage
@@ -508,7 +508,7 @@ no() {
 
 # Command 32:
 noo() {
-    echo "•${F_Red} Command 32: You choose to .${No_Attributes}\n"
+    echo "•${F_Red}${Bold} Command 32: You choose to .${No_Attributes}\n"
     askPassword
     +
     continueMessage
@@ -516,7 +516,7 @@ noo() {
 
 # Command 33:
 nooo() {
-    echo "•${F_Red} Command 33: You choose to .${No_Attributes}\n"
+    echo "•${F_Red}${Bold} Command 33: You choose to .${No_Attributes}\n"
     askPassword
     +
     continueMessage
@@ -524,7 +524,7 @@ nooo() {
 
 # Command 34:
 noooo() {
-    echo "•${F_Red} Command 34: You choose to .${No_Attributes}\n"
+    echo "•${F_Red}${Bold} Command 34: You choose to .${No_Attributes}\n"
     askPassword
     +
     continueMessage
@@ -532,7 +532,7 @@ noooo() {
 
 # Command 35:
 showAttachmentsAsIcons() {
-    echo "•${F_Red} Command 35: You choose to Show Attachments as Icons in Apple Mail App.${No_Attributes}\n"
+    echo "•${F_Red}${Bold} Command 35: You choose to Show Attachments as Icons in Apple Mail App.${No_Attributes}\n"
     defaults write com.apple.mail DisableInlineAttachmentViewing -bool yes
     continueMessage
 }
