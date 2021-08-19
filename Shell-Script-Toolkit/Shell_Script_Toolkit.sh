@@ -100,13 +100,7 @@ showMenu() {
     echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}29${No_Attributes}: Traceroute Test IPv4                                                               ${No_Attributes}${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}30${No_Attributes}: Traceroute Test IPv6                                                               ${No_Attributes}${Dim}•${No_Attributes}"
     echo "${Dim}• ${F_Green}${Bold}XXXXXXXX${No_Attributes}${Dim} ·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-· •${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}31${No_Attributes}: ••••••••••••••••                                                                   ${No_Attributes}${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}32${No_Attributes}: ••••••••••••••••                                                                   ${No_Attributes}${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}33${No_Attributes}: ••••••••••••••••                                                                   ${No_Attributes}${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}34${No_Attributes}: ••••••••••••••••                                                                   ${No_Attributes}${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}35${No_Attributes}: Show Attachments as Icons in Apple Mail App                                        ${No_Attributes}${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}36${No_Attributes}: ••••••••••••••••                                                                   ${No_Attributes}${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}37${No_Attributes}: ••••••••••••••••                                                                   ${No_Attributes}${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}31${No_Attributes}: Show Attachments as Icons in Apple Mail App                                        ${No_Attributes}${Dim}•${No_Attributes}"
     echo "${Dim}• •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••• •${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Purple} Command ${F_Red}${Bold}00${No_Attributes}: ${Bold}Quit${No_Attributes}${F_Green}${Bold}           Note${No_Attributes}: Deleting terminal command history and terminal to quit        ${Dim}•${No_Attributes}"
     echo "${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
@@ -126,17 +120,17 @@ askPassword() {
 
 # Terminal window size Narrow- minimize window, move to top/left corner, resize, wait a few seconds, bring to front and then restore window
 terminalWindowSizeNarrow() {
-    printf '\e[2t' && printf '\033[3;0;0t' && printf '\033[8;55;98t' && sleep 1 && printf '\e[5t' && printf '\e[1t'
+    printf '\e[2t' && printf '\033[3;0;0t' && printf '\033[8;37;98t' && sleep 1 && printf '\e[5t' && printf '\e[1t'
 }
 
 # Terminal window size Broad- minimize window, move to top/left corner, resize, wait a few seconds, bring to front and then restore window
 terminalWindowSizeMid() {
-    printf '\e[2t' && printf '\033[3;0;0t' && printf '\033[8;55;130t' && sleep 1 && printf '\e[5t' && printf '\e[1t'
+    printf '\e[2t' && printf '\033[3;0;0t' && printf '\033[8;37;130t' && sleep 1 && printf '\e[5t' && printf '\e[1t'
 }
 
 # Terminal window size Broad- minimize window, move to top/left corner, resize, wait a few seconds, bring to front and then restore window
 terminalWindowSizeBroad() {
-    printf '\e[2t' && printf '\033[3;0;0t' && printf '\033[8;55;190t' && sleep 1 && printf '\e[5t' && printf '\e[1t'
+    printf '\e[2t' && printf '\033[3;0;0t' && printf '\033[8;37;190t' && sleep 1 && printf '\e[5t' && printf '\e[1t'
 }
 
 # Shows continue message
@@ -545,64 +539,10 @@ tracerouteTestIPv6() {
 }
 
 # Command 31:
-••••••••••••••••() {
-    terminalWindowSizeMid
-    echo "•${F_Red}${Bold} Command 31: You choose to ••••••••••••••••.${No_Attributes}\n"
-    askPassword
-    ••••••••••••••••
-    continueMessage
-}
-
-# Command 32:
-••••••••••••••••() {
-    terminalWindowSizeMid
-    echo "•${F_Red}${Bold} Command 32: You choose to ••••••••••••••••.${No_Attributes}\n"
-    askPassword
-    ••••••••••••••••
-    continueMessage
-}
-
-# Command 33:
-••••••••••••••••() {
-    terminalWindowSizeMid
-    echo "•${F_Red}${Bold} Command 33: You choose to ••••••••••••••••.${No_Attributes}\n"
-    askPassword
-    ••••••••••••••••
-    continueMessage
-}
-
-# Command 34:
-••••••••••••••••() {
-    terminalWindowSizeMid
-    echo "•${F_Red}${Bold} Command 34: You choose to ••••••••••••••••.${No_Attributes}\n"
-    askPassword
-    ••••••••••••••••
-    continueMessage
-}
-
-# Command 35:
 showAttachmentsAsIcons() {
     terminalWindowSizeMid
-    echo "•${F_Red}${Bold} Command 35: You choose to Show Attachments as Icons in Apple Mail App.${No_Attributes}\n"
+    echo "•${F_Red}${Bold} Command 31: You choose to Show Attachments as Icons in Apple Mail App.${No_Attributes}\n"
     defaults write com.apple.mail DisableInlineAttachmentViewing -bool yes
-    continueMessage
-}
-
-# Command 36:
-••••••••••••••••() {
-    terminalWindowSizeMid
-    echo "•${F_Red}${Bold} Command 36: You choose to ••••••••••••••••.${No_Attributes}\n"
-    askPassword
-    ••••••••••••••••
-    continueMessage
-}
-
-# Command 37:
-••••••••••••••••() {
-    terminalWindowSizeMid
-    echo "•${F_Red}${Bold} Command 37: You choose to ••••••••••••••••.${No_Attributes}\n"
-    askPassword
-    ••••••••••••••••
     continueMessage
 }
 
@@ -779,37 +719,7 @@ startScript() {
 
         31)
             clear
-            ••••••••••••••••
-            ;;
-
-        32)
-            clear
-            ••••••••••••••••
-            ;;
-
-        33)
-            clear
-            ••••••••••••••••
-            ;;
-
-        34)
-            clear
-            ••••••••••••••••
-            ;;
-
-        35)
-            clear
             showAttachmentsAsIcons
-            ;;
-
-        36)
-            clear
-            ••••••••••••••••
-            ;;
-
-        37)
-            clear
-            ••••••••••••••••
             ;;
 
         00)
