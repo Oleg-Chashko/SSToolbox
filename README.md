@@ -94,7 +94,7 @@
 |**`36`**|•••••|•••••|
 |**`37`**|•••••|•••••|
 |*Quit*|
-|**`0`**|Quit Shell Script Toolkit|Deleting terminal command history and terminal to quit|
+|**`00`**|Quit Shell Script Toolkit|Deleting terminal command history and terminal to quit|
 
 ## Download
 
