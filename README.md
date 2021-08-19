@@ -91,6 +91,7 @@
 |**`33`**|•••••|•••••|
 |**`34`**|•••••|•••••|
 |**`35`**|Show Attachments as Icons in Apple Mail App|•••••|
+|**`36`**|•••••|•••••|
 |*Quit*|
 |**`0`**|Quit Shell Script Toolkit|Deleting terminal command history and terminal to quit|
 
