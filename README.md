@@ -92,7 +92,7 @@
 |**`34`**|•••••|•••••|
 |**`35`**|Show Attachments as Icons in Apple Mail App|•••••|
 |*Quit*|
-|**`0`**|Quit Shell Script Toolkit|Deleting terminal command history and Terminal to quit|
+|**`0`**|Quit Shell Script Toolkit|Deleting terminal command history and terminal to quit|
 
 ## Download
 
