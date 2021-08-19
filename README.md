@@ -86,13 +86,7 @@
 |**`29`**|Traceroute Test IPv4|
 |**`30`**|Traceroute Test IPv6|
 |*XXXXXXXXX*|
-|**`31`**|••••••••••••••••|
-|**`32`**|••••••••••••••••|
-|**`33`**|••••••••••••••••|
-|**`34`**|••••••••••••••••|
-|**`35`**|Show Attachments as Icons in Apple Mail App|
-|**`36`**|••••••••••••••••|
-|**`37`**|••••••••••••••••|
+|**`31`**|Show Attachments as Icons in Apple Mail App|
 |*Quit*|
 |**`00`**|Quit - Note: Deleting terminal command history and terminal to quit|
 
