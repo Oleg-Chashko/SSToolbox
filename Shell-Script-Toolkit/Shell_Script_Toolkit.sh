@@ -106,6 +106,7 @@ showMenu() {
     echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}34${No_Attributes}: ••••••••••••••••                                                                   ${No_Attributes}${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}35${No_Attributes}: Show Attachments as Icons in Apple Mail App                                        ${No_Attributes}${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}36${No_Attributes}: ••••••••••••••••                                                                   ${No_Attributes}${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}37${No_Attributes}: ••••••••••••••••                                                                   ${No_Attributes}${Dim}•${No_Attributes}"
     echo "${Dim}• •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••• •${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Purple} Command ${F_Red}${Bold}00${No_Attributes}: ${Bold}Quit${No_Attributes}${F_Green}${Bold}           Note${No_Attributes}: Deleting terminal command history and terminal to quit        ${Dim}•${No_Attributes}"
     echo "${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
@@ -596,6 +597,15 @@ showAttachmentsAsIcons() {
     continueMessage
 }
 
+# Command 37:
+••••••••••••••••() {
+    terminalWindowSizeMid
+    echo "•${F_Red}${Bold} Command 37: You choose to ••••••••••••••••.${No_Attributes}\n"
+    askPassword
+    ••••••••••••••••
+    continueMessage
+}
+
 # -----------------------------------------------------------------------------------------------------------------
 
 # Main function of the script
@@ -793,6 +803,11 @@ startScript() {
             ;;
 
         36)
+            clear
+            ••••••••••••••••
+            ;;
+
+        37)
             clear
             ••••••••••••••••
             ;;
