@@ -544,38 +544,38 @@ tracerouteTestIPv6() {
 }
 
 # Command 31:
-no() {
+••••••••••••••••() {
     terminalWindowSizeMid
-    echo "•${F_Red}${Bold} Command 31: You choose to .${No_Attributes}\n"
+    echo "•${F_Red}${Bold} Command 31: You choose to ••••••••••••••••.${No_Attributes}\n"
     askPassword
-    +
+    ••••••••••••••••
     continueMessage
 }
 
 # Command 32:
-noo() {
+••••••••••••••••() {
     terminalWindowSizeMid
-    echo "•${F_Red}${Bold} Command 32: You choose to .${No_Attributes}\n"
+    echo "•${F_Red}${Bold} Command 32: You choose to ••••••••••••••••.${No_Attributes}\n"
     askPassword
-    +
+    ••••••••••••••••
     continueMessage
 }
 
 # Command 33:
-nooo() {
+••••••••••••••••() {
     terminalWindowSizeMid
-    echo "•${F_Red}${Bold} Command 33: You choose to .${No_Attributes}\n"
+    echo "•${F_Red}${Bold} Command 33: You choose to ••••••••••••••••.${No_Attributes}\n"
     askPassword
-    +
+    ••••••••••••••••
     continueMessage
 }
 
 # Command 34:
-noooo() {
+••••••••••••••••() {
     terminalWindowSizeMid
-    echo "•${F_Red}${Bold} Command 34: You choose to .${No_Attributes}\n"
+    echo "•${F_Red}${Bold} Command 34: You choose to ••••••••••••••••.${No_Attributes}\n"
     askPassword
-    +
+    ••••••••••••••••
     continueMessage
 }
 
@@ -584,6 +584,15 @@ showAttachmentsAsIcons() {
     terminalWindowSizeMid
     echo "•${F_Red}${Bold} Command 35: You choose to Show Attachments as Icons in Apple Mail App.${No_Attributes}\n"
     defaults write com.apple.mail DisableInlineAttachmentViewing -bool yes
+    continueMessage
+}
+
+# Command 36:
+••••••••••••••••() {
+    terminalWindowSizeMid
+    echo "•${F_Red}${Bold} Command 36: You choose to ••••••••••••••••.${No_Attributes}\n"
+    askPassword
+    ••••••••••••••••
     continueMessage
 }
 
@@ -760,27 +769,32 @@ startScript() {
 
         31)
             clear
-            +
+            ••••••••••••••••
             ;;
 
         32)
             clear
-            +
+            ••••••••••••••••
             ;;
 
         33)
             clear
-            +
+            ••••••••••••••••
             ;;
 
         34)
             clear
-            +
+            ••••••••••••••••
             ;;
 
         35)
             clear
             showAttachmentsAsIcons
+            ;;
+
+        36)
+            clear
+            ••••••••••••••••
             ;;
 
         00)
