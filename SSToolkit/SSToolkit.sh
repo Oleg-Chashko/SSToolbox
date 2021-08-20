@@ -111,12 +111,12 @@ terminalWindowSizeNarrow() {
 
 # Terminal window size Broad- minimize window, move to top/left corner, resize, wait a few seconds, bring to front and then restore window
 terminalWindowSizeMid() {
-    printf '\e[2t' && printf '\033[3;0;0t' && printf '\033[8;48;140t' && sleep 1 && printf '\e[5t' && printf '\e[1t'
+    printf '\e[2t' && printf '\033[3;0;0t' && printf '\033[8;37;140t' && sleep 1 && printf '\e[5t' && printf '\e[1t'
 }
 
 # Terminal window size Broad- minimize window, move to top/left corner, resize, wait a few seconds, bring to front and then restore window
 terminalWindowSizeBroad() {
-    printf '\e[2t' && printf '\033[3;0;0t' && printf '\033[8;48;190t' && sleep 1 && printf '\e[5t' && printf '\e[1t'
+    printf '\e[2t' && printf '\033[3;0;0t' && printf '\033[8;37;190t' && sleep 1 && printf '\e[5t' && printf '\e[1t'
 }
 
 # Shows continue message
