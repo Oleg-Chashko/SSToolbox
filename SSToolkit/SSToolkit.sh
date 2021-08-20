@@ -56,7 +56,7 @@ No_Attributes='\033[0m'
 
 # Menu
 showMenu() {
-    echo "\n                                  ${F_Blue}${Bold}Welcome to Shell Script Toolkit${No_Attributes}"
+    echo "\n                                  ${F_Blue}${Bold}Welcome to SSToolkit${No_Attributes}"
     echo "                                     ${Dim}${RELEASE_VERSION}${No_Attributes}"
     echo "                                  ${Dim}${GITHUB_URL}${No_Attributes}"
     echo "                     ${Dim}• ${F_Red}${Bold}Xcode${No_Attributes}${Dim} ••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
@@ -167,8 +167,8 @@ uninstallingXCLT() {
 
 # -----------------------------------------------------------------------------------------------------------------
 
-# Command 0: Quit Shell Script Toolkit
-quitShellScriptToolkit() {
+# Command 0: Quit SSToolkit
+quitSSToolkit() {
     # Deleting macOS terminal command history and Terminal to quit
     echo "•${F_Red}${Bold} Command 0: Deleting macOS terminal command history.${No_Attributes}"
     rm -rf .zsh_sessions
@@ -724,7 +724,7 @@ startScript() {
 
         00)
             clear
-            quitShellScriptToolkit
+            quitSSToolkit
             ;;
 
         *)
