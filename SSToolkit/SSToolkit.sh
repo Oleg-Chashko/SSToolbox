@@ -60,27 +60,27 @@ showMenu() {
     echo "${Dim}•${No_Attributes} ${F_Yellow}Command ${F_Red}${Bold}i${No_Attributes}:  Installing Xcode CLT${Dim} •                    • ${No_Attributes}${F_Yellow}Command ${F_Red}${Bold}u${No_Attributes}:  Uninstalling Xcode CLT ${Dim}•${No_Attributes}"
     echo "${Dim}••••••••••••••••••••••••••••••••••••                    ••••••••••••••••••••••••••••••••••••••${No_Attributes}"
     echo "${Dim}• ··············································································· ${F_Green}${Bold}GateKeeper ${No_Attributes}${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}1${No_Attributes}:  Show GateKeeper Status                                                         ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}1${No_Attributes}:  GateKeeper Status                                                              ${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}2${No_Attributes}:  Enable GateKeeper                                                              ${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}3${No_Attributes}:  Disable GateKeeper, this can lead to potential security and privacy issues     ${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}4${No_Attributes}:  Remove app from GateKeeper quarantine                                          ${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}5${No_Attributes}:  Self-sign the app. Require Xcode or Xcode Command Line Tools                   ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}3${No_Attributes}:  Disable GateKeeper                                                             ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}4${No_Attributes}:  Remove app from quarantine                                                     ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}5${No_Attributes}:  Self-sign the app. Require Xcode or Xcode CLT                                  ${Dim}•${No_Attributes}"
     echo "${Dim}• ·················································································· ${F_Green}${Bold}Network ${No_Attributes}${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}10${No_Attributes}: Flushes local DNS cache, used for problems with loading sites, 404 error       ${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}11${No_Attributes}: Show Firewall information, Block all is enabled or not and etc.                ${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}12${No_Attributes}: Firewall Enable                                                                ${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}13${No_Attributes}: Firewall Disable                                                               ${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}14${No_Attributes}: Block all connections Enable                                                   ${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}15${No_Attributes}: Block all connections Disable                                                  ${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}20${No_Attributes}: Show WiFi information and Scan Wireless Networks                               ${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}23${No_Attributes}: Show WiFi Network Password                                                     ${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}26${No_Attributes}: Ping Test IPv4                                                                 ${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}27${No_Attributes}: Ping Test IPv6                                                                 ${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}29${No_Attributes}: Traceroute Test IPv4                                                           ${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}30${No_Attributes}: Traceroute Test IPv6                                                           ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}20${No_Attributes}: Show WiFi information and Scan Wireless Networks                               ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}11${No_Attributes}: Show Firewall information                                                      ${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}24${No_Attributes}: Show Computer information, Hostname, local Hostname, NetBIOS Name and etc.     ${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}25${No_Attributes}: Setting a new Computer Name, Hostname, local Hostname and NetBIOS Name         ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}12${No_Attributes}: Firewall Enable                                                                ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}13${No_Attributes}: Firewall Disable                                                               ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}14${No_Attributes}: Block all connections Enable                                                   ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}15${No_Attributes}: Block all connections Disable                                                  ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}23${No_Attributes}: Show WiFi Network Password                                                     ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}25${No_Attributes}: Setting default a new Computer Name, Hostname and NetBIOS Name                 ${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}28${No_Attributes}: Search Routers on local Networks, uses the default IP addresses                ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}10${No_Attributes}: Flushes local DNS cache, used for problems with loading sites, 404 error       ${Dim}•${No_Attributes}"
     echo "${Dim}• ··················································································· ${F_Green}${Bold}Tweaks ${No_Attributes}${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}16${No_Attributes}: Show Hidden Files                                                              ${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}17${No_Attributes}: Don't Show Hidden Files                                                        ${Dim}•${No_Attributes}"
@@ -111,12 +111,12 @@ terminalWindowSizeNarrow() {
 
 # Terminal window size Broad- minimize window, move to top/left corner, resize, wait a few seconds, bring to front and then restore window
 terminalWindowSizeMid() {
-    printf '\e[2t' && printf '\033[3;0;0t' && printf '\033[8;37;140t' && sleep 1 && printf '\e[5t' && printf '\e[1t'
+    printf '\e[2t' && printf '\033[3;0;0t' && printf '\033[8;48;140t' && sleep 1 && printf '\e[5t' && printf '\e[1t'
 }
 
 # Terminal window size Broad- minimize window, move to top/left corner, resize, wait a few seconds, bring to front and then restore window
 terminalWindowSizeBroad() {
-    printf '\e[2t' && printf '\033[3;0;0t' && printf '\033[8;37;190t' && sleep 1 && printf '\e[5t' && printf '\e[1t'
+    printf '\e[2t' && printf '\033[3;0;0t' && printf '\033[8;48;190t' && sleep 1 && printf '\e[5t' && printf '\e[1t'
 }
 
 # Shows continue message
@@ -476,6 +476,11 @@ showAttachmentsAsIcons() {
     continueMessage
 }
 
+# Command About: Project page on GitHub
+aboutGitHub() {
+    open https://github.com/Oleg-Chashko/SSToolkit
+}
+
 # -----------------------------------------------------------------------------------------------------------------
 
 # Main function of the script
@@ -625,6 +630,11 @@ startScript() {
         00)
             clear
             quitSSToolkit
+            ;;
+
+        About)
+            clear
+            aboutGitHub
             ;;
 
         *)
