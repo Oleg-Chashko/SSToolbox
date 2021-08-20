@@ -18,10 +18,10 @@
   <a href="https://github.com/Oleg-Chashko/SSToolkit/releases/latest">
   <img alt="Latest stable release" src="https://img.shields.io/github/release/Oleg-Chashko/SSToolkit.svg?style=flat-square" />
 </a>
-  <a href="https://github.com/Oleg-Chashko/SSToolkit/releases/latest/">
+  <a href="https://github.com/Oleg-Chashko/SSToolkit/releases/latest">
   <img alt="Download count" src="https://img.shields.io/github/downloads/Oleg-Chashko/SSToolkit/total.svg?style=flat-square" />
 </a>
-  <a href="https://github.com/Oleg-Chashko/SSToolkit/commits/master">
+  <a href="https://github.com/Oleg-Chashko/SSToolkit/commits">
   <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/Oleg-Chashko/SSToolkit.svg?style=flat-square" />
 </a>
   <a href="https://github.com/Oleg-Chashko/SSToolkit/issues">
