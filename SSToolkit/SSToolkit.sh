@@ -99,7 +99,7 @@ showMenu() {
     echo "${Dim}• ················································································· ${F_Green}${Bold}XXXXXXXX ${No_Attributes}${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}31${No_Attributes}: Show Attachments as Icons in Apple Mail App                                    ${No_Attributes}${Dim}•${No_Attributes}"
     echo "${Dim}••••••••••••••••••••                                                 •••••••••••••••••••••••••${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Blue} Command ${F_Red}${Bold}00${No_Attributes}: ${Bold}Quit${No_Attributes} ${Dim}•                                                 •${No_Attributes}${F_Blue} Command ${F_Red}${Bold}About${No_Attributes}: ${Bold}GitHub${No_Attributes} ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Yellow} Command ${F_Red}${Bold}00${No_Attributes}: ${Bold}Quit${No_Attributes} ${Dim}•                                                 •${No_Attributes}${F_Yellow} Command ${F_Red}${Bold}About${No_Attributes}: ${Bold}GitHub${No_Attributes} ${Dim}•${No_Attributes}"
     echo "${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
 }
 
