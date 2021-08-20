@@ -1,11 +1,11 @@
 <h1 align="center">
-  <img width="230px" src="https://raw.githubusercontent.com/Oleg-Chashko/Shell-Script-Toolkit/main/Images/Shell_Script_Toolkit.png" alt="Shell Script Toolkit"></a>
+  <img width="230px" src="https://raw.githubusercontent.com/Oleg-Chashko/SSToolkit/main/Images/SSToolkit.png" alt="SSToolkit"></a>
   <br>
-  Shell Script Toolkit
+  SSToolkit
   <br>
 </h1>
 
-<h4 align="center">Shell Script Toolkit is a toolkit for managing your Mac. <br> It provides a set of command line commands that automate the use of your system.</h4>
+<h4 align="center">SSToolkit is a toolkit for managing your Mac. <br> It provides a set of command line commands that automate the use of your system.</h4>
 
 <p align="center">
   <a href="https://github.com/Oleg-Chashko/">Website</a> |
@@ -15,30 +15,30 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/Oleg-Chashko/Shell-Script-Toolkit/releases/latest">
-  <img alt="Latest stable release" src="https://img.shields.io/github/release/Oleg-Chashko/Shell-Script-Toolkit.svg?style=flat-square" />
+  <a href="https://github.com/Oleg-Chashko/SSToolkit/releases/latest">
+  <img alt="Latest stable release" src="https://img.shields.io/github/release/Oleg-Chashko/SSToolkit.svg?style=flat-square" />
 </a>
-  <a href="https://github.com/Oleg-Chashko/Shell-Script-Toolkit/releases/latest/">
-  <img alt="Download count" src="https://img.shields.io/github/downloads/Oleg-Chashko/Shell-Script-Toolkit/total.svg?style=flat-square" />
+  <a href="https://github.com/Oleg-Chashko/SSToolkit/releases/latest/">
+  <img alt="Download count" src="https://img.shields.io/github/downloads/Oleg-Chashko/SSToolkit/total.svg?style=flat-square" />
 </a>
-  <a href="https://github.com/Oleg-Chashko/Shell-Script-Toolkit/commits/master">
-  <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/Oleg-Chashko/Shell-Script-Toolkit.svg?style=flat-square" />
+  <a href="https://github.com/Oleg-Chashko/SSToolkit/commits/master">
+  <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/Oleg-Chashko/SSToolkit.svg?style=flat-square" />
 </a>
-  <a href="https://github.com/Oleg-Chashko/Shell-Script-Toolkit/issues">
-  <img alt="GitHub issues" src="https://img.shields.io/github/issues-raw/Oleg-Chashko/Shell-Script-Toolkit.svg?style=flat-square" />
+  <a href="https://github.com/Oleg-Chashko/SSToolkit/issues">
+  <img alt="GitHub issues" src="https://img.shields.io/github/issues-raw/Oleg-Chashko/SSToolkit.svg?style=flat-square" />
 </a>
-  <a href="https://github.com/Oleg-Chashko/Shell-Script-Toolkit/stargazers">
-  <img alt="Stars" src="https://img.shields.io/github/stars/Oleg-Chashko/Shell-Script-Toolkit.svg?style=flat-square" />
+  <a href="https://github.com/Oleg-Chashko/SSToolkit/stargazers">
+  <img alt="Stars" src="https://img.shields.io/github/stars/Oleg-Chashko/SSToolkit.svg?style=flat-square" />
 </a>
-  <a href="https://github.com/Oleg-Chashko/Shell-Script-Toolkit/network/members">
-  <img alt="Forks" src="https://img.shields.io/github/forks/Oleg-Chashko/Shell-Script-Toolkit.svg?style=flat-square" />
+  <a href="https://github.com/Oleg-Chashko/SSToolkit/network/members">
+  <img alt="Forks" src="https://img.shields.io/github/forks/Oleg-Chashko/SSToolkit.svg?style=flat-square" />
 </a>
 </p>
 
 ## Preview
 
 <p align="center">
-  <img width="900px" src="https://raw.githubusercontent.com/Oleg-Chashko/Shell-Script-Toolkit/main/Images/Preview_Shell_Script_Toolkit.png" />
+  <img width="900px" src="https://raw.githubusercontent.com/Oleg-Chashko/SSToolkit/main/Images/Preview_SSToolkit.png" />
 </p>
 
 ## Commands List
@@ -88,11 +88,13 @@
 |*XXXXXXXXX*|
 |**`31`**|Show Attachments as Icons in Apple Mail App|
 |*Quit*|
-|**`00`**|Quit - Note: Deleting terminal command history and terminal to quit|
+|**`00`**|Deleting terminal command history and terminal to quit|
+|*About*|
+|**`About`**|Project page on GitHub|
 
 ## Download
 
-- (Latest stable release) [Download](https://github.com/Oleg-Chashko/Shell-Script-Toolkit/releases)
+- (Latest stable release) [Download](https://github.com/Oleg-Chashko/SSToolkit/releases)
 
 ## Note
 
@@ -118,7 +120,7 @@
 #### Terminal error: "zsh: permission denied"
 
 <p align="center">
-  <img width="820px" src="https://raw.githubusercontent.com/Oleg-Chashko/Shell-Script-Toolkit/main/Images/zsh_Permission_denied.png" />
+  <img width="820px" src="https://raw.githubusercontent.com/Oleg-Chashko/SSToolkit/main/Images/zsh_Permission_denied.png" />
 </p>
 
 #### Give permission for this script to run:
@@ -128,7 +130,7 @@
    <br><br>
 
 <p align="center">
-  <img width="690px" src="https://raw.githubusercontent.com/Oleg-Chashko/Shell-Script-Toolkit/main/Images/Terminal_chmod_u+x.gif" />
+  <img width="690px" src="https://raw.githubusercontent.com/Oleg-Chashko/SSToolkit/main/Images/Terminal_chmod_u+x.gif" />
 </p>
 <br>
 
@@ -139,7 +141,7 @@
    <br><br>
 
 <p align="center">
-  <img width="690px" src="https://raw.githubusercontent.com/Oleg-Chashko/Shell-Script-Toolkit/main/Images/Running_script_1.gif" />
+  <img width="690px" src="https://raw.githubusercontent.com/Oleg-Chashko/SSToolkit/main/Images/Running_script_1.gif" />
 </p>
 <br>
 
