@@ -5,7 +5,7 @@
   <br>
 </h1>
 
-<h4 align="center">SSToolkit is a toolkit for managing your Mac. <br> It provides a set of command line commands that automate the use of your system.</h4>
+<h4 align="center">SSToolkit is a toolkit for managing your Mac.</h4>
 
 <p align="center">
   <a href="https://github.com/Oleg-Chashko/">Website</a> |
