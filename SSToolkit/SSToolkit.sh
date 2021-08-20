@@ -1,8 +1,7 @@
 #!/bin/zsh
 
 # Attribute
-GITHUB_URL="https://github.com/Oleg-Chashko"
-RELEASE_VERSION="v.0.1.2 build [08.19.2021]"
+RELEASE_VERSION="v.0.2.0 build [08.20.2021]"
 ROOT_PASSWORD=0
 
 # Foreground
@@ -56,54 +55,52 @@ No_Attributes='\033[0m'
 
 # Menu
 showMenu() {
-    echo "\n                                  ${F_Blue}${Bold}Welcome to SSToolkit${No_Attributes}"
-    echo "                                     ${Dim}${RELEASE_VERSION}${No_Attributes}"
-    echo "                                  ${Dim}${GITHUB_URL}${No_Attributes}"
-    echo "                     ${Dim}• ${F_Red}${Bold}Xcode${No_Attributes}${Dim} ••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
-    echo "                     ${Dim}•${No_Attributes} ${F_Cyan}Command ${F_Red}${Bold}i${No_Attributes}: Installing the Xcode Command Line Tools   ${Dim}•${No_Attributes}"
-    echo "                     ${Dim}•${No_Attributes} ${F_Cyan}Command ${F_Red}${Bold}u${No_Attributes}: Uninstalling the Xcode Command Line Tools ${Dim}•${No_Attributes}"
-    echo "${Dim}• ${F_Green}${Bold}GateKeeper${No_Attributes}${Dim} •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}1${No_Attributes}:  Show GateKeeper Status                                                             ${No_Attributes}${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}2${No_Attributes}:  Enable GateKeeper                                                                  ${No_Attributes}${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}3${No_Attributes}:  Disable GateKeeper, this can lead to potential security and privacy issues         ${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}4${No_Attributes}:  Remove app from GateKeeper quarantine                                              ${No_Attributes}${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}5${No_Attributes}:  Self-sign the app. Require Xcode or Xcode Command Line Tools                       ${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}6${No_Attributes}:  List apps from unknown sources you’ve approved for use                             ${No_Attributes}${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}7${No_Attributes}:  Restoring the Default GateKeeper Database                                          ${No_Attributes}${Dim}•${No_Attributes}"
-    echo "${Dim}• ${F_Green}${Bold}Restart and Shutdown${No_Attributes}${Dim} ·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-· •${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}8${No_Attributes}:  Restart macOS                                                                      ${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}9${No_Attributes}:  Shutdown macOS                                                                     ${Dim}•${No_Attributes}"
-    echo "${Dim}• ${F_Green}${Bold}DNS and Firewall${No_Attributes}${Dim} ·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-· •${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}10${No_Attributes}: Flushes local DNS cache, used for problems with loading sites, 404 error           ${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}11${No_Attributes}: Show Firewall information, Block all is enabled or not, List applications and etc. ${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}12${No_Attributes}: Firewall Enable                                                                    ${No_Attributes}${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}13${No_Attributes}: Firewall Disable                                                                   ${No_Attributes}${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}14${No_Attributes}: Block all connections Enable                                                       ${No_Attributes}${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}15${No_Attributes}: Block all connections Disable                                                      ${No_Attributes}${Dim}•${No_Attributes}"
-    echo "${Dim}• ${F_Green}${Bold}Hidden Files and Extensions${No_Attributes}${Dim} -·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-· •${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}16${No_Attributes}: Show Hidden Files                                                                  ${No_Attributes}${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}17${No_Attributes}: Don't Show Hidden Files                                                            ${No_Attributes}${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}18${No_Attributes}: Show all File Extensions                                                           ${No_Attributes}${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}19${No_Attributes}: Don't Show all File Extensions                                                     ${No_Attributes}${Dim}•${No_Attributes}"
-    echo "${Dim}• ${F_Green}${Bold}WiFi${No_Attributes}${Dim} ·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-· •${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}20${No_Attributes}: Show WiFi information and Scan Wireless Networks                                   ${No_Attributes}${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}21${No_Attributes}: Enable WiFi                                                                        ${No_Attributes}${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}22${No_Attributes}: Disable WiFi                                                                       ${No_Attributes}${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}23${No_Attributes}: Show WiFi Network Password                                                         ${No_Attributes}${Dim}•${No_Attributes}"
-    echo "${Dim}• ${F_Green}${Bold}Hostname${No_Attributes}${Dim} ·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-· •${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}24${No_Attributes}: Show Computer information, Name, Hostname, local Hostname, NetBIOS Name and etc.   ${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}25${No_Attributes}: Setting a new Computer Name, Hostname, local Hostname and NetBIOS Name             ${Dim}•${No_Attributes}"
-    echo "${Dim}• ${F_Green}${Bold}Ping, Traceroute and Finding Routers${No_Attributes}${Dim} ·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-· •${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}26${No_Attributes}: Ping Test IPv4                                                                     ${No_Attributes}${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}27${No_Attributes}: Ping Test IPv6                                                                     ${No_Attributes}${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}28${No_Attributes}: Searching for Routers on local Networks, uses the default IP addresses for routers ${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}29${No_Attributes}: Traceroute Test IPv4                                                               ${No_Attributes}${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}30${No_Attributes}: Traceroute Test IPv6                                                               ${No_Attributes}${Dim}•${No_Attributes}"
-    echo "${Dim}• ${F_Green}${Bold}XXXXXXXX${No_Attributes}${Dim} ·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-·-· •${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}31${No_Attributes}: Show Attachments as Icons in Apple Mail App                                        ${No_Attributes}${Dim}•${No_Attributes}"
-    echo "${Dim}• •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••• •${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Purple} Command ${F_Red}${Bold}00${No_Attributes}: ${Bold}Quit${No_Attributes}${F_Green}${Bold}           Note${No_Attributes}: Deleting terminal command history and terminal to quit        ${Dim}•${No_Attributes}"
-    echo "${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
+    echo "                             ${Dim}${Bold}SSToolkit${No_Attributes} ${Dim}${RELEASE_VERSION}${No_Attributes}"
+    echo "${Dim}• ${F_Green}${Bold}Warning${No_Attributes}${Dim} ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
+    echo "${Dim}•${No_Attributes} ${F_Yellow}Command ${F_Red}${Bold}i${No_Attributes}:  Installing Xcode CLT${Dim} •                    • ${No_Attributes}${F_Yellow}Command ${F_Red}${Bold}u${No_Attributes}:  Uninstalling Xcode CLT ${Dim}•${No_Attributes}"
+    echo "${Dim}••••••••••••••••••••••••••••••••••••                    ••••••••••••••••••••••••••••••••••••••${No_Attributes}"
+    echo "${Dim}• ··············································································· ${F_Green}${Bold}GateKeeper ${No_Attributes}${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}1${No_Attributes}:  Show GateKeeper Status                                                         ${No_Attributes}${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}2${No_Attributes}:  Enable GateKeeper                                                              ${No_Attributes}${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}3${No_Attributes}:  Disable GateKeeper, this can lead to potential security and privacy issues     ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}4${No_Attributes}:  Remove app from GateKeeper quarantine                                          ${No_Attributes}${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}5${No_Attributes}:  Self-sign the app. Require Xcode or Xcode Command Line Tools                   ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}6${No_Attributes}:  List apps from unknown sources you’ve approved for use                         ${No_Attributes}${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}7${No_Attributes}:  Restoring the Default GateKeeper Database                                      ${No_Attributes}${Dim}•${No_Attributes}"
+    echo "${Dim}• ····································································· ${F_Green}${Bold}Restart and Shutdown ${No_Attributes}${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}8${No_Attributes}:  Restart macOS                                                                  ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}9${No_Attributes}:  Shutdown macOS                                                                 ${Dim}•${No_Attributes}"
+    echo "${Dim}• ········································································· ${F_Green}${Bold}DNS and Firewall ${No_Attributes}${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}10${No_Attributes}: Flushes local DNS cache, used for problems with loading sites, 404 error       ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}11${No_Attributes}: Show Firewall information, Block all is enabled or not and etc.                ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}12${No_Attributes}: Firewall Enable                                                                ${No_Attributes}${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}13${No_Attributes}: Firewall Disable                                                               ${No_Attributes}${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}14${No_Attributes}: Block all connections Enable                                                   ${No_Attributes}${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}15${No_Attributes}: Block all connections Disable                                                  ${No_Attributes}${Dim}•${No_Attributes}"
+    echo "${Dim}• ······························································ ${F_Green}${Bold}Hidden Files and Extensions ${No_Attributes}${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}16${No_Attributes}: Show Hidden Files                                                              ${No_Attributes}${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}17${No_Attributes}: Don't Show Hidden Files                                                        ${No_Attributes}${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}18${No_Attributes}: Show all File Extensions                                                       ${No_Attributes}${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}19${No_Attributes}: Don't Show all File Extensions                                                 ${No_Attributes}${Dim}•${No_Attributes}"
+    echo "${Dim}• ····················································································· ${F_Green}${Bold}WiFi ${No_Attributes}${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}20${No_Attributes}: Show WiFi information and Scan Wireless Networks                               ${No_Attributes}${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}21${No_Attributes}: Enable WiFi                                                                    ${No_Attributes}${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}22${No_Attributes}: Disable WiFi                                                                   ${No_Attributes}${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}23${No_Attributes}: Show WiFi Network Password                                                     ${No_Attributes}${Dim}•${No_Attributes}"
+    echo "${Dim}• ················································································· ${F_Green}${Bold}Hostname ${No_Attributes}${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}24${No_Attributes}: Show Computer information, Hostname, local Hostname, NetBIOS Name and etc.     ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}25${No_Attributes}: Setting a new Computer Name, Hostname, local Hostname and NetBIOS Name         ${Dim}•${No_Attributes}"
+    echo "${Dim}• ······················································ ${F_Green}${Bold}Ping, Traceroute and Search Routers ${No_Attributes}${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}26${No_Attributes}: Ping Test IPv4                                                                 ${No_Attributes}${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}27${No_Attributes}: Ping Test IPv6                                                                 ${No_Attributes}${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}28${No_Attributes}: Search Routers on local Networks, uses the default IP addresses                ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}29${No_Attributes}: Traceroute Test IPv4                                                           ${No_Attributes}${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}30${No_Attributes}: Traceroute Test IPv6                                                           ${No_Attributes}${Dim}•${No_Attributes}"
+    echo "${Dim}• ················································································· ${F_Green}${Bold}XXXXXXXX ${No_Attributes}${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}31${No_Attributes}: Show Attachments as Icons in Apple Mail App                                    ${No_Attributes}${Dim}•${No_Attributes}"
+    echo "${Dim}••••••••••••••••••••                                                 •••••••••••••••••••••••••${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Blue} Command ${F_Red}${Bold}00${No_Attributes}: ${Bold}Quit${No_Attributes} ${Dim}•                                                 •${No_Attributes}${F_Blue} Command ${F_Red}${Bold}About${No_Attributes}: ${Bold}GitHub${No_Attributes} ${Dim}•${No_Attributes}"
+    echo "${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
 }
 
 # -----------------------------------------------------------------------------------------------------------------
@@ -120,12 +117,12 @@ askPassword() {
 
 # Terminal window size Narrow- minimize window, move to top/left corner, resize, wait a few seconds, bring to front and then restore window
 terminalWindowSizeNarrow() {
-    printf '\e[2t' && printf '\033[3;0;0t' && printf '\033[8;37;98t' && sleep 1 && printf '\e[5t' && printf '\e[1t'
+    printf '\e[2t' && printf '\033[3;0;0t' && printf '\033[8;37;94t' && sleep 1 && printf '\e[5t' && printf '\e[1t'
 }
 
 # Terminal window size Broad- minimize window, move to top/left corner, resize, wait a few seconds, bring to front and then restore window
 terminalWindowSizeMid() {
-    printf '\e[2t' && printf '\033[3;0;0t' && printf '\033[8;37;130t' && sleep 1 && printf '\e[5t' && printf '\e[1t'
+    printf '\e[2t' && printf '\033[3;0;0t' && printf '\033[8;37;140t' && sleep 1 && printf '\e[5t' && printf '\e[1t'
 }
 
 # Terminal window size Broad- minimize window, move to top/left corner, resize, wait a few seconds, bring to front and then restore window
