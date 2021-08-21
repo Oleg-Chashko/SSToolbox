@@ -105,25 +105,29 @@ askPassword() {
     esac
 }
 
+# -----------------------------------------------------------------------------------------------------------------
+
 # Terminal window size Menu- move to top/left corner and resize
 terminalWindowSizeMenu() {
     printf '\033[3;0;0t'
     printf '\033[8;37;94t'
 }
 
-# Terminal window size Broad- move to top/left corner and resize
-terminalWindowSizeMid() {
+# Terminal window size 55x140- move to top/left corner and resize
+terminalWindowSize55x140() {
     printf '\033[3;0;0t'
     printf '\033[8;55;140t'
     clear
 }
 
-# Terminal window size Broad- move to top/left corner and resize
-terminalWindowSizeBroad() {
+# Terminal window size 55x190- move to top/left corner and resize
+terminalWindowSize55x190() {
     printf '\033[3;0;0t'
     printf '\033[8;55;190t'
     clear
 }
+
+# -----------------------------------------------------------------------------------------------------------------
 
 # Shows continue message
 continueMessage() {
@@ -141,7 +145,7 @@ showInvalid() {
 
 # Command i: Installing the Xcode Command Line Tools
 installingXCLT() {
-    terminalWindowSizeMid
+    terminalWindowSize55x140
     echo "•${F_Red}${Bold} Command i: You choose to Install the Xcode Command Line Tools.${No_Attributes}\n"
     xcode-select --install
     continueMessage
@@ -149,7 +153,7 @@ installingXCLT() {
 
 # Command u: Uninstalling the Xcode Command Line Tools
 uninstallingXCLT() {
-    terminalWindowSizeMid
+    terminalWindowSize55x140
     echo "•${F_Red}${Bold} Command u: You choose to Uninstall the Xcode Command Line Tools.${No_Attributes}\n"
     askPassword
     sudo rm -rf /Library/Developer/CommandLineTools
@@ -173,7 +177,7 @@ quitSSToolkit() {
 
 # Command 1: Show GateKeeper Status
 showGateKeeperStatus() {
-    terminalWindowSizeMid
+    terminalWindowSize55x140
     echo "•${F_Red}${Bold} Command 1: You choose to show GateKeeper status.${No_Attributes}\n"
     spctl --status
     continueMessage
@@ -181,7 +185,7 @@ showGateKeeperStatus() {
 
 # Command 2: Enable GateKeeper
 enableGateKeeper() {
-    terminalWindowSizeMid
+    terminalWindowSize55x140
     echo "•${F_Red}${Bold} Command 2: You chose to enable GateKeeper.${No_Attributes}"
     askPassword
     sudo spctl --master-enable
@@ -191,7 +195,7 @@ enableGateKeeper() {
 
 # Command 3: Disable GateKeeper
 disableGateKeeper() {
-    terminalWindowSizeMid
+    terminalWindowSize55x140
     echo "•${F_Red}${Bold} Command 3: You chose to disable GateKeeper.${No_Attributes}"
     askPassword
     sudo spctl --master-disable
@@ -201,7 +205,7 @@ disableGateKeeper() {
 
 # Command 4: Remove app from GateKeeper quarantine
 removeAppFromGateKeeper() {
-    terminalWindowSizeMid
+    terminalWindowSize55x140
     echo "•${F_Red}${Bold} Command 4: You chose to remove the app from GateKeeper quarantine.${No_Attributes}\n"
     read "? Drag & drop the app on this window and then press Return: " FILEPATH
     askPassword
@@ -216,7 +220,7 @@ removeAppFromGateKeeper() {
 
 # Command 5: Self-sign the app
 selfSignApp() {
-    terminalWindowSizeMid
+    terminalWindowSize55x140
     echo "•${F_Red}${Bold} Command 5: You chose to self-sign an app.${No_Attributes}\n"
     read "? Drag & drop the app on this window and then press Return: " FILEPATH
     askPassword
@@ -227,7 +231,7 @@ selfSignApp() {
 
 # Command 10: Flush DNS cache
 flushesLocalDNS() {
-    terminalWindowSizeMid
+    terminalWindowSize55x140
     echo "•${F_Red}${Bold} Command 10: Flushing dns...${No_Attributes}"
     askPassword
     sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder
@@ -237,7 +241,7 @@ flushesLocalDNS() {
 
 # Command 11: Show Firewall information
 showFirewallInformation() {
-    terminalWindowSizeMid
+    terminalWindowSize55x140
     echo "•${F_Red}${Bold} Command 11:${No_Attributes}"
     echo "•${F_Red} Show firewall information.${No_Attributes}\n"
     /usr/libexec/ApplicationFirewall/socketfilterfw --getglobalstate
@@ -250,7 +254,7 @@ showFirewallInformation() {
 
 # Command 12: Firewall Enable
 enableFirewall() {
-    terminalWindowSizeMid
+    terminalWindowSize55x140
     echo "•${F_Red}${Bold} Command 12: You choose to Enable firewall.${No_Attributes}\n"
     askPassword
     sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setglobalstate on
@@ -259,7 +263,7 @@ enableFirewall() {
 
 # Command 13: Firewall Disable
 disableFirewall() {
-    terminalWindowSizeMid
+    terminalWindowSize55x140
     echo "•${F_Red}${Bold} Command 13: You choose to Disable firewall.${No_Attributes}\n"
     askPassword
     sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setglobalstate off
@@ -268,7 +272,7 @@ disableFirewall() {
 
 # Command 14: Block all connections Enable
 blockAllEnable() {
-    terminalWindowSizeMid
+    terminalWindowSize55x140
     echo "•${F_Red}${Bold} Command 14: You choose to Enables Block all connections.${No_Attributes}\n"
     askPassword
     sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setblockall on
@@ -277,7 +281,7 @@ blockAllEnable() {
 
 # Command 15: Block all connections Disable
 blockAllDisable() {
-    terminalWindowSizeMid
+    terminalWindowSize55x140
     echo "•${F_Red}${Bold} Command 15: You choose to Disables Block all connections.${No_Attributes}\n"
     askPassword
     sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setblockall off
@@ -286,7 +290,7 @@ blockAllDisable() {
 
 # Command 16: Show Hidden Files
 showHiddenFiles() {
-    terminalWindowSizeMid
+    terminalWindowSize55x140
     echo "•${F_Red}${Bold} Command 16: You choose to show hidden files.${No_Attributes}"
     defaults write com.apple.finder AppleShowAllFiles true && killall Finder
     continueMessage
@@ -294,7 +298,7 @@ showHiddenFiles() {
 
 # Command 17: Don't Show Hidden Files
 noShowHiddenFiles() {
-    terminalWindowSizeMid
+    terminalWindowSize55x140
     echo "•${F_Red}${Bold} Command 17: You choose to don't show hidden files.${No_Attributes}"
     defaults write com.apple.finder AppleShowAllFiles false && killall Finder
     continueMessage
@@ -302,7 +306,7 @@ noShowHiddenFiles() {
 
 # Command 18: Show all File Extensions
 showExtensionsFiles() {
-    terminalWindowSizeMid
+    terminalWindowSize55x140
     echo "•${F_Red}${Bold} Command 18: You choose to show all file extensions.${No_Attributes}"
     defaults write NSGlobalDomain AppleShowAllExtensions true && killall Finder
     continueMessage
@@ -310,7 +314,7 @@ showExtensionsFiles() {
 
 # Command 19: Don't Show all File Extensions
 noShowExtensionsFiles() {
-    terminalWindowSizeMid
+    terminalWindowSize55x140
     echo "•${F_Red}${Bold} Command 19: You choose to don't show all file extensions.${No_Attributes}"
     defaults write NSGlobalDomain AppleShowAllExtensions false && killall Finder
     continueMessage
@@ -318,7 +322,7 @@ noShowExtensionsFiles() {
 
 # Command 20: Show WiFi information and Scan Wireless Networks
 showWiFiInformationAndScanWirelessNetworks() {
-    terminalWindowSizeMid
+    terminalWindowSize55x140
     echo "•${F_Red}${Bold} Command 20: Show WiFi information and Scan Wireless Networks.${No_Attributes}"
     echo "•${F_Red} WiFi information.${No_Attributes}\n"
     /System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport -I
@@ -329,7 +333,7 @@ showWiFiInformationAndScanWirelessNetworks() {
 
 # Command 23: Show WiFi Network Password
 wifiShowPassword() {
-    terminalWindowSizeMid
+    terminalWindowSize55x140
     echo "•${F_Red}${Bold} Command 23: You choose to WiFi Network Password.${No_Attributes}\n"
     echo "•${F_Red} Please provide your Login and Password to proceed.${No_Attributes}\n"
     sleep 2
@@ -344,7 +348,7 @@ wifiShowPassword() {
 
 # Command 24: Show Hostname information
 showHostnameInformation() {
-    terminalWindowSizeMid
+    terminalWindowSize55x140
     echo "•${F_Red}${Bold} Command 24: You choose to get the current Hostname information.${No_Attributes}\n"
     networksetup -listnetworkserviceorder | grep en0 | awk '{print "Network device: " $1, $2, $3, $4, $5}'
     ipconfig getifaddr en0 | awk '{print "IP address: " $1}'
@@ -362,7 +366,7 @@ showHostnameInformation() {
 
 # Command 25: Setting a new Hostname and getting information about the New current Hostname
 settingHostnameAndInformationAboutTheNewCurrentHostname() {
-    terminalWindowSizeMid
+    terminalWindowSize55x140
     echo "•${F_Red}${Bold} Command 25: You choose to Setting a new Hostname.${No_Attributes}"
     askPassword
     # gets named
@@ -385,7 +389,7 @@ settingHostnameAndInformationAboutTheNewCurrentHostname() {
 
 # Command 26: Ping Test IPv4
 netPingTestIPv4() {
-    terminalWindowSizeMid
+    terminalWindowSize55x140
     echo "•${F_Red}${Bold} Command 26: You choose to net Ping test IPv4.${No_Attributes}"
     declare -a arr=("Google.com" "Youtube.com" "Facebook.com" "Spotify.com" "8.8.8.8" "8.8.4.4")
     echo "\n${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
@@ -402,7 +406,7 @@ netPingTestIPv4() {
 
 # Command 27: Ping Test IPv6
 netPingTestIPv6() {
-    terminalWindowSizeMid
+    terminalWindowSize55x140
     echo "•${F_Red}${Bold} Command 27: You choose to net Ping test IPv6.${No_Attributes}"
     declare -a arr=("Google.com" "Youtube.com" "Facebook.com" "Spotify.com" "2001:4860:4860::8888" "2001:4860:4860::8844")
     echo "\n${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
@@ -419,7 +423,7 @@ netPingTestIPv6() {
 
 # Command 28: Finding Routers on Local Networks
 findingRoutersOnLocalNetworks() {
-    terminalWindowSizeMid
+    terminalWindowSize55x140
     echo "•${F_Red}${Bold} Command 28 You choose to Finding Routers on Local Networks.${No_Attributes}"
     declare -a arr=("10.0.0.1" "10.0.0.2" "10.0.0.138" "10.0.1.1" "10.1.1.1" "10.1.10.1" "10.10.1.1" "10.90.90.90" "192.168.0.1" "192.168.0.3" "192.168.0.10" "192.168.0.30" "192.168.0.50" "192.168.0.100" "192.168.0.101" "192.168.0.227" "192.168.0.254" "192.168.1.1" "192.168.1.10" "192.168.1.99" "192.168.1.100" "192.168.1.200" "192.168.1.210" "192.168.1.254" "192.168.2.1" "192.168.2.254" "192.168.3.1" "192.168.4.1" "192.168.8.1" "192.168.10.1" "192.168.10.10" "192.168.10.50" "192.168.10.100" "192.168.11.1" "192.168.15.1" "192.168.16.1" "192.168.20.1" "192.168.30.1" "192.168.50.1" "192.168.55.1" "192.168.62.1" "192.168.100.1" "192.168.100.100" "192.168.102.1" "192.168.123.254" "192.168.168.168" "192.168.223.100" "192.168.251.1" "192.168.254.254" "200.200.200.5")
     echo "\n${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
@@ -436,7 +440,7 @@ findingRoutersOnLocalNetworks() {
 
 # Command 29: Traceroute Test IPv4
 tracerouteTestIPv4() {
-    terminalWindowSizeMid
+    terminalWindowSize55x140
     echo "•${F_Red}${Bold} Command 29: You choose to Traceroute test IPv4.${No_Attributes}\n"
     echo "•${F_Red} Testing...\n${No_Attributes}"
     traceroute Google.com
@@ -456,7 +460,7 @@ tracerouteTestIPv4() {
 
 # Command 30: Traceroute Test IPv6
 tracerouteTestIPv6() {
-    terminalWindowSizeMid
+    terminalWindowSize55x140
     echo "•${F_Red}${Bold} Command 30: You choose to Traceroute test IPv6.${No_Attributes}\n"
     echo "•${F_Red} Testing...\n${No_Attributes}"
     traceroute6 Google.com
@@ -476,7 +480,7 @@ tracerouteTestIPv6() {
 
 # Command 31:
 showAttachmentsAsIcons() {
-    terminalWindowSizeMid
+    terminalWindowSize55x140
     echo "•${F_Red}${Bold} Command 31: You choose to Show Attachments as Icons in Apple Mail App.${No_Attributes}\n"
     defaults write com.apple.mail DisableInlineAttachmentViewing -bool yes
     continueMessage
