@@ -55,7 +55,7 @@ No_Attributes='\033[0m'
 
 # Menu
 showMenu() {
-    terminalWindowSizeNarrow
+    terminalWindowSizeMenu
     echo "                             ${Dim}${Bold}SSToolkit${No_Attributes} ${Dim}${RELEASE_VERSION}${No_Attributes}"
     echo "${Dim}• ${F_Green}${Bold}Warning${No_Attributes}${Dim} ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
     echo "${Dim}•${No_Attributes} ${F_Yellow}Command ${F_Red}${Bold}i${No_Attributes}:  Installing Xcode CLT${Dim} •                    • ${No_Attributes}${F_Yellow}Command ${F_Red}${Bold}u${No_Attributes}:  Uninstalling Xcode CLT ${Dim}•${No_Attributes}"
@@ -105,13 +105,8 @@ askPassword() {
     esac
 }
 
-# Terminal window size Narrow- minimize window, move to top/left corner, resize, wait a few seconds, bring to front and then restore window
-terminalWindowSizeNarrow() {
-    printf '\e[2t' && printf '\033[3;0;0t' && printf '\033[8;37;94t' && sleep 1 && printf '\e[5t' && printf '\e[1t'
-}
-
-# Terminal window size Narrow- move to top/left corner and resize
-terminalWindowSizeNarrow() {
+# Terminal window size Menu- move to top/left corner and resize
+terminalWindowSizeMenu() {
     printf '\033[3;0;0t'
     printf '\033[8;37;94t'
 }
