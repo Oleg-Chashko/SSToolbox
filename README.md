@@ -131,7 +131,7 @@
    <br><br>
 
 <p align="center">
-  <img width="690px" src="https://raw.githubusercontent.com/Oleg-Chashko/SSToolkit/main/Images/Running_script_1.gif" />
+  <img width="690px" src="https://raw.githubusercontent.com/Oleg-Chashko/SSToolkit/main/Images/Running_SSToolkit.gif" />
 </p>
 <br>
 
