@@ -46,47 +46,37 @@
 |Command|Description|
 |:----------:|----------|
 |*Xcode*|
-|**`i`**|Installing the Xcode Command Line Tools|
-|**`u`**|Uninstalling the Xcode Command Line Tools|
+|**`i`**|Installing the Xcode CLT (Command Line Tools)|
+|**`u`**|Uninstalling the Xcode CLT (Command Line Tools)|
+|*Network*|
+|**`1`**|Ping Test IPv4|
+|**`2`**|Ping Test IPv6|
+|**`3`**|Traceroute Test IPv4|
+|**`4`**|Traceroute Test IPv6|
+|**`5`**|Show Firewall information|
+|**`6`**|Show Local Network information|
+|**`7`**|Show Wireless Networks information|
+|**`8`**|Firewall Enable|
+|**`9`**|Firewall Disable|
+|**`10`**|Block all connections Enable|
+|**`11`**|Block all connections Disable|
+|**`12`**|Show Wireless Network Password|
+|**`13`**|Setting default a new Computer Name, Hostname and etc|
+|**`14`**|Search Routers on local Networks, uses the default IP addresses|
+|**`15`**|Flushes local DNS cache, used for problems with loading sites, 404 error|
 |*GateKeeper*|
-|**`1`**|Show GateKeeper Status|
-|**`2`**|Enable GateKeeper|
-|**`3`**|Disable GateKeeper, this can lead to potential security and privacy issues|
-|**`4`**|Remove app from GateKeeper quarantine|
-|**`5`**|Self-sign the app. Require Xcode or Xcode Command Line Tools|
-|**`6`**|List apps from unknown sources you’ve approved for use|
-|**`7`**|Restoring the Default GateKeeper Database|
-|*Restart and Shutdown*|
-|**`8`**|Restart macOS|
-|**`9`**|Shutdown macOS|
-|*DNS and Firewall*|
-|**`10`**|Flushes local DNS cache, used for problems with loading sites, 404 error|
-|**`11`**|Show Firewall information, Block all is enabled or not, List applications and etc.|
-|**`12`**|Firewall Enable|
-|**`13`**|Firewall Disable|
-|**`14`**|Block all connections Enable|
-|**`15`**|Block all connections Disable|
-|*Hidden Files and Extensions*|
-|**`16`**|Show Hidden Files|
-|**`17`**|Don't Show Hidden Files|
-|**`18`**|Show all File Extensions|
-|**`19`**|Don't Show all File Extensions|
-|*WiFi*|
-|**`20`**|Show WiFi information and Scan Wireless Networks|
-|**`21`**|Enable WiFi|
-|**`22`**|Disable WiFi|
-|**`23`**|Show WiFi Network Password|
-|*Hostname*|
-|**`24`**|Show Computer information, Name, Hostname, local Hostname, NetBIOS Name and etc.|
-|**`25`**|Setting a new Computer Name, Hostname, local Hostname and NetBIOS Name|
-|*Ping, Traceroute and Finding Routers*|
-|**`26`**|Ping Test IPv4|
-|**`27`**|Ping Test IPv6|
-|**`28`**|Searching for Routers on local Networks, uses the default IP addresses for routers|
-|**`29`**|Traceroute Test IPv4|
-|**`30`**|Traceroute Test IPv6|
-|*XXXXXXXXX*|
-|**`31`**|Show Attachments as Icons in Apple Mail App|
+|**`16`**|GateKeeper Status|
+|**`17`**|Enable GateKeeper|
+|**`18`**|Disable GateKeeper|
+|**`19`**|Remove app from quarantine|
+|**`20`**|Self-sign the app. Require Xcode or Xcode CLT|
+|*Tweaks*|
+|**`21`**|Show Hidden Files|
+|**`22`**|Don't Show Hidden Files|
+|**`23`**|Show all File Extensions|
+|**`24`**|Don't Show all File Extensions|
+|**`25`**|Show Attachments as Icons in Apple Mail App|
+|**`26`**|Don't Show Attachments as Icons in Apple Mail App|
 |*Quit*|
 |**`00`**|Deleting terminal command history and terminal to quit|
 |*About*|
