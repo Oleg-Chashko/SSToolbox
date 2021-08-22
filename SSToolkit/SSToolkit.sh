@@ -61,13 +61,13 @@ showMenu() {
     echo "${Dim}•${No_Attributes} ${F_Yellow}Command ${F_Red}${Bold}i${No_Attributes}:  Installing Xcode CLT${Dim} •                    • ${No_Attributes}${F_Yellow}Command ${F_Red}${Bold}u${No_Attributes}:  Uninstalling Xcode CLT ${Dim}•${No_Attributes}"
     echo "${Dim}••••••••••••••••••••••••••••••••••••                    ••••••••••••••••••••••••••••••••••••••${No_Attributes}"
     echo "${Dim}• ·················································································· ${F_Green}${Bold}Network ${No_Attributes}${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}1${No_Attributes}:  Ping Test IPv4                                                                 ${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}2${No_Attributes}:  Ping Test IPv6                                                                 ${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}3${No_Attributes}:  Traceroute Test IPv4                                                           ${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}4${No_Attributes}:  Traceroute Test IPv6                                                           ${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}5${No_Attributes}:  Show Firewall information                                                      ${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}6${No_Attributes}:  Show Local Network information                                                 ${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}7${No_Attributes}:  Show Wireless Networks information                                             ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}1${No_Attributes}:  Ping and Traceroute test IPv4: (Google, Youtube, Facebook, Instagram, Spotify) ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}2${No_Attributes}:  Ping and Traceroute test IPv6: (Google, Youtube, Facebook, Instagram, Spotify) ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}3${No_Attributes}:  ....................                                                           ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}4${No_Attributes}:  ....................                                                           ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}5${No_Attributes}:  ....................                                                           ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}6${No_Attributes}:  ....................                                                           ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}7${No_Attributes}:  Show Firewall, Local Network and Wireless Networks information                 ${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}8${No_Attributes}:  Firewall Enable                                                                ${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}9${No_Attributes}:  Firewall Disable                                                               ${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}10${No_Attributes}: Block all connections Enable                                                   ${Dim}•${No_Attributes}"
@@ -81,7 +81,7 @@ showMenu() {
     echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}17${No_Attributes}: Enable GateKeeper                                                              ${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}18${No_Attributes}: Disable GateKeeper                                                             ${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}19${No_Attributes}: Remove app from quarantine                                                     ${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}20${No_Attributes}: Self-sign the app. Require Xcode or Xcode CLT                                  ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}20${No_Attributes}: Self-sign the app. Require Xcode or Xcode CLT (Command Line Tools)             ${Dim}•${No_Attributes}"
     echo "${Dim}• ··················································································· ${F_Green}${Bold}Tweaks ${No_Attributes}${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}21${No_Attributes}: Show Hidden Files                                                              ${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}22${No_Attributes}: Don't Show Hidden Files                                                        ${Dim}•${No_Attributes}"
@@ -216,89 +216,124 @@ aboutGitHub() {
 
 # -----------------------------------------------------------------------------------------------------------------
 
-# Command 1: Ping Test IPv4
-netPingTestIPv4() {
-    terminalWindowSize40x100
-    echo "•${F_Red}${Bold} Command 1: You choose to net Ping test IPv4.${No_Attributes}"
-    declare -a arr=("Google.com" "Youtube.com" "Facebook.com" "Spotify.com" "8.8.8.8" "8.8.4.4")
+# Command 1: Ping and Traceroute test IPv4
+netPingAndTracerouteTestIPv4() {
+    terminalWindowSize55x100
+    echo "•${F_Red}${Bold} Command 1: You choose to net Ping and Traceroute test IPv4.${No_Attributes}"
+    # Ping test
+    declare -a arr=("Google.com" "Youtube.com" "Facebook.com" "Instagram.com" "Spotify.com")
     echo "\n${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
     echo "${Dim}•${No_Attributes} Server- or IP- address | Response time: Minimum/Average/Maximum/Standard_deviation ${Dim}•${No_Attributes}"
     echo "\n${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
-    echo "•${F_Red} Testing...\n${No_Attributes}"
+    echo "${F_Red}•${F_Green}${Bold} Ping Testing...\n${No_Attributes}"
     for i in "${arr[@]}"; do
         time=$(ping -c 5 "$i" | tail -1 | awk '{print $4}')
         echo "$i | response time | $time ms\n"
     done
-    echo "•${F_Red} Finish...${No_Attributes}"
+    echo "${F_Red}•${F_Green}${Bold} Finish...${No_Attributes}"
+    echo "\n${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
+    # Traceroute test
+    echo "${F_Red}•${F_Green}${Bold} Traceroute Testing...\n${No_Attributes}"
+    traceroute -w 1 -m 30 Google.com
+    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
+    traceroute -w 1 -m 30 Youtube.com
+    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
+    traceroute -w 1 -m 30 Facebook.com
+    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
+    traceroute -w 1 -m 30 Spotify.com
+    echo "\n${F_Red}•${F_Green}${Bold} Finish...${No_Attributes}"
     continueMessage
 }
 
-# Command 2: Ping Test IPv6
-netPingTestIPv6() {
-    terminalWindowSize40x100
-    echo "•${F_Red}${Bold} Command 2: You choose to net Ping test IPv6.${No_Attributes}"
-    declare -a arr=("Google.com" "Youtube.com" "Facebook.com" "Spotify.com" "2001:4860:4860::8888" "2001:4860:4860::8844")
+# Command 2: Ping and Traceroute test IPv6
+netPingAndTracerouteTestIPv6() {
+    terminalWindowSize55x140
+    echo "•${F_Red}${Bold} Command 2: You choose to net Ping and Traceroute test IPv6.${No_Attributes}"
+    # Ping test
+    declare -a arr=("Google.com" "Youtube.com" "Facebook.com" "Instagram.com" "Spotify.com")
     echo "\n${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
     echo "${Dim}•${No_Attributes} Server- or IP- address | Response time: Minimum/Average/Maximum/Standard_deviation ${Dim}•${No_Attributes}"
     echo "\n${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
-    echo "•${F_Red} Testing...\n${No_Attributes}"
+    echo "${F_Red}•${F_Green}${Bold} Testing...\n${No_Attributes}"
     for i in "${arr[@]}"; do
         time=$(ping6 -c 5 "$i" | tail -1 | awk '{print $4}')
         echo "$i | response time | $time ms\n"
     done
-    echo "•${F_Red} Finish...${No_Attributes}"
+    echo "${F_Red}•${F_Green}${Bold} Finish...${No_Attributes}"
+    echo "\n${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
+    # Traceroute test
+    echo "${F_Red}•${F_Green}${Bold} Traceroute Testing...\n${No_Attributes}"
+    traceroute6 -w 1 -m 30 Google.com
+    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
+    traceroute6 -w 1 -m 30 Youtube.com
+    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
+    traceroute6 -w 1 -m 30 Facebook.com
+    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
+    traceroute6 -w 1 -m 30 Spotify.com
+    echo "\n${F_Red}•${F_Green}${Bold} Finish...${No_Attributes}"
     continueMessage
 }
 
-# Command 3: Traceroute Test IPv4
-tracerouteTestIPv4() {
+# Command 3: ...............
+...............() {
     terminalWindowSize55x100
-    echo "•${F_Red}${Bold} Command 3: You choose to Traceroute test IPv4.${No_Attributes}\n"
-    echo "•${F_Red} Testing...\n${No_Attributes}"
-    traceroute -w 1 -m 30 Google.com
-    echo "${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
-    traceroute -w 1 -m 30 Youtube.com
-    echo "${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
-    traceroute -w 1 -m 30 Facebook.com
-    echo "${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
-    traceroute -w 1 -m 30 Instagram.com
-    echo "•${F_Red} Finish...${No_Attributes}"
+    echo "•${F_Red}${Bold} Command 3: You choose to ................${No_Attributes}\n"
+    echo "${F_Red}•${F_Green}${Bold} Testing...\n${No_Attributes}"
+
+    echo "\n${F_Red}•${F_Green}${Bold} Finish...${No_Attributes}"
     continueMessage
 }
 
-# Command 4: Traceroute Test IPv6
-tracerouteTestIPv6() {
+# Command 4: ...............
+...............() {
     terminalWindowSize55x140
     echo "•${F_Red}${Bold} Command 4: You choose to Traceroute test IPv6.${No_Attributes}\n"
-    echo "•${F_Red} Testing...\n${No_Attributes}"
-    traceroute6 -w 1 -m 30 Google.com
-    echo "${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
-    traceroute6 -w 1 -m 30 Youtube.com
-    echo "${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
-    traceroute6 -w 1 -m 30 Facebook.com
-    echo "${F_Red}•${F_Green}${Bold} Done ${No_Attributes}\n"
-    traceroute6 -w 1 -m 30 Instagram.com
-    echo "•${F_Red} Finish...${No_Attributes}"
+    echo "${F_Red}•${F_Green}${Bold} Testing...\n${No_Attributes}"
+
+    echo "\n${F_Red}•${F_Green}${Bold} Finish...${No_Attributes}"
     continueMessage
 }
 
-# Command 5: Show Firewall information
-showFirewallInformation() {
+# Command 5: ...............
+...............() {
     terminalWindowSize40x140
     echo "•${F_Red}${Bold} Command 5:${No_Attributes}"
-    echo "•${F_Red} Show firewall information.${No_Attributes}\n"
-    /usr/libexec/ApplicationFirewall/socketfilterfw --getglobalstate
-    echo "\n•${F_Red} Show whether block all is enabled or not.${No_Attributes}\n"
-    /usr/libexec/ApplicationFirewall/socketfilterfw --getblockall
-    echo "\n•${F_Red} List applications handled by firewall.${No_Attributes}\n"
-    /usr/libexec/ApplicationFirewall/socketfilterfw --list
+
     continueMessage
 }
 
-# Command 6: Show Local Network information
-showLocalNetworkInformation() {
+# Command 6: ...............
+...............() {
     terminalWindowSize55x100
     echo "•${F_Red}${Bold} Command 6: You choose to get the Show Local Network information.${No_Attributes}\n"
+
+    continueMessage
+}
+
+# Command 7: Show Networks information
+showNetworksInformation() {
+    terminalWindowSize55x140
+    echo "•${F_Red}${Bold} Command 7: Show Firewall, Local Network, Wireless Networks information.${No_Attributes}"
+    # Show Firewall information
+    echo "\n${F_Red}•${F_Green}${Bold} Show Firewall information.${No_Attributes}\n"
+    /usr/libexec/ApplicationFirewall/socketfilterfw --getglobalstate
+    echo "\n${F_Red}•${F_Green}${Bold} Show whether block all is enabled or not.${No_Attributes}\n"
+    /usr/libexec/ApplicationFirewall/socketfilterfw --getblockall
+    echo "\n${F_Red}•${F_Green}${Bold} List applications handled by firewall.${No_Attributes}\n"
+    /usr/libexec/ApplicationFirewall/socketfilterfw --list
+    echo "${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
+    echo "\n${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
+    # Show Wireless Networks information
+    echo "•${F_Red}${Bold} Show Wireless Networks information.${No_Attributes}"
+    echo "\n${F_Red}•${F_Green}${Bold} Wireless Networks information.${No_Attributes}\n"
+    /System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport -I
+    echo "\n${F_Red}•${F_Green}${Bold} Scan Wireless Networks.${No_Attributes}\n"
+    /System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport -s
+    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
+    echo "\n${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
+    # Show Local Network information
+    echo "•${F_Red}${Bold} Show Local Network information.${No_Attributes}"
+    echo "\n${F_Red}•${F_Green}${Bold} Local Network information.${No_Attributes}\n"
     networksetup -listnetworkserviceorder | grep en0 | awk '{print "Network device: " $1, $2, $3, $4, $5}'
     ipconfig getifaddr en0 | awk '{print "IP address: " $1}'
     networksetup -getmacaddress en0 | awk '{print "MAC address: " $3}'
@@ -306,21 +341,11 @@ showLocalNetworkInformation() {
     scutil --get HostName | awk '{print "Hostname: ", $1}'
     scutil --get LocalHostName | awk '{print "local Hostname: ", $1}'
     defaults read /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName | awk '{print "NetBIOS Name: " $1}'
-    echo "\n•${F_Red} Show list all network devices on mac.${No_Attributes}"
+    echo "\n${F_Red}•${F_Green}${Bold} Show list all network devices on mac.${No_Attributes}"
     networksetup -listallhardwareports
-    echo "\n•${F_Red} Show IP Addresses of Devices on a Local Network.${No_Attributes}\n"
+    echo "\n${F_Red}•${F_Green}${Bold} Show IP Addresses of Devices on a Local Network.${No_Attributes}\n"
     arp -a | grep en0 | awk '{print $1, $2, $3, $4}'
-    continueMessage
-}
-
-# Command 7: Show Wireless Networks information
-showWirelessNetworksInformation() {
-    terminalWindowSize55x140
-    echo "•${F_Red}${Bold} Command 7: Show Wireless Networks information.${No_Attributes}"
-    echo "•${F_Red} WiFi information.${No_Attributes}\n"
-    /System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport -I
-    echo "\n•${F_Red} Scan wireless networks.${No_Attributes}\n"
-    /System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport -s
+    echo "\n${F_Red}•${F_Green}${Bold} Finish...${No_Attributes}"
     continueMessage
 }
 
@@ -445,7 +470,7 @@ enableGateKeeper() {
     echo "•${F_Red}${Bold} Command 17: You chose to enable GateKeeper.${No_Attributes}"
     askPassword
     sudo spctl --master-enable
-    echo "\n•${F_Red} GateKeeper enabled.${No_Attributes}"
+    echo "\n${F_Red}•${F_Green}${Bold} GateKeeper enabled.${No_Attributes}"
     continueMessage
 }
 
@@ -455,33 +480,33 @@ disableGateKeeper() {
     echo "•${F_Red}${Bold} Command 18: You chose to disable GateKeeper.${No_Attributes}"
     askPassword
     sudo spctl --master-disable
-    echo "\n•${F_Red} GateKeeper disabled.${No_Attributes}"
+    echo "\n${F_Red}•${F_Green}${Bold} GateKeeper disabled.${No_Attributes}"
     continueMessage
 }
 
 # Command 19: Remove app from GateKeeper quarantine
 removeAppFromGateKeeper() {
-    terminalWindowSize40x100
+    terminalWindowSize40x140
     echo "•${F_Red}${Bold} Command 19: You chose to remove the app from GateKeeper quarantine.${No_Attributes}\n"
     read "? Drag & drop the app on this window and then press Return: " FILEPATH
     askPassword
     sudo xattr -r -d com.apple.quarantine "$FILEPATH"
     if [ $? -eq 0 ]; then
-        echo "•${F_Red} App removed from quarantine.${No_Attributes}"
+        echo "\n${F_Red}•${F_Green}${Bold} App removed from quarantine.${No_Attributes}"
     else
-        echo "•${F_Red} App could not be removed from quarantine!${No_Attributes}"
+        echo "\n•${F_Red} App could not be removed from quarantine!${No_Attributes}"
     fi
     continueMessage
 }
 
 # Command 20: Self-sign the app
 selfSignApp() {
-    terminalWindowSize40x100
+    terminalWindowSize40x140
     echo "•${F_Red}${Bold} Command 20: You chose to self-sign an app.${No_Attributes}\n"
     read "? Drag & drop the app on this window and then press Return: " FILEPATH
     askPassword
     sudo codesign -f -v -s - --deep "$FILEPATH"
-    echo "•${F_Red} If you see - replacing existing signature - that means you are done!${No_Attributes}"
+    echo "\n${F_Red}•${F_Green}${Bold} If you see - replacing existing signature - that means you are done!${No_Attributes}"
     continueMessage
 }
 
@@ -561,37 +586,37 @@ startScript() {
 
         1)
             clear
-            netPingTestIPv4
+            netPingAndTracerouteTestIPv4
             ;;
 
         2)
             clear
-            netPingTestIPv6
+            netPingAndTracerouteTestIPv6
             ;;
 
         3)
             clear
-            tracerouteTestIPv4
+            ...............
             ;;
 
         4)
             clear
-            tracerouteTestIPv6
+            ...............
             ;;
 
         5)
             clear
-            showFirewallInformation
+            ...............
             ;;
 
         6)
             clear
-            showLocalNetworkInformation
+            ...............
             ;;
 
         7)
             clear
-            showWirelessNetworksInformation
+            showNetworksInformation
             ;;
 
         8)
