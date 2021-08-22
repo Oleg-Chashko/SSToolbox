@@ -255,17 +255,13 @@ tracerouteTestIPv4() {
     terminalWindowSize55x100
     echo "•${F_Red}${Bold} Command 3: You choose to Traceroute test IPv4.${No_Attributes}\n"
     echo "•${F_Red} Testing...\n${No_Attributes}"
-    traceroute Google.com
+    traceroute -w 1 -m 30 Google.com
     echo "${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
-    traceroute Youtube.com
+    traceroute -w 1 -m 30 Youtube.com
     echo "${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
-    traceroute Facebook.com
+    traceroute -w 1 -m 30 Facebook.com
     echo "${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
-    traceroute Spotify.com
-    echo "${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
-    traceroute 8.8.8.8
-    echo "${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
-    traceroute 8.8.4.4
+    traceroute -w 1 -m 30 Instagram.com
     echo "•${F_Red} Finish...${No_Attributes}"
     continueMessage
 }
@@ -275,17 +271,13 @@ tracerouteTestIPv6() {
     terminalWindowSize55x140
     echo "•${F_Red}${Bold} Command 4: You choose to Traceroute test IPv6.${No_Attributes}\n"
     echo "•${F_Red} Testing...\n${No_Attributes}"
-    traceroute6 Google.com
+    traceroute6 -w 1 -m 30 Google.com
     echo "${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
-    traceroute6 Youtube.com
+    traceroute6 -w 1 -m 30 Youtube.com
     echo "${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
-    traceroute6 Facebook.com
+    traceroute6 -w 1 -m 30 Facebook.com
     echo "${F_Red}•${F_Green}${Bold} Done ${No_Attributes}\n"
-    traceroute6 Spotify.com
-    echo "${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
-    traceroute6 2001:4860:4860::8888
-    echo "${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
-    traceroute6 2001:4860:4860::8844
+    traceroute6 -w 1 -m 30 Instagram.com
     echo "•${F_Red} Finish...${No_Attributes}"
     continueMessage
 }
