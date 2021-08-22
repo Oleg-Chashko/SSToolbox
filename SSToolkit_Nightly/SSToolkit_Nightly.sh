@@ -719,7 +719,7 @@ startScript() {
             quitSSToolkit
             ;;
 
-        About)
+        A)
             clear
             aboutGitHub
             ;;
