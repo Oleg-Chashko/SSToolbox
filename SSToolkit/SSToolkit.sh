@@ -90,8 +90,8 @@ showMenu() {
     echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}25${No_Attributes}: Show Attachments as Icons in Apple Mail App                                    ${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}26${No_Attributes}: Don't Show Attachments as Icons in Apple Mail App                              ${Dim}•${No_Attributes}"
     echo "${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Yellow} Command ${F_Red}${Bold}00${No_Attributes}: ${Bold}Quit${No_Attributes} ${Dim}•                                                 •${No_Attributes}${F_Yellow} Command ${F_Red}${Bold}About${No_Attributes}: ${Bold}GitHub${No_Attributes} ${Dim}•${No_Attributes}"
-    echo "${Dim}••••••••••••••••••••                                                 •••••••••••••••••••••••••${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Yellow} Command ${F_Red}${Bold}00${No_Attributes}: ${Bold}Quit${No_Attributes} ${Dim}•          ${No_Attributes}${Dim}•${F_Yellow} Command ${No_Attributes}${F_Red}${Bold}R${No_Attributes}elease/${F_Red}${Bold}N${No_Attributes}ightly${No_Attributes}:${Bold} ⬇ ${No_Attributes}${Dim}•         •${No_Attributes}${F_Yellow} Command ${F_Red}${Bold}A${No_Attributes}bout${No_Attributes}: ${Bold}GitHub${No_Attributes} ${Dim}•${No_Attributes}"
+    echo "${Dim}••••••••••••••••••••          ••••••••••••••••••••••••••••••         •••••••••••••••••••••••••${No_Attributes}"
 }
 
 # -----------------------------------------------------------------------------------------------------------------
@@ -227,7 +227,7 @@ netPingAndTracerouteTestIPv4() {
     echo "\n${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
     echo "${F_Red}•${F_Green}${Bold} Ping Testing...\n${No_Attributes}"
     for i in "${arr[@]}"; do
-        time=$(ping -c 5 "$i" | tail -1 | awk '{print $4}')
+        time=$(ping -c 4 "$i" | tail -1 | awk '{print $4}')
         echo "$i | response time | $time ms\n"
     done
     echo "${F_Red}•${F_Green}${Bold} Finish...${No_Attributes}"
@@ -256,7 +256,7 @@ netPingAndTracerouteTestIPv6() {
     echo "\n${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
     echo "${F_Red}•${F_Green}${Bold} Testing...\n${No_Attributes}"
     for i in "${arr[@]}"; do
-        time=$(ping6 -c 5 "$i" | tail -1 | awk '{print $4}')
+        time=$(ping6 -c 4 "$i" | tail -1 | awk '{print $4}')
         echo "$i | response time | $time ms\n"
     done
     echo "${F_Red}•${F_Green}${Bold} Finish...${No_Attributes}"
