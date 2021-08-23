@@ -58,18 +58,18 @@ showMenu() {
     terminalWindowSizeMenu
     echo "                             ${Dim}${Bold}SSToolkit${No_Attributes} ${Dim}${RELEASE_VERSION}${No_Attributes}"
     echo "${Dim}• ${F_Green}${Bold}Warning${No_Attributes}${Dim} ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
-    echo "${Dim}•${No_Attributes} ${F_Yellow}Command ${F_Red}${Bold}i${No_Attributes}:  Installing Xcode CLT${Dim} •                    • ${No_Attributes}${F_Yellow}Command ${F_Red}${Bold}u${No_Attributes}:  Uninstalling Xcode CLT ${Dim}•${No_Attributes}"
-    echo "${Dim}••••••••••••••••••••••••••••••••••••                    ••••••••••••••••••••••••••••••••••••••${No_Attributes}"
+    echo "${Dim}•${No_Attributes} ${F_Yellow}Command${No_Attributes}: ${F_Red}${Bold}I${No_Attributes}nstalling Xcode CLT${Dim} •                          • ${No_Attributes}${F_Yellow}Command${No_Attributes}: ${F_Red}${Bold}U${No_Attributes}ninstalling Xcode CLT ${Dim}•${No_Attributes}"
+    echo "${Dim}•••••••••••••••••••••••••••••••••                          •••••••••••••••••••••••••••••••••••${No_Attributes}"
     echo "${Dim}• ·················································································· ${F_Green}${Bold}Network ${No_Attributes}${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}1${No_Attributes}:  Ping and Traceroute test IPv4: (Google, Youtube, Facebook, Instagram, Spotify) ${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}2${No_Attributes}:  Ping and Traceroute test IPv6: (Google, Youtube, Facebook, Instagram, Spotify) ${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}3${No_Attributes}:  ....................                                                           ${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}4${No_Attributes}:  ....................                                                           ${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}5${No_Attributes}:  ....................                                                           ${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}6${No_Attributes}:  ....................                                                           ${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}7${No_Attributes}:  Show Firewall, Local Network and Wireless Networks information                 ${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}8${No_Attributes}:  Firewall Enable                                                                ${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}9${No_Attributes}:  Firewall Disable                                                               ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold} 1${No_Attributes}: Ping and Traceroute test IPv4: (Google, Youtube, Facebook, Instagram, Spotify) ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold} 2${No_Attributes}: Ping and Traceroute test IPv6: (Google, Youtube, Facebook, Instagram, Spotify) ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold} 3${No_Attributes}: ....................                                                           ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold} 4${No_Attributes}: ....................                                                           ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold} 5${No_Attributes}: ....................                                                           ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold} 6${No_Attributes}: ....................                                                           ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold} 7${No_Attributes}: Show Firewall, Local Network and Wireless Networks information                 ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold} 8${No_Attributes}: Firewall Enable                                                                ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold} 9${No_Attributes}: Firewall Disable                                                               ${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}10${No_Attributes}: Block all connections Enable                                                   ${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}11${No_Attributes}: Block all connections Disable                                                  ${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}12${No_Attributes}: Show Wireless Network Password                                                 ${Dim}•${No_Attributes}"
@@ -90,8 +90,8 @@ showMenu() {
     echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}25${No_Attributes}: Show Attachments as Icons in Apple Mail App                                    ${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Cyan} Command ${F_Red}${Bold}26${No_Attributes}: Don't Show Attachments as Icons in Apple Mail App                              ${Dim}•${No_Attributes}"
     echo "${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Yellow} Command ${F_Red}${Bold}00${No_Attributes}: ${Bold}Quit${No_Attributes} ${Dim}•          ${No_Attributes}${Dim}•${F_Yellow} Command ${No_Attributes}${F_Red}${Bold}R${No_Attributes}elease/${F_Red}${Bold}N${No_Attributes}ightly${No_Attributes}:${Bold} ⬇ ${No_Attributes}${Dim}•         •${No_Attributes}${F_Yellow} Command ${F_Red}${Bold}A${No_Attributes}bout${No_Attributes}: ${Bold}GitHub${No_Attributes} ${Dim}•${No_Attributes}"
-    echo "${Dim}••••••••••••••••••••          ••••••••••••••••••••••••••••••         •••••••••••••••••••••••••${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Yellow} Command${No_Attributes}: ${F_Red}${Bold}Q${No_Attributes}uit${No_Attributes} ${Dim}•           ${No_Attributes}${Dim}•${F_Yellow} Command${No_Attributes}: ${F_Red}${Bold}R${No_Attributes}elease/${F_Red}${Bold}N${No_Attributes}ightly${No_Attributes} ⬇ ${No_Attributes}${Dim}•           •${No_Attributes}${F_Yellow} Command${No_Attributes}: ${F_Red}${Bold}A${No_Attributes}bout${No_Attributes} GitHub${No_Attributes} ${Dim}•${No_Attributes}"
+    echo "${Dim}•••••••••••••••••           ••••••••••••••••••••••••••••••           •••••••••••••••••••••••••${No_Attributes}"
 }
 
 # -----------------------------------------------------------------------------------------------------------------
@@ -177,18 +177,18 @@ showInvalid() {
 
 # -----------------------------------------------------------------------------------------------------------------
 
-# Command i: Installing the Xcode CLT
+# Command I: Installing the Xcode CLT
 installingXCLT() {
     terminalWindowSize40x100
-    echo "•${F_Red}${Bold} Command i: You choose to Install the Xcode Command Line Tools.${No_Attributes}\n"
+    echo "•${F_Red}${Bold} Command I: You choose to Install the Xcode Command Line Tools.${No_Attributes}\n"
     xcode-select --install
     continueMessage
 }
 
-# Command u: Uninstalling the Xcode CLT
+# Command U: Uninstalling the Xcode CLT
 uninstallingXCLT() {
     terminalWindowSize40x100
-    echo "•${F_Red}${Bold} Command u: You choose to Uninstall the Xcode Command Line Tools.${No_Attributes}\n"
+    echo "•${F_Red}${Bold} Command U: You choose to Uninstall the Xcode Command Line Tools.${No_Attributes}\n"
     askPassword
     sudo rm -rf /Library/Developer/CommandLineTools
     echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
@@ -197,10 +197,10 @@ uninstallingXCLT() {
 
 # -----------------------------------------------------------------------------------------------------------------
 
-# Command 00: Quit SSToolkit
+# Command Q: Quit SSToolkit
 quitSSToolkit() {
     # Deleting macOS terminal command history and Terminal to quit
-    echo "•${F_Red}${Bold} Command 00: Deleting macOS terminal command history.${No_Attributes}"
+    echo "•${F_Red}${Bold} Command Q: Deleting macOS terminal command history.${No_Attributes}"
     rm -rf .zsh_sessions
     rm -rf .zsh_history
     sleep 1 && echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
@@ -584,12 +584,12 @@ startScript() {
         read "?  Please select an Command: " SELECTED_COMMAND
         case $SELECTED_COMMAND in
 
-        i)
+        I)
             clear
             installingXCLT
             ;;
 
-        u)
+        U)
             clear
             uninstallingXCLT
             ;;
@@ -724,7 +724,7 @@ startScript() {
             noShowAttachmentsAsIcons
             ;;
 
-        00)
+        Q)
             clear
             quitSSToolkit
             ;;
