@@ -209,17 +209,17 @@ quitSSToolkit() {
     read
 }
 
-# Command Release: Download Latest Release on GitHub
+# Command R: Download Latest Release on GitHub
 downloadRelease() {
     cd ~/Desktop; curl -OL -s https://github.com/Oleg-Chashko/SSToolkit/releases/latest/download/SSToolkit.sh
 }
 
-# Command Nightly: Download Latest Nightly on GitHub
+# Command N: Download Latest Nightly on GitHub
 downloadNightly() {
     cd ~/Desktop; curl -OL -s https://raw.githubusercontent.com/Oleg-Chashko/SSToolkit/main/SSToolkit_Nightly/SSToolkit_Nightly.sh
 }
 
-# Command About: Project page on GitHub
+# Command A: About Project page on GitHub
 aboutGitHub() {
     open https://github.com/Oleg-Chashko/SSToolkit
 }
