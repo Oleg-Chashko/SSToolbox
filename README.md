@@ -37,25 +37,29 @@
 
 ## Preview
 
+### Main menu
 <p align="center">
   <img width="900px" src="https://raw.githubusercontent.com/Oleg-Chashko/SSToolkit/main/Images/Preview_SSToolkit.png" />
+</p>
+
+### Adding custom DNS servers
+
+<p align="center">
+  <img width="900px" src="https://raw.githubusercontent.com/Oleg-Chashko/SSToolkit/main/Images/Preview_SSToolkit_2.png" />
 </p>
 
 ## Commands List
 
 |Command|Description|
 |:----------:|----------|
-|*Xcode*|
-|**`i`**|Installing the Xcode CLT (Command Line Tools)|
-|**`u`**|Uninstalling the Xcode CLT (Command Line Tools)|
 |*Network*|
-|**`1`**|Ping Test IPv4|
-|**`2`**|Ping Test IPv6|
-|**`3`**|Traceroute Test IPv4|
-|**`4`**|Traceroute Test IPv6|
-|**`5`**|Show Firewall information|
-|**`6`**|Show Local Network information|
-|**`7`**|Show Wireless Networks information|
+|**`1`**|Ping and Traceroute test IPv4: (Google, Youtube, Facebook, Instagram, Spotify)|
+|**`2`**|Ping and Traceroute test IPv6: (Google, Youtube, Facebook, Instagram, Spotify)|
+|**`3`**|Custom DNS servers for Wi-Fi|
+|**`4`**|Custom DNS servers for Ethernet|
+|**`5`**|------------|
+|**`6`**|------------|
+|**`7`**|Show Firewall, Local Network and Wireless Networks information|
 |**`8`**|Firewall Enable|
 |**`9`**|Firewall Disable|
 |**`10`**|Block all connections Enable|
@@ -77,10 +81,15 @@
 |**`24`**|Don't Show all File Extensions|
 |**`25`**|Show Attachments as Icons in Apple Mail App|
 |**`26`**|Don't Show Attachments as Icons in Apple Mail App|
-|*Quit*|
-|**`00`**|Deleting terminal command history and terminal to quit|
+|*Xcode*|
+|**`I`**|Installing the Xcode CLT (Command Line Tools)|
+|**`U`**|Uninstalling the Xcode CLT (Command Line Tools)|
+|*Download*|
+|**`R`** / **`N`**|Release/Nightly Download|
 |*About*|
-|**`About`**|Project page on GitHub|
+|**`A`**|About GitHub|
+|*Quit*|
+|**`Q`**|Quit|
 
 ## Download
 
