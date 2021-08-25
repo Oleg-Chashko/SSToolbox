@@ -1,7 +1,7 @@
 #!/bin/zsh
 
 # Attribute
-RELEASE_VERSION="v.0.2.7 build [08.23.2021]"
+RELEASE_VERSION="v.0.3.5 build [08.25.2021]"
 ROOT_PASSWORD=0
 
 # Foreground
@@ -56,42 +56,38 @@ No_Attributes='\033[0m'
 # Menu
 showMenu() {
     terminalWindowSizeMenu
-    echo "                             ${Dim}${Bold}SSToolkit${No_Attributes} ${Dim}${RELEASE_VERSION}${No_Attributes}"
-    echo "${Dim}• ${F_Green}${Bold}Warning${No_Attributes}${Dim} ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
-    echo "${Dim}•${No_Attributes} ${F_Yellow}Command: ${F_Red}${Bold}I${No_Attributes}nstalling Xcode CLT${Dim} •                          • ${No_Attributes}${F_Yellow}Command: ${F_Red}${Bold}U${No_Attributes}ninstalling Xcode CLT ${Dim}•${No_Attributes}"
-    echo "${Dim}•••••••••••••••••••••••••••••••••                          •••••••••••••••••••••••••••••••••••${No_Attributes}"
-    echo "${Dim}• ·················································································· ${F_Green}${Bold}Network ${No_Attributes}${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Cyan} Command: ${F_Red}${Bold} 1${No_Attributes} Ping and Traceroute test IPv4: (Google, Youtube, Facebook, Instagram, Spotify) ${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Cyan} Command: ${F_Red}${Bold} 2${No_Attributes} Ping and Traceroute test IPv6: (Google, Youtube, Facebook, Instagram, Spotify) ${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Cyan} Command: ${F_Red}${Bold} 3${No_Attributes} ....................                                                           ${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Cyan} Command: ${F_Red}${Bold} 4${No_Attributes} ....................                                                           ${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Cyan} Command: ${F_Red}${Bold} 5${No_Attributes} ....................                                                           ${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Cyan} Command: ${F_Red}${Bold} 6${No_Attributes} ....................                                                           ${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Cyan} Command: ${F_Red}${Bold} 7${No_Attributes} Show Firewall, Local Network and Wireless Networks information                 ${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Cyan} Command: ${F_Red}${Bold} 8${No_Attributes} Firewall Enable                                                                ${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Cyan} Command: ${F_Red}${Bold} 9${No_Attributes} Firewall Disable                                                               ${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Cyan} Command: ${F_Red}${Bold}10${No_Attributes} Block all connections Enable                                                   ${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Cyan} Command: ${F_Red}${Bold}11${No_Attributes} Block all connections Disable                                                  ${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Cyan} Command: ${F_Red}${Bold}12${No_Attributes} Show Wireless Network Password                                                 ${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Cyan} Command: ${F_Red}${Bold}13${No_Attributes} Setting default a new Computer Name, Hostname and etc                          ${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Cyan} Command: ${F_Red}${Bold}14${No_Attributes} Search Routers on local Networks, uses the default IP addresses                ${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Cyan} Command: ${F_Red}${Bold}15${No_Attributes} Flushes local DNS cache, used for problems with loading sites, 404 error       ${Dim}•${No_Attributes}"
-    echo "${Dim}• ··············································································· ${F_Green}${Bold}GateKeeper ${No_Attributes}${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Cyan} Command: ${F_Red}${Bold}16${No_Attributes} GateKeeper Status                                                              ${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Cyan} Command: ${F_Red}${Bold}17${No_Attributes} Enable GateKeeper                                                              ${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Cyan} Command: ${F_Red}${Bold}18${No_Attributes} Disable GateKeeper                                                             ${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Cyan} Command: ${F_Red}${Bold}19${No_Attributes} Remove app from quarantine                                                     ${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Cyan} Command: ${F_Red}${Bold}20${No_Attributes} Self-sign the app. Require Xcode or Xcode CLT (Command Line Tools)             ${Dim}•${No_Attributes}"
-    echo "${Dim}• ··················································································· ${F_Green}${Bold}Tweaks ${No_Attributes}${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Cyan} Command: ${F_Red}${Bold}21${No_Attributes} Show Hidden Files                                                              ${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Cyan} Command: ${F_Red}${Bold}22${No_Attributes} Don't Show Hidden Files                                                        ${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Cyan} Command: ${F_Red}${Bold}23${No_Attributes} Show all File Extensions                                                       ${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Cyan} Command: ${F_Red}${Bold}24${No_Attributes} Don't Show all File Extensions                                                 ${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Cyan} Command: ${F_Red}${Bold}25${No_Attributes} Show Attachments as Icons in Apple Mail App                                    ${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Cyan} Command: ${F_Red}${Bold}26${No_Attributes} Don't Show Attachments as Icons in Apple Mail App                              ${Dim}•${No_Attributes}"
-    echo "${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Yellow} Command: ${F_Red}${Bold}Q${No_Attributes}uit${No_Attributes} ${Dim}•           ${No_Attributes}${Dim}•${F_Yellow} Command: ${F_Red}${Bold}R${No_Attributes}elease/${F_Red}${Bold}N${No_Attributes}ightly${No_Attributes} ⬇ ${No_Attributes}${Dim}•           •${No_Attributes}${F_Yellow} Command: ${F_Red}${Bold}A${No_Attributes}bout${No_Attributes} GitHub${No_Attributes} ${Dim}•${No_Attributes}"
-    echo "${Dim}•••••••••••••••••           ••••••••••••••••••••••••••••••           •••••••••••••••••••••••••${No_Attributes}"
+    echo "${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
+    echo "${Dim}•                                                ${Dim}${Bold}SSToolkit${No_Attributes} ${Dim}${RELEASE_VERSION}${No_Attributes}                                              ${Dim}•${No_Attributes}"
+    echo "${Dim}• ························································································································ ${F_Green}${Bold}Network ${No_Attributes}${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Cyan} Command: ${F_Red}${Bold} 1${No_Attributes} Ping and Traceroute test IPv4: (Google, Youtube, Facebook, Instagram, Spotify)                                       ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Cyan} Command: ${F_Red}${Bold} 2${No_Attributes} Ping and Traceroute test IPv6: (Google, Youtube, Facebook, Instagram, Spotify)                                       ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Cyan} Command: ${F_Red}${Bold} 3${No_Attributes} Custom DNS servers for Wi-Fi                                                                                         ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Cyan} Command: ${F_Red}${Bold} 4${No_Attributes} Custom DNS servers for Ethernet                                                                                      ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Cyan} Command: ${F_Red}${Bold} 5${No_Attributes} -------------                                                                                                        ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Cyan} Command: ${F_Red}${Bold} 6${No_Attributes} -------------                                                                                                        ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Cyan} Command: ${F_Red}${Bold} 7${No_Attributes} Show Firewall, Local Network and Wireless Networks information                                                       ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Cyan} Command: ${F_Red}${Bold} 8${No_Attributes} Firewall Enable                                                                                                      ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Cyan} Command: ${F_Red}${Bold} 9${No_Attributes} Firewall Disable                                                                                                     ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Cyan} Command: ${F_Red}${Bold}10${No_Attributes} Block all connections Enable                                                                                         ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Cyan} Command: ${F_Red}${Bold}11${No_Attributes} Block all connections Disable                                                                                        ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Cyan} Command: ${F_Red}${Bold}12${No_Attributes} Show Wireless Network Password                                                                                       ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Cyan} Command: ${F_Red}${Bold}13${No_Attributes} Setting default a new Computer Name, Hostname and etc                                                                ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Cyan} Command: ${F_Red}${Bold}14${No_Attributes} Search Routers on local Networks, uses the default IP addresses                                                      ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Cyan} Command: ${F_Red}${Bold}15${No_Attributes} Flushes local DNS cache, used for problems with loading sites, 404 error                                             ${Dim}•${No_Attributes}"
+    echo "${Dim}• ····················································································································· ${F_Green}${Bold}GateKeeper ${No_Attributes}${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Cyan} Command: ${F_Red}${Bold}16${No_Attributes} GateKeeper Status                                                                                                    ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Cyan} Command: ${F_Red}${Bold}17${No_Attributes} Enable GateKeeper                                                                                                    ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Cyan} Command: ${F_Red}${Bold}18${No_Attributes} Disable GateKeeper                                                                                                   ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Cyan} Command: ${F_Red}${Bold}19${No_Attributes} Remove app from quarantine                                                                                           ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Cyan} Command: ${F_Red}${Bold}20${No_Attributes} Self-sign the app. Require Xcode or Xcode CLT (Command Line Tools)                                                   ${Dim}•${No_Attributes}"
+    echo "${Dim}• ························································································································· ${F_Green}${Bold}Tweaks ${No_Attributes}${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Cyan} Command: ${F_Red}${Bold}21${No_Attributes} Show Hidden Files                                                                ${Dim}•••••••••••••••••••••••••••••••••••••${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Cyan} Command: ${F_Red}${Bold}22${No_Attributes} Don't Show Hidden Files                                                          ${Dim}•${No_Attributes}${F_Yellow} Command: ${F_Red}${Bold}I${No_Attributes}nstalling Xcode CLT     ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Cyan} Command: ${F_Red}${Bold}23${No_Attributes} Show all File Extensions                                                         ${Dim}•${No_Attributes}${F_Yellow} Command: ${F_Red}${Bold}U${No_Attributes}ninstalling Xcode CLT   ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Cyan} Command: ${F_Red}${Bold}24${No_Attributes} Don't Show all File Extensions                                                   ${Dim}•${No_Attributes}${F_Yellow} Command: ${F_Red}${Bold}R${No_Attributes}elease/${F_Red}${Bold}N${No_Attributes}ightly Download ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Cyan} Command: ${F_Red}${Bold}25${No_Attributes} Show Attachments as Icons in Apple Mail App                                      ${Dim}•${No_Attributes}${F_Yellow} Command: ${F_Red}${Bold}A${No_Attributes}bout GitHub             ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Cyan} Command: ${F_Red}${Bold}26${No_Attributes} Don't Show Attachments as Icons in Apple Mail App                                ${Dim}•${No_Attributes}${F_Yellow} Command: ${F_Red}${Bold}${Blink}Q${No_Attributes}uit                     ${Dim}•${No_Attributes}"
+    echo "${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
 }
 
 # -----------------------------------------------------------------------------------------------------------------
@@ -111,7 +107,7 @@ askPassword() {
 # Terminal window size Menu - move to top/left corner and resize
 terminalWindowSizeMenu() {
     printf '\033[3;0;0t'
-    printf '\033[8;37;94t'
+    printf '\033[8;33;132t'
     clear
 }
 
@@ -195,6 +191,13 @@ uninstallingXCLT() {
     continueMessage
 }
 
+# Check DNS server
+checkDNS() {
+    echo "\n${F_Cyan}•${No_Attributes} Checking the DNS resolution:"
+    dig google.com +noall +answer +stats | awk '$3 == "IN" && $4 == "A"{ip=$5}/Query time:/{t=$4 " " $5}/SERVER:/{serv=$3} END{print "IP (Google): "ip, "\nRequest execution time: "t, "\nIP DNS server: "serv}'
+    echo "${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
+}
+
 # -----------------------------------------------------------------------------------------------------------------
 
 # Command Q: Quit SSToolkit
@@ -211,12 +214,14 @@ quitSSToolkit() {
 
 # Command R: Download Latest Release on GitHub
 downloadRelease() {
-    cd ~/Desktop; curl -OL -s https://github.com/Oleg-Chashko/SSToolkit/releases/latest/download/SSToolkit.sh
+    cd ~/Desktop
+    curl -OL -s https://github.com/Oleg-Chashko/SSToolkit/releases/latest/download/SSToolkit.sh
 }
 
 # Command N: Download Latest Nightly on GitHub
 downloadNightly() {
-    cd ~/Desktop; curl -OL -s https://raw.githubusercontent.com/Oleg-Chashko/SSToolkit/main/SSToolkit_Nightly/SSToolkit_Nightly.sh
+    cd ~/Desktop
+    curl -OL -s https://raw.githubusercontent.com/Oleg-Chashko/SSToolkit/main/SSToolkit_Nightly/SSToolkit_Nightly.sh
 }
 
 # Command A: About Project page on GitHub
@@ -284,38 +289,362 @@ netPingAndTracerouteTestIPv6() {
     continueMessage
 }
 
-# Command 3: ...............
-...............() {
-    terminalWindowSize55x100
-    echo "•${F_Red}${Bold} Command 3: You choose to ................${No_Attributes}\n"
-    echo "${F_Red}•${F_Green}${Bold} Testing...\n${No_Attributes}"
-
-    echo "\n${F_Red}•${F_Green}${Bold} Finish...${No_Attributes}"
-    continueMessage
-}
-
-# Command 4: ...............
-...............() {
+# Command 3: Custom DNS servers for Wi-Fi
+customDNSServersForWi-Fi() {
     terminalWindowSize55x140
-    echo "•${F_Red}${Bold} Command 4: You choose to Traceroute test IPv6.${No_Attributes}\n"
-    echo "${F_Red}•${F_Green}${Bold} Testing...\n${No_Attributes}"
+    echo "•${F_Red}${Bold} Command 3: You choose to Custom DNS servers for Wi-Fi.${No_Attributes}\n"
+    askPassword
+    # Menu DNS servers
+    echo " ${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
+    echo " ${Dim}•${No_Attributes} Modes filtering   ${Dim}|${No_Attributes} Description              ${F_Red}Note:${No_Attributes} Please don't use them unless you know what you're doing ${Dim}•${No_Attributes}"
+    echo " ${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
+    echo " ${Dim}•${No_Attributes}${F_Purple} Non-filtering     ${No_Attributes}${Dim}|${No_Attributes} Reliable and fast DNS lookup without blocking any specific categories                  ${Dim}•${No_Attributes}"
+    echo " ${Dim}•${No_Attributes}${F_Yellow} Threat Protection ${No_Attributes}${Dim}|${No_Attributes} Mode is for blocking ads, trackers, malware, ransomware, spyware and phishing websites ${Dim}•${No_Attributes}"
+    echo " ${Dim}•${No_Attributes}${F_Green} Family Protection ${No_Attributes}${Dim}|${No_Attributes} Does the same as (Threat Protection), but also blocks websites with adult content      ${Dim}•${No_Attributes}"
+    echo " ${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
+    echo ""
+    echo "      ${Dim}•••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
+    echo "      ${Dim}•${No_Attributes} DNS Providers ${Dim}|${No_Attributes} Modes filtering   ${Dim}|${No_Attributes} Primary DNS IPv4 ${Dim}|${No_Attributes} Secondary DNS IPv4 ${Dim}|${No_Attributes} Primary DNS IPv6     ${Dim}|${No_Attributes} Secondary DNS IPv6     ${Dim}•${No_Attributes}"
+    echo " ${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
+    echo " ${Dim}•${No_Attributes}${F_Red}${Bold}  1${No_Attributes} ${Dim}•${No_Attributes} Google Public     ${F_Purple}(Non-filtering) ${No_Attributes}${Dim}|${No_Attributes} 8.8.8.8          ${Dim}|${No_Attributes} 8.8.4.4            ${Dim}|${No_Attributes} 2001:4860:4860::8888 ${Dim}|${No_Attributes} 2001:4860:4860::8844   ${Dim}•${No_Attributes}"
+    echo " ${Dim}•${No_Attributes}${F_Red}${Bold}  2${No_Attributes} ${Dim}•${No_Attributes} Cloudflare        ${F_Purple}(Non-filtering) ${No_Attributes}${Dim}|${No_Attributes} 1.1.1.1          ${Dim}|${No_Attributes} 1.0.0.1            ${Dim}|${No_Attributes} 2606:4700:4700::1111 ${Dim}|${No_Attributes} 2606:4700:4700::1001   ${Dim}•${No_Attributes}"
+    echo " ${Dim}•${No_Attributes}${F_Red}${Bold}  3${No_Attributes} ${Dim}•${No_Attributes} Cisco Umbrella    ${F_Purple}(Non-filtering) ${No_Attributes}${Dim}|${No_Attributes} 208.67.222.222   ${Dim}|${No_Attributes} 208.67.220.220     ${Dim}|${No_Attributes} 2620:119:35::35      ${Dim}|${No_Attributes} 2620:119:53::53        ${Dim}•${No_Attributes}"
+    echo " ${Dim}•~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~•${No_Attributes}"
+    echo " ${Dim}•${No_Attributes}${F_Red}${Bold}  4${No_Attributes} ${Dim}•${No_Attributes} NeuStar       ${F_Yellow}(Threat Protection) ${No_Attributes}${Dim}|${No_Attributes} 156.154.70.2     ${Dim}|${No_Attributes} 156.154.71.2       ${Dim}|${No_Attributes} 2610:a1:1018::2      ${Dim}|${No_Attributes} 2610:a1:1019::2        ${Dim}•${No_Attributes}"
+    echo " ${Dim}•${No_Attributes}${F_Red}${Bold}  5${No_Attributes} ${Dim}•${No_Attributes} NeuStar       ${F_Green}(Family Protection) ${No_Attributes}${Dim}|${No_Attributes} 156.154.70.3     ${Dim}|${No_Attributes} 156.154.71.3       ${Dim}|${No_Attributes} 2610:a1:1018::3      ${Dim}|${No_Attributes} 2610:a1:1019::3        ${Dim}•${No_Attributes}"
+    echo " ${Dim}•~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~•${No_Attributes}"
+    echo " ${Dim}•${No_Attributes}${F_Red}${Bold}  6${No_Attributes} ${Dim}•${No_Attributes} CleanBrowsing ${F_Yellow}(Threat Protection) ${No_Attributes}${Dim}|${No_Attributes} 185.228.168.9    ${Dim}|${No_Attributes} 185.228.169.9      ${Dim}|${No_Attributes} 2a0d:2a00:1::2       ${Dim}|${No_Attributes} 2a0d:2a00:2::2         ${Dim}•${No_Attributes}"
+    echo " ${Dim}•${No_Attributes}${F_Red}${Bold}  7${No_Attributes} ${Dim}•${No_Attributes} CleanBrowsing ${F_Green}(Family Protection) ${No_Attributes}${Dim}|${No_Attributes} 185.228.168.168  ${Dim}|${No_Attributes} 185.228.169.168    ${Dim}|${No_Attributes} 2a0d:2a00:1::        ${Dim}|${No_Attributes} 2a0d:2a00:2::          ${Dim}•${No_Attributes}"
+    echo " ${Dim}•~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~•${No_Attributes}"
+    echo " ${Dim}•${No_Attributes}${F_Red}${Bold}  8${No_Attributes} ${Dim}•${No_Attributes} AdGuard       ${F_Yellow}(Threat Protection) ${No_Attributes}${Dim}|${No_Attributes} 94.140.14.14     ${Dim}|${No_Attributes} 94.140.15.15       ${Dim}|${No_Attributes} 2a10:50c0::ad1:ff    ${Dim}|${No_Attributes} 2a10:50c0::ad2:ff      ${Dim}•${No_Attributes}"
+    echo " ${Dim}•${No_Attributes}${F_Red}${Bold}  9${No_Attributes} ${Dim}•${No_Attributes} AdGuard       ${F_Green}(Family Protection) ${No_Attributes}${Dim}|${No_Attributes} 94.140.14.15     ${Dim}|${No_Attributes} 94.140.15.16       ${Dim}|${No_Attributes} 2a10:50c0::bad1:ff   ${Dim}|${No_Attributes} 2a10:50c0::bad2:ff     ${Dim}•${No_Attributes}"
+    echo " ${Dim}•~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~•${No_Attributes}"
+    echo " ${Dim}•${No_Attributes}${F_Red}${Bold} 10${No_Attributes} ${Dim}•${No_Attributes} YandexDNS     ${F_Yellow}(Threat Protection) ${No_Attributes}${Dim}|${No_Attributes} 77.88.8.88       ${Dim}|${No_Attributes} 77.88.8.2          ${Dim}|${No_Attributes} 2a02:6b8::feed:bad   ${Dim}|${No_Attributes} 2a02:6b8:0:1::feed:bad ${Dim}•${No_Attributes}"
+    echo " ${Dim}•${No_Attributes}${F_Red}${Bold} 11${No_Attributes} ${Dim}•${No_Attributes} YandexDNS     ${F_Green}(Family Protection) ${No_Attributes}${Dim}|${No_Attributes} 77.88.8.7        ${Dim}|${No_Attributes} 77.88.8.3          ${Dim}|${No_Attributes} 2a02:6b8::feed:a11   ${Dim}|${No_Attributes} 2a02:6b8:0:1::feed:a11 ${Dim}•${No_Attributes}"
+    echo " ${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
+    echo " ${Dim}•${No_Attributes}${F_Red}${Bold} 12${No_Attributes} ${Dim}•${No_Attributes} Show current DNS servers ${Dim}•${No_Attributes}"
+    echo " ${Dim}•${No_Attributes}${F_Red}${Bold} 13${No_Attributes} ${Dim}•${No_Attributes} Reset DNS servers        ${Dim}•${No_Attributes}"
+    echo " ${Dim}•••••••••••••••••••••••••••••••••${No_Attributes}"
 
-    echo "\n${F_Red}•${F_Green}${Bold} Finish...${No_Attributes}"
+    printf '
+ Please select an Command: '
+    read var
+
+    if [ "$var" -eq "1" ]; then
+        askPassword
+        networksetup -setdnsservers Wi-Fi 8.8.8.8 8.8.4.4 2001:4860:4860::8888 2001:4860:4860::8844
+        echo "\n•${F_Green} Cloudflare set as DNS server.${No_Attributes} Checking..."
+        echo "\n${F_Red}•${No_Attributes} Current DNS server:\n${F_Cyan}$(networksetup -getdnsservers Wi-Fi)${No_Attributes}"
+        # Flush DNS cache
+        sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder
+        checkDNS
+    fi
+
+    if [ "$var" -eq "2" ]; then
+        askPassword
+        networksetup -setdnsservers Wi-Fi 1.1.1.1 1.0.0.1 2606:4700:4700::1111 2606:4700:4700::1001
+        echo "\n•${F_Green} Google Public set as DNS server.${No_Attributes} Checking..."
+        echo "\n${F_Red}•${No_Attributes} Current DNS server:\n${F_Cyan}$(networksetup -getdnsservers Wi-Fi)${No_Attributes}"
+        # Flush DNS cache
+        sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder
+        checkDNS
+    fi
+
+    if [ "$var" -eq "3" ]; then
+        askPassword
+        networksetup -setdnsservers Wi-Fi 208.67.222.222 208.67.220.220 2620:119:35::35 2620:119:53::53
+        echo "\n•${F_Green} Cisco Umbrella set as DNS server.${No_Attributes} Checking..."
+        echo "\n${F_Red}•${No_Attributes} Current DNS server:\n${F_Cyan}$(networksetup -getdnsservers Wi-Fi)${No_Attributes}"
+        # Flush DNS cache
+        sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder
+        checkDNS
+    fi
+
+    if [ "$var" -eq "4" ]; then
+        askPassword
+        networksetup -setdnsservers Wi-Fi 156.154.70.2 156.154.71.2 2610:a1:1018::2 2610:a1:1019::2
+        echo "\n•${F_Green} NeuStar (Threat Protection) set as DNS server.${No_Attributes} Checking..."
+        echo "\n${F_Red}•${No_Attributes} Current DNS server:\n${F_Cyan}$(networksetup -getdnsservers Wi-Fi)${No_Attributes}"
+        # Flush DNS cache
+        sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder
+        checkDNS
+    fi
+
+    if [ "$var" -eq "5" ]; then
+        askPassword
+        networksetup -setdnsservers Wi-Fi 156.154.70.3 156.154.71.3 2610:a1:1018::3 2610:a1:1019::3
+        echo "\n•${F_Green} NeuStar (Family Protection) set as DNS server.${No_Attributes} Checking..."
+        echo "\n${F_Red}•${No_Attributes} Current DNS server:\n${F_Cyan}$(networksetup -getdnsservers Wi-Fi)${No_Attributes}"
+        # Flush DNS cache
+        sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder
+        checkDNS
+    fi
+
+    if [ "$var" -eq "6" ]; then
+        askPassword
+        networksetup -setdnsservers Wi-Fi 185.228.168.9 185.228.169.9 2a0d:2a00:1::2 2a0d:2a00:2::2
+        echo "\n•${F_Green} CleanBrowsing (Threat Protection) set as DNS server.${No_Attributes} Checking..."
+        echo "\n${F_Red}•${No_Attributes} Current DNS server:\n${F_Cyan}$(networksetup -getdnsservers Wi-Fi)${No_Attributes}"
+        # Flush DNS cache
+        sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder
+        checkDNS
+    fi
+
+    if [ "$var" -eq "7" ]; then
+        askPassword
+        networksetup -setdnsservers Wi-Fi 185.228.168.168 185.228.169.168 2a0d:2a00:1:: 2a0d:2a00:2::
+        echo "\n•${F_Green} CleanBrowsing (Family Protection) set as DNS server.${No_Attributes} Checking..."
+        echo "\n${F_Red}•${No_Attributes} Current DNS server:\n${F_Cyan}$(networksetup -getdnsservers Wi-Fi)${No_Attributes}"
+        # Flush DNS cache
+        sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder
+        checkDNS
+    fi
+
+    if [ "$var" -eq "8" ]; then
+        askPassword
+        networksetup -setdnsservers Wi-Fi 94.140.14.14 94.140.15.15 2a10:50c0::ad1:ff 2a10:50c0::ad2:ff
+        echo "\n•${F_Green} AdGuard (Threat Protection) set as DNS server.${No_Attributes} Checking..."
+        echo "\n${F_Red}•${No_Attributes} Current DNS server:\n${F_Cyan}$(networksetup -getdnsservers Wi-Fi)${No_Attributes}"
+        # Flush DNS cache
+        sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder
+        checkDNS
+    fi
+
+    if [ "$var" -eq "9" ]; then
+        askPassword
+        networksetup -setdnsservers Wi-Fi 94.140.14.15 94.140.15.16 2a10:50c0::bad1:ff 2a10:50c0::bad2:ff
+        echo "\n•${F_Green} AdGuard (Family Protection) set as DNS server.${No_Attributes} Checking..."
+        echo "\n${F_Red}•${No_Attributes} Current DNS server:\n${F_Cyan}$(networksetup -getdnsservers Wi-Fi)${No_Attributes}"
+        # Flush DNS cache
+        sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder
+        checkDNS
+    fi
+
+    if [ "$var" -eq "10" ]; then
+        askPassword
+        networksetup -setdnsservers Wi-Fi 77.88.8.88 77.88.8.2 2a02:6b8::feed:bad 2a02:6b8:0:1::feed:bad
+        echo "\n•${F_Green} YandexDNS (Threat Protection) set as DNS server.${No_Attributes} Checking..."
+        echo "\n${F_Red}•${No_Attributes} Current DNS server:\n${F_Cyan}$(networksetup -getdnsservers Wi-Fi)${No_Attributes}"
+        # Flush DNS cache
+        sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder
+        checkDNS
+    fi
+
+    if [ "$var" -eq "11" ]; then
+        askPassword
+        networksetup -setdnsservers Wi-Fi 77.88.8.7 77.88.8.3 2a02:6b8::feed:a11 2a02:6b8:0:1::feed:a11
+        echo "\n•${F_Green} YandexDNS (Family Protection) set as DNS server.${No_Attributes} Checking..."
+        echo "\n${F_Red}•${No_Attributes} Current DNS server:\n${F_Cyan}$(networksetup -getdnsservers Wi-Fi)${No_Attributes}"
+        # Flush DNS cache
+        sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder
+        checkDNS
+    fi
+
+    if [ "$var" -eq "12" ]; then
+        askPassword
+        echo "\n${F_Red}•${No_Attributes} Current DNS server:\n${F_Cyan}$(networksetup -getdnsservers Wi-Fi)${No_Attributes}"
+        checkDNS
+    fi
+
+    if [ "$var" -eq "13" ]; then
+        askPassword
+        echo "\n•${F_Red} Removing${No_Attributes} these DNS servers:\n${F_Cyan}$(networksetup -getdnsservers Wi-Fi)${No_Attributes}"
+        sleep 1
+        networksetup -setdnsservers Wi-Fi empty
+        echo "\n${F_Red}•${F_Green}${Bold} Done:${No_Attributes} DNS servers are reset to your DHCP."
+        # Flush DNS cache
+        sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder
+        checkDNS
+    fi
+
     continueMessage
 }
 
-# Command 5: ...............
-...............() {
-    terminalWindowSize40x140
-    echo "•${F_Red}${Bold} Command 5:${No_Attributes}"
+# Command 4: Custom DNS servers for Ethernet
+customDNSServersForEthernet() {
+    terminalWindowSize55x140
+    echo "•${F_Red}${Bold} Command 4: You choose to Custom DNS servers for Ethernet.${No_Attributes}\n"
+    askPassword
+    # Menu DNS servers
+    echo " ${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
+    echo " ${Dim}•${No_Attributes} Modes filtering   ${Dim}|${No_Attributes} Description              ${F_Red}Note:${No_Attributes} Please don't use them unless you know what you're doing ${Dim}•${No_Attributes}"
+    echo " ${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
+    echo " ${Dim}•${No_Attributes}${F_Purple} Non-filtering     ${No_Attributes}${Dim}|${No_Attributes} Reliable and fast DNS lookup without blocking any specific categories                  ${Dim}•${No_Attributes}"
+    echo " ${Dim}•${No_Attributes}${F_Yellow} Threat Protection ${No_Attributes}${Dim}|${No_Attributes} Mode is for blocking ads, trackers, malware, ransomware, spyware and phishing websites ${Dim}•${No_Attributes}"
+    echo " ${Dim}•${No_Attributes}${F_Green} Family Protection ${No_Attributes}${Dim}|${No_Attributes} Does the same as (Threat Protection), but also blocks websites with adult content      ${Dim}•${No_Attributes}"
+    echo " ${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
+    echo ""
+    echo "      ${Dim}•••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
+    echo "      ${Dim}•${No_Attributes} DNS Providers ${Dim}|${No_Attributes} Modes filtering   ${Dim}|${No_Attributes} Primary DNS IPv4 ${Dim}|${No_Attributes} Secondary DNS IPv4 ${Dim}|${No_Attributes} Primary DNS IPv6     ${Dim}|${No_Attributes} Secondary DNS IPv6     ${Dim}•${No_Attributes}"
+    echo " ${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
+    echo " ${Dim}•${No_Attributes}${F_Red}${Bold}  1${No_Attributes} ${Dim}•${No_Attributes} Google Public     ${F_Purple}(Non-filtering) ${No_Attributes}${Dim}|${No_Attributes} 8.8.8.8          ${Dim}|${No_Attributes} 8.8.4.4            ${Dim}|${No_Attributes} 2001:4860:4860::8888 ${Dim}|${No_Attributes} 2001:4860:4860::8844   ${Dim}•${No_Attributes}"
+    echo " ${Dim}•${No_Attributes}${F_Red}${Bold}  2${No_Attributes} ${Dim}•${No_Attributes} Cloudflare        ${F_Purple}(Non-filtering) ${No_Attributes}${Dim}|${No_Attributes} 1.1.1.1          ${Dim}|${No_Attributes} 1.0.0.1            ${Dim}|${No_Attributes} 2606:4700:4700::1111 ${Dim}|${No_Attributes} 2606:4700:4700::1001   ${Dim}•${No_Attributes}"
+    echo " ${Dim}•${No_Attributes}${F_Red}${Bold}  3${No_Attributes} ${Dim}•${No_Attributes} Cisco Umbrella    ${F_Purple}(Non-filtering) ${No_Attributes}${Dim}|${No_Attributes} 208.67.222.222   ${Dim}|${No_Attributes} 208.67.220.220     ${Dim}|${No_Attributes} 2620:119:35::35      ${Dim}|${No_Attributes} 2620:119:53::53        ${Dim}•${No_Attributes}"
+    echo " ${Dim}•~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~•${No_Attributes}"
+    echo " ${Dim}•${No_Attributes}${F_Red}${Bold}  4${No_Attributes} ${Dim}•${No_Attributes} NeuStar       ${F_Yellow}(Threat Protection) ${No_Attributes}${Dim}|${No_Attributes} 156.154.70.2     ${Dim}|${No_Attributes} 156.154.71.2       ${Dim}|${No_Attributes} 2610:a1:1018::2      ${Dim}|${No_Attributes} 2610:a1:1019::2        ${Dim}•${No_Attributes}"
+    echo " ${Dim}•${No_Attributes}${F_Red}${Bold}  5${No_Attributes} ${Dim}•${No_Attributes} NeuStar       ${F_Green}(Family Protection) ${No_Attributes}${Dim}|${No_Attributes} 156.154.70.3     ${Dim}|${No_Attributes} 156.154.71.3       ${Dim}|${No_Attributes} 2610:a1:1018::3      ${Dim}|${No_Attributes} 2610:a1:1019::3        ${Dim}•${No_Attributes}"
+    echo " ${Dim}•~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~•${No_Attributes}"
+    echo " ${Dim}•${No_Attributes}${F_Red}${Bold}  6${No_Attributes} ${Dim}•${No_Attributes} CleanBrowsing ${F_Yellow}(Threat Protection) ${No_Attributes}${Dim}|${No_Attributes} 185.228.168.9    ${Dim}|${No_Attributes} 185.228.169.9      ${Dim}|${No_Attributes} 2a0d:2a00:1::2       ${Dim}|${No_Attributes} 2a0d:2a00:2::2         ${Dim}•${No_Attributes}"
+    echo " ${Dim}•${No_Attributes}${F_Red}${Bold}  7${No_Attributes} ${Dim}•${No_Attributes} CleanBrowsing ${F_Green}(Family Protection) ${No_Attributes}${Dim}|${No_Attributes} 185.228.168.168  ${Dim}|${No_Attributes} 185.228.169.168    ${Dim}|${No_Attributes} 2a0d:2a00:1::        ${Dim}|${No_Attributes} 2a0d:2a00:2::          ${Dim}•${No_Attributes}"
+    echo " ${Dim}•~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~•${No_Attributes}"
+    echo " ${Dim}•${No_Attributes}${F_Red}${Bold}  8${No_Attributes} ${Dim}•${No_Attributes} AdGuard       ${F_Yellow}(Threat Protection) ${No_Attributes}${Dim}|${No_Attributes} 94.140.14.14     ${Dim}|${No_Attributes} 94.140.15.15       ${Dim}|${No_Attributes} 2a10:50c0::ad1:ff    ${Dim}|${No_Attributes} 2a10:50c0::ad2:ff      ${Dim}•${No_Attributes}"
+    echo " ${Dim}•${No_Attributes}${F_Red}${Bold}  9${No_Attributes} ${Dim}•${No_Attributes} AdGuard       ${F_Green}(Family Protection) ${No_Attributes}${Dim}|${No_Attributes} 94.140.14.15     ${Dim}|${No_Attributes} 94.140.15.16       ${Dim}|${No_Attributes} 2a10:50c0::bad1:ff   ${Dim}|${No_Attributes} 2a10:50c0::bad2:ff     ${Dim}•${No_Attributes}"
+    echo " ${Dim}•~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~•${No_Attributes}"
+    echo " ${Dim}•${No_Attributes}${F_Red}${Bold} 10${No_Attributes} ${Dim}•${No_Attributes} YandexDNS     ${F_Yellow}(Threat Protection) ${No_Attributes}${Dim}|${No_Attributes} 77.88.8.88       ${Dim}|${No_Attributes} 77.88.8.2          ${Dim}|${No_Attributes} 2a02:6b8::feed:bad   ${Dim}|${No_Attributes} 2a02:6b8:0:1::feed:bad ${Dim}•${No_Attributes}"
+    echo " ${Dim}•${No_Attributes}${F_Red}${Bold} 11${No_Attributes} ${Dim}•${No_Attributes} YandexDNS     ${F_Green}(Family Protection) ${No_Attributes}${Dim}|${No_Attributes} 77.88.8.7        ${Dim}|${No_Attributes} 77.88.8.3          ${Dim}|${No_Attributes} 2a02:6b8::feed:a11   ${Dim}|${No_Attributes} 2a02:6b8:0:1::feed:a11 ${Dim}•${No_Attributes}"
+    echo " ${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
+    echo " ${Dim}•${No_Attributes}${F_Red}${Bold} 12${No_Attributes} ${Dim}•${No_Attributes} Show current DNS servers ${Dim}•${No_Attributes}"
+    echo " ${Dim}•${No_Attributes}${F_Red}${Bold} 13${No_Attributes} ${Dim}•${No_Attributes} Reset DNS servers        ${Dim}•${No_Attributes}"
+    echo " ${Dim}•••••••••••••••••••••••••••••••••${No_Attributes}"
+
+    printf '
+ Please select an Command: '
+    read var
+
+    if [ "$var" -eq "1" ]; then
+        askPassword
+        networksetup -setdnsservers Ethernet 8.8.8.8 8.8.4.4 2001:4860:4860::8888 2001:4860:4860::8844
+        echo "\n•${F_Green} Cloudflare set as DNS server.${No_Attributes} Checking..."
+        echo "\n${F_Red}•${No_Attributes} Current DNS server:\n${F_Cyan}$(networksetup -getdnsservers Ethernet)${No_Attributes}"
+        # Flush DNS cache
+        sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder
+        checkDNS
+    fi
+
+    if [ "$var" -eq "2" ]; then
+        askPassword
+        networksetup -setdnsservers Ethernet 1.1.1.1 1.0.0.1 2606:4700:4700::1111 2606:4700:4700::1001
+        echo "\n•${F_Green} Google Public set as DNS server.${No_Attributes} Checking..."
+        echo "\n${F_Red}•${No_Attributes} Current DNS server:\n${F_Cyan}$(networksetup -getdnsservers Ethernet)${No_Attributes}"
+        # Flush DNS cache
+        sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder
+        checkDNS
+    fi
+
+    if [ "$var" -eq "3" ]; then
+        askPassword
+        networksetup -setdnsservers Ethernet 208.67.222.222 208.67.220.220 2620:119:35::35 2620:119:53::53
+        echo "\n•${F_Green} Cisco Umbrella set as DNS server.${No_Attributes} Checking..."
+        echo "\n${F_Red}•${No_Attributes} Current DNS server:\n${F_Cyan}$(networksetup -getdnsservers Ethernet)${No_Attributes}"
+        # Flush DNS cache
+        sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder
+        checkDNS
+    fi
+
+    if [ "$var" -eq "4" ]; then
+        askPassword
+        networksetup -setdnsservers Ethernet 156.154.70.2 156.154.71.2 2610:a1:1018::2 2610:a1:1019::2
+        echo "\n•${F_Green} NeuStar (Threat Protection) set as DNS server.${No_Attributes} Checking..."
+        echo "\n${F_Red}•${No_Attributes} Current DNS server:\n${F_Cyan}$(networksetup -getdnsservers Ethernet)${No_Attributes}"
+        # Flush DNS cache
+        sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder
+        checkDNS
+    fi
+
+    if [ "$var" -eq "5" ]; then
+        askPassword
+        networksetup -setdnsservers Ethernet 156.154.70.3 156.154.71.3 2610:a1:1018::3 2610:a1:1019::3
+        echo "\n•${F_Green} NeuStar (Family Protection) set as DNS server.${No_Attributes} Checking..."
+        echo "\n${F_Red}•${No_Attributes} Current DNS server:\n${F_Cyan}$(networksetup -getdnsservers Ethernet)${No_Attributes}"
+        # Flush DNS cache
+        sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder
+        checkDNS
+    fi
+
+    if [ "$var" -eq "6" ]; then
+        askPassword
+        networksetup -setdnsservers Ethernet 185.228.168.9 185.228.169.9 2a0d:2a00:1::2 2a0d:2a00:2::2
+        echo "\n•${F_Green} CleanBrowsing (Threat Protection) set as DNS server.${No_Attributes} Checking..."
+        echo "\n${F_Red}•${No_Attributes} Current DNS server:\n${F_Cyan}$(networksetup -getdnsservers Ethernet)${No_Attributes}"
+        # Flush DNS cache
+        sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder
+        checkDNS
+    fi
+
+    if [ "$var" -eq "7" ]; then
+        askPassword
+        networksetup -setdnsservers Ethernet 185.228.168.168 185.228.169.168 2a0d:2a00:1:: 2a0d:2a00:2::
+        echo "\n•${F_Green} CleanBrowsing (Family Protection) set as DNS server.${No_Attributes} Checking..."
+        echo "\n${F_Red}•${No_Attributes} Current DNS server:\n${F_Cyan}$(networksetup -getdnsservers Ethernet)${No_Attributes}"
+        # Flush DNS cache
+        sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder
+        checkDNS
+    fi
+
+    if [ "$var" -eq "8" ]; then
+        askPassword
+        networksetup -setdnsservers Ethernet 94.140.14.14 94.140.15.15 2a10:50c0::ad1:ff 2a10:50c0::ad2:ff
+        echo "\n•${F_Green} AdGuard (Threat Protection) set as DNS server.${No_Attributes} Checking..."
+        echo "\n${F_Red}•${No_Attributes} Current DNS server:\n${F_Cyan}$(networksetup -getdnsservers Ethernet)${No_Attributes}"
+        # Flush DNS cache
+        sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder
+        checkDNS
+    fi
+
+    if [ "$var" -eq "9" ]; then
+        askPassword
+        networksetup -setdnsservers Ethernet 94.140.14.15 94.140.15.16 2a10:50c0::bad1:ff 2a10:50c0::bad2:ff
+        echo "\n•${F_Green} AdGuard (Family Protection) set as DNS server.${No_Attributes} Checking..."
+        echo "\n${F_Red}•${No_Attributes} Current DNS server:\n${F_Cyan}$(networksetup -getdnsservers Ethernet)${No_Attributes}"
+        # Flush DNS cache
+        sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder
+        checkDNS
+    fi
+
+    if [ "$var" -eq "10" ]; then
+        askPassword
+        networksetup -setdnsservers Ethernet 77.88.8.88 77.88.8.2 2a02:6b8::feed:bad 2a02:6b8:0:1::feed:bad
+        echo "\n•${F_Green} YandexDNS (Threat Protection) set as DNS server.${No_Attributes} Checking..."
+        echo "\n${F_Red}•${No_Attributes} Current DNS server:\n${F_Cyan}$(networksetup -getdnsservers Ethernet)${No_Attributes}"
+        # Flush DNS cache
+        sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder
+        checkDNS
+    fi
+
+    if [ "$var" -eq "11" ]; then
+        askPassword
+        networksetup -setdnsservers Ethernet 77.88.8.7 77.88.8.3 2a02:6b8::feed:a11 2a02:6b8:0:1::feed:a11
+        echo "\n•${F_Green} YandexDNS (Family Protection) set as DNS server.${No_Attributes} Checking..."
+        echo "\n${F_Red}•${No_Attributes} Current DNS server:\n${F_Cyan}$(networksetup -getdnsservers Ethernet)${No_Attributes}"
+        # Flush DNS cache
+        sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder
+        checkDNS
+    fi
+
+    if [ "$var" -eq "12" ]; then
+        askPassword
+        echo "\n${F_Red}•${No_Attributes} Current DNS server:\n${F_Cyan}$(networksetup -getdnsservers Ethernet)${No_Attributes}"
+        checkDNS
+    fi
+
+    if [ "$var" -eq "13" ]; then
+        askPassword
+        echo "\n•${F_Red} Removing${No_Attributes} these DNS servers:\n${F_Cyan}$(networksetup -getdnsservers Ethernet)${No_Attributes}"
+        sleep 1
+        networksetup -setdnsservers Ethernet empty
+        echo "\n${F_Red}•${F_Green}${Bold} Done:${No_Attributes} DNS servers are reset to your DHCP."
+        # Flush DNS cache
+        sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder
+        checkDNS
+    fi
 
     continueMessage
 }
 
-# Command 6: ...............
-...............() {
-    terminalWindowSize55x100
-    echo "•${F_Red}${Bold} Command 6: You choose to get the Show Local Network information.${No_Attributes}\n"
+# Command 5: -------------
+-------------() {
+    terminalWindowSize55x140
+    echo "•${F_Red}${Bold} Command 5: You choose to -------------.${No_Attributes}\n"
+    askPassword
+
+    continueMessage
+}
+
+# Command 6: -------------
+-------------() {
+    terminalWindowSize55x140
+    echo "•${F_Red}${Bold} Command 6: You choose to -------------.${No_Attributes}\n"
+    askPassword
 
     continueMessage
 }
@@ -606,22 +935,22 @@ startScript() {
 
         3)
             clear
-            ...............
+            customDNSServersForWi-Fi
             ;;
 
         4)
             clear
-            ...............
+            customDNSServersForEthernet
             ;;
 
         5)
             clear
-            ...............
+            -------------
             ;;
 
         6)
             clear
-            ...............
+            -------------
             ;;
 
         7)
