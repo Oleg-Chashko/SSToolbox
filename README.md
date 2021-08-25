@@ -89,7 +89,7 @@
 |*About*|
 |**`A`**|About GitHub|
 |*Quit*|
-|**`Q`**|Quit|
+|**`Q`**|Deleting terminal command history and terminal to quit|
 
 ## Download
 
