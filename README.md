@@ -85,7 +85,7 @@
 |**`I`**|Installing the Xcode CLT (Command Line Tools)|
 |**`U`**|Uninstalling the Xcode CLT (Command Line Tools)|
 |*Download*|
-|**`R`** / **`N`**|Release/Nightly Download|
+|**`R`** / **`N`**|Release/Nightly Download to your Mac's desktop|
 |*About*|
 |**`A`**|About GitHub|
 |*Quit*|
