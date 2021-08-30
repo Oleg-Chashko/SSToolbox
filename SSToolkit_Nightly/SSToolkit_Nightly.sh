@@ -781,8 +781,8 @@ searchRoutersLocalNetworks() {
     echo "\n${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
     echo "•${F_Red} Finding Routers on Local Networks...\n${No_Attributes}"
     for i in "${arr[@]}"; do
-        time=$(ping -i 0.1 -c 4 "$i" | tail -1 | awk '{print $4}')
-        echo "$i | response time | $time ms\n"
+        time=$(ping -W 800 -i 0.1 -c 4 "$i" | tail -1 | awk '{print $4}')
+        echo "$i | response time | $time ms"
     done
     echo "•${F_Red} Finish...${No_Attributes}"
     continueMessage
