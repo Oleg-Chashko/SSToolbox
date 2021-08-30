@@ -81,12 +81,14 @@ showMenu() {
     echo "${Dim}•${No_Attributes}${F_Cyan} Command: ${F_Red}${Bold}19${No_Attributes} Remove app from quarantine                                                                                           ${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Cyan} Command: ${F_Red}${Bold}20${No_Attributes} Self-sign the app. Require Xcode or Xcode CLT (Command Line Tools)                                                   ${Dim}•${No_Attributes}"
     echo "${Dim}• ························································································································· ${F_Green}${Bold}Tweaks ${No_Attributes}${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Cyan} Command: ${F_Red}${Bold}21${No_Attributes} Show Hidden Files                                                                ${Dim}•••••••••••••••••••••••••••••••••••••${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Cyan} Command: ${F_Red}${Bold}22${No_Attributes} Don't Show Hidden Files                                                          ${Dim}•${No_Attributes}${F_Yellow} Command: ${F_Red}${Bold}I${No_Attributes}nstalling Xcode CLT     ${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Cyan} Command: ${F_Red}${Bold}23${No_Attributes} Show all File Extensions                                                         ${Dim}•${No_Attributes}${F_Yellow} Command: ${F_Red}${Bold}U${No_Attributes}ninstalling Xcode CLT   ${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Cyan} Command: ${F_Red}${Bold}24${No_Attributes} Don't Show all File Extensions                                                   ${Dim}•${No_Attributes}${F_Yellow} Command: ${F_Red}${Bold}R${No_Attributes}elease/${F_Red}${Bold}N${No_Attributes}ightly Download ${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Cyan} Command: ${F_Red}${Bold}25${No_Attributes} Show Attachments as Icons in Apple Mail App                                      ${Dim}•${No_Attributes}${F_Yellow} Command: ${F_Red}${Bold}A${No_Attributes}bout GitHub             ${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Cyan} Command: ${F_Red}${Bold}26${No_Attributes} Don't Show Attachments as Icons in Apple Mail App                                ${Dim}•${No_Attributes}${F_Yellow} Command: ${F_Red}${Bold}${Blink}Q${No_Attributes}uit                     ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Cyan} Command: ${F_Red}${Bold}21${No_Attributes} Show Hidden Files                                                                                                    ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Cyan} Command: ${F_Red}${Bold}22${No_Attributes} Don't Show Hidden Files                                                                                              ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Cyan} Command: ${F_Red}${Bold}23${No_Attributes} Show all File Extensions                                                         ${Dim}•••••••••••••••••••••••••••••••••••••${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Cyan} Command: ${F_Red}${Bold}24${No_Attributes} Don't Show all File Extensions                                                   ${Dim}•${No_Attributes}${F_Yellow} Command: ${F_Red}${Bold}I${No_Attributes}nstalling Xcode CLT     ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Cyan} Command: ${F_Red}${Bold}25${No_Attributes} Show Attachments as Icons in Apple Mail App                                      ${Dim}•${No_Attributes}${F_Yellow} Command: ${F_Red}${Bold}U${No_Attributes}ninstalling Xcode CLT   ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Cyan} Command: ${F_Red}${Bold}26${No_Attributes} Don't Show Attachments as Icons in Apple Mail App                                ${Dim}•${No_Attributes}${F_Yellow} Command: ${F_Red}${Bold}R${No_Attributes}elease/${F_Red}${Bold}N${No_Attributes}ightly Download ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Cyan} Command: ${F_Red}${Bold}27${No_Attributes} Show the full path in the Finder Title window                                    ${Dim}•${No_Attributes}${F_Yellow} Command: ${F_Red}${Bold}A${No_Attributes}bout GitHub             ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Cyan} Command: ${F_Red}${Bold}28${No_Attributes} Don't Show the full path in the Finder Title window                              ${Dim}•${No_Attributes}${F_Yellow} Command: ${F_Red}${Bold}${Blink}Q${No_Attributes}uit                     ${Dim}•${No_Attributes}"
     echo "${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
 }
 
@@ -107,7 +109,7 @@ askPassword() {
 # Terminal window size Menu - move to top/left corner and resize
 terminalWindowSizeMenu() {
     printf '\033[3;0;0t'
-    printf '\033[8;33;132t'
+    printf '\033[8;35;132t'
     clear
 }
 
@@ -163,6 +165,7 @@ terminalWindowSize55x190() {
 continueMessage() {
     echo "\n Press any key to return to the menu."
     read
+    clear
 }
 
 # Shows invalid Command message
@@ -187,7 +190,7 @@ uninstallingXCLT() {
     echo "•${F_Red}${Bold} Command U: You choose to Uninstall the Xcode Command Line Tools.${No_Attributes}\n"
     askPassword
     sudo rm -rf /Library/Developer/CommandLineTools
-    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
+    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
     continueMessage
 }
 
@@ -694,7 +697,7 @@ enableFirewall() {
     echo "•${F_Red}${Bold} Command 8: You choose to Enable firewall.${No_Attributes}\n"
     askPassword
     sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setglobalstate on
-    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
+    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
     continueMessage
 }
 
@@ -704,7 +707,7 @@ disableFirewall() {
     echo "•${F_Red}${Bold} Command 9: You choose to Disable firewall.${No_Attributes}\n"
     askPassword
     sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setglobalstate off
-    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
+    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
     continueMessage
 }
 
@@ -714,7 +717,7 @@ blockAllEnable() {
     echo "•${F_Red}${Bold} Command 10: You choose to Enables Block all connections.${No_Attributes}\n"
     askPassword
     sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setblockall on
-    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
+    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
     continueMessage
 }
 
@@ -724,7 +727,7 @@ blockAllDisable() {
     echo "•${F_Red}${Bold} Command 11: You choose to Disables Block all connections.${No_Attributes}\n"
     askPassword
     sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setblockall off
-    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
+    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
     continueMessage
 }
 
@@ -740,7 +743,7 @@ wifiShowPassword() {
         ssid=$1
     fi
     security find-generic-password -D "AirPort network password" -a "$ssid" -gw
-    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
+    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
     continueMessage
 }
 
@@ -764,7 +767,7 @@ settingDefaultComputerName() {
     scutil --get HostName | awk '{print "Hostname: ", $1}'
     scutil --get LocalHostName | awk '{print "local Hostname: ", $1}'
     defaults read /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName | awk '{print "NetBIOS Name: " $1}'
-    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
+    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
     continueMessage
 }
 
@@ -854,7 +857,7 @@ showHiddenFiles() {
     terminalWindowSize40x100
     echo "•${F_Red}${Bold} Command 21: You choose to show hidden files.${No_Attributes}"
     defaults write com.apple.finder AppleShowAllFiles true && killall Finder
-    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
+    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
     continueMessage
 }
 
@@ -863,7 +866,7 @@ noShowHiddenFiles() {
     terminalWindowSize40x100
     echo "•${F_Red}${Bold} Command 22: You choose to don't show hidden files.${No_Attributes}"
     defaults write com.apple.finder AppleShowAllFiles false && killall Finder
-    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
+    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
     continueMessage
 }
 
@@ -872,7 +875,7 @@ showExtensionsFiles() {
     terminalWindowSize40x100
     echo "•${F_Red}${Bold} Command 23: You choose to show all file extensions.${No_Attributes}"
     defaults write NSGlobalDomain AppleShowAllExtensions true && killall Finder
-    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
+    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
     continueMessage
 }
 
@@ -881,7 +884,7 @@ noShowExtensionsFiles() {
     terminalWindowSize40x100
     echo "•${F_Red}${Bold} Command 24: You choose to don't show all file extensions.${No_Attributes}"
     defaults write NSGlobalDomain AppleShowAllExtensions false && killall Finder
-    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
+    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
     continueMessage
 }
 
@@ -890,7 +893,7 @@ showAttachmentsAsIcons() {
     terminalWindowSize40x100
     echo "•${F_Red}${Bold} Command 25: You choose to show Attachments as Icons in Apple Mail App.${No_Attributes}\n"
     defaults write com.apple.mail DisableInlineAttachmentViewing -boolean yes
-    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
+    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
     continueMessage
 }
 
@@ -899,7 +902,25 @@ noShowAttachmentsAsIcons() {
     terminalWindowSize40x100
     echo "•${F_Red}${Bold} Command 26: You choose to don't show Attachments as Icons in Apple Mail App.${No_Attributes}\n"
     defaults write com.apple.mail DisableInlineAttachmentViewing -boolean no
-    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
+    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
+    continueMessage
+}
+
+# Command 27: Show the full path in the Finder Title window
+showTheFullPathInTheFinderTitleWindow() {
+    terminalWindowSize40x100
+    echo "•${F_Red}${Bold} Command 23: You choose to Show the full path in the Finder Title window.${No_Attributes}"
+    defaults write com.apple.finder _FXShowPosixPathInTitle -bool true && killall Finder
+    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
+    continueMessage
+}
+
+# Command 28: Don't Show the full path in the Finder Title window
+noShowTheFullPathInTheFinderTitleWindow() {
+    terminalWindowSize40x100
+    echo "•${F_Red}${Bold} Command 24: You choose to Don't Show the full path in the Finder Title window.${No_Attributes}"
+    defaults write com.apple.finder _FXShowPosixPathInTitle -bool false && killall Finder
+    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
     continueMessage
 }
 
@@ -1051,6 +1072,16 @@ startScript() {
         26)
             clear
             noShowAttachmentsAsIcons
+            ;;
+
+        27)
+            clear
+            showTheFullPathInTheFinderTitleWindow
+            ;;
+
+        28)
+            clear
+            noShowTheFullPathInTheFinderTitleWindow
             ;;
 
         Q)
