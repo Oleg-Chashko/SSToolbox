@@ -836,7 +836,7 @@ disableGateKeeper() {
 
 # Command 19: Remove app from GateKeeper quarantine
 removeAppFromGateKeeper() {
-    terminalWindowSize40x140
+    terminalWindowSize40x100
     echo "•${F_Red}${Bold} Command 19: You chose to remove the app from GateKeeper quarantine.${No_Attributes}\n"
     read "? Drag & drop the app on this window and then press Return: " FILEPATH
     askPassword
