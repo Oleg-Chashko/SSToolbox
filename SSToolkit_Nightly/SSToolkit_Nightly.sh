@@ -246,9 +246,9 @@ netPingAndTracerouteTestIPv4() {
     echo "${F_Red}•${F_Green}${Bold} Ping Testing...\n${No_Attributes}"
     for i in "${arr[@]}"; do
         time=$(ping -i 0.1 -c 4 "$i" | tail -1 | awk '{print $4}')
-        echo "$i | response time | $time ms\n"
+        echo "$i | response time | $time ms"
     done
-    echo "${F_Red}•${F_Green}${Bold} Finish...${No_Attributes}"
+    echo "\n${F_Red}•${F_Green}${Bold} Finish...${No_Attributes}"
     echo "\n${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
     # Traceroute test
     echo "${F_Red}•${F_Green}${Bold} Traceroute Testing...\n${No_Attributes}"
@@ -275,9 +275,9 @@ netPingAndTracerouteTestIPv6() {
     echo "${F_Red}•${F_Green}${Bold} Testing...\n${No_Attributes}"
     for i in "${arr[@]}"; do
         time=$(ping6 -i 0.1 -c 4 "$i" | tail -1 | awk '{print $4}')
-        echo "$i | response time | $time ms\n"
+        echo "$i | response time | $time ms"
     done
-    echo "${F_Red}•${F_Green}${Bold} Finish...${No_Attributes}"
+    echo "\n${F_Red}•${F_Green}${Bold} Finish...${No_Attributes}"
     echo "\n${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
     # Traceroute test
     echo "${F_Red}•${F_Green}${Bold} Traceroute Testing...\n${No_Attributes}"
