@@ -63,7 +63,7 @@ showMenu() {
     echo "${Dim}•${No_Attributes}${F_Cyan} Command: ${F_Red}${Bold} 2${No_Attributes} Ping and Traceroute test IPv6: (Google, Youtube, Facebook, Instagram, Spotify, Yahoo.com, Yandex.ru)                 ${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Cyan} Command: ${F_Red}${Bold} 3${No_Attributes} Custom DNS servers for Wi-Fi                                                                                         ${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Cyan} Command: ${F_Red}${Bold} 4${No_Attributes} Custom DNS servers for Ethernet                                                                                      ${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Cyan} Command: ${F_Red}${Bold} 5${No_Attributes} -------------                                                                                                        ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Cyan} Command: ${F_Red}${Bold} 5${No_Attributes} Release and Renew DHCP (Requires a reboot)                                                                           ${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Cyan} Command: ${F_Red}${Bold} 6${No_Attributes} -------------                                                                                                        ${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Cyan} Command: ${F_Red}${Bold} 7${No_Attributes} Show Firewall, Local Network and Wireless Networks information                                                       ${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Cyan} Command: ${F_Red}${Bold} 8${No_Attributes} Firewall Enable                                                                                                      ${Dim}•${No_Attributes}"
@@ -642,12 +642,30 @@ customDNSServersForEthernet() {
     continueMessage
 }
 
-# Command 5: -------------
--------------() {
-    terminalWindowSize55x140
-    echo "•${F_Red}${Bold} Command 5: You choose to -------------.${No_Attributes}\n"
+# Command 5: Release and Renew DHCP
+releaseAndRenewDHCP() {
+    terminalWindowSize40x100
     askPassword
-
+    echo "•${F_Red}${Bold} Command 1: You choose to Release and Renew DHCP. (Requires a reboot)${No_Attributes}"
+    # Release the DHCP assigned IP, DNS server, subnet mask, router/gateway
+    echo "\n•${F_Red}${Bold} Release the DHCP assigned IP, DNS server, subnet mask, router/gateway...${No_Attributes}\n"
+    sudo ipconfig set en0 DHCP
+    sleep 1 && echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
+    # Renew the DHCP assigned IP, DNS server, subnet mask, router/gateway
+    echo "•${F_Red}${Bold} Renew the DHCP assigned IP, DNS server, subnet mask, router/gateway...${No_Attributes}\n"
+    sudo ipconfig set en1 DHCP
+    sleep 1 && echo "${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
+    # Flush DNS cache
+    echo "•${F_Red}${Bold} Flushing DNS...${No_Attributes}\n"
+    sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder
+    sleep 1 && echo "${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
+    # Deleting macOS terminal command history
+    echo "•${F_Red} Deleting macOS terminal command history.${No_Attributes}\n"
+    echo "•${F_Red} You choose to Restart computer.${No_Attributes}"
+    rm -rf .zsh_sessions
+    rm -rf .zsh_history
+    sleep 1 && echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
+    osascript -e 'tell app "loginwindow" to «event aevtrrst»'
     continueMessage
 }
 
@@ -799,7 +817,7 @@ searchRoutersLocalNetworks() {
 # Command 15: Flush DNS cache
 flushesLocalDNS() {
     terminalWindowSize40x100
-    echo "•${F_Red}${Bold} Command 15: Flushing dns...${No_Attributes}"
+    echo "•${F_Red}${Bold} Command 15: Flushing DNS...${No_Attributes}"
     askPassword
     sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder
     echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
@@ -974,7 +992,7 @@ startScript() {
 
         5)
             clear
-            -------------
+            releaseAndRenewDHCP
             ;;
 
         6)
