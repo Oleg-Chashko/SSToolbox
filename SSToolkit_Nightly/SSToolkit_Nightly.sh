@@ -239,7 +239,7 @@ netPingAndTracerouteTestIPv4() {
     terminalWindowSize55x100
     echo "•${F_Red}${Bold} Command 1: You choose to net Ping and Traceroute test IPv4.${No_Attributes}"
     # Ping test
-    declare -a arr=("Google.com" "Youtube.com" "Facebook.com" "Instagram.com" "Spotify.com" "Yahoo.com" "Yandex.ru")
+    declare -a arr=("Google.com" "Youtube.com" "Facebook.com" "Instagram.com" "Spotify.com" "Yahoo.com" "Yandex.com")
     echo "\n${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
     echo "${Dim}•${No_Attributes} Server- or IP- address | Response time: Minimum/Average/Maximum/Standard_deviation ${Dim}•${No_Attributes}"
     echo "\n${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
@@ -262,7 +262,7 @@ netPingAndTracerouteTestIPv4() {
     echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
     traceroute -w 1 -m 30 Yahoo.com
     echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
-    traceroute -w 1 -m 30 Yandex.ru
+    traceroute -w 1 -m 30 Yandex.com
     echo "\n${F_Red}•${F_Green}${Bold} Finish...${No_Attributes}"
     continueMessage
 }
@@ -272,7 +272,7 @@ netPingAndTracerouteTestIPv6() {
     terminalWindowSize55x140
     echo "•${F_Red}${Bold} Command 2: You choose to net Ping and Traceroute test IPv6.${No_Attributes}"
     # Ping test
-    declare -a arr=("Google.com" "Youtube.com" "Facebook.com" "Instagram.com" "Spotify.com" "Yahoo.com" "Yandex.ru")
+    declare -a arr=("Google.com" "Youtube.com" "Facebook.com" "Instagram.com" "Spotify.com" "Yahoo.com" "Yandex.com")
     echo "\n${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
     echo "${Dim}•${No_Attributes} Server- or IP- address | Response time: Minimum/Average/Maximum/Standard_deviation ${Dim}•${No_Attributes}"
     echo "\n${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
@@ -295,7 +295,7 @@ netPingAndTracerouteTestIPv6() {
     echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
     traceroute6 -w 1 -m 30 Yahoo.com
     echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
-    traceroute6 -w 1 -m 30 Yandex.ru
+    traceroute6 -w 1 -m 30 Yandex.com
     echo "\n${F_Red}•${F_Green}${Bold} Finish...${No_Attributes}"
     continueMessage
 }
