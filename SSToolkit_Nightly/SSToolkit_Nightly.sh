@@ -683,35 +683,38 @@ showNetworksInformation() {
     terminalWindowSize55x140
     echo "•${F_Red}${Bold} Command 7: Show Firewall, Local Network, Wireless Networks information.${No_Attributes}"
     # Show Firewall information
-    echo "\n${F_Red}•${F_Green}${Bold} Show Firewall information.${No_Attributes}\n"
+    echo "\n${F_Red}•${F_Green}${Bold} Show Firewall information.${No_Attributes}"
     /usr/libexec/ApplicationFirewall/socketfilterfw --getglobalstate
-    echo "\n${F_Red}•${F_Green}${Bold} Show whether block all is enabled or not.${No_Attributes}\n"
+    echo "\n${F_Red}•${F_Green}${Bold} Show whether block all is enabled or not.${No_Attributes}"
     /usr/libexec/ApplicationFirewall/socketfilterfw --getblockall
-    echo "\n${F_Red}•${F_Green}${Bold} List applications handled by firewall.${No_Attributes}\n"
+    echo "\n${F_Red}•${F_Green}${Bold} List applications handled by firewall.${No_Attributes}"
     /usr/libexec/ApplicationFirewall/socketfilterfw --list
     echo "${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
     echo "\n${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
     # Show Wireless Networks information
     echo "•${F_Red}${Bold} Show Wireless Networks information.${No_Attributes}"
-    echo "\n${F_Red}•${F_Green}${Bold} Wireless Networks information.${No_Attributes}\n"
+    echo "\n${F_Red}•${F_Green}${Bold} Wireless Networks information.${No_Attributes}"
     /System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport -I
-    echo "\n${F_Red}•${F_Green}${Bold} Scan Wireless Networks.${No_Attributes}\n"
+    echo "\n${F_Red}•${F_Green}${Bold} Scan Wireless Networks.${No_Attributes}"
     /System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport -s
     echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
     echo "\n${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
     # Show Local Network information
     echo "•${F_Red}${Bold} Show Local Network information.${No_Attributes}"
-    echo "\n${F_Red}•${F_Green}${Bold} Local Network information.${No_Attributes}\n"
-    networksetup -listnetworkserviceorder | grep en0 | awk '{print "Network device: " $1, $2, $3, $4, $5}'
+    echo "\n${F_Red}•${F_Green}${Bold} Local Network information.${No_Attributes}"
+    networksetup -listnetworkserviceorder | grep en0
     ipconfig getifaddr en0 | awk '{print "IP address: " $1}'
     networksetup -getmacaddress en0 | awk '{print "MAC address: " $3}'
+    # ComputerName, HostName, LocalHostName and NetBIOSName
     scutil --get ComputerName | awk '{print "Computer Name: ", $1}'
     scutil --get HostName | awk '{print "Hostname: ", $1}'
     scutil --get LocalHostName | awk '{print "local Hostname: ", $1}'
     defaults read /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName | awk '{print "NetBIOS Name: " $1}'
+    # Show list all network devices on mac
     echo "\n${F_Red}•${F_Green}${Bold} Show list all network devices on mac.${No_Attributes}"
     networksetup -listallhardwareports
-    echo "\n${F_Red}•${F_Green}${Bold} Show IP Addresses of Devices on a Local Network.${No_Attributes}\n"
+    # Show IP Addresses of Devices on a Local Network
+    echo "\n${F_Red}•${F_Green}${Bold} Show IP Addresses of Devices on a Local Network.${No_Attributes}"
     arp -a | grep en0 | awk '{print $1, $2, $3, $4}'
     echo "\n${F_Red}•${F_Green}${Bold} Finish...${No_Attributes}"
     continueMessage
