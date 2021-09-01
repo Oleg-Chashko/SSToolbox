@@ -64,8 +64,8 @@ showMenu() {
     echo "${Dim}•${No_Attributes}${F_Cyan} Command: ${F_Red}${Bold} 3${No_Attributes} Custom DNS servers for Wi-Fi                                                                                         ${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Cyan} Command: ${F_Red}${Bold} 4${No_Attributes} Custom DNS servers for Ethernet                                                                                      ${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Cyan} Command: ${F_Red}${Bold} 5${No_Attributes} Release and Renew DHCP for all available device interfaces. (Requires a reboot)                                      ${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Cyan} Command: ${F_Red}${Bold} 6${No_Attributes} -------------                                                                                                        ${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Cyan} Command: ${F_Red}${Bold} 7${No_Attributes} Show Firewall, Local Network and Wireless Networks information                                                       ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Cyan} Command: ${F_Red}${Bold} 6${No_Attributes} Show information: Local Network, DHCP and IP and MAC Addresses of Devices on a Local Network                         ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Cyan} Command: ${F_Red}${Bold} 7${No_Attributes} Show information: Firewall, Wireless Networks, ComputerName, HostName, LocalHostName and NetBIOSName                 ${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Cyan} Command: ${F_Red}${Bold} 8${No_Attributes} Firewall Enable                                                                                                      ${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Cyan} Command: ${F_Red}${Bold} 9${No_Attributes} Firewall Disable                                                                                                     ${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Cyan} Command: ${F_Red}${Bold}10${No_Attributes} Block all connections Enable                                                                                         ${Dim}•${No_Attributes}"
@@ -669,19 +669,76 @@ releaseAndRenewDHCP() {
     continueMessage
 }
 
-# Command 6: -------------
--------------() {
+# Command 6: Show information: Local Network, DHCP and IP and MAC Addresses of Devices on a Local Network
+showInfoLN_DHCP_IP/MACAddresses() {
     terminalWindowSize55x140
-    echo "•${F_Red}${Bold} Command 6: You choose to -------------.${No_Attributes}\n"
-    askPassword
-
+    echo "•${F_Red}${Bold} Command 6: You choose to Show information: Local Network, DHCP and IP and MAC Addresses of Devices on a Local Network.${No_Attributes}\n"
+    # External IP Address
+    ExternalIPv4=$(curl -s ifconfig.me)
+    ExternalIPv6=$(dig TXT +short o-o.myaddr.l.google.com @ns1.google.com | awk -F'"' '{ print $2}')
+    echo "${F_Red}•${F_Green}${Bold} External IP Address.${No_Attributes}"
+    echo "External IPv4: $ExternalIPv4"
+    echo "External IPv6: $ExternalIPv6"
+    # DNS configuration
+    DNSServers=$(scutil --dns | grep nameserver | sort | uniq)
+    echo "\n${F_Red}•${F_Green}${Bold} DNS Servers.${No_Attributes}\n$DNSServers"
+    echo "\n${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
+    # Wi-Fi (en0)
+    en0Interface=$(networksetup -listnetworkserviceorder | grep en0)
+    en0Status=$(ifconfig en0 | awk /status:\ /'{print $2}')
+    en0InternalIPv4=$(ifconfig en0 | awk /inet\ /'{print $2}')
+    en0InternalIPv6=$(ifconfig en0 | grep inet6 | grep autoconf | grep secured | awk '{print $2}')
+    en0MACAddress=$(ifconfig en0 | awk /ether\ /'{print $2}')
+    en0SubnetMask=$(ipconfig getoption en0 subnet_mask)
+    echo "${F_Red}•${F_Green}${Bold} Internal Wi-Fi network ${F_Red}(en0)${F_Green}.${No_Attributes}"
+    echo "Interface: $en0Interface"
+    echo "Status: $en0Status"
+    echo "Internal IPv4: $en0InternalIPv4"
+    echo "Internal IPv6: $en0InternalIPv6"
+    echo "Mac Address: $en0MACAddress"
+    echo "Subnet Mask: $en0SubnetMask"
+    # Default Gateway IPv4/IPv6 Address Wi-Fi (en0)
+    en0DefaultGatewayIPv4=$(netstat -rn | grep UGScg | grep en0 | awk '{print $2}')
+    en0DefaultGatewayIPv6=$(netstat -rn | grep UGcg | grep en0 | awk '{print $2}')
+    echo "\n${F_Red}•${F_Green}${Bold} Default Gateway IPv4/IPv6 Address Wi-Fi network ${F_Red}(en0)${F_Green}.${No_Attributes}"
+    echo "Default Gateway IPv4: $en0DefaultGatewayIPv4"
+    echo "Default Gateway IPv6: $en0DefaultGatewayIPv6"
+    # Show IP addresses of devices in the Wi-Fi network (en0)
+    echo "\n${F_Red}•${F_Green}${Bold} Show IP and MAC Addresses of devices in the Wi-Fi network ${F_Red}(en0)${F_Green}.${No_Attributes}"
+    arp -a | grep en0 | awk '{print $1, $2, $3, $4, $6}'
+    echo "\n${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
+    # Ethernet (en1)
+    en1Interface=$(networksetup -listnetworkserviceorder | grep en1)
+    en1Status=$(ifconfig en1 | awk /status:\ /'{print $2}')
+    en1InternalIPv4=$(ifconfig en1 | awk /inet\ /'{print $2}')
+    en1InternalIPv6=$(ifconfig en1 | grep inet6 | grep autoconf | grep secured | awk '{print $2}')
+    en1MACAddress=$(ifconfig en1 | awk /ether\ /'{print $2}')
+    en1SubnetMask=$(ipconfig getoption en1 subnet_mask)
+    echo "${F_Red}•${F_Green}${Bold} Internal Ethernet network ${F_Red}(en1)${F_Green}.${No_Attributes}"
+    echo "Interface: $en1Interface"
+    echo "Status: $en1Status"
+    echo "Internal IPv4: $en1InternalIPv4"
+    echo "Internal IPv6: $en1InternalIPv6"
+    echo "Mac Address: $en1MACAddress"
+    echo "Subnet Mask: $en1SubnetMask"
+    # Default Gateway IPv4/IPv6 Address Ethernet (en1)
+    en1DefaultGatewayIPv4=$(netstat -rn | grep UGScg | grep en1 | awk '{print $2}')
+    en1DefaultGatewayIPv6=$(netstat -rn | grep UGcg | grep en1 | awk '{print $2}')
+    echo "\n${F_Red}•${F_Green}${Bold} Default Gateway IPv4/IPv6 Address Ethernet network ${F_Red}(en1)${F_Green}.${No_Attributes}"
+    echo "Default Gateway IPv4: $en1DefaultGatewayIPv4"
+    echo "Default Gateway IPv6: $en1DefaultGatewayIPv6"
+    # Show IP addresses of devices in the Wi-Fi network (en1)
+    echo "\n${F_Red}•${F_Green}${Bold} Show IP and MAC Addresses of devices in the Ethernet network ${F_Red}(en1)${F_Green}.${No_Attributes}"
+    arp -a | grep en1 | awk '{print $1, $2, $3, $4, $6}'
+    echo "\n${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
+    echo "${F_Red}•${F_Green}${Bold} Finish...${No_Attributes}"
     continueMessage
 }
 
-# Command 7: Show Networks information
+# Command 7: Show information: Firewall, Wireless Networks, ComputerName, HostName, LocalHostName and NetBIOSName
 showNetworksInformation() {
     terminalWindowSize55x140
-    echo "•${F_Red}${Bold} Command 7: Show Firewall, Local Network, Wireless Networks information.${No_Attributes}"
+    echo "•${F_Red}${Bold} Command 7: Show information: Firewall, Wireless Networks, ComputerName, HostName, LocalHostName and NetBIOSName.${No_Attributes}"
     # Show Firewall information
     echo "\n${F_Red}•${F_Green}${Bold} Show Firewall information.${No_Attributes}"
     /usr/libexec/ApplicationFirewall/socketfilterfw --getglobalstate
@@ -699,13 +756,8 @@ showNetworksInformation() {
     /System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport -s
     echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
     echo "\n${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
-    # Show Local Network information
-    echo "•${F_Red}${Bold} Show Local Network information.${No_Attributes}"
-    echo "\n${F_Red}•${F_Green}${Bold} Local Network information.${No_Attributes}"
-    networksetup -listnetworkserviceorder | grep en0
-    ipconfig getifaddr en0 | awk '{print "IP address: " $1}'
-    networksetup -getmacaddress en0 | awk '{print "MAC address: " $3}'
     # ComputerName, HostName, LocalHostName and NetBIOSName
+    echo "${F_Red}•${F_Green}${Bold} Show ComputerName, HostName, LocalHostName and NetBIOSName.${No_Attributes}"
     scutil --get ComputerName | awk '{print "Computer Name: ", $1}'
     scutil --get HostName | awk '{print "Hostname: ", $1}'
     scutil --get LocalHostName | awk '{print "local Hostname: ", $1}'
@@ -713,9 +765,6 @@ showNetworksInformation() {
     # Show list all network devices on mac
     echo "\n${F_Red}•${F_Green}${Bold} Show list all network devices on mac.${No_Attributes}"
     networksetup -listallhardwareports
-    # Show IP Addresses of Devices on a Local Network
-    echo "\n${F_Red}•${F_Green}${Bold} Show IP Addresses of Devices on a Local Network.${No_Attributes}"
-    arp -a | grep en0 | awk '{print $1, $2, $3, $4}'
     echo "\n${F_Red}•${F_Green}${Bold} Finish...${No_Attributes}"
     continueMessage
 }
@@ -1000,7 +1049,7 @@ startScript() {
 
         6)
             clear
-            -------------
+            showInfoLN_DHCP_IP/MACAddresses
             ;;
 
         7)
