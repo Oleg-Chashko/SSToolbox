@@ -59,15 +59,15 @@ showMenu() {
     echo "${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
     echo "${Dim}•                                                ${Dim}${Bold}SSToolkit${No_Attributes} ${Dim}${RELEASE_VERSION}${No_Attributes}                                              ${Dim}•${No_Attributes}"
     echo "${Dim}• ························································································································ ${F_Green}${Bold}Network ${No_Attributes}${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Cyan} Command: ${F_Red}${Bold} 1${No_Attributes} Ping and Traceroute test IPv4: (Google, Youtube, Facebook, Instagram, Spotify, Yahoo.com, Yandex.ru)                 ${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Cyan} Command: ${F_Red}${Bold} 2${No_Attributes} Ping and Traceroute test IPv6: (Google, Youtube, Facebook, Instagram, Spotify, Yahoo.com, Yandex.ru)                 ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Cyan} Command: ${F_Red}${Bold} 1${No_Attributes} Ping and Traceroute test IPv4: (Google, Youtube, Facebook, Instagram, Spotify, Yahoo, Yandex)                 ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Cyan} Command: ${F_Red}${Bold} 2${No_Attributes} Ping and Traceroute test IPv6: (Google, Youtube, Facebook, Instagram, Spotify, Yahoo, Yandex)                 ${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Cyan} Command: ${F_Red}${Bold} 3${No_Attributes} Custom DNS servers for Wi-Fi                                                                                         ${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Cyan} Command: ${F_Red}${Bold} 4${No_Attributes} Custom DNS servers for Ethernet                                                                                      ${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Cyan} Command: ${F_Red}${Bold} 5${No_Attributes} Release and Renew DHCP for all available device interfaces. (Requires a reboot)                                      ${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Cyan} Command: ${F_Red}${Bold} 6${No_Attributes} Show information: Local Network, DHCP and IP and MAC Addresses of Devices on a Local Network                         ${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Cyan} Command: ${F_Red}${Bold} 7${No_Attributes} Show information: Firewall, Wireless Networks, ComputerName, HostName, LocalHostName and NetBIOSName                 ${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Cyan} Command: ${F_Red}${Bold} 8${No_Attributes} Firewall Enable                                                                                                      ${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Cyan} Command: ${F_Red}${Bold} 9${No_Attributes} Firewall Disable                                                                                                     ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Cyan} Command: ${F_Red}${Bold} 8${No_Attributes} ---------------                                                                                                      ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Cyan} Command: ${F_Red}${Bold} 9${No_Attributes} ---------------                                                                                                      ${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Cyan} Command: ${F_Red}${Bold}10${No_Attributes} Block all connections Enable                                                                                         ${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Cyan} Command: ${F_Red}${Bold}11${No_Attributes} Block all connections Disable                                                                                        ${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Cyan} Command: ${F_Red}${Bold}12${No_Attributes} Show Wireless Network Password                                                                                       ${Dim}•${No_Attributes}"
@@ -769,20 +769,20 @@ showNetworksInformation() {
     continueMessage
 }
 
-# Command 8: Firewall Enable
-enableFirewall() {
+# Command 8: ---------------
+---------------() {
     terminalWindowSize40x100
-    echo "•${F_Red}${Bold} Command 8: You choose to Enable firewall.${No_Attributes}\n"
+    echo "•${F_Red}${Bold} Command 8: You choose to ---------------.${No_Attributes}\n"
     askPassword
     sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setglobalstate on
     echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
     continueMessage
 }
 
-# Command 9: Firewall Disable
-disableFirewall() {
+# Command 9: ---------------
+---------------() {
     terminalWindowSize40x100
-    echo "•${F_Red}${Bold} Command 9: You choose to Disable firewall.${No_Attributes}\n"
+    echo "•${F_Red}${Bold} Command 9: You choose to ---------------.${No_Attributes}\n"
     askPassword
     sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setglobalstate off
     echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
@@ -1059,12 +1059,12 @@ startScript() {
 
         9)
             clear
-            disableFirewall
+            ---------------
             ;;
 
         10)
             clear
-            blockAllEnable
+            ---------------
             ;;
 
         11)
