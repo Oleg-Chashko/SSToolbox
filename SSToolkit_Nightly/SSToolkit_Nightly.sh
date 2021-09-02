@@ -59,14 +59,14 @@ showMenu() {
     echo "${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
     echo "${Dim}•                                                ${Dim}${Bold}SSToolkit${No_Attributes} ${Dim}${RELEASE_VERSION}${No_Attributes}                                              ${Dim}•${No_Attributes}"
     echo "${Dim}• ························································································································ ${F_Green}${Bold}Network ${No_Attributes}${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Cyan} Command: ${F_Red}${Bold} 1${No_Attributes} Ping and Traceroute test IPv4: (Google, Youtube, Facebook, Instagram, Spotify, Yahoo, Yandex)                 ${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Cyan} Command: ${F_Red}${Bold} 2${No_Attributes} Ping and Traceroute test IPv6: (Google, Youtube, Facebook, Instagram, Spotify, Yahoo, Yandex)                 ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Cyan} Command: ${F_Red}${Bold} 1${No_Attributes} Ping and Traceroute test IPv4: (Google, Youtube, Facebook, Instagram, Spotify, Yahoo, Yandex)                        ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Cyan} Command: ${F_Red}${Bold} 2${No_Attributes} Ping and Traceroute test IPv6: (Google, Youtube, Facebook, Instagram, Spotify, Yahoo, Yandex)                        ${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Cyan} Command: ${F_Red}${Bold} 3${No_Attributes} Custom DNS servers for Wi-Fi                                                                                         ${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Cyan} Command: ${F_Red}${Bold} 4${No_Attributes} Custom DNS servers for Ethernet                                                                                      ${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Cyan} Command: ${F_Red}${Bold} 5${No_Attributes} Release and Renew DHCP for all available device interfaces. (Requires a reboot)                                      ${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Cyan} Command: ${F_Red}${Bold} 6${No_Attributes} Show information: Local Network, DHCP and IP and MAC Addresses of Devices on a Local Network                         ${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Cyan} Command: ${F_Red}${Bold} 7${No_Attributes} Show information: Firewall, Wireless Networks, ComputerName, HostName, LocalHostName and NetBIOSName                 ${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Cyan} Command: ${F_Red}${Bold} 8${No_Attributes} ---------------                                                                                                      ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Cyan} Command: ${F_Red}${Bold} 8${No_Attributes} Check DNS records of the domain, to obtain the mapping between domain name and IPv4/IPv6 address                     ${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Cyan} Command: ${F_Red}${Bold} 9${No_Attributes} ---------------                                                                                                      ${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Cyan} Command: ${F_Red}${Bold}10${No_Attributes} Block all connections Enable                                                                                         ${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Cyan} Command: ${F_Red}${Bold}11${No_Attributes} Block all connections Disable                                                                                        ${Dim}•${No_Attributes}"
@@ -769,13 +769,25 @@ showNetworksInformation() {
     continueMessage
 }
 
-# Command 8: ---------------
----------------() {
-    terminalWindowSize40x100
-    echo "•${F_Red}${Bold} Command 8: You choose to ---------------.${No_Attributes}\n"
-    askPassword
-    sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setglobalstate on
-    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
+# Command 8: Check DNS records of the domain, to obtain the mapping between domain name and IP address
+checkDNSRecordsOfTheDomainIPv4/IPv6() {
+    terminalWindowSize55x100
+    echo "•${F_Red}${Bold} Command 8: You choose to Check DNS records of the Domain IPv4/IPv6.${No_Attributes}"
+    # NSlookup test
+    declare -a arr=("Google.com" "Wikipedia.org" "Facebook.com" "Spotify.com" "Linkedin.com")
+    echo "\n${F_Red}•${F_Green}${Bold} Check DNS records of the Domain IPv4...\n${No_Attributes}"
+    for i in "${arr[@]}"; do
+        info=$(host -t A "$i")
+        echo "$info"
+        echo "\n${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
+    done
+    echo "${F_Red}•${F_Green}${Bold} Check DNS records of the Domain IPv6...\n${No_Attributes}"
+    for i in "${arr[@]}"; do
+        info=$(host -t AAAA "$i")
+        echo "$info"
+        echo "\n${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
+    done
+    echo "${F_Red}•${F_Green}${Bold} Finish...${No_Attributes}"
     continueMessage
 }
 
@@ -1054,7 +1066,7 @@ startScript() {
 
         8)
             clear
-            enableFirewall
+            checkDNSRecordsOfTheDomainIPv4/IPv6
             ;;
 
         9)
@@ -1064,7 +1076,7 @@ startScript() {
 
         10)
             clear
-            ---------------
+            blockAllEnable
             ;;
 
         11)
