@@ -56,8 +56,7 @@ No_Attributes='\033[0m'
 # Menu
 showMenu() {
     terminalWindowSizeMenu
-    echo "${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
-    echo "${Dim}•                                                ${Dim}${Bold}SSToolkit${No_Attributes} ${Dim}${RELEASE_VERSION}${No_Attributes}                                              ${Dim}•${No_Attributes}"
+    echo "${Dim}                                                 ${Dim}${Bold}SSToolkit${No_Attributes} ${Dim}${RELEASE_VERSION}${No_Attributes}"
     echo "${Dim}••••••···················································································································· ${F_Green}${Bold}Network ${No_Attributes}${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Red}${Bold}  1${No_Attributes} ${Dim}•${No_Attributes} Ping and Traceroute test IPv4: (Google, Youtube, Facebook, Instagram, Spotify, Yahoo, Yandex)                               ${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Red}${Bold}  2${No_Attributes} ${Dim}•${No_Attributes} Ping and Traceroute test IPv6: (Google, Youtube, Facebook, Instagram, Spotify, Yahoo, Yandex)                               ${Dim}•${No_Attributes}"
@@ -89,7 +88,7 @@ showMenu() {
     echo "${Dim}•${No_Attributes}${F_Red}${Bold} 26${No_Attributes} ${Dim}•${No_Attributes} Don't Show Attachments as Icons in Apple Mail App                                                ${Dim}•${No_Attributes} ${F_Red}${Bold}R${No_Attributes}elease/${F_Red}${Bold}N${No_Attributes}ightly Download ${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Red}${Bold} 27${No_Attributes} ${Dim}•${No_Attributes} Show the full path in the Finder Title window                                                    ${Dim}•${No_Attributes} ${F_Red}${Bold}A${No_Attributes}bout GitHub             ${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Red}${Bold} 28${No_Attributes} ${Dim}•${No_Attributes} Don't Show the full path in the Finder Title window                                              ${Dim}•${No_Attributes} ${F_Red}${Bold}${Blink}Q${No_Attributes}uit                     ${Dim}•${No_Attributes}"
-    echo "${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
+    echo "${Dim}••••••··································································································••••••••••••••••••••••••••••${No_Attributes}"
 }
 
 # -----------------------------------------------------------------------------------------------------------------
@@ -109,7 +108,7 @@ askPassword() {
 # Terminal window size Menu - move to top/left corner and resize
 terminalWindowSizeMenu() {
     printf '\033[3;0;0t'
-    printf '\033[8;35;132t'
+    printf '\033[8;34;132t'
     clear
 }
 
