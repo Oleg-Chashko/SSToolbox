@@ -878,8 +878,14 @@ flushesLocalDNS() {
     terminalWindowSize40x100
     echo "•${F_Red}${Bold} Command 15: Flushing DNS...${No_Attributes}"
     askPassword
-    sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder
-    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
+    if echo $VERSION | grep -E '^10\.10(\.[0-3])?$' >/dev/null 2>&1; then
+        sudo discoveryutil mdnsflushcache
+    elif echo $VERSION | grep -E '^10\.6(\.[0-8])?$' >/dev/null 2>&1; then
+        sudo dscacheutil -flushcache
+    else
+        sudo killall -HUP mDNSResponder
+    fi
+    sleep 1 && echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
     continueMessage
 }
 
