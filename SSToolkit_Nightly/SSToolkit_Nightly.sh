@@ -674,8 +674,8 @@ showInfoLN_DHCP_IP/MACAddresses() {
     terminalWindowSize55x140
     echo "•${F_Red}${Bold} Command 6: You choose to Show information: Local Network, DHCP and IP and MAC Addresses of Devices on a Local Network.${No_Attributes}\n"
     # External IP Address
-    ExternalIPv4=$(curl -s ifconfig.me)
-    ExternalIPv6=$(dig TXT +short o-o.myaddr.l.google.com @ns1.google.com | awk -F'"' '{ print $2}')
+    ExternalIPv4=$(curl -s https://api.ipify.org)
+    ExternalIPv6=$(curl -s https://api64.ipify.org)
     echo "${F_Red}•${F_Green}${Bold} External IP Address.${No_Attributes}"
     echo "External IPv4: $ExternalIPv4"
     echo "External IPv6: $ExternalIPv6"
