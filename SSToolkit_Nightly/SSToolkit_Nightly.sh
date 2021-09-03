@@ -689,6 +689,7 @@ showInfoLN_DHCP_IP/MACAddresses() {
     en0InternalIPv6=$(ifconfig en0 | grep inet6 | grep autoconf | grep secured | awk '{print $2}')
     en0MACAddress=$(ifconfig en0 | awk /ether\ /'{print $2}')
     en0SubnetMask=$(ipconfig getoption en0 subnet_mask)
+    en0BroadcastAddress=$(ifconfig en0 | awk /inet\ /'{print $6}')
     echo "${F_Red}•${F_Green}${Bold} Internal Wi-Fi network ${F_Red}(en0)${F_Green}.${No_Attributes}"
     echo "Interface: $en0Interface"
     echo "Status: $en0Status"
@@ -696,6 +697,7 @@ showInfoLN_DHCP_IP/MACAddresses() {
     echo "Internal IPv6: $en0InternalIPv6"
     echo "Mac Address: $en0MACAddress"
     echo "Subnet Mask: $en0SubnetMask"
+    echo "Broadcast Address: $en0BroadcastAddress"
     # Default Gateway IPv4/IPv6 Address Wi-Fi (en0)
     en0DefaultGatewayIPv4=$(netstat -rn | grep UGScg | grep en0 | awk '{print $2}')
     en0DefaultGatewayIPv6=$(netstat -rn | grep UGcg | grep en0 | awk '{print $2}')
@@ -713,6 +715,7 @@ showInfoLN_DHCP_IP/MACAddresses() {
     en1InternalIPv6=$(ifconfig en1 | grep inet6 | grep autoconf | grep secured | awk '{print $2}')
     en1MACAddress=$(ifconfig en1 | awk /ether\ /'{print $2}')
     en1SubnetMask=$(ipconfig getoption en1 subnet_mask)
+    en1BroadcastAddress=$(ifconfig en1 | awk /inet\ /'{print $6}')
     echo "${F_Red}•${F_Green}${Bold} Internal Ethernet network ${F_Red}(en1)${F_Green}.${No_Attributes}"
     echo "Interface: $en1Interface"
     echo "Status: $en1Status"
@@ -720,6 +723,7 @@ showInfoLN_DHCP_IP/MACAddresses() {
     echo "Internal IPv6: $en1InternalIPv6"
     echo "Mac Address: $en1MACAddress"
     echo "Subnet Mask: $en1SubnetMask"
+    echo "Broadcast Address: $en1BroadcastAddress"
     # Default Gateway IPv4/IPv6 Address Ethernet (en1)
     en1DefaultGatewayIPv4=$(netstat -rn | grep UGScg | grep en1 | awk '{print $2}')
     en1DefaultGatewayIPv6=$(netstat -rn | grep UGcg | grep en1 | awk '{print $2}')
