@@ -53,15 +53,15 @@
 |Command|Description|
 |:----------:|----------|
 |*Network*|
-|**`1`**|Ping and Traceroute test IPv4: (Google, Youtube, Facebook, Instagram, Spotify)|
-|**`2`**|Ping and Traceroute test IPv6: (Google, Youtube, Facebook, Instagram, Spotify)|
+|**`1`**|Ping and Traceroute test IPv4: (Google, Youtube, Facebook, Instagram, Spotify, Yahoo, Yandex)|
+|**`2`**|Ping and Traceroute test IPv6: (Google, Youtube, Facebook, Instagram, Spotify, Yahoo, Yandex)|
 |**`3`**|Custom DNS servers for Wi-Fi|
 |**`4`**|Custom DNS servers for Ethernet|
-|**`5`**|------------|
-|**`6`**|------------|
-|**`7`**|Show Firewall, Local Network and Wireless Networks information|
-|**`8`**|Firewall Enable|
-|**`9`**|Firewall Disable|
+|**`5`**|Release and Renew DHCP for all available device interfaces. (Requires a reboot)|
+|**`6`**|Show information: Local Network, DHCP and IP and MAC Addresses of Devices on a Local Network|
+|**`7`**|Show information: Firewall, Wireless Networks, ComputerName, HostName, LocalHostName and NetBIOSName|
+|**`8`**|Check DNS records of the domain, to obtain the mapping between domain name and IPv4/IPv6 address|
+|**`9`**|Stress Test Network with ICMP-Sweep and ICMP-Flood. (This can be very hard on a network and should be used with caution)|
 |**`10`**|Block all connections Enable|
 |**`11`**|Block all connections Disable|
 |**`12`**|Show Wireless Network Password|
@@ -73,7 +73,7 @@
 |**`17`**|Enable GateKeeper|
 |**`18`**|Disable GateKeeper|
 |**`19`**|Remove app from quarantine|
-|**`20`**|Self-sign the app. Require Xcode or Xcode CLT|
+|**`20`**|Self-sign the app. Require Xcode or Xcode CLT (Command Line Tools)|
 |*Tweaks*|
 |**`21`**|Show Hidden Files|
 |**`22`**|Don't Show Hidden Files|
@@ -81,6 +81,8 @@
 |**`24`**|Don't Show all File Extensions|
 |**`25`**|Show Attachments as Icons in Apple Mail App|
 |**`26`**|Don't Show Attachments as Icons in Apple Mail App|
+|**`27`**|Show the full path in the Finder Title window|
+|**`28`**|Don't Show the full path in the Finder Title window|
 |*Xcode*|
 |**`I`**|Installing the Xcode CLT (Command Line Tools)|
 |**`U`**|Uninstalling the Xcode CLT (Command Line Tools)|
