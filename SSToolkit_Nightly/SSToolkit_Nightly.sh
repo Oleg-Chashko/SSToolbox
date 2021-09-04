@@ -857,7 +857,7 @@ searchProcessesAndNetworkData() {
     continueMessage
 }
 
-# Command 11: -----------------------
+# Command 11: Search all processes for all users and view network data
 blockAllDisable() {
     terminalWindowSize40x100
     echo "•${F_Red}${Bold} Command 11: You choose to ---------------------.${No_Attributes}\n"
