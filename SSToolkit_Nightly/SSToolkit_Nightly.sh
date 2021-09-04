@@ -239,30 +239,29 @@ netPingAndTracerouteTestIPv4() {
     echo "•${F_Red}${Bold} Command 1: You choose to net Ping and Traceroute test IPv4.${No_Attributes}"
     # Ping test
     declare -a arr=("Google.com" "Youtube.com" "Facebook.com" "Instagram.com" "Spotify.com" "Yahoo.com" "Yandex.com")
-    echo "\n${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
+    echo "\n${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
     echo "${Dim}•${No_Attributes} Server- or IP- address | Response time: Minimum/Average/Maximum/Standard_deviation ${Dim}•${No_Attributes}"
-    echo "\n${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
+    echo "${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
     echo "${F_Red}•${F_Green}${Bold} Ping Testing...\n${No_Attributes}"
     for i in "${arr[@]}"; do
         time=$(ping -i 0.1 -c 4 "$i" | tail -1 | awk '{print $4}')
         echo "$i | response time | $time ms"
     done
-    echo "\n${F_Red}•${F_Green}${Bold} Finish...${No_Attributes}"
-    echo "\n${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
+    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}${Dim} ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
     # Traceroute test
     echo "${F_Red}•${F_Green}${Bold} Traceroute Testing...\n${No_Attributes}"
     traceroute -w 1 -m 30 Google.com
-    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
+    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}${Dim} ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
     traceroute -w 1 -m 30 Youtube.com
-    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
+    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}${Dim} ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
     traceroute -w 1 -m 30 Facebook.com
-    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
+    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}${Dim} ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
     traceroute -w 1 -m 30 Spotify.com
-    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
+    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}${Dim} ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
     traceroute -w 1 -m 30 Yahoo.com
-    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
+    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}${Dim} ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
     traceroute -w 1 -m 30 Yandex.com
-    echo "\n${F_Red}•${F_Green}${Bold} Finish...${No_Attributes}"
+    echo "\n${F_Red}•${F_Green}${Bold} Finish.${No_Attributes}${Dim} ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
     continueMessage
 }
 
@@ -272,40 +271,39 @@ netPingAndTracerouteTestIPv6() {
     echo "•${F_Red}${Bold} Command 2: You choose to net Ping and Traceroute test IPv6.${No_Attributes}"
     # Ping test
     declare -a arr=("Google.com" "Youtube.com" "Facebook.com" "Instagram.com" "Spotify.com" "Yahoo.com" "Yandex.com")
-    echo "\n${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
+    echo "\n${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
     echo "${Dim}•${No_Attributes} Server- or IP- address | Response time: Minimum/Average/Maximum/Standard_deviation ${Dim}•${No_Attributes}"
-    echo "\n${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
-    echo "${F_Red}•${F_Green}${Bold} Testing...\n${No_Attributes}"
+    echo "${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
+    echo "${F_Red}•${F_Green}${Bold} Ping Testing...\n${No_Attributes}"
     for i in "${arr[@]}"; do
         time=$(ping6 -i 0.1 -c 4 "$i" | tail -1 | awk '{print $4}')
         echo "$i | response time | $time ms"
     done
-    echo "\n${F_Red}•${F_Green}${Bold} Finish...${No_Attributes}"
-    echo "\n${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
+    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}${Dim} ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
     # Traceroute test
     echo "${F_Red}•${F_Green}${Bold} Traceroute Testing...\n${No_Attributes}"
     traceroute6 -w 1 -m 30 Google.com
-    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
+    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}${Dim} ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
     traceroute6 -w 1 -m 30 Youtube.com
-    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
+    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}${Dim} ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
     traceroute6 -w 1 -m 30 Facebook.com
-    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
+    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}${Dim} ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
     traceroute6 -w 1 -m 30 Spotify.com
-    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
+    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}${Dim} ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
     traceroute6 -w 1 -m 30 Yahoo.com
-    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
+    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}${Dim} ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
     traceroute6 -w 1 -m 30 Yandex.com
-    echo "\n${F_Red}•${F_Green}${Bold} Finish...${No_Attributes}"
+    echo "\n${F_Red}•${F_Green}${Bold} Finish.${No_Attributes}${Dim} ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
     continueMessage
 }
 
 # Command 3: Custom DNS servers for Wi-Fi
 customDNSServersForWi-Fi() {
     terminalWindowSize55x140
-    echo "•${F_Red}${Bold} Command 3: You choose to Custom DNS servers for Wi-Fi.${No_Attributes}\n"
+    echo "•${F_Red}${Bold} Command 3: You choose to Custom DNS servers for Wi-Fi.${No_Attributes}"
     askPassword
     # Menu DNS servers
-    echo " ${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
+    echo "\n ${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
     echo " ${Dim}•${No_Attributes} Modes filtering   ${Dim}|${No_Attributes} Description              ${F_Red}${Bold}Note:${No_Attributes} Please don't use them unless you know what you're doing ${Dim}•${No_Attributes}"
     echo " ${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
     echo " ${Dim}•${No_Attributes}${F_Purple}${Bold} Non-filtering     ${No_Attributes}${Dim}|${No_Attributes} Reliable and fast DNS lookup without blocking any specific categories                  ${Dim}•${No_Attributes}"
@@ -473,10 +471,10 @@ customDNSServersForWi-Fi() {
 # Command 4: Custom DNS servers for Ethernet
 customDNSServersForEthernet() {
     terminalWindowSize55x140
-    echo "•${F_Red}${Bold} Command 4: You choose to Custom DNS servers for Ethernet.${No_Attributes}\n"
+    echo "•${F_Red}${Bold} Command 4: You choose to Custom DNS servers for Ethernet.${No_Attributes}"
     askPassword
     # Menu DNS servers
-    echo " ${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
+    echo "\n ${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
     echo " ${Dim}•${No_Attributes} Modes filtering   ${Dim}|${No_Attributes} Description              ${F_Red}${Bold}Note:${No_Attributes} Please don't use them unless you know what you're doing ${Dim}•${No_Attributes}"
     echo " ${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
     echo " ${Dim}•${No_Attributes}${F_Purple}${Bold} Non-filtering     ${No_Attributes}${Dim}|${No_Attributes} Reliable and fast DNS lookup without blocking any specific categories                  ${Dim}•${No_Attributes}"
@@ -644,10 +642,10 @@ customDNSServersForEthernet() {
 # Command 5: Release and Renew DHCP
 releaseAndRenewDHCP() {
     terminalWindowSize40x100
+    echo "•${F_Red}${Bold} Command 5: You choose to Release and Renew DHCP for all available device interfaces.${No_Attributes}"
     askPassword
-    echo "•${F_Red}${Bold} Command 1: You choose to Release and Renew DHCP for all available device interfaces.${No_Attributes}"
     # Release the DHCP assigned IP, DNS server, subnet mask, router/gateway and the lease time
-    echo "\n•${F_Red}${Bold} Release the DHCP assigned IP, DNS server, subnet mask, router/gateway...${No_Attributes}\n"
+    echo "•${F_Red}${Bold} Release the DHCP assigned IP, DNS server, subnet mask, router/gateway...${No_Attributes}\n"
     sudo ipconfig set en0 DHCP
     sleep 1 && echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
     # Renew the DHCP assigned IP, DNS server, subnet mask, router/gateway and the lease time
@@ -681,7 +679,7 @@ showInfoLN_DHCP_IP/MACAddresses() {
     # DNS configuration
     DNSServers=$(scutil --dns | grep nameserver | sort | uniq)
     echo "\n${F_Red}•${F_Green}${Bold} DNS Servers.${No_Attributes}\n$DNSServers"
-    echo "\n${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
+    echo "\n${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
     # Wi-Fi (en0)
     en0Interface=$(networksetup -listnetworkserviceorder | grep en0)
     en0Status=$(ifconfig en0 | awk /status:\ /'{print $2}')
@@ -707,7 +705,7 @@ showInfoLN_DHCP_IP/MACAddresses() {
     # Show IP addresses of devices in the Wi-Fi network (en0)
     echo "\n${F_Red}•${F_Green}${Bold} Show IP and MAC Addresses of devices in the Wi-Fi network ${F_Red}(en0)${F_Green}.${No_Attributes}"
     arp -a | grep en0 | awk '{print $1, $2, $3, $4, $6}'
-    echo "\n${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
+    echo "\n${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
     # Ethernet (en1)
     en1Interface=$(networksetup -listnetworkserviceorder | grep en1)
     en1Status=$(ifconfig en1 | awk /status:\ /'{print $2}')
@@ -733,7 +731,7 @@ showInfoLN_DHCP_IP/MACAddresses() {
     # Show IP addresses of devices in the Wi-Fi network (en1)
     echo "\n${F_Red}•${F_Green}${Bold} Show IP and MAC Addresses of devices in the Ethernet network ${F_Red}(en1)${F_Green}.${No_Attributes}"
     arp -a | grep en1 | awk '{print $1, $2, $3, $4, $6}'
-    echo "\n${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
+    echo "\n${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
     echo "${F_Red}•${F_Green}${Bold} Finish...${No_Attributes}"
     continueMessage
 }
@@ -750,7 +748,7 @@ showNetworksInformation() {
     echo "\n${F_Red}•${F_Green}${Bold} List applications handled by firewall.${No_Attributes}"
     /usr/libexec/ApplicationFirewall/socketfilterfw --list
     echo "${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    echo "\n${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
+    echo "\n${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
     # Show Wireless Networks information
     echo "•${F_Red}${Bold} Show Wireless Networks information.${No_Attributes}"
     echo "\n${F_Red}•${F_Green}${Bold} Wireless Networks information.${No_Attributes}"
@@ -758,7 +756,7 @@ showNetworksInformation() {
     echo "\n${F_Red}•${F_Green}${Bold} Scan Wireless Networks.${No_Attributes}"
     /System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport -s
     echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    echo "\n${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
+    echo "\n${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
     # ComputerName, HostName, LocalHostName and NetBIOSName
     echo "${F_Red}•${F_Green}${Bold} Show ComputerName, HostName, LocalHostName and NetBIOSName.${No_Attributes}"
     scutil --get ComputerName | awk '{print "Computer Name: ", $1}'
@@ -782,13 +780,13 @@ checkDNSRecordsOfTheDomainIPv4/IPv6() {
     for i in "${arr[@]}"; do
         info=$(host -t A "$i")
         echo "$info"
-        echo "\n${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
+        echo "\n${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
     done
     echo "${F_Red}•${F_Green}${Bold} Check DNS records of the Domain IPv6...\n${No_Attributes}"
     for i in "${arr[@]}"; do
         info=$(host -t AAAA "$i")
         echo "$info"
-        echo "\n${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
+        echo "\n${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
     done
     echo "${F_Red}•${F_Green}${Bold} Finish...${No_Attributes}"
     continueMessage
@@ -798,6 +796,7 @@ checkDNSRecordsOfTheDomainIPv4/IPv6() {
 testICMPSweepAndICMP-Flood() {
     terminalWindowSize55x100
     echo "•${F_Red}${Bold} Command 9: You choose to Stress Test Network with ICMP-Sweep and ICMP-Flood.${No_Attributes}"
+    askPassword
     # ICMP-Sweep
     echo "\n${F_Red}•${F_Green} The scan will run from network 1 to network 254.${No_Attributes}"
     echo "${F_Red}•${F_Green} Example use: In the tab below, enter the first ${Bold}3${No_Attributes}${F_Green} octets: ${Bold}192.168.1${No_Attributes}${F_Red}${Dim}xXX${No_Attributes}${F_Green} or ${Bold}10.10.1${No_Attributes}${F_Red}${Dim}xXX${No_Attributes}${F_Green} and etc.${No_Attributes}\n"
@@ -807,8 +806,7 @@ testICMPSweepAndICMP-Flood() {
     for IP in $(seq 1 254); do
     ping -c 1 $SUBNET.$IP | grep "64 bytes" | cut -d " " -f 4 | tr -d ":" &
     done
-    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    echo "\n${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
+    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes} ${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
     echo "\n•${F_Red}${Bold} Broadcast Address.${No_Attributes}\n"
     # Wi-Fi Broadcast Address (en0)
     en0BroadcastAddress=$(ifconfig en0 | awk /inet\ /'{print $6}')
@@ -816,10 +814,8 @@ testICMPSweepAndICMP-Flood() {
     # Ethernet Broadcast Address (en1)
     en1BroadcastAddress=$(ifconfig en1 | awk /inet\ /'{print $6}')
     echo "Ethernet Broadcast Address (en1): $en1BroadcastAddress"
-    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    echo "\n${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
+    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes} ${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
     # ICMP-Flood and Broadcast storm is a common Denial of Service (DoS) attack!
-    askPassword
     echo "•${F_Red}${Bold} ICMP-Flood is a common Denial of Service (DoS) attack!${No_Attributes}"
     echo "• The average packet size is 1472 data bytes, MTU limit and exceeding it can trigger a firewall."
     echo "• For Hosts Address: Outgoing data bytes packet size MIN: 56 -> AVG: 1472 -> MAX: 65507."
@@ -830,7 +826,7 @@ testICMPSweepAndICMP-Flood() {
     read "? How many times you want to send the test packets: " COUNT
     read "? How many data bytes packet size you would like to send: " SIZE
     echo "\n${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
-    echo "\n•${F_Red}${Bold} Testing with ICMP-Flood...${No_Attributes}"
+    echo "\n•${F_Red}${Bold} Testing with ICMP-Flood...${No_Attributes}\n"
     sudo ping "$HOST" -c "$COUNT" -f -s "$SIZE" > nFLjLfjveKGdEtWThmRcWfCovc.txt
     rm nFLjLfjveKGdEtWThmRcWfCovc.txt
     echo "\n${F_Red}•${F_Green}${Bold} Finish...${No_Attributes}"
