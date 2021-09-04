@@ -66,7 +66,7 @@ showMenu() {
     echo "${Dim}•${No_Attributes}${F_Red}${Bold}  6${No_Attributes} ${Dim}•${No_Attributes} Show information: Local Network, DHCP and IP and MAC Addresses of Devices on a Local Network                                ${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Red}${Bold}  7${No_Attributes} ${Dim}•${No_Attributes} Show information: Firewall, Wireless Networks, ComputerName, HostName, LocalHostName and NetBIOSName                        ${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Red}${Bold}  8${No_Attributes} ${Dim}•${No_Attributes} Check DNS records of the domain, to obtain the mapping between domain name and IPv4/IPv6 address                            ${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Red}${Bold}  9${No_Attributes} ${Dim}•${No_Attributes} ---------------                                                                                                             ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Red}${Bold}  9${No_Attributes} ${Dim}•${No_Attributes} Stress Test Network with ICMP-Sweep and ICMP-Flood. (This can be very hard on a network and should be used with caution)    ${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Red}${Bold} 10${No_Attributes} ${Dim}•${No_Attributes} Block all connections Enable                                                                                                ${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Red}${Bold} 11${No_Attributes} ${Dim}•${No_Attributes} Block all connections Disable                                                                                               ${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Red}${Bold} 12${No_Attributes} ${Dim}•${No_Attributes} Show Wireless Network Password                                                                                              ${Dim}•${No_Attributes}"
@@ -794,13 +794,46 @@ checkDNSRecordsOfTheDomainIPv4/IPv6() {
     continueMessage
 }
 
-# Command 9: ---------------
----------------() {
-    terminalWindowSize40x100
-    echo "•${F_Red}${Bold} Command 9: You choose to ---------------.${No_Attributes}\n"
-    askPassword
-    sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setglobalstate off
+# Command 9: Test ICMP-Sweep & ICMP-Flood
+testICMPSweepAndICMP-Flood() {
+    terminalWindowSize55x100
+    echo "•${F_Red}${Bold} Command 9: You choose to Stress Test Network with ICMP-Sweep and ICMP-Flood.${No_Attributes}"
+    # ICMP-Sweep
+    echo "\n${F_Red}•${F_Green} The scan will run from network 1 to network 254.${No_Attributes}"
+    echo "${F_Red}•${F_Green} Example use: In the tab below, enter the first ${Bold}3${No_Attributes}${F_Green} octets: ${Bold}192.168.1${No_Attributes}${F_Red}${Dim}xXX${No_Attributes}${F_Green} or ${Bold}10.10.1${No_Attributes}${F_Red}${Dim}xXX${No_Attributes}${F_Green} and etc.${No_Attributes}\n"
+    read "? Enter the address subnet: " SUBNET
+    echo "\n${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
+    echo "\n•${F_Red}${Bold} Running a Quick IP sweep to determine live hosts on subnet.${No_Attributes}\n"
+    for IP in $(seq 1 254); do
+    ping -c 1 $SUBNET.$IP | grep "64 bytes" | cut -d " " -f 4 | tr -d ":" &
+    done
     echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
+    echo "\n${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
+    echo "\n•${F_Red}${Bold} Broadcast Address.${No_Attributes}\n"
+    # Wi-Fi Broadcast Address (en0)
+    en0BroadcastAddress=$(ifconfig en0 | awk /inet\ /'{print $6}')
+    echo "Wi-Fi Broadcast Address (en0): $en0BroadcastAddress"
+    # Ethernet Broadcast Address (en1)
+    en1BroadcastAddress=$(ifconfig en1 | awk /inet\ /'{print $6}')
+    echo "Ethernet Broadcast Address (en1): $en1BroadcastAddress"
+    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
+    echo "\n${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
+    # ICMP-Flood and Broadcast storm is a common Denial of Service (DoS) attack!
+    askPassword
+    echo "•${F_Red}${Bold} ICMP-Flood is a common Denial of Service (DoS) attack!${No_Attributes}"
+    echo "• The average packet size is 1472 data bytes, MTU limit and exceeding it can trigger a firewall."
+    echo "• For Hosts Address: Outgoing data bytes packet size MIN: 56 -> AVG: 1472 -> MAX: 65507."
+    echo "• For Broadcast Address: Outgoing data bytes packet size MIN: 56 -> MAX: 1470."
+    echo "• About 100 packets per second, the speed is affected by packet size and network bandwidth."
+    echo "\n${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
+    read "? To which IP address you want to send the test packets: " HOST
+    read "? How many times you want to send the test packets: " COUNT
+    read "? How many data bytes packet size you would like to send: " SIZE
+    echo "\n${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
+    echo "\n•${F_Red}${Bold} Testing with ICMP-Flood...${No_Attributes}"
+    sudo ping "$HOST" -c "$COUNT" -f -s "$SIZE" > nFLjLfjveKGdEtWThmRcWfCovc.txt
+    rm nFLjLfjveKGdEtWThmRcWfCovc.txt
+    echo "\n${F_Red}•${F_Green}${Bold} Finish...${No_Attributes}"
     continueMessage
 }
 
@@ -1080,7 +1113,7 @@ startScript() {
 
         9)
             clear
-            ---------------
+            testICMPSweepAndICMP-Flood
             ;;
 
         10)
