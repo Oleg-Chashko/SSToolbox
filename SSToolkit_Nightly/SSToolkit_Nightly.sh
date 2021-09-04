@@ -67,8 +67,8 @@ showMenu() {
     echo "${Dim}•${No_Attributes}${F_Red}${Bold}  7${No_Attributes} ${Dim}•${No_Attributes} Show information: Firewall, Wireless Networks, ComputerName, HostName, LocalHostName and NetBIOSName                        ${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Red}${Bold}  8${No_Attributes} ${Dim}•${No_Attributes} Check DNS records of the domain, to obtain the mapping between domain name and IPv4/IPv6 address                            ${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Red}${Bold}  9${No_Attributes} ${Dim}•${No_Attributes} Stress Test Network with ICMP-Sweep and ICMP-Flood. (This can be very hard on a network and should be used with caution)    ${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Red}${Bold} 10${No_Attributes} ${Dim}•${No_Attributes} Block all connections Enable                                                                                                ${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Red}${Bold} 11${No_Attributes} ${Dim}•${No_Attributes} Block all connections Disable                                                                                               ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Red}${Bold} 10${No_Attributes} ${Dim}•${No_Attributes} Search all processes for all users and view network data by Internet protocol TCP/UDP and version IPv4/IPv6                 ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Red}${Bold} 11${No_Attributes} ${Dim}•${No_Attributes} -----------------------------                                                                                               ${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Red}${Bold} 12${No_Attributes} ${Dim}•${No_Attributes} Show Wireless Network Password                                                                                              ${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Red}${Bold} 13${No_Attributes} ${Dim}•${No_Attributes} Setting default a new Computer Name, Hostname and etc                                                                       ${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Red}${Bold} 14${No_Attributes} ${Dim}•${No_Attributes} Search Routers on local Networks, uses the default IP addresses                                                             ${Dim}•${No_Attributes}"
@@ -833,23 +833,35 @@ testICMPSweepAndICMP-Flood() {
     continueMessage
 }
 
-# Command 10: Block all connections Enable
-blockAllEnable() {
-    terminalWindowSize40x100
-    echo "•${F_Red}${Bold} Command 10: You choose to Enables Block all connections.${No_Attributes}\n"
-    askPassword
-    sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setblockall on
-    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
+# Command 10: Search all processes for all users and view network data by Internet protocol TCP/UDP and version IPv4/IPv6
+searchProcessesAndNetworkData() {
+    terminalWindowSize55x190
+    echo "•${F_Red}${Bold} Command 10: You choose to Search all processes for all users and view network data by Internet protocol TCP/UDP and version IPv4/IPv6.${No_Attributes}"
+    # Show IPv4 ports TCP information
+    echo "\n${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
+    echo "${F_Red}•${F_Green}${Bold} Show Show IPv4 ports TCP information.${No_Attributes}\n"
+    lsof -n -i 4TCP
+    # Show IPv4 ports UDP information
+    echo "\n${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
+    echo "${F_Red}•${F_Green}${Bold} Show Show IPv4 ports UDP information.${No_Attributes}\n"
+    lsof -n -i 4UDP
+    # Show IPv& ports TCP information
+    echo "\n${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
+    echo "${F_Red}•${F_Green}${Bold} Show Show IPv6 ports TCP information.${No_Attributes}\n"
+    lsof -n -i 6TCP
+    # Show IPv& ports UDP information
+    echo "\n${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
+    echo "${F_Red}•${F_Green}${Bold} Show Show IPv6 ports UDP information.${No_Attributes}\n"
+    lsof -n -i 6UDP
+    echo "\n${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
     continueMessage
 }
 
-# Command 11: Block all connections Disable
+# Command 11: -----------------------
 blockAllDisable() {
     terminalWindowSize40x100
-    echo "•${F_Red}${Bold} Command 11: You choose to Disables Block all connections.${No_Attributes}\n"
+    echo "•${F_Red}${Bold} Command 11: You choose to ---------------------.${No_Attributes}\n"
     askPassword
-    sudo /usr/libexec/ApplicationFirewall/socketfilterfw --setblockall off
-    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
     continueMessage
 }
 
@@ -1114,12 +1126,12 @@ startScript() {
 
         10)
             clear
-            blockAllEnable
+            searchProcessesAndNetworkData
             ;;
 
         11)
             clear
-            blockAllDisable
+            ----------------------------
             ;;
 
         12)
