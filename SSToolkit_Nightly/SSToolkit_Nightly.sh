@@ -1,7 +1,7 @@
 #!/bin/zsh
 
 # Attribute
-RELEASE_VERSION="v.0.3.5 build [08.25.2021]"
+RELEASE_VERSION="v.0.3.8 build [09.04.2021]"
 ROOT_PASSWORD=0
 
 # Foreground
