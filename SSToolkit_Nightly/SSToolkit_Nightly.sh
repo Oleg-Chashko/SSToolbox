@@ -747,16 +747,34 @@ showNetworksInformation() {
     /usr/libexec/ApplicationFirewall/socketfilterfw --getblockall
     echo "\n${F_Red}•${F_Green}${Bold} List applications handled by firewall.${No_Attributes}"
     /usr/libexec/ApplicationFirewall/socketfilterfw --list
-    echo "${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    echo "\n${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
+    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}${Dim} ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
     # Show Wireless Networks information
     echo "•${F_Red}${Bold} Show Wireless Networks information.${No_Attributes}"
-    echo "\n${F_Red}•${F_Green}${Bold} Wireless Networks information.${No_Attributes}"
-    /System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport -I
+    echo "\n${F_Red}•${F_Green}${Bold} Your current preferred Wireless network.${No_Attributes}"
+    SSID=$(airport -I  | awk -F' SSID: '  '/ SSID: / {print $2}')
+    OperationMode=$(airport -I | grep op | grep mode | awk '{print $3}')
+    Security=$(airport -I | grep link | awk '{print $3}')
+    Channel=$(airport -I | grep channel | awk '{print $2}')
+    RSSI=$(airport -I | grep agrCtlRSSI | awk '{print $2}')
+    Noise=$(airport -I | grep agrCtlNoise | awk '{print $2}')
+    BSSID=$(airport -I | grep BSSID | awk '{print $2}')
+    TxRate=$(airport -I | grep lastTxRate | awk '{print $2}')
+    MaxRate=$(airport -I | grep maxRate | awk '{print $2}')
+    MCS=$(airport -I | grep MCS | awk '{print $2}')
+    echo "Connected network name: $SSID"
+    echo "Operation Mode: $OperationMode"
+    echo "Security: $Security"
+    echo "Channel/Width: $Channel MHz"
+    echo "Received Signal strength: $RSSI dBm"
+    echo "Noise level: $Noise dBm"
+    echo "MAC-Adresse: $BSSID"
+    echo "TxRate: $TxRate MBit/s"
+    echo "MaxRate: $MaxRate MBit/s"
+    echo "MCS Index: $MCS"
+    # Scan Wireless Networks
     echo "\n${F_Red}•${F_Green}${Bold} Scan Wireless Networks.${No_Attributes}"
     /System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport -s
-    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    echo "\n${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
+    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}${Dim} ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
     # ComputerName, HostName, LocalHostName and NetBIOSName
     echo "${F_Red}•${F_Green}${Bold} Show ComputerName, HostName, LocalHostName and NetBIOSName.${No_Attributes}"
     scutil --get ComputerName | awk '{print "Computer Name: ", $1}'
