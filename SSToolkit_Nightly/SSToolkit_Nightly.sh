@@ -758,7 +758,6 @@ showNetworksInformation() {
     Noise=$(airport -I | grep agrCtlNoise | awk '{print $2}')
     BSSID=$(airport -I | grep BSSID | awk '{print $2}')
     TxRate=$(airport -I | grep lastTxRate | awk '{print $2}')
-    MaxRate=$(airport -I | grep maxRate | awk '{print $2}')
     MCS=$(airport -I | grep MCS | awk '{print $2}')
     echo "Connected network name: $SSID"
     echo "Operation Mode: $OperationMode"
@@ -767,8 +766,7 @@ showNetworksInformation() {
     echo "Received Signal strength: $RSSI dBm"
     echo "Noise level: $Noise dBm"
     echo "MAC-Adresse: $BSSID"
-    echo "TxRate: $TxRate MBit/s"
-    echo "MaxRate: $MaxRate MBit/s"
+    echo "Maximum possible Transmit rate: $TxRate MBit/s"
     echo "MCS Index: $MCS"
     # Scan Wireless Networks
     echo "\n${F_Red}•${F_Green}${Bold} Scan Wireless Networks.${No_Attributes}"
