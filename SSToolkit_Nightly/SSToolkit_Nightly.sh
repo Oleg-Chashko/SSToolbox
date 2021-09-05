@@ -731,8 +731,7 @@ showInfoLN_DHCP_IP/MACAddresses() {
     # Show IP addresses of devices in the Wi-Fi network (en1)
     echo "\n${F_Red}•${F_Green}${Bold} Show IP and MAC Addresses of devices in the Ethernet network ${F_Red}(en1)${F_Green}.${No_Attributes}"
     arp -a | grep en1 | awk '{print $1, $2, $3, $4, $6}'
-    echo "\n${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
-    echo "${F_Red}•${F_Green}${Bold} Finish...${No_Attributes}"
+    echo "\n${F_Red}•${F_Green}${Bold} Finish.${No_Attributes}${Dim} ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
     continueMessage
 }
 
@@ -784,7 +783,7 @@ showNetworksInformation() {
     # Show list all network devices on mac
     echo "\n${F_Red}•${F_Green}${Bold} Show list all network devices on mac.${No_Attributes}"
     networksetup -listallhardwareports
-    echo "\n${F_Red}•${F_Green}${Bold} Finish...${No_Attributes}"
+    echo "\n${F_Red}•${F_Green}${Bold} Finish.${No_Attributes}${Dim} ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
     continueMessage
 }
 
