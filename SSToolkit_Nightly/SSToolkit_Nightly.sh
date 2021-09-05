@@ -685,7 +685,8 @@ showInfoLN_DHCP_IP/MACAddresses() {
     en0Status=$(ifconfig en0 | awk /status:\ /'{print $2}')
     en0InternalIPv4=$(ifconfig en0 | awk /inet\ /'{print $2}')
     en0InternalIPv6=$(ifconfig en0 | grep inet6 | grep autoconf | grep secured | awk '{print $2}')
-    en0MACAddress=$(ifconfig en0 | awk /ether\ /'{print $2}')
+    en0HardwareMACAddress=$(networksetup -getmacaddress en0 | awk '{print $3}')
+    en0CurrentMACAddress=$(ifconfig en0 | awk /ether\ /'{print $2}')
     en0SubnetMask=$(ipconfig getoption en0 subnet_mask)
     en0BroadcastAddress=$(ifconfig en0 | awk /inet\ /'{print $6}')
     echo "${F_Red}•${F_Green}${Bold} Internal Wi-Fi network ${F_Red}(en0)${F_Green}.${No_Attributes}"
@@ -693,7 +694,8 @@ showInfoLN_DHCP_IP/MACAddresses() {
     echo "Status: $en0Status"
     echo "Internal IPv4: $en0InternalIPv4"
     echo "Internal IPv6: $en0InternalIPv6"
-    echo "Mac Address: $en0MACAddress"
+    echo "System Hardware Wi-Fi MAC Address: $en0HardwareMACAddress"
+    echo "Current Spoof Wi-Fi MAC address: $en0CurrentMACAddress"
     echo "Subnet Mask: $en0SubnetMask"
     echo "Broadcast Address: $en0BroadcastAddress"
     # Default Gateway IPv4/IPv6 Address Wi-Fi (en0)
@@ -711,7 +713,8 @@ showInfoLN_DHCP_IP/MACAddresses() {
     en1Status=$(ifconfig en1 | awk /status:\ /'{print $2}')
     en1InternalIPv4=$(ifconfig en1 | awk /inet\ /'{print $2}')
     en1InternalIPv6=$(ifconfig en1 | grep inet6 | grep autoconf | grep secured | awk '{print $2}')
-    en1MACAddress=$(ifconfig en1 | awk /ether\ /'{print $2}')
+    en1HardwareMACAddress=$(networksetup -getmacaddress en1 | awk '{print $3}')
+    en1CurrentMACAddress=$(ifconfig en1 | awk /ether\ /'{print $2}')
     en1SubnetMask=$(ipconfig getoption en1 subnet_mask)
     en1BroadcastAddress=$(ifconfig en1 | awk /inet\ /'{print $6}')
     echo "${F_Red}•${F_Green}${Bold} Internal Ethernet network ${F_Red}(en1)${F_Green}.${No_Attributes}"
@@ -719,7 +722,8 @@ showInfoLN_DHCP_IP/MACAddresses() {
     echo "Status: $en1Status"
     echo "Internal IPv4: $en1InternalIPv4"
     echo "Internal IPv6: $en1InternalIPv6"
-    echo "Mac Address: $en1MACAddress"
+    echo "System Hardware Ethernet MAC Address: $en1HardwareMACAddress"
+    echo "Current Spoof Ethernet MAC address: $en1CurrentMACAddress"
     echo "Subnet Mask: $en1SubnetMask"
     echo "Broadcast Address: $en1BroadcastAddress"
     # Default Gateway IPv4/IPv6 Address Ethernet (en1)
@@ -765,7 +769,7 @@ showNetworksInformation() {
     echo "Channel/Width: $Channel MHz"
     echo "Received Signal strength: $RSSI dBm"
     echo "Noise level: $Noise dBm"
-    echo "MAC-Adresse: $BSSID"
+    echo "Wireless Gateway MAC-Adresse: $BSSID"
     echo "Maximum possible Transmit rate: $TxRate MBit/s"
     echo "MCS Index: $MCS"
     # Scan Wireless Networks
