@@ -58,8 +58,8 @@ showMenu() {
     terminalWindowSizeMenu
     echo "${Dim}                                                 ${Dim}${Bold}SSToolkit${No_Attributes} ${Dim}${RELEASE_VERSION}${No_Attributes}"
     echo "${Dim}•••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••• ${F_Green}${Bold}Network ${No_Attributes}${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Red}${Bold}  1${No_Attributes} ${Dim}•${No_Attributes} Ping and Traceroute test IPv4: (Google, Youtube, Facebook, Instagram, Spotify, Yahoo, Yandex)                               ${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Red}${Bold}  2${No_Attributes} ${Dim}•${No_Attributes} Ping and Traceroute test IPv6: (Google, Youtube, Facebook, Instagram, Spotify, Yahoo, Yandex)                               ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Red}${Bold}  1${No_Attributes} ${Dim}•${No_Attributes} Ping and Traceroute test IPv4/IPv6: (Google, Youtube, Facebook, Instagram, Spotify, Yahoo, Yandex)                          ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Red}${Bold}  2${No_Attributes} ${Dim}•${No_Attributes} Spoofing the MAC Address of the Wireless network to a randomly generated MAC address                                        ${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Red}${Bold}  3${No_Attributes} ${Dim}•${No_Attributes} Custom DNS servers for Wi-Fi                                                                                                ${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Red}${Bold}  4${No_Attributes} ${Dim}•${No_Attributes} Custom DNS servers for Ethernet                                                                                             ${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Red}${Bold}  5${No_Attributes} ${Dim}•${No_Attributes} Release and Renew DHCP for all available device interfaces. (Requires a reboot)                                             ${Dim}•${No_Attributes}"
@@ -236,20 +236,20 @@ aboutGitHub() {
 # Command 1: Ping and Traceroute test IPv4
 netPingAndTracerouteTestIPv4() {
     terminalWindowSize55x100
-    echo "•${F_Red}${Bold} Command 1: You choose to net Ping and Traceroute test IPv4.${No_Attributes}"
-    # Ping test
+    echo "•${F_Red}${Bold} Command 1: You choose to Ping and Traceroute test IPv4/IPv6.${No_Attributes}"
+    # Ping test IPv4
     declare -a arr=("Google.com" "Youtube.com" "Facebook.com" "Instagram.com" "Spotify.com" "Yahoo.com" "Yandex.com")
     echo "\n${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
     echo "${Dim}•${No_Attributes} Server- or IP- address | Response time: Minimum/Average/Maximum/Standard_deviation ${Dim}•${No_Attributes}"
     echo "${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
-    echo "${F_Red}•${F_Green}${Bold} Ping Testing...\n${No_Attributes}"
+    echo "${F_Red}•${F_Green}${Bold} Ping IPv4 Testing...\n${No_Attributes}"
     for i in "${arr[@]}"; do
         time=$(ping -i 0.1 -c 4 "$i" | tail -1 | awk '{print $4}')
         echo "$i | response time | $time ms"
     done
     echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}${Dim} ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
-    # Traceroute test
-    echo "${F_Red}•${F_Green}${Bold} Traceroute Testing...\n${No_Attributes}"
+    # Traceroute test IPv4
+    echo "${F_Red}•${F_Green}${Bold} Traceroute IPv4 Testing...\n${No_Attributes}"
     traceroute -w 1 -m 30 Google.com
     echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}${Dim} ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
     traceroute -w 1 -m 30 Youtube.com
@@ -262,26 +262,21 @@ netPingAndTracerouteTestIPv4() {
     echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}${Dim} ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
     traceroute -w 1 -m 30 Yandex.com
     echo "\n${F_Red}•${F_Green}${Bold} Finish.${No_Attributes}${Dim} ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
-    continueMessage
-}
-
-# Command 2: Ping and Traceroute test IPv6
-netPingAndTracerouteTestIPv6() {
+    # Ping and Traceroute test IPv6
     terminalWindowSize55x140
-    echo "•${F_Red}${Bold} Command 2: You choose to net Ping and Traceroute test IPv6.${No_Attributes}"
-    # Ping test
+    # Ping test IPv6
     declare -a arr=("Google.com" "Youtube.com" "Facebook.com" "Instagram.com" "Spotify.com" "Yahoo.com" "Yandex.com")
     echo "\n${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
     echo "${Dim}•${No_Attributes} Server- or IP- address | Response time: Minimum/Average/Maximum/Standard_deviation ${Dim}•${No_Attributes}"
     echo "${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
-    echo "${F_Red}•${F_Green}${Bold} Ping Testing...\n${No_Attributes}"
+    echo "${F_Red}•${F_Green}${Bold} Ping IPv6 Testing...\n${No_Attributes}"
     for i in "${arr[@]}"; do
         time=$(ping6 -i 0.1 -c 4 "$i" | tail -1 | awk '{print $4}')
         echo "$i | response time | $time ms"
     done
     echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}${Dim} ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
-    # Traceroute test
-    echo "${F_Red}•${F_Green}${Bold} Traceroute Testing...\n${No_Attributes}"
+    # Traceroute test IPv6
+    echo "${F_Red}•${F_Green}${Bold} Traceroute IPv6 Testing...\n${No_Attributes}"
     traceroute6 -w 1 -m 30 Google.com
     echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}${Dim} ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
     traceroute6 -w 1 -m 30 Youtube.com
@@ -294,6 +289,35 @@ netPingAndTracerouteTestIPv6() {
     echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}${Dim} ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
     traceroute6 -w 1 -m 30 Yandex.com
     echo "\n${F_Red}•${F_Green}${Bold} Finish.${No_Attributes}${Dim} ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
+    continueMessage
+}
+
+# Command 2: Spoofing the MAC Address of the Wireless network to a randomly generated MAC address
+spoofingMACAddressOfWirelessNetwork() {
+    terminalWindowSize55x100
+    echo "•${F_Red}${Bold} Command 2: You choose to Spoofing the MAC Address of the Wireless network.${No_Attributes}"
+    askPassword
+    echo "${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
+    echo "${Dim}•${No_Attributes} MAC addresses are used as a way to identify devices by many advertising technology providers.    ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes} In most free timeout-based Internet services, MAC addresses are identifier that services use.    ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes} Spoofing, changes the MAC address of the Wi-Fi, and this is recognized as a new service user.    ${Dim}•${No_Attributes}"
+    echo "${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
+    echo "${Dim}•${No_Attributes} Note that the hardware 'ether' MAC values that never change.                                     ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes} Note that the spoofed MAC address will change to hardware after reboot, since it never changes.  ${Dim}•${No_Attributes}"
+    echo "${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
+    OLD_MAC_ADDRESS=$(ifconfig en0 | grep ether | grep -oE '[0-9abcdef:]{17}')
+    NEW_MAC_ADDRESS=$(openssl rand 6 | xxd -p | sed 's/\(..\)/\1:/g; s/:$//')
+# Check Old MAC address
+    echo "• ${F_Red}Current Old Wireless MAC address:${No_Attributes} $OLD_MAC_ADDRESS"
+# Setting New random MAC address
+    echo "\n${F_Red}•${F_Green} Setting New Spoof random MAC address.${No_Attributes}\n"
+    sudo ifconfig en0 ether $NEW_MAC_ADDRESS
+    echo "\n• ${F_Red}Spoof New Wireless MAC address:${No_Attributes} $NEW_MAC_ADDRESS"
+# Check New MAC address
+    echo "\n${F_Red}•${F_Green} Check New current Spoof MAC address.${No_Attributes}${Dim} •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
+    networksetup -getmacaddress en0 | awk '{print "• System Hardware Wireless MAC address: " $3}'
+    ifconfig en0 | grep ether | awk '{print "• Current Spoof Wireless MAC address: " $2}'
+    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}${Dim} ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
     continueMessage
 }
 
@@ -1138,7 +1162,7 @@ startScript() {
 
         2)
             clear
-            netPingAndTracerouteTestIPv6
+            spoofingMACAddressOfWirelessNetwork
             ;;
 
         3)
