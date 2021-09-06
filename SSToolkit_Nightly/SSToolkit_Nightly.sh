@@ -235,7 +235,7 @@ aboutGitHub() {
 
 # Command 1: Ping and Traceroute test IPv4
 netPingAndTracerouteTestIPv4() {
-    terminalWindowSize55x100
+    terminalWindowSize55x140
     echo "•${F_Red}${Bold} Command 1: You choose to Ping and Traceroute test IPv4/IPv6.${No_Attributes}"
     # Ping test IPv4
     declare -a arr=("Google.com" "Youtube.com" "Facebook.com" "Instagram.com" "Spotify.com" "Yahoo.com" "Yandex.com")
@@ -247,23 +247,22 @@ netPingAndTracerouteTestIPv4() {
         time=$(ping -i 0.1 -c 4 "$i" | tail -1 | awk '{print $4}')
         echo "$i | response time | $time ms"
     done
-    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}${Dim} ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
+    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}${Dim} ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
     # Traceroute test IPv4
     echo "${F_Red}•${F_Green}${Bold} Traceroute IPv4 Testing...\n${No_Attributes}"
-    traceroute -w 1 -m 30 Google.com
-    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}${Dim} ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
-    traceroute -w 1 -m 30 Youtube.com
-    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}${Dim} ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
-    traceroute -w 1 -m 30 Facebook.com
-    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}${Dim} ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
-    traceroute -w 1 -m 30 Spotify.com
-    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}${Dim} ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
-    traceroute -w 1 -m 30 Yahoo.com
-    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}${Dim} ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
-    traceroute -w 1 -m 30 Yandex.com
-    echo "\n${F_Red}•${F_Green}${Bold} Finish.${No_Attributes}${Dim} ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
+    traceroute -w 1 -S -m 30 Google.com
+    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}${Dim} ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
+    traceroute -w 1 -S -m 30 Youtube.com
+    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}${Dim} ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
+    traceroute -w 1 -S -m 30 Facebook.com
+    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}${Dim} ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
+    traceroute -w 1 -S -m 30 Spotify.com
+    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}${Dim} ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
+    traceroute -w 1 -S -m 30 Yahoo.com
+    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}${Dim} ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
+    traceroute -w 1 -S -m 30 Yandex.com
+    echo "\n${F_Red}•${F_Green}${Bold} Finish.${No_Attributes}${Dim} ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
     # Ping and Traceroute test IPv6
-    terminalWindowSize55x140
     # Ping test IPv6
     declare -a arr=("Google.com" "Youtube.com" "Facebook.com" "Instagram.com" "Spotify.com" "Yahoo.com" "Yandex.com")
     echo "\n${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
@@ -277,17 +276,17 @@ netPingAndTracerouteTestIPv4() {
     echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}${Dim} ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
     # Traceroute test IPv6
     echo "${F_Red}•${F_Green}${Bold} Traceroute IPv6 Testing...\n${No_Attributes}"
-    traceroute6 -w 1 -m 30 Google.com
+    traceroute6 -w 1 -l -m 30 Google.com
     echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}${Dim} ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
-    traceroute6 -w 1 -m 30 Youtube.com
+    traceroute6 -w 1 -l -m 30 Youtube.com
     echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}${Dim} ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
-    traceroute6 -w 1 -m 30 Facebook.com
+    traceroute6 -w 1 -l -m 30 Facebook.com
     echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}${Dim} ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
-    traceroute6 -w 1 -m 30 Spotify.com
+    traceroute6 -w 1 -l -m 30 Spotify.com
     echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}${Dim} ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
-    traceroute6 -w 1 -m 30 Yahoo.com
+    traceroute6 -w 1 -l -m 30 Yahoo.com
     echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}${Dim} ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
-    traceroute6 -w 1 -m 30 Yandex.com
+    traceroute6 -w 1 -l -m 30 Yandex.com
     echo "\n${F_Red}•${F_Green}${Bold} Finish.${No_Attributes}${Dim} ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
     continueMessage
 }
@@ -333,8 +332,7 @@ customDNSServersForWi-Fi() {
     echo " ${Dim}•${No_Attributes}${F_Purple}${Bold} Non-filtering     ${No_Attributes}${Dim}|${No_Attributes} Reliable and fast DNS lookup without blocking any specific categories                  ${Dim}•${No_Attributes}"
     echo " ${Dim}•${No_Attributes}${F_Yellow}${Bold} Threat Protection ${No_Attributes}${Dim}|${No_Attributes} Mode is for blocking ads, trackers, malware, ransomware, spyware and phishing websites ${Dim}•${No_Attributes}"
     echo " ${Dim}•${No_Attributes}${F_Green}${Bold} Family Protection ${No_Attributes}${Dim}|${No_Attributes} Does the same as (Threat Protection), but also blocks websites with adult content      ${Dim}•${No_Attributes}"
-    echo " ${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
-    echo ""
+    echo " ${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
     echo "      ${Dim}•••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
     echo "      ${Dim}•${No_Attributes} DNS Providers ${Dim}|${No_Attributes} Modes filtering   ${Dim}|${No_Attributes} Primary DNS IPv4 ${Dim}|${No_Attributes} Secondary DNS IPv4 ${Dim}|${No_Attributes} Primary DNS IPv6     ${Dim}|${No_Attributes} Secondary DNS IPv6     ${Dim}•${No_Attributes}"
     echo " ${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
@@ -504,8 +502,7 @@ customDNSServersForEthernet() {
     echo " ${Dim}•${No_Attributes}${F_Purple}${Bold} Non-filtering     ${No_Attributes}${Dim}|${No_Attributes} Reliable and fast DNS lookup without blocking any specific categories                  ${Dim}•${No_Attributes}"
     echo " ${Dim}•${No_Attributes}${F_Yellow}${Bold} Threat Protection ${No_Attributes}${Dim}|${No_Attributes} Mode is for blocking ads, trackers, malware, ransomware, spyware and phishing websites ${Dim}•${No_Attributes}"
     echo " ${Dim}•${No_Attributes}${F_Green}${Bold} Family Protection ${No_Attributes}${Dim}|${No_Attributes} Does the same as (Threat Protection), but also blocks websites with adult content      ${Dim}•${No_Attributes}"
-    echo " ${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
-    echo ""
+    echo " ${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
     echo "      ${Dim}•••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
     echo "      ${Dim}•${No_Attributes} DNS Providers ${Dim}|${No_Attributes} Modes filtering   ${Dim}|${No_Attributes} Primary DNS IPv4 ${Dim}|${No_Attributes} Secondary DNS IPv4 ${Dim}|${No_Attributes} Primary DNS IPv6     ${Dim}|${No_Attributes} Secondary DNS IPv6     ${Dim}•${No_Attributes}"
     echo " ${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
@@ -860,9 +857,7 @@ testICMPSweepAndICMP-Flood() {
     echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes} ${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
     # ICMP-Flood and Broadcast storm is a common Denial of Service (DoS) attack!
     echo "•${F_Red}${Bold} ICMP-Flood is a common Denial of Service (DoS) attack!${No_Attributes}"
-    echo "• The average packet size is 1472 data bytes, MTU limit and exceeding it can trigger a firewall."
-    echo "• For Hosts Address: Outgoing data bytes packet size MIN: 56 -> AVG: 1472 -> MAX: 65507."
-    echo "• For Broadcast Address: Outgoing data bytes packet size MIN: 56 -> MAX: 1470."
+    echo "• Outgoing data bytes packet size Default: 56 -> exceeding can trigger a firewall."
     echo "• About 100 packets per second, the speed is affected by packet size and network bandwidth."
     echo "\n${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
     read "? To which IP address you want to send the test packets: " HOST
