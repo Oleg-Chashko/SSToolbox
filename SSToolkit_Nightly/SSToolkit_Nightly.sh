@@ -682,11 +682,11 @@ showInfoLN_DHCP_IP/MACAddresses() {
     echo "\n${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
     # Wi-Fi (en0)
     en0Interface=$(networksetup -listnetworkserviceorder | grep en0)
-    en0Status=$(ifconfig en0 | awk /status:\ /'{print $2}')
+    en0Status=$(ifconfig en0 | grep status: | awk '{print $2}')
     en0InternalIPv4=$(ifconfig en0 | awk /inet\ /'{print $2}')
     en0InternalIPv6=$(ifconfig en0 | grep inet6 | grep autoconf | grep secured | awk '{print $2}')
     en0HardwareMACAddress=$(networksetup -getmacaddress en0 | awk '{print $3}')
-    en0CurrentMACAddress=$(ifconfig en0 | awk /ether\ /'{print $2}')
+    en0CurrentMACAddress=$(ifconfig en0 | grep ether | awk '{print $2}')
     en0SubnetMask=$(ipconfig getoption en0 subnet_mask)
     en0BroadcastAddress=$(ifconfig en0 | awk /inet\ /'{print $6}')
     echo "${F_Red}•${F_Green}${Bold} Internal Wi-Fi network ${F_Red}(en0)${F_Green}.${No_Attributes}"
@@ -710,11 +710,11 @@ showInfoLN_DHCP_IP/MACAddresses() {
     echo "\n${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
     # Ethernet (en1)
     en1Interface=$(networksetup -listnetworkserviceorder | grep en1)
-    en1Status=$(ifconfig en1 | awk /status:\ /'{print $2}')
+    en1Status=$(ifconfig en1 | grep status: | awk '{print $2}')
     en1InternalIPv4=$(ifconfig en1 | awk /inet\ /'{print $2}')
     en1InternalIPv6=$(ifconfig en1 | grep inet6 | grep autoconf | grep secured | awk '{print $2}')
     en1HardwareMACAddress=$(networksetup -getmacaddress en1 | awk '{print $3}')
-    en1CurrentMACAddress=$(ifconfig en1 | awk /ether\ /'{print $2}')
+    en1CurrentMACAddress=$(ifconfig en1 | grep ether | awk '{print $2}')
     en1SubnetMask=$(ipconfig getoption en1 subnet_mask)
     en1BroadcastAddress=$(ifconfig en1 | awk /inet\ /'{print $6}')
     echo "${F_Red}•${F_Green}${Bold} Internal Ethernet network ${F_Red}(en1)${F_Green}.${No_Attributes}"
