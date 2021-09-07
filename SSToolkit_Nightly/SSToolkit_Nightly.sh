@@ -63,8 +63,8 @@ showMenu() {
     echo "${Dim}•${No_Attributes}${F_Red}${Bold}  3${No_Attributes} ${Dim}•${No_Attributes} Custom DNS servers for Wi-Fi                                                                                                ${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Red}${Bold}  4${No_Attributes} ${Dim}•${No_Attributes} Custom DNS servers for Ethernet                                                                                             ${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Red}${Bold}  5${No_Attributes} ${Dim}•${No_Attributes} Release and Renew DHCP for all available device interfaces. (Requires a reboot)                                             ${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Red}${Bold}  6${No_Attributes} ${Dim}•${No_Attributes} Show information: Local Network, DHCP and IP and MAC Addresses of Devices on a Local Network                                ${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Red}${Bold}  7${No_Attributes} ${Dim}•${No_Attributes} Show information: Firewall, Wireless Networks, ComputerName, HostName, LocalHostName and NetBIOSName                        ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Red}${Bold}  6${No_Attributes} ${Dim}•${No_Attributes} Show information: Firewall, Wireless, Local Network, DHCP and IP and MAC Addresses of Devices on a Local Network and etc.   ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Red}${Bold}  7${No_Attributes} ${Dim}•${No_Attributes} ---------------------------                                                                                                 ${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Red}${Bold}  8${No_Attributes} ${Dim}•${No_Attributes} Check DNS records of the domain, to obtain the mapping between domain name and IPv4/IPv6 address                            ${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Red}${Bold}  9${No_Attributes} ${Dim}•${No_Attributes} Stress Test Network with ICMP-Sweep and ICMP-Flood. (This can be very hard on a network and should be used with caution)    ${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Red}${Bold} 10${No_Attributes} ${Dim}•${No_Attributes} Search all processes for all users and view network data by Internet protocol TCP/UDP and version IPv4/IPv6                 ${Dim}•${No_Attributes}"
@@ -687,10 +687,10 @@ releaseAndRenewDHCP() {
     continueMessage
 }
 
-# Command 6: Show information: Local Network, DHCP and IP and MAC Addresses of Devices on a Local Network
+# Command 6: Show information: Firewall, Wireless, Local Network, DHCP and IP and MAC Addresses of Devices on a Local Network and etc.
 showInfoLN_DHCP_IP/MACAddresses() {
     terminalWindowSize55x140
-    echo "•${F_Red}${Bold} Command 6: You choose to Show information: Local Network, DHCP and IP and MAC Addresses of Devices on a Local Network.${No_Attributes}\n"
+    echo "•${F_Red}${Bold} Command 6: Show information: Firewall, Wireless, Local Network, DHCP and IP and MAC Addresses of Devices on a Local Network and etc.${No_Attributes}\n"
     # External IP Address
     ExternalIPv4=$(curl -s https://api.ipify.org)
     ExternalIPv6=$(curl -s https://api64.ipify.org)
@@ -757,23 +757,7 @@ showInfoLN_DHCP_IP/MACAddresses() {
     echo "\n${F_Red}•${F_Green}${Bold} Show IP and MAC Addresses of devices in the Ethernet network ${F_Red}(en1)${F_Green}.${No_Attributes}"
     arp -a | grep en1 | awk '{print $1, $2, $3, $4, $6}'
     echo "\n${F_Red}•${F_Green}${Bold} Finish.${No_Attributes}${Dim} ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
-    continueMessage
-}
-
-# Command 7: Show information: Firewall, Wireless Networks, ComputerName, HostName, LocalHostName and NetBIOSName
-showNetworksInformation() {
-    terminalWindowSize55x140
-    echo "•${F_Red}${Bold} Command 7: Show information: Firewall, Wireless Networks, ComputerName, HostName, LocalHostName and NetBIOSName.${No_Attributes}"
-    # Show Firewall information
-    echo "\n${F_Red}•${F_Green}${Bold} Show Firewall information.${No_Attributes}"
-    /usr/libexec/ApplicationFirewall/socketfilterfw --getglobalstate
-    echo "\n${F_Red}•${F_Green}${Bold} Show whether block all is enabled or not.${No_Attributes}"
-    /usr/libexec/ApplicationFirewall/socketfilterfw --getblockall
-    echo "\n${F_Red}•${F_Green}${Bold} List applications handled by firewall.${No_Attributes}"
-    /usr/libexec/ApplicationFirewall/socketfilterfw --list
-    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}${Dim} ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
     # Show Wireless Networks information
-    echo "•${F_Red}${Bold} Show Wireless Networks information.${No_Attributes}"
     echo "\n${F_Red}•${F_Green}${Bold} Your current preferred Wireless network.${No_Attributes}"
     SSID=$(airport -I  | awk -F' SSID: '  '/ SSID: / {print $2}')
     OperationMode=$(airport -I | grep op | grep mode | awk '{print $3}')
@@ -796,7 +780,15 @@ showNetworksInformation() {
     # Scan Wireless Networks
     echo "\n${F_Red}•${F_Green}${Bold} Scan Wireless Networks.${No_Attributes}"
     /System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport -s
-    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}${Dim} ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
+    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}${Dim} ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
+    # Show Firewall information
+    echo "\n${F_Red}•${F_Green}${Bold} Show Firewall information.${No_Attributes}"
+    /usr/libexec/ApplicationFirewall/socketfilterfw --getglobalstate
+    echo "\n${F_Red}•${F_Green}${Bold} Show whether block all is enabled or not.${No_Attributes}"
+    /usr/libexec/ApplicationFirewall/socketfilterfw --getblockall
+    echo "\n${F_Red}•${F_Green}${Bold} List applications handled by firewall.${No_Attributes}"
+    /usr/libexec/ApplicationFirewall/socketfilterfw --list
+    echo "${F_Red}•${F_Green}${Bold} Done.${No_Attributes}${Dim} ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
     # ComputerName, HostName, LocalHostName and NetBIOSName
     echo "${F_Red}•${F_Green}${Bold} Show ComputerName, HostName, LocalHostName and NetBIOSName.${No_Attributes}"
     scutil --get ComputerName | awk '{print "Computer Name: ", $1}'
@@ -808,6 +800,13 @@ showNetworksInformation() {
     networksetup -listallhardwareports
     echo "\n${F_Red}•${F_Green}${Bold} Finish.${No_Attributes}${Dim} ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
     continueMessage
+}
+
+# Command 7: -------------------
+-------------------() {
+    terminalWindowSize55x140
+    echo "•${F_Red}s${Bold} Command 7: -------------------.${No_Attributes}"
+
 }
 
 # Command 8: Check DNS records of the domain, to obtain the mapping between domain name and IP address
@@ -1182,7 +1181,7 @@ startScript() {
 
         7)
             clear
-            showNetworksInformation
+            -------------------
             ;;
 
         8)
