@@ -805,7 +805,7 @@ showInfoLN_DHCP_IP/MACAddresses() {
 # Command 7: Custom ping and tracerout test IPv4/IPv6
 customPingAndTraceroutTestIPv4/IPv6() {
     terminalWindowSize55x140
-    echo "•${F_Red}s${Bold} Command 7: You choose to Custom ping and tracerout test IPv4/IPv6.${No_Attributes}"
+    echo "•${F_Red}${Bold} Command 7: You choose to Custom ping and tracerout test IPv4/IPv6.${No_Attributes}\n"
     # Menu DNS servers
     echo " ${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
     echo " ${Dim}•${No_Attributes}${F_Red}${Bold} 1${No_Attributes} ${Dim}•${No_Attributes} Test Ping IPv4                                     ${Dim}•${No_Attributes}"
@@ -823,7 +823,7 @@ customPingAndTraceroutTestIPv4/IPv6() {
     # Test Ping IPv4
     if [ "$var" -eq "1" ]; then
         echo "\n${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
-        echo " Outgoing data bytes packet size Default: 56 -> exceeding can trigger a firewall."
+        echo " Outgoing data bytes packet size ${F_Green}${Bold}Default: 56${No_Attributes} -> exceeding can trigger a firewall."
         read "? To which IP or Host address you want to send the test packets: " HOST
         read "? How many times you want to send the test packets: " COUNT
         read "? How many data bytes packet size you would like to send: " SIZE
@@ -845,7 +845,7 @@ customPingAndTraceroutTestIPv4/IPv6() {
     # Test Ping IPv6
     if [ "$var" -eq "3" ]; then
         echo "\n${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
-        echo " Outgoing data bytes packet size Default: 56 -> exceeding can trigger a firewall."
+        echo " Outgoing data bytes packet size ${F_Green}${Bold}Default: 56${No_Attributes} -> exceeding can trigger a firewall."
         read "? To which IP or Host address you want to send the test packets: " HOST
         read "? How many times you want to send the test packets: " COUNT
         read "? How many data bytes packet size you would like to send: " SIZE
