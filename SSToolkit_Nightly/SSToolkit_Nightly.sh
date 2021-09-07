@@ -70,7 +70,7 @@ showMenu() {
     echo "${Dim}•${No_Attributes}${F_Red}${Bold} 10${No_Attributes} ${Dim}•${No_Attributes} Search all processes for all users and view network data by Internet protocol TCP/UDP and version IPv4/IPv6                 ${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Red}${Bold} 11${No_Attributes} ${Dim}•${No_Attributes} Edit Hosts file: (Block IP Addresses and Reroute Web Addresses)                                                             ${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Red}${Bold} 12${No_Attributes} ${Dim}•${No_Attributes} Show Wireless Network Password                                                                                              ${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Red}${Bold} 13${No_Attributes} ${Dim}•${No_Attributes} Setting default a new Computer Name, Hostname and etc                                                                       ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Red}${Bold} 13${No_Attributes} ${Dim}•${No_Attributes} Custom setting a new Computer Name, Hostname, Local Hostname and NetBIOS Name                                               ${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Red}${Bold} 14${No_Attributes} ${Dim}•${No_Attributes} Search Routers on local Networks, uses the default IP addresses                                                             ${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Red}${Bold} 15${No_Attributes} ${Dim}•${No_Attributes} Flushes local DNS cache, used for problems with loading sites, 404 error                                                    ${Dim}•${No_Attributes}"
     echo "${Dim}•····•················································································································· ${F_Green}${Bold}GateKeeper ${No_Attributes}${Dim}•${No_Attributes}"
@@ -998,27 +998,34 @@ wifiShowPassword() {
     continueMessage
 }
 
-# Command 13: Setting default a new Computer Name, Hostname and etc
-settingDefaultComputerName() {
+# Command 13: Custom setting a new Computer Name, Hostname, Local Hostname and NetBIOS Name
+customSettingComputerName() {
     terminalWindowSize40x140
-    echo "•${F_Red}${Bold} Command 13: You choose to Setting default a new Computer Name, Hostname and etc.${No_Attributes}"
+    echo "•${F_Red}${Bold} Command 13: You choose to Custom setting a new Computer Name, Hostname, Local Hostname and NetBIOS Name.${No_Attributes}"
     askPassword
-    # gets named
-    fullName=$(id -P $(stat -f%Su /dev/console) | cut -d : -f 8 | sed 's/ //g' | awk '{print tolower($0)}')
-    computerName=$fullName
-    # set all the name in all the places
-    sudo scutil --set ComputerName "$computerName"
-    sudo scutil --set HostName "$computerName"
-    sudo scutil --set LocalHostName "$computerName"
-    sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName -string "$computerName"
-    sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder
-    # information about the new current hostname
-    echo "\n•${F_Red} Getting information about the new current Hostname.${No_Attributes}\n"
-    scutil --get ComputerName | awk '{print "Computer Name: ", $1}'
-    scutil --get HostName | awk '{print "Hostname: ", $1}'
-    scutil --get LocalHostName | awk '{print "local Hostname: ", $1}'
-    defaults read /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName | awk '{print "NetBIOS Name: " $1}'
+    echo "${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
+    read "? Hostname (for example: MacBook-Pro): " Hostname
+    read "? Computer Name (for example: John_Kennedy): " ComputerName
+    read "? Local Hostname (for example: MacBook-Pro-John): " LocalHostname
+    echo " NetBIOS Name is automatically generated from Local Hostname: -------"
+    echo "${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
+    sudo scutil --set HostName "$Hostname"
+    sudo scutil --set ComputerName "$ComputerName"
+    sudo scutil --set LocalHostName "$LocalHostname"
+    sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName $(scutil --get LocalHostName)
+    # Flush DNS cache
+    echo "\n•${F_Red}${Bold} Flushing DNS...${No_Attributes}"
+    sleep 1 && sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder
     echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
+    # New current information about the Computer Name, Hostname, Local Hostname and NetBIOS Name
+    echo "\n${F_Red}•${F_Green}${Bold} Getting information about the new current Computer Name, Hostname, Local Hostname and NetBIOS Name.${No_Attributes}\n"
+    echo "${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
+    sleep 1 && scutil --get HostName | awk '{print "Hostname: ", $1}'
+    sleep 1 && scutil --get ComputerName | awk '{print "Computer Name: ", $1}'
+    sleep 1 && scutil --get LocalHostName | awk '{print "Local Hostname: ", $1}'
+    sleep 1 && defaults read /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName | awk '{print "NetBIOS Name: " $1}'
+    echo "${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
+    echo "\n${F_Red}•${F_Green}${Bold} Finish...${No_Attributes}"
     continueMessage
 }
 
@@ -1258,7 +1265,7 @@ startScript() {
 
         13)
             clear
-            settingDefaultComputerName
+            customSettingComputerName
             ;;
 
         14)
