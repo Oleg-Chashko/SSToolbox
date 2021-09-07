@@ -114,13 +114,6 @@ terminalWindowSizeMenu() {
 
 # ----------------------------------------------------------------
 
-# Terminal window size 40x100 - move to top/left corner and resize
-terminalWindowSize40x100() {
-    printf '\033[3;0;0t'
-    printf '\033[8;40;100t'
-    clear
-}
-
 # Terminal window size 40x140 - move to top/left corner and resize
 terminalWindowSize40x140() {
     printf '\033[3;0;0t'
@@ -136,13 +129,6 @@ terminalWindowSize40x190() {
 }
 
 # ----------------------------------------------------------------
-
-# Terminal window size 55x100 - move to top/left corner and resize
-terminalWindowSize55x100() {
-    printf '\033[3;0;0t'
-    printf '\033[8;55;100t'
-    clear
-}
 
 # Terminal window size 55x140 - move to top/left corner and resize
 terminalWindowSize55x140() {
@@ -177,7 +163,7 @@ showInvalid() {
 
 # Command I: Installing the Xcode CLT
 installingXCLT() {
-    terminalWindowSize40x100
+    terminalWindowSize40x140
     echo "•${F_Red}${Bold} Command I: You choose to Install the Xcode Command Line Tools.${No_Attributes}\n"
     xcode-select --install
     continueMessage
@@ -185,7 +171,7 @@ installingXCLT() {
 
 # Command U: Uninstalling the Xcode CLT
 uninstallingXCLT() {
-    terminalWindowSize40x100
+    terminalWindowSize40x140
     echo "•${F_Red}${Bold} Command U: You choose to Uninstall the Xcode Command Line Tools.${No_Attributes}\n"
     askPassword
     sudo rm -rf /Library/Developer/CommandLineTools
@@ -293,7 +279,7 @@ automaticPingAndTraceroutTestIPv4/IPv6() {
 
 # Command 2: Spoofing the MAC Address of the Wireless network to a randomly generated MAC address
 spoofingMACAddressOfWirelessNetwork() {
-    terminalWindowSize55x100
+    terminalWindowSize55x140
     echo "•${F_Red}${Bold} Command 2: You choose to Spoofing the MAC Address of the Wireless network.${No_Attributes}"
     askPassword
     echo "${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
@@ -662,7 +648,7 @@ customDNSServersForEthernet() {
 
 # Command 5: Release and Renew DHCP
 releaseAndRenewDHCP() {
-    terminalWindowSize40x100
+    terminalWindowSize40x140
     echo "•${F_Red}${Bold} Command 5: You choose to Release and Renew DHCP for all available device interfaces.${No_Attributes}"
     askPassword
     # Release the DHCP assigned IP, DNS server, subnet mask, router/gateway and the lease time
@@ -869,7 +855,7 @@ customPingAndTraceroutTestIPv4/IPv6() {
 
 # Command 8: Check DNS records of the domain, to obtain the mapping between domain name and IP address
 checkDNSRecordsOfTheDomainIPv4/IPv6() {
-    terminalWindowSize55x100
+    terminalWindowSize55x140
     echo "•${F_Red}${Bold} Command 8: You choose to Check DNS records of the Domain IPv4/IPv6.${No_Attributes}"
     # NSlookup test
     declare -a arr=("Google.com" "Wikipedia.org" "Facebook.com" "Spotify.com" "Linkedin.com")
@@ -891,7 +877,7 @@ checkDNSRecordsOfTheDomainIPv4/IPv6() {
 
 # Command 9: Test ICMP-Sweep & ICMP-Flood
 testICMPSweepAndICMP-Flood() {
-    terminalWindowSize55x100
+    terminalWindowSize55x140
     echo "•${F_Red}${Bold} Command 9: You choose to Stress Test Network with ICMP-Sweep and ICMP-Flood.${No_Attributes}"
     askPassword
     # ICMP-Sweep
@@ -995,7 +981,7 @@ editHostsFile() {
 
 # Command 12: Show Wireless Network Password
 wifiShowPassword() {
-    terminalWindowSize40x100
+    terminalWindowSize40x140
     echo "•${F_Red}${Bold} Command 12: You choose to Show Wireless Network Password.${No_Attributes}\n"
     echo "•${F_Red} Please provide your Login and Password to proceed.${No_Attributes}\n"
     sleep 2
@@ -1011,7 +997,7 @@ wifiShowPassword() {
 
 # Command 13: Setting default a new Computer Name, Hostname and etc
 settingDefaultComputerName() {
-    terminalWindowSize40x100
+    terminalWindowSize40x140
     echo "•${F_Red}${Bold} Command 13: You choose to Setting default a new Computer Name, Hostname and etc.${No_Attributes}"
     askPassword
     # gets named
@@ -1035,7 +1021,7 @@ settingDefaultComputerName() {
 
 # Command 14: Search Routers on local Networks, uses the default IP addresses
 searchRoutersLocalNetworks() {
-    terminalWindowSize55x100
+    terminalWindowSize55x140
     echo "•${F_Red}${Bold} Command 14 You choose to Search Routers on local Networks, uses the default IP addresses.${No_Attributes}\n"
     declare -a arr=("10.0.0.1" "10.0.0.2" "10.0.0.138" "10.0.1.1" "10.1.1.1" "10.1.10.1" "10.10.1.1" "10.90.90.90" "192.168.0.1" "192.168.0.3" "192.168.0.10" "192.168.0.30" "192.168.0.50" "192.168.0.100" "192.168.0.101" "192.168.0.227" "192.168.0.254" "192.168.1.1" "192.168.1.10" "192.168.1.99" "192.168.1.100" "192.168.1.200" "192.168.1.210" "192.168.1.254" "192.168.2.1" "192.168.2.254" "192.168.3.1" "192.168.4.1" "192.168.8.1" "192.168.10.1" "192.168.10.10" "192.168.10.50" "192.168.10.100" "192.168.11.1" "192.168.15.1" "192.168.16.1" "192.168.20.1" "192.168.30.1" "192.168.50.1" "192.168.55.1" "192.168.62.1" "192.168.100.1" "192.168.100.100" "192.168.102.1" "192.168.123.254" "192.168.168.168" "192.168.223.100" "192.168.251.1" "192.168.254.254" "200.200.200.5")
     for i in "${arr[@]}"; do
@@ -1047,7 +1033,7 @@ searchRoutersLocalNetworks() {
 
 # Command 15: Flush DNS cache
 flushesLocalDNS() {
-    terminalWindowSize40x100
+    terminalWindowSize40x140
     echo "•${F_Red}${Bold} Command 15: Flushing DNS...${No_Attributes}"
     askPassword
     if echo $VERSION | grep -E '^10\.10(\.[0-3])?$' >/dev/null 2>&1; then
@@ -1063,7 +1049,7 @@ flushesLocalDNS() {
 
 # Command 16: GateKeeper Status
 gateKeeperStatus() {
-    terminalWindowSize40x100
+    terminalWindowSize40x140
     echo "•${F_Red}${Bold} Command 16: You choose to GateKeeper status.${No_Attributes}\n"
     spctl --status
     continueMessage
@@ -1071,7 +1057,7 @@ gateKeeperStatus() {
 
 # Command 17: Enable GateKeeper
 enableGateKeeper() {
-    terminalWindowSize40x100
+    terminalWindowSize40x140
     echo "•${F_Red}${Bold} Command 17: You chose to enable GateKeeper.${No_Attributes}"
     askPassword
     sudo spctl --master-enable
@@ -1081,7 +1067,7 @@ enableGateKeeper() {
 
 # Command 18: Disable GateKeeper
 disableGateKeeper() {
-    terminalWindowSize40x100
+    terminalWindowSize40x140
     echo "•${F_Red}${Bold} Command 18: You chose to disable GateKeeper.${No_Attributes}"
     askPassword
     sudo spctl --master-disable
@@ -1091,7 +1077,7 @@ disableGateKeeper() {
 
 # Command 19: Remove app from GateKeeper quarantine
 removeAppFromGateKeeper() {
-    terminalWindowSize40x100
+    terminalWindowSize40x140
     echo "•${F_Red}${Bold} Command 19: You chose to remove the app from GateKeeper quarantine.${No_Attributes}\n"
     read "? Drag & drop the app on this window and then press Return: " FILEPATH
     askPassword
@@ -1117,7 +1103,7 @@ selfSignApp() {
 
 # Command 21: Show Hidden Files
 showHiddenFiles() {
-    terminalWindowSize40x100
+    terminalWindowSize40x140
     echo "•${F_Red}${Bold} Command 21: You choose to show hidden files.${No_Attributes}"
     defaults write com.apple.finder AppleShowAllFiles true && killall Finder
     echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
@@ -1126,7 +1112,7 @@ showHiddenFiles() {
 
 # Command 22: Don't Show Hidden Files
 noShowHiddenFiles() {
-    terminalWindowSize40x100
+    terminalWindowSize40x140
     echo "•${F_Red}${Bold} Command 22: You choose to don't show hidden files.${No_Attributes}"
     defaults write com.apple.finder AppleShowAllFiles false && killall Finder
     echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
@@ -1135,7 +1121,7 @@ noShowHiddenFiles() {
 
 # Command 23: Show all File Extensions
 showExtensionsFiles() {
-    terminalWindowSize40x100
+    terminalWindowSize40x140
     echo "•${F_Red}${Bold} Command 23: You choose to show all file extensions.${No_Attributes}"
     defaults write NSGlobalDomain AppleShowAllExtensions true && killall Finder
     echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
@@ -1144,7 +1130,7 @@ showExtensionsFiles() {
 
 # Command 24: Don't Show all File Extensions
 noShowExtensionsFiles() {
-    terminalWindowSize40x100
+    terminalWindowSize40x140
     echo "•${F_Red}${Bold} Command 24: You choose to don't show all file extensions.${No_Attributes}"
     defaults write NSGlobalDomain AppleShowAllExtensions false && killall Finder
     echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
@@ -1153,7 +1139,7 @@ noShowExtensionsFiles() {
 
 # Command 25:
 showAttachmentsAsIcons() {
-    terminalWindowSize40x100
+    terminalWindowSize40x140
     echo "•${F_Red}${Bold} Command 25: You choose to show Attachments as Icons in Apple Mail App.${No_Attributes}\n"
     defaults write com.apple.mail DisableInlineAttachmentViewing -boolean yes
     echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
@@ -1162,7 +1148,7 @@ showAttachmentsAsIcons() {
 
 # Command 26:
 noShowAttachmentsAsIcons() {
-    terminalWindowSize40x100
+    terminalWindowSize40x140
     echo "•${F_Red}${Bold} Command 26: You choose to don't show Attachments as Icons in Apple Mail App.${No_Attributes}\n"
     defaults write com.apple.mail DisableInlineAttachmentViewing -boolean no
     echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
@@ -1171,7 +1157,7 @@ noShowAttachmentsAsIcons() {
 
 # Command 27: Show the full path in the Finder Title window
 showTheFullPathInTheFinderTitleWindow() {
-    terminalWindowSize40x100
+    terminalWindowSize40x140
     echo "•${F_Red}${Bold} Command 23: You choose to Show the full path in the Finder Title window.${No_Attributes}"
     defaults write com.apple.finder _FXShowPosixPathInTitle -bool true && killall Finder
     echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
@@ -1180,7 +1166,7 @@ showTheFullPathInTheFinderTitleWindow() {
 
 # Command 28: Don't Show the full path in the Finder Title window
 noShowTheFullPathInTheFinderTitleWindow() {
-    terminalWindowSize40x100
+    terminalWindowSize40x140
     echo "•${F_Red}${Bold} Command 24: You choose to Don't Show the full path in the Finder Title window.${No_Attributes}"
     defaults write com.apple.finder _FXShowPosixPathInTitle -bool false && killall Finder
     echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
