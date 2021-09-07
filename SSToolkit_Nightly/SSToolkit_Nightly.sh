@@ -64,7 +64,7 @@ showMenu() {
     echo "${Dim}•${No_Attributes}${F_Red}${Bold}  4${No_Attributes} ${Dim}•${No_Attributes} Custom DNS servers for Ethernet                                                                                             ${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Red}${Bold}  5${No_Attributes} ${Dim}•${No_Attributes} Release and Renew DHCP for all available device interfaces. (Requires a reboot)                                             ${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Red}${Bold}  6${No_Attributes} ${Dim}•${No_Attributes} Show information: Firewall, Wireless, Local Network, DHCP and IP and MAC Addresses of Devices on a Local Network and etc.   ${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Red}${Bold}  7${No_Attributes} ${Dim}•${No_Attributes} ---------------------------                                                                                                 ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Red}${Bold}  7${No_Attributes} ${Dim}•${No_Attributes} Custom ping and tracerout test IPv4/IPv6                                                                                    ${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Red}${Bold}  8${No_Attributes} ${Dim}•${No_Attributes} Check DNS records of the domain, to obtain the mapping between domain name and IPv4/IPv6 address                            ${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Red}${Bold}  9${No_Attributes} ${Dim}•${No_Attributes} Stress Test Network with ICMP-Sweep and ICMP-Flood. (This can be very hard on a network and should be used with caution)    ${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Red}${Bold} 10${No_Attributes} ${Dim}•${No_Attributes} Search all processes for all users and view network data by Internet protocol TCP/UDP and version IPv4/IPv6                 ${Dim}•${No_Attributes}"
@@ -306,13 +306,13 @@ spoofingMACAddressOfWirelessNetwork() {
     echo "${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
     OLD_MAC_ADDRESS=$(ifconfig en0 | grep ether | grep -oE '[0-9abcdef:]{17}')
     NEW_MAC_ADDRESS=$(openssl rand 6 | xxd -p | sed 's/\(..\)/\1:/g; s/:$//')
-# Check Old MAC address
+    # Check Old MAC address
     echo "• ${F_Red}Current Old Wireless MAC address:${No_Attributes} $OLD_MAC_ADDRESS"
-# Setting New random MAC address
+    # Setting New random MAC address
     echo "\n${F_Red}•${F_Green} Setting New Spoof random MAC address.${No_Attributes}\n"
     sudo ifconfig en0 ether $NEW_MAC_ADDRESS
     echo "\n• ${F_Red}Spoof New Wireless MAC address:${No_Attributes} $NEW_MAC_ADDRESS"
-# Check New MAC address
+    # Check New MAC address
     echo "\n${F_Red}•${F_Green} Check New current Spoof MAC address.${No_Attributes}${Dim} •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
     networksetup -getmacaddress en0 | awk '{print "• System Hardware Wireless MAC address: " $3}'
     ifconfig en0 | grep ether | awk '{print "• Current Spoof Wireless MAC address: " $2}'
@@ -359,7 +359,7 @@ customDNSServersForWi-Fi() {
     printf '
  Please select an Command: '
     read var
-
+    # Cloudflare set as DNS server
     if [ "$var" -eq "1" ]; then
         askPassword
         networksetup -setdnsservers Wi-Fi 8.8.8.8 8.8.4.4 2001:4860:4860::8888 2001:4860:4860::8844
@@ -369,7 +369,7 @@ customDNSServersForWi-Fi() {
         sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder
         checkDNS
     fi
-
+    # Google Public set as DNS server
     if [ "$var" -eq "2" ]; then
         askPassword
         networksetup -setdnsservers Wi-Fi 1.1.1.1 1.0.0.1 2606:4700:4700::1111 2606:4700:4700::1001
@@ -379,7 +379,7 @@ customDNSServersForWi-Fi() {
         sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder
         checkDNS
     fi
-
+    # Cisco Umbrella set as DNS server
     if [ "$var" -eq "3" ]; then
         askPassword
         networksetup -setdnsservers Wi-Fi 208.67.222.222 208.67.220.220 2620:119:35::35 2620:119:53::53
@@ -389,7 +389,7 @@ customDNSServersForWi-Fi() {
         sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder
         checkDNS
     fi
-
+    # NeuStar (Threat Protection) set as DNS server
     if [ "$var" -eq "4" ]; then
         askPassword
         networksetup -setdnsservers Wi-Fi 156.154.70.2 156.154.71.2 2610:a1:1018::2 2610:a1:1019::2
@@ -399,7 +399,7 @@ customDNSServersForWi-Fi() {
         sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder
         checkDNS
     fi
-
+    # NeuStar (Family Protection) set as DNS server
     if [ "$var" -eq "5" ]; then
         askPassword
         networksetup -setdnsservers Wi-Fi 156.154.70.3 156.154.71.3 2610:a1:1018::3 2610:a1:1019::3
@@ -409,7 +409,7 @@ customDNSServersForWi-Fi() {
         sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder
         checkDNS
     fi
-
+    # CleanBrowsing (Threat Protection) set as DNS server
     if [ "$var" -eq "6" ]; then
         askPassword
         networksetup -setdnsservers Wi-Fi 185.228.168.9 185.228.169.9 2a0d:2a00:1::2 2a0d:2a00:2::2
@@ -419,7 +419,7 @@ customDNSServersForWi-Fi() {
         sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder
         checkDNS
     fi
-
+    # CleanBrowsing (Family Protection) set as DNS server
     if [ "$var" -eq "7" ]; then
         askPassword
         networksetup -setdnsservers Wi-Fi 185.228.168.168 185.228.169.168 2a0d:2a00:1:: 2a0d:2a00:2::
@@ -429,7 +429,7 @@ customDNSServersForWi-Fi() {
         sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder
         checkDNS
     fi
-
+    # AdGuard (Threat Protection) set as DNS server
     if [ "$var" -eq "8" ]; then
         askPassword
         networksetup -setdnsservers Wi-Fi 94.140.14.14 94.140.15.15 2a10:50c0::ad1:ff 2a10:50c0::ad2:ff
@@ -439,7 +439,7 @@ customDNSServersForWi-Fi() {
         sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder
         checkDNS
     fi
-
+    # AdGuard (Family Protection) set as DNS server
     if [ "$var" -eq "9" ]; then
         askPassword
         networksetup -setdnsservers Wi-Fi 94.140.14.15 94.140.15.16 2a10:50c0::bad1:ff 2a10:50c0::bad2:ff
@@ -449,7 +449,7 @@ customDNSServersForWi-Fi() {
         sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder
         checkDNS
     fi
-
+    # YandexDNS (Threat Protection) set as DNS server
     if [ "$var" -eq "10" ]; then
         askPassword
         networksetup -setdnsservers Wi-Fi 77.88.8.88 77.88.8.2 2a02:6b8::feed:bad 2a02:6b8:0:1::feed:bad
@@ -459,7 +459,7 @@ customDNSServersForWi-Fi() {
         sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder
         checkDNS
     fi
-
+    # YandexDNS (Family Protection) set as DNS server
     if [ "$var" -eq "11" ]; then
         askPassword
         networksetup -setdnsservers Wi-Fi 77.88.8.7 77.88.8.3 2a02:6b8::feed:a11 2a02:6b8:0:1::feed:a11
@@ -469,13 +469,13 @@ customDNSServersForWi-Fi() {
         sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder
         checkDNS
     fi
-
+    # Current DNS server
     if [ "$var" -eq "12" ]; then
         askPassword
         echo "\n${F_Red}•${No_Attributes} Current DNS server:\n${F_Cyan}$(networksetup -getdnsservers Wi-Fi)${No_Attributes}"
         checkDNS
     fi
-
+    # Removing these DNS servers
     if [ "$var" -eq "13" ]; then
         askPassword
         echo "\n•${F_Red} Removing${No_Attributes} these DNS servers:\n${F_Cyan}$(networksetup -getdnsservers Wi-Fi)${No_Attributes}"
@@ -529,7 +529,7 @@ customDNSServersForEthernet() {
     printf '
  Please select an Command: '
     read var
-
+    # Cloudflare set as DNS server
     if [ "$var" -eq "1" ]; then
         askPassword
         networksetup -setdnsservers Ethernet 8.8.8.8 8.8.4.4 2001:4860:4860::8888 2001:4860:4860::8844
@@ -539,7 +539,7 @@ customDNSServersForEthernet() {
         sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder
         checkDNS
     fi
-
+    # Google Public set as DNS server
     if [ "$var" -eq "2" ]; then
         askPassword
         networksetup -setdnsservers Ethernet 1.1.1.1 1.0.0.1 2606:4700:4700::1111 2606:4700:4700::1001
@@ -549,7 +549,7 @@ customDNSServersForEthernet() {
         sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder
         checkDNS
     fi
-
+    # Cisco Umbrella set as DNS server
     if [ "$var" -eq "3" ]; then
         askPassword
         networksetup -setdnsservers Ethernet 208.67.222.222 208.67.220.220 2620:119:35::35 2620:119:53::53
@@ -559,7 +559,7 @@ customDNSServersForEthernet() {
         sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder
         checkDNS
     fi
-
+    # NeuStar (Threat Protection) set as DNS server
     if [ "$var" -eq "4" ]; then
         askPassword
         networksetup -setdnsservers Ethernet 156.154.70.2 156.154.71.2 2610:a1:1018::2 2610:a1:1019::2
@@ -569,7 +569,7 @@ customDNSServersForEthernet() {
         sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder
         checkDNS
     fi
-
+    # NeuStar (Family Protection) set as DNS server
     if [ "$var" -eq "5" ]; then
         askPassword
         networksetup -setdnsservers Ethernet 156.154.70.3 156.154.71.3 2610:a1:1018::3 2610:a1:1019::3
@@ -579,7 +579,7 @@ customDNSServersForEthernet() {
         sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder
         checkDNS
     fi
-
+    # CleanBrowsing (Threat Protection) set as DNS server
     if [ "$var" -eq "6" ]; then
         askPassword
         networksetup -setdnsservers Ethernet 185.228.168.9 185.228.169.9 2a0d:2a00:1::2 2a0d:2a00:2::2
@@ -589,7 +589,7 @@ customDNSServersForEthernet() {
         sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder
         checkDNS
     fi
-
+    # CleanBrowsing (Family Protection) set as DNS server
     if [ "$var" -eq "7" ]; then
         askPassword
         networksetup -setdnsservers Ethernet 185.228.168.168 185.228.169.168 2a0d:2a00:1:: 2a0d:2a00:2::
@@ -599,7 +599,7 @@ customDNSServersForEthernet() {
         sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder
         checkDNS
     fi
-
+    # AdGuard (Threat Protection) set as DNS server
     if [ "$var" -eq "8" ]; then
         askPassword
         networksetup -setdnsservers Ethernet 94.140.14.14 94.140.15.15 2a10:50c0::ad1:ff 2a10:50c0::ad2:ff
@@ -609,7 +609,7 @@ customDNSServersForEthernet() {
         sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder
         checkDNS
     fi
-
+    # AdGuard (Family Protection) set as DNS server
     if [ "$var" -eq "9" ]; then
         askPassword
         networksetup -setdnsservers Ethernet 94.140.14.15 94.140.15.16 2a10:50c0::bad1:ff 2a10:50c0::bad2:ff
@@ -619,7 +619,7 @@ customDNSServersForEthernet() {
         sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder
         checkDNS
     fi
-
+    # YandexDNS (Threat Protection) set as DNS server
     if [ "$var" -eq "10" ]; then
         askPassword
         networksetup -setdnsservers Ethernet 77.88.8.88 77.88.8.2 2a02:6b8::feed:bad 2a02:6b8:0:1::feed:bad
@@ -629,7 +629,7 @@ customDNSServersForEthernet() {
         sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder
         checkDNS
     fi
-
+    # YandexDNS (Family Protection) set as DNS server
     if [ "$var" -eq "11" ]; then
         askPassword
         networksetup -setdnsservers Ethernet 77.88.8.7 77.88.8.3 2a02:6b8::feed:a11 2a02:6b8:0:1::feed:a11
@@ -639,13 +639,13 @@ customDNSServersForEthernet() {
         sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder
         checkDNS
     fi
-
+    # Current DNS server
     if [ "$var" -eq "12" ]; then
         askPassword
         echo "\n${F_Red}•${No_Attributes} Current DNS server:\n${F_Cyan}$(networksetup -getdnsservers Ethernet)${No_Attributes}"
         checkDNS
     fi
-
+    # Removing these DNS servers
     if [ "$var" -eq "13" ]; then
         askPassword
         echo "\n•${F_Red} Removing${No_Attributes} these DNS servers:\n${F_Cyan}$(networksetup -getdnsservers Ethernet)${No_Attributes}"
@@ -759,7 +759,7 @@ showInfoLN_DHCP_IP/MACAddresses() {
     echo "\n${F_Red}•${F_Green}${Bold} Finish.${No_Attributes}${Dim} ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
     # Show Wireless Networks information
     echo "\n${F_Red}•${F_Green}${Bold} Your current preferred Wireless network.${No_Attributes}"
-    SSID=$(airport -I  | awk -F' SSID: '  '/ SSID: / {print $2}')
+    SSID=$(airport -I | awk -F' SSID: ' '/ SSID: / {print $2}')
     OperationMode=$(airport -I | grep op | grep mode | awk '{print $3}')
     Security=$(airport -I | grep link | awk '{print $3}')
     Channel=$(airport -I | grep channel | awk '{print $2}')
@@ -802,11 +802,69 @@ showInfoLN_DHCP_IP/MACAddresses() {
     continueMessage
 }
 
-# Command 7: -------------------
--------------------() {
+# Command 7: Custom ping and tracerout test IPv4/IPv6
+customPingAndTraceroutTestIPv4/IPv6() {
     terminalWindowSize55x140
-    echo "•${F_Red}s${Bold} Command 7: -------------------.${No_Attributes}"
+    echo "•${F_Red}s${Bold} Command 7: You choose to Custom ping and tracerout test IPv4/IPv6.${No_Attributes}"
+    # Menu DNS servers
+    echo " ${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
+    echo " ${Dim}•${No_Attributes}${F_Red}${Bold} 1${No_Attributes} ${Dim}•${No_Attributes} Test Ping IPv4                                     ${Dim}•${No_Attributes}"
+    echo " ${Dim}•~~~•~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~•${No_Attributes}"
+    echo " ${Dim}•${No_Attributes}${F_Red}${Bold} 2${No_Attributes} ${Dim}•${No_Attributes} Test Traceroute IPv4                               ${Dim}•${No_Attributes}"
+    echo " ${Dim}•~~~•~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~•${No_Attributes}"
+    echo " ${Dim}•${No_Attributes}${F_Red}${Bold} 3${No_Attributes} ${Dim}•${No_Attributes} Test Ping IPv6                                     ${Dim}•${No_Attributes}"
+    echo " ${Dim}•~~~•~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~•${No_Attributes}"
+    echo " ${Dim}•${No_Attributes}${F_Red}${Bold} 4${No_Attributes} ${Dim}•${No_Attributes} Test Traceroute IPv6                               ${Dim}•${No_Attributes}"
+    echo " ${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
 
+    printf '
+ Please select an Command: '
+    read var
+    # Test Ping IPv4
+    if [ "$var" -eq "1" ]; then
+        echo "\n${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
+        echo " Outgoing data bytes packet size Default: 56 -> exceeding can trigger a firewall."
+        read "? To which IP or Host address you want to send the test packets: " HOST
+        read "? How many times you want to send the test packets: " COUNT
+        read "? How many data bytes packet size you would like to send: " SIZE
+        echo "\n${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
+        echo "\n•${F_Red}${Bold} Testing Ping IPv4.${No_Attributes}\n"
+        ping -i 0.1 "$HOST" -c "$COUNT" -s "$SIZE"
+        echo "\n${F_Red}•${F_Green}${Bold} Finish... ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
+    fi
+    # Test Traceroute IPv4
+    if [ "$var" -eq "2" ]; then
+        echo "\n${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
+        read "? To which IP or Host address you want to send the test packets: " HOST
+        read "? Send packets of specified IP protocol supported are: ICMP or UDP: " PROTOCOL
+        echo "\n${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
+        echo "\n•${F_Red}${Bold} Testing Traceroute IPv4.${No_Attributes}\n"
+        traceroute -w 1 -S -P $PROTOCOL -m 30 "$HOST"
+        echo "\n${F_Red}•${F_Green}${Bold} Finish... ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
+    fi
+    # Test Ping IPv6
+    if [ "$var" -eq "3" ]; then
+        echo "\n${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
+        echo " Outgoing data bytes packet size Default: 56 -> exceeding can trigger a firewall."
+        read "? To which IP or Host address you want to send the test packets: " HOST
+        read "? How many times you want to send the test packets: " COUNT
+        read "? How many data bytes packet size you would like to send: " SIZE
+        echo "\n${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
+        echo "\n•${F_Red}${Bold} Testing Ping IPv6.${No_Attributes}\n"
+        ping6 -i 0.1 "$HOST" -c "$COUNT" -s "$SIZE"
+        echo "\n${F_Red}•${F_Green}${Bold} Finish... ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
+    fi
+    # Test Traceroute IPv6
+    if [ "$var" -eq "4" ]; then
+        echo "\n${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
+        read "? To which IP or Host address you want to send the test packets: " HOST
+        read "? Send packets of specified IP protocol supported are: ICMP(-I) or UDP( ): " PROTOCOL
+        echo "\n${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
+        echo "\n•${F_Red}${Bold} Testing Traceroute IPv6.${No_Attributes}\n"
+        traceroute6 -w 1 -l $PROTOCOL -m 30 "$HOST"
+        echo "\n${F_Red}•${F_Green}${Bold} Finish... ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
+    fi
+    continueMessage
 }
 
 # Command 8: Check DNS records of the domain, to obtain the mapping between domain name and IP address
@@ -843,7 +901,7 @@ testICMPSweepAndICMP-Flood() {
     echo "\n${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
     echo "\n•${F_Red}${Bold} Running a Quick IP sweep to determine live hosts on subnet.${No_Attributes}\n"
     for IP in $(seq 1 254); do
-    ping -c 1 $SUBNET.$IP | grep "64 bytes" | cut -d " " -f 4 | tr -d ":" &
+        ping -c 1 $SUBNET.$IP | grep "64 bytes" | cut -d " " -f 4 | tr -d ":" &
     done
     echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes} ${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
     echo "\n•${F_Red}${Bold} Broadcast Address.${No_Attributes}\n"
@@ -864,7 +922,7 @@ testICMPSweepAndICMP-Flood() {
     read "? How many data bytes packet size you would like to send: " SIZE
     echo "\n${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
     echo "\n•${F_Red}${Bold} Testing with ICMP-Flood...${No_Attributes}\n"
-    sudo ping "$HOST" -c "$COUNT" -f -s "$SIZE" > nFLjLfjveKGdEtWThmRcWfCovc.txt
+    sudo ping "$HOST" -c "$COUNT" -f -s "$SIZE" >nFLjLfjveKGdEtWThmRcWfCovc.txt
     rm nFLjLfjveKGdEtWThmRcWfCovc.txt
     echo "\n${F_Red}•${F_Green}${Bold} Finish...${No_Attributes}"
     continueMessage
@@ -1181,7 +1239,7 @@ startScript() {
 
         7)
             clear
-            -------------------
+            customPingAndTraceroutTestIPv4/IPv6
             ;;
 
         8)
