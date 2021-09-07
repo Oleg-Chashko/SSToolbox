@@ -1,7 +1,7 @@
 #!/bin/zsh
 
 # Attribute
-RELEASE_VERSION="v.0.3.8 build [09.04.2021]"
+RELEASE_VERSION="v.0.4.0 build [09.07.2021]"
 ROOT_PASSWORD=0
 
 # Foreground
@@ -299,10 +299,10 @@ spoofingMACAddressOfWirelessNetwork() {
     sudo ifconfig en0 ether $NEW_MAC_ADDRESS
     echo "\n• ${F_Red}Spoof New Wireless MAC address:${No_Attributes} $NEW_MAC_ADDRESS"
     # Check New MAC address
-    echo "\n${F_Red}•${F_Green} Check New current Spoof MAC address.${No_Attributes}${Dim} •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
+    echo "\n${F_Red}•${F_Green} Check New current Spoof MAC address.${No_Attributes}${Dim} •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
     networksetup -getmacaddress en0 | awk '{print "• System Hardware Wireless MAC address: " $3}'
     ifconfig en0 | grep ether | awk '{print "• Current Spoof Wireless MAC address: " $2}'
-    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}${Dim} ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
+    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}${Dim} ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
     continueMessage
 }
 
@@ -654,21 +654,21 @@ releaseAndRenewDHCP() {
     # Release the DHCP assigned IP, DNS server, subnet mask, router/gateway and the lease time
     echo "•${F_Red}${Bold} Release the DHCP assigned IP, DNS server, subnet mask, router/gateway...${No_Attributes}\n"
     sudo ipconfig set en0 DHCP
-    sleep 1 && echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
+    sleep 1 && echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}${Dim} ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
     # Renew the DHCP assigned IP, DNS server, subnet mask, router/gateway and the lease time
     echo "•${F_Red}${Bold} Renew the DHCP assigned IP, DNS server, subnet mask, router/gateway...${No_Attributes}\n"
     sudo ipconfig set en1 DHCP
-    sleep 1 && echo "${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
+    sleep 1 && echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}${Dim} ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
     # Flush DNS cache
     echo "•${F_Red}${Bold} Flushing DNS...${No_Attributes}\n"
     sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder
-    sleep 1 && echo "${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
+    sleep 1 && echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}${Dim} ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
     # Deleting macOS terminal command history
     echo "•${F_Red} Deleting macOS terminal command history.${No_Attributes}\n"
     echo "•${F_Red} You choose to Restart computer.${No_Attributes}"
     rm -rf .zsh_sessions
     rm -rf .zsh_history
-    sleep 1 && echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
+    sleep 1 && echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}${Dim} ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
     osascript -e 'tell app "loginwindow" to «event aevtrrst»'
     continueMessage
 }
@@ -816,7 +816,7 @@ customPingAndTraceroutTestIPv4/IPv6() {
         echo "\n${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
         echo "\n•${F_Red}${Bold} Testing Ping IPv4.${No_Attributes}\n"
         ping -i 0.1 "$HOST" -c "$COUNT" -s "$SIZE"
-        echo "\n${F_Red}•${F_Green}${Bold} Finish... ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
+        echo "\n${F_Red}•${F_Green}${Bold} Finish...${No_Attributes}${Dim} ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
     fi
     # Test Traceroute IPv4
     if [ "$var" -eq "2" ]; then
@@ -826,7 +826,7 @@ customPingAndTraceroutTestIPv4/IPv6() {
         echo "\n${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
         echo "\n•${F_Red}${Bold} Testing Traceroute IPv4.${No_Attributes}\n"
         traceroute -w 1 -S -P $PROTOCOL -m 30 "$HOST"
-        echo "\n${F_Red}•${F_Green}${Bold} Finish... ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
+        echo "\n${F_Red}•${F_Green}${Bold} Finish...${No_Attributes}${Dim} ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
     fi
     # Test Ping IPv6
     if [ "$var" -eq "3" ]; then
@@ -838,7 +838,7 @@ customPingAndTraceroutTestIPv4/IPv6() {
         echo "\n${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
         echo "\n•${F_Red}${Bold} Testing Ping IPv6.${No_Attributes}\n"
         ping6 -i 0.1 "$HOST" -c "$COUNT" -s "$SIZE"
-        echo "\n${F_Red}•${F_Green}${Bold} Finish... ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
+        echo "\n${F_Red}•${F_Green}${Bold} Finish...${No_Attributes}${Dim} ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
     fi
     # Test Traceroute IPv6
     if [ "$var" -eq "4" ]; then
@@ -848,7 +848,7 @@ customPingAndTraceroutTestIPv4/IPv6() {
         echo "\n${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
         echo "\n•${F_Red}${Bold} Testing Traceroute IPv6.${No_Attributes}\n"
         traceroute6 -w 1 -l $PROTOCOL -m 30 "$HOST"
-        echo "\n${F_Red}•${F_Green}${Bold} Finish... ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
+        echo "\n${F_Red}•${F_Green}${Bold} Finish...${No_Attributes}${Dim} ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
     fi
     continueMessage
 }
@@ -863,13 +863,13 @@ checkDNSRecordsOfTheDomainIPv4/IPv6() {
     for i in "${arr[@]}"; do
         info=$(host -t A "$i")
         echo "$info"
-        echo "\n${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
+        echo "\n${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
     done
     echo "${F_Red}•${F_Green}${Bold} Check DNS records of the Domain IPv6...\n${No_Attributes}"
     for i in "${arr[@]}"; do
         info=$(host -t AAAA "$i")
         echo "$info"
-        echo "\n${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
+        echo "\n${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
     done
     echo "${F_Red}•${F_Green}${Bold} Finish...${No_Attributes}"
     continueMessage
@@ -884,12 +884,12 @@ testICMPSweepAndICMP-Flood() {
     echo "\n${F_Red}•${F_Green} The scan will run from network 1 to network 254.${No_Attributes}"
     echo "${F_Red}•${F_Green} Example use: In the tab below, enter the first ${Bold}3${No_Attributes}${F_Green} octets: ${Bold}192.168.1${No_Attributes}${F_Red}${Dim}xXX${No_Attributes}${F_Green} or ${Bold}10.10.1${No_Attributes}${F_Red}${Dim}xXX${No_Attributes}${F_Green} and etc.${No_Attributes}\n"
     read "? Enter the address subnet: " SUBNET
-    echo "\n${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
+    echo "\n${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
     echo "\n•${F_Red}${Bold} Running a Quick IP sweep to determine live hosts on subnet.${No_Attributes}\n"
     for IP in $(seq 1 254); do
         ping -c 1 $SUBNET.$IP | grep "64 bytes" | cut -d " " -f 4 | tr -d ":" &
     done
-    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes} ${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
+    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}${Dim} ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
     echo "\n•${F_Red}${Bold} Broadcast Address.${No_Attributes}\n"
     # Wi-Fi Broadcast Address (en0)
     en0BroadcastAddress=$(ifconfig en0 | awk /inet\ /'{print $6}')
@@ -897,20 +897,20 @@ testICMPSweepAndICMP-Flood() {
     # Ethernet Broadcast Address (en1)
     en1BroadcastAddress=$(ifconfig en1 | awk /inet\ /'{print $6}')
     echo "Ethernet Broadcast Address (en1): $en1BroadcastAddress"
-    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes} ${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
+    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}${Dim} ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
     # ICMP-Flood and Broadcast storm is a common Denial of Service (DoS) attack!
     echo "•${F_Red}${Bold} ICMP-Flood is a common Denial of Service (DoS) attack!${No_Attributes}"
     echo "• Outgoing data bytes packet size Default: 56 -> exceeding can trigger a firewall."
     echo "• About 100 packets per second, the speed is affected by packet size and network bandwidth."
-    echo "\n${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
+    echo "\n${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
     read "? To which IP address you want to send the test packets: " HOST
     read "? How many times you want to send the test packets: " COUNT
     read "? How many data bytes packet size you would like to send: " SIZE
-    echo "\n${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
+    echo "\n${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
     echo "\n•${F_Red}${Bold} Testing with ICMP-Flood...${No_Attributes}\n"
     sudo ping "$HOST" -c "$COUNT" -f -s "$SIZE" >nFLjLfjveKGdEtWThmRcWfCovc.txt
     rm nFLjLfjveKGdEtWThmRcWfCovc.txt
-    echo "\n${F_Red}•${F_Green}${Bold} Finish...${No_Attributes}"
+    echo "\n${F_Red}•${F_Green}${Bold} Finish...${No_Attributes}${Dim} ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
     continueMessage
 }
 
@@ -940,10 +940,10 @@ searchProcessesAndNetworkData() {
 
 # Command 11: Edit Hosts file and Flush DNS cache
 editHostsFile() {
-    terminalWindowSize40x190
+    terminalWindowSize55x190
     echo "•${F_Red}${Bold} Command 11: You choose to Edit Hosts file and Flush DNS cache.${No_Attributes}\n"
-    echo "${F_Red}•${F_Green}${Bold} How and why to modify my hosts file?${No_Attributes}"
     # 1. How and why to modify my hosts file?
+    echo "${F_Red}•${F_Green}${Bold} How and why to modify my hosts file?${No_Attributes}${Dim} •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
     echo "${F_Red}•${F_Green}${No_Attributes} The hosts file is a computer file used by the operating system to connect host names (domain names) with IP addresses."
     echo "${F_Red}•${F_Green}${No_Attributes} In other words, it allows you to manually point a website address to a desired IP, or block access to a site altogether by pointing to an invalid or internal IP."
     echo "${F_Red}•${F_Green}${No_Attributes} This can come in handy when you have pointed the name-servers of your domain to a new web host and want to work on your website immediately.\n"
@@ -952,7 +952,7 @@ editHostsFile() {
     echo "${F_Red}•${F_Green}${No_Attributes} You can make the local computer resolve e.i. www.facebook.com through an invalid IP and that way prevent people from opening it."
     echo "${F_Red}•${F_Green}${No_Attributes} Since it is necessary to have administrative access to edit the hosts file, it will be really hard for someone to revert this change.\n"
     # Edit Hosts file
-    echo "${F_Red}•${F_Green}${Bold} Edit Hosts file:${No_Attributes}"
+    echo "${F_Red}•${F_Green}${Bold} Edit Hosts file:${No_Attributes}${Dim} •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
     echo "${F_Red}•${F_Green}${No_Attributes} Use the arrow keys on your keyboard, to navigate and edit the file."
     echo "${F_Red}•${F_Green}${No_Attributes} You should just add the desired IP followed by the host name (or domain name)."
     echo "${F_Red}•${F_Green}${No_Attributes} Use the Return key to create some space below the existing records."
@@ -960,22 +960,25 @@ editHostsFile() {
     echo "${F_Red}•${F_Green}${No_Attributes} Enter the IP address you wish to assign, followed by two tabs and the hostname."
     echo "${F_Red}•${F_Green}${No_Attributes} Save the file by pressing Ctrl + O"
     echo "${F_Red}•${F_Green}${No_Attributes} Exit with Ctrl + X\n"
+    echo "${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
     # Options: Block IP Addresses and Reroute Web Addresses
     echo "${F_Red}•${F_Green}${Bold} Options 1: Block IP Addresses:${No_Attributes}"
     echo "${F_Red}•${F_Green}${No_Attributes}  * For example, The Facebook website to block the IP address 0.0.0.0"
     echo "${F_Red}•${F_Blue}  * Example input: 0.0.0.0       www.facebook.com${No_Attributes}"
-    echo "${F_Red}•${F_Green}${No_Attributes}  * Now, whenever we try to go to www.facebook.com from our Mac, the Web browser will fail to load the page.\n"
+    echo "${F_Red}•${F_Green}${No_Attributes}  * Now, whenever we try to go to www.facebook.com from our Mac, the Web browser will fail to load the page."
+    echo "${Dim}•~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~•${No_Attributes}"
     echo "${F_Red}•${F_Green}${Bold} Options 2: Reroute Web Addresses:${No_Attributes}"
     echo "${F_Red}•${F_Green}${No_Attributes}  * Make note of the IP address that’s returned and use it in your Mac hosts file mapping."
     echo "${F_Red}•${F_Green}${No_Attributes}  * For example, The New York Times website returns an IP address of 170.149.172.130."
     echo "${F_Red}•${F_Blue}  * Example input: 170.149.172.130       www.facebook.com${No_Attributes}"
     echo "${F_Red}•${F_Green}${No_Attributes}  * If we map that to Facebook in our hosts file, any time someone using the Mac tries to go to Facebook, they’ll see The New York Times load instead."
+    echo "${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
     askPassword
     sudo nano /private/etc/hosts
     # Flush DNS cache
     echo "\n•${F_Red}${Bold} Flushing DNS...${No_Attributes}"
     sleep 1 && sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder
-    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
+    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}${Dim} ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
     continueMessage
 }
 
