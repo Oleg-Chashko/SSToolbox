@@ -68,7 +68,7 @@ showMenu() {
     echo "${Dim}•${No_Attributes}${F_Red}${Bold}  8${No_Attributes} ${Dim}•${No_Attributes} Check DNS records of the domain, to obtain the mapping between domain name and IPv4/IPv6 address                            ${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Red}${Bold}  9${No_Attributes} ${Dim}•${No_Attributes} Stress Test Network with ICMP-Sweep and ICMP-Flood. (This can be very hard on a network and should be used with caution)    ${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Red}${Bold} 10${No_Attributes} ${Dim}•${No_Attributes} Search all processes for all users and view network data by Internet protocol TCP/UDP and version IPv4/IPv6                 ${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Red}${Bold} 11${No_Attributes} ${Dim}•${No_Attributes} Edit Hosts file: (Block IP Addresses and Reroute Web Addresses)                                                             ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Red}${Bold} 11${No_Attributes} ${Dim}•${No_Attributes} Custom editing of the Hosts file: (Block IP Addresses and Reroute Web Addresses)                                            ${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Red}${Bold} 12${No_Attributes} ${Dim}•${No_Attributes} Show Wireless Network Password                                                                                              ${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Red}${Bold} 13${No_Attributes} ${Dim}•${No_Attributes} Custom setting a new Computer Name, Hostname, Local Hostname and NetBIOS Name                                               ${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Red}${Bold} 14${No_Attributes} ${Dim}•${No_Attributes} Search Routers on local Networks, uses the default IP addresses                                                             ${Dim}•${No_Attributes}"
@@ -938,10 +938,10 @@ searchProcessesAndNetworkData() {
     continueMessage
 }
 
-# Command 11: Edit Hosts file and Flush DNS cache
+# Command 11: Custom editing of the Hosts file and Flush DNS cache
 editHostsFile() {
     terminalWindowSize55x190
-    echo "•${F_Red}${Bold} Command 11: You choose to Edit Hosts file and Flush DNS cache.${No_Attributes}\n"
+    echo "•${F_Red}${Bold} Command 11: You choose to Custom editing of the Hosts file and Flush DNS cache.${No_Attributes}\n"
     # 1. How and why to modify my hosts file?
     echo "${F_Red}•${F_Green}${Bold} How and why to modify my hosts file?${No_Attributes}${Dim} •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
     echo "${F_Red}•${F_Green}${No_Attributes} The hosts file is a computer file used by the operating system to connect host names (domain names) with IP addresses."
@@ -952,7 +952,7 @@ editHostsFile() {
     echo "${F_Red}•${F_Green}${No_Attributes} You can make the local computer resolve e.i. www.facebook.com through an invalid IP and that way prevent people from opening it."
     echo "${F_Red}•${F_Green}${No_Attributes} Since it is necessary to have administrative access to edit the hosts file, it will be really hard for someone to revert this change.\n"
     # Edit Hosts file
-    echo "${F_Red}•${F_Green}${Bold} Edit Hosts file:${No_Attributes}${Dim} •••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
+    echo "${F_Red}•${F_Green}${Bold} Custom editing of the Hosts file:${No_Attributes}${Dim} ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
     echo "${F_Red}•${F_Green}${No_Attributes} Use the arrow keys on your keyboard, to navigate and edit the file."
     echo "${F_Red}•${F_Green}${No_Attributes} You should just add the desired IP followed by the host name (or domain name)."
     echo "${F_Red}•${F_Green}${No_Attributes} Use the Return key to create some space below the existing records."
