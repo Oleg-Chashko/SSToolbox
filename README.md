@@ -117,10 +117,10 @@
 1. Input the following command string in Terminal: `sudo rm -rf /Library/Developer/CommandLineTools`
 2. Wait for the Xcode Command Line Tools package to uninstall, once everything is uninstalled, you can close the terminal window.
 
-#### Terminal error: "zsh: permission denied"
+#### Terminal error: "permission denied"
 
 <p align="center">
-  <img width="820px" src="https://raw.githubusercontent.com/Oleg-Chashko/SSToolkit/main/Images/zsh_Permission_denied.png" />
+  <img width="820px" src="https://raw.githubusercontent.com/Oleg-Chashko/SSToolkit/main/Images/Permission_denied.png" />
 </p>
 
 #### Give permission for this script to run:
