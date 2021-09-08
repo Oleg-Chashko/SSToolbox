@@ -53,21 +53,21 @@
 |Command|Description|
 |:----------:|----------|
 |*Network*|
-|**`1`**|Automatic ping and tracerout test IPv4/IPv6: (Google, Youtube, Facebook, Instagram, Spotify, Yahoo, Yandex)|
-|**`2`**|Spoofing the MAC Address of the Wireless network to a randomly generated MAC address|
-|**`3`**|Custom DNS servers for Wi-Fi|
-|**`4`**|Custom DNS servers for Ethernet|
-|**`5`**|Release and Renew DHCP for all available device interfaces. (Requires a reboot)|
-|**`6`**|Show information: Firewall, Wireless, Local Network, DHCP and IP and MAC Addresses of Devices on a Local Network and etc.|
-|**`7`**|Custom ping and tracerout test IPv4/IPv6|
-|**`8`**|Check DNS records of the domain, to obtain the mapping between domain name and IPv4/IPv6 address|
-|**`9`**|Stress Test Network with ICMP-Sweep and ICMP-Flood. (This can be very hard on a network and should be used with caution)|
-|**`10`**|Search all processes for all users and view network data by Internet protocol TCP/UDP and version IPv4/IPv6|
-|**`11`**|Edit Hosts file: (Block IP Addresses and Reroute Web Addresses)|
-|**`12`**|Show Wireless Network Password|
-|**`13`**|Setting default a new Computer Name, Hostname and etc|
-|**`14`**|Search Routers on local Networks, uses the default IP addresses|
-|**`15`**|Flushes local DNS cache, used for problems with loading sites, 404 error|
+|**`1`**|Custom DNS servers for Wi-Fi|
+|**`2`**|Custom DNS servers for Ethernet|
+|**`3`**|Custom ping and tracerout test IPv4/IPv6|
+|**`4`**|Automatic ping and tracerout test IPv4/IPv6|
+|**`5`**|Custom setting a new Computer Name, Hostname, Local Hostname and NetBIOS Name|
+|**`6`**|Custom editing of the Hosts file: (Block IP addresses and Reroute Web addresses)|
+|**`7`**|Show Wireless Network Password|
+|**`8`**|Search Routers on local Networks, uses the default IP addresse|
+|**`9`**|Flushes local DNS cache, used for problems with loading sites, 404 error|
+|**`10`**|Release and Renew DHCP for all available device interfaces. (Requires a reboot)|
+|**`11`**|Spoofing the MAC address of the Wireless network to a randomly generated MAC address|
+|**`12`**|Check DNS records of the domain, to obtain the mapping between domain name, IPv4/IPv6|
+|**`13`**|Search all processes for all users and view network data by protocol TCP/UDP, IPv4/IPv6|
+|**`14`**|Stress Test Network with ICMP-Sweep and ICMP-Flood.|
+|**`15`**|Show information: Firewall, Wireless, Local Network, DHCP, IP, MAC addresses and etc.|
 |*GateKeeper*|
 |**`16`**|GateKeeper Status|
 |**`17`**|Enable GateKeeper|
