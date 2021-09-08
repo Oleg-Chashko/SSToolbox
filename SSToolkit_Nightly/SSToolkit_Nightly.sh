@@ -225,7 +225,7 @@ customDNSServersForWi-Fi() {
     echo "•${F_Red}${Bold} Command 1: You choose to Custom DNS servers for Wi-Fi.${No_Attributes}"
     askPassword
     # Menu DNS servers
-    echo "\n ${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
+    echo " ${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
     echo " ${Dim}•${No_Attributes} Modes filtering   ${Dim}|${No_Attributes} Description              ${F_Red}${Bold}Note:${No_Attributes} Please don't use them unless you know what you're doing ${Dim}•${No_Attributes}"
     echo " ${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
     echo " ${Dim}•${No_Attributes}${F_Purple}${Bold} Non-filtering     ${No_Attributes}${Dim}|${No_Attributes} Reliable and fast DNS lookup without blocking any specific categories                  ${Dim}•${No_Attributes}"
@@ -394,7 +394,7 @@ customDNSServersForEthernet() {
     echo "•${F_Red}${Bold} Command 2: You choose to Custom DNS servers for Ethernet.${No_Attributes}"
     askPassword
     # Menu DNS servers
-    echo "\n ${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
+    echo " ${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
     echo " ${Dim}•${No_Attributes} Modes filtering   ${Dim}|${No_Attributes} Description              ${F_Red}${Bold}Note:${No_Attributes} Please don't use them unless you know what you're doing ${Dim}•${No_Attributes}"
     echo " ${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
     echo " ${Dim}•${No_Attributes}${F_Purple}${Bold} Non-filtering     ${No_Attributes}${Dim}|${No_Attributes} Reliable and fast DNS lookup without blocking any specific categories                  ${Dim}•${No_Attributes}"
