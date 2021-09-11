@@ -82,12 +82,19 @@ showMenu() {
     echo "${Dim}•····•····················································································································· ${F_Green}${Bold}Tweaks ${No_Attributes}${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Red}${Bold} 21${No_Attributes} ${Dim}•${No_Attributes} Show Hidden Files                                                                                                           ${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Red}${Bold} 22${No_Attributes} ${Dim}•${No_Attributes} Don't Show Hidden Files                                                                                                     ${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Red}${Bold} 23${No_Attributes} ${Dim}•${No_Attributes} Show all File Extensions                                                                        ${Dim}• • • • • • • • • • • • • • •${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Red}${Bold} 24${No_Attributes} ${Dim}•${No_Attributes} Don't Show all File Extensions                                                                  ${Dim}•${No_Attributes} ${F_Red}${Bold}I${No_Attributes}nstalling Xcode CLT      ${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Red}${Bold} 25${No_Attributes} ${Dim}•${No_Attributes} Show Attachments as Icons in Apple Mail App                                                     ${Dim}•${No_Attributes} ${F_Red}${Bold}U${No_Attributes}ninstalling Xcode CLT    ${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Red}${Bold} 26${No_Attributes} ${Dim}•${No_Attributes} Don't Show Attachments as Icons in Apple Mail App                                               ${Dim}•${No_Attributes} ${F_Red}${Bold}R${No_Attributes}elease/${F_Red}${Bold}N${No_Attributes}ightly Download  ${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Red}${Bold} 27${No_Attributes} ${Dim}•${No_Attributes} Show the full path in the Finder Title window                                                   ${Dim}•${No_Attributes} ${F_Red}${Bold}A${No_Attributes}bout GitHub              ${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Red}${Bold} 28${No_Attributes} ${Dim}•${No_Attributes} Don't Show the full path in the Finder Title window                                             ${Dim}•${No_Attributes} ${F_Red}${Bold}${Blink}Q${No_Attributes}uit                      ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Red}${Bold} 23${No_Attributes} ${Dim}•${No_Attributes} Show all File Extensions                                                                                                    ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Red}${Bold} 24${No_Attributes} ${Dim}•${No_Attributes} Don't Show all File Extensions                                                                                              ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Red}${Bold} 25${No_Attributes} ${Dim}•${No_Attributes} Show Attachments as Icons in Apple Mail App                                                                                 ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Red}${Bold} 26${No_Attributes} ${Dim}•${No_Attributes} Don't Show Attachments as Icons in Apple Mail App                                                                           ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Red}${Bold} 27${No_Attributes} ${Dim}•${No_Attributes} Show the full path in the Finder Title window                                                                               ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Red}${Bold} 28${No_Attributes} ${Dim}•${No_Attributes} Don't Show the full path in the Finder Title window                                                                         ${Dim}•${No_Attributes}"
+    echo "${Dim}•····•···································································································· ${F_Green}${Bold}Cleaning and Rebuilding ${No_Attributes}${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Red}${Bold} 29${No_Attributes} ${Dim}•${No_Attributes} Cleaning the Logs, Trash and Inactive memory                                                    ${Dim}• • • • • • • • • • • • • • •${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Red}${Bold} 30${No_Attributes} ${Dim}•${No_Attributes} -----------------------                                                                         ${Dim}•${No_Attributes} ${F_Red}${Bold}I${No_Attributes}nstalling Xcode CLT      ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Red}${Bold} 31${No_Attributes} ${Dim}•${No_Attributes} -----------------------                                                                         ${Dim}•${No_Attributes} ${F_Red}${Bold}U${No_Attributes}ninstalling Xcode CLT    ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Red}${Bold} 32${No_Attributes} ${Dim}•${No_Attributes} -----------------------                                                                         ${Dim}•${No_Attributes} ${F_Red}${Bold}R${No_Attributes}elease/${F_Red}${Bold}N${No_Attributes}ightly Download  ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Red}${Bold} 33${No_Attributes} ${Dim}•${No_Attributes} -----------------------                                                                         ${Dim}•${No_Attributes} ${F_Red}${Bold}A${No_Attributes}bout GitHub              ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Red}${Bold} 34${No_Attributes} ${Dim}•${No_Attributes} -----------------------                                                                         ${Dim}•${No_Attributes} ${F_Red}${Bold}${Blink}Q${No_Attributes}uit                      ${Dim}•${No_Attributes}"
     echo "${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
 }
 
@@ -108,7 +115,7 @@ askPassword() {
 # Terminal window size Menu - move to top/left corner and resize
 terminalWindowSizeMenu() {
     printf '\033[3;0;0t'
-    printf '\033[8;34;132t'
+    printf '\033[8;41;132t'
     clear
 }
 
@@ -1181,6 +1188,39 @@ noShowTheFullPathInTheFinderTitleWindow() {
     continueMessage
 }
 
+# Command 29: Cleaning the Logs, Trash and Inactive memory
+cleaningLogsTrashAndInactiveMemory() {
+    terminalWindowSize40x140
+    echo "•${F_Red}${Bold} Command 29: You choose to Cleaning the Logs, Trash and Inactive memory.${No_Attributes}"
+    askPassword
+
+    # The script
+    remove() {
+        entry="$1"
+        if test -e "$entry"; then
+            sudo rm -rf "$entry" && echo -e "Removing $entry  [${F_Green}${Bold}Success${No_Attributes}]"
+        else
+            echo -e "Removing $entry  [${F_Yellow}${Bold}File does not exist${No_Attributes}]"
+        fi
+    }
+
+    # Clean the Logs
+    sudo sleep 1
+    echo "\n•${F_Red}${Bold} Cleaning the system log files.${No_Attributes}\n"
+    remove "/Library/Logs/"
+    remove "/Library/Application Support/CrashReporter/"
+    remove "$HOME/Library/Logs/"
+    remove "$HOME/Library/Application Support/CrashReporter"
+    # Empty the Trash
+    echo "\n•${F_Red}${Bold} Cleaning the Trash.${No_Attributes}\n"
+    remove "$HOME/.Trash/"
+    # Purge free inactive memory cache
+    echo "\n•${F_Red}${Bold} Cleaning inactive memory.${No_Attributes}"
+    sudo purge
+    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
+    continueMessage
+}
+
 # -----------------------------------------------------------------------------------------------------------------
 
 # Main function of the script
@@ -1339,6 +1379,36 @@ startScript() {
         28)
             clear
             noShowTheFullPathInTheFinderTitleWindow
+            ;;
+
+        29)
+            clear
+            cleaningLogsTrashAndInactiveMemory
+            ;;
+
+        30)
+            clear
+            ------------------------------
+            ;;
+
+        31)
+            clear
+            ------------------------------
+            ;;
+
+        32)
+            clear
+            ------------------------------
+            ;;
+
+        33)
+            clear
+            ------------------------------
+            ;;
+
+        34)
+            clear
+            ------------------------------
             ;;
 
         Q)
