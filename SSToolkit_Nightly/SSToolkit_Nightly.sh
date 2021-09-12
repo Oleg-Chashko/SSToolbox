@@ -90,7 +90,7 @@ showMenu() {
     echo "${Dim}•${No_Attributes}${F_Red}${Bold} 28${No_Attributes} ${Dim}•${No_Attributes} Don't Show the full path in the Finder Title window                                                                         ${Dim}•${No_Attributes}"
     echo "${Dim}•····•···································································································· ${F_Green}${Bold}Cleaning and Rebuilding ${No_Attributes}${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Red}${Bold} 29${No_Attributes} ${Dim}•${No_Attributes} Cleaning the Logs, Trash and Inactive memory                                                    ${Dim}• • • • • • • • • • • • • • •${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Red}${Bold} 30${No_Attributes} ${Dim}•${No_Attributes} -----------------------                                                                         ${Dim}•${No_Attributes} ${F_Red}${Bold}I${No_Attributes}nstalling Xcode CLT      ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Red}${Bold} 30${No_Attributes} ${Dim}•${No_Attributes} Manually and Automatic Delete, Plugins Input and Output device                                  ${Dim}•${No_Attributes} ${F_Red}${Bold}I${No_Attributes}nstalling Xcode CLT      ${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Red}${Bold} 31${No_Attributes} ${Dim}•${No_Attributes} -----------------------                                                                         ${Dim}•${No_Attributes} ${F_Red}${Bold}U${No_Attributes}ninstalling Xcode CLT    ${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Red}${Bold} 32${No_Attributes} ${Dim}•${No_Attributes} -----------------------                                                                         ${Dim}•${No_Attributes} ${F_Red}${Bold}R${No_Attributes}elease/${F_Red}${Bold}N${No_Attributes}ightly Download  ${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Red}${Bold} 33${No_Attributes} ${Dim}•${No_Attributes} -----------------------                                                                         ${Dim}•${No_Attributes} ${F_Red}${Bold}A${No_Attributes}bout GitHub              ${Dim}•${No_Attributes}"
@@ -231,7 +231,7 @@ customDNSServersForWi-Fi() {
     terminalWindowSize55x140
     echo "•${F_Red}${Bold} Command 1: You choose to Custom DNS servers for Wi-Fi.${No_Attributes}"
     askPassword
-    # Menu DNS servers
+    # Menu
     echo " ${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
     echo " ${Dim}•${No_Attributes} Modes filtering   ${Dim}|${No_Attributes} Description              ${F_Red}${Bold}Note:${No_Attributes} Please don't use them unless you know what you're doing ${Dim}•${No_Attributes}"
     echo " ${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
@@ -400,7 +400,7 @@ customDNSServersForEthernet() {
     terminalWindowSize55x140
     echo "•${F_Red}${Bold} Command 2: You choose to Custom DNS servers for Ethernet.${No_Attributes}"
     askPassword
-    # Menu DNS servers
+    # Menu
     echo " ${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
     echo " ${Dim}•${No_Attributes} Modes filtering   ${Dim}|${No_Attributes} Description              ${F_Red}${Bold}Note:${No_Attributes} Please don't use them unless you know what you're doing ${Dim}•${No_Attributes}"
     echo " ${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
@@ -568,7 +568,7 @@ customDNSServersForEthernet() {
 customPingAndTraceroutTestIPv4/IPv6() {
     terminalWindowSize55x140
     echo "•${F_Red}${Bold} Command 3: You choose to Custom ping and tracerout test IPv4/IPv6.${No_Attributes}\n"
-    # Menu DNS servers
+    # Menu
     echo " ${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
     echo " ${Dim}•${No_Attributes}${F_Red}${Bold} 1${No_Attributes} ${Dim}•${No_Attributes} Test Ping IPv4                                     ${Dim}•${No_Attributes}"
     echo " ${Dim}•~~~•~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~•${No_Attributes}"
@@ -1221,6 +1221,71 @@ cleaningLogsTrashAndInactiveMemory() {
     continueMessage
 }
 
+# Command 30: Manually and Automatic Delete, Plugins Input and Output device
+deletePluginsInputAndOutputDevice() {
+    terminalWindowSize40x140
+    echo "•${F_Red}${Bold} Command 30: You choose to Manually and Automatic Delete, Plugins Input and Output device.${No_Attributes}\n"
+    # Menu
+    echo " ${Dim}•••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
+    echo " ${Dim}•${No_Attributes}${F_Red}${Bold} 1${No_Attributes} ${Dim}•${No_Attributes} Automatic Delete All CoreMedia Input/Output Device DAL Video Plug-ins ${Dim}•${No_Attributes}"
+    echo " ${Dim}•~~~•~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~•${No_Attributes}"
+    echo " ${Dim}•${No_Attributes}${F_Red}${Bold} 2${No_Attributes} ${Dim}•${No_Attributes} Automatic Delete All Sound Input/Output Device HAL Audio Plug-ins     ${Dim}•${No_Attributes}"
+    echo " ${Dim}•~~~•~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~•${No_Attributes}"
+    echo " ${Dim}•${No_Attributes}${F_Red}${Bold} 3${No_Attributes} ${Dim}•${No_Attributes} Manually Delete CoreMedia Input/Output Device DAL Video Plug-ins      ${Dim}•${No_Attributes}"
+    echo " ${Dim}•~~~•~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~•${No_Attributes}"
+    echo " ${Dim}•${No_Attributes}${F_Red}${Bold} 4${No_Attributes} ${Dim}•${No_Attributes} Manually Delete Sound Input/Output Device HAL Audio Plug-ins          ${Dim}•${No_Attributes}"
+    echo " ${Dim}•••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
+
+    printf '
+ Please select an Command: '
+    read var
+    # Automatic Delete All CoreMedia Input/Output Device DAL Video Plug-ins
+    if [ "$var" -eq "1" ]; then
+        echo "\n•${F_Red}${Bold} Automatic Delete All CoreMedia Input/Output Device DAL Video Plug-ins.${No_Attributes}"
+        askPassword
+        # The script
+        remove() {
+            entry="$1"
+            if test -e "$entry"; then
+                sudo rm -rf "$entry" && echo -e "\nRemoving $entry  [${F_Green}${Bold}Success${No_Attributes}]"
+            else
+                echo -e "\nRemoving $entry  [${F_Yellow}${Bold}File does not exist${No_Attributes}]"
+            fi
+        }
+        remove "/Library/CoreMediaIO/Plug-Ins/DAL/"
+        echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
+    fi
+    # Automatic Delete All Sound Input/Output Device HAL Audio Plug-ins
+    if [ "$var" -eq "2" ]; then
+        echo "\n•${F_Red}${Bold} Automatic Delete All Sound Input/Output Device HAL Audio Plug-ins.${No_Attributes}"
+        askPassword
+        # The script
+        remove() {
+            entry="$1"
+            if test -e "$entry"; then
+                sudo rm -rf "$entry" && echo -e "\nRemoving $entry  [${F_Green}${Bold}Success${No_Attributes}]"
+            else
+                echo -e "\nRemoving $entry  [${F_Yellow}${Bold}File does not exist${No_Attributes}]"
+            fi
+        }
+        remove "/Library/Audio/Plug-Ins/HAL/"
+        echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
+    fi
+    # Manually Delete CoreMedia Input/Output Device DAL Video Plug-ins
+    if [ "$var" -eq "3" ]; then
+        echo "\n•${F_Red}${Bold} Manually Delete CoreMedia Input/Output Device DAL Video Plug-ins.${No_Attributes}\n"
+        open /Library/CoreMediaIO/Plug-Ins/DAL/
+        echo "${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
+    fi
+    # Manually Delete Sound Input/Output Device HAL Audio Plug-ins
+    if [ "$var" -eq "4" ]; then
+        echo "\n•${F_Red}${Bold} Manually Delete Sound Input/Output Device HAL Audio Plug-ins.${No_Attributes}\n"
+        open /Library/Audio/Plug-Ins/HAL/
+        echo "${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
+    fi
+    continueMessage
+}
+
 # -----------------------------------------------------------------------------------------------------------------
 
 # Main function of the script
@@ -1388,7 +1453,7 @@ startScript() {
 
         30)
             clear
-            ------------------------------
+            deletePluginsInputAndOutputDevice
             ;;
 
         31)
