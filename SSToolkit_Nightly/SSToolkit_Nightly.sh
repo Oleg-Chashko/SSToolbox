@@ -1207,6 +1207,7 @@ cleaningLogsTrashAndInactiveMemory() {
     # Clean the Logs
     sudo sleep 1
     echo "\n•${F_Red}${Bold} Cleaning the system log files.${No_Attributes}\n"
+    remove "/var/log/"
     remove "/Library/Logs/"
     remove "/Library/Application Support/CrashReporter/"
     remove "$HOME/Library/Logs/"
