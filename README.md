@@ -1,18 +1,5 @@
-<h1 align="center">
-  <img width="230px" src="https://raw.githubusercontent.com/Oleg-Chashko/SSToolkit/main/Images/SSToolkit.png" alt="SSToolkit"></a>
-  <br>
-  SSToolkit
-  <br>
-</h1>
-
+<h1 align="center">SSToolkit</h1>
 <h4 align="center">SSToolkit is a toolkit for managing your Mac.</h4>
-
-<p align="center">
-  <a href="https://github.com/Oleg-Chashko/">Website</a> |
-  <a href="https://reddit.com/">Reddit</a> |
-  <a href="https://twitter.com/">Twitter</a> |
-  <a href="https://t.me/">Telegram</a>
-</p>
 
 <p align="center">
   <a href="https://github.com/Oleg-Chashko/SSToolkit/releases/latest">
