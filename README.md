@@ -1,5 +1,5 @@
 <h1 align="center">SSToolkit</h1>
-<h4 align="center">SSToolkit is a toolkit for managing your Mac.</h4>
+<h4 align="center">This is a toolkit for managing your Mac.</h4>
 
 <p align="center">
   <a href="https://github.com/Oleg-Chashko/SSToolkit/releases/latest">
