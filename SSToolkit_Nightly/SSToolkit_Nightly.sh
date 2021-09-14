@@ -89,7 +89,7 @@ showMenu() {
     echo "${Dim}•${No_Attributes}${F_Red}${Bold} 27${No_Attributes} ${Dim}•${No_Attributes} Show the full path in the Finder Title window                                                                               ${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Red}${Bold} 28${No_Attributes} ${Dim}•${No_Attributes} Don't Show the full path in the Finder Title window                                                                         ${Dim}•${No_Attributes}"
     echo "${Dim}•····•···································································································· ${F_Green}${Bold}Cleaning and Rebuilding ${No_Attributes}${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Red}${Bold} 29${No_Attributes} ${Dim}•${No_Attributes} Cleaning the Logs, Trash and Inactive memory                                                    ${Dim}• • • • • • • • • • • • • • •${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Red}${Bold} 29${No_Attributes} ${Dim}•${No_Attributes} Cleaning the Logs and Inactive memory                                                           ${Dim}• • • • • • • • • • • • • • •${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Red}${Bold} 30${No_Attributes} ${Dim}•${No_Attributes} Manually and Automatic Delete, Plugins Input and Output device                                  ${Dim}•${No_Attributes} ${F_Red}${Bold}I${No_Attributes}nstalling Xcode CLT      ${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Red}${Bold} 31${No_Attributes} ${Dim}•${No_Attributes} -----------------------                                                                         ${Dim}•${No_Attributes} ${F_Red}${Bold}U${No_Attributes}ninstalling Xcode CLT    ${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Red}${Bold} 32${No_Attributes} ${Dim}•${No_Attributes} -----------------------                                                                         ${Dim}•${No_Attributes} ${F_Red}${Bold}R${No_Attributes}elease/${F_Red}${Bold}N${No_Attributes}ightly Download  ${Dim}•${No_Attributes}"
@@ -1188,10 +1188,10 @@ noShowTheFullPathInTheFinderTitleWindow() {
     continueMessage
 }
 
-# Command 29: Cleaning the Logs, Trash and Inactive memory
-cleaningLogsTrashAndInactiveMemory() {
+# Command 29: Cleaning the Logs and Inactive memory
+cleaningLogsAndInactiveMemory() {
     terminalWindowSize40x140
-    echo "•${F_Red}${Bold} Command 29: You choose to Cleaning the Logs, Trash and Inactive memory.${No_Attributes}"
+    echo "•${F_Red}${Bold} Command 29: You choose to Cleaning the Logs and Inactive memory.${No_Attributes}"
     askPassword
 
     # The script
@@ -1212,9 +1212,6 @@ cleaningLogsTrashAndInactiveMemory() {
     remove "/Library/Application Support/CrashReporter/"
     remove "$HOME/Library/Logs/"
     remove "$HOME/Library/Application Support/CrashReporter"
-    # Empty the Trash
-    echo "\n•${F_Red}${Bold} Cleaning the Trash.${No_Attributes}\n"
-    remove "$HOME/.Trash/"
     # Purge free inactive memory cache
     echo "\n•${F_Red}${Bold} Cleaning inactive memory.${No_Attributes}"
     sudo purge
@@ -1449,7 +1446,7 @@ startScript() {
 
         29)
             clear
-            cleaningLogsTrashAndInactiveMemory
+            cleaningLogsAndInactiveMemory
             ;;
 
         30)
