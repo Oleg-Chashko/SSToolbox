@@ -70,6 +70,13 @@
 |**`26`**|Don't Show Attachments as Icons in Apple Mail App|
 |**`27`**|Show the full path in the Finder Title window|
 |**`28`**|Don't Show the full path in the Finder Title window|
+|*Cleaning*|
+|**`29`**|Cleaning the Logs and Inactive memory|
+|**`30`**|Manually and Automatic Delete, Plugins Input and Output device|
+|**`31`**||
+|**`32`**||
+|**`33`**||
+|**`34`**||
 |*Xcode*|
 |**`I`**|Installing the Xcode CLT (Command Line Tools)|
 |**`U`**|Uninstalling the Xcode CLT (Command Line Tools)|
