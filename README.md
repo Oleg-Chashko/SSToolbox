@@ -1,24 +1,24 @@
-<h1 align="center">SSToolkit</h1>
+<h1 align="center">SSToolbox</h1>
 <h4 align="center">This is a toolkit for managing your Mac.</h4>
 
 <p align="center">
-  <a href="https://github.com/Oleg-Chashko/SSToolkit/releases/latest">
-  <img alt="Latest stable release" src="https://img.shields.io/github/release/Oleg-Chashko/SSToolkit.svg?style=flat" />
+  <a href="https://github.com/Oleg-Chashko/SSToolbox/releases/latest">
+  <img alt="Latest stable release" src="https://img.shields.io/github/release/Oleg-Chashko/SSToolbox.svg?style=flat" />
 </a>
-  <a href="https://github.com/Oleg-Chashko/SSToolkit/releases/latest">
-  <img alt="Download count" src="https://img.shields.io/github/downloads/Oleg-Chashko/SSToolkit/total.svg?style=flat" />
+  <a href="https://github.com/Oleg-Chashko/SSToolbox/releases/latest">
+  <img alt="Download count" src="https://img.shields.io/github/downloads/Oleg-Chashko/SSToolbox/total.svg?style=flat" />
 </a>
-  <a href="https://github.com/Oleg-Chashko/SSToolkit/commits">
-  <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/Oleg-Chashko/SSToolkit.svg?style=flat" />
+  <a href="https://github.com/Oleg-Chashko/SSToolbox/commits">
+  <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/Oleg-Chashko/SSToolbox.svg?style=flat" />
 </a>
-  <a href="https://github.com/Oleg-Chashko/SSToolkit/issues">
-  <img alt="GitHub issues" src="https://img.shields.io/github/issues-raw/Oleg-Chashko/SSToolkit.svg?style=flat" />
+  <a href="https://github.com/Oleg-Chashko/SSToolbox/issues">
+  <img alt="GitHub issues" src="https://img.shields.io/github/issues-raw/Oleg-Chashko/SSToolbox.svg?style=flat" />
 </a>
-  <a href="https://github.com/Oleg-Chashko/SSToolkit/stargazers">
-  <img alt="Stars" src="https://img.shields.io/github/stars/Oleg-Chashko/SSToolkit.svg?style=flat" />
+  <a href="https://github.com/Oleg-Chashko/SSToolbox/stargazers">
+  <img alt="Stars" src="https://img.shields.io/github/stars/Oleg-Chashko/SSToolbox.svg?style=flat" />
 </a>
-  <a href="https://github.com/Oleg-Chashko/SSToolkit/network/members">
-  <img alt="Forks" src="https://img.shields.io/github/forks/Oleg-Chashko/SSToolkit.svg?style=flat" />
+  <a href="https://github.com/Oleg-Chashko/SSToolbox/network/members">
+  <img alt="Forks" src="https://img.shields.io/github/forks/Oleg-Chashko/SSToolbox.svg?style=flat" />
 </a>
 </p>
 
@@ -26,13 +26,13 @@
 
 ### Main menu
 <p align="center">
-  <img width="900px" src="https://raw.githubusercontent.com/Oleg-Chashko/SSToolkit/main/Images/Preview_SSToolkit.png" />
+  <img width="900px" src="https://raw.githubusercontent.com/Oleg-Chashko/SSToolbox/main/Images/Preview_SSToolbox.png" />
 </p>
 
 ### Adding custom DNS servers
 
 <p align="center">
-  <img width="900px" src="https://raw.githubusercontent.com/Oleg-Chashko/SSToolkit/main/Images/Preview_SSToolkit_2.png" />
+  <img width="900px" src="https://raw.githubusercontent.com/Oleg-Chashko/SSToolbox/main/Images/Preview_SSToolbox_2.png" />
 </p>
 
 ## Commands List
@@ -82,7 +82,7 @@
 
 ## Download
 
-- (Latest stable release) [Download](https://github.com/Oleg-Chashko/SSToolkit/releases)
+- (Latest stable release) [Download](https://github.com/Oleg-Chashko/SSToolbox/releases)
 
 ## Note
 
@@ -107,7 +107,7 @@
 #### Terminal error: "permission denied"
 
 <p align="center">
-  <img width="820px" src="https://raw.githubusercontent.com/Oleg-Chashko/SSToolkit/main/Images/Permission_denied.png" />
+  <img width="820px" src="https://raw.githubusercontent.com/Oleg-Chashko/SSToolbox/main/Images/Permission_denied.png" />
 </p>
 
 #### Give permission for this script to run:
@@ -117,7 +117,7 @@
    <br><br>
 
 <p align="center">
-  <img width="690px" src="https://raw.githubusercontent.com/Oleg-Chashko/SSToolkit/main/Images/Terminal_chmod_u+x.gif" />
+  <img width="690px" src="https://raw.githubusercontent.com/Oleg-Chashko/SSToolbox/main/Images/Terminal_chmod_u+x.gif" />
 </p>
 <br>
 
@@ -128,7 +128,7 @@
    <br><br>
 
 <p align="center">
-  <img width="690px" src="https://raw.githubusercontent.com/Oleg-Chashko/SSToolkit/main/Images/Running_SSToolkit.gif" />
+  <img width="690px" src="https://raw.githubusercontent.com/Oleg-Chashko/SSToolbox/main/Images/Running_SSToolbox.gif" />
 </p>
 <br>
 
