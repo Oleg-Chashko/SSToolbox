@@ -26,13 +26,13 @@
 
 ### Main menu
 <p align="center">
-  <img width="860px" src="https://raw.githubusercontent.com/Oleg-Chashko/SSToolbox/main/Images/Preview_SSToolbox.png" />
+  <img width="770px" src="https://raw.githubusercontent.com/Oleg-Chashko/SSToolbox/main/Images/Preview_SSToolbox.png" />
 </p>
 
 ### Adding custom DNS servers
 
 <p align="center">
-  <img width="900px" src="https://raw.githubusercontent.com/Oleg-Chashko/SSToolbox/main/Images/Preview_SSToolbox_2.png" />
+  <img width="800px" src="https://raw.githubusercontent.com/Oleg-Chashko/SSToolbox/main/Images/Preview_SSToolbox_2.png" />
 </p>
 
 ## Commands List
