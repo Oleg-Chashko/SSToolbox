@@ -56,7 +56,7 @@ No_Attributes='\033[0m'
 # Menu
 showMenu() {
     terminalWindowSizeMenu
-    echo "${Dim}                                                 ${Dim}${Bold}SSToolkit${No_Attributes} ${Dim}${RELEASE_VERSION}${No_Attributes}"
+    echo "${Dim}                                                 ${Dim}${Bold}SSToolbox${No_Attributes} ${Dim}${RELEASE_VERSION}${No_Attributes}"
     echo "${Dim}•••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••• ${F_Green}${Bold}Network ${No_Attributes}${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Red}${Bold}  1${No_Attributes} ${Dim}•${No_Attributes} Custom DNS servers for Wi-Fi                                                                                                ${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Red}${Bold}  2${No_Attributes} ${Dim}•${No_Attributes} Custom DNS servers for Ethernet                                                                                             ${Dim}•${No_Attributes}"
@@ -195,8 +195,8 @@ checkDNS() {
 
 # -----------------------------------------------------------------------------------------------------------------
 
-# Command Q: Quit SSToolkit
-quitSSToolkit() {
+# Command Q: Quit SSToolbox
+quitSSToolbox() {
     # Deleting macOS terminal command history and Terminal to quit
     echo "•${F_Red}${Bold} Command Q: Deleting macOS terminal command history.${No_Attributes}"
     rm -rf .zsh_sessions
@@ -210,18 +210,18 @@ quitSSToolkit() {
 # Command R: Download Latest Release on GitHub
 downloadRelease() {
     cd ~/Desktop
-    curl -OL -s https://github.com/Oleg-Chashko/SSToolkit/releases/latest/download/SSToolkit.sh
+    curl -OL -s https://github.com/Oleg-Chashko/SSToolbox/releases/latest/download/SSToolbox.sh
 }
 
 # Command N: Download Latest Nightly on GitHub
 downloadNightly() {
     cd ~/Desktop
-    curl -OL -s https://raw.githubusercontent.com/Oleg-Chashko/SSToolkit/main/SSToolkit_Nightly/SSToolkit_Nightly.sh
+    curl -OL -s https://raw.githubusercontent.com/Oleg-Chashko/SSToolbox/main/SSToolbox_Nightly/SSToolbox_Nightly.sh
 }
 
 # Command A: About Project page on GitHub
 aboutGitHub() {
-    open https://github.com/Oleg-Chashko/SSToolkit
+    open https://github.com/Oleg-Chashko/SSToolbox
 }
 
 # -----------------------------------------------------------------------------------------------------------------
@@ -1476,7 +1476,7 @@ startScript() {
 
         Q)
             clear
-            quitSSToolkit
+            quitSSToolbox
             ;;
 
         R)
