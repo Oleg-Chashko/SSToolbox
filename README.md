@@ -70,7 +70,7 @@
 |**`26`**|Don't Show Attachments as Icons in Apple Mail App|
 |**`27`**|Show the full path in the Finder Title window|
 |**`28`**|Don't Show the full path in the Finder Title window|
-|*Cleaning*|
+|*OS Management*|
 |**`29`**|Cleaning the Logs and Inactive memory|
 |**`30`**|Manually and Automatic Delete, Plugins Input and Output device|
 |**`31`**||
