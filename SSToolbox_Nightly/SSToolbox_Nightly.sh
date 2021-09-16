@@ -88,10 +88,10 @@ showMenu() {
     echo "${Dim}•${No_Attributes}${F_Red}${Bold} 26${No_Attributes} ${Dim}•${No_Attributes} Don't Show Attachments as Icons in Apple Mail App                                                                           ${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Red}${Bold} 27${No_Attributes} ${Dim}•${No_Attributes} Show the full path in the Finder Title window                                                                               ${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Red}${Bold} 28${No_Attributes} ${Dim}•${No_Attributes} Don't Show the full path in the Finder Title window                                                                         ${Dim}•${No_Attributes}"
-    echo "${Dim}•····•···································································································· ${F_Green}${Bold}Cleaning and Rebuilding ${No_Attributes}${Dim}•${No_Attributes}"
+    echo "${Dim}•····•·············································································································· ${F_Green}${Bold}OS Management ${No_Attributes}${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Red}${Bold} 29${No_Attributes} ${Dim}•${No_Attributes} Cleaning the Logs and Inactive memory                                                           ${Dim}• • • • • • • • • • • • • • •${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Red}${Bold} 30${No_Attributes} ${Dim}•${No_Attributes} Manually and Automatic Delete, Plugins Input and Output device                                  ${Dim}•${No_Attributes} ${F_Red}${Bold}I${No_Attributes}nstalling Xcode CLT      ${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Red}${Bold} 31${No_Attributes} ${Dim}•${No_Attributes} -----------------------                                                                         ${Dim}•${No_Attributes} ${F_Red}${Bold}U${No_Attributes}ninstalling Xcode CLT    ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Red}${Bold} 31${No_Attributes} ${Dim}•${No_Attributes} Clears kernel Extension, Rebuild Kexts Caches, Repair Permissions of Kexts folders, etc.        ${Dim}•${No_Attributes} ${F_Red}${Bold}U${No_Attributes}ninstalling Xcode CLT    ${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Red}${Bold} 32${No_Attributes} ${Dim}•${No_Attributes} -----------------------                                                                         ${Dim}•${No_Attributes} ${F_Red}${Bold}R${No_Attributes}elease/${F_Red}${Bold}N${No_Attributes}ightly Download  ${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Red}${Bold} 33${No_Attributes} ${Dim}•${No_Attributes} -----------------------                                                                         ${Dim}•${No_Attributes} ${F_Red}${Bold}A${No_Attributes}bout GitHub              ${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Red}${Bold} 34${No_Attributes} ${Dim}•${No_Attributes} -----------------------                                                                         ${Dim}•${No_Attributes} ${F_Red}${Bold}${Blink}Q${No_Attributes}uit                      ${Dim}•${No_Attributes}"
@@ -1284,6 +1284,95 @@ deletePluginsInputAndOutputDevice() {
     continueMessage
 }
 
+# Command 31: Kernel Management
+kernelManagement() {
+    terminalWindowSize55x140
+    echo "•${F_Red}${Bold} Command 31: You choose to Kernel Management: Clears the kernel Extension, Rebuild Kexts Caches, Repair Permissions of Kexts folders, etc.${No_Attributes}\n"
+    # Menu
+    echo " ${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
+    echo " ${Dim}•${No_Attributes}${F_Red}${Bold} 1${No_Attributes} ${Dim}•${No_Attributes} Clears the kernel Extension staging area by removing all staged content (Requires a reboot)            ${Dim}•${No_Attributes}"
+    echo " ${Dim}•~~~•~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~•${No_Attributes}"
+    echo " ${Dim}•${No_Attributes}${F_Red}${Bold} 2${No_Attributes} ${Dim}•${No_Attributes} Rebuild out-of-date Caches (Requires a reboot)                                                         ${Dim}•${No_Attributes}"
+    echo " ${Dim}•~~~•~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~•${No_Attributes}"
+    echo " ${Dim}•${No_Attributes}${F_Red}${Bold} 3${No_Attributes} ${Dim}•${No_Attributes} Updated the kernel Extension (Requires a reboot)                                                       ${Dim}•${No_Attributes}"
+    echo " ${Dim}•~~~•~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~•${No_Attributes}"
+    echo " ${Dim}•${No_Attributes}${F_Red}${Bold} 4${No_Attributes} ${Dim}•${No_Attributes} Show the loaded state of the kernel Extensions                                                         ${Dim}•${No_Attributes}"
+    echo " ${Dim}•~~~•~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~•${No_Attributes}"
+    echo " ${Dim}•${No_Attributes}${F_Red}${Bold} 5${No_Attributes} ${Dim}•${No_Attributes} Repair Permissions in (System/Library/Extensions) and (Library/Extensions) folders (Requires a reboot) ${Dim}•${No_Attributes}"
+    echo " ${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
+
+    printf '
+ Please select an Command: '
+    read var
+    # Clears the kernel Extension staging area by removing all staged content
+    if [ "$var" -eq "1" ]; then
+        echo "\n•${F_Red}${Bold} Clears the kernel Extension staging area by removing all staged content. (Requires a reboot)${No_Attributes}"
+        askPassword
+        sudo kmutil clear-staging
+        sleep 1 && echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}${Dim} ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
+    # Deleting macOS terminal command history
+        echo "•${F_Red} Deleting macOS terminal command history.${No_Attributes}\n"
+        echo "•${F_Red} You choose to Restart computer.${No_Attributes}"
+        rm -rf .zsh_sessions
+        rm -rf .zsh_history
+        sleep 1 && echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}${Dim} ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
+        osascript -e 'tell app "loginwindow" to «event aevtrrst»'
+    fi
+    # Rebuild out-of-date Caches
+    if [ "$var" -eq "2" ]; then
+        echo "\n•${F_Red}${Bold} Rebuild out-of-date Caches. (Requires a reboot)${No_Attributes}"
+        askPassword
+        sudo kmutil install --check-rebuild
+        sleep 1 && echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}${Dim} ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
+    # Deleting macOS terminal command history
+        echo "•${F_Red} Deleting macOS terminal command history.${No_Attributes}\n"
+        echo "•${F_Red} You choose to Restart computer.${No_Attributes}"
+        rm -rf .zsh_sessions
+        rm -rf .zsh_history
+        sleep 1 && echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}${Dim} ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
+        osascript -e 'tell app "loginwindow" to «event aevtrrst»'
+    fi
+    # Updated the kernel Extension
+    if [ "$var" -eq "3" ]; then
+        echo "\n•${F_Red}${Bold} Updated the kernel Extension. (Requires a reboot)${No_Attributes}\n"
+        askPassword
+        sudo kmutil install  --update-all
+        sleep 1 && echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}${Dim} ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
+    # Deleting macOS terminal command history
+        echo "•${F_Red} Deleting macOS terminal command history.${No_Attributes}\n"
+        echo "•${F_Red} You choose to Restart computer.${No_Attributes}"
+        rm -rf .zsh_sessions
+        rm -rf .zsh_history
+        sleep 1 && echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}${Dim} ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
+        osascript -e 'tell app "loginwindow" to «event aevtrrst»'
+    fi
+    # Show the loaded state of the kernel Extensions
+    if [ "$var" -eq "4" ]; then
+        terminalWindowSize55x190
+        echo "\n•${F_Red}${Bold} Show the loaded state of the kernel Extensions.${No_Attributes}\n"
+        sleep 2 && kmutil showloaded
+        sleep 1 && echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}${Dim} ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
+    fi
+    # Repair Permissions in (System/Library/Extensions) and (Library/Extensions) folders
+    if [ "$var" -eq "5" ]; then
+        echo "\n•${F_Red}${Bold} Repair Permissions in (System/Library/Extensions) and (Library/Extensions) folders. (Requires a reboot)${No_Attributes}"
+        askPassword
+        sudo chmod -Rf 755 /S*/L*/E*
+        sudo chmod -Rf 755 /L*/E*
+        sudo chown -Rf 0:0 /S*/L*/E*
+        sudo chown -Rf 0:0 /L*/E*
+        sleep 1 && echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}${Dim} ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
+    # Deleting macOS terminal command history
+        echo "•${F_Red} Deleting macOS terminal command history.${No_Attributes}\n"
+        echo "•${F_Red} You choose to Restart computer.${No_Attributes}"
+        rm -rf .zsh_sessions
+        rm -rf .zsh_history
+        sleep 1 && echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}${Dim} ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
+        osascript -e 'tell app "loginwindow" to «event aevtrrst»'
+    fi
+    continueMessage
+}
+
 # -----------------------------------------------------------------------------------------------------------------
 
 # Main function of the script
@@ -1456,7 +1545,7 @@ startScript() {
 
         31)
             clear
-            ------------------------------
+            kernelManagement
             ;;
 
         32)
