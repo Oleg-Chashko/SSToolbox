@@ -88,10 +88,10 @@ showMenu() {
     echo "${Dim}•${No_Attributes}${F_Red}${Bold} 26${No_Attributes} ${Dim}•${No_Attributes} Don't Show Attachments as Icons in Apple Mail App                                                                           ${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Red}${Bold} 27${No_Attributes} ${Dim}•${No_Attributes} Show the full path in the Finder Title window                                                                               ${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Red}${Bold} 28${No_Attributes} ${Dim}•${No_Attributes} Don't Show the full path in the Finder Title window                                                                         ${Dim}•${No_Attributes}"
-    echo "${Dim}•····•·············································································································· ${F_Green}${Bold}OS Management ${No_Attributes}${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Red}${Bold} 29${No_Attributes} ${Dim}•${No_Attributes} Cleaning the Logs and Inactive memory                                                           ${Dim}• • • • • • • • • • • • • • •${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Red}${Bold} 30${No_Attributes} ${Dim}•${No_Attributes} Manually and Automatic Delete, Plugins Input and Output device                                  ${Dim}•${No_Attributes} ${F_Red}${Bold}I${No_Attributes}nstalling Xcode CLT      ${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Red}${Bold} 31${No_Attributes} ${Dim}•${No_Attributes} Clears kernel Extension, Rebuild Kexts Caches, Repair Permissions of Kexts folders, etc.        ${Dim}•${No_Attributes} ${F_Red}${Bold}U${No_Attributes}ninstalling Xcode CLT    ${Dim}•${No_Attributes}"
+    echo "${Dim}•····•·············································································· Caution: Use At Your Own Risk » ${F_Green}${Bold}OS Management ${No_Attributes}${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Red}${Bold} 29${No_Attributes} ${Dim}•${No_Attributes} Logs system Management: Cleaning the Logs and Inactive memory                                   ${Dim}• • • • • • • • • • • • • • •${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Red}${Bold} 30${No_Attributes} ${Dim}•${No_Attributes} I/O system Management: Manually and Automatic Delete, Plugins Input and Output device           ${Dim}•${No_Attributes} ${F_Red}${Bold}I${No_Attributes}nstalling Xcode CLT      ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Red}${Bold} 31${No_Attributes} ${Dim}•${No_Attributes} Kernel OS Management: Cleaning kernel Extension, Rebuild Kexts Caches, etc. (Requires a reboot) ${Dim}•${No_Attributes} ${F_Red}${Bold}U${No_Attributes}ninstalling Xcode CLT    ${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Red}${Bold} 32${No_Attributes} ${Dim}•${No_Attributes} -----------------------                                                                         ${Dim}•${No_Attributes} ${F_Red}${Bold}R${No_Attributes}elease/${F_Red}${Bold}N${No_Attributes}ightly Download  ${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Red}${Bold} 33${No_Attributes} ${Dim}•${No_Attributes} -----------------------                                                                         ${Dim}•${No_Attributes} ${F_Red}${Bold}A${No_Attributes}bout GitHub              ${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Red}${Bold} 34${No_Attributes} ${Dim}•${No_Attributes} -----------------------                                                                         ${Dim}•${No_Attributes} ${F_Red}${Bold}${Blink}Q${No_Attributes}uit                      ${Dim}•${No_Attributes}"
@@ -1188,10 +1188,10 @@ noShowTheFullPathInTheFinderTitleWindow() {
     continueMessage
 }
 
-# Command 29: Cleaning the Logs and Inactive memory
+# Command 29: Logs system Management: Cleaning the Logs and Inactive memory
 cleaningLogsAndInactiveMemory() {
     terminalWindowSize40x140
-    echo "•${F_Red}${Bold} Command 29: You choose to Cleaning the Logs and Inactive memory.${No_Attributes}"
+    echo "•${F_Red}${Bold} Command 29: You choose to Logs system Management: Cleaning the Logs and Inactive memory.${No_Attributes}"
     askPassword
 
     # The script
@@ -1219,10 +1219,10 @@ cleaningLogsAndInactiveMemory() {
     continueMessage
 }
 
-# Command 30: Manually and Automatic Delete, Plugins Input and Output device
+# Command 30: I/O system Management: Manually and Automatic Delete, Plugins Input and Output device
 deletePluginsInputAndOutputDevice() {
     terminalWindowSize40x140
-    echo "•${F_Red}${Bold} Command 30: You choose to Manually and Automatic Delete, Plugins Input and Output device.${No_Attributes}\n"
+    echo "•${F_Red}${Bold} Command 30: You choose to I/O system Management: Manually and Automatic Delete, Plugins Input and Output device.${No_Attributes}\n"
     # Menu
     echo " ${Dim}•••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
     echo " ${Dim}•${No_Attributes}${F_Red}${Bold} 1${No_Attributes} ${Dim}•${No_Attributes} Automatic Delete All CoreMedia Input/Output Device DAL Video Plug-ins ${Dim}•${No_Attributes}"
@@ -1284,13 +1284,13 @@ deletePluginsInputAndOutputDevice() {
     continueMessage
 }
 
-# Command 31: Kernel Management
+# Command 31: Kernel OS Management
 kernelManagement() {
     terminalWindowSize55x140
-    echo "•${F_Red}${Bold} Command 31: You choose to Kernel Management: Clears the kernel Extension, Rebuild Kexts Caches, Repair Permissions of Kexts folders, etc.${No_Attributes}\n"
+    echo "•${F_Red}${Bold} Command 31: You choose to Kernel OS Management: Cleaning kernel Extension, Rebuild Kexts Caches, Repair Permissions of Kexts folders, etc.${No_Attributes}\n"
     # Menu
     echo " ${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
-    echo " ${Dim}•${No_Attributes}${F_Red}${Bold} 1${No_Attributes} ${Dim}•${No_Attributes} Clears the kernel Extension staging area by removing all staged content (Requires a reboot)            ${Dim}•${No_Attributes}"
+    echo " ${Dim}•${No_Attributes}${F_Red}${Bold} 1${No_Attributes} ${Dim}•${No_Attributes} Cleaning the kernel Extension staging area by removing all staged content (Requires a reboot)          ${Dim}•${No_Attributes}"
     echo " ${Dim}•~~~•~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~•${No_Attributes}"
     echo " ${Dim}•${No_Attributes}${F_Red}${Bold} 2${No_Attributes} ${Dim}•${No_Attributes} Rebuild out-of-date Caches (Requires a reboot)                                                         ${Dim}•${No_Attributes}"
     echo " ${Dim}•~~~•~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~•${No_Attributes}"
@@ -1304,9 +1304,9 @@ kernelManagement() {
     printf '
  Please select an Command: '
     read var
-    # Clears the kernel Extension staging area by removing all staged content
+    # Cleaning the kernel Extension staging area by removing all staged content
     if [ "$var" -eq "1" ]; then
-        echo "\n•${F_Red}${Bold} Clears the kernel Extension staging area by removing all staged content. (Requires a reboot)${No_Attributes}"
+        echo "\n•${F_Red}${Bold} Cleaning the kernel Extension staging area by removing all staged content. (Requires a reboot)${No_Attributes}"
         askPassword
         sudo kmutil clear-staging
         sleep 1 && echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}${Dim} ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
