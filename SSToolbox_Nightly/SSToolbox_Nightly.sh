@@ -92,7 +92,7 @@ showMenu() {
     echo "${Dim}•${No_Attributes}${F_Red}${Bold} 29${No_Attributes} ${Dim}•${No_Attributes} Logs system Management: Cleaning the Logs and Inactive memory                                   ${Dim}• • • • • • • • • • • • • • •${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Red}${Bold} 30${No_Attributes} ${Dim}•${No_Attributes} I/O system Management: Manually and Automatic Delete, Plugins Input and Output device           ${Dim}•${No_Attributes} ${F_Red}${Bold}I${No_Attributes}nstalling Xcode CLT      ${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Red}${Bold} 31${No_Attributes} ${Dim}•${No_Attributes} Kernel OS Management: Cleaning kernel Extension, Rebuild Kexts Caches, etc. (Requires a reboot) ${Dim}•${No_Attributes} ${F_Red}${Bold}U${No_Attributes}ninstalling Xcode CLT    ${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Red}${Bold} 32${No_Attributes} ${Dim}•${No_Attributes} -----------------------                                                                         ${Dim}•${No_Attributes} ${F_Red}${Bold}R${No_Attributes}elease/${F_Red}${Bold}N${No_Attributes}ightly Download  ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Red}${Bold} 32${No_Attributes} ${Dim}•${No_Attributes} Privacy Database Management: Custom reset apps permissions under Security and Privacy           ${Dim}•${No_Attributes} ${F_Red}${Bold}R${No_Attributes}elease/${F_Red}${Bold}N${No_Attributes}ightly Download  ${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Red}${Bold} 33${No_Attributes} ${Dim}•${No_Attributes} -----------------------                                                                         ${Dim}•${No_Attributes} ${F_Red}${Bold}A${No_Attributes}bout GitHub              ${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Red}${Bold} 34${No_Attributes} ${Dim}•${No_Attributes} -----------------------                                                                         ${Dim}•${No_Attributes} ${F_Red}${Bold}${Blink}Q${No_Attributes}uit                      ${Dim}•${No_Attributes}"
     echo "${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
@@ -1373,6 +1373,145 @@ kernelManagement() {
     continueMessage
 }
 
+# Command 32: Privacy Database Management: Custom reset application permissions under Security and Privacy
+privacyDatabaseManagement() {
+    terminalWindowSize55x140
+    echo "•${F_Red}${Bold} Command 32: Privacy Database Management: Custom reset application permissions under Security and Privacy.${No_Attributes}\n"
+    # Menu
+    echo " ${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
+    echo " ${Dim}•${No_Attributes}${F_Red}${Bold}  1${No_Attributes} ${Dim}•${No_Attributes} ${F_Red}Reset the All permissions for all apps${No_Attributes}                                  ${Dim}•${No_Attributes}"
+    echo " ${Dim}•~~~•~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~•${No_Attributes}"
+    echo " ${Dim}•${No_Attributes}${F_Red}${Bold}  2${No_Attributes} ${Dim}•${No_Attributes} Reset the Photos permissions for all apps                               ${Dim}•${No_Attributes}"
+    echo " ${Dim}•~~~•~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~•${No_Attributes}"
+    echo " ${Dim}•${No_Attributes}${F_Red}${Bold}  3${No_Attributes} ${Dim}•${No_Attributes} Reset the Camera permissions for all apps                               ${Dim}•${No_Attributes}"
+    echo " ${Dim}•~~~•~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~•${No_Attributes}"
+    echo " ${Dim}•${No_Attributes}${F_Red}${Bold}  4${No_Attributes} ${Dim}•${No_Attributes} Reset the Reminders permissions for all apps                            ${Dim}•${No_Attributes}"
+    echo " ${Dim}•~~~•~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~•${No_Attributes}"
+    echo " ${Dim}•${No_Attributes}${F_Red}${Bold}  5${No_Attributes} ${Dim}•${No_Attributes} Reset the Microphone permissions for all apps                           ${Dim}•${No_Attributes}"
+    echo " ${Dim}•~~~•~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~•${No_Attributes}"
+    echo " ${Dim}•${No_Attributes}${F_Red}${Bold}  6${No_Attributes} ${Dim}•${No_Attributes} Reset the Automation permissions for all apps                           ${Dim}•${No_Attributes}"
+    echo " ${Dim}•~~~•~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~•${No_Attributes}"
+    echo " ${Dim}•${No_Attributes}${F_Red}${Bold}  7${No_Attributes} ${Dim}•${No_Attributes} Reset the Accessibility permissions for all apps                        ${Dim}•${No_Attributes}"
+    echo " ${Dim}•~~~•~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~•${No_Attributes}"
+    echo " ${Dim}•${No_Attributes}${F_Red}${Bold}  8${No_Attributes} ${Dim}•${No_Attributes} Reset the Developer Tools permissions for all apps                      ${Dim}•${No_Attributes}"
+    echo " ${Dim}•~~~•~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~•${No_Attributes}"
+    echo " ${Dim}•${No_Attributes}${F_Red}${Bold}  9${No_Attributes} ${Dim}•${No_Attributes} Reset the Screen Recording permissions for all apps                     ${Dim}•${No_Attributes}"
+    echo " ${Dim}•~~~•~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~•${No_Attributes}"
+    echo " ${Dim}•${No_Attributes}${F_Red}${Bold} 10${No_Attributes} ${Dim}•${No_Attributes} Reset the Full Disk Access permissions for all apps                     ${Dim}•${No_Attributes}"
+    echo " ${Dim}•~~~•~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~•${No_Attributes}"
+    echo " ${Dim}•${No_Attributes}${F_Red}${Bold} 11${No_Attributes} ${Dim}•${No_Attributes} Reset the Speech Recognition permissions for all apps                   ${Dim}•${No_Attributes}"
+    echo " ${Dim}•~~~•~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~•${No_Attributes}"
+    echo " ${Dim}•${No_Attributes}${F_Red}${Bold} 12${No_Attributes} ${Dim}•${No_Attributes} Reset the Media & Apple Music permissions for all apps                  ${Dim}•${No_Attributes}"
+    echo " ${Dim}•~~~•~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~•${No_Attributes}"
+    echo " ${Dim}•${No_Attributes}${F_Red}${Bold} 13${No_Attributes} ${Dim}•${No_Attributes} Reset the Calendars (for the Calendars list) permissions for all apps   ${Dim}•${No_Attributes}"
+    echo " ${Dim}•~~~•~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~•${No_Attributes}"
+    echo " ${Dim}•${No_Attributes}${F_Red}${Bold} 14${No_Attributes} ${Dim}•${No_Attributes} Reset the Address Book (for the Contacts list) permissions for all apps ${Dim}•${No_Attributes}"
+    echo " ${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
+
+    printf '
+ Please select an Command: '
+    read var
+    # Reset the All permissions for all apps
+    if [ "$var" -eq "1" ]; then
+        echo "\n•${F_Red}${Bold} Reset the All permissions for all apps.${No_Attributes}"
+        askPassword
+        sudo tccutil reset All
+        echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
+    fi
+    # Reset the Photos permissions for all apps
+    if [ "$var" -eq "2" ]; then
+        echo "\n•${F_Red}${Bold} Reset the Photos permissions for all apps.${No_Attributes}"
+        askPassword
+        sudo tccutil reset Photos
+        echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
+    fi
+    # Reset the Camera permissions for all apps
+    if [ "$var" -eq "3" ]; then
+        echo "\n•${F_Red}${Bold} Reset the Camera permissions for all apps.${No_Attributes}"
+        askPassword
+        sudo tccutil reset Camera
+        echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
+    fi
+    # Reset the Reminders permissions for all apps
+    if [ "$var" -eq "4" ]; then
+        echo "\n•${F_Red}${Bold} Reset the Reminders permissions for all apps.${No_Attributes}"
+        askPassword
+        sudo tccutil reset Reminders
+        echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
+    fi
+    # Reset the Microphone permissions for all apps
+    if [ "$var" -eq "5" ]; then
+        echo "\n•${F_Red}${Bold} Reset the Microphone permissions for all apps.${No_Attributes}"
+        askPassword
+        sudo tccutil reset Microphone
+        echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
+    fi
+    # Reset the Automation permissions for all apps
+    if [ "$var" -eq "6" ]; then
+        echo "\n•${F_Red}${Bold} Reset the Automation permissions for all apps.${No_Attributes}"
+        askPassword
+        sudo tccutil reset AppleEvents
+        echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
+    fi
+    # Reset the Accessibility permissions for all apps
+    if [ "$var" -eq "7" ]; then
+        echo "\n•${F_Red}${Bold} Reset the Accessibility permissions for all apps.${No_Attributes}"
+        askPassword
+        sudo tccutil reset Accessibility
+        echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
+    fi
+    # Reset the Developer Tools permissions for all apps
+    if [ "$var" -eq "8" ]; then
+        echo "\n•${F_Red}${Bold} Reset the Developer Tools permissions for all apps.${No_Attributes}"
+        askPassword
+        sudo tccutil reset DeveloperTool
+        echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
+    fi
+    # Reset the Screen Recording permissions for all apps
+    if [ "$var" -eq "9" ]; then
+        echo "\n•${F_Red}${Bold} Reset the Screen Recording permissions for all apps.${No_Attributes}"
+        askPassword
+        sudo tccutil reset ScreenCapture
+        echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
+    fi
+    # Reset the Full Disk Access permissions for all apps
+    if [ "$var" -eq "10" ]; then
+        echo "\n•${F_Red}${Bold} Reset the Full Disk Access permissions for all apps.${No_Attributes}"
+        askPassword
+        sudo tccutil reset SystemPolicyAllFiles
+        echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
+    fi
+    # Reset the Speech Recognition permissions for all apps
+    if [ "$var" -eq "11" ]; then
+        echo "\n•${F_Red}${Bold} Reset the Speech Recognition permissions for all apps.${No_Attributes}"
+        askPassword
+        sudo tccutil reset SpeechRecognition
+        echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
+    fi
+    # Reset the Media & Apple Music permissions for all apps
+    if [ "$var" -eq "12" ]; then
+        echo "\n•${F_Red}${Bold} Reset the Media & Apple Music permissions for all apps.${No_Attributes}"
+        askPassword
+        sudo tccutil reset MediaLibrary
+        echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
+    fi
+    # Reset the Calendars (note the singular, for the Calendars list) permissions for all apps
+    if [ "$var" -eq "13" ]; then
+        echo "\n•${F_Red}${Bold} Reset the Calendars (note the singular, for the Calendars list) permissions for all apps.${No_Attributes}"
+        askPassword
+        sudo tccutil reset Calendar
+        echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
+    fi
+    # Reset the Address Book (for the Contacts list) permissions for all apps
+    if [ "$var" -eq "14" ]; then
+        echo "\n•${F_Red}${Bold} Reset the Address Book (for the Contacts list) permissions for all apps.${No_Attributes}"
+        askPassword
+        sudo tccutil reset AddressBook
+        echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
+    fi
+    continueMessage
+}
+
 # -----------------------------------------------------------------------------------------------------------------
 
 # Main function of the script
@@ -1550,7 +1689,7 @@ startScript() {
 
         32)
             clear
-            ------------------------------
+            privacyDatabaseManagement
             ;;
 
         33)
