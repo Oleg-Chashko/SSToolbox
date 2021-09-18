@@ -80,14 +80,14 @@ showMenu() {
     echo "${Dim}•${No_Attributes}${F_Red}${Bold} 19${No_Attributes} ${Dim}•${No_Attributes} Remove app from quarantine                                                                                                  ${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Red}${Bold} 20${No_Attributes} ${Dim}•${No_Attributes} Self-sign the app. Require Xcode or Xcode CLT (Command Line Tools)                                                          ${Dim}•${No_Attributes}"
     echo "${Dim}•····•····················································································································· ${F_Green}${Bold}Tweaks ${No_Attributes}${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Red}${Bold} 21${No_Attributes} ${Dim}•${No_Attributes} Show Hidden Files                                                                                                           ${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Red}${Bold} 22${No_Attributes} ${Dim}•${No_Attributes} Don't Show Hidden Files                                                                                                     ${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Red}${Bold} 23${No_Attributes} ${Dim}•${No_Attributes} Show all File Extensions                                                                                                    ${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Red}${Bold} 24${No_Attributes} ${Dim}•${No_Attributes} Don't Show all File Extensions                                                                                              ${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Red}${Bold} 25${No_Attributes} ${Dim}•${No_Attributes} Show Attachments as Icons in Apple Mail App                                                                                 ${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Red}${Bold} 26${No_Attributes} ${Dim}•${No_Attributes} Don't Show Attachments as Icons in Apple Mail App                                                                           ${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Red}${Bold} 27${No_Attributes} ${Dim}•${No_Attributes} Show the full path in the Finder Title window                                                                               ${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Red}${Bold} 28${No_Attributes} ${Dim}•${No_Attributes} Don't Show the full path in the Finder Title window                                                                         ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Red}${Bold} 21${No_Attributes} ${Dim}•${No_Attributes} Enable or disable the show of hidden files                                                                                  ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Red}${Bold} 22${No_Attributes} ${Dim}•${No_Attributes} Enable or disable the show of all File Extensions                                                                           ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Red}${Bold} 23${No_Attributes} ${Dim}•${No_Attributes} Enable or disable the show of attachments as icons in the Apple Mail app                                                    ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Red}${Bold} 24${No_Attributes} ${Dim}•${No_Attributes} Enable or disable the show of the full path in the Finder 'Title' window                                                    ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Red}${Bold} 25${No_Attributes} ${Dim}•${No_Attributes} ------------------------------                                                                                              ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Red}${Bold} 26${No_Attributes} ${Dim}•${No_Attributes} ------------------------------                                                                                              ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Red}${Bold} 27${No_Attributes} ${Dim}•${No_Attributes} ------------------------------                                                                                              ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Red}${Bold} 28${No_Attributes} ${Dim}•${No_Attributes} ------------------------------                                                                                              ${Dim}•${No_Attributes}"
     echo "${Dim}•····•·············································································· Caution: Use At Your Own Risk » ${F_Green}${Bold}OS Management ${No_Attributes}${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Red}${Bold} 29${No_Attributes} ${Dim}•${No_Attributes} Logs system Management: Cleaning the Logs and Inactive memory                                   ${Dim}• • • • • • • • • • • • • • •${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Red}${Bold} 30${No_Attributes} ${Dim}•${No_Attributes} I/O system Management: Manually and Automatic Delete, Plugins Input and Output device           ${Dim}•${No_Attributes} ${F_Red}${Bold}I${No_Attributes}nstalling Xcode CLT      ${Dim}•${No_Attributes}"
@@ -1116,74 +1116,153 @@ selfSignApp() {
     continueMessage
 }
 
-# Command 21: Show Hidden Files
-showHiddenFiles() {
+# Command 21: Enable or disable the show of hidden files
+enableOrDisableTheShowOfHiddenFiles() {
     terminalWindowSize40x140
-    echo "•${F_Red}${Bold} Command 21: show hidden files.${No_Attributes}"
-    defaults write com.apple.finder AppleShowAllFiles true && killall Finder
+    echo "•${F_Red}${Bold} Command 21: Enable or disable the show of hidden files.${No_Attributes}\n"
+    # Menu
+    echo " ${Dim}•••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
+    echo " ${Dim}•${No_Attributes}${F_Red}${Bold} 1${No_Attributes} ${Dim}•${No_Attributes} Enable the show of hidden files                                       ${Dim}•${No_Attributes}"
+    echo " ${Dim}•~~~•~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~•${No_Attributes}"
+    echo " ${Dim}•${No_Attributes}${F_Red}${Bold} 2${No_Attributes} ${Dim}•${No_Attributes} Disable the show of hidden files                                      ${Dim}•${No_Attributes}"
+    echo " ${Dim}•••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
+
+    printf '
+ Please select an Command: '
+    read var
+    # Enable the show of hidden files
+    if [ "$var" -eq "1" ]; then
+        echo "\n•${F_Red}${Bold} Enable the show of hidden files.${No_Attributes}"
+        defaults write com.apple.finder AppleShowAllFiles true && killall Finder
+        echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
+    fi
+    # Disable the show of hidden files
+    if [ "$var" -eq "2" ]; then
+        echo "\n•${F_Red}${Bold} Disable the show of hidden files.${No_Attributes}"
+        defaults write com.apple.finder AppleShowAllFiles false && killall Finder
+        echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
+    fi
+    continueMessage
+}
+# Command 22: Enable or disable the show of all File Extensions
+enableOrDisableTheShowOfAllFileExtensions() {
+    terminalWindowSize40x140
+    echo "•${F_Red}${Bold} Command 22: Enable or disable the show of all File Extensions.${No_Attributes}\n"
+    # Menu
+    echo " ${Dim}•••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
+    echo " ${Dim}•${No_Attributes}${F_Red}${Bold} 1${No_Attributes} ${Dim}•${No_Attributes} Enable the show of all File Extensions                                ${Dim}•${No_Attributes}"
+    echo " ${Dim}•~~~•~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~•${No_Attributes}"
+    echo " ${Dim}•${No_Attributes}${F_Red}${Bold} 2${No_Attributes} ${Dim}•${No_Attributes} Disable the show of all File Extensions                               ${Dim}•${No_Attributes}"
+    echo " ${Dim}•••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
+
+    printf '
+ Please select an Command: '
+    read var
+    # Enable the show of all File Extensions
+    if [ "$var" -eq "1" ]; then
+        echo "\n•${F_Red}${Bold} Enable the show of all File Extensions.${No_Attributes}"
+        defaults write NSGlobalDomain AppleShowAllExtensions true && killall Finder
+        echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
+    fi
+    # Disable the show of all File Extensions
+    if [ "$var" -eq "2" ]; then
+        echo "\n•${F_Red}${Bold} Disable the show of all File Extensions.${No_Attributes}"
+        defaults write NSGlobalDomain AppleShowAllExtensions false && killall Finder
+        echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
+    fi
+    continueMessage
+}
+
+# Command 23: Enable or disable the show of attachments as icons in the Apple Mail app
+enableOrDisableTheShowOfAttachmentsAsIconsInTheAppleMailApp() {
+    terminalWindowSize40x140
+    echo "•${F_Red}${Bold} Command 23: Enable or disable the show of attachments as icons in the Apple Mail app.${No_Attributes}\n"
+    # Menu
+    echo " ${Dim}•••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
+    echo " ${Dim}•${No_Attributes}${F_Red}${Bold} 1${No_Attributes} ${Dim}•${No_Attributes} Enable the show of attachments as icons in the Apple Mail app         ${Dim}•${No_Attributes}"
+    echo " ${Dim}•~~~•~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~•${No_Attributes}"
+    echo " ${Dim}•${No_Attributes}${F_Red}${Bold} 2${No_Attributes} ${Dim}•${No_Attributes} Disable the show of attachments as icons in the Apple Mail app        ${Dim}•${No_Attributes}"
+    echo " ${Dim}•••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
+
+    printf '
+ Please select an Command: '
+    read var
+    # Enable the show of attachments as icons in the Apple Mail app
+    if [ "$var" -eq "1" ]; then
+        echo "\n•${F_Red}${Bold} Enable the show of attachments as icons in the Apple Mail app.${No_Attributes}"
+        defaults write com.apple.mail DisableInlineAttachmentViewing -boolean yes
+        echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
+    fi
+    # Disable the show of attachments as icons in the Apple Mail app
+    if [ "$var" -eq "2" ]; then
+        echo "\n•${F_Red}${Bold} Disable the show of attachments as icons in the Apple Mail app.${No_Attributes}"
+        defaults write com.apple.mail DisableInlineAttachmentViewing -boolean no
+        echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
+    fi
+    continueMessage
+}
+
+# Command 24: Enable or disable the show of the full path in the Finder 'Title' window
+enableOrDisableTheShowOfTheFullPathInTheFinderTitleWindow() {
+    terminalWindowSize40x140
+    echo "•${F_Red}${Bold} Command 24: Enable or disable the show of the full path in the Finder 'Title' window.${No_Attributes}\n"
+    # Menu
+    echo " ${Dim}•••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
+    echo " ${Dim}•${No_Attributes}${F_Red}${Bold} 1${No_Attributes} ${Dim}•${No_Attributes} Enable the show of the full path in the Finder 'Title' window         ${Dim}•${No_Attributes}"
+    echo " ${Dim}•~~~•~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~•${No_Attributes}"
+    echo " ${Dim}•${No_Attributes}${F_Red}${Bold} 2${No_Attributes} ${Dim}•${No_Attributes} Disable the show of the full path in the Finder 'Title' window        ${Dim}•${No_Attributes}"
+    echo " ${Dim}•••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
+
+    printf '
+ Please select an Command: '
+    read var
+    # Enable the show of the full path in the Finder 'Title' window
+    if [ "$var" -eq "1" ]; then
+        echo "\n•${F_Red}${Bold} Enable the show of the full path in the Finder 'Title' window.${No_Attributes}"
+        defaults write com.apple.finder _FXShowPosixPathInTitle -bool true && killall Finder
+        echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
+    fi
+    # Disable the show of the full path in the Finder 'Title' window
+    if [ "$var" -eq "2" ]; then
+        echo "\n•${F_Red}${Bold} Disable the show of the full path in the Finder 'Title' window.${No_Attributes}"
+        defaults write com.apple.finder _FXShowPosixPathInTitle -bool false && killall Finder
+        echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
+    fi
+    continueMessage
+}
+
+# Command 25: ------------------------------
+------------------------------() {
+    terminalWindowSize40x140
+    echo "•${F_Red}${Bold} Command 25: ------------------------------.${No_Attributes}\n"
+    ------------------------------
     echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
     continueMessage
 }
 
-# Command 22: Don't Show Hidden Files
-noShowHiddenFiles() {
+# Command 26: ------------------------------
+------------------------------() {
     terminalWindowSize40x140
-    echo "•${F_Red}${Bold} Command 22: don't show hidden files.${No_Attributes}"
-    defaults write com.apple.finder AppleShowAllFiles false && killall Finder
+    echo "•${F_Red}${Bold} Command 26: ------------------------------.${No_Attributes}\n"
+    ------------------------------
     echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
     continueMessage
 }
 
-# Command 23: Show all File Extensions
-showExtensionsFiles() {
+# Command 27: ------------------------------
+------------------------------() {
     terminalWindowSize40x140
-    echo "•${F_Red}${Bold} Command 23: show all file extensions.${No_Attributes}"
-    defaults write NSGlobalDomain AppleShowAllExtensions true && killall Finder
+    echo "•${F_Red}${Bold} Command 23: ------------------------------.${No_Attributes}"
+    ------------------------------
     echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
     continueMessage
 }
 
-# Command 24: Don't Show all File Extensions
-noShowExtensionsFiles() {
+# Command 28: ------------------------------
+------------------------------() {
     terminalWindowSize40x140
-    echo "•${F_Red}${Bold} Command 24: don't show all file extensions.${No_Attributes}"
-    defaults write NSGlobalDomain AppleShowAllExtensions false && killall Finder
-    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    continueMessage
-}
-
-# Command 25:
-showAttachmentsAsIcons() {
-    terminalWindowSize40x140
-    echo "•${F_Red}${Bold} Command 25: show Attachments as Icons in Apple Mail App.${No_Attributes}\n"
-    defaults write com.apple.mail DisableInlineAttachmentViewing -boolean yes
-    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    continueMessage
-}
-
-# Command 26:
-noShowAttachmentsAsIcons() {
-    terminalWindowSize40x140
-    echo "•${F_Red}${Bold} Command 26: don't show Attachments as Icons in Apple Mail App.${No_Attributes}\n"
-    defaults write com.apple.mail DisableInlineAttachmentViewing -boolean no
-    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    continueMessage
-}
-
-# Command 27: Show the full path in the Finder Title window
-showTheFullPathInTheFinderTitleWindow() {
-    terminalWindowSize40x140
-    echo "•${F_Red}${Bold} Command 23: Show the full path in the Finder Title window.${No_Attributes}"
-    defaults write com.apple.finder _FXShowPosixPathInTitle -bool true && killall Finder
-    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    continueMessage
-}
-
-# Command 28: Don't Show the full path in the Finder Title window
-noShowTheFullPathInTheFinderTitleWindow() {
-    terminalWindowSize40x140
-    echo "•${F_Red}${Bold} Command 24: Don't Show the full path in the Finder Title window.${No_Attributes}"
-    defaults write com.apple.finder _FXShowPosixPathInTitle -bool false && killall Finder
+    echo "•${F_Red}${Bold} Command 24: ------------------------------.${No_Attributes}"
+    ------------------------------
     echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
     continueMessage
 }
@@ -1634,42 +1713,42 @@ startScript() {
 
         21)
             clear
-            showHiddenFiles
+            enableOrDisableTheShowOfHiddenFiles
             ;;
 
         22)
             clear
-            noShowHiddenFiles
+            enableOrDisableTheShowOfAllFileExtensions
             ;;
 
         23)
             clear
-            showExtensionsFiles
+            enableOrDisableTheShowOfAttachmentsAsIconsInTheAppleMailApp
             ;;
 
         24)
             clear
-            noShowExtensionsFiles
+            enableOrDisableTheShowOfTheFullPathInTheFinderTitleWindow
             ;;
 
         25)
             clear
-            showAttachmentsAsIcons
+            ------------------------------
             ;;
 
         26)
             clear
-            noShowAttachmentsAsIcons
+            ------------------------------
             ;;
 
         27)
             clear
-            showTheFullPathInTheFinderTitleWindow
+            ------------------------------
             ;;
 
         28)
             clear
-            noShowTheFullPathInTheFinderTitleWindow
+            ------------------------------
             ;;
 
         29)
