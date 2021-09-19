@@ -73,31 +73,25 @@ showMenu() {
     echo "${Dim}•${No_Attributes}${F_Red}${Bold} 13${No_Attributes} ${Dim}•${No_Attributes} Search all processes for all users and view network data by Internet protocol TCP/UDP and version IPv4/IPv6                 ${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Red}${Bold} 14${No_Attributes} ${Dim}•${No_Attributes} Stress Test Network with ICMP-Sweep and ICMP-Flood. (This can be very hard on a network and should be used with caution)    ${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Red}${Bold} 15${No_Attributes} ${Dim}•${No_Attributes} Show information: Firewall, Wireless, Local Network, DHCP and IP and MAC Addresses of Devices on a Local Network and etc.   ${Dim}•${No_Attributes}"
-    echo "${Dim}•····•················································································································· ${F_Green}${Bold}GateKeeper ${No_Attributes}${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Red}${Bold} 16${No_Attributes} ${Dim}•${No_Attributes} GateKeeper Status                                                                                                           ${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Red}${Bold} 17${No_Attributes} ${Dim}•${No_Attributes} Enable GateKeeper                                                                                                           ${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Red}${Bold} 18${No_Attributes} ${Dim}•${No_Attributes} Disable GateKeeper                                                                                                          ${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Red}${Bold} 19${No_Attributes} ${Dim}•${No_Attributes} Remove app from quarantine                                                                                                  ${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Red}${Bold} 20${No_Attributes} ${Dim}•${No_Attributes} Self-sign the app. Require Xcode or Xcode CLT (Command Line Tools)                                                          ${Dim}•${No_Attributes}"
     echo "${Dim}•····•····················································································································· ${F_Green}${Bold}Tweaks ${No_Attributes}${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Red}${Bold} 21${No_Attributes} ${Dim}•${No_Attributes} Enable or Disable the show of Hidden files                                                                                  ${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Red}${Bold} 22${No_Attributes} ${Dim}•${No_Attributes} Enable or Disable the show of all File Extensions                                                                           ${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Red}${Bold} 23${No_Attributes} ${Dim}•${No_Attributes} Enable or Disable the show of Attachments as Icons in the Apple Mail app                                                    ${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Red}${Bold} 24${No_Attributes} ${Dim}•${No_Attributes} Enable or Disable the show of the full path in the Finder 'Title' window                                                    ${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Red}${Bold} 25${No_Attributes} ${Dim}•${No_Attributes} Change the default Screenshot file format                                                                                   ${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Red}${Bold} 26${No_Attributes} ${Dim}•${No_Attributes} Enable or Disable Screenshot with shadow and adding extra pixels                                                            ${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Red}${Bold} 27${No_Attributes} ${Dim}•${No_Attributes} Enable or Disable the warning before emptying the Trash                                                                     ${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Red}${Bold} 28${No_Attributes} ${Dim}•${No_Attributes} Enable or Disable warning when changing a file Extension                                                                    ${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Red}${Bold} 29${No_Attributes} ${Dim}•${No_Attributes} Search (Current or Previous Scope or This Mac) folder by default                                                            ${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Red}${Bold} 30${No_Attributes} ${Dim}•${No_Attributes} Enable or Disable in TextEdit the create an Untitled Document at Launch                                                     ${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Red}${Bold} 31${No_Attributes} ${Dim}•${No_Attributes} Enable or Disable copy Email addresses as 'foo@example.com' instead of 'Foo Bar <foo@example.com>' in Apple Mail app        ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Red}${Bold} 16${No_Attributes} ${Dim}•${No_Attributes} Enable or Disable the show of Hidden files                                                                                  ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Red}${Bold} 17${No_Attributes} ${Dim}•${No_Attributes} Enable or Disable the show of all File Extensions                                                                           ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Red}${Bold} 18${No_Attributes} ${Dim}•${No_Attributes} Enable or Disable the show of Attachments as Icons in the Apple Mail app                                                    ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Red}${Bold} 19${No_Attributes} ${Dim}•${No_Attributes} Enable or Disable the show of the full path in the Finder 'Title' window                                                    ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Red}${Bold} 20${No_Attributes} ${Dim}•${No_Attributes} Change the default Screenshot file format                                                                                   ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Red}${Bold} 21${No_Attributes} ${Dim}•${No_Attributes} Enable or Disable Screenshot with shadow and adding extra pixels                                                            ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Red}${Bold} 22${No_Attributes} ${Dim}•${No_Attributes} Enable or Disable the warning before emptying the Trash                                                                     ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Red}${Bold} 23${No_Attributes} ${Dim}•${No_Attributes} Enable or Disable warning when changing a file Extension                                                                    ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Red}${Bold} 24${No_Attributes} ${Dim}•${No_Attributes} Search (Current or Previous Scope or This Mac) folder by default                                                            ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Red}${Bold} 25${No_Attributes} ${Dim}•${No_Attributes} Enable or Disable in TextEdit the create an Untitled Document at Launch                                                     ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Red}${Bold} 26${No_Attributes} ${Dim}•${No_Attributes} Enable or Disable copy Email addresses as 'foo@example.com' instead of 'Foo Bar <foo@example.com>' in Apple Mail app        ${Dim}•${No_Attributes}"
     echo "${Dim}•····•·············································································· Caution: Use At Your Own Risk » ${F_Green}${Bold}OS Management ${No_Attributes}${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Red}${Bold} 32${No_Attributes} ${Dim}•${No_Attributes} Logs system Management: Cleaning the Logs and Inactive memory                                   ${Dim}• • • • • • • • • • • • • • •${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Red}${Bold} 33${No_Attributes} ${Dim}•${No_Attributes} I/O system Management: Manually and Automatic Delete, Plugins Input and Output device           ${Dim}•${No_Attributes} ${F_Red}${Bold}I${No_Attributes}nstalling Xcode CLT      ${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Red}${Bold} 34${No_Attributes} ${Dim}•${No_Attributes} Kernel OS Management: Cleaning kernel Extension, Rebuild Kexts Caches, etc. (Requires a reboot) ${Dim}•${No_Attributes} ${F_Red}${Bold}U${No_Attributes}ninstalling Xcode CLT    ${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Red}${Bold} 35${No_Attributes} ${Dim}•${No_Attributes} Privacy Database Management: Custom reset apps permissions under Security and Privacy           ${Dim}•${No_Attributes} ${F_Red}${Bold}R${No_Attributes}elease/${F_Red}${Bold}N${No_Attributes}ightly Download  ${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Red}${Bold} 36${No_Attributes} ${Dim}•${No_Attributes} -----------------------                                                                         ${Dim}•${No_Attributes} ${F_Red}${Bold}A${No_Attributes}bout GitHub              ${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Red}${Bold} 37${No_Attributes} ${Dim}•${No_Attributes} -----------------------                                                                         ${Dim}•${No_Attributes} ${F_Red}${Bold}${Blink}Q${No_Attributes}uit                      ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Red}${Bold} 27${No_Attributes} ${Dim}•${No_Attributes} Logs system Management: Cleaning the Logs and Inactive memory                                   ${Dim}• • • • • • • • • • • • • • •${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Red}${Bold} 28${No_Attributes} ${Dim}•${No_Attributes} I/O system Management: Manually and Automatic Delete, Plugins Input and Output device           ${Dim}•${No_Attributes} ${F_Red}${Bold}I${No_Attributes}nstalling Xcode CLT      ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Red}${Bold} 29${No_Attributes} ${Dim}•${No_Attributes} Kernel OS Management: Cleaning kernel Extension, Rebuild Kexts Caches, etc. (Requires a reboot) ${Dim}•${No_Attributes} ${F_Red}${Bold}U${No_Attributes}ninstalling Xcode CLT    ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Red}${Bold} 30${No_Attributes} ${Dim}•${No_Attributes} Privacy Database Management: Custom reset apps permissions under Security and Privacy           ${Dim}•${No_Attributes} ${F_Red}${Bold}R${No_Attributes}elease/${F_Red}${Bold}N${No_Attributes}ightly Download  ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Red}${Bold} 31${No_Attributes} ${Dim}•${No_Attributes} GateKeeper Management: Status, Enable or Disable, Remove app from Quarantine, Self-sign the app ${Dim}•${No_Attributes} ${F_Red}${Bold}A${No_Attributes}bout GitHub              ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Red}${Bold} 32${No_Attributes} ${Dim}•${No_Attributes} -----------------------                                                                         ${Dim}•${No_Attributes} ${F_Red}${Bold}${Blink}Q${No_Attributes}uit                      ${Dim}•${No_Attributes}"
     echo "${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
 }
 
@@ -117,7 +111,7 @@ askPassword() {
 
 # Terminal window size Menu - move to top/left corner and resize
 terminalWindowSizeMenu() {
-    printf '\033[8;44;132t'
+    printf '\033[8;38;132t'
     printf '\033[3;0;0t'
     clear
 }
@@ -1060,64 +1054,10 @@ showInfoLN_DHCP_IP/MACAddresses() {
     continueMessage
 }
 
-# Command 16: GateKeeper Status
-gateKeeperStatus() {
-    terminalWindowSize40x140
-    echo "•${F_Red}${Bold} Command 16: GateKeeper status.${No_Attributes}\n"
-    spctl --status
-    continueMessage
-}
-
-# Command 17: Enable GateKeeper
-enableGateKeeper() {
-    terminalWindowSize40x140
-    echo "•${F_Red}${Bold} Command 17: You chose to enable GateKeeper.${No_Attributes}"
-    askPassword
-    sudo spctl --master-enable
-    echo "\n${F_Red}•${F_Green}${Bold} GateKeeper enabled.${No_Attributes}"
-    continueMessage
-}
-
-# Command 18: Disable GateKeeper
-disableGateKeeper() {
-    terminalWindowSize40x140
-    echo "•${F_Red}${Bold} Command 18: You chose to disable GateKeeper.${No_Attributes}"
-    askPassword
-    sudo spctl --master-disable
-    echo "\n${F_Red}•${F_Green}${Bold} GateKeeper disabled.${No_Attributes}"
-    continueMessage
-}
-
-# Command 19: Remove app from GateKeeper quarantine
-removeAppFromGateKeeper() {
-    terminalWindowSize40x140
-    echo "•${F_Red}${Bold} Command 19: You chose to remove the app from GateKeeper quarantine.${No_Attributes}\n"
-    read "? Drag & drop the app on this window and then press Return: " FILEPATH
-    askPassword
-    sudo xattr -r -d com.apple.quarantine "$FILEPATH"
-    if [ $? -eq 0 ]; then
-        echo "\n${F_Red}•${F_Green}${Bold} App removed from quarantine.${No_Attributes}"
-    else
-        echo "\n•${F_Red} App could not be removed from quarantine!${No_Attributes}"
-    fi
-    continueMessage
-}
-
-# Command 20: Self-sign the app
-selfSignApp() {
-    terminalWindowSize40x140
-    echo "•${F_Red}${Bold} Command 20: You chose to self-sign an app.${No_Attributes}\n"
-    read "? Drag & drop the app on this window and then press Return: " FILEPATH
-    askPassword
-    sudo codesign -f -v -s - --deep "$FILEPATH"
-    echo "\n${F_Red}•${F_Green}${Bold} If you see - replacing existing signature - that means you are done!${No_Attributes}"
-    continueMessage
-}
-
-# Command 21: Enable or Disable the show of Hidden files
+# Command 16: Enable or Disable the show of Hidden files
 enableOrDisableTheShowOfHiddenFiles() {
     terminalWindowSize40x140
-    echo "•${F_Red}${Bold} Command 21: Enable or Disable the show of Hidden files.${No_Attributes}\n"
+    echo "•${F_Red}${Bold} Command 16: Enable or Disable the show of Hidden files.${No_Attributes}\n"
     # Menu
     echo " ${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
     echo " ${Dim}•${No_Attributes}${F_Red}${Bold} 1${No_Attributes} ${Dim}•${No_Attributes} Enable the show of Hidden files                                            ${Dim}•${No_Attributes}"
@@ -1142,10 +1082,10 @@ enableOrDisableTheShowOfHiddenFiles() {
     fi
     continueMessage
 }
-# Command 22: Enable or Disable the show of all File Extensions
+# Command 17: Enable or Disable the show of all File Extensions
 enableOrDisableTheShowOfAllFileExtensions() {
     terminalWindowSize40x140
-    echo "•${F_Red}${Bold} Command 22: Enable or Disable the show of all File Extensions.${No_Attributes}\n"
+    echo "•${F_Red}${Bold} Command 17: Enable or Disable the show of all File Extensions.${No_Attributes}\n"
     # Menu
     echo " ${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
     echo " ${Dim}•${No_Attributes}${F_Red}${Bold} 1${No_Attributes} ${Dim}•${No_Attributes} Enable the show of all File Extensions                                     ${Dim}•${No_Attributes}"
@@ -1171,10 +1111,10 @@ enableOrDisableTheShowOfAllFileExtensions() {
     continueMessage
 }
 
-# Command 23: Enable or Disable the show of Attachments as Icons in the Apple Mail app
+# Command 18: Enable or Disable the show of Attachments as Icons in the Apple Mail app
 enableOrDisableTheShowOfAttachmentsAsIconsInTheAppleMailApp() {
     terminalWindowSize40x140
-    echo "•${F_Red}${Bold} Command 23: Enable or Disable the show of Attachments as Icons in the Apple Mail app.${No_Attributes}\n"
+    echo "•${F_Red}${Bold} Command 18: Enable or Disable the show of Attachments as Icons in the Apple Mail app.${No_Attributes}\n"
     # Menu
     echo " ${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
     echo " ${Dim}•${No_Attributes}${F_Red}${Bold} 1${No_Attributes} ${Dim}•${No_Attributes} Enable the show of Attachments as Icons in the Apple Mail app              ${Dim}•${No_Attributes}"
@@ -1200,10 +1140,10 @@ enableOrDisableTheShowOfAttachmentsAsIconsInTheAppleMailApp() {
     continueMessage
 }
 
-# Command 24: Enable or Disable the show of the full path in the Finder 'Title' window
+# Command 19: Enable or Disable the show of the full path in the Finder 'Title' window
 enableOrDisableTheShowOfTheFullPathInTheFinderTitleWindow() {
     terminalWindowSize40x140
-    echo "•${F_Red}${Bold} Command 24: Enable or Disable the show of the full path in the Finder 'Title' window.${No_Attributes}\n"
+    echo "•${F_Red}${Bold} Command 19: Enable or Disable the show of the full path in the Finder 'Title' window.${No_Attributes}\n"
     # Menu
     echo " ${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
     echo " ${Dim}•${No_Attributes}${F_Red}${Bold} 1${No_Attributes} ${Dim}•${No_Attributes} Enable the show of the full path in the Finder 'Title' window              ${Dim}•${No_Attributes}"
@@ -1229,10 +1169,10 @@ enableOrDisableTheShowOfTheFullPathInTheFinderTitleWindow() {
     continueMessage
 }
 
-# Command 25: Change the default Screenshot file format
+# Command 20: Change the default Screenshot file format
 changeTheDefaultScreenshotFileFormat() {
     terminalWindowSize40x140
-    echo "•${F_Red}${Bold} Command 25: Change the default Screenshot file format.${No_Attributes}\n"
+    echo "•${F_Red}${Bold} Command 20: Change the default Screenshot file format.${No_Attributes}\n"
     # Menu
     echo " ${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
     echo " ${Dim}•${No_Attributes}${F_Red}${Bold} 1${No_Attributes} ${Dim}•${No_Attributes} Enable to use default Screenshot BMP file format                           ${Dim}•${No_Attributes}"
@@ -1297,10 +1237,10 @@ changeTheDefaultScreenshotFileFormat() {
     fi
     continueMessage
 }
-# Command 26: Enable or Disable Screenshot with shadow and adding extra pixels
+# Command 21: Enable or Disable Screenshot with shadow and adding extra pixels
 enableOrDisableScreenshotWithShadowAndAddingExtraPixels() {
     terminalWindowSize40x140
-    echo "•${F_Red}${Bold} Command 26: Enable or Disable Screenshot with shadow and adding extra pixels.${No_Attributes}\n"
+    echo "•${F_Red}${Bold} Command 21: Enable or Disable Screenshot with shadow and adding extra pixels.${No_Attributes}\n"
     # Menu
     echo " ${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
     echo " ${Dim}•${No_Attributes}${F_Red}${Bold} 1${No_Attributes} ${Dim}•${No_Attributes} Disable Screenshot with shadow and adding extra pixels                     ${Dim}•${No_Attributes}"
@@ -1326,10 +1266,10 @@ enableOrDisableScreenshotWithShadowAndAddingExtraPixels() {
     continueMessage
 }
 
-# Command 27: Enable or Disable the warning before emptying the Trash
+# Command 22: Enable or Disable the warning before emptying the Trash
 enableOrDisableTheWarningBeforeEmptyingTheTrash() {
     terminalWindowSize40x140
-    echo "•${F_Red}${Bold} Command 27: Enable or Disable the warning before emptying the Trash.${No_Attributes}\n"
+    echo "•${F_Red}${Bold} Command 22: Enable or Disable the warning before emptying the Trash.${No_Attributes}\n"
     # Menu
     echo " ${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
     echo " ${Dim}•${No_Attributes}${F_Red}${Bold} 1${No_Attributes} ${Dim}•${No_Attributes} Disable warning before emptying the Trash                                  ${Dim}•${No_Attributes}"
@@ -1355,10 +1295,10 @@ enableOrDisableTheWarningBeforeEmptyingTheTrash() {
     continueMessage
 }
 
-# Command 28: Enable or Disable warning when changing a file Extension
+# Command 23: Enable or Disable warning when changing a file Extension
 enableOrDisableWarningWhenChangingAFileExtension() {
     terminalWindowSize40x140
-    echo "•${F_Red}${Bold} Command 28: Enable or Disable warning when changing a file Extension.${No_Attributes}\n"
+    echo "•${F_Red}${Bold} Command 23: Enable or Disable warning when changing a file Extension.${No_Attributes}\n"
     # Menu
     echo " ${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
     echo " ${Dim}•${No_Attributes}${F_Red}${Bold} 1${No_Attributes} ${Dim}•${No_Attributes} Disable warning when changing a file Extension                             ${Dim}•${No_Attributes}"
@@ -1384,10 +1324,10 @@ enableOrDisableWarningWhenChangingAFileExtension() {
     continueMessage
 }
 
-# Command 29: Search (Current or Previous Scope or This Mac) folder by default
+# Command 24: Search (Current or Previous Scope or This Mac) folder by default
 searchCurrentOrPreviousScopeOrThisMacFolderByDefault() {
     terminalWindowSize40x140
-    echo "•${F_Red}${Bold} Command 29: Search (Current or Previous Scope or This Mac) folder by default.${No_Attributes}\n"
+    echo "•${F_Red}${Bold} Command 24: Search (Current or Previous Scope or This Mac) folder by default.${No_Attributes}\n"
     # Menu
     echo " ${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
     echo " ${Dim}•${No_Attributes}${F_Red}${Bold} 1${No_Attributes} ${Dim}•${No_Attributes} When performing a search, search the Current folder by default             ${Dim}•${No_Attributes}"
@@ -1421,10 +1361,10 @@ searchCurrentOrPreviousScopeOrThisMacFolderByDefault() {
     continueMessage
 }
 
-# Command 30: Enable or Disable in TextEdit the create an Untitled Document at Launch
+# Command 25: Enable or Disable in TextEdit the create an Untitled Document at Launch
 enableOrDisableInTextEditTheCreateAnUntitledDocumentAtLaunch() {
     terminalWindowSize40x140
-    echo "•${F_Red}${Bold} Command 30: Enable or Disable in TextEdit the create an Untitled Document at Launch.${No_Attributes}\n"
+    echo "•${F_Red}${Bold} Command 25: Enable or Disable in TextEdit the create an Untitled Document at Launch.${No_Attributes}\n"
     # Menu
     echo " ${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
     echo " ${Dim}•${No_Attributes}${F_Red}${Bold} 1${No_Attributes} ${Dim}•${No_Attributes} Enable in TextEdit the create an Untitled Document at Launch               ${Dim}•${No_Attributes}"
@@ -1450,10 +1390,10 @@ enableOrDisableInTextEditTheCreateAnUntitledDocumentAtLaunch() {
     continueMessage
 }
 
-# Command 31: Enable or Disable copy Email addresses as 'foo@example.com' instead of 'Foo Bar <foo@example.com>' in Apple Mail app
+# Command 26: Enable or Disable copy Email addresses as 'foo@example.com' instead of 'Foo Bar <foo@example.com>' in Apple Mail app
 enableOrDisableCopyEmailAddressesAs() {
     terminalWindowSize40x140
-    echo "•${F_Red}${Bold} Command 31: Enable or Disable copy Email addresses as 'foo@example.com' instead of 'Foo Bar <foo@example.com>' in Apple Mail app.${No_Attributes}\n"
+    echo "•${F_Red}${Bold} Command 26: Enable or Disable copy Email addresses as 'foo@example.com' instead of 'Foo Bar <foo@example.com>' in Apple Mail app.${No_Attributes}\n"
     # Menu
     echo " ${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
     echo " ${Dim}•${No_Attributes}${F_Red}${Bold} 1${No_Attributes} ${Dim}•${No_Attributes} Enable copy Email addresses as 'foo@example.com' instead of 'Foo Bar <foo@example.com>' in Apple Mail app            ${Dim}•${No_Attributes}"
@@ -1479,10 +1419,10 @@ enableOrDisableCopyEmailAddressesAs() {
     continueMessage
 }
 
-# Command 32: Logs system Management: Cleaning the Logs and Inactive memory
+# Command 27: Logs system Management: Cleaning the Logs and Inactive memory
 cleaningLogsAndInactiveMemory() {
     terminalWindowSize40x140
-    echo "•${F_Red}${Bold} Command 32: Logs system Management: Cleaning the Logs and Inactive memory.${No_Attributes}"
+    echo "•${F_Red}${Bold} Command 27: Logs system Management: Cleaning the Logs and Inactive memory.${No_Attributes}"
     askPassword
 
     # The script
@@ -1510,10 +1450,10 @@ cleaningLogsAndInactiveMemory() {
     continueMessage
 }
 
-# Command 33: I/O system Management: Manually and Automatic Delete, Plugins Input and Output device
+# Command 28: I/O system Management: Manually and Automatic Delete, Plugins Input and Output device
 deletePluginsInputAndOutputDevice() {
     terminalWindowSize40x140
-    echo "•${F_Red}${Bold} Command 33: I/O system Management: Manually and Automatic Delete, Plugins Input and Output device.${No_Attributes}\n"
+    echo "•${F_Red}${Bold} Command 28: I/O system Management: Manually and Automatic Delete, Plugins Input and Output device.${No_Attributes}\n"
     # Menu
     echo " ${Dim}•••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
     echo " ${Dim}•${No_Attributes}${F_Red}${Bold} 1${No_Attributes} ${Dim}•${No_Attributes} Automatic Delete All CoreMedia Input/Output Device DAL Video Plug-ins ${Dim}•${No_Attributes}"
@@ -1575,10 +1515,10 @@ deletePluginsInputAndOutputDevice() {
     continueMessage
 }
 
-# Command 34: Kernel Operating system Management
+# Command 29: Kernel Operating system Management
 kernelManagement() {
     terminalWindowSize55x140
-    echo "•${F_Red}${Bold} Command 34: Kernel OS Management: Cleaning kernel Extension, Rebuild Kexts Caches, Repair Permissions of Kexts folders, etc.${No_Attributes}\n"
+    echo "•${F_Red}${Bold} Command 29: Kernel OS Management: Cleaning kernel Extension, Rebuild Kexts Caches, Repair Permissions of Kexts folders, etc.${No_Attributes}\n"
     # Menu
     echo " ${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
     echo " ${Dim}•${No_Attributes}${F_Red}${Bold} 1${No_Attributes} ${Dim}•${No_Attributes} Cleaning the kernel Extension staging area by removing all staged content (Requires a reboot)          ${Dim}•${No_Attributes}"
@@ -1664,10 +1604,10 @@ kernelManagement() {
     continueMessage
 }
 
-# Command 35: Privacy Database Management: Custom reset application permissions under Security and Privacy
+# Command 30: Privacy Database Management: Custom reset application permissions under Security and Privacy
 privacyDatabaseManagement() {
     terminalWindowSize55x140
-    echo "•${F_Red}${Bold} Command 35: Privacy Database Management: Custom reset application permissions under Security and Privacy.${No_Attributes}\n"
+    echo "•${F_Red}${Bold} Command 30: Privacy Database Management: Custom reset application permissions under Security and Privacy.${No_Attributes}\n"
     # Menu
     echo " ${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
     echo " ${Dim}•${No_Attributes}${F_Red}${Bold}  1${No_Attributes} ${Dim}•${No_Attributes} ${F_Red}Reset the All permissions for all apps${No_Attributes}                                  ${Dim}•${No_Attributes}"
@@ -1803,6 +1743,65 @@ privacyDatabaseManagement() {
     continueMessage
 }
 
+# Command 31: GateKeeper Management: Status, Enable or Disable, Remove app from Quarantine, Self-sign the app
+gateKeeperManagement() {
+    terminalWindowSize40x140
+    echo "•${F_Red}${Bold} Command 31: GateKeeper Management: Status, Enable or Disable, Remove app from quarantine, Self-sign the app.${No_Attributes}\n"
+    # Menu
+    echo " ${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
+    echo " ${Dim}•${No_Attributes}${F_Red}${Bold} 1${No_Attributes} ${Dim}•${No_Attributes} GateKeeper Status                                                          ${Dim}•${No_Attributes}"
+    echo " ${Dim}•~~~•~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~•${No_Attributes}"
+    echo " ${Dim}•${No_Attributes}${F_Red}${Bold} 2${No_Attributes} ${Dim}•${No_Attributes} Enable GateKeeper                                                          ${Dim}•${No_Attributes}"
+    echo " ${Dim}•~~~•~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~•${No_Attributes}"
+    echo " ${Dim}•${No_Attributes}${F_Red}${Bold} 3${No_Attributes} ${Dim}•${No_Attributes} Disable GateKeeper                                                         ${Dim}•${No_Attributes}"
+    echo " ${Dim}•~~~•~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~•${No_Attributes}"
+    echo " ${Dim}•${No_Attributes}${F_Red}${Bold} 4${No_Attributes} ${Dim}•${No_Attributes} Remove app from GateKeeper Quarantine                                      ${Dim}•${No_Attributes}"
+    echo " ${Dim}•~~~•~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~•${No_Attributes}"
+    echo " ${Dim}•${No_Attributes}${F_Red}${Bold} 5${No_Attributes} ${Dim}•${No_Attributes} Self-sign the app. Require Xcode or Xcode CLT (Command Line Tools)         ${Dim}•${No_Attributes}"
+    echo " ${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
+
+    printf '
+ Please select an Command: '
+    read var
+    # GateKeeper Status
+    if [ "$var" -eq "1" ]; then
+        echo "\n•${F_Red}${Bold} GateKeeper Status.${No_Attributes}\n"
+        spctl --status
+        echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
+    fi
+    # Enable GateKeeper
+    if [ "$var" -eq "2" ]; then
+        echo "\n•${F_Red}${Bold} Enable GateKeeper.${No_Attributes}"
+        askPassword
+        sudo spctl --master-enable
+        echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
+    fi
+    # Disable GateKeeper
+    if [ "$var" -eq "3" ]; then
+        echo "\n•${F_Red}${Bold} Disable GateKeeper.${No_Attributes}"
+        askPassword
+        sudo spctl --master-disable
+        echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
+    fi
+    # Remove app from GateKeeper Quarantine
+    if [ "$var" -eq "4" ]; then
+        echo "\n•${F_Red}${Bold} Remove app from GateKeeper Quarantine.${No_Attributes}\n"
+        read "? Drag & drop the app on this window and then press Return: " FILEPATH
+        askPassword
+        sudo xattr -r -d com.apple.quarantine "$FILEPATH"
+        echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
+    fi
+    # Self-sign the app. Require Xcode or Xcode CLT (Command Line Tools)
+    if [ "$var" -eq "5" ]; then
+        echo "\n•${F_Red}${Bold} Self-sign the app. Require Xcode or Xcode CLT (Command Line Tools).${No_Attributes}\n"
+        read "? Drag & drop the app on this window and then press Return: " FILEPATH
+        askPassword
+        sudo codesign -f -v -s - --deep "$FILEPATH"
+        echo "\n${F_Red}•${F_Green}${Bold} If you see - replacing existing signature - that means you are done.${No_Attributes}"
+    fi
+    continueMessage
+}
+
 # -----------------------------------------------------------------------------------------------------------------
 
 # Main function of the script
@@ -1899,110 +1898,85 @@ startScript() {
 
         16)
             clear
-            gateKeeperStatus
+            enableOrDisableTheShowOfHiddenFiles
             ;;
 
         17)
             clear
-            enableGateKeeper
+            enableOrDisableTheShowOfAllFileExtensions
             ;;
 
         18)
             clear
-            disableGateKeeper
+            enableOrDisableTheShowOfAttachmentsAsIconsInTheAppleMailApp
             ;;
 
         19)
             clear
-            removeAppFromGateKeeper
+            enableOrDisableTheShowOfTheFullPathInTheFinderTitleWindow
             ;;
 
         20)
             clear
-            selfSignApp
+            changeTheDefaultScreenshotFileFormat
             ;;
 
         21)
             clear
-            enableOrDisableTheShowOfHiddenFiles
+            enableOrDisableScreenshotWithShadowAndAddingExtraPixels
             ;;
 
         22)
             clear
-            enableOrDisableTheShowOfAllFileExtensions
+            enableOrDisableTheWarningBeforeEmptyingTheTrash
             ;;
 
         23)
             clear
-            enableOrDisableTheShowOfAttachmentsAsIconsInTheAppleMailApp
+            enableOrDisableWarningWhenChangingAFileExtension
             ;;
 
         24)
             clear
-            enableOrDisableTheShowOfTheFullPathInTheFinderTitleWindow
+            searchCurrentOrPreviousScopeOrThisMacFolderByDefault
             ;;
 
         25)
             clear
-            changeTheDefaultScreenshotFileFormat
+            enableOrDisableInTextEditTheCreateAnUntitledDocumentAtLaunch
             ;;
 
         26)
             clear
-            enableOrDisableScreenshotWithShadowAndAddingExtraPixels
+            enableOrDisableCopyEmailAddressesAs
             ;;
 
         27)
             clear
-            enableOrDisableTheWarningBeforeEmptyingTheTrash
+            cleaningLogsAndInactiveMemory
             ;;
 
         28)
             clear
-            enableOrDisableWarningWhenChangingAFileExtension
+            deletePluginsInputAndOutputDevice
             ;;
 
         29)
             clear
-            searchCurrentOrPreviousScopeOrThisMacFolderByDefault
+            kernelManagement
             ;;
 
         30)
             clear
-            enableOrDisableInTextEditTheCreateAnUntitledDocumentAtLaunch
+            privacyDatabaseManagement
             ;;
 
         31)
             clear
-            enableOrDisableCopyEmailAddressesAs
+            gateKeeperManagement
             ;;
 
         32)
-            clear
-            cleaningLogsAndInactiveMemory
-            ;;
-
-        33)
-            clear
-            deletePluginsInputAndOutputDevice
-            ;;
-
-        34)
-            clear
-            kernelManagement
-            ;;
-
-        35)
-            clear
-            privacyDatabaseManagement
-            ;;
-
-        36)
-            clear
-            ------------------------------
-            ;;
-
-        37)
             clear
             ------------------------------
             ;;
