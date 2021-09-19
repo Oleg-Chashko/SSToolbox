@@ -1230,7 +1230,7 @@ enableOrDisableTheShowOfTheFullPathInTheFinderTitleWindow() {
 }
 
 # Command 25: Change the default Screenshot file format
-#changeTheDefaultScreenshotFileFormat() {
+changeTheDefaultScreenshotFileFormat() {
     terminalWindowSize40x140
     echo "•${F_Red}${Bold} Command 25: Change the default Screenshot file format.${No_Attributes}\n"
     # Menu
