@@ -1422,7 +1422,7 @@ searchCurrentOrPreviousScopeOrThisMacFolderByDefault() {
 }
 
 # Command 30: Enable or Disable in TextEdit the create an Untitled Document at Launch
-#enableOrDisableInTextEditTheCreateAnUntitledDocumentAtLaunch() {
+enableOrDisableInTextEditTheCreateAnUntitledDocumentAtLaunch() {
     terminalWindowSize40x140
     echo "•${F_Red}${Bold} Command 30: Enable or Disable in TextEdit the create an Untitled Document at Launch.${No_Attributes}\n"
     # Menu
