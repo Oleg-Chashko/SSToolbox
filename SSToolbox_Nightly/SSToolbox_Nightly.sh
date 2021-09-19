@@ -114,8 +114,8 @@ askPassword() {
 
 # Terminal window size Menu - move to top/left corner and resize
 terminalWindowSizeMenu() {
-    printf '\033[3;0;0t'
     printf '\033[8;41;132t'
+    printf '\033[3;0;0t'
     clear
 }
 
@@ -123,14 +123,12 @@ terminalWindowSizeMenu() {
 
 # Terminal window size 40x140 - move to top/left corner and resize
 terminalWindowSize40x140() {
-    printf '\033[3;0;0t'
     printf '\033[8;40;140t'
     clear
 }
 
 # Terminal window size 40x190 - move to top/left corner and resize
 terminalWindowSize40x190() {
-    printf '\033[3;0;0t'
     printf '\033[8;40;190t'
     clear
 }
@@ -139,14 +137,12 @@ terminalWindowSize40x190() {
 
 # Terminal window size 55x140 - move to top/left corner and resize
 terminalWindowSize55x140() {
-    printf '\033[3;0;0t'
     printf '\033[8;55;140t'
     clear
 }
 
 # Terminal window size 55x190 - move to top/left corner and resize
 terminalWindowSize55x190() {
-    printf '\033[3;0;0t'
     printf '\033[8;55;190t'
     clear
 }
@@ -157,7 +153,6 @@ terminalWindowSize55x190() {
 continueMessage() {
     echo "\n Press any key to return to the menu."
     read
-    clear
 }
 
 # Shows invalid Command message
@@ -1596,7 +1591,6 @@ privacyDatabaseManagement() {
 # Main function of the script
 startScript() {
     while :; do
-        clear
         showMenu
         read "?  Please select an Command: " SELECTED_COMMAND
         case $SELECTED_COMMAND in
