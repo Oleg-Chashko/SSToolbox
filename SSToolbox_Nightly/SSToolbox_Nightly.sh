@@ -1385,7 +1385,7 @@ enableOrDisableWarningWhenChangingAFileExtension() {
 }
 
 # Command 29: Search (Current or Previous Scope or This Mac) folder by default
-#searchCurrentOrPreviousScopeOrThisMacFolderByDefault() {
+searchCurrentOrPreviousScopeOrThisMacFolderByDefault() {
     terminalWindowSize40x140
     echo "•${F_Red}${Bold} Command 29: Search (Current or Previous Scope or This Mac) folder by default.${No_Attributes}\n"
     # Menu
