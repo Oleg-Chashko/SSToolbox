@@ -1327,7 +1327,7 @@ enableOrDisableScreenshotWithShadowAndAddingExtraPixels() {
 }
 
 # Command 27: Enable or Disable the warning before emptying the Trash
-#enableOrDisableTheWarningBeforeEmptyingTheTrash() {
+enableOrDisableTheWarningBeforeEmptyingTheTrash() {
     terminalWindowSize40x140
     echo "•${F_Red}${Bold} Command 27: Enable or Disable the warning before emptying the Trash.${No_Attributes}\n"
     # Menu
