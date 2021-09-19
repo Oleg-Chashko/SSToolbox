@@ -1356,7 +1356,7 @@ enableOrDisableTheWarningBeforeEmptyingTheTrash() {
 }
 
 # Command 28: Enable or Disable warning when changing a file Extension
-#enableOrDisableWarningWhenChangingAFileExtension() {
+enableOrDisableWarningWhenChangingAFileExtension() {
     terminalWindowSize40x140
     echo "•${F_Red}${Bold} Command 28: Enable or Disable warning when changing a file Extension.${No_Attributes}\n"
     # Menu
