@@ -1451,7 +1451,7 @@ enableOrDisableInTextEditTheCreateAnUntitledDocumentAtLaunch() {
 }
 
 # Command 31: Enable or Disable copy Email addresses as 'foo@example.com' instead of 'Foo Bar <foo@example.com>' in Apple Mail app
-#enableOrDisableCopyEmailAddressesAs() {
+enableOrDisableCopyEmailAddressesAs() {
     terminalWindowSize40x140
     echo "•${F_Red}${Bold} Command 31: Enable or Disable copy Email addresses as 'foo@example.com' instead of 'Foo Bar <foo@example.com>' in Apple Mail app.${No_Attributes}\n"
     # Menu
