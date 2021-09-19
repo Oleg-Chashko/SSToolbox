@@ -84,17 +84,20 @@ showMenu() {
     echo "${Dim}•${No_Attributes}${F_Red}${Bold} 22${No_Attributes} ${Dim}•${No_Attributes} Enable or disable the show of all File Extensions                                                                           ${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Red}${Bold} 23${No_Attributes} ${Dim}•${No_Attributes} Enable or disable the show of attachments as icons in the Apple Mail app                                                    ${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Red}${Bold} 24${No_Attributes} ${Dim}•${No_Attributes} Enable or disable the show of the full path in the Finder 'Title' window                                                    ${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Red}${Bold} 25${No_Attributes} ${Dim}•${No_Attributes} ------------------------------                                                                                              ${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Red}${Bold} 26${No_Attributes} ${Dim}•${No_Attributes} ------------------------------                                                                                              ${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Red}${Bold} 27${No_Attributes} ${Dim}•${No_Attributes} ------------------------------                                                                                              ${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Red}${Bold} 28${No_Attributes} ${Dim}•${No_Attributes} ------------------------------                                                                                              ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Red}${Bold} 25${No_Attributes} ${Dim}•${No_Attributes} Change the default Screenshot file format                                                                                   ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Red}${Bold} 26${No_Attributes} ${Dim}•${No_Attributes} Enable or Disable Screenshot with shadow and adding extra pixels                                                            ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Red}${Bold} 27${No_Attributes} ${Dim}•${No_Attributes} Enable or Disable the warning before emptying the Trash                                                                     ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Red}${Bold} 28${No_Attributes} ${Dim}•${No_Attributes} Enable or Disable warning when changing a file Extension                                                                    ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Red}${Bold} 29${No_Attributes} ${Dim}•${No_Attributes} Search (Current or Previous Scope or This Mac) folder by default                                                            ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Red}${Bold} 30${No_Attributes} ${Dim}•${No_Attributes} Enable or Disable in TextEdit the create an Untitled Document at Launch                                                     ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Red}${Bold} 31${No_Attributes} ${Dim}•${No_Attributes} Enable or Disable copy Email addresses as 'foo@example.com' instead of 'Foo Bar <foo@example.com>' in Apple Mail app        ${Dim}•${No_Attributes}"
     echo "${Dim}•····•·············································································· Caution: Use At Your Own Risk » ${F_Green}${Bold}OS Management ${No_Attributes}${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Red}${Bold} 29${No_Attributes} ${Dim}•${No_Attributes} Logs system Management: Cleaning the Logs and Inactive memory                                   ${Dim}• • • • • • • • • • • • • • •${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Red}${Bold} 30${No_Attributes} ${Dim}•${No_Attributes} I/O system Management: Manually and Automatic Delete, Plugins Input and Output device           ${Dim}•${No_Attributes} ${F_Red}${Bold}I${No_Attributes}nstalling Xcode CLT      ${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Red}${Bold} 31${No_Attributes} ${Dim}•${No_Attributes} Kernel OS Management: Cleaning kernel Extension, Rebuild Kexts Caches, etc. (Requires a reboot) ${Dim}•${No_Attributes} ${F_Red}${Bold}U${No_Attributes}ninstalling Xcode CLT    ${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Red}${Bold} 32${No_Attributes} ${Dim}•${No_Attributes} Privacy Database Management: Custom reset apps permissions under Security and Privacy           ${Dim}•${No_Attributes} ${F_Red}${Bold}R${No_Attributes}elease/${F_Red}${Bold}N${No_Attributes}ightly Download  ${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Red}${Bold} 33${No_Attributes} ${Dim}•${No_Attributes} -----------------------                                                                         ${Dim}•${No_Attributes} ${F_Red}${Bold}A${No_Attributes}bout GitHub              ${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Red}${Bold} 34${No_Attributes} ${Dim}•${No_Attributes} -----------------------                                                                         ${Dim}•${No_Attributes} ${F_Red}${Bold}${Blink}Q${No_Attributes}uit                      ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Red}${Bold} 32${No_Attributes} ${Dim}•${No_Attributes} Logs system Management: Cleaning the Logs and Inactive memory                                   ${Dim}• • • • • • • • • • • • • • •${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Red}${Bold} 33${No_Attributes} ${Dim}•${No_Attributes} I/O system Management: Manually and Automatic Delete, Plugins Input and Output device           ${Dim}•${No_Attributes} ${F_Red}${Bold}I${No_Attributes}nstalling Xcode CLT      ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Red}${Bold} 34${No_Attributes} ${Dim}•${No_Attributes} Kernel OS Management: Cleaning kernel Extension, Rebuild Kexts Caches, etc. (Requires a reboot) ${Dim}•${No_Attributes} ${F_Red}${Bold}U${No_Attributes}ninstalling Xcode CLT    ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Red}${Bold} 35${No_Attributes} ${Dim}•${No_Attributes} Privacy Database Management: Custom reset apps permissions under Security and Privacy           ${Dim}•${No_Attributes} ${F_Red}${Bold}R${No_Attributes}elease/${F_Red}${Bold}N${No_Attributes}ightly Download  ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Red}${Bold} 36${No_Attributes} ${Dim}•${No_Attributes} -----------------------                                                                         ${Dim}•${No_Attributes} ${F_Red}${Bold}A${No_Attributes}bout GitHub              ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Red}${Bold} 37${No_Attributes} ${Dim}•${No_Attributes} -----------------------                                                                         ${Dim}•${No_Attributes} ${F_Red}${Bold}${Blink}Q${No_Attributes}uit                      ${Dim}•${No_Attributes}"
     echo "${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
 }
 
@@ -114,7 +117,7 @@ askPassword() {
 
 # Terminal window size Menu - move to top/left corner and resize
 terminalWindowSizeMenu() {
-    printf '\033[8;41;132t'
+    printf '\033[8;44;132t'
     printf '\033[3;0;0t'
     clear
 }
@@ -1226,46 +1229,260 @@ enableOrDisableTheShowOfTheFullPathInTheFinderTitleWindow() {
     continueMessage
 }
 
-# Command 25: ------------------------------
-------------------------------() {
+# Command 25: Change the default Screenshot file format
+#changeTheDefaultScreenshotFileFormat() {
     terminalWindowSize40x140
-    echo "•${F_Red}${Bold} Command 25: ------------------------------.${No_Attributes}\n"
-    ------------------------------
-    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
+    echo "•${F_Red}${Bold} Command 25: Change the default Screenshot file format.${No_Attributes}\n"
+    # Menu
+    echo " ${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
+    echo " ${Dim}•${No_Attributes}${F_Red}${Bold} 1${No_Attributes} ${Dim}•${No_Attributes} Enable to use default Screenshot BMP file format                           ${Dim}•${No_Attributes}"
+    echo " ${Dim}•~~~•~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~•${No_Attributes}"
+    echo " ${Dim}•${No_Attributes}${F_Red}${Bold} 2${No_Attributes} ${Dim}•${No_Attributes} Enable to use default Screenshot GIF file format                           ${Dim}•${No_Attributes}"
+    echo " ${Dim}•~~~•~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~•${No_Attributes}"
+    echo " ${Dim}•${No_Attributes}${F_Red}${Bold} 3${No_Attributes} ${Dim}•${No_Attributes} Enable to use default Screenshot PDF file format                           ${Dim}•${No_Attributes}"
+    echo " ${Dim}•~~~•~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~•${No_Attributes}"
+    echo " ${Dim}•${No_Attributes}${F_Red}${Bold} 4${No_Attributes} ${Dim}•${No_Attributes} Enable to use default Screenshot TIFF file format                          ${Dim}•${No_Attributes}"
+    echo " ${Dim}•~~~•~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~•${No_Attributes}"
+    echo " ${Dim}•${No_Attributes}${F_Red}${Bold} 5${No_Attributes} ${Dim}•${No_Attributes} Enable to use default Screenshot JPG file format                           ${Dim}•${No_Attributes}"
+    echo " ${Dim}•~~~•~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~•${No_Attributes}"
+    echo " ${Dim}•${No_Attributes}${F_Red}${Bold} 6${No_Attributes} ${Dim}•${No_Attributes} Enable to use default Screenshot JPEG file format                          ${Dim}•${No_Attributes}"
+    echo " ${Dim}•~~~•~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~•${No_Attributes}"
+    echo " ${Dim}•${No_Attributes}${F_Red}${Bold} 7${No_Attributes} ${Dim}•${No_Attributes} Enable to use default Screenshot PNG file format (Default)                 ${Dim}•${No_Attributes}"
+    echo " ${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
+
+    printf '
+ Please select an Command: '
+    read var
+    # Enable to use default Screenshot BMP file format
+    if [ "$var" -eq "1" ]; then
+        echo "\n•${F_Red}${Bold} Enable to use default Screenshot BMP file format.${No_Attributes}"
+        defaults write com.apple.screencapture type bmp && killall SystemUIServer
+        echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
+    fi
+    # Enable to use default Screenshot GIF file format
+    if [ "$var" -eq "2" ]; then
+        echo "\n•${F_Red}${Bold} Enable to use default Screenshot GIF file format.${No_Attributes}"
+        defaults write com.apple.screencapture type gif && killall SystemUIServer
+        echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
+    fi
+    # Enable to use default Screenshot PDF file format
+    if [ "$var" -eq "3" ]; then
+        echo "\n•${F_Red}${Bold} Enable to use default Screenshot PDF file format.${No_Attributes}"
+        defaults write com.apple.screencapture type pdf && killall SystemUIServer
+        echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
+    fi
+    # Enable to use default Screenshot TIFF file format
+    if [ "$var" -eq "4" ]; then
+        echo "\n•${F_Red}${Bold} Enable to use default Screenshot TIFF file format.${No_Attributes}"
+        defaults write com.apple.screencapture type tiff && killall SystemUIServer
+        echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
+    fi
+    # Enable to use default Screenshot JPG file format
+    if [ "$var" -eq "5" ]; then
+        echo "\n•${F_Red}${Bold} Enable to use default Screenshot JPG file format.${No_Attributes}"
+        defaults write com.apple.screencapture type jpg && killall SystemUIServer
+        echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
+    fi
+    # Enable to use default Screenshot JPEG file format
+    if [ "$var" -eq "6" ]; then
+        echo "\n•${F_Red}${Bold} Enable to use default Screenshot JPEG file format.${No_Attributes}"
+        defaults write com.apple.screencapture type jpeg && killall SystemUIServer
+        echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
+    fi
+    # Enable to use default Screenshot PNG file format (Default)
+    if [ "$var" -eq "7" ]; then
+        echo "\n•${F_Red}${Bold} Enable to use default Screenshot PNG file format (Default).${No_Attributes}"
+        defaults write com.apple.screencapture type png && killall SystemUIServer
+        echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
+    fi
+    continueMessage
+}
+# Command 26: Enable or Disable Screenshot with shadow and adding extra pixels
+#enableOrDisableScreenshotWithShadowAndAddingExtraPixels() {
+    terminalWindowSize40x140
+    echo "•${F_Red}${Bold} Command 26: Enable or Disable Screenshot with shadow and adding extra pixels.${No_Attributes}\n"
+    # Menu
+    echo " ${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
+    echo " ${Dim}•${No_Attributes}${F_Red}${Bold} 1${No_Attributes} ${Dim}•${No_Attributes} Disable Screenshot with shadow and adding extra pixels                     ${Dim}•${No_Attributes}"
+    echo " ${Dim}•~~~•~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~•${No_Attributes}"
+    echo " ${Dim}•${No_Attributes}${F_Red}${Bold} 2${No_Attributes} ${Dim}•${No_Attributes} Enable Screenshot with shadow and adding extra pixels (Default)            ${Dim}•${No_Attributes}"
+    echo " ${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
+
+    printf '
+ Please select an Command: '
+    read var
+    # Disable Screenshot with shadow and adding extra pixels
+    if [ "$var" -eq "1" ]; then
+        echo "\n•${F_Red}${Bold} Disable Screenshot with shadow and adding extra pixels.${No_Attributes}"
+        defaults write com.apple.screencapture disable-shadow -bool true && killall SystemUIServer
+        echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
+    fi
+    # Enable Screenshot with shadow and adding extra pixels (Default)
+    if [ "$var" -eq "2" ]; then
+        echo "\n•${F_Red}${Bold} Enable Screenshot with shadow and adding extra pixels (Default).${No_Attributes}"
+        defaults write com.apple.screencapture disable-shadow -bool false && killall SystemUIServer
+        echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
+    fi
     continueMessage
 }
 
-# Command 26: ------------------------------
-------------------------------() {
+# Command 27: Enable or Disable the warning before emptying the Trash
+#enableOrDisableTheWarningBeforeEmptyingTheTrash() {
     terminalWindowSize40x140
-    echo "•${F_Red}${Bold} Command 26: ------------------------------.${No_Attributes}\n"
-    ------------------------------
-    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
+    echo "•${F_Red}${Bold} Command 27: Enable or Disable the warning before emptying the Trash.${No_Attributes}\n"
+    # Menu
+    echo " ${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
+    echo " ${Dim}•${No_Attributes}${F_Red}${Bold} 1${No_Attributes} ${Dim}•${No_Attributes} Disable warning before emptying the Trash                                  ${Dim}•${No_Attributes}"
+    echo " ${Dim}•~~~•~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~•${No_Attributes}"
+    echo " ${Dim}•${No_Attributes}${F_Red}${Bold} 2${No_Attributes} ${Dim}•${No_Attributes} Enable warning before emptying the Trash (Default)                         ${Dim}•${No_Attributes}"
+    echo " ${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
+
+    printf '
+ Please select an Command: '
+    read var
+    # Disable warning before emptying the Trash
+    if [ "$var" -eq "1" ]; then
+        echo "\n•${F_Red}${Bold} Disable warning before emptying the Trash.${No_Attributes}"
+        defaults write com.apple.finder WarnOnEmptyTrash -bool false
+        echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
+    fi
+    # Enable warning before emptying the Trash (Default)
+    if [ "$var" -eq "2" ]; then
+        echo "\n•${F_Red}${Bold} Enable warning before emptying the Trash (Default).${No_Attributes}"
+        defaults write com.apple.finder WarnOnEmptyTrash -bool true
+        echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
+    fi
     continueMessage
 }
 
-# Command 27: ------------------------------
-------------------------------() {
+# Command 28: Enable or Disable warning when changing a file Extension
+#enableOrDisableWarningWhenChangingAFileExtension() {
     terminalWindowSize40x140
-    echo "•${F_Red}${Bold} Command 23: ------------------------------.${No_Attributes}"
-    ------------------------------
-    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
+    echo "•${F_Red}${Bold} Command 28: Enable or Disable warning when changing a file Extension.${No_Attributes}\n"
+    # Menu
+    echo " ${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
+    echo " ${Dim}•${No_Attributes}${F_Red}${Bold} 1${No_Attributes} ${Dim}•${No_Attributes} Disable warning when changing a file Extension                             ${Dim}•${No_Attributes}"
+    echo " ${Dim}•~~~•~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~•${No_Attributes}"
+    echo " ${Dim}•${No_Attributes}${F_Red}${Bold} 2${No_Attributes} ${Dim}•${No_Attributes} Enable warning when changing a file Extension (Default)                    ${Dim}•${No_Attributes}"
+    echo " ${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
+
+    printf '
+ Please select an Command: '
+    read var
+    # Disable warning when changing a file Extension
+    if [ "$var" -eq "1" ]; then
+        echo "\n•${F_Red}${Bold} Disable warning when changing a file Extension.${No_Attributes}"
+        defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
+        echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
+    fi
+    # Enable warning when changing a file Extension (Default)
+    if [ "$var" -eq "2" ]; then
+        echo "\n•${F_Red}${Bold} Enable warning when changing a file Extension (Default).${No_Attributes}"
+        defaults write com.apple.finder FXEnableExtensionChangeWarning -bool true
+        echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
+    fi
     continueMessage
 }
 
-# Command 28: ------------------------------
-------------------------------() {
+# Command 29: Search (Current or Previous Scope or This Mac) folder by default
+#searchCurrentOrPreviousScopeOrThisMacFolderByDefault() {
     terminalWindowSize40x140
-    echo "•${F_Red}${Bold} Command 24: ------------------------------.${No_Attributes}"
-    ------------------------------
-    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
+    echo "•${F_Red}${Bold} Command 29: Search (Current or Previous Scope or This Mac) folder by default.${No_Attributes}\n"
+    # Menu
+    echo " ${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
+    echo " ${Dim}•${No_Attributes}${F_Red}${Bold} 1${No_Attributes} ${Dim}•${No_Attributes} When performing a search, search the Current folder by default             ${Dim}•${No_Attributes}"
+    echo " ${Dim}•~~~•~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~•${No_Attributes}"
+    echo " ${Dim}•${No_Attributes}${F_Red}${Bold} 2${No_Attributes} ${Dim}•${No_Attributes} When performing a search, search the Previous Scope folder by default      ${Dim}•${No_Attributes}"
+    echo " ${Dim}•~~~•~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~•${No_Attributes}"
+    echo " ${Dim}•${No_Attributes}${F_Red}${Bold} 2${No_Attributes} ${Dim}•${No_Attributes} When performing a search, search the This Mac folder by default (Default)  ${Dim}•${No_Attributes}"
+    echo " ${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
+
+    printf '
+ Please select an Command: '
+    read var
+    # When performing a search, search the Current folder by default
+    if [ "$var" -eq "1" ]; then
+        echo "\n•${F_Red}${Bold} When performing a search, search the Current folder by default.${No_Attributes}"
+        defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
+        echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
+    fi
+    # When performing a search, search the Previous Scope folder by default
+    if [ "$var" -eq "2" ]; then
+        echo "\n•${F_Red}${Bold} When performing a search, search the Previous Scope folder by default.${No_Attributes}"
+        defaults write com.apple.finder FXDefaultSearchScope -string "SCsp"
+        echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
+    fi
+    # When performing a search, search the This Mac folder by default (Default)
+    if [ "$var" -eq "2" ]; then
+        echo "\n•${F_Red}${Bold} When performing a search, search the This Mac folder by default (Default).${No_Attributes}"
+        defaults write com.apple.finder FXDefaultSearchScope -string "SCev"
+        echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
+    fi
     continueMessage
 }
 
-# Command 29: Logs system Management: Cleaning the Logs and Inactive memory
+# Command 30: Enable or Disable in TextEdit the create an Untitled Document at Launch
+#enableOrDisableInTextEditTheCreateAnUntitledDocumentAtLaunch() {
+    terminalWindowSize40x140
+    echo "•${F_Red}${Bold} Command 30: Enable or Disable in TextEdit the create an Untitled Document at Launch.${No_Attributes}\n"
+    # Menu
+    echo " ${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
+    echo " ${Dim}•${No_Attributes}${F_Red}${Bold} 1${No_Attributes} ${Dim}•${No_Attributes} Enable in TextEdit the create an Untitled Document at Launch               ${Dim}•${No_Attributes}"
+    echo " ${Dim}•~~~•~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~•${No_Attributes}"
+    echo " ${Dim}•${No_Attributes}${F_Red}${Bold} 2${No_Attributes} ${Dim}•${No_Attributes} Disable in TextEdit the create an Untitled Document at Launch (Default)    ${Dim}•${No_Attributes}"
+    echo " ${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
+
+    printf '
+ Please select an Command: '
+    read var
+    # Enable in TextEdit the create an Untitled Document at Launch
+    if [ "$var" -eq "1" ]; then
+        echo "\n•${F_Red}${Bold} Enable in TextEdit the create an Untitled Document at Launch.${No_Attributes}"
+        defaults write com.apple.TextEdit NSShowAppCentricOpenPanelInsteadOfUntitledFile -bool false
+        echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
+    fi
+    # Disable in TextEdit the create an Untitled Document at Launch (Default)
+    if [ "$var" -eq "2" ]; then
+        echo "\n•${F_Red}${Bold} Disable in TextEdit the create an Untitled Document at Launch (Default).${No_Attributes}"
+        defaults write com.apple.TextEdit NSShowAppCentricOpenPanelInsteadOfUntitledFile -bool true
+        echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
+    fi
+    continueMessage
+}
+
+# Command 31: Enable or Disable copy Email addresses as 'foo@example.com' instead of 'Foo Bar <foo@example.com>' in Apple Mail app
+#enableOrDisableCopyEmailAddressesAs() {
+    terminalWindowSize40x140
+    echo "•${F_Red}${Bold} Command 31: Enable or Disable copy Email addresses as 'foo@example.com' instead of 'Foo Bar <foo@example.com>' in Apple Mail app.${No_Attributes}\n"
+    # Menu
+    echo " ${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
+    echo " ${Dim}•${No_Attributes}${F_Red}${Bold} 1${No_Attributes} ${Dim}•${No_Attributes} Enable copy Email addresses as 'foo@example.com' instead of 'Foo Bar <foo@example.com>' in Apple Mail app            ${Dim}•${No_Attributes}"
+    echo " ${Dim}•~~~•~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~•${No_Attributes}"
+    echo " ${Dim}•${No_Attributes}${F_Red}${Bold} 2${No_Attributes} ${Dim}•${No_Attributes} Disable copy Email addresses as 'foo@example.com' instead of 'Foo Bar <foo@example.com>' in Apple Mail app (Default) ${Dim}•${No_Attributes}"
+    echo " ${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
+
+    printf '
+ Please select an Command: '
+    read var
+    # Enable copy Email addresses as 'foo@example.com' instead of 'Foo Bar <foo@example.com>' in Apple Mail app
+    if [ "$var" -eq "1" ]; then
+        echo "\n•${F_Red}${Bold} Enable copy Email addresses as 'foo@example.com' instead of 'Foo Bar <foo@example.com>' in Apple Mail app.${No_Attributes}"
+        defaults write com.apple.mail AddressesIncludeNameOnPasteboard -bool false
+        echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
+    fi
+    # Disable copy Email addresses as 'foo@example.com' instead of 'Foo Bar <foo@example.com>' in Apple Mail app (Default)
+    if [ "$var" -eq "2" ]; then
+        echo "\n•${F_Red}${Bold} Disable copy Email addresses as 'foo@example.com' instead of 'Foo Bar <foo@example.com>' in Apple Mail app (Default).${No_Attributes}"
+        defaults write com.apple.mail AddressesIncludeNameOnPasteboard -bool true
+        echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
+    fi
+    continueMessage
+}
+
+# Command 32: Logs system Management: Cleaning the Logs and Inactive memory
 cleaningLogsAndInactiveMemory() {
     terminalWindowSize40x140
-    echo "•${F_Red}${Bold} Command 29: Logs system Management: Cleaning the Logs and Inactive memory.${No_Attributes}"
+    echo "•${F_Red}${Bold} Command 32: Logs system Management: Cleaning the Logs and Inactive memory.${No_Attributes}"
     askPassword
 
     # The script
@@ -1293,10 +1510,10 @@ cleaningLogsAndInactiveMemory() {
     continueMessage
 }
 
-# Command 30: I/O system Management: Manually and Automatic Delete, Plugins Input and Output device
+# Command 33: I/O system Management: Manually and Automatic Delete, Plugins Input and Output device
 deletePluginsInputAndOutputDevice() {
     terminalWindowSize40x140
-    echo "•${F_Red}${Bold} Command 30: I/O system Management: Manually and Automatic Delete, Plugins Input and Output device.${No_Attributes}\n"
+    echo "•${F_Red}${Bold} Command 33: I/O system Management: Manually and Automatic Delete, Plugins Input and Output device.${No_Attributes}\n"
     # Menu
     echo " ${Dim}•••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
     echo " ${Dim}•${No_Attributes}${F_Red}${Bold} 1${No_Attributes} ${Dim}•${No_Attributes} Automatic Delete All CoreMedia Input/Output Device DAL Video Plug-ins ${Dim}•${No_Attributes}"
@@ -1358,10 +1575,10 @@ deletePluginsInputAndOutputDevice() {
     continueMessage
 }
 
-# Command 31: Kernel Operating system Management
+# Command 34: Kernel Operating system Management
 kernelManagement() {
     terminalWindowSize55x140
-    echo "•${F_Red}${Bold} Command 31: Kernel OS Management: Cleaning kernel Extension, Rebuild Kexts Caches, Repair Permissions of Kexts folders, etc.${No_Attributes}\n"
+    echo "•${F_Red}${Bold} Command 34: Kernel OS Management: Cleaning kernel Extension, Rebuild Kexts Caches, Repair Permissions of Kexts folders, etc.${No_Attributes}\n"
     # Menu
     echo " ${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
     echo " ${Dim}•${No_Attributes}${F_Red}${Bold} 1${No_Attributes} ${Dim}•${No_Attributes} Cleaning the kernel Extension staging area by removing all staged content (Requires a reboot)          ${Dim}•${No_Attributes}"
@@ -1447,10 +1664,10 @@ kernelManagement() {
     continueMessage
 }
 
-# Command 32: Privacy Database Management: Custom reset application permissions under Security and Privacy
+# Command 35: Privacy Database Management: Custom reset application permissions under Security and Privacy
 privacyDatabaseManagement() {
     terminalWindowSize55x140
-    echo "•${F_Red}${Bold} Command 32: Privacy Database Management: Custom reset application permissions under Security and Privacy.${No_Attributes}\n"
+    echo "•${F_Red}${Bold} Command 35: Privacy Database Management: Custom reset application permissions under Security and Privacy.${No_Attributes}\n"
     # Menu
     echo " ${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
     echo " ${Dim}•${No_Attributes}${F_Red}${Bold}  1${No_Attributes} ${Dim}•${No_Attributes} ${F_Red}Reset the All permissions for all apps${No_Attributes}                                  ${Dim}•${No_Attributes}"
@@ -1727,50 +1944,65 @@ startScript() {
 
         25)
             clear
-            ------------------------------
+            changeTheDefaultScreenshotFileFormat
             ;;
 
         26)
             clear
-            ------------------------------
+            enableOrDisableScreenshotWithShadowAndAddingExtraPixels
             ;;
 
         27)
             clear
-            ------------------------------
+            enableOrDisableTheWarningBeforeEmptyingTheTrash
             ;;
 
         28)
             clear
-            ------------------------------
+            enableOrDisableWarningWhenChangingAFileExtension
             ;;
 
         29)
             clear
-            cleaningLogsAndInactiveMemory
+            searchCurrentOrPreviousScopeOrThisMacFolderByDefault
             ;;
 
         30)
             clear
-            deletePluginsInputAndOutputDevice
+            enableOrDisableInTextEditTheCreateAnUntitledDocumentAtLaunch
             ;;
 
         31)
             clear
-            kernelManagement
+            enableOrDisableCopyEmailAddressesAs
             ;;
 
         32)
             clear
-            privacyDatabaseManagement
+            cleaningLogsAndInactiveMemory
             ;;
 
         33)
             clear
-            ------------------------------
+            deletePluginsInputAndOutputDevice
             ;;
 
         34)
+            clear
+            kernelManagement
+            ;;
+
+        35)
+            clear
+            privacyDatabaseManagement
+            ;;
+
+        36)
+            clear
+            ------------------------------
+            ;;
+
+        37)
             clear
             ------------------------------
             ;;
