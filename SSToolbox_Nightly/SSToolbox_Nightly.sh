@@ -1298,7 +1298,7 @@ changeTheDefaultScreenshotFileFormat() {
     continueMessage
 }
 # Command 26: Enable or Disable Screenshot with shadow and adding extra pixels
-#enableOrDisableScreenshotWithShadowAndAddingExtraPixels() {
+enableOrDisableScreenshotWithShadowAndAddingExtraPixels() {
     terminalWindowSize40x140
     echo "•${F_Red}${Bold} Command 26: Enable or Disable Screenshot with shadow and adding extra pixels.${No_Attributes}\n"
     # Menu
