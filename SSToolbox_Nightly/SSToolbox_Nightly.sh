@@ -1116,11 +1116,11 @@ enableOrDisableTheShowOfHiddenFiles() {
     terminalWindowSize40x140
     echo "•${F_Red}${Bold} Command 21: Enable or disable the show of hidden files.${No_Attributes}\n"
     # Menu
-    echo " ${Dim}•••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
-    echo " ${Dim}•${No_Attributes}${F_Red}${Bold} 1${No_Attributes} ${Dim}•${No_Attributes} Enable the show of hidden files                                       ${Dim}•${No_Attributes}"
-    echo " ${Dim}•~~~•~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~•${No_Attributes}"
-    echo " ${Dim}•${No_Attributes}${F_Red}${Bold} 2${No_Attributes} ${Dim}•${No_Attributes} Disable the show of hidden files                                      ${Dim}•${No_Attributes}"
-    echo " ${Dim}•••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
+    echo " ${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
+    echo " ${Dim}•${No_Attributes}${F_Red}${Bold} 1${No_Attributes} ${Dim}•${No_Attributes} Enable the show of hidden files                                            ${Dim}•${No_Attributes}"
+    echo " ${Dim}•~~~•~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~•${No_Attributes}"
+    echo " ${Dim}•${No_Attributes}${F_Red}${Bold} 2${No_Attributes} ${Dim}•${No_Attributes} Disable the show of hidden files (Default)                                 ${Dim}•${No_Attributes}"
+    echo " ${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
 
     printf '
  Please select an Command: '
@@ -1144,11 +1144,11 @@ enableOrDisableTheShowOfAllFileExtensions() {
     terminalWindowSize40x140
     echo "•${F_Red}${Bold} Command 22: Enable or disable the show of all File Extensions.${No_Attributes}\n"
     # Menu
-    echo " ${Dim}•••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
-    echo " ${Dim}•${No_Attributes}${F_Red}${Bold} 1${No_Attributes} ${Dim}•${No_Attributes} Enable the show of all File Extensions                                ${Dim}•${No_Attributes}"
-    echo " ${Dim}•~~~•~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~•${No_Attributes}"
-    echo " ${Dim}•${No_Attributes}${F_Red}${Bold} 2${No_Attributes} ${Dim}•${No_Attributes} Disable the show of all File Extensions                               ${Dim}•${No_Attributes}"
-    echo " ${Dim}•••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
+    echo " ${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
+    echo " ${Dim}•${No_Attributes}${F_Red}${Bold} 1${No_Attributes} ${Dim}•${No_Attributes} Enable the show of all File Extensions                                     ${Dim}•${No_Attributes}"
+    echo " ${Dim}•~~~•~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~•${No_Attributes}"
+    echo " ${Dim}•${No_Attributes}${F_Red}${Bold} 2${No_Attributes} ${Dim}•${No_Attributes} Disable the show of all File Extensions (Default)                          ${Dim}•${No_Attributes}"
+    echo " ${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
 
     printf '
  Please select an Command: '
@@ -1173,11 +1173,11 @@ enableOrDisableTheShowOfAttachmentsAsIconsInTheAppleMailApp() {
     terminalWindowSize40x140
     echo "•${F_Red}${Bold} Command 23: Enable or disable the show of attachments as icons in the Apple Mail app.${No_Attributes}\n"
     # Menu
-    echo " ${Dim}•••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
-    echo " ${Dim}•${No_Attributes}${F_Red}${Bold} 1${No_Attributes} ${Dim}•${No_Attributes} Enable the show of attachments as icons in the Apple Mail app         ${Dim}•${No_Attributes}"
-    echo " ${Dim}•~~~•~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~•${No_Attributes}"
-    echo " ${Dim}•${No_Attributes}${F_Red}${Bold} 2${No_Attributes} ${Dim}•${No_Attributes} Disable the show of attachments as icons in the Apple Mail app        ${Dim}•${No_Attributes}"
-    echo " ${Dim}•••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
+    echo " ${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
+    echo " ${Dim}•${No_Attributes}${F_Red}${Bold} 1${No_Attributes} ${Dim}•${No_Attributes} Enable the show of attachments as icons in the Apple Mail app              ${Dim}•${No_Attributes}"
+    echo " ${Dim}•~~~•~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~•${No_Attributes}"
+    echo " ${Dim}•${No_Attributes}${F_Red}${Bold} 2${No_Attributes} ${Dim}•${No_Attributes} Disable the show of attachments as icons in the Apple Mail app (Default)   ${Dim}•${No_Attributes}"
+    echo " ${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
 
     printf '
  Please select an Command: '
@@ -1202,11 +1202,11 @@ enableOrDisableTheShowOfTheFullPathInTheFinderTitleWindow() {
     terminalWindowSize40x140
     echo "•${F_Red}${Bold} Command 24: Enable or disable the show of the full path in the Finder 'Title' window.${No_Attributes}\n"
     # Menu
-    echo " ${Dim}•••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
-    echo " ${Dim}•${No_Attributes}${F_Red}${Bold} 1${No_Attributes} ${Dim}•${No_Attributes} Enable the show of the full path in the Finder 'Title' window         ${Dim}•${No_Attributes}"
-    echo " ${Dim}•~~~•~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~•${No_Attributes}"
-    echo " ${Dim}•${No_Attributes}${F_Red}${Bold} 2${No_Attributes} ${Dim}•${No_Attributes} Disable the show of the full path in the Finder 'Title' window        ${Dim}•${No_Attributes}"
-    echo " ${Dim}•••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
+    echo " ${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
+    echo " ${Dim}•${No_Attributes}${F_Red}${Bold} 1${No_Attributes} ${Dim}•${No_Attributes} Enable the show of the full path in the Finder 'Title' window              ${Dim}•${No_Attributes}"
+    echo " ${Dim}•~~~•~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~•${No_Attributes}"
+    echo " ${Dim}•${No_Attributes}${F_Red}${Bold} 2${No_Attributes} ${Dim}•${No_Attributes} Disable the show of the full path in the Finder 'Title' window (Default)   ${Dim}•${No_Attributes}"
+    echo " ${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
 
     printf '
  Please select an Command: '
