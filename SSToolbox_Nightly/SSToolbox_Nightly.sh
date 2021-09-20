@@ -91,7 +91,7 @@ showMenu() {
     echo "${Dim}•${No_Attributes}${F_Red}${Bold} 29${No_Attributes} ${Dim}•${No_Attributes} Kernel OS Management: Cleaning kernel Extension, Rebuild Kexts Caches, etc. (Requires a reboot) ${Dim}•${No_Attributes} ${F_Red}${Bold}U${No_Attributes}ninstalling Xcode CLT    ${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Red}${Bold} 30${No_Attributes} ${Dim}•${No_Attributes} Privacy Database Management: Custom reset apps permissions under Security and Privacy           ${Dim}•${No_Attributes} ${F_Red}${Bold}R${No_Attributes}elease/${F_Red}${Bold}N${No_Attributes}ightly Download  ${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Red}${Bold} 31${No_Attributes} ${Dim}•${No_Attributes} GateKeeper Management: Status, Enable or Disable, Remove app from Quarantine, Self-sign the app ${Dim}•${No_Attributes} ${F_Red}${Bold}A${No_Attributes}bout GitHub              ${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Red}${Bold} 32${No_Attributes} ${Dim}•${No_Attributes} -----------------------                                                                         ${Dim}•${No_Attributes} ${F_Red}${Bold}${Blink}Q${No_Attributes}uit                      ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Red}${Bold} 32${No_Attributes} ${Dim}•${No_Attributes} Process & Memory Management: Manage Processes, Terminate (Kill) a Process and Purge Memory      ${Dim}•${No_Attributes} ${F_Red}${Bold}${Blink}Q${No_Attributes}uit                      ${Dim}•${No_Attributes}"
     echo "${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
 }
 
@@ -1802,6 +1802,63 @@ gateKeeperManagement() {
     continueMessage
 }
 
+# Command 32: Process & Memory Management: Manage Processes Using the Terminal, Terminate (Kill) a Process and Purge Memory
+processAndMemoryManagement() {
+    terminalWindowSize40x140
+    echo "•${F_Red}${Bold} Command 32: Process & Memory Management: Manage Processes Using the Terminal, Terminate (Kill) a Process and Purge Memory.${No_Attributes}\n"
+    # Menu
+    echo " ${Dim}•••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
+    echo " ${Dim}•${No_Attributes}${F_Red}${Bold} 1${No_Attributes} ${Dim}•${No_Attributes} Display processes sorted by CPU usage and Kill a process by specifying its PID    ${Dim}•${No_Attributes}"
+    echo " ${Dim}•~~~•~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~•${No_Attributes}"
+    echo " ${Dim}•${No_Attributes}${F_Red}${Bold} 2${No_Attributes} ${Dim}•${No_Attributes} Display processes sorted by Memory usage and Kill a process by specifying its PID ${Dim}•${No_Attributes}"
+    echo " ${Dim}•~~~•~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~•${No_Attributes}"
+    echo " ${Dim}•${No_Attributes}${F_Red}${Bold} 3${No_Attributes} ${Dim}•${No_Attributes} Using purge to free inactive Memory                                               ${Dim}•${No_Attributes}"
+    echo " ${Dim}•••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
+
+    printf '
+ Please select an Command: '
+    read var
+
+    # Display processes sorted by CPU usage and Kill a process by specifying its PID
+    if [ "$var" -eq "1" ]; then
+        echo "\n•${F_Red}${Bold} Display processes sorted by CPU usage and Kill a process by specifying its PID.${No_Attributes}"
+        askPassword
+        osascript -e 'tell app "Terminal" to do script "top -o cpu -s 2"'; osascript -e 'tell application "Terminal" to set bounds of front window to {990, 20, 1440, 830}'
+        read "? To Terminate (Kill) a Process: " PID
+        sudo kill -9 "$PID"
+        echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
+        echo "\n•${F_Red}${Bold} List of running processes in the system, completed...${No_Attributes}"
+        sleep 2 && sudo killall top
+    fi
+
+    # Display processes sorted by Memory usage and Kill a process by specifying its PID
+    if [ "$var" -eq "2" ]; then
+        echo "\n•${F_Red}${Bold} Display processes sorted by Memory usage and Kill a process by specifying its PID.${No_Attributes}"
+        askPassword
+        osascript -e 'tell app "Terminal" to do script "top -o rsize -s 2"'; osascript -e 'tell application "Terminal" to set bounds of front window to {990, 20, 1440, 830}'
+        read "? To Terminate (Kill) a Process: " PID
+        sudo kill -9 "$PID"
+        echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
+        echo "\n•${F_Red}${Bold} List of running processes in the system, completed...${No_Attributes}"
+        sleep 2 && sudo killall top
+    fi
+
+    # Using purge to free inactive Memory
+    if [ "$var" -eq "3" ]; then
+        echo "\n•${F_Red}${Bold} Using purge to free inactive Memory.${No_Attributes}"
+        askPassword
+        echo "•${F_Red}${Bold} Memory usage:${No_Attributes}"
+        top -l 1 -s 0 | grep PhysMem && sleep 1
+        echo "\n•${F_Red}${Bold} Freeing up inactive Memory...${No_Attributes}"
+        sudo purge
+        echo "\n${F_Red}•${F_Green}${Bold} Released the inactive memory.${No_Attributes}"
+        echo "\n•${F_Red}${Bold} Memory usage:${No_Attributes}"
+        sleep 2 && top -l 1 -s 0 | grep PhysMem
+        echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
+    fi
+    continueMessage
+}
+
 # -----------------------------------------------------------------------------------------------------------------
 
 # Main function of the script
@@ -1978,7 +2035,7 @@ startScript() {
 
         32)
             clear
-            ------------------------------
+            processAndMemoryManagement
             ;;
 
         Q)
