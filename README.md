@@ -55,28 +55,25 @@
 |**`13`**|Search all processes for all users and view network data by protocol TCP/UDP, IPv4/IPv6|
 |**`14`**|Stress Test Network with ICMP-Sweep and ICMP-Flood.|
 |**`15`**|Show information: Firewall, Wireless, Local Network, DHCP, IP, MAC addresses and etc.|
-|*GateKeeper*|
-|**`16`**|GateKeeper Status|
-|**`17`**|Enable GateKeeper|
-|**`18`**|Disable GateKeeper|
-|**`19`**|Remove app from quarantine|
-|**`20`**|Self-sign the app. Require Xcode or Xcode CLT (Command Line Tools)|
 |*Tweaks*|
-|**`21`**|Show Hidden Files|
-|**`22`**|Don't Show Hidden Files|
-|**`23`**|Show all File Extensions|
-|**`24`**|Don't Show all File Extensions|
-|**`25`**|Show Attachments as Icons in Apple Mail App|
-|**`26`**|Don't Show Attachments as Icons in Apple Mail App|
-|**`27`**|Show the full path in the Finder Title window|
-|**`28`**|Don't Show the full path in the Finder Title window|
+|**`16`**|Enable or Disable the show of Hidden files|
+|**`17`**|Enable or Disable the show of all File Extensions|
+|**`18`**|Enable or Disable the show of Attachments as Icons in the Apple Mail app|
+|**`19`**|Enable or Disable the show of the full path in the Finder 'Title' window|
+|**`20`**|Change the default Screenshot file format|
+|**`21`**|Enable or Disable Screenshot with shadow and adding extra pixels|
+|**`22`**|Enable or Disable the warning before emptying the Trash|
+|**`23`**|Enable or Disable warning when changing a file Extension|
+|**`24`**|Search (Current or Previous Scope or This Mac) folder by default|
+|**`25`**|Enable or Disable in TextEdit the create an Untitled Document at Launch|
+|**`26`**|Enable or Disable copy Email addresses as "foo@example.com" instead of "Foo Bar foo@example.com" in Apple Mail app|
 |*OS Management*|
-|**`29`**|Cleaning the Logs and Inactive memory|
-|**`30`**|Manually and Automatic Delete, Plugins Input and Output device|
-|**`31`**||
-|**`32`**||
-|**`33`**||
-|**`34`**||
+|**`27`**|Logs system Management: Cleaning the Logs and Inactive memory|
+|**`28`**|I/O system Management: Manually and Automatic Delete, Plugins Input and Output device|
+|**`29`**|Kernel OS Management: Cleaning kernel Extension, Rebuild Kexts Caches, etc. (Requires a reboot)|
+|**`30`**|Privacy Database Management: Custom reset apps permissions under Security and Privacy|
+|**`31`**|GateKeeper Management: Status, Enable or Disable, Remove app from Quarantine, Self-sign the app|
+|**`32`**|Process & Memory Management: Manage Processes, Terminate (Kill) a Process and Purge Memory|
 |*Xcode*|
 |**`I`**|Installing the Xcode CLT (Command Line Tools)|
 |**`U`**|Uninstalling the Xcode CLT (Command Line Tools)|

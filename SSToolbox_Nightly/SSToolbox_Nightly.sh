@@ -1818,7 +1818,6 @@ processAndMemoryManagement() {
     printf '
  Please select an Command: '
     read var
-
     # Display processes sorted by CPU usage and Kill a process by specifying its PID
     if [ "$var" -eq "1" ]; then
         echo "\n•${F_Red}${Bold} Display processes sorted by CPU usage and Kill a process by specifying its PID.${No_Attributes}"
@@ -1830,7 +1829,6 @@ processAndMemoryManagement() {
         echo "\n•${F_Red}${Bold} List of running processes in the system, completed...${No_Attributes}"
         sleep 2 && sudo killall top
     fi
-
     # Display processes sorted by Memory usage and Kill a process by specifying its PID
     if [ "$var" -eq "2" ]; then
         echo "\n•${F_Red}${Bold} Display processes sorted by Memory usage and Kill a process by specifying its PID.${No_Attributes}"
@@ -1842,7 +1840,6 @@ processAndMemoryManagement() {
         echo "\n•${F_Red}${Bold} List of running processes in the system, completed...${No_Attributes}"
         sleep 2 && sudo killall top
     fi
-
     # Using purge to free inactive Memory
     if [ "$var" -eq "3" ]; then
         echo "\n•${F_Red}${Bold} Using purge to free inactive Memory.${No_Attributes}"
