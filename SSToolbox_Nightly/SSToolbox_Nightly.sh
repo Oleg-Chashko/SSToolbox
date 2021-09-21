@@ -123,15 +123,15 @@ terminalWindowSizeMenu() {
 
 # Dynamic size of terminal window ---------------------------------------------------------------------------------
 
-# Terminal window size 0x20x935x590
-terminalWindowSize0x20x935x590() {
-    osascript -e 'tell application "Terminal" to set bounds of front window to {0, 20, 935, 590}'
+# Terminal window size 0x20x995x590
+terminalWindowSize0x20x995x590() {
+    osascript -e 'tell application "Terminal" to set bounds of front window to {0, 20, 995, 590}'
     clear
 }
 
-# Terminal window size 0x20x935x830
-terminalWindowSize0x20x935x830() {
-    osascript -e 'tell application "Terminal" to set bounds of front window to {0, 20, 935, 830}'
+# Terminal window size 0x20x995x830
+terminalWindowSize0x20x995x830() {
+    osascript -e 'tell application "Terminal" to set bounds of front window to {0, 20, 995, 830}'
     clear
 }
 
@@ -159,7 +159,7 @@ showInvalid() {
 
 # Command I: Installing the Xcode CLT
 installingXCLT() {
-    terminalWindowSize0x20x935x590
+    terminalWindowSize0x20x995x590
     echo "•${F_Red}${Bold} Command I: Install the Xcode Command Line Tools.${No_Attributes}\n"
     xcode-select --install
     continueMessage
@@ -167,7 +167,7 @@ installingXCLT() {
 
 # Command U: Uninstalling the Xcode CLT
 uninstallingXCLT() {
-    terminalWindowSize0x20x935x590
+    terminalWindowSize0x20x995x590
     echo "•${F_Red}${Bold} Command U: Uninstall the Xcode Command Line Tools.${No_Attributes}\n"
     askPassword
     sudo rm -rf /Library/Developer/CommandLineTools
@@ -217,7 +217,7 @@ aboutGitHub() {
 
 # Command 1: Custom DNS servers for Wi-Fi
 customDNSServersForWi-Fi() {
-    terminalWindowSize0x20x935x830
+    terminalWindowSize0x20x995x830
     echo "•${F_Red}${Bold} Command 1: Custom DNS servers for Wi-Fi.${No_Attributes}"
     askPassword
     # Menu
@@ -388,7 +388,7 @@ customDNSServersForWi-Fi() {
 
 # Command 2: Custom DNS servers for Ethernet
 customDNSServersForEthernet() {
-    terminalWindowSize0x20x935x830
+    terminalWindowSize0x20x995x830
     echo "•${F_Red}${Bold} Command 2: Custom DNS servers for Ethernet.${No_Attributes}"
     askPassword
     # Menu
@@ -559,7 +559,7 @@ customDNSServersForEthernet() {
 
 # Command 3: Custom ping and tracerout test IPv4/IPv6
 customPingAndTraceroutTestIPv4/IPv6() {
-    terminalWindowSize0x20x935x830
+    terminalWindowSize0x20x995x830
     echo "•${F_Red}${Bold} Command 3: Custom ping and tracerout test IPv4/IPv6.${No_Attributes}\n"
     # Menu
     echo " ${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
@@ -626,7 +626,7 @@ customPingAndTraceroutTestIPv4/IPv6() {
 
 # Command 4: Automatic ping and tracerout test IPv4/IPv6
 automaticPingAndTraceroutTestIPv4/IPv6() {
-    terminalWindowSize0x20x935x830
+    terminalWindowSize0x20x995x830
     echo "•${F_Red}${Bold} Command 4: Automatic ping and tracerout test IPv4/IPv6.${No_Attributes}"
     # Ping test IPv4
     declare -a arr=("Google.com" "Youtube.com" "Facebook.com" "Instagram.com" "Spotify.com" "Yahoo.com" "Yandex.com")
@@ -686,7 +686,7 @@ automaticPingAndTraceroutTestIPv4/IPv6() {
 
 # Command 5: Custom setting a new Computer Name, Hostname, Local Hostname and NetBIOS Name
 customSettingComputerName() {
-    terminalWindowSize0x20x935x590
+    terminalWindowSize0x20x995x590
     echo "•${F_Red}${Bold} Command 5: Custom setting a new Computer Name, Hostname, Local Hostname and NetBIOS Name.${No_Attributes}"
     askPassword
     echo "${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
@@ -765,7 +765,7 @@ customEditingHostsFile() {
 
 # Command 7: Show Wireless Network Password
 wifiShowPassword() {
-    terminalWindowSize0x20x935x590
+    terminalWindowSize0x20x995x590
     echo "•${F_Red}${Bold} Command 7: Show Wireless Network Password.${No_Attributes}\n"
     echo "•${F_Red} Please provide your Login and Password to proceed.${No_Attributes}\n"
     sleep 2
@@ -783,7 +783,7 @@ wifiShowPassword() {
 
 # Command 8: Search Routers on local Networks, uses the default IP addresses
 searchRoutersLocalNetworks() {
-    terminalWindowSize0x20x935x830
+    terminalWindowSize0x20x995x830
     echo "•${F_Red}${Bold} Command 8 Search Routers on local Networks, uses the default IP addresses.${No_Attributes}\n"
     declare -a arr=("10.0.0.1" "10.0.0.2" "10.0.0.138" "10.0.1.1" "10.1.1.1" "10.1.10.1" "10.10.1.1" "10.90.90.90" "192.168.0.1" "192.168.0.3" "192.168.0.10" "192.168.0.30" "192.168.0.50" "192.168.0.100" "192.168.0.101" "192.168.0.227" "192.168.0.254" "192.168.1.1" "192.168.1.10" "192.168.1.99" "192.168.1.100" "192.168.1.200" "192.168.1.210" "192.168.1.254" "192.168.2.1" "192.168.2.254" "192.168.3.1" "192.168.4.1" "192.168.8.1" "192.168.10.1" "192.168.10.10" "192.168.10.50" "192.168.10.100" "192.168.11.1" "192.168.15.1" "192.168.16.1" "192.168.20.1" "192.168.30.1" "192.168.50.1" "192.168.55.1" "192.168.62.1" "192.168.100.1" "192.168.100.100" "192.168.102.1" "192.168.123.254" "192.168.168.168" "192.168.223.100" "192.168.251.1" "192.168.254.254" "200.200.200.5")
     for i in "${arr[@]}"; do
@@ -797,7 +797,7 @@ searchRoutersLocalNetworks() {
 
 # Command 9: Flushes local DNS cache, used for problems with loading sites, 404 error
 flushesLocalDNS() {
-    terminalWindowSize0x20x935x590
+    terminalWindowSize0x20x995x590
     echo "•${F_Red}${Bold} Command 9: Flushes local DNS cache, used for problems with loading sites, 404 error.${No_Attributes}"
     askPassword
     if echo $VERSION | grep -E '^10\.10(\.[0-3])?$' >/dev/null 2>&1; then
@@ -815,7 +815,7 @@ flushesLocalDNS() {
 
 # Command 10: Release and Renew DHCP for all available device interfaces
 releaseAndRenewDHCP() {
-    terminalWindowSize0x20x935x590
+    terminalWindowSize0x20x995x590
     echo "•${F_Red}${Bold} Command 10: Release and Renew DHCP for all available device interfaces.${No_Attributes}"
     askPassword
     # Release the DHCP assigned IP, DNS server, subnet mask, router/gateway and the lease time
@@ -844,7 +844,7 @@ releaseAndRenewDHCP() {
 
 # Command 11: Spoofing the MAC Address of the Wireless network to a randomly generated MAC address
 spoofingMACAddressOfWirelessNetwork() {
-    terminalWindowSize0x20x935x830
+    terminalWindowSize0x20x995x830
     echo "•${F_Red}${Bold} Command 11: Spoofing the MAC Address of the Wireless network.${No_Attributes}"
     askPassword
     echo "${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
@@ -875,7 +875,7 @@ spoofingMACAddressOfWirelessNetwork() {
 
 # Command 12: Check DNS records of the domain, to obtain the mapping between domain name and IP address
 checkDNSRecordsOfTheDomainIPv4/IPv6() {
-    terminalWindowSize0x20x935x830
+    terminalWindowSize0x20x995x830
     echo "•${F_Red}${Bold} Command 12: Check DNS records of the Domain IPv4/IPv6.${No_Attributes}"
     # NSlookup test
     declare -a arr=("Google.com" "Wikipedia.org" "Facebook.com" "Spotify.com" "Linkedin.com")
@@ -925,7 +925,7 @@ searchProcessesAndNetworkData() {
 
 # Command 14: Stress Test Network with ICMP-Sweep and ICMP-Flood
 testICMPSweepAndICMP-Flood() {
-    terminalWindowSize0x20x935x830
+    terminalWindowSize0x20x995x830
     echo "•${F_Red}${Bold} Command 14: Stress Test Network with ICMP-Sweep and ICMP-Flood.${No_Attributes}"
     askPassword
     # ICMP-Sweep
@@ -966,7 +966,7 @@ testICMPSweepAndICMP-Flood() {
 
 # Command 15: Show information: Firewall, Wireless, Local Network, DHCP and IP and MAC Addresses of Devices on a Local Network and etc.
 showInfoLN_DHCP_IP/MACAddresses() {
-    terminalWindowSize0x20x935x830
+    terminalWindowSize0x20x995x830
     echo "•${F_Red}${Bold} Command 15: Show information: Firewall, Wireless, Local Network, DHCP and IP and MAC Addresses of Devices on a Local Network and etc.${No_Attributes}\n"
     # External IP Address
     ExternalIPv4=$(curl -s https://api.ipify.org)
@@ -1083,7 +1083,7 @@ showInfoLN_DHCP_IP/MACAddresses() {
 
 # Command 16: Enable or Disable the show of Hidden files
 enableOrDisableTheShowOfHiddenFiles() {
-    terminalWindowSize0x20x935x590
+    terminalWindowSize0x20x995x590
     echo "•${F_Red}${Bold} Command 16: Enable or Disable the show of Hidden files.${No_Attributes}\n"
     # Menu
     echo " ${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
@@ -1114,7 +1114,7 @@ enableOrDisableTheShowOfHiddenFiles() {
 
 # Command 17: Enable or Disable the show of all File Extensions
 enableOrDisableTheShowOfAllFileExtensions() {
-    terminalWindowSize0x20x935x590
+    terminalWindowSize0x20x995x590
     echo "•${F_Red}${Bold} Command 17: Enable or Disable the show of all File Extensions.${No_Attributes}\n"
     # Menu
     echo " ${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
@@ -1145,7 +1145,7 @@ enableOrDisableTheShowOfAllFileExtensions() {
 
 # Command 18: Enable or Disable the show of Attachments as Icons in the Apple Mail app
 enableOrDisableTheShowOfAttachmentsAsIconsInTheAppleMailApp() {
-    terminalWindowSize0x20x935x590
+    terminalWindowSize0x20x995x590
     echo "•${F_Red}${Bold} Command 18: Enable or Disable the show of Attachments as Icons in the Apple Mail app.${No_Attributes}\n"
     # Menu
     echo " ${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
@@ -1176,7 +1176,7 @@ enableOrDisableTheShowOfAttachmentsAsIconsInTheAppleMailApp() {
 
 # Command 19: Enable or Disable the show of the full path in the Finder 'Title' window
 enableOrDisableTheShowOfTheFullPathInTheFinderTitleWindow() {
-    terminalWindowSize0x20x935x590
+    terminalWindowSize0x20x995x590
     echo "•${F_Red}${Bold} Command 19: Enable or Disable the show of the full path in the Finder 'Title' window.${No_Attributes}\n"
     # Menu
     echo " ${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
@@ -1207,7 +1207,7 @@ enableOrDisableTheShowOfTheFullPathInTheFinderTitleWindow() {
 
 # Command 20: Change the default Screenshot file format
 changeTheDefaultScreenshotFileFormat() {
-    terminalWindowSize0x20x935x590
+    terminalWindowSize0x20x995x590
     echo "•${F_Red}${Bold} Command 20: Change the default Screenshot file format.${No_Attributes}\n"
     # Menu
     echo " ${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
@@ -1278,7 +1278,7 @@ changeTheDefaultScreenshotFileFormat() {
 
 # Command 21: Enable or Disable Screenshot with shadow and adding extra pixels
 enableOrDisableScreenshotWithShadowAndAddingExtraPixels() {
-    terminalWindowSize0x20x935x590
+    terminalWindowSize0x20x995x590
     echo "•${F_Red}${Bold} Command 21: Enable or Disable Screenshot with shadow and adding extra pixels.${No_Attributes}\n"
     # Menu
     echo " ${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
@@ -1309,7 +1309,7 @@ enableOrDisableScreenshotWithShadowAndAddingExtraPixels() {
 
 # Command 22: Enable or Disable the warning before emptying the Trash
 enableOrDisableTheWarningBeforeEmptyingTheTrash() {
-    terminalWindowSize0x20x935x590
+    terminalWindowSize0x20x995x590
     echo "•${F_Red}${Bold} Command 22: Enable or Disable the warning before emptying the Trash.${No_Attributes}\n"
     # Menu
     echo " ${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
@@ -1340,7 +1340,7 @@ enableOrDisableTheWarningBeforeEmptyingTheTrash() {
 
 # Command 23: Enable or Disable warning when changing a file Extension
 enableOrDisableWarningWhenChangingAFileExtension() {
-    terminalWindowSize0x20x935x590
+    terminalWindowSize0x20x995x590
     echo "•${F_Red}${Bold} Command 23: Enable or Disable warning when changing a file Extension.${No_Attributes}\n"
     # Menu
     echo " ${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
@@ -1371,7 +1371,7 @@ enableOrDisableWarningWhenChangingAFileExtension() {
 
 # Command 24: Search (Current or Previous Scope or This Mac) folder by default
 searchCurrentOrPreviousScopeOrThisMacFolderByDefault() {
-    terminalWindowSize0x20x935x590
+    terminalWindowSize0x20x995x590
     echo "•${F_Red}${Bold} Command 24: Search (Current or Previous Scope or This Mac) folder by default.${No_Attributes}\n"
     # Menu
     echo " ${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
@@ -1410,7 +1410,7 @@ searchCurrentOrPreviousScopeOrThisMacFolderByDefault() {
 
 # Command 25: Enable or Disable in TextEdit the create an Untitled Document at Launch
 enableOrDisableInTextEditTheCreateAnUntitledDocumentAtLaunch() {
-    terminalWindowSize0x20x935x590
+    terminalWindowSize0x20x995x590
     echo "•${F_Red}${Bold} Command 25: Enable or Disable in TextEdit the create an Untitled Document at Launch.${No_Attributes}\n"
     # Menu
     echo " ${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
@@ -1441,7 +1441,7 @@ enableOrDisableInTextEditTheCreateAnUntitledDocumentAtLaunch() {
 
 # Command 26: Enable or Disable copy Email addresses as 'foo@example.com' instead of 'Foo Bar <foo@example.com>' in Apple Mail app
 enableOrDisableCopyEmailAddressesAs() {
-    terminalWindowSize0x20x935x590
+    terminalWindowSize0x20x995x590
     echo "•${F_Red}${Bold} Command 26: Enable or Disable copy Email addresses as 'foo@example.com' instead of 'Foo Bar <foo@example.com>' in Apple Mail app.${No_Attributes}\n"
     # Menu
     echo " ${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
@@ -1472,7 +1472,7 @@ enableOrDisableCopyEmailAddressesAs() {
 
 # Command 27: Logs system Management: Cleaning the Logs and Inactive memory
 cleaningLogsAndInactiveMemory() {
-    terminalWindowSize0x20x935x590
+    terminalWindowSize0x20x995x590
     echo "•${F_Red}${Bold} Command 27: Logs system Management: Cleaning the Logs and Inactive memory.${No_Attributes}"
     askPassword
 
@@ -1505,7 +1505,7 @@ cleaningLogsAndInactiveMemory() {
 
 # Command 28: I/O system Management: Manually and Automatic Delete, Plugins Input and Output device
 deletePluginsInputAndOutputDevice() {
-    terminalWindowSize0x20x935x590
+    terminalWindowSize0x20x995x590
     echo "•${F_Red}${Bold} Command 28: I/O system Management: Manually and Automatic Delete, Plugins Input and Output device.${No_Attributes}\n"
     # Menu
     echo " ${Dim}•••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
@@ -1572,7 +1572,7 @@ deletePluginsInputAndOutputDevice() {
 
 # Command 29: Kernel Operating system Management
 kernelManagement() {
-    terminalWindowSize0x20x935x830
+    terminalWindowSize0x20x995x830
     echo "•${F_Red}${Bold} Command 29: Kernel OS Management: Cleaning kernel Extension, Rebuild Kexts Caches, Repair Permissions of Kexts folders, etc.${No_Attributes}\n"
     # Menu
     echo " ${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
@@ -1663,7 +1663,7 @@ kernelManagement() {
 
 # Command 30: Privacy Database Management: Custom reset application permissions under Security and Privacy
 privacyDatabaseManagement() {
-    terminalWindowSize0x20x935x830
+    terminalWindowSize0x20x995x830
     echo "•${F_Red}${Bold} Command 30: Privacy Database Management: Custom reset application permissions under Security and Privacy.${No_Attributes}\n"
     # Menu
     echo " ${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
@@ -1804,7 +1804,7 @@ privacyDatabaseManagement() {
 
 # Command 31: GateKeeper Management: Status, Enable or Disable, Remove app from Quarantine, Self-sign the app
 gateKeeperManagement() {
-    terminalWindowSize0x20x935x590
+    terminalWindowSize0x20x995x590
     echo "•${F_Red}${Bold} Command 31: GateKeeper Management: Status, Enable or Disable, Remove app from quarantine, Self-sign the app.${No_Attributes}\n"
     # Menu
     echo " ${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
@@ -1865,7 +1865,7 @@ gateKeeperManagement() {
 
 # Command 32: Process & Memory Management: Manage Processes Using the Terminal, Terminate (Kill) a Process and Purge Memory
 processAndMemoryManagement() {
-    terminalWindowSize0x20x935x590
+    terminalWindowSize0x20x995x590
     echo "•${F_Red}${Bold} Command 32: Process & Memory Management: Manage Processes Using the Terminal, Terminate (Kill) a Process and Purge Memory.${No_Attributes}\n"
     # Menu
     echo " ${Dim}•••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
@@ -1921,7 +1921,7 @@ processAndMemoryManagement() {
 
 # Command 33: Uninstalling applications: Browsers, Microsoft Office VL, Ad blocking extension, Virtual machines
 uninstallingApplications() {
-    terminalWindowSize0x20x935x590
+    terminalWindowSize0x20x995x590
     echo "•${F_Red}${Bold} Command 33: Uninstalling applications: Browsers, Microsoft Office VL, Ad blocking extension, Virtual machines.${No_Attributes}\n"
     echo "${F_Red}${Bold}•${No_Attributes} Warning: The script automatically closes the application to be deleted and all related applications.\n"
     # Menu
@@ -1952,7 +1952,7 @@ uninstallingApplications() {
     # Uninstalling the Opera Browser ------------------------------------------------------------------------------
     if [ "$var" -eq "1" ]; then
         echo "\n•${F_Red}${Bold} Uninstalling the Opera Browser.${No_Attributes}"
-        terminalWindowSize0x20x935x590
+        terminalWindowSize0x20x995x590
         askPassword
     # Force Quit Application - If the user hasn't done so
     sudo osascript -e "tell application \"Opera\" to quit"
@@ -1992,7 +1992,7 @@ uninstallingApplications() {
     # Uninstalling the Yandex Browser -----------------------------------------------------------------------------
     if [ "$var" -eq "2" ]; then
         echo "\n•${F_Red}${Bold} Uninstalling the Yandex Browser.${No_Attributes}"
-        terminalWindowSize0x20x935x590
+        terminalWindowSize0x20x995x590
         askPassword
     # Force Quit Application - If the user hasn't done so
     sudo osascript -e "tell application \"Yandex\" to quit"
@@ -2033,7 +2033,7 @@ uninstallingApplications() {
     # Uninstalling the Mozilla Firefox ----------------------------------------------------------------------------
     if [ "$var" -eq "3" ]; then
         echo "\n•${F_Red}${Bold} Uninstalling the Mozilla Firefox.${No_Attributes}"
-        terminalWindowSize0x20x935x590
+        terminalWindowSize0x20x995x590
         askPassword
     # Force Quit Application - If the user hasn't done so
     sudo osascript -e "tell application \"Firefox\" to quit"
@@ -2074,7 +2074,7 @@ uninstallingApplications() {
     # Uninstalling the Google Chrome ------------------------------------------------------------------------------
     if [ "$var" -eq "4" ]; then
         echo "\n•${F_Red}${Bold} Uninstalling the Google Chrome.${No_Attributes}"
-        terminalWindowSize0x20x935x590
+        terminalWindowSize0x20x995x590
         askPassword
     # Force Quit Application - If the user hasn't done so
     sudo osascript -e "tell application \"Google Chrome\" to quit"
@@ -2127,7 +2127,7 @@ uninstallingApplications() {
     # Uninstalling the Microsoft Edge -----------------------------------------------------------------------------
     if [ "$var" -eq "5" ]; then
         echo "\n•${F_Red}${Bold} Uninstalling the Microsoft Edge.${No_Attributes}"
-        terminalWindowSize0x20x935x590
+        terminalWindowSize0x20x995x590
         askPassword
     # Force Quit Application - If the user hasn't done so
     sudo osascript -e "tell application \"Microsoft Edge\" to quit"
