@@ -22,7 +22,7 @@ B_Red='\033[0;101m'     # Light red
 B_Green='\033[0;102m'   # Light green
 B_Yellow='\033[0;103m'  # Light yellow
 B_Blue='\033[0;104m'    # Light blue
-B_Magenta='\033[0;105m' # Light magenta
+B_Purple='\033[0;105m'  # Light magenta
 B_Cyan='\033[0;106m'    # Light cyan
 B_White='\033[0;107m'   # White
 # Default background color
@@ -57,7 +57,7 @@ No_Attributes='\033[0m'
 showMenu() {
     terminalWindowSizeMenu
     echo "${Dim}                                                 ${Dim}${Bold}SSToolbox${No_Attributes} ${Dim}${RELEASE_VERSION}${No_Attributes}"
-    echo "${Dim}•••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••• ${F_Green}${Bold}Network ${No_Attributes}${Dim}•${No_Attributes}"
+    echo "${Dim}•••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••• ${F_Blue}${Bold}Network ${No_Attributes}${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Red}${Bold}  1${No_Attributes} ${Dim}•${No_Attributes} Custom DNS servers for Wi-Fi                                                                                                ${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Red}${Bold}  2${No_Attributes} ${Dim}•${No_Attributes} Custom DNS servers for Ethernet                                                                                             ${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Red}${Bold}  3${No_Attributes} ${Dim}•${No_Attributes} Custom ping and tracerout test IPv4/IPv6                                                                                    ${Dim}•${No_Attributes}"
@@ -73,7 +73,7 @@ showMenu() {
     echo "${Dim}•${No_Attributes}${F_Red}${Bold} 13${No_Attributes} ${Dim}•${No_Attributes} Search all processes for all users and view network data by Internet protocol TCP/UDP and version IPv4/IPv6                 ${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Red}${Bold} 14${No_Attributes} ${Dim}•${No_Attributes} Stress Test Network with ICMP-Sweep and ICMP-Flood. (This can be very hard on a network and should be used with caution)    ${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Red}${Bold} 15${No_Attributes} ${Dim}•${No_Attributes} Show information: Firewall, Wireless, Local Network, DHCP and IP and MAC Addresses of Devices on a Local Network and etc.   ${Dim}•${No_Attributes}"
-    echo "${Dim}•····•····················································································································· ${F_Green}${Bold}Tweaks ${No_Attributes}${Dim}•${No_Attributes}"
+    echo "${Dim}•····•····················································································································· ${F_Blue}${Bold}Tweaks ${No_Attributes}${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Red}${Bold} 16${No_Attributes} ${Dim}•${No_Attributes} Enable or Disable the show of Hidden files                                                                                  ${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Red}${Bold} 17${No_Attributes} ${Dim}•${No_Attributes} Enable or Disable the show of all File Extensions                                                                           ${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Red}${Bold} 18${No_Attributes} ${Dim}•${No_Attributes} Enable or Disable the show of Attachments as Icons in the Apple Mail app                                                    ${Dim}•${No_Attributes}"
@@ -85,7 +85,7 @@ showMenu() {
     echo "${Dim}•${No_Attributes}${F_Red}${Bold} 24${No_Attributes} ${Dim}•${No_Attributes} Search (Current or Previous Scope or This Mac) folder by default                                                            ${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Red}${Bold} 25${No_Attributes} ${Dim}•${No_Attributes} Enable or Disable in TextEdit the create an Untitled Document at Launch                                                     ${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Red}${Bold} 26${No_Attributes} ${Dim}•${No_Attributes} Enable or Disable copy Email addresses as 'foo@example.com' instead of 'Foo Bar <foo@example.com>' in Apple Mail app        ${Dim}•${No_Attributes}"
-    echo "${Dim}•····•·············································································· Caution: Use At Your Own Risk » ${F_Green}${Bold}OS Management ${No_Attributes}${Dim}•${No_Attributes}"
+    echo "${Dim}•····•·············································································· Caution: Use At Your Own Risk » ${F_Blue}${Bold}OS Management ${No_Attributes}${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Red}${Bold} 27${No_Attributes} ${Dim}•${No_Attributes} Logs system Management: Cleaning the Logs and Inactive memory                                   ${Dim}• • • • • • • • • • • • • • •${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Red}${Bold} 28${No_Attributes} ${Dim}•${No_Attributes} I/O system Management: Manually and Automatic Delete, Plugins Input and Output device           ${Dim}•${No_Attributes} ${F_Red}${Bold}I${No_Attributes}nstalling Xcode CLT      ${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Red}${Bold} 29${No_Attributes} ${Dim}•${No_Attributes} Kernel OS Management: Cleaning kernel Extension, Rebuild Kexts Caches, etc. (Requires a reboot) ${Dim}•${No_Attributes} ${F_Red}${Bold}U${No_Attributes}ninstalling Xcode CLT    ${Dim}•${No_Attributes}"
@@ -111,8 +111,11 @@ askPassword() {
 
 # Terminal window size Menu - move to top/left corner and resize
 terminalWindowSizeMenu() {
-    printf '\033[8;38;132t'
-    printf '\033[3;0;0t'
+    osascript -e 'tell application "Terminal" to set bounds of front window to {0, 20, 935, 590}'
+    # Change Terminal.app Profile
+    #osascript -e 'tell app "Terminal" to set current settings of first window to settings set "Basic"'
+    osascript -e 'tell app "Terminal" to set current settings of first window to settings set "Homebrew"'
+    #osascript -e 'tell app "Terminal" to set current settings of first window to settings set "Pro"'
     clear
 }
 
@@ -120,13 +123,13 @@ terminalWindowSizeMenu() {
 
 # Terminal window size 40x140 - move to top/left corner and resize
 terminalWindowSize40x140() {
-    printf '\033[8;40;140t'
+    osascript -e 'tell application "Terminal" to set bounds of front window to {0, 20, 935, 590}'
     clear
 }
 
 # Terminal window size 40x190 - move to top/left corner and resize
 terminalWindowSize40x190() {
-    printf '\033[8;40;190t'
+    osascript -e 'tell application "Terminal" to set bounds of front window to {0, 20, 1340, 590}'
     clear
 }
 
@@ -134,13 +137,13 @@ terminalWindowSize40x190() {
 
 # Terminal window size 55x140 - move to top/left corner and resize
 terminalWindowSize55x140() {
-    printf '\033[8;55;140t'
+    osascript -e 'tell application "Terminal" to set bounds of front window to {0, 20, 935, 830}'
     clear
 }
 
 # Terminal window size 55x190 - move to top/left corner and resize
 terminalWindowSize55x190() {
-    printf '\033[8;55;190t'
+    osascript -e 'tell application "Terminal" to set bounds of front window to {0, 20, 1340, 830}'
     clear
 }
 
