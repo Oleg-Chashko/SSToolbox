@@ -1922,7 +1922,7 @@ processAndMemoryManagement() {
 # Command 33: Uninstalling applications: Browsers, Microsoft Office VL, Ad blocking extension, Virtual machines
 uninstallingApplications() {
     terminalWindowSize0x20x935x590
-    echo "•${F_Red}${Bold} Command 1: Uninstalling applications: Browsers, Microsoft Office VL, Ad blocking extension, Virtual machines.${No_Attributes}\n"
+    echo "•${F_Red}${Bold} Command 33: Uninstalling applications: Browsers, Microsoft Office VL, Ad blocking extension, Virtual machines.${No_Attributes}\n"
     echo "${F_Red}${Bold}•${No_Attributes} Warning: The script automatically closes the application to be deleted and all related applications.\n"
     # Menu
     echo " ${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••• ${F_Blue}${Bold}Web browsers ${No_Attributes}${Dim}•${No_Attributes}"
