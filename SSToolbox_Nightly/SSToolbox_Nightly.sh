@@ -5,47 +5,36 @@ RELEASE_VERSION="v.0.5.3 build [09.20.2021]"
 ROOT_PASSWORD=0
 
 # Foreground
-F_Black='\033[0;30m'  # Black
 F_Red='\033[0;31m'    # Red
 F_Green='\033[0;32m'  # Green
 F_Yellow='\033[0;33m' # Yellow
 F_Blue='\033[0;34m'   # Blue
 F_Purple='\033[0;35m' # Magenta
 F_Cyan='\033[0;36m'   # Cyan
-F_White='\033[0;37m'  # White
-# Default foreground color
-No_Foreground='\033[39m'
 
 # Background
-B_Black='\033[0;100m'   # Dark gray
-B_Red='\033[0;101m'     # Light red
-B_Green='\033[0;102m'   # Light green
-B_Yellow='\033[0;103m'  # Light yellow
-B_Blue='\033[0;104m'    # Light blue
-B_Purple='\033[0;105m'  # Light magenta
-B_Cyan='\033[0;106m'    # Light cyan
-B_White='\033[0;107m'   # White
-# Default background color
-No_Background='\033[49m'
+B_Red='\033[0;101m'    # Light Red
+B_Green='\033[0;102m'  # Light Green
+B_Yellow='\033[0;103m' # Light Yellow
+B_Blue='\033[0;104m'   # Light Blue
+B_Purple='\033[0;105m' # Light Magenta
+B_Cyan='\033[0;106m'   # Light Cyan
 
 # Bold/Bright
-Bold='\033[1m'     # Bold
-No_Bold='\033[21m' # Reset Bold
+Bold='\033[1m'       # Bold
+No_Bold='\033[21m'   # Reset Bold
 # Dim
-Dim='\033[2m'     # Dim
-No_Dim='\033[22m' # Reset Dim
+Dim='\033[2m'        # Dim
+No_Dim='\033[22m'    # Reset Dim
 # Italic
 Italic='\033[3m'     # Italic
 No_Italic='\033[23m' # Reset Italic
 # Underline
-ULine='\033[4m'     # Underline
-No_ULine='\033[24m' # Reset Underlined
+ULine='\033[4m'      # Underline
+No_ULine='\033[24m'  # Reset Underlined
 # Blink
-Blink='\033[5m'     # Blink
-No_Blink='\033[25m' # Reset Blink
-# Reverse
-Reverse='\033[7m'     # Reverse
-No_Reverse='\033[27m' # Reset Reverse
+Blink='\033[5m'      # Blink
+No_Blink='\033[25m'  # Reset Blink
 # Hidden
 Hidden='\033[8m'     # Hidden
 No_Hidden='\033[28m' # Reset Hidden
@@ -55,8 +44,8 @@ No_Attributes='\033[0m'
 
 # -----------------------------------------------------------------------------------------------------------------
 
-# Menu
-showMenu() {
+# General menu
+generalMenu() {
     terminalWindowSizeMenu
     echo "${Dim}                                                 ${Dim}${Bold}SSToolbox${No_Attributes} ${Dim}${RELEASE_VERSION}${No_Attributes}"
     echo "${Dim}•••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••• ${F_Blue}${Bold}Network ${No_Attributes}${Dim}•${No_Attributes}"
@@ -87,7 +76,7 @@ showMenu() {
     echo "${Dim}•${No_Attributes}${F_Red}${Bold} 24${No_Attributes} ${Dim}•${No_Attributes} Search (Current or Previous Scope or This Mac) folder by default                                                            ${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Red}${Bold} 25${No_Attributes} ${Dim}•${No_Attributes} Enable or Disable in TextEdit the create an Untitled Document at Launch                                                     ${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Red}${Bold} 26${No_Attributes} ${Dim}•${No_Attributes} Enable or Disable copy Email addresses as 'foo@example.com' instead of 'Foo Bar <foo@example.com>' in Apple Mail app        ${Dim}•${No_Attributes}"
-    echo "${Dim}•····•·············································································· Caution: Use At Your Own Risk » ${F_Blue}${Bold}OS Management ${No_Attributes}${Dim}•${No_Attributes}"
+    echo "${Dim}•····•·············································································· ${F_Red}${Dim}Caution: Use At Your Own Risk${No_Attributes} ${Dim}»${No_Attributes} ${F_Blue}${Bold}OS Management ${No_Attributes}${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Red}${Bold} 27${No_Attributes} ${Dim}•${No_Attributes} Logs system Management: Cleaning the Logs and Inactive memory                                   ${Dim}• • • • • • • • • • • • • • •${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Red}${Bold} 28${No_Attributes} ${Dim}•${No_Attributes} I/O system Management: Manually and Automatic Delete, Plugins Input and Output device           ${Dim}•${No_Attributes} ${F_Red}${Bold}I${No_Attributes}nstalling Xcode CLT      ${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Red}${Bold} 29${No_Attributes} ${Dim}•${No_Attributes} Kernel OS Management: Cleaning kernel Extension, Rebuild Kexts Caches, etc. (Requires a reboot) ${Dim}•${No_Attributes} ${F_Red}${Bold}U${No_Attributes}ninstalling Xcode CLT    ${Dim}•${No_Attributes}"
@@ -1932,7 +1921,7 @@ processAndMemoryManagement() {
 # Main function of the script
 startScript() {
     while :; do
-        showMenu
+        generalMenu
         read "?  Please select an Command: " SELECTED_COMMAND
         case $SELECTED_COMMAND in
 
