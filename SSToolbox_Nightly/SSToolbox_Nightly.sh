@@ -1,7 +1,7 @@
 #!/bin/zsh
 
 # Attribute
-RELEASE_VERSION="v.0.5.3 build [09.20.2021]"
+RELEASE_VERSION="v.0.6.5 build [09.21.2021]"
 ROOT_PASSWORD=0
 
 # Foreground
@@ -77,12 +77,13 @@ generalMenu() {
     echo "${Dim}•${No_Attributes}${F_Red}${Bold} 25${No_Attributes} ${Dim}•${No_Attributes} Enable or Disable in TextEdit the create an Untitled Document at Launch                                                     ${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Red}${Bold} 26${No_Attributes} ${Dim}•${No_Attributes} Enable or Disable copy Email addresses as 'foo@example.com' instead of 'Foo Bar <foo@example.com>' in Apple Mail app        ${Dim}•${No_Attributes}"
     echo "${Dim}•····•·············································································· ${F_Red}${Dim}Caution: Use At Your Own Risk${No_Attributes} ${Dim}»${No_Attributes} ${F_Blue}${Bold}OS Management ${No_Attributes}${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Red}${Bold} 27${No_Attributes} ${Dim}•${No_Attributes} Logs system Management: Cleaning the Logs and Inactive memory                                   ${Dim}• • • • • • • • • • • • • • •${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Red}${Bold} 28${No_Attributes} ${Dim}•${No_Attributes} I/O system Management: Manually and Automatic Delete, Plugins Input and Output device           ${Dim}•${No_Attributes} ${F_Red}${Bold}I${No_Attributes}nstalling Xcode CLT      ${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Red}${Bold} 29${No_Attributes} ${Dim}•${No_Attributes} Kernel OS Management: Cleaning kernel Extension, Rebuild Kexts Caches, etc. (Requires a reboot) ${Dim}•${No_Attributes} ${F_Red}${Bold}U${No_Attributes}ninstalling Xcode CLT    ${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Red}${Bold} 30${No_Attributes} ${Dim}•${No_Attributes} Privacy Database Management: Custom reset apps permissions under Security and Privacy           ${Dim}•${No_Attributes} ${F_Red}${Bold}R${No_Attributes}elease/${F_Red}${Bold}N${No_Attributes}ightly Download  ${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Red}${Bold} 31${No_Attributes} ${Dim}•${No_Attributes} GateKeeper Management: Status, Enable or Disable, Remove app from Quarantine, Self-sign the app ${Dim}•${No_Attributes} ${F_Red}${Bold}A${No_Attributes}bout GitHub              ${Dim}•${No_Attributes}"
-    echo "${Dim}•${No_Attributes}${F_Red}${Bold} 32${No_Attributes} ${Dim}•${No_Attributes} Process & Memory Management: Manage Processes, Terminate (Kill) a Process and Purge Memory      ${Dim}•${No_Attributes} ${F_Red}${Bold}${Blink}Q${No_Attributes}uit                      ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Red}${Bold} 27${No_Attributes} ${Dim}•${No_Attributes} Logs system Management: Cleaning the Logs and Inactive memory                                                               ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Red}${Bold} 28${No_Attributes} ${Dim}•${No_Attributes} I/O system Management: Manually and Automatic Delete, Plugins Input and Output device           ${Dim}• • • • • • • • • • • • • • •${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Red}${Bold} 29${No_Attributes} ${Dim}•${No_Attributes} Kernel OS Management: Cleaning kernel Extension, Rebuild Kexts Caches, etc. (Requires a reboot) ${Dim}•${No_Attributes} ${F_Red}${Bold}I${No_Attributes}nstalling Xcode CLT      ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Red}${Bold} 30${No_Attributes} ${Dim}•${No_Attributes} Privacy Database Management: Custom reset apps permissions under Security and Privacy           ${Dim}•${No_Attributes} ${F_Red}${Bold}U${No_Attributes}ninstalling Xcode CLT    ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Red}${Bold} 31${No_Attributes} ${Dim}•${No_Attributes} GateKeeper Management: Status, Enable or Disable, Remove app from Quarantine, Self-sign the app ${Dim}•${No_Attributes} ${F_Red}${Bold}R${No_Attributes}elease/${F_Red}${Bold}N${No_Attributes}ightly Download  ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Red}${Bold} 32${No_Attributes} ${Dim}•${No_Attributes} Process & Memory Management: Manage Processes, Terminate (Kill) a Process and Purge Memory      ${Dim}•${No_Attributes} ${F_Red}${Bold}A${No_Attributes}bout GitHub              ${Dim}•${No_Attributes}"
+    echo "${Dim}•${No_Attributes}${F_Red}${Bold} 33${No_Attributes} ${Dim}•${No_Attributes} Uninstalling applications: Browsers, Microsoft Office, Ad blocking extension, Virtual machines  ${Dim}•${No_Attributes} ${F_Red}${Bold}${Blink}Q${No_Attributes}uit                      ${Dim}•${No_Attributes}"
     echo "${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
 }
 
@@ -109,9 +110,9 @@ askPassword() {
 # The distance in pixels from the top of the screen to the bottom of the Terminal window.
 # -----------------------------------------------------------------------------------------------------------------
 
-# Terminal window Menu size 0x20x935x590
+# Terminal window Menu size 0x20x935x610
 terminalWindowSizeMenu() {
-    osascript -e 'tell application "Terminal" to set bounds of front window to {0, 20, 935, 590}'
+    osascript -e 'tell application "Terminal" to set bounds of front window to {0, 20, 935, 610}'
 # Selecting the themes for the Terminal.app -----------------------------------------------------------------------
     #osascript -e 'tell app "Terminal" to set current settings of first window to settings set "Basic"'
     osascript -e 'tell app "Terminal" to set current settings of first window to settings set "Homebrew"'
@@ -1918,6 +1919,976 @@ processAndMemoryManagement() {
 
 # -----------------------------------------------------------------------------------------------------------------
 
+# Command 33: Uninstalling applications: Browsers, Microsoft Office VL, Ad blocking extension, Virtual machines
+uninstallingApplications() {
+    terminalWindowSize0x20x935x590
+    echo "•${F_Red}${Bold} Command 1: Uninstalling applications: Browsers, Microsoft Office VL, Ad blocking extension, Virtual machines.${No_Attributes}\n"
+    echo "${F_Red}${Bold}•${No_Attributes} Warning: The script automatically closes the application to be deleted and all related applications.\n"
+    # Menu
+    echo " ${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••• ${F_Blue}${Bold}Web browsers ${No_Attributes}${Dim}•${No_Attributes}"
+    echo " ${Dim}•${No_Attributes}${F_Red}${Bold}  1${No_Attributes} ${Dim}•${No_Attributes} Uninstalling the Opera Browser                                                        ${Dim}•${No_Attributes}"
+    echo " ${Dim}•${No_Attributes}${F_Red}${Bold}  2${No_Attributes} ${Dim}•${No_Attributes} Uninstalling the Yandex Browser                                                       ${Dim}•${No_Attributes}"
+    echo " ${Dim}•${No_Attributes}${F_Red}${Bold}  3${No_Attributes} ${Dim}•${No_Attributes} Uninstalling the Mozilla Firefox                                                      ${Dim}•${No_Attributes}"
+    echo " ${Dim}•${No_Attributes}${F_Red}${Bold}  4${No_Attributes} ${Dim}•${No_Attributes} Uninstalling the Google Chrome                                                        ${Dim}•${No_Attributes}"
+    echo " ${Dim}•${No_Attributes}${F_Red}${Bold}  5${No_Attributes} ${Dim}•${No_Attributes} Uninstalling the Microsoft Edge                                                       ${Dim}•${No_Attributes}"
+    echo " ${Dim}•····•····································································· ${F_Blue}${Bold}Microsoft Office ${No_Attributes}${Dim}•${No_Attributes}"
+    echo " ${Dim}•${No_Attributes}${F_Red}${Bold}  6${No_Attributes} ${Dim}•${No_Attributes} Uninstalling the Microsoft Word                                                       ${Dim}•${No_Attributes}"
+    echo " ${Dim}•${No_Attributes}${F_Red}${Bold}  7${No_Attributes} ${Dim}•${No_Attributes} Uninstalling the Microsoft Excel                                                      ${Dim}•${No_Attributes}"
+    echo " ${Dim}•${No_Attributes}${F_Red}${Bold}  8${No_Attributes} ${Dim}•${No_Attributes} Uninstalling the Microsoft PowerPoint                                                 ${Dim}•${No_Attributes}"
+    echo " ${Dim}•${No_Attributes}${F_Red}${Bold}  9${No_Attributes} ${Dim}•${No_Attributes} Uninstalling the Microsoft OneNote                                                    ${Dim}•${No_Attributes}"
+    echo " ${Dim}•${No_Attributes}${F_Red}${Bold} 10${No_Attributes} ${Dim}•${No_Attributes} Uninstalling the Microsoft Outlook                                                    ${Dim}•${No_Attributes}"
+    echo " ${Dim}•${No_Attributes}${F_Red}${Bold} 11${No_Attributes} ${Dim}•${No_Attributes} Uninstalling the Microsoft OneDrive                                                   ${Dim}•${No_Attributes}"
+    echo " ${Dim}•${No_Attributes}${F_Red}${Bold} 12${No_Attributes} ${Dim}•${No_Attributes} Uninstalling the Microsoft AutoUpdate                                                 ${Dim}•${No_Attributes}"
+    echo " ${Dim}•${No_Attributes}${F_Red}${Bold} 13${No_Attributes} ${Dim}•${No_Attributes} Uninstalling the Microsoft Office 2019 (volume licensed versions)                     ${Dim}•${No_Attributes}"
+    echo " ${Dim}•····•······························································· ${F_Blue}${Bold}Ad blocking extensions ${No_Attributes}${Dim}•${No_Attributes}"
+    echo " ${Dim}•${No_Attributes}${F_Red}${Bold} 14${No_Attributes} ${Dim}•${No_Attributes} Uninstalling the AdGuard for Safari extension                                         ${Dim}•${No_Attributes}"
+    echo " ${Dim}•····•····································································· ${F_Blue}${Bold}Virtual machines ${No_Attributes}${Dim}•${No_Attributes}"
+    echo " ${Dim}•${No_Attributes}${F_Red}${Bold} 15${No_Attributes} ${Dim}•${No_Attributes} Uninstalling the VMware Fusion                                                        ${Dim}•${No_Attributes}"
+    echo " ${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
+
+    printf '
+ Please select an Command: '
+    read var
+    # Uninstalling the Opera Browser ------------------------------------------------------------------------------
+    if [ "$var" -eq "1" ]; then
+        echo "\n•${F_Red}${Bold} Uninstalling the Opera Browser.${No_Attributes}"
+        terminalWindowSize0x20x935x590
+        askPassword
+    # Force Quit Application - If the user hasn't done so
+    sudo osascript -e "tell application \"Opera\" to quit"
+    echo "${No_Attributes}"
+    # Warning about Automatically close Opera Browser application.
+    echo "•${F_Red} Automatically close Opera Browser application.${No_Attributes}"
+    sleep 2 && echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
+    # Warning about Removal of Opera Browser application.
+    sleep 1 && echo "•${F_Red} Removal of Opera Browser application.${No_Attributes}\n"
+    # The script
+    remove() {
+        entry="$1"
+        if test -e "$entry"; then
+            sudo rm -rf "$entry" && echo -e "Removing $entry  [${F_Green}${Bold}Success${No_Attributes}]"
+        else
+            echo -e "Removing $entry  [${F_Yellow}${Bold}File does not exist${No_Attributes}]"
+        fi
+    }
+    # Executables
+    remove "/Applications/Opera.app"
+    # Application logs
+    remove "$HOME/Library/Logs/com.operasoftware.Opera"
+    # Preferences
+    remove "$HOME/Library/Preferences/com.operasoftware.Opera.plist"
+    # Caches
+    remove "$HOME/Library/Caches/com.operasoftware.Opera"
+    # Application Support
+    remove "$HOME/Library/Application Support/Google"
+    remove "$HOME/Library/Application Support/com.operasoftware.Opera"
+    # Saved Application State
+    remove "$HOME/Library/Saved Application State/com.operasoftware.Opera.savedState"
+    # Purge free inactive memory cache
+    sudo purge
+        echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
+    fi
+
+    # Uninstalling the Yandex Browser -----------------------------------------------------------------------------
+    if [ "$var" -eq "2" ]; then
+        echo "\n•${F_Red}${Bold} Uninstalling the Yandex Browser.${No_Attributes}"
+        terminalWindowSize0x20x935x590
+        askPassword
+    # Force Quit Application - If the user hasn't done so
+    sudo osascript -e "tell application \"Yandex\" to quit"
+    echo "${No_Attributes}"
+    # Warning about Automatically close Yandex Browser application.
+    echo "•${F_Red} Automatically close Yandex Browser application.${No_Attributes}"
+    sleep 2 && echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
+    # Warning about Removal of Yandex Browser application.
+    sleep 1 && echo "•${F_Red} Removal of Yandex Browser application.${No_Attributes}\n"
+    # The script
+    remove() {
+        entry="$1"
+        if test -e "$entry"; then
+            sudo rm -rf "$entry" && echo -e "Removing $entry  [${F_Green}${Bold}Success${No_Attributes}]"
+        else
+            echo -e "Removing $entry  [${F_Yellow}${Bold}File does not exist${No_Attributes}]"
+        fi
+    }
+    # Executables
+    remove "/Applications/Yandex.app"
+    # Application logs
+    remove "$HOME/Library/Logs/Yandex"
+    # Preferences
+    remove "$HOME/Library/Preferences/ru.yandex.desktop.yandex-browser.plist"
+    # Caches
+    remove "$HOME/.yandex"
+    remove "$HOME/Library/Caches/Yandex"
+    # Application Support
+    remove "$HOME/Library/Application Support/Google"
+    remove "$HOME/Library/Application Support/Yandex"
+    # Saved Application State
+    remove "$HOME/Library/Saved Application State/ru.yandex.desktop.yandex-browser.savedState"
+    # Purge free inactive memory cache
+    sudo purge
+    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
+    fi
+
+    # Uninstalling the Mozilla Firefox ----------------------------------------------------------------------------
+    if [ "$var" -eq "3" ]; then
+        echo "\n•${F_Red}${Bold} Uninstalling the Mozilla Firefox.${No_Attributes}"
+        terminalWindowSize0x20x935x590
+        askPassword
+    # Force Quit Application - If the user hasn't done so
+    sudo osascript -e "tell application \"Firefox\" to quit"
+    echo "${No_Attributes}"
+    # Warning about Automatically close Mozilla Firefox application.
+    echo "•${F_Red} Automatically close Mozilla Firefox application.${No_Attributes}"
+    sleep 2 && echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
+    # Warning about Removal of Mozilla Firefox application.
+    sleep 1 && echo "•${F_Red} Removal of Mozilla Firefox application.${No_Attributes}\n"
+    # The script
+    remove() {
+        entry="$1"
+        if test -e "$entry"; then
+            sudo rm -rf "$entry" && echo -e "Removing $entry  [${F_Green}${Bold}Success${No_Attributes}]"
+        else
+            echo -e "Removing $entry  [${F_Yellow}${Bold}File does not exist${No_Attributes}]"
+        fi
+    }
+    # Executables
+    remove "/Applications/Firefox.app"
+    # Application logs
+    remove "$HOME/Library/Logs/Firefox"
+    # Preferences
+    remove "$HOME/Library/Preferences/org.mozilla.firefox.plist"
+    # Caches
+    remove "$HOME/Library/Caches/Firefox"
+    remove "$HOME/Library/Caches/Mozilla"
+    # Application Support
+    remove "$HOME/Library/Application Support/Firefox"
+    remove "$HOME/Library/Application Support/Mozilla"
+    # Saved Application State
+    remove "$HOME/Library/Saved Application State/org.mozilla.firefox.savedState"
+    # Purge free inactive memory cache
+    sudo purge
+        echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
+    fi
+
+    # Uninstalling the Google Chrome ------------------------------------------------------------------------------
+    if [ "$var" -eq "4" ]; then
+        echo "\n•${F_Red}${Bold} Uninstalling the Google Chrome.${No_Attributes}"
+        terminalWindowSize0x20x935x590
+        askPassword
+    # Force Quit Application - If the user hasn't done so
+    sudo osascript -e "tell application \"Google Chrome\" to quit"
+    echo "${No_Attributes}"
+    # Warning about Automatically close Google Chrome application.
+    echo "•${F_Red} Automatically close Google Chrome application.${No_Attributes}"
+    sleep 2 && echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
+    # Warning about Removal of Google Chrome application.
+    sleep 1 && echo "•${F_Red} Removal of Google Chrome application.${No_Attributes}\n"
+    # The script
+    remove() {
+        entry="$1"
+        if test -e "$entry"; then
+            sudo rm -rf "$entry" && echo -e "Removing $entry  [${F_Green}${Bold}Success${No_Attributes}]"
+        else
+            echo -e "Removing $entry  [${F_Yellow}${Bold}File does not exist${No_Attributes}]"
+        fi
+    }
+    # Executables
+    remove "/Applications/Google Chrome.app"
+    # Application Launch Daemons
+    remove "/Library/LaunchDaemons/com.google.keystone.daemon.plist"
+    # Application Launch Agents
+    remove "/Library/LaunchAgents/com.google.keystone.agent.plist"
+    remove "/Library/LaunchAgents/com.google.keystone.xpcservice.plist"
+    # Application tmp Keyston
+    remove "/private/tmp/com.google.Keystone"
+    # Application logs
+    remove "$HOME/Library/Logs/Google Chrome"
+    # Preferences
+    remove "$HOME/Library/Preferences/com.google.Chrome.plist"
+    remove "$HOME/Library/Preferences/com.google.Keystone.Agent.plist"
+    # Caches
+    remove "/Library/Google"
+    remove "$HOME/Library/Google"
+    remove "$HOME/Library/Caches/Google"
+    remove "$HOME/Library/Caches/chrome_crashpad_handler"
+    # Application Support
+    remove "/Library/Application Support/Google"
+    remove "$HOME/Library/Application Support/Google"
+    # Application Update
+    remove "$HOME/Library/Google/GoogleSoftwareUpdate"
+    # Saved Application State
+    remove "$HOME/Library/Saved Application State/com.google.Chrome.savedState"
+    # Purge free inactive memory cache
+    sudo purge
+        echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
+    fi
+
+    # Uninstalling the Microsoft Edge -----------------------------------------------------------------------------
+    if [ "$var" -eq "5" ]; then
+        echo "\n•${F_Red}${Bold} Uninstalling the Microsoft Edge.${No_Attributes}"
+        terminalWindowSize0x20x935x590
+        askPassword
+    # Force Quit Application - If the user hasn't done so
+    sudo osascript -e "tell application \"Microsoft Edge\" to quit"
+    echo "${No_Attributes}"
+    # Warning about Automatically close Microsoft Edge application.
+    echo "•${F_Red} Automatically close Microsoft Edge application.${No_Attributes}"
+    sleep 2 && echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
+    # Warning about Removal of Microsoft Edge application.
+    sleep 1 && echo "•${F_Red} Removal of Microsoft Edge application.${No_Attributes}\n"
+    # The script
+    remove() {
+        entry="$1"
+        if test -e "$entry"; then
+            sudo rm -rf "$entry" && echo -e "Removing $entry  [${F_Green}${Bold}Success${No_Attributes}]"
+        else
+            echo -e "Removing $entry  [${F_Yellow}${Bold}File does not exist${No_Attributes}]"
+        fi
+    }
+    # Executables
+    remove "/Applications/Microsoft Edge.app"
+    # Application logs
+    remove "$HOME/Library/Logs/Microsoft Edge"
+    # Preferences
+    remove "$HOME/Library/Preferences/com.microsoft.edgemac.plist"
+    # Caches
+    remove "$HOME/Library/Caches/Microsoft Edge"
+    remove "$HOME/Library/Caches/com.microsoft.edgemac"
+    # Application Support
+    remove "$HOME/Library/Application Support/Microsoft Edge"
+    # Saved Application State
+    remove "$HOME/Library/Saved Application State/com.microsoft.edgemac.savedState"
+    # Purge free inactive memory cache
+    sudo purge
+        echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
+    fi
+
+    # Uninstalling the Microsoft Word -----------------------------------------------------------------------------
+    if [ "$var" -eq "6" ]; then
+        echo "\n•${F_Red}${Bold} Uninstalling the Microsoft Word.${No_Attributes}"
+        terminalWindowSize0x20x1340x830
+        askPassword
+    # Force Quit Application - If the user hasn't done so
+    sudo osascript -e "tell application \"Microsoft AutoUpdate\" to quit" && sleep 2
+    sudo osascript -e "tell application \"Microsoft Word\" to quit"
+    echo "${No_Attributes}"
+    # Warning about Automatically close Microsoft Word application.
+    echo "•${F_Red} Automatically close Microsoft Word application.${No_Attributes}"
+    sleep 2 && echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
+    # Warning about Removal of Microsoft Word application.
+    sleep 1 && echo "•${F_Red} Removal of Microsoft Word application.${No_Attributes}\n"
+    # The script
+    remove() {
+        entry="$1"
+        if test -e "$entry"; then
+            sudo rm -rf "$entry" && echo -e "Removing $entry  [${F_Green}${Bold}Success${No_Attributes}]"
+        else
+            echo -e "Removing $entry  [${F_Yellow}${Bold}File does not exist${No_Attributes}]"
+        fi
+    }
+    # Executables
+    remove "/Applications/Microsoft Word.app"
+    # Application Receipts
+    remove "/private/var/db/receipts/com.microsoft.package.Microsoft_Word.app.bom"
+    remove "/private/var/db/receipts/com.microsoft.package.Microsoft_Word.app.plist"
+    # Preferences
+    remove "$HOME/Library/Preferences/com.microsoft.Word.plist"
+    # Caches
+    remove "$HOME/Library/Caches/com.microsoft.Word"
+    # Application Scripts
+    remove "$HOME/Library/Application Scripts/com.microsoft.Word"
+    remove "$HOME/Library/Application Scripts/com.microsoft.openxml.word.app"
+    # Application Support
+    remove "$HOME/Library/Application Support/CloudDocs/session/containers/iCloud.com.microsoft.Office.Word"
+    remove "$HOME/Library/Application Support/CloudDocs/session/containers/iCloud.com.microsoft.Office.Word.plist"
+    remove "$HOME/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.microsoft.word.sfl2"
+    # Application Containers
+    remove "$HOME/Library/Containers/com.microsoft.Word"
+    remove "$HOME/Library/Containers/com.microsoft.openxml.Word.app"
+    # Application Group Containers
+    remove "$HOME/Library/Group Containers/UBF8T346G9.ms/Microsoft Word.MERP.params.txt"
+    remove "$HOME/Library/Group Containers/UBF8T346G9.ms/cloudPolicy/WordCloudPolicyState.plist"
+    remove "$HOME/Library/Group Containers/UBF8T346G9.Office/User Content.localized/Startup.localized/Word"
+    # Purge free inactive memory cache
+    sudo purge
+        echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
+    fi
+
+    # Uninstalling the Microsoft Excel ----------------------------------------------------------------------------
+    if [ "$var" -eq "7" ]; then
+        echo "\n•${F_Red}${Bold} Uninstalling the Microsoft Excel.${No_Attributes}"
+        terminalWindowSize0x20x1340x830
+        askPassword
+    # Force Quit Application - If the user hasn't done so
+    sudo osascript -e "tell application \"Microsoft AutoUpdate\" to quit" && sleep 2
+    sudo osascript -e "tell application \"Microsoft Excel\" to quit"
+    echo "${No_Attributes}"
+    # Warning about Automatically close Microsoft Excel application.
+    echo "•${F_Red} Automatically close Microsoft Excel application.${No_Attributes}"
+    sleep 2 && echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
+    # Warning about Removal of Microsoft Excel application.
+    sleep 1 && echo "•${F_Red} Removal of Microsoft Excel application.${No_Attributes}\n"
+    # The script
+    remove() {
+        entry="$1"
+        if test -e "$entry"; then
+            sudo rm -rf "$entry" && echo -e "Removing $entry  [${F_Green}${Bold}Success${No_Attributes}]"
+        else
+            echo -e "Removing $entry  [${F_Yellow}${Bold}File does not exist${No_Attributes}]"
+        fi
+    }
+    # Executables
+    remove "/Applications/Microsoft Excel.app"
+    # Application Receipts
+    remove "/private/var/db/receipts/com.microsoft.package.Microsoft_Excel.app.bom"
+    remove "/private/var/db/receipts/com.microsoft.package.Microsoft_Excel.app.plist"
+    # Preferences
+    remove "$HOME/Library/Preferences/com.microsoft.Excel.plist"
+    # Caches
+    remove "$HOME/Library/Caches/com.microsoft.Excel"
+    # Application Scripts
+    remove "$HOME/Library/Application Scripts/com.microsoft.Excel"
+    remove "$HOME/Library/Application Scripts/com.microsoft.openxml.excel.app"
+    # Application Support
+    remove "$HOME/Library/Application Support/CloudDocs/session/containers/iCloud.com.microsoft.Office.Excel"
+    remove "$HOME/Library/Application Support/CloudDocs/session/containers/iCloud.com.microsoft.Office.Excel.plist"
+    remove "$HOME/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.microsoft.excel.sfl2"
+    # Application Containers
+    remove "$HOME/Library/Containers/com.microsoft.Excel"
+    remove "$HOME/Library/Containers/com.microsoft.openxml.excel.app"
+    # Application Group Containers
+    remove "$HOME/Library/Group Containers/UBF8T346G9.ms/Microsoft Excel.MERP.params.txt"
+    remove "$HOME/Library/Group Containers/UBF8T346G9.ms/cloudPolicy/ExcelCloudPolicyState.plist"
+    remove "$HOME/Library/Group Containers/UBF8T346G9.Office/User Content.localized/Startup.localized/Excel"
+    # Purge free inactive memory cache
+    sudo purge
+        echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
+    fi
+
+    # Uninstalling the Microsoft PowerPoint -----------------------------------------------------------------------
+    if [ "$var" -eq "8" ]; then
+        echo "\n•${F_Red}${Bold} Uninstalling the Microsoft PowerPoint.${No_Attributes}"
+        terminalWindowSize0x20x1340x830
+        askPassword
+    # Force Quit Application - If the user hasn't done so
+    sudo osascript -e "tell application \"Microsoft AutoUpdate\" to quit" && sleep 2
+    sudo osascript -e "tell application \"Microsoft PowerPoint\" to quit"
+    echo "${No_Attributes}"
+    # Warning about Automatically close Microsoft PowerPoint application.
+    echo "•${F_Red} Automatically close Microsoft PowerPoint application.${No_Attributes}"
+    sleep 2 && echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
+    # Warning about Removal of Microsoft PowerPoint application.
+    sleep 1 && echo "•${F_Red} Removal of Microsoft PowerPoint application.${No_Attributes}\n"
+    # The script
+    remove() {
+        entry="$1"
+        if test -e "$entry"; then
+            sudo rm -rf "$entry" && echo -e "Removing $entry  [${F_Green}${Bold}Success${No_Attributes}]"
+        else
+            echo -e "Removing $entry  [${F_Yellow}${Bold}File does not exist${No_Attributes}]"
+        fi
+    }
+    # Executables
+    remove "/Applications/Microsoft PowerPoint.app"
+    # Application Receipts
+    remove "/private/var/db/receipts/com.microsoft.package.Microsoft_PowerPoint.app.bom"
+    remove "/private/var/db/receipts/com.microsoft.package.Microsoft_PowerPoint.app.plist"
+    # Preferences
+    remove "$HOME/Library/Preferences/com.microsoft.PowerPoint.plist"
+    # Caches
+    remove "$HOME/Library/Caches/com.microsoft.PowerPoint"
+    # Application Scripts
+    remove "$HOME/Library/Application Scripts/com.microsoft.Powerpoint"
+    remove "$HOME/Library/Application Scripts/com.microsoft.openxml.powerpoint.app"
+    # Application Support
+    remove "$HOME/Library/Application Support/CloudDocs/session/containers/iCloud.com.microsoft.Office.PowerPoint"
+    remove "$HOME/Library/Application Support/CloudDocs/session/containers/iCloud.com.microsoft.Office.PowerPoint.plist"
+    remove "$HOME/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.microsoft.powerpoint.sfl2"
+    # Application Containers
+    remove "$HOME/Library/Containers/com.microsoft.Powerpoint"
+    remove "$HOME/Library/Containers/com.microsoft.openxml.Powerpoint.app"
+    # Application Group Containers
+    remove "$HOME/Library/Group Containers/UBF8T346G9.ms/Microsoft PowerPoint.MERP.params.txt"
+    remove "$HOME/Library/Group Containers/UBF8T346G9.ms/cloudPolicy/PowerPointCloudPolicyState.plist"
+    remove "$HOME/Library/Group Containers/UBF8T346G9.Office/User Content.localized/Startup.localized/PowerPoint"
+    # Purge free inactive memory cache
+    sudo purge
+        echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
+    fi
+
+    # Uninstalling the Microsoft OneNote --------------------------------------------------------------------------
+    if [ "$var" -eq "9" ]; then
+        echo "\n•${F_Red}${Bold} Uninstalling the Microsoft OneNote.${No_Attributes}"
+        terminalWindowSize0x20x1340x830
+        askPassword
+    # Force Quit Application - If the user hasn't done so
+    sudo osascript -e "tell application \"Microsoft AutoUpdate\" to quit" && sleep 2
+    sudo osascript -e "tell application \"Microsoft OneNote\" to quit"
+    echo "${No_Attributes}"
+    # Warning about Automatically close Microsoft OneNote application.
+    echo "•${F_Red} Automatically close Microsoft OneNote application.${No_Attributes}"
+    sleep 2 && echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
+    # Warning about Removal of Microsoft OneNote application.
+    sleep 1 && echo "•${F_Red} Removal of Microsoft OneNote application.${No_Attributes}\n"
+    # The script
+    remove() {
+        entry="$1"
+        if test -e "$entry"; then
+            sudo rm -rf "$entry" && echo -e "Removing $entry  [${F_Green}${Bold}Success${No_Attributes}]"
+        else
+            echo -e "Removing $entry  [${F_Yellow}${Bold}File does not exist${No_Attributes}]"
+        fi
+    }
+    # Executables
+    remove "/Applications/Microsoft OneNote.app"
+    # Application Receipts
+    remove "/private/var/db/receipts/com.microsoft.package.Microsoft_OneNote.app.bom"
+    remove "/private/var/db/receipts/com.microsoft.package.Microsoft_OneNote.app.plist"
+    # Preferences
+    remove "$HOME/Library/Preferences/com.microsoft.OneNote.plist"
+    # Caches
+    remove "$HOME/Library/Caches/com.microsoft.OneNote"
+    # Application Scripts
+    remove "$HOME/Library/Application Scripts/com.microsoft.onenote.mac"
+    remove "$HOME/Library/Application Scripts/com.microsoft.onenote.mac.shareextension"
+    # Application Support
+    remove "$HOME/Library/Application Support/CloudDocs/session/containers/iCloud.com.microsoft.Office.OneNote"
+    remove "$HOME/Library/Application Support/CloudDocs/session/containers/iCloud.com.microsoft.Office.OneNote.plist"
+    remove "$HOME/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.microsoft.onenote.sfl2"
+    # Application Containers
+    remove "$HOME/Library/Containers/com.microsoft.onenote.mac"
+    remove "$HOME/Library/Containers/com.microsoft.onenote.mac.shareextension"
+    # Application Group Containers
+    remove "$HOME/Library/Group Containers/UBF8T346G9.ms/Microsoft OneNote.MERP.params.txt"
+    remove "$HOME/Library/Group Containers/UBF8T346G9.ms/cloudPolicy/OneNoteCloudPolicyState.plist"
+    remove "$HOME/Library/Group Containers/UBF8T346G9.Office/OneNote"
+    remove "$HOME/Library/Group Containers/UBF8T346G9.Office/User Content.localized/Startup.localized/OneNote"
+    # Purge free inactive memory cache
+    sudo purge
+        echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
+    fi
+
+    # Uninstalling the Microsoft Outlook --------------------------------------------------------------------------
+    if [ "$var" -eq "10" ]; then
+        echo "\n•${F_Red}${Bold} Uninstalling the Microsoft Outlook.${No_Attributes}"
+        terminalWindowSize0x20x1340x830
+        askPassword
+    # Force Quit Application - If the user hasn't done so
+    sudo osascript -e "tell application \"Microsoft AutoUpdate\" to quit" && sleep 2
+    sudo osascript -e "tell application \"Microsoft Outlook\" to quit"
+    echo "${No_Attributes}"
+    # Warning about Automatically close Microsoft Outlook application.
+    echo "•${F_Red} Automatically close Microsoft Outlook application.${No_Attributes}"
+    sleep 2 && echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
+    # Warning about Removal of Microsoft Outlook application.
+    sleep 1 && echo "•${F_Red} Removal of Microsoft Outlook application.${No_Attributes}\n"
+    # The script
+    remove() {
+        entry="$1"
+        if test -e "$entry"; then
+            sudo rm -rf "$entry" && echo -e "Removing $entry  [${F_Green}${Bold}Success${No_Attributes}]"
+        else
+            echo -e "Removing $entry  [${F_Yellow}${Bold}File does not exist${No_Attributes}]"
+        fi
+    }
+    # Executables
+    remove "/Applications/Microsoft Outlook.app"
+    # Application Receipts
+    remove "/private/var/db/receipts/com.microsoft.package.Microsoft_Outlook.app.bom"
+    remove "/private/var/db/receipts/com.microsoft.package.Microsoft_Outlook.app.plist"
+    # Preferences
+    remove "$HOME/Library/Preferences/com.microsoft.Outlook.plist"
+    # Caches
+    remove "$HOME/Library/Caches/com.microsoft.Outlook"
+    # Application Scripts
+    remove "$HOME/Library/Application Scripts/com.microsoft.Outlook"
+    remove "$HOME/Library/Application Scripts/com.microsoft.Outlook.CalendarWidget"
+    # Application Support
+    remove "$HOME/Library/Application Support/CloudDocs/session/containers/iCloud.com.microsoft.Office.Outlook"
+    remove "$HOME/Library/Application Support/CloudDocs/session/containers/iCloud.com.microsoft.Office.Outlook.plist"
+    remove "$HOME/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.microsoft.outlook.sfl2"
+    # Application Containers
+    remove "$HOME/Library/Containers/com.microsoft.Outlook"
+    remove "$HOME/Library/Containers/com.microsoft.Outlook.CalendarWidget"
+    # Application Group Containers
+    remove "$HOME/Library/Group Containers/UBF8T346G9.Office/Outlook"
+    remove "$HOME/Library/Group Containers/UBF8T346G9.Office/OutlookProfile.plist"
+    remove "$HOME/Library/Group Containers/UBF8T346G9.ms/Microsoft Outlook.MERP.params.txt"
+    remove "$HOME/Library/Group Containers/UBF8T346G9.ms/cloudPolicy/OutlookCloudPolicyState.plist"
+    remove "$HOME/Library/Group Containers/UBF8T346G9.Office/User Content.localized/Startup.localized/Outlook"
+    # Delete a Login Item
+    osascript -e 'tell application "System Events" to delete login item "Microsoft Outlook"'
+    # Purge free inactive memory cache
+    sudo purge
+        echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
+    fi
+
+    # Uninstalling the Microsoft OneDrive -------------------------------------------------------------------------
+    if [ "$var" -eq "11" ]; then
+        echo "\n•${F_Red}${Bold} Uninstalling the Microsoft OneDrive.${No_Attributes}"
+        terminalWindowSize0x20x1340x830
+        askPassword
+    # Force Quit Application - If the user hasn't done so
+    sudo osascript -e "tell application \"Microsoft AutoUpdate\" to quit" && sleep 2
+    sudo osascript -e "tell application \"OneDrive\" to quit"
+    echo "${No_Attributes}"
+    # Warning about Automatically close Microsoft OneDrive application.
+    echo "•${F_Red} Automatically close Microsoft OneDrive application.${No_Attributes}"
+    sleep 2 && echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
+    # Warning about Removal of Microsoft Outlook application.
+    sleep 1 && echo "•${F_Red} Removal of Microsoft OneDrive application.${No_Attributes}\n"
+    # The script
+    remove() {
+        entry="$1"
+        if test -e "$entry"; then
+            sudo rm -rf "$entry" && echo -e "Removing $entry  [${F_Green}${Bold}Success${No_Attributes}]"
+        else
+            echo -e "Removing $entry  [${F_Yellow}${Bold}File does not exist${No_Attributes}]"
+        fi
+    }
+    # Executables
+    remove "/Applications/OneDrive.app"
+    # Application Receipts
+    remove "/private/var/db/receipts/com.microsoft.OneDrive.bom"
+    remove "/private/var/db/receipts/com.microsoft.OneDrive.plist"
+    # Application Launch Daemons and Agents
+    remove "/Library/LaunchDaemons/com.microsoft.OneDriveUpdaterDaemon.plist"
+    remove "/Library/LaunchDaemons/com.microsoft.OneDriveStandaloneUpdaterDaemon.plist"
+    remove "/Library/LaunchAgents/com.microsoft.OneDriveStandaloneUpdater.plist"
+    # Application logs
+    remove "/Library/Logs/Microsoft/OneDrive"
+    remove "$HOME/Library/Logs/OneDrive"
+    # Preferences
+    remove "$HOME/Library/Preferences/com.microsoft.OneDrive.plist"
+    remove "$HOME/Library/Preferences/com.microsoft.OneDriveUpdater.plist"
+    remove "$HOME/Library/Preferences/com.microsoft.OneDriveStandaloneUpdater.plist"
+    remove "$HOME/Library/Preferences/UBF8T346G9.OfficeOneDriveSyncIntegration.plist"
+    # Caches
+    remove "$HOME/Library/Caches/OneDrive"
+    remove "$HOME/Library/Caches/com.microsoft.OneDrive"
+    remove "$HOME/Library/Caches/com.microsoft.OneDriveStandaloneUpdater"
+    remove "$HOME/Library/Caches/com.microsoft.OneDriveUpdater"
+    remove "$HOME/Library/Caches/com.plausiblelabs.crashreporter.data/com.microsoft.OneDriveUpdater"
+    remove "$HOME/Library/Caches/com.plausiblelabs.crashreporter.data/com.microsoft.OneDrive"
+    remove "$HOME/Library/Caches/com.plausiblelabs.crashreporter.data/com.microsoft.OneDriveStandaloneUpdater"
+    # Application Scripts
+    remove "$HOME/Library/Application Scripts/com.microsoft.OneDriveLauncher"
+    remove "$HOME/Library/Application Scripts/com.microsoft.OneDrive.FinderSync"
+    remove "$HOME/Library/Application Scripts/com.microsoft.OneDrive.FileProvider"
+    # Application Support
+    remove "$HOME/Library/Application Support/com.microsoft.OneDrive"
+    remove "$HOME/Library/Application Support/com.microsoft.OneDriveUpdater"
+    remove "$HOME/Library/Application Support/com.microsoft.OneDriveStandaloneUpdater"
+    remove "$HOME/Library/Application Support/OneDrive"
+    remove "$HOME/Library/Application Support/OneDriveUpdater"
+    remove "$HOME/Library/Application Support/OneDriveStandaloneUpdater"
+    remove "$HOME/Library/Application Support/FileProvider/com.microsoft.OneDrive.FileProvider"
+    # Application Containers
+    remove "$HOME/Library/Containers/com.microsoft.OneDriveLauncher"
+    remove "$HOME/Library/Containers/com.microsoft.OneDrive.FinderSync"
+    remove "$HOME/Library/Containers/com.microsoft.OneDrive.FileProvider"
+    # Application Group Containers
+    remove "$HOME/Library/Group Containers/UBF8T346G9.OneDriveStandaloneSuite"
+    remove "$HOME/Library/Group Containers/UBF8T346G9.OfficeOneDriveSyncIntegration"
+    # Application HTTPStorages
+    remove "$HOME/Library/HTTPStorages/com.microsoft.OneDrive.binarycookies"
+    remove "$HOME/Library/HTTPStorages/com.microsoft.OneDriveUpdater.binarycookies"
+    remove "$HOME/Library/HTTPStorages/com.microsoft.OneDriveStandaloneUpdater.binarycookies"
+    # Application WebKit
+    remove "$HOME/Library/WebKit/com.microsoft.OneDrive"
+    # Delete a Login Item
+    osascript -e 'tell application "System Events" to delete login item "OneDrive"'
+    # Purge free inactive memory cache
+    sudo purge
+        echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
+    fi
+
+    # Uninstalling the Microsoft AutoUpdate -----------------------------------------------------------------------
+    if [ "$var" -eq "12" ]; then
+        echo "\n•${F_Red}${Bold} Uninstalling the Microsoft AutoUpdate.${No_Attributes}"
+        terminalWindowSize0x20x1340x830
+        askPassword
+    # Force Quit Application - If the user hasn't done so
+    sudo osascript -e "tell application \"Microsoft AutoUpdate\" to quit"
+    echo "${No_Attributes}"
+    # Warning about Automatically close Microsoft AutoUpdate application.
+    echo "•${F_Red} Automatically close Microsoft AutoUpdate application.${No_Attributes}"
+    sleep 2 && echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
+    # Warning about Removal of Microsoft AutoUpdate application.
+    sleep 1 && echo "•${F_Red} Removal of Microsoft AutoUpdate application.${No_Attributes}\n"
+    # The script
+    remove() {
+        entry="$1"
+        if test -e "$entry"; then
+            sudo rm -rf "$entry" && echo -e "Removing $entry  [${F_Green}${Bold}Success${No_Attributes}]"
+        else
+            echo -e "Removing $entry  [${F_Yellow}${Bold}File does not exist${No_Attributes}]"
+        fi
+    }
+    # Executables
+    remove "/Library/Application Support/Microsoft/MAU2.0/Microsoft AutoUpdate.app"
+    # Application Receipts
+    remove "/private/var/db/receipts/com.microsoft.package.Microsoft_AutoUpdate.app.bom"
+    remove "/private/var/db/receipts/com.microsoft.package.Microsoft_AutoUpdate.app.plist"
+    # Application Launch Daemons and Agents
+    remove "/Library/LaunchDaemons/com.microsoft.autoupdate.helper.plist"
+    # Application Privileged Helper Tools
+    remove "/Library/PrivilegedHelperTools/com.microsoft.autoupdate.helper"
+    # Application Logs
+    remove "/Library/Logs/Microsoft/autoupdate.log"
+    # Preferences
+    remove "/Library/Preferences/com.microsoft.autoupdate2.plist"
+    remove "$HOME/Library/Preferences/com.microsoft.autoupdate2.plist"
+    remove "$HOME/Library/Preferences/com.microsoft.autoupdate.fba.plist"
+    # Caches
+    remove "/Library/Caches/com.microsoft.autoupdate.helper"
+    remove "$HOME/Library/Caches/com.microsoft.autoupdate2"
+    remove "$HOME/Library/Caches/com.microsoft.autoupdate.fba"
+    remove "$HOME/Library/Caches/Microsoft/uls/com.microsoft.autoupdate2"
+    remove "$HOME/Library/Caches/Microsoft/uls/com.microsoft.autoupdate.fba"
+    # Application Group Containers
+    remove "$HOME/Library/Group Containers/UBF8T346G9.ms/com.microsoft.autoupdate.fba"
+    remove "$HOME/Library/Group Containers/UBF8T346G9.ms/com.microsoft.autoupdate2"
+    remove "$HOME/Library/Group Containers/UBF8T346G9.ms/Microsoft AutoUpdate.MERP.params.txt"
+    # Purge free inactive memory cache
+    sudo purge
+        echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
+    fi
+
+    # Uninstalling the Microsoft Office 2019 (volume licensed versions) -------------------------------------------
+    if [ "$var" -eq "13" ]; then
+        echo "\n•${F_Red}${Bold} Uninstalling the Microsoft Office 2019 (volume licensed versions).${No_Attributes}"
+        terminalWindowSize0x20x1340x830
+        askPassword
+    # Force Quit Applications - If the user hasn't done so
+    sudo osascript -e "tell application \"Microsoft AutoUpdate\" to quit" && sleep 2
+    sudo osascript -e "tell application \"Microsoft Word\" to quit"
+    sudo osascript -e "tell application \"Microsoft Excel\" to quit"
+    sudo osascript -e "tell application \"Microsoft PowerPoint\" to quit"
+    sudo osascript -e "tell application \"Microsoft OneNote\" to quit"
+    sudo osascript -e "tell application \"Microsoft Outlook\" to quit"
+    sudo osascript -e "tell application \"OneDrive\" to quit"
+    echo "${No_Attributes}"
+    # Warning about Automatically close Microsoft Office VL applications.
+    echo "•${F_Red} Automatically close Microsoft Office VL applications.${No_Attributes}"
+    sleep 2 && echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
+    # Warning about Removal of Microsoft Office VL applications.
+    sleep 1 && echo "•${F_Red} Removal of Microsoft Office VL: Word, Excel, PowerPoint, OneNote, Outlook, OneDrive, Microsoft AutoUpdate and Office Volume License applications.${No_Attributes}\n"
+    # The script
+    remove() {
+        entry="$1"
+        if test -e "$entry"; then
+            sudo rm -rf "$entry" && echo -e "Removing $entry  [${F_Green}${Bold}Success${No_Attributes}]"
+        else
+            echo -e "Removing $entry  [${F_Yellow}${Bold}File does not exist${No_Attributes}]"
+        fi
+    }
+    # Executables
+    remove "/Library/Application Support/Microsoft/MAU2.0/Microsoft AutoUpdate.app" && sleep 2
+    remove "/Applications/Microsoft Word.app"
+    remove "/Applications/Microsoft Excel.app"
+    remove "/Applications/Microsoft PowerPoint.app"
+    remove "/Applications/Microsoft OneNote.app"
+    remove "/Applications/Microsoft Outlook.app"
+    remove "/Applications/OneDrive.app"
+    # Application Receipts
+    remove "/private/var/db/receipts/com.microsoft.package.Microsoft_Word.app.bom"
+    remove "/private/var/db/receipts/com.microsoft.package.Microsoft_Word.app.plist"
+    remove "/private/var/db/receipts/com.microsoft.package.Microsoft_Excel.app.bom"
+    remove "/private/var/db/receipts/com.microsoft.package.Microsoft_Excel.app.plist"
+    remove "/private/var/db/receipts/com.microsoft.package.Microsoft_PowerPoint.app.bom"
+    remove "/private/var/db/receipts/com.microsoft.package.Microsoft_PowerPoint.app.plist"
+    remove "/private/var/db/receipts/com.microsoft.package.Microsoft_OneNote.app.bom"
+    remove "/private/var/db/receipts/com.microsoft.package.Microsoft_OneNote.app.plist"
+    remove "/private/var/db/receipts/com.microsoft.package.Microsoft_Outlook.app.bom"
+    remove "/private/var/db/receipts/com.microsoft.package.Microsoft_Outlook.app.plist"
+    remove "/private/var/db/receipts/com.microsoft.OneDrive.bom"
+    remove "/private/var/db/receipts/com.microsoft.OneDrive.plist"
+    remove "/private/var/db/receipts/com.microsoft.package.Microsoft_AutoUpdate.app.bom"
+    remove "/private/var/db/receipts/com.microsoft.package.Microsoft_AutoUpdate.app.plist"
+    # Application Launch Daemons and Agents
+    remove "/Library/LaunchAgents/com.microsoft.update.agent.plist"
+    remove "/Library/LaunchDaemons/com.microsoft.OneDriveUpdaterDaemon.plist"
+    remove "/Library/LaunchDaemons/com.microsoft.OneDriveStandaloneUpdaterDaemon.plist"
+    remove "/Library/LaunchAgents/com.microsoft.OneDriveStandaloneUpdater.plist"
+    remove "/Library/LaunchDaemons/com.microsoft.autoupdate.helper.plist"
+    # Application Privileged Helper Tools
+    remove "/Library/PrivilegedHelperTools/com.microsoft.autoupdate.helper"
+    # Application logs
+    remove "/Library/Logs/Microsoft"
+    remove "/Library/Logs/Microsoft/OneDrive"
+    remove "$HOME/Library/Logs/OneDrive"
+    remove "/Library/Logs/Microsoft/autoupdate.log"
+    # Preferences
+    remove "$HOME/Library/Preferences/com.microsoft.shared.plist"
+    remove "$HOME/Library/Preferences/com.microsoft.office.plist"
+    remove "$HOME/Library/Preferences/com.microsoft.Word.plist"
+    remove "$HOME/Library/Preferences/com.microsoft.Excel.plist"
+    remove "$HOME/Library/Preferences/com.microsoft.PowerPoint.plist"
+    remove "$HOME/Library/Preferences/com.microsoft.OneNote.plist"
+    remove "$HOME/Library/Preferences/com.microsoft.Outlook.plist"
+    remove "$HOME/Library/Preferences/com.microsoft.OneDrive.plist"
+    remove "$HOME/Library/Preferences/com.microsoft.OneDriveUpdater.plist"
+    remove "$HOME/Library/Preferences/com.microsoft.OneDriveStandaloneUpdater.plist"
+    remove "$HOME/Library/Preferences/UBF8T346G9.OfficeOneDriveSyncIntegration.plist"
+    remove "/Library/Preferences/com.microsoft.autoupdate2.plist"
+    remove "$HOME/Library/Preferences/com.microsoft.autoupdate2.plist"
+    remove "$HOME/Library/Preferences/com.microsoft.autoupdate.fba.plist"
+    # Caches
+    remove "$HOME/Library/Caches/Microsoft"
+    remove "$HOME/Library/Caches/com.microsoft.Word"
+    remove "$HOME/Library/Caches/com.microsoft.Excel"
+    remove "$HOME/Library/Caches/com.microsoft.PowerPoint"
+    remove "$HOME/Library/Caches/com.microsoft.OneNote"
+    remove "$HOME/Library/Caches/com.microsoft.Outlook"
+    remove "$HOME/Library/Caches/OneDrive"
+    remove "$HOME/Library/Caches/com.microsoft.OneDrive"
+    remove "$HOME/Library/Caches/com.microsoft.OneDriveStandaloneUpdater"
+    remove "$HOME/Library/Caches/com.microsoft.OneDriveUpdater"
+    remove "$HOME/Library/Caches/com.plausiblelabs.crashreporter.data/com.microsoft.OneDriveUpdater"
+    remove "$HOME/Library/Caches/com.plausiblelabs.crashreporter.data/com.microsoft.OneDrive"
+    remove "$HOME/Library/Caches/com.plausiblelabs.crashreporter.data/com.microsoft.OneDriveStandaloneUpdater"
+    remove "/Library/Caches/com.microsoft.autoupdate.helper"
+    remove "$HOME/Library/Caches/com.microsoft.autoupdate2"
+    remove "$HOME/Library/Caches/com.microsoft.autoupdate.fba"
+    remove "$HOME/Library/Caches/Microsoft/uls/com.microsoft.autoupdate2"
+    remove "$HOME/Library/Caches/Microsoft/uls/com.microsoft.autoupdate.fba"
+    # Application Scripts
+    remove "$HOME/Library/Application Scripts/com.microsoft.errorreporting"
+    remove "$HOME/Library/Application Scripts/com.microsoft.SkyDriveLauncher"
+    remove "$HOME/Library/Application Scripts/com.microsoft.Microsoft-Mashup-Container"
+    remove "$HOME/Library/Application Scripts/com.microsoft.Word"
+    remove "$HOME/Library/Application Scripts/com.microsoft.openxml.word.app"
+    remove "$HOME/Library/Application Scripts/com.microsoft.Excel"
+    remove "$HOME/Library/Application Scripts/com.microsoft.openxml.excel.app"
+    remove "$HOME/Library/Application Scripts/com.microsoft.Powerpoint"
+    remove "$HOME/Library/Application Scripts/com.microsoft.openxml.powerpoint.app"
+    remove "$HOME/Library/Application Scripts/com.microsoft.onenote.mac"
+    remove "$HOME/Library/Application Scripts/com.microsoft.onenote.mac.shareextension"
+    remove "$HOME/Library/Application Scripts/com.microsoft.Outlook"
+    remove "$HOME/Library/Application Scripts/com.microsoft.Outlook.CalendarWidget"
+    remove "$HOME/Library/Application Scripts/com.microsoft.OneDriveLauncher"
+    remove "$HOME/Library/Application Scripts/com.microsoft.OneDrive.FinderSync"
+    remove "$HOME/Library/Application Scripts/com.microsoft.OneDrive.FileProvider"
+    # Application Support
+    remove "/Library/Application Support/Microsoft"
+    remove "$HOME/Library/Application Support/Microsoft"
+    remove "$HOME/Library/Application Support/CloudDocs/session/containers/iCloud.com.microsoft.skydrive"
+    remove "$HOME/Library/Application Support/CloudDocs/session/containers/iCloud.com.microsoft.skydrive.plist"
+    remove "$HOME/Library/Application Support/CloudDocs/session/containers/iCloud.com.microsoft.lync2013.iphone"
+    remove "$HOME/Library/Application Support/CloudDocs/session/containers/iCloud.com.microsoft.lync2013.iphone.plist"
+    remove "$HOME/Library/Application Support/CloudDocs/session/containers/iCloud.com.microsoft.Office.Word"
+    remove "$HOME/Library/Application Support/CloudDocs/session/containers/iCloud.com.microsoft.Office.Word.plist"
+    remove "$HOME/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.microsoft.word.sfl2"
+    remove "$HOME/Library/Application Support/CloudDocs/session/containers/iCloud.com.microsoft.Office.Excel"
+    remove "$HOME/Library/Application Support/CloudDocs/session/containers/iCloud.com.microsoft.Office.Excel.plist"
+    remove "$HOME/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.microsoft.excel.sfl2"
+    remove "$HOME/Library/Application Support/CloudDocs/session/containers/iCloud.com.microsoft.Office.PowerPoint"
+    remove "$HOME/Library/Application Support/CloudDocs/session/containers/iCloud.com.microsoft.Office.PowerPoint.plist"
+    remove "$HOME/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.microsoft.powerpoint.sfl2"
+    remove "$HOME/Library/Application Support/CloudDocs/session/containers/iCloud.com.microsoft.Office.OneNote"
+    remove "$HOME/Library/Application Support/CloudDocs/session/containers/iCloud.com.microsoft.Office.OneNote.plist"
+    remove "$HOME/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.microsoft.onenote.sfl2"
+    remove "$HOME/Library/Application Support/CloudDocs/session/containers/iCloud.com.microsoft.Office.Outlook"
+    remove "$HOME/Library/Application Support/CloudDocs/session/containers/iCloud.com.microsoft.Office.Outlook.plist"
+    remove "$HOME/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.microsoft.outlook.sfl2"
+    remove "$HOME/Library/Application Support/com.microsoft.OneDrive"
+    remove "$HOME/Library/Application Support/com.microsoft.OneDriveUpdater"
+    remove "$HOME/Library/Application Support/com.microsoft.OneDriveStandaloneUpdater"
+    remove "$HOME/Library/Application Support/OneDrive"
+    remove "$HOME/Library/Application Support/OneDriveUpdater"
+    remove "$HOME/Library/Application Support/OneDriveStandaloneUpdater"
+    remove "$HOME/Library/Application Support/FileProvider/com.microsoft.OneDrive.FileProvider"
+    # Application Containers
+    remove "$HOME/Library/Containers/com.microsoft.errorreporting"
+    remove "$HOME/Library/Containers/com.microsoft.SkyDriveLauncher"
+    remove "$HOME/Library/Containers/com.microsoft.Microsoft-Mashup-Container"
+    remove "$HOME/Library/Containers/com.microsoft.Word"
+    remove "$HOME/Library/Containers/com.microsoft.openxml.Word.app"
+    remove "$HOME/Library/Containers/com.microsoft.Excel"
+    remove "$HOME/Library/Containers/com.microsoft.openxml.excel.app"
+    remove "$HOME/Library/Containers/com.microsoft.Powerpoint"
+    remove "$HOME/Library/Containers/com.microsoft.openxml.Powerpoint.app"
+    remove "$HOME/Library/Containers/com.microsoft.onenote.mac"
+    remove "$HOME/Library/Containers/com.microsoft.onenote.mac.shareextension"
+    remove "$HOME/Library/Containers/com.microsoft.Outlook"
+    remove "$HOME/Library/Containers/com.microsoft.Outlook.CalendarWidget"
+    remove "$HOME/Library/Containers/com.microsoft.OneDriveLauncher"
+    remove "$HOME/Library/Containers/com.microsoft.OneDrive.FinderSync"
+    remove "$HOME/Library/Containers/com.microsoft.OneDrive.FileProvider"
+    # Application Group Containers
+    remove "$HOME/Library/Group Containers/UBF8T346G9.ms"
+    remove "$HOME/Library/Group Containers/UBF8T346G9.Office"
+    remove "$HOME/Library/Group Containers/UBF8T346G9.OfficeOsfWebHost"
+    remove "$HOME/Library/Group Containers/UBF8T346G9.OneDriveStandaloneSuite"
+    remove "$HOME/Library/Group Containers/UBF8T346G9.OfficeOneDriveSyncintegration"
+    # Application HTTPStorages
+    remove "$HOME/Library/HTTPStorages/com.microsoft.OneDrive.binarycookies"
+    remove "$HOME/Library/HTTPStorages/com.microsoft.OneDriveUpdater.binarycookies"
+    remove "$HOME/Library/HTTPStorages/com.microsoft.OneDriveStandaloneUpdater.binarycookies"
+    # Application WebKit
+    remove "$HOME/Library/WebKit/com.microsoft.OneDrive"
+    # Keychains
+    remove "$HOME/Library/Keychains/Microsoft_Entity_Certificates-db"
+    # Microsoft Office Volume License (VL) Serializer
+    # Application Preferences
+    remove "/Library/Preferences/com.microsoft.office.licensingV2.plist"
+    # Application Launch Daemons
+    remove "/Library/LaunchDaemons/com.microsoft.office.licensingV2.helper.plist"
+    # Application Privileged Helper Tools
+    remove "/Library/PrivilegedHelperTools/com.microsoft.office.licensingV2.helper"
+    # Delete a Login Item
+    osascript -e 'tell application "System Events" to delete login item "Microsoft Outlook"'
+    osascript -e 'tell application "System Events" to delete login item "OneDrive"'
+    # Purge free inactive memory cache
+    sudo purge
+        echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
+    fi
+
+    # Uninstalling the AdGuard for Safari extension ---------------------------------------------------------------
+    if [ "$var" -eq "14" ]; then
+        echo "\n•${F_Red}${Bold} Uninstalling the AdGuard for Safari extension.${No_Attributes}"
+        terminalWindowSize0x20x1340x830
+        askPassword
+    # Force Quit Applications - If the user hasn't done so
+    sudo osascript -e "tell application \"Safari\" to quit"
+    sudo osascript -e "tell application \"AdGuard for Safari\" to quit"
+    echo "${No_Attributes}"
+    # Warning about Automatically close Safari and the AdGuard applications.
+    echo "•${F_Red} Automatically close Safari and the AdGuard applications.${No_Attributes}"
+    sleep 2 && echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
+    # Warning about Removal of AdGuard application.
+    sleep 1 && echo "•${F_Red} Removal of AdGuard application.${No_Attributes}\n"
+    # The script
+    remove() {
+        entry="$1"
+        if test -e "$entry"; then
+            sudo rm -rf "$entry" && echo -e "Removing $entry  [${F_Green}${Bold}Success${No_Attributes}]"
+        else
+            echo -e "Removing $entry  [${F_Yellow}${Bold}File does not exist${No_Attributes}]"
+        fi
+    }
+    # Executables
+    remove "/Applications/AdGuard for Safari.app"
+    # Application logs
+    remove "$HOME/Library/Logs/AdGuardSafariApp"
+    # Preferences
+    remove "$HOME/Library/Preferences/com.adguard.safari.AdGuard.plist"
+    # Caches
+    remove "$HOME/Library/Saved Application State/com.adguard.safari.AdGuard.savedState"
+    # Application Scripts
+    remove "$HOME/Library/Application Scripts/com.adguard.safari.AdGuard.Extension"
+    remove "$HOME/Library/Application Scripts/com.adguard.safari.AdGuard.login-helper"
+    remove "$HOME/Library/Application Scripts/com.adguard.safari.AdGuard.BlockerOther"
+    remove "$HOME/Library/Application Scripts/com.adguard.safari.AdGuard.BlockerSocial"
+    remove "$HOME/Library/Application Scripts/com.adguard.safari.AdGuard.BlockerCustom"
+    remove "$HOME/Library/Application Scripts/com.adguard.safari.AdGuard.BlockerPrivacy"
+    remove "$HOME/Library/Application Scripts/com.adguard.safari.AdGuard.BlockerSecurity"
+    remove "$HOME/Library/Application Scripts/com.adguard.safari.AdGuard.AdvancedBlocking"
+    remove "$HOME/Library/Application Scripts/com.adguard.safari.AdGuard.BlockerExtension"
+    # Application Support
+    remove "$HOME/Library/Application Support/AdGuardSafariApp"
+    # Application Containers
+    remove "$HOME/Library/Containers/com.adguard.safari.AdGuard.Extension"
+    remove "$HOME/Library/Containers/com.adguard.safari.AdGuard.BlockerOther"
+    remove "$HOME/Library/Containers/com.adguard.safari.AdGuard.login-helper"
+    remove "$HOME/Library/Containers/com.adguard.safari.AdGuard.BlockerCustom"
+    remove "$HOME/Library/Containers/com.adguard.safari.AdGuard.BlockerSocial"
+    remove "$HOME/Library/Containers/com.adguard.safari.AdGuard.BlockerPrivacy"
+    remove "$HOME/Library/Containers/com.adguard.safari.AdGuard.BlockerSecurity"
+    remove "$HOME/Library/Containers/com.adguard.safari.AdGuard.BlockerExtension"
+    remove "$HOME/Library/Containers/com.adguard.safari.AdGuard.AdvancedBlocking"
+    # Application Group Containers
+    remove "$HOME/Library/Group Containers/TC3Q7MAJXF.com.adguard.safari.AdGuard"
+    # Web Browser Extensions
+    remove "$HOME/Library/Containers/com.apple.Safari/Data/Library/WebKit/ContentExtensions/ContentExtension-com.adguard.safari.AdGuard.BlockerOther"
+    remove "$HOME/Library/Containers/com.apple.Safari/Data/Library/WebKit/ContentExtensions/ContentExtension-com.adguard.safari.AdGuard.BlockerSocial"
+    remove "$HOME/Library/Containers/com.apple.Safari/Data/Library/WebKit/ContentExtensions/ContentExtension-com.adguard.safari.AdGuard.BlockerCustom"
+    remove "$HOME/Library/Containers/com.apple.Safari/Data/Library/WebKit/ContentExtensions/ContentExtension-com.adguard.safari.AdGuard.BlockerPrivacy"
+    remove "$HOME/Library/Containers/com.apple.Safari/Data/Library/WebKit/ContentExtensions/ContentExtension-com.adguard.safari.AdGuard.BlockerSecurity"
+    remove "$HOME/Library/Containers/com.apple.Safari/Data/Library/WebKit/ContentExtensions/ContentExtension-com.adguard.safari.AdGuard.BlockerExtension"
+    # Purge free inactive memory cache
+    sudo purge
+        echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
+    fi
+
+    # Uninstalling the VMware Fusion ------------------------------------------------------------------------------
+    if [ "$var" -eq "15" ]; then
+        echo "\n•${F_Red}${Bold} Uninstalling the VMware Fusion.${No_Attributes}"
+        terminalWindowSize0x20x1340x830
+        askPassword
+    # Force Quit Application - If the user hasn't done so
+    sudo osascript -e "tell application \"VMware Fusion\" to quit"
+    echo "${No_Attributes}"
+    # Warning about Automatically close VMware Fusion application.
+    echo "•${F_Red} Automatically close VMware Fusion application.${No_Attributes}"
+    sleep 2 && echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
+    # Warning about Removal of VMware Fusion application.
+    sleep 1 && echo "•${F_Red} Removal of VMware Fusion application.${No_Attributes}\n"
+    # The script
+    remove() {
+        entry="$1"
+        if test -e "$entry"; then
+            sudo rm -rf "$entry" && echo -e "Removing $entry  [${F_Green}${Bold}Success${No_Attributes}]"
+        else
+            echo -e "Removing $entry  [${F_Yellow}${Bold}File does not exist${No_Attributes}]"
+        fi
+    }
+    # Executables
+    remove "/Applications/VMware Fusion.app"
+    # Application var and etc.
+    remove "/private/var/db/vmware"
+    remove "/private/var/run/vmware"
+    remove "/private/var/run/VMware Fusion Services.lock"
+    remove "/private/var/run/VMware Fusion Services.sock"
+    remove "/private/var/root/Library/Logs/VMware"
+    remove "/private/var/root/Library/Preferences/VMware Fusion"
+    remove "/private/etc/paths.d/com.vmware.fusion.public"
+    # Application BootCaches
+    remove "/var/db/BootCaches/*/app.com.vmware.fusion.playlist"
+    # Application logs
+    remove "/Library/Logs/VMware"
+    remove "/Library/Logs/VMware Fusion Services.log"
+    remove "$HOME/Library/Logs/VMware"
+    remove "$HOME/Library/Logs/VMware Fusion"
+    remove "$HOME/Library/Logs/VMware Graphics Service.log"
+    remove "$HOME/Library/Logs/VMware Fusion Applications Menu"
+    # Preferences
+    remove "/Library/Preferences/VMware Fusion"
+    remove "$HOME/Library/Preferences/VMware Fusion"
+    remove "$HOME/Library/Preferences/com.vmware.fusion.plist"
+    remove "$HOME/Library/Preferences/com.vmware.fusion.plist.lockfile"
+    remove "$HOME/Library/Preferences/com.vmware.fusion.LSSharedFileList.plist"
+    remove "$HOME/Library/Preferences/com.vmware.fusion.LSSharedFileList.plist.lockfile"
+    remove "$HOME/Library/Preferences/com.vmware.fusionApplicationsMenu.plist"
+    remove "$HOME/Library/Preferences/com.vmware.fusionApplicationsMenu.helper.plist"
+    remove "$HOME/Library/Preferences/com.vmware.fusionDaemon.plist"
+    remove "$HOME/Library/Preferences/com.vmware.fusionDaemon.plist.lockfile"
+    remove "$HOME/Library/Preferences/com.vmware.fusionStartMenu.plist"
+    remove "$HOME/Library/Preferences/com.vmware.fusionStartMenu.plist.lockfile"
+    # Caches
+    remove "$HOME/Library/Caches/com.vmware.fusion"
+    remove "$HOME/Library/Caches/com.apple.helpd/Generated/VMware Fusion Help*12.1.2"
+    # Application Support
+    remove "/Library/Application Support/VMware"
+    remove "$HOME/Library/Application Support/VMware"
+    remove "$HOME/Library/Application Support/VMware Fusion"
+    remove "$HOME/Library/Application Support/VMware Fusion Applications Menu"
+    remove "$HOME/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.vmware.fusion.sfl2"
+    # Folder Virtual Machines
+    remove "$HOME/Virtual Machines"
+    # Application WebKit
+    remove "$HOME/Library/WebKit/com.vmware.fusion"
+    # Purge free inactive memory cache
+    sudo purge
+        echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
+    fi
+    continueMessage
+}
+
+# -----------------------------------------------------------------------------------------------------------------
+
 # Main function of the script
 startScript() {
     while :; do
@@ -2093,6 +3064,11 @@ startScript() {
         32)
             clear
             processAndMemoryManagement
+            ;;
+
+        33)
+            clear
+            uninstallingApplications
             ;;
 
         Q)
