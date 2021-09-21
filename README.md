@@ -74,6 +74,7 @@
 |**`30`**|Privacy Database Management: Custom reset apps permissions under Security and Privacy|
 |**`31`**|GateKeeper Management: Status, Enable or Disable, Remove app from Quarantine, Self-sign the app|
 |**`32`**|Process & Memory Management: Manage Processes, Terminate (Kill) a Process and Purge Memory|
+|**`33`**|Uninstalling applications: Browsers, Microsoft Office, Ad blocking extension, Virtual machines|
 |*Xcode*|
 |**`I`**|Installing the Xcode CLT (Command Line Tools)|
 |**`U`**|Uninstalling the Xcode CLT (Command Line Tools)|
