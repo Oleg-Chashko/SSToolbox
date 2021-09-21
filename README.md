@@ -143,6 +143,12 @@
 </p>
 <br>
 
+#### Selecting the themes for the Terminal
+
+<p align="center">
+  <img width="800px" src="https://raw.githubusercontent.com/Oleg-Chashko/SSToolbox/main/Images/Selecting_Themes_Terminal.png" />
+</p>
+
 ## Localization
 
 Localization were done using [DeepL](https://www.deepl.com/translator) and Google Translate.
