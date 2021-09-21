@@ -26,19 +26,19 @@
 
 ### Main menu
 <p align="center">
-  <img width="800px" src="https://raw.githubusercontent.com/Oleg-Chashko/SSToolbox/main/Images/Preview_SSToolbox_1.png" />
+  <img width="800px" src="https://raw.githubusercontent.com/Oleg-Chashko/SSToolbox/main/Images/Preview_1.png" />
 </p>
 
 ### Adding custom DNS servers
 
 <p align="center">
-  <img width="800px" src="https://raw.githubusercontent.com/Oleg-Chashko/SSToolbox/main/Images/Preview_SSToolbox_2.png" />
+  <img width="800px" src="https://raw.githubusercontent.com/Oleg-Chashko/SSToolbox/main/Images/Preview_2.png" />
 </p>
 
 ### Uninstalling applications
 
 <p align="center">
-  <img width="800px" src="https://raw.githubusercontent.com/Oleg-Chashko/SSToolbox/main/Images/Preview_SSToolbox_3.png" />
+  <img width="800px" src="https://raw.githubusercontent.com/Oleg-Chashko/SSToolbox/main/Images/Preview_3.png" />
 </p>
 
 ## Commands List
@@ -139,7 +139,7 @@
    <br><br>
 
 <p align="center">
-  <img width="690px" src="https://raw.githubusercontent.com/Oleg-Chashko/SSToolbox/main/Images/Running_SSToolbox.gif" />
+  <img width="690px" src="https://raw.githubusercontent.com/Oleg-Chashko/SSToolbox/main/Images/Running.gif" />
 </p>
 <br>
 
