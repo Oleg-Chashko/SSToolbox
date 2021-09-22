@@ -99,6 +99,8 @@
 
 ⚠ _You will need to enter a password to obtain elevated rights._<br>
 ⚠ _Some functions require Xcode or Xcode Command Line Tools._<br>
+⚠ _Enabling Full Disk Access in macOS for the terminal._<br>
+⚠ _Give permission for this script to run._<br>
 🟢 The Xcode Command Line Tools can be installed using the Script or manually through the Terminal.
 ## Tips
 #### Manual installation of the Xcode Command Line Tools:
@@ -119,6 +121,36 @@
 
 <p align="center">
   <img width="820px" src="https://raw.githubusercontent.com/Oleg-Chashko/SSToolbox/main/Images/Permission_denied.png" />
+</p>
+
+#### Terminal error: “Operation not permitted”
+
+<p align="center">
+  <img width="820px" src="https://raw.githubusercontent.com/Oleg-Chashko/SSToolbox/main/Images/Operation_not_permitted.png" />
+</p>
+
+#### Enabling Full Disk Access in macOS for the terminal:
+
+1. Pull down the ` Apple menu` and choose `System Preferences`.
+2. Choose `Security & Privacy` control panel.
+3. Now select the `Privacy` tab, then from the left-side menu select `Full Disk Access`.
+4. Click the lock icon in the lower left corner of the preference panel and authenticate with an admin level login.
+5. Now click the `[+]` plus button to add an application with full disk access.
+
+<p align="center">
+  <img width="800px" src="https://raw.githubusercontent.com/Oleg-Chashko/SSToolbox/main/Images/Terminal_1.png" />
+</p>
+
+1. Navigate to the `/Applications/Utilities/` folder.
+
+<p align="center">
+  <img width="790px" src="https://raw.githubusercontent.com/Oleg-Chashko/SSToolbox/main/Images/Terminal_2.png" />
+</p>
+
+7. Choose `Terminal` to grant Terminal with `Full Disk Access` privileges.
+
+<p align="center">
+  <img width="800px" src="https://raw.githubusercontent.com/Oleg-Chashko/SSToolbox/main/Images/Terminal_3.png" />
 </p>
 
 #### Give permission for this script to run:
