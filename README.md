@@ -122,7 +122,7 @@
 #### Terminal error: "permission denied"
 
 <p align="center">
-  <img width="820px" src="https://raw.githubusercontent.com/Oleg-Chashko/SSToolbox/main/Images/Permission_denied.png" />
+  <img width="800px" src="https://raw.githubusercontent.com/Oleg-Chashko/SSToolbox/main/Images/Permission_denied.png" />
 </p>
 
 #### Give permission for this script to run:
@@ -132,7 +132,7 @@
    <br><br>
 
 <p align="center">
-  <img width="690px" src="https://raw.githubusercontent.com/Oleg-Chashko/SSToolbox/main/Images/Terminal_chmod_u+x.gif" />
+  <img width="800px" src="https://raw.githubusercontent.com/Oleg-Chashko/SSToolbox/main/Images/Terminal_chmod_u+x.gif" />
 </p>
 <br>
 
@@ -141,7 +141,7 @@
 #### Terminal error: “Operation not permitted”
 
 <p align="center">
-  <img width="820px" src="https://raw.githubusercontent.com/Oleg-Chashko/SSToolbox/main/Images/Operation_not_permitted.png" />
+  <img width="800px" src="https://raw.githubusercontent.com/Oleg-Chashko/SSToolbox/main/Images/Operation_not_permitted.png" />
 </p>
 
 #### Enabling Full Disk Access in macOS for the terminal:
@@ -159,7 +159,7 @@
 1. Navigate to the `/Applications/Utilities/` folder.
 
 <p align="center">
-  <img width="790px" src="https://raw.githubusercontent.com/Oleg-Chashko/SSToolbox/main/Images/Terminal_2.png" />
+  <img width="800px" src="https://raw.githubusercontent.com/Oleg-Chashko/SSToolbox/main/Images/Terminal_2.png" />
 </p>
 
 7. Choose `Terminal` to grant Terminal with `Full Disk Access` privileges.
@@ -177,7 +177,7 @@
    <br><br>
 
 <p align="center">
-  <img width="690px" src="https://raw.githubusercontent.com/Oleg-Chashko/SSToolbox/main/Images/Running.gif" />
+  <img width="800px" src="https://raw.githubusercontent.com/Oleg-Chashko/SSToolbox/main/Images/Running.gif" />
 </p>
 <br>
 
