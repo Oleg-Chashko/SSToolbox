@@ -117,11 +117,26 @@
 1. Input the following command string in Terminal: `sudo rm -rf /Library/Developer/CommandLineTools`
 2. Wait for the Xcode Command Line Tools package to uninstall, once everything is uninstalled, you can close the terminal window.
 
+---
+
 #### Terminal error: "permission denied"
 
 <p align="center">
   <img width="820px" src="https://raw.githubusercontent.com/Oleg-Chashko/SSToolbox/main/Images/Permission_denied.png" />
 </p>
+
+#### Give permission for this script to run:
+
+1. Running the terminal.
+2. Type the command `chmod u+x`, press the `Space bar`, drag the script file to the terminal window and press the `Return` key.
+   <br><br>
+
+<p align="center">
+  <img width="690px" src="https://raw.githubusercontent.com/Oleg-Chashko/SSToolbox/main/Images/Terminal_chmod_u+x.gif" />
+</p>
+<br>
+
+---
 
 #### Terminal error: “Operation not permitted”
 
@@ -153,16 +168,7 @@
   <img width="800px" src="https://raw.githubusercontent.com/Oleg-Chashko/SSToolbox/main/Images/Terminal_3.png" />
 </p>
 
-#### Give permission for this script to run:
-
-1. Running the terminal.
-2. Type the command `chmod u+x`, press the `Space bar`, drag the script file to the terminal window and press the `Return` key.
-   <br><br>
-
-<p align="center">
-  <img width="690px" src="https://raw.githubusercontent.com/Oleg-Chashko/SSToolbox/main/Images/Terminal_chmod_u+x.gif" />
-</p>
-<br>
+---
 
 #### Running the script:
 
@@ -174,6 +180,8 @@
   <img width="690px" src="https://raw.githubusercontent.com/Oleg-Chashko/SSToolbox/main/Images/Running.gif" />
 </p>
 <br>
+
+---
 
 #### Selecting the themes for the Terminal
 
