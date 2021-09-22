@@ -1,5 +1,8 @@
-<h1 align="center">SSToolbox</h1>
-<h4 align="center">This is a toolkit for managing your Mac.</h4>
+<p align="center">
+  <img width="280px" src="https://raw.githubusercontent.com/Oleg-Chashko/SSToolbox/main/Images/SSToolbox_logo.png" />
+</p>
+
+<h3 align="center">This is a toolkit for managing your Mac</h3>
 
 <p align="center">
   <a href="https://github.com/Oleg-Chashko/SSToolbox/releases/latest">
