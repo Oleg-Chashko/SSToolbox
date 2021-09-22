@@ -629,15 +629,17 @@ automaticPingAndTraceroutTestIPv4/IPv6() {
     terminalWindowSize0x20x995x830
     echo "•${F_Red}${Bold} Command 4: Automatic ping and tracerout test IPv4/IPv6.${No_Attributes}"
     # Ping test IPv4
-    declare -a arr=("Google.com" "Youtube.com" "Facebook.com" "Instagram.com" "Spotify.com" "Yahoo.com" "Yandex.com")
     echo "\n${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
     echo "${Dim}•${No_Attributes} Server- or IP- address | Response time: Minimum/Average/Maximum/Standard_deviation ${Dim}•${No_Attributes}"
     echo "${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
     echo "${F_Red}•${F_Green}${Bold} Ping IPv4 Testing...\n${No_Attributes}"
-    for i in "${arr[@]}"; do
-        time=$(ping -i 0.1 -c 4 "$i" | tail -1 | awk '{print $4}')
-        echo "$i | response time | $time ms"
-    done
+    ping -i 0.4 -c 10 "Google.com" | tail -3
+    ping -i 0.4 -c 10 "Youtube.com" | tail -4
+    ping -i 0.4 -c 10 "Facebook.com" | tail -4
+    ping -i 0.4 -c 10 "Instagram.com" | tail -4
+    ping -i 0.4 -c 10 "Spotify.com" | tail -4
+    ping -i 0.4 -c 10 "Yahoo.com" | tail -4
+    ping -i 0.4 -c 10 "Yandex.com" | tail -4
     echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}${Dim} ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
     # Traceroute test IPv4
     echo "${F_Red}•${F_Green}${Bold} Traceroute IPv4 Testing...\n${No_Attributes}"
@@ -655,15 +657,17 @@ automaticPingAndTraceroutTestIPv4/IPv6() {
     echo "\n${F_Red}•${F_Green}${Bold} Finish.${No_Attributes}${Dim} ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
     # Ping and Traceroute test IPv6
     # Ping test IPv6
-    declare -a arr=("Google.com" "Youtube.com" "Facebook.com" "Instagram.com" "Spotify.com" "Yahoo.com" "Yandex.com")
     echo "\n${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
     echo "${Dim}•${No_Attributes} Server- or IP- address | Response time: Minimum/Average/Maximum/Standard_deviation ${Dim}•${No_Attributes}"
     echo "${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
     echo "${F_Red}•${F_Green}${Bold} Ping IPv6 Testing...\n${No_Attributes}"
-    for i in "${arr[@]}"; do
-        time=$(ping6 -i 0.1 -c 4 "$i" | tail -1 | awk '{print $4}')
-        echo "$i | response time | $time ms"
-    done
+    ping6 -i 0.4 -c 10 "Google.com" | tail -3
+    ping6 -i 0.4 -c 10 "Youtube.com" | tail -4
+    ping6 -i 0.4 -c 10 "Facebook.com" | tail -4
+    ping6 -i 0.4 -c 10 "Instagram.com" | tail -4
+    ping6 -i 0.4 -c 10 "Spotify.com" | tail -4
+    ping6 -i 0.4 -c 10 "Yahoo.com" | tail -4
+    ping6 -i 0.4 -c 10 "Yandex.com" | tail -4
     echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}${Dim} ••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
     # Traceroute test IPv6
     echo "${F_Red}•${F_Green}${Bold} Traceroute IPv6 Testing...\n${No_Attributes}"
