@@ -110,9 +110,9 @@ askPassword() {
 # The distance in pixels from the top of the screen to the bottom of the Terminal window.
 # -----------------------------------------------------------------------------------------------------------------
 
-# Terminal window Menu size 0x20x935x625
+# Terminal window Menu size 0x20x935x620
 terminalWindowSizeMenu() {
-    osascript -e 'tell application "Terminal" to set bounds of front window to {0, 20, 935, 625}'
+    osascript -e 'tell application "Terminal" to set bounds of front window to {0, 20, 935, 620}'
 # Selecting the themes for the Terminal.app -----------------------------------------------------------------------
     #osascript -e 'tell app "Terminal" to set current settings of first window to settings set "Basic"'
     osascript -e 'tell app "Terminal" to set current settings of first window to settings set "Homebrew"'
