@@ -84,7 +84,7 @@ generalMenu() {
     echo "${Dim}•${No_Attributes}${F_Red}${Bold} 31${No_Attributes} ${Dim}•${No_Attributes} GateKeeper Management: Status, Enable or Disable, Remove app from Quarantine, Self-sign the app ${Dim}•${No_Attributes} ${F_Red}${Bold}R${No_Attributes}elease/${F_Red}${Bold}N${No_Attributes}ightly Download  ${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Red}${Bold} 32${No_Attributes} ${Dim}•${No_Attributes} Process & Memory Management: Manage Processes, Terminate (Kill) a Process and Purge Memory      ${Dim}•${No_Attributes} ${F_Red}${Bold}A${No_Attributes}bout GitHub              ${Dim}•${No_Attributes}"
     echo "${Dim}•${No_Attributes}${F_Red}${Bold} 33${No_Attributes} ${Dim}•${No_Attributes} Uninstalling applications: Browsers, Microsoft Office, Ad blocking extension, Virtual machines  ${Dim}•${No_Attributes} ${F_Red}${Bold}${Blink}Q${No_Attributes}uit                      ${Dim}•${No_Attributes}"
-    echo "${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}"
+    echo "${Dim}••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••${No_Attributes}\n"
 }
 
 # -----------------------------------------------------------------------------------------------------------------
@@ -110,9 +110,9 @@ askPassword() {
 # The distance in pixels from the top of the screen to the bottom of the Terminal window.
 # -----------------------------------------------------------------------------------------------------------------
 
-# Terminal window Menu size 0x20x935x610
+# Terminal window Menu size 0x20x935x625
 terminalWindowSizeMenu() {
-    osascript -e 'tell application "Terminal" to set bounds of front window to {0, 20, 935, 610}'
+    osascript -e 'tell application "Terminal" to set bounds of front window to {0, 20, 935, 625}'
 # Selecting the themes for the Terminal.app -----------------------------------------------------------------------
     #osascript -e 'tell app "Terminal" to set current settings of first window to settings set "Basic"'
     osascript -e 'tell app "Terminal" to set current settings of first window to settings set "Homebrew"'
