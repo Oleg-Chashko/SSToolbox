@@ -156,7 +156,7 @@
   <img width="800px" src="https://raw.githubusercontent.com/Oleg-Chashko/SSToolbox/main/Images/Terminal_1.png" />
 </p>
 
-1. Navigate to the `/Applications/Utilities/` folder.
+6. Navigate to the `/Applications/Utilities/` folder.
 
 <p align="center">
   <img width="800px" src="https://raw.githubusercontent.com/Oleg-Chashko/SSToolbox/main/Images/Terminal_2.png" />
@@ -172,8 +172,8 @@
 
 #### Running the script:
 
-3. Drag the `script` to the terminal window.
-4. Press the `Return` key.
+1. Drag the `script` to the terminal window.
+2. Press the `Return` key.
    <br><br>
 
 <p align="center">
