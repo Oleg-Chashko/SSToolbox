@@ -254,6 +254,9 @@ customDNSServersForWi-Fi() {
     printf '
  Please select an Command: '
     read var
+
+# ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+
     # Cloudflare set as DNS server
     if [ "$var" -eq "1" ]; then
         askPassword
@@ -425,6 +428,9 @@ customDNSServersForEthernet() {
     printf '
  Please select an Command: '
     read var
+
+# ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+
     # Cloudflare set as DNS server
     if [ "$var" -eq "1" ]; then
         askPassword
@@ -575,6 +581,9 @@ customPingAndTraceroutTestIPv4/IPv6() {
     printf '
  Please select an Command: '
     read var
+
+# ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+
     # Test Ping IPv4
     if [ "$var" -eq "1" ]; then
         echo "\n${Dim}════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}\n"
@@ -1099,6 +1108,9 @@ enableOrDisableTheShowOfHiddenFiles() {
     printf '
  Please select an Command: '
     read var
+
+# ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+
     # Enable the show of Hidden files
     if [ "$var" -eq "1" ]; then
         echo "\n•${F_Red}${Bold} Enable the show of Hidden files.${No_Attributes}"
@@ -1130,6 +1142,9 @@ enableOrDisableTheShowOfAllFileExtensions() {
     printf '
  Please select an Command: '
     read var
+
+# ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+
     # Enable the show of all File Extensions
     if [ "$var" -eq "1" ]; then
         echo "\n•${F_Red}${Bold} Enable the show of all File Extensions.${No_Attributes}"
@@ -1161,6 +1176,9 @@ enableOrDisableTheShowOfAttachmentsAsIconsInTheAppleMailApp() {
     printf '
  Please select an Command: '
     read var
+
+# ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+
     # Enable the show of Attachments as Icons in the Apple Mail app
     if [ "$var" -eq "1" ]; then
         echo "\n•${F_Red}${Bold} Enable the show of Attachments as Icons in the Apple Mail app.${No_Attributes}"
@@ -1192,6 +1210,9 @@ enableOrDisableTheShowOfTheFullPathInTheFinderTitleWindow() {
     printf '
  Please select an Command: '
     read var
+
+# ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+
     # Enable the show of the full path in the Finder 'Title' window
     if [ "$var" -eq "1" ]; then
         echo "\n•${F_Red}${Bold} Enable the show of the full path in the Finder 'Title' window.${No_Attributes}"
@@ -1233,6 +1254,9 @@ changeTheDefaultScreenshotFileFormat() {
     printf '
  Please select an Command: '
     read var
+
+# ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+
     # Enable to use default Screenshot BMP file format
     if [ "$var" -eq "1" ]; then
         echo "\n•${F_Red}${Bold} Enable to use default Screenshot BMP file format.${No_Attributes}"
@@ -1294,6 +1318,9 @@ enableOrDisableScreenshotWithShadowAndAddingExtraPixels() {
     printf '
  Please select an Command: '
     read var
+
+# ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+
     # Disable Screenshot with shadow and adding extra pixels
     if [ "$var" -eq "1" ]; then
         echo "\n•${F_Red}${Bold} Disable Screenshot with shadow and adding extra pixels.${No_Attributes}"
@@ -1325,6 +1352,9 @@ enableOrDisableTheWarningBeforeEmptyingTheTrash() {
     printf '
  Please select an Command: '
     read var
+
+# ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+
     # Disable warning before emptying the Trash
     if [ "$var" -eq "1" ]; then
         echo "\n•${F_Red}${Bold} Disable warning before emptying the Trash.${No_Attributes}"
@@ -1356,6 +1386,9 @@ enableOrDisableWarningWhenChangingAFileExtension() {
     printf '
  Please select an Command: '
     read var
+
+# ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+
     # Disable warning when changing a file Extension
     if [ "$var" -eq "1" ]; then
         echo "\n•${F_Red}${Bold} Disable warning when changing a file Extension.${No_Attributes}"
@@ -1389,6 +1422,9 @@ searchCurrentOrPreviousScopeOrThisMacFolderByDefault() {
     printf '
  Please select an Command: '
     read var
+
+# ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+
     # When performing a search, search the Current folder by default
     if [ "$var" -eq "1" ]; then
         echo "\n•${F_Red}${Bold} When performing a search, search the Current folder by default.${No_Attributes}"
@@ -1426,6 +1462,9 @@ enableOrDisableInTextEditTheCreateAnUntitledDocumentAtLaunch() {
     printf '
  Please select an Command: '
     read var
+
+# ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+
     # Enable in TextEdit the create an Untitled Document at Launch
     if [ "$var" -eq "1" ]; then
         echo "\n•${F_Red}${Bold} Enable in TextEdit the create an Untitled Document at Launch.${No_Attributes}"
@@ -1457,6 +1496,9 @@ enableOrDisableCopyEmailAddressesAs() {
     printf '
  Please select an Command: '
     read var
+
+# ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+
     # Enable copy Email addresses as 'foo@example.com' instead of 'Foo Bar <foo@example.com>' in Apple Mail app
     if [ "$var" -eq "1" ]; then
         echo "\n•${F_Red}${Bold} Enable copy Email addresses as 'foo@example.com' instead of 'Foo Bar <foo@example.com>' in Apple Mail app.${No_Attributes}"
@@ -1525,6 +1567,9 @@ deletePluginsInputAndOutputDevice() {
     printf '
  Please select an Command: '
     read var
+
+# ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+
     # Automatic Delete All CoreMedia Input/Output Device DAL Video Plug-ins
     if [ "$var" -eq "1" ]; then
         echo "\n•${F_Red}${Bold} Automatic Delete All CoreMedia Input/Output Device DAL Video Plug-ins.${No_Attributes}"
@@ -1594,6 +1639,9 @@ kernelManagement() {
     printf '
  Please select an Command: '
     read var
+
+# ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+
     # Cleaning the kernel Extension staging area by removing all staged content
     if [ "$var" -eq "1" ]; then
         echo "\n•${F_Red}${Bold} Cleaning the kernel Extension staging area by removing all staged content. (Requires a reboot)${No_Attributes}"
@@ -1703,6 +1751,9 @@ privacyDatabaseManagement() {
     printf '
  Please select an Command: '
     read var
+
+# ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+
     # Reset the All permissions for all apps
     if [ "$var" -eq "1" ]; then
         echo "\n•${F_Red}${Bold} Reset the All permissions for all apps.${No_Attributes}"
@@ -1826,6 +1877,9 @@ gateKeeperManagement() {
     printf '
  Please select an Command: '
     read var
+
+# ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+
     # GateKeeper Status
     if [ "$var" -eq "1" ]; then
         echo "\n•${F_Red}${Bold} GateKeeper Status.${No_Attributes}\n"
@@ -1883,6 +1937,9 @@ processAndMemoryManagement() {
     printf '
  Please select an Command: '
     read var
+
+# ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+
     # Display processes sorted by CPU usage and Kill a process by specifying its PID
     if [ "$var" -eq "1" ]; then
         echo "\n•${F_Red}${Bold} Display processes sorted by CPU usage and Kill a process by specifying its PID.${No_Attributes}"
@@ -1953,6 +2010,9 @@ uninstallingApplications() {
     printf '
  Please select an Command: '
     read var
+
+# ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+
     # Uninstalling the Opera Browser ═════════════════════════════════════════════════════════════════════════════════
     if [ "$var" -eq "1" ]; then
         echo "\n•${F_Red}${Bold} Uninstalling the Opera Browser.${No_Attributes}"
