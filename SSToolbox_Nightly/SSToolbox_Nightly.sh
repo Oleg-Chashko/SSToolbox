@@ -77,14 +77,14 @@ mainMenu() {
     echo "${Dim}║${No_Attributes}${F_Red}${Bold} 25${No_Attributes} ${Dim}║${No_Attributes} Enable or Disable in TextEdit the create an Untitled Document at Launch                                                     ${Dim}║${No_Attributes}"
     echo "${Dim}║${No_Attributes}${F_Red}${Bold} 26${No_Attributes} ${Dim}║${No_Attributes} Enable or Disable copy Email addresses as 'foo@example.com' instead of 'Foo Bar <foo@example.com>' in Apple Mail app        ${Dim}║${No_Attributes}"
     echo "${Dim}╠════╬═════════════════════════════════════════════════════════════════════════════ ${F_Red}${Dim}Caution: Use At Your Own Risk${No_Attributes} ${Dim}═${No_Attributes} ${F_Blue}${Bold}OS Management ${No_Attributes}${Dim}═╣${No_Attributes}"
-    echo "${Dim}║${No_Attributes}${F_Red}${Bold} 27${No_Attributes} ${Dim}║${No_Attributes} Logs system Management: Cleaning the Logs and Inactive memory                                    ${Dim}╔══════════════════════════╣${No_Attributes}"
-    echo "${Dim}║${No_Attributes}${F_Red}${Bold} 28${No_Attributes} ${Dim}║${No_Attributes} I/O system Management: Manually and Automatic Delete, Plugins Input and Output device            ${Dim}║${No_Attributes} Color Themes ${F_Red}${Bold}z${No_Attributes}|${F_Red}${Bold}x${No_Attributes}|${F_Red}${Bold}c${No_Attributes}|${F_Red}${Bold}v${No_Attributes}|${F_Red}${Bold}b${No_Attributes}   ${Dim}║${No_Attributes}"
-    echo "${Dim}║${No_Attributes}${F_Red}${Bold} 29${No_Attributes} ${Dim}║${No_Attributes} Kernel OS Management: Cleaning kernel Extension, Rebuild Kexts Caches, etc. (Requires a reboot)  ${Dim}║${No_Attributes} ${F_Red}${Bold}I${No_Attributes}nstalling Xcode CLT     ${Dim}║${No_Attributes}"
-    echo "${Dim}║${No_Attributes}${F_Red}${Bold} 30${No_Attributes} ${Dim}║${No_Attributes} Privacy Database Management: Custom reset apps permissions under Security and Privacy            ${Dim}║${No_Attributes} ${F_Red}${Bold}U${No_Attributes}ninstalling Xcode CLT   ${Dim}║${No_Attributes}"
-    echo "${Dim}║${No_Attributes}${F_Red}${Bold} 31${No_Attributes} ${Dim}║${No_Attributes} GateKeeper Management: Status, Enable or Disable, Remove app from Quarantine, Self-sign the app  ${Dim}║${No_Attributes} ${F_Red}${Bold}R${No_Attributes}elease/${F_Red}${Bold}N${No_Attributes}ightly Download ${Dim}║${No_Attributes}"
-    echo "${Dim}║${No_Attributes}${F_Red}${Bold} 32${No_Attributes} ${Dim}║${No_Attributes} Process & Memory Management: Manage Processes, Terminate (Kill) a Process and Purge Memory       ${Dim}║${No_Attributes} ${F_Red}${Bold}A${No_Attributes}bout GitHub             ${Dim}║${No_Attributes}"
-    echo "${Dim}║${No_Attributes}${F_Red}${Bold} 33${No_Attributes} ${Dim}║${No_Attributes} Uninstalling applications: Browsers, Microsoft Office, Ad blocking extension, Virtual machines   ${Dim}║${No_Attributes} ${F_Red}${Bold}${Blink}Q${No_Attributes}uit                     ${Dim}║${No_Attributes}"
-    echo "${Dim}╚════╩══════════════════════════════════════════════════════════════════════════════════════════════════╩══════════════════════════╝${No_Attributes}\n"
+    echo "${Dim}║${No_Attributes}${F_Red}${Bold} 27${No_Attributes} ${Dim}║${No_Attributes} Logs system Management: Cleaning the Logs and Inactive memory                                   ${Dim}╔═══════════════════════════╣${No_Attributes}"
+    echo "${Dim}║${No_Attributes}${F_Red}${Bold} 28${No_Attributes} ${Dim}║${No_Attributes} I/O system Management: Manually and Automatic Delete, Plugins Input and Output device           ${Dim}║${No_Attributes} ${F_Red}${Bold}Z${No_Attributes}${Dim}•${F_Red}${Bold}X${No_Attributes}${Dim}•${F_Red}${Bold}C${No_Attributes}${Dim}•${F_Red}${Bold}V${No_Attributes}${Dim}•${F_Red}${Bold}B${No_Attributes} Terminal themes ${Dim}║${No_Attributes}"
+    echo "${Dim}║${No_Attributes}${F_Red}${Bold} 29${No_Attributes} ${Dim}║${No_Attributes} Kernel OS Management: Cleaning kernel Extension, Rebuild Kexts Caches, etc. (Requires a reboot) ${Dim}║${No_Attributes} ${F_Red}${Bold}I${No_Attributes}nstalling Xcode CLT      ${Dim}║${No_Attributes}"
+    echo "${Dim}║${No_Attributes}${F_Red}${Bold} 30${No_Attributes} ${Dim}║${No_Attributes} Privacy Database Management: Custom reset apps permissions under Security and Privacy           ${Dim}║${No_Attributes} ${F_Red}${Bold}U${No_Attributes}ninstalling Xcode CLT    ${Dim}║${No_Attributes}"
+    echo "${Dim}║${No_Attributes}${F_Red}${Bold} 31${No_Attributes} ${Dim}║${No_Attributes} GateKeeper Management: Status, Enable or Disable, Remove app from Quarantine, Self-sign the app ${Dim}║${No_Attributes} ${F_Red}${Bold}R${No_Attributes}elease/${F_Red}${Bold}N${No_Attributes}ightly Download  ${Dim}║${No_Attributes}"
+    echo "${Dim}║${No_Attributes}${F_Red}${Bold} 32${No_Attributes} ${Dim}║${No_Attributes} Process & Memory Management: Manage Processes, Terminate (Kill) a Process and Purge Memory      ${Dim}║${No_Attributes} ${F_Red}${Bold}A${No_Attributes}bout GitHub              ${Dim}║${No_Attributes}"
+    echo "${Dim}║${No_Attributes}${F_Red}${Bold} 33${No_Attributes} ${Dim}║${No_Attributes} Uninstalling applications: Browsers, Microsoft Office, Ad blocking extension, Virtual machines  ${Dim}║${No_Attributes} ${F_Red}${Bold}${Blink}Q${No_Attributes}uit                      ${Dim}║${No_Attributes}"
+    echo "${Dim}╚════╩═════════════════════════════════════════════════════════════════════════════════════════════════╩═══════════════════════════╝${No_Attributes}\n"
 }
 
 # ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
@@ -3112,9 +3112,19 @@ startScript() {
         read "?  Please select an Command: " SELECTED_COMMAND
         case $SELECTED_COMMAND in
 # ══════════════════
+        Z)
+            clear
+            setHomebrew
+            ;;
+
         z)
             clear
             setHomebrew
+            ;;
+
+        X)
+            clear
+            setPro
             ;;
 
         x)
@@ -3122,14 +3132,29 @@ startScript() {
             setPro
             ;;
 
+        C)
+            clear
+            setNovel
+            ;;
+
         c)
             clear
             setNovel
             ;;
 
+        V)
+            clear
+            setManPage
+            ;;
+
         v)
             clear
             setManPage
+            ;;
+
+        B)
+            clear
+            setBasic
             ;;
 
         b)
@@ -3142,7 +3167,17 @@ startScript() {
             installingXCLT
             ;;
 
+        i)
+            clear
+            installingXCLT
+            ;;
+
         U)
+            clear
+            uninstallingXCLT
+            ;;
+
+        u)
             clear
             uninstallingXCLT
             ;;
@@ -3152,7 +3187,17 @@ startScript() {
             quitSSToolbox
             ;;
 
+        q)
+            clear
+            quitSSToolbox
+            ;;
+
         R)
+            clear
+            downloadRelease
+            ;;
+
+        r)
             clear
             downloadRelease
             ;;
@@ -3162,7 +3207,17 @@ startScript() {
             downloadNightly
             ;;
 
+        n)
+            clear
+            downloadNightly
+            ;;
+
         A)
+            clear
+            aboutGitHub
+            ;;
+
+        a)
             clear
             aboutGitHub
             ;;
