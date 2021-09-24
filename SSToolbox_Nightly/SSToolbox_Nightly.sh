@@ -77,8 +77,8 @@ mainMenu() {
     echo "${Dim}║${No_Attributes}${F_Red}${Bold} 25${No_Attributes} ${Dim}║${No_Attributes} Enable or Disable in TextEdit the create an Untitled Document at Launch                                                     ${Dim}║${No_Attributes}"
     echo "${Dim}║${No_Attributes}${F_Red}${Bold} 26${No_Attributes} ${Dim}║${No_Attributes} Enable or Disable copy Email addresses as 'foo@example.com' instead of 'Foo Bar <foo@example.com>' in Apple Mail app        ${Dim}║${No_Attributes}"
     echo "${Dim}╠════╬═════════════════════════════════════════════════════════════════════════════ ${F_Red}${Dim}Caution: Use At Your Own Risk${No_Attributes} ${Dim}═${No_Attributes} ${F_Blue}${Bold}OS Management ${No_Attributes}${Dim}═╣${No_Attributes}"
-    echo "${Dim}║${No_Attributes}${F_Red}${Bold} 27${No_Attributes} ${Dim}║${No_Attributes} Logs system Management: Cleaning the Logs and Inactive memory                                                               ${Dim}║${No_Attributes}"
-    echo "${Dim}║${No_Attributes}${F_Red}${Bold} 28${No_Attributes} ${Dim}║${No_Attributes} I/O system Management: Manually and Automatic Delete, Plugins Input and Output device            ${Dim}╔══════════════════════════╣${No_Attributes}"
+    echo "${Dim}║${No_Attributes}${F_Red}${Bold} 27${No_Attributes} ${Dim}║${No_Attributes} Logs system Management: Cleaning the Logs and Inactive memory                                    ${Dim}╔══════════════════════════╣${No_Attributes}"
+    echo "${Dim}║${No_Attributes}${F_Red}${Bold} 28${No_Attributes} ${Dim}║${No_Attributes} I/O system Management: Manually and Automatic Delete, Plugins Input and Output device            ${Dim}║${No_Attributes} Color Themes ${F_Red}${Bold}z${No_Attributes}|${F_Red}${Bold}x${No_Attributes}|${F_Red}${Bold}c${No_Attributes}|${F_Red}${Bold}v${No_Attributes}|${F_Red}${Bold}b${No_Attributes}   ${Dim}║${No_Attributes}"
     echo "${Dim}║${No_Attributes}${F_Red}${Bold} 29${No_Attributes} ${Dim}║${No_Attributes} Kernel OS Management: Cleaning kernel Extension, Rebuild Kexts Caches, etc. (Requires a reboot)  ${Dim}║${No_Attributes} ${F_Red}${Bold}I${No_Attributes}nstalling Xcode CLT     ${Dim}║${No_Attributes}"
     echo "${Dim}║${No_Attributes}${F_Red}${Bold} 30${No_Attributes} ${Dim}║${No_Attributes} Privacy Database Management: Custom reset apps permissions under Security and Privacy            ${Dim}║${No_Attributes} ${F_Red}${Bold}U${No_Attributes}ninstalling Xcode CLT   ${Dim}║${No_Attributes}"
     echo "${Dim}║${No_Attributes}${F_Red}${Bold} 31${No_Attributes} ${Dim}║${No_Attributes} GateKeeper Management: Status, Enable or Disable, Remove app from Quarantine, Self-sign the app  ${Dim}║${No_Attributes} ${F_Red}${Bold}R${No_Attributes}elease/${F_Red}${Bold}N${No_Attributes}ightly Download ${Dim}║${No_Attributes}"
@@ -101,12 +101,7 @@ askPassword() {
 
 # ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
 
-# Selecting the themes for the Terminal.app
 terminalWindowSizeMainMenu() {
-    #osascript -e 'tell app "Terminal" to set current settings of first window to settings set "Basic"'
-    osascript -e 'tell app "Terminal" to set current settings of first window to settings set "Homebrew"'
-    #osascript -e 'tell app "Terminal" to set current settings of first window to settings set "Pro"'
-
 # Dynamic size of Terminal window
 # ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
 # List item 1: The distance in pixels from the left side of the screen to the left side of the Terminal window.
@@ -116,8 +111,11 @@ terminalWindowSizeMainMenu() {
 # ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
 
 # Terminal window the Main Menu size: 0x20x935x620
-    osascript -e 'tell application "Terminal" to set bounds of front window to {0, 20, 935, 620}'
     clear
+    osascript -e 'tell application "Terminal" to set cursor color of first window to {55512, 15163, 12593}'
+    osascript -e 'tell application "Terminal" to set bounds of front window to {0, 20, 935, 620}'
+    osascript -e 'tell application "Terminal" to set font name of first window to "SF Mono"'
+    osascript -e 'tell application "Terminal" to set font size of first window to "11"'
 }
 
 # Terminal window size: 0x20x995x590
@@ -136,6 +134,44 @@ terminalWindowSizeNr.2() {
 terminalWindowSizeNr.3() {
     osascript -e 'tell application "Terminal" to set bounds of front window to {0, 20, 1340, 830}'
     clear
+}
+
+# ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
+# Color themes for the Terminal.app
+
+# Command z: Terminal set "Homebrew"
+setHomebrew() {
+    osascript -e 'tell application "Terminal" to set current settings of first window to settings set "Homebrew"'
+    osascript -e 'tell application "Terminal" to set font name of first window to "SF Mono"'
+    osascript -e 'tell application "Terminal" to set font size of first window to "11"'
+}
+
+# Command x: Terminal set "Pro"
+setPro() {
+    osascript -e 'tell application "Terminal" to set current settings of first window to settings set "Pro"'
+    osascript -e 'tell application "Terminal" to set font name of first window to "SF Mono"'
+    osascript -e 'tell application "Terminal" to set font size of first window to "11"'
+}
+
+# Command c: Terminal set "Novel"
+setNovel() {
+    osascript -e 'tell application "Terminal" to set current settings of first window to settings set "Novel"'
+    osascript -e 'tell application "Terminal" to set font name of first window to "SF Mono"'
+    osascript -e 'tell application "Terminal" to set font size of first window to "11"'
+}
+
+# Command v: Terminal set "Man Page"
+setManPage() {
+    osascript -e 'tell application "Terminal" to set current settings of first window to settings set "Man Page"'
+    osascript -e 'tell application "Terminal" to set font name of first window to "SF Mono"'
+    osascript -e 'tell application "Terminal" to set font size of first window to "11"'
+}
+
+# Command b: Terminal set "Basic" (Default)
+setBasic() {
+    osascript -e 'tell application "Terminal" to set current settings of first window to settings set "Basic"'
+    osascript -e 'tell application "Terminal" to set font name of first window to "SF Mono"'
+    osascript -e 'tell application "Terminal" to set font size of first window to "11"'
 }
 
 # ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
@@ -877,7 +913,7 @@ releaseAndRenewDHCP() {
     rm -rf .zsh_sessions
     rm -rf .zsh_history
     sleep 1 && echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}${Dim} ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}"
-    osascript -e 'tell app "loginwindow" to «event aevtrrst»'
+    osascript -e 'tell application "loginwindow" to «event aevtrrst»'
     continueMessage
 }
 
@@ -1714,7 +1750,7 @@ kernelManagement() {
         rm -rf .zsh_sessions
         rm -rf .zsh_history
         sleep 1 && echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}${Dim} ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}"
-        osascript -e 'tell app "loginwindow" to «event aevtrrst»'
+        osascript -e 'tell application "loginwindow" to «event aevtrrst»'
     fi
 
 # Rebuild out-of-date Caches
@@ -1729,7 +1765,7 @@ kernelManagement() {
         rm -rf .zsh_sessions
         rm -rf .zsh_history
         sleep 1 && echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}${Dim} ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}"
-        osascript -e 'tell app "loginwindow" to «event aevtrrst»'
+        osascript -e 'tell application "loginwindow" to «event aevtrrst»'
     fi
 
 # Updated the kernel Extension
@@ -1744,7 +1780,7 @@ kernelManagement() {
         rm -rf .zsh_sessions
         rm -rf .zsh_history
         sleep 1 && echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}${Dim} ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}"
-        osascript -e 'tell app "loginwindow" to «event aevtrrst»'
+        osascript -e 'tell application "loginwindow" to «event aevtrrst»'
     fi
 
 # Show the loaded state of the kernel Extensions
@@ -1770,7 +1806,7 @@ kernelManagement() {
         rm -rf .zsh_sessions
         rm -rf .zsh_history
         sleep 1 && echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}${Dim} ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}"
-        osascript -e 'tell app "loginwindow" to «event aevtrrst»'
+        osascript -e 'tell application "loginwindow" to «event aevtrrst»'
     fi
 
     continueMessage
@@ -2028,7 +2064,7 @@ processAndMemoryManagement() {
     if [ "$var" -eq "1" ]; then
         echo "\n•${F_Red}${Bold} Display processes sorted by CPU usage and Kill a process by specifying its PID.${No_Attributes}"
         askPassword
-        osascript -e 'tell app "Terminal" to do script "top -o cpu -s 2"'; osascript -e 'tell application "Terminal" to set bounds of front window to {990, 20, 1440, 830}'
+        osascript -e 'tell application "Terminal" to do script "top -o cpu -s 2"'; osascript -e 'tell application "Terminal" to set bounds of front window to {990, 20, 1440, 830}'
         read "? To Terminate (Kill) a Process: " PID
         sudo kill -9 "$PID"
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
@@ -3075,7 +3111,32 @@ startScript() {
         mainMenu
         read "?  Please select an Command: " SELECTED_COMMAND
         case $SELECTED_COMMAND in
+# ══════════════════
+        z)
+            clear
+            setHomebrew
+            ;;
 
+        x)
+            clear
+            setPro
+            ;;
+
+        c)
+            clear
+            setNovel
+            ;;
+
+        v)
+            clear
+            setManPage
+            ;;
+
+        b)
+            clear
+            setBasic
+            ;;
+# ══════════════════
         I)
             clear
             installingXCLT
@@ -3085,7 +3146,27 @@ startScript() {
             clear
             uninstallingXCLT
             ;;
+# ══════════════════
+        Q)
+            clear
+            quitSSToolbox
+            ;;
 
+        R)
+            clear
+            downloadRelease
+            ;;
+
+        N)
+            clear
+            downloadNightly
+            ;;
+
+        A)
+            clear
+            aboutGitHub
+            ;;
+# ══════════════════
         1)
             clear
             customDNSServersForWi-Fi
@@ -3250,27 +3331,7 @@ startScript() {
             clear
             uninstallingApplications
             ;;
-
-        Q)
-            clear
-            quitSSToolbox
-            ;;
-
-        R)
-            clear
-            downloadRelease
-            ;;
-
-        N)
-            clear
-            downloadNightly
-            ;;
-
-        A)
-            clear
-            aboutGitHub
-            ;;
-
+# ══════════════════
         *)
             clear
             showInvalid
