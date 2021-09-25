@@ -3,8 +3,9 @@
 :+1::tada: First off, thanks for taking the time to contribute! :tada::+1:
 
 The following is a set of guidelines for contributing to SSToolbox. These are mostly guidelines, not rules. Use your best judgment, and feel free to propose changes.
+
 ## Feature Requests
-SSToolbox is not accepting any new feature requests at this time, sorry. You can file a feature request for a feature that you plan to implement and submit a pull request for, so that the feature can be reviewed and you will know ahead of time if the feature will be rejected. 
+You can file a feature request for a feature that you plan to implement and submit a pull request for, so that the feature can be reviewed and you will know ahead of time if the feature will be rejected. 
 
 ## Bugs
 Please search through the existing issues, open and closed, before filing a new bug.
