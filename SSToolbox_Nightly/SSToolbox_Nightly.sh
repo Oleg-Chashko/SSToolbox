@@ -77,14 +77,14 @@ mainMenu() {
     echo "${Dim}║${No_Attributes}${F_Red}${Bold} 25${No_Attributes} ${Dim}║${No_Attributes} Enable or Disable in TextEdit the create an Untitled Document at Launch                                                     ${Dim}║${No_Attributes}"
     echo "${Dim}║${No_Attributes}${F_Red}${Bold} 26${No_Attributes} ${Dim}║${No_Attributes} Enable or Disable copy Email addresses as 'foo@example.com' instead of 'Foo Bar <foo@example.com>' in Apple Mail app        ${Dim}║${No_Attributes}"
     echo "${Dim}╠════╬═════════════════════════════════════════════════════════════════════════════ ${F_Red}${Dim}Caution: Use At Your Own Risk${No_Attributes} ${Dim}═${No_Attributes} ${F_Blue}${Bold}OS Management ${No_Attributes}${Dim}═╣${No_Attributes}"
-    echo "${Dim}║${No_Attributes}${F_Red}${Bold} 27${No_Attributes} ${Dim}║${No_Attributes} Logs system Management: Cleaning the Logs and Inactive memory                                   ${Dim}╔═══════════════════════════╣${No_Attributes}"
-    echo "${Dim}║${No_Attributes}${F_Red}${Bold} 28${No_Attributes} ${Dim}║${No_Attributes} I/O system Management: Manually and Automatic Delete, Plugins Input and Output device           ${Dim}║${No_Attributes} ${F_Red}${Bold}Z${No_Attributes}${Dim}•${F_Red}${Bold}X${No_Attributes}${Dim}•${F_Red}${Bold}C${No_Attributes}${Dim}•${F_Red}${Bold}V${No_Attributes}${Dim}•${F_Red}${Bold}B${No_Attributes} Terminal themes ${Dim}║${No_Attributes}"
-    echo "${Dim}║${No_Attributes}${F_Red}${Bold} 29${No_Attributes} ${Dim}║${No_Attributes} Kernel OS Management: Cleaning kernel Extension, Rebuild Kexts Caches, etc. (Requires a reboot) ${Dim}║${No_Attributes} ${F_Red}${Bold}I${No_Attributes}nstalling Xcode CLT      ${Dim}║${No_Attributes}"
-    echo "${Dim}║${No_Attributes}${F_Red}${Bold} 30${No_Attributes} ${Dim}║${No_Attributes} Privacy Database Management: Custom reset apps permissions under Security and Privacy           ${Dim}║${No_Attributes} ${F_Red}${Bold}U${No_Attributes}ninstalling Xcode CLT    ${Dim}║${No_Attributes}"
-    echo "${Dim}║${No_Attributes}${F_Red}${Bold} 31${No_Attributes} ${Dim}║${No_Attributes} GateKeeper Management: Status, Enable or Disable, Remove app from Quarantine, Self-sign the app ${Dim}║${No_Attributes} ${F_Red}${Bold}R${No_Attributes}elease/${F_Red}${Bold}N${No_Attributes}ightly Download  ${Dim}║${No_Attributes}"
-    echo "${Dim}║${No_Attributes}${F_Red}${Bold} 32${No_Attributes} ${Dim}║${No_Attributes} Process & Memory Management: Manage Processes, Terminate (Kill) a Process and Purge Memory      ${Dim}║${No_Attributes} ${F_Red}${Bold}A${No_Attributes}bout GitHub              ${Dim}║${No_Attributes}"
-    echo "${Dim}║${No_Attributes}${F_Red}${Bold} 33${No_Attributes} ${Dim}║${No_Attributes} Uninstalling applications: Browsers, Microsoft Office, Ad blocking extension, Virtual machines  ${Dim}║${No_Attributes} ${F_Red}${Bold}${Blink}Q${No_Attributes}uit                      ${Dim}║${No_Attributes}"
-    echo "${Dim}╚════╩═════════════════════════════════════════════════════════════════════════════════════════════════╩═══════════════════════════╝${No_Attributes}\n"
+    echo "${Dim}║${No_Attributes}${F_Red}${Bold} 27${No_Attributes} ${Dim}║${No_Attributes} Logs system Management: Cleaning the Logs and Inactive memory                                  ${Dim}╔════════════════════════════╣${No_Attributes}"
+    echo "${Dim}║${No_Attributes}${F_Red}${Bold} 28${No_Attributes} ${Dim}║${No_Attributes} I/O system Management: Manually and Automatic Delete, Plugins Input and Output device          ${Dim}║${No_Attributes} ${F_Red}${Bold}Z${No_Attributes}${Dim}•${F_Red}${Bold}X${No_Attributes}${Dim}•${F_Red}${Bold}C${No_Attributes}${Dim}•${F_Red}${Bold}V${No_Attributes}${Dim}•${F_Red}${Bold}B${No_Attributes}${Dim}•${F_Red}${Bold}M${No_Attributes} Color profiles ${Dim}║${No_Attributes}"
+    echo "${Dim}║${No_Attributes}${F_Red}${Bold} 29${No_Attributes} ${Dim}║${No_Attributes} Kernel OS Management: Cleaning kernel Extension, Rebuild Kexts Caches, etc. (Requires a reboot)${Dim}║${No_Attributes} ${F_Red}${Bold}I${No_Attributes}nstalling Xcode CLT       ${Dim}║${No_Attributes}"
+    echo "${Dim}║${No_Attributes}${F_Red}${Bold} 30${No_Attributes} ${Dim}║${No_Attributes} Privacy Database Management: Custom reset apps permissions under Security and Privacy          ${Dim}║${No_Attributes} ${F_Red}${Bold}U${No_Attributes}ninstalling Xcode CLT     ${Dim}║${No_Attributes}"
+    echo "${Dim}║${No_Attributes}${F_Red}${Bold} 31${No_Attributes} ${Dim}║${No_Attributes} GateKeeper Management: Status, Enable or Disable, Remove app from Quarantine, Self-sign the app${Dim}║${No_Attributes} ${F_Red}${Bold}R${No_Attributes}elease/${F_Red}${Bold}B${No_Attributes}eta Download      ${Dim}║${No_Attributes}"
+    echo "${Dim}║${No_Attributes}${F_Red}${Bold} 32${No_Attributes} ${Dim}║${No_Attributes} Process & Memory Management: Manage Processes, Terminate (Kill) a Process and Purge Memory     ${Dim}║${No_Attributes} ${F_Red}${Bold}P${No_Attributes}roject page on GitHub     ${Dim}║${No_Attributes}"
+    echo "${Dim}║${No_Attributes}${F_Red}${Bold} 33${No_Attributes} ${Dim}║${No_Attributes} Uninstalling applications: Browsers, Microsoft Office, Ad blocking extension, Virtual machines ${Dim}║${No_Attributes} ${F_Red}${Bold}${Blink}Q${No_Attributes}uit                       ${Dim}║${No_Attributes}"
+    echo "${Dim}╚════╩════════════════════════════════════════════════════════════════════════════════════════════════╩════════════════════════════╝${No_Attributes}\n"
 }
 
 # ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
@@ -139,35 +139,42 @@ terminalWindowSizeNr.3() {
 # ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
 # Color themes for the Terminal.app
 
-# Command z: Terminal set "Homebrew"
+# Command Z: Terminal set "Homebrew"
 setHomebrew() {
     osascript -e 'tell application "Terminal" to set current settings of first window to settings set "Homebrew"'
     osascript -e 'tell application "Terminal" to set font name of first window to "SF Mono"'
     osascript -e 'tell application "Terminal" to set font size of first window to "11"'
 }
 
-# Command x: Terminal set "Pro"
+# Command X: Terminal set "Pro"
 setPro() {
     osascript -e 'tell application "Terminal" to set current settings of first window to settings set "Pro"'
     osascript -e 'tell application "Terminal" to set font name of first window to "SF Mono"'
     osascript -e 'tell application "Terminal" to set font size of first window to "11"'
 }
 
-# Command c: Terminal set "Novel"
+# Command C: Terminal set "Novel"
 setNovel() {
     osascript -e 'tell application "Terminal" to set current settings of first window to settings set "Novel"'
     osascript -e 'tell application "Terminal" to set font name of first window to "SF Mono"'
     osascript -e 'tell application "Terminal" to set font size of first window to "11"'
 }
 
-# Command v: Terminal set "Man Page"
+# Command V: Terminal set "Man Page"
 setManPage() {
     osascript -e 'tell application "Terminal" to set current settings of first window to settings set "Man Page"'
     osascript -e 'tell application "Terminal" to set font name of first window to "SF Mono"'
     osascript -e 'tell application "Terminal" to set font size of first window to "11"'
 }
 
-# Command b: Terminal set "Basic" (Default)
+# Command B: Terminal set "Ocean"
+setOcean() {
+    osascript -e 'tell application "Terminal" to set current settings of first window to settings set "Ocean"'
+    osascript -e 'tell application "Terminal" to set font name of first window to "SF Mono"'
+    osascript -e 'tell application "Terminal" to set font size of first window to "11"'
+}
+
+# Command M: Terminal set "Basic" (Default)
 setBasic() {
     osascript -e 'tell application "Terminal" to set current settings of first window to settings set "Basic"'
     osascript -e 'tell application "Terminal" to set font name of first window to "SF Mono"'
@@ -235,14 +242,14 @@ downloadRelease() {
     curl -OL -s https://github.com/Oleg-Chashko/SSToolbox/releases/latest/download/SSToolbox.sh
 }
 
-# Command N: Download Latest Nightly on GitHub
-downloadNightly() {
+# Command B: Download Latest Beta on GitHub
+downloadBeta() {
     cd ~/Desktop
-    curl -OL -s https://raw.githubusercontent.com/Oleg-Chashko/SSToolbox/main/SSToolbox_Nightly/SSToolbox_Nightly.sh
+    curl -OL -s https://raw.githubusercontent.com/Oleg-Chashko/SSToolbox/main/SSToolbox_Beta/SSToolbox_Beta.sh
 }
 
-# Command A: About Project page on GitHub
-aboutGitHub() {
+# Command P: Project page on GitHub
+projectPageOnGitHub() {
     open https://github.com/Oleg-Chashko/SSToolbox
 }
 
@@ -3152,12 +3159,22 @@ startScript() {
             setManPage
             ;;
 
-        B)
+#        B)
+#            clear
+#            setOcean
+#            ;;
+
+#        b)
+#            clear
+#            setOcean
+#            ;;
+
+        M)
             clear
             setBasic
             ;;
 
-        b)
+        m)
             clear
             setBasic
             ;;
@@ -3202,24 +3219,24 @@ startScript() {
             downloadRelease
             ;;
 
-        N)
+        B)
             clear
-            downloadNightly
+            downloadBeta
             ;;
 
-        n)
+        b)
             clear
-            downloadNightly
+            downloadBeta
             ;;
 
-        A)
+        P)
             clear
-            aboutGitHub
+            projectPageOnGitHub
             ;;
 
-        a)
+        p)
             clear
-            aboutGitHub
+            projectPageOnGitHub
             ;;
 # ══════════════════
         1)
