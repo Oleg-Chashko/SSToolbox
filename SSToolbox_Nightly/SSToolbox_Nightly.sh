@@ -285,7 +285,7 @@ customDNSServersForWi-Fi() {
     echo " ${Dim}╚════╩══════════════════════════╝${No_Attributes}"
 
     printf '
- Please select an Command: '
+ Please select a Command: '
     read var
 
 # ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
@@ -472,7 +472,7 @@ customDNSServersForEthernet() {
     echo " ${Dim}╚════╩══════════════════════════╝${No_Attributes}"
 
     printf '
- Please select an Command: '
+ Please select a Command: '
     read var
 
 # ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
@@ -638,7 +638,7 @@ customPingAndTraceroutTestIPv4/IPv6() {
     echo " ${Dim}╚═══╩════════════════════════════════════════════════════╝${No_Attributes}"
 
     printf '
- Please select an Command: '
+ Please select a Command: '
     read var
 
 # ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
@@ -1170,7 +1170,7 @@ enableOrDisableTheShowOfHiddenFiles() {
     echo " ${Dim}╚═══╩════════════════════════════════════════════════════════════════════════════╝${No_Attributes}"
 
     printf '
- Please select an Command: '
+ Please select a Command: '
     read var
 
 # ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
@@ -1206,7 +1206,7 @@ enableOrDisableTheShowOfAllFileExtensions() {
     echo " ${Dim}╚═══╩════════════════════════════════════════════════════════════════════════════╝${No_Attributes}"
 
     printf '
- Please select an Command: '
+ Please select a Command: '
     read var
 
 # ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
@@ -1242,7 +1242,7 @@ enableOrDisableTheShowOfAttachmentsAsIconsInTheAppleMailApp() {
     echo " ${Dim}╚═══╩════════════════════════════════════════════════════════════════════════════╝${No_Attributes}"
 
     printf '
- Please select an Command: '
+ Please select a Command: '
     read var
 
 # ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
@@ -1278,7 +1278,7 @@ enableOrDisableTheShowOfTheFullPathInTheFinderTitleWindow() {
     echo " ${Dim}╚═══╩════════════════════════════════════════════════════════════════════════════╝${No_Attributes}"
 
     printf '
- Please select an Command: '
+ Please select a Command: '
     read var
 
 # ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
@@ -1324,7 +1324,7 @@ changeTheDefaultScreenshotFileFormat() {
     echo " ${Dim}╚═══╩════════════════════════════════════════════════════════════════════════════╝${No_Attributes}"
 
     printf '
- Please select an Command: '
+ Please select a Command: '
     read var
 
 # ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
@@ -1395,7 +1395,7 @@ enableOrDisableScreenshotWithShadowAndAddingExtraPixels() {
     echo " ${Dim}╚═══╩════════════════════════════════════════════════════════════════════════════╝${No_Attributes}"
 
     printf '
- Please select an Command: '
+ Please select a Command: '
     read var
 
 # ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
@@ -1431,7 +1431,7 @@ enableOrDisableTheWarningBeforeEmptyingTheTrash() {
     echo " ${Dim}╚═══╩════════════════════════════════════════════════════════════════════════════╝${No_Attributes}"
 
     printf '
- Please select an Command: '
+ Please select a Command: '
     read var
 
 # ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
@@ -1467,7 +1467,7 @@ enableOrDisableWarningWhenChangingAFileExtension() {
     echo " ${Dim}╚═══╩════════════════════════════════════════════════════════════════════════════╝${No_Attributes}"
 
     printf '
- Please select an Command: '
+ Please select a Command: '
     read var
 
 # ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
@@ -1505,7 +1505,7 @@ searchCurrentOrPreviousScopeOrThisMacFolderByDefault() {
     echo " ${Dim}╚═══╩════════════════════════════════════════════════════════════════════════════╝${No_Attributes}"
 
     printf '
- Please select an Command: '
+ Please select a Command: '
     read var
 
 # ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
@@ -1548,7 +1548,7 @@ enableOrDisableInTextEditTheCreateAnUntitledDocumentAtLaunch() {
     echo " ${Dim}╚═══╩════════════════════════════════════════════════════════════════════════════╝${No_Attributes}"
 
     printf '
- Please select an Command: '
+ Please select a Command: '
     read var
 
 # ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
@@ -1584,7 +1584,7 @@ enableOrDisableCopyEmailAddressesAs() {
     echo " ${Dim}╚═══╩══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝${No_Attributes}"
 
     printf '
- Please select an Command: '
+ Please select a Command: '
     read var
 
 # ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
@@ -1657,7 +1657,7 @@ deletePluginsInputAndOutputDevice() {
     echo " ${Dim}╚═══╩═══════════════════════════════════════════════════════════════════════╝${No_Attributes}"
 
     printf '
- Please select an Command: '
+ Please select a Command: '
     read var
 
 # ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
@@ -1733,7 +1733,7 @@ kernelManagement() {
     echo " ${Dim}╚═══╩════════════════════════════════════════════════════════════════════════════════════════════════════════╝${No_Attributes}"
 
     printf '
- Please select an Command: '
+ Please select a Command: '
     read var
 
 # ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
@@ -1850,7 +1850,7 @@ privacyDatabaseManagement() {
     echo " ${Dim}╚════╩═════════════════════════════════════════════════════════════════════════╝${No_Attributes}"
 
     printf '
- Please select an Command: '
+ Please select a Command: '
     read var
 
 # ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
@@ -1990,7 +1990,7 @@ gateKeeperManagement() {
     echo " ${Dim}╚═══╩════════════════════════════════════════════════════════════════════════════╝${No_Attributes}"
 
     printf '
- Please select an Command: '
+ Please select a Command: '
     read var
 
 # ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
@@ -2055,7 +2055,7 @@ processAndMemoryManagement() {
     echo " ${Dim}╚═══╩═══════════════════════════════════════════════════════════════════════════════════╝${No_Attributes}"
 
     printf '
- Please select an Command: '
+ Please select a Command: '
     read var
 
 # ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
@@ -2131,7 +2131,7 @@ uninstallingApplications() {
     echo " ${Dim}╚════╩════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝${No_Attributes}"
 
     printf '
- Please select an Command: '
+ Please select a Command: '
     read var
 
 # ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
@@ -3109,7 +3109,7 @@ uninstallingApplications() {
 startScript() {
     while :; do
         mainMenu
-        read "?  Please select an Command: " SELECTED_COMMAND
+        read "?  Please select a Command: " SELECTED_COMMAND
         case $SELECTED_COMMAND in
 # ══════════════════
         Z)
