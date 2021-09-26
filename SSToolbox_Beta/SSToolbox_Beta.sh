@@ -1600,27 +1600,31 @@ enableOrDisableInTextEditTheCreateAnUntitledDocumentAtLaunch() {
     echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 1${No_Attributes} ${Dim}║${No_Attributes} Enable in TextEdit the create an Untitled Document at Launch               ${Dim}║${No_Attributes}"
     echo " ${Dim}╠═══╬════════════════════════════════════════════════════════════════════════════╣${No_Attributes}"
     echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 2${No_Attributes} ${Dim}║${No_Attributes} Disable in TextEdit the create an Untitled Document at Launch (Default)    ${Dim}║${No_Attributes}"
-    echo " ${Dim}╚═══╩════════════════════════════════════════════════════════════════════════════╝${No_Attributes}"
+    echo " ${Dim}╚═══╩════════════════════════════════════════════════════════════════════════════╝${No_Attributes}\n"
 
-    printf '
- Please select a Command: '
-    read var
+    read "?  Please select a Command: " CHOICES
+    case $CHOICES in
 
 # ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
 
 # Enable in TextEdit the create an Untitled Document at Launch
-    if [ "$var" -eq "1" ]; then
+    1)
         echo "\n•${F_Red}${Bold} Enable in TextEdit the create an Untitled Document at Launch.${No_Attributes}"
         defaults write com.apple.TextEdit NSShowAppCentricOpenPanelInsteadOfUntitledFile -bool false
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    fi
+    ;;
 
 # Disable in TextEdit the create an Untitled Document at Launch (Default)
-    if [ "$var" -eq "2" ]; then
+    2)
         echo "\n•${F_Red}${Bold} Disable in TextEdit the create an Untitled Document at Launch (Default).${No_Attributes}"
         defaults write com.apple.TextEdit NSShowAppCentricOpenPanelInsteadOfUntitledFile -bool true
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    fi
+    ;;
+
+    *)
+        echo "\n•${F_Red} An unacceptable Command!${F_Red}${Bold}${No_Attributes}"
+        ;;
+    esac
 
     continueMessage
 }
@@ -1636,27 +1640,31 @@ enableOrDisableCopyEmailAddressesAs() {
     echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 1${No_Attributes} ${Dim}║${No_Attributes} Enable copy Email addresses as 'foo@example.com' instead of 'Foo Bar <foo@example.com>' in Apple Mail app            ${Dim}║${No_Attributes}"
     echo " ${Dim}╠═══╬══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣${No_Attributes}"
     echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 2${No_Attributes} ${Dim}║${No_Attributes} Disable copy Email addresses as 'foo@example.com' instead of 'Foo Bar <foo@example.com>' in Apple Mail app (Default) ${Dim}║${No_Attributes}"
-    echo " ${Dim}╚═══╩══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝${No_Attributes}"
+    echo " ${Dim}╚═══╩══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝${No_Attributes}\n"
 
-    printf '
- Please select a Command: '
-    read var
+    read "?  Please select a Command: " CHOICES
+    case $CHOICES in
 
 # ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
 
 # Enable copy Email addresses as 'foo@example.com' instead of 'Foo Bar <foo@example.com>' in Apple Mail app
-    if [ "$var" -eq "1" ]; then
+    1)
         echo "\n•${F_Red}${Bold} Enable copy Email addresses as 'foo@example.com' instead of 'Foo Bar <foo@example.com>' in Apple Mail app.${No_Attributes}"
         defaults write com.apple.mail AddressesIncludeNameOnPasteboard -bool false
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    fi
+    ;;
 
 # Disable copy Email addresses as 'foo@example.com' instead of 'Foo Bar <foo@example.com>' in Apple Mail app (Default)
-    if [ "$var" -eq "2" ]; then
+    2)
         echo "\n•${F_Red}${Bold} Disable copy Email addresses as 'foo@example.com' instead of 'Foo Bar <foo@example.com>' in Apple Mail app (Default).${No_Attributes}"
         defaults write com.apple.mail AddressesIncludeNameOnPasteboard -bool true
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    fi
+    ;;
+
+    *)
+        echo "\n•${F_Red} An unacceptable Command!${F_Red}${Bold}${No_Attributes}"
+        ;;
+    esac
 
     continueMessage
 }
@@ -1687,6 +1695,7 @@ cleaningLogsAndInactiveMemory() {
     remove "/Library/Application Support/CrashReporter/"
     remove "$HOME/Library/Logs/"
     remove "$HOME/Library/Application Support/CrashReporter"
+
 # Purge free inactive memory cache
     echo "\n•${F_Red}${Bold} Cleaning inactive memory.${No_Attributes}"
     sudo purge
@@ -1709,16 +1718,15 @@ deletePluginsInputAndOutputDevice() {
     echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 3${No_Attributes} ${Dim}║${No_Attributes} Manually Delete CoreMedia Input/Output Device DAL Video Plug-ins      ${Dim}║${No_Attributes}"
     echo " ${Dim}╠═══╬═══════════════════════════════════════════════════════════════════════╣${No_Attributes}"
     echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 4${No_Attributes} ${Dim}║${No_Attributes} Manually Delete Sound Input/Output Device HAL Audio Plug-ins          ${Dim}║${No_Attributes}"
-    echo " ${Dim}╚═══╩═══════════════════════════════════════════════════════════════════════╝${No_Attributes}"
+    echo " ${Dim}╚═══╩═══════════════════════════════════════════════════════════════════════╝${No_Attributes}\n"
 
-    printf '
- Please select a Command: '
-    read var
+    read "?  Please select a Command: " CHOICES
+    case $CHOICES in
 
 # ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
 
 # Automatic Delete All CoreMedia Input/Output Device DAL Video Plug-ins
-    if [ "$var" -eq "1" ]; then
+    1)
         echo "\n•${F_Red}${Bold} Automatic Delete All CoreMedia Input/Output Device DAL Video Plug-ins.${No_Attributes}"
         askPassword
 # The script
@@ -1732,10 +1740,10 @@ deletePluginsInputAndOutputDevice() {
         }
         remove "/Library/CoreMediaIO/Plug-Ins/DAL/"
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    fi
+    ;;
 
 # Automatic Delete All Sound Input/Output Device HAL Audio Plug-ins
-    if [ "$var" -eq "2" ]; then
+    2)
         echo "\n•${F_Red}${Bold} Automatic Delete All Sound Input/Output Device HAL Audio Plug-ins.${No_Attributes}"
         askPassword
 # The script
@@ -1749,21 +1757,26 @@ deletePluginsInputAndOutputDevice() {
         }
         remove "/Library/Audio/Plug-Ins/HAL/"
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    fi
+    ;;
 
 # Manually Delete CoreMedia Input/Output Device DAL Video Plug-ins
-    if [ "$var" -eq "3" ]; then
+    3)
         echo "\n•${F_Red}${Bold} Manually Delete CoreMedia Input/Output Device DAL Video Plug-ins.${No_Attributes}\n"
         open /Library/CoreMediaIO/Plug-Ins/DAL/
         echo "${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    fi
+    ;;
 
 # Manually Delete Sound Input/Output Device HAL Audio Plug-ins
-    if [ "$var" -eq "4" ]; then
+    4)
         echo "\n•${F_Red}${Bold} Manually Delete Sound Input/Output Device HAL Audio Plug-ins.${No_Attributes}\n"
         open /Library/Audio/Plug-Ins/HAL/
         echo "${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    fi
+    ;;
+
+    *)
+        echo "\n•${F_Red} An unacceptable Command!${F_Red}${Bold}${No_Attributes}"
+        ;;
+    esac
 
     continueMessage
 }
@@ -1785,16 +1798,15 @@ kernelManagement() {
     echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 4${No_Attributes} ${Dim}║${No_Attributes} Show the loaded state of the kernel Extensions                                                         ${Dim}║${No_Attributes}"
     echo " ${Dim}╠═══╬════════════════════════════════════════════════════════════════════════════════════════════════════════╣${No_Attributes}"
     echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 5${No_Attributes} ${Dim}║${No_Attributes} Repair Permissions in (System/Library/Extensions) and (Library/Extensions) folders (Requires a reboot) ${Dim}║${No_Attributes}"
-    echo " ${Dim}╚═══╩════════════════════════════════════════════════════════════════════════════════════════════════════════╝${No_Attributes}"
+    echo " ${Dim}╚═══╩════════════════════════════════════════════════════════════════════════════════════════════════════════╝${No_Attributes}\n"
 
-    printf '
- Please select a Command: '
-    read var
+    read "?  Please select a Command: " CHOICES
+    case $CHOICES in
 
 # ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
 
 # Cleaning the kernel Extension staging area by removing all staged content
-    if [ "$var" -eq "1" ]; then
+    1)
         echo "\n•${F_Red}${Bold} Cleaning the kernel Extension staging area by removing all staged content. (Requires a reboot)${No_Attributes}"
         askPassword
         sudo kmutil clear-staging
@@ -1806,10 +1818,10 @@ kernelManagement() {
         rm -rf .zsh_history
         sleep 1 && echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}${Dim} ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}"
         osascript -e 'tell application "loginwindow" to «event aevtrrst»'
-    fi
+    ;;
 
 # Rebuild out-of-date Caches
-    if [ "$var" -eq "2" ]; then
+    2)
         echo "\n•${F_Red}${Bold} Rebuild out-of-date Caches. (Requires a reboot)${No_Attributes}"
         askPassword
         sudo kmutil install --check-rebuild
@@ -1821,10 +1833,10 @@ kernelManagement() {
         rm -rf .zsh_history
         sleep 1 && echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}${Dim} ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}"
         osascript -e 'tell application "loginwindow" to «event aevtrrst»'
-    fi
+    ;;
 
 # Updated the kernel Extension
-    if [ "$var" -eq "3" ]; then
+    3)
         echo "\n•${F_Red}${Bold} Updated the kernel Extension. (Requires a reboot)${No_Attributes}\n"
         askPassword
         sudo kmutil install  --update-all
@@ -1836,18 +1848,18 @@ kernelManagement() {
         rm -rf .zsh_history
         sleep 1 && echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}${Dim} ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}"
         osascript -e 'tell application "loginwindow" to «event aevtrrst»'
-    fi
+    ;;
 
 # Show the loaded state of the kernel Extensions
-    if [ "$var" -eq "4" ]; then
+    4)
         terminalWindowSizeNr.3
         echo "\n•${F_Red}${Bold} Show the loaded state of the kernel Extensions.${No_Attributes}\n"
         sleep 2 && kmutil showloaded
         sleep 1 && echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}${Dim} ═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}"
-    fi
+    ;;
 
 # Repair Permissions in (System/Library/Extensions) and (Library/Extensions) folders
-    if [ "$var" -eq "5" ]; then
+    5)
         echo "\n•${F_Red}${Bold} Repair Permissions in (System/Library/Extensions) and (Library/Extensions) folders. (Requires a reboot)${No_Attributes}"
         askPassword
         sudo chmod -Rf 755 /S*/L*/E*
@@ -1862,7 +1874,12 @@ kernelManagement() {
         rm -rf .zsh_history
         sleep 1 && echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}${Dim} ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}"
         osascript -e 'tell application "loginwindow" to «event aevtrrst»'
-    fi
+    ;;
+
+    *)
+        echo "\n•${F_Red} An unacceptable Command!${F_Red}${Bold}${No_Attributes}"
+        ;;
+    esac
 
     continueMessage
 }
@@ -1902,125 +1919,129 @@ privacyDatabaseManagement() {
     echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 13${No_Attributes} ${Dim}║${No_Attributes} Reset the Calendars (for the Calendars list) permissions for all apps   ${Dim}║${No_Attributes}"
     echo " ${Dim}╠════╬═════════════════════════════════════════════════════════════════════════╣${No_Attributes}"
     echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 14${No_Attributes} ${Dim}║${No_Attributes} Reset the Address Book (for the Contacts list) permissions for all apps ${Dim}║${No_Attributes}"
-    echo " ${Dim}╚════╩═════════════════════════════════════════════════════════════════════════╝${No_Attributes}"
+    echo " ${Dim}╚════╩═════════════════════════════════════════════════════════════════════════╝${No_Attributes}\n"
 
-    printf '
- Please select a Command: '
-    read var
+    read "?  Please select a Command: " CHOICES
+    case $CHOICES in
 
 # ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
 
 # Reset the All permissions for all apps
-    if [ "$var" -eq "1" ]; then
+    1)
         echo "\n•${F_Red}${Bold} Reset the All permissions for all apps.${No_Attributes}"
         askPassword
         sudo tccutil reset All
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    fi
+    ;;
 
 # Reset the Photos permissions for all apps
-    if [ "$var" -eq "2" ]; then
+    2)
         echo "\n•${F_Red}${Bold} Reset the Photos permissions for all apps.${No_Attributes}"
         askPassword
         sudo tccutil reset Photos
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    fi
+    ;;
 
 # Reset the Camera permissions for all apps
-    if [ "$var" -eq "3" ]; then
+    3)
         echo "\n•${F_Red}${Bold} Reset the Camera permissions for all apps.${No_Attributes}"
         askPassword
         sudo tccutil reset Camera
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    fi
+    ;;
 
 # Reset the Reminders permissions for all apps
-    if [ "$var" -eq "4" ]; then
+    4)
         echo "\n•${F_Red}${Bold} Reset the Reminders permissions for all apps.${No_Attributes}"
         askPassword
         sudo tccutil reset Reminders
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    fi
+    ;;
 
 # Reset the Microphone permissions for all apps
-    if [ "$var" -eq "5" ]; then
+    5)
         echo "\n•${F_Red}${Bold} Reset the Microphone permissions for all apps.${No_Attributes}"
         askPassword
         sudo tccutil reset Microphone
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    fi
+    ;;
 
 # Reset the Automation permissions for all apps
-    if [ "$var" -eq "6" ]; then
+    6)
         echo "\n•${F_Red}${Bold} Reset the Automation permissions for all apps.${No_Attributes}"
         askPassword
         sudo tccutil reset AppleEvents
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    fi
+    ;;
 
 # Reset the Accessibility permissions for all apps
-    if [ "$var" -eq "7" ]; then
+    7)
         echo "\n•${F_Red}${Bold} Reset the Accessibility permissions for all apps.${No_Attributes}"
         askPassword
         sudo tccutil reset Accessibility
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    fi
+    ;;
 
 # Reset the Developer Tools permissions for all apps
-    if [ "$var" -eq "8" ]; then
+    8)
         echo "\n•${F_Red}${Bold} Reset the Developer Tools permissions for all apps.${No_Attributes}"
         askPassword
         sudo tccutil reset DeveloperTool
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    fi
+    ;;
 
     # Reset the Screen Recording permissions for all apps
-    if [ "$var" -eq "9" ]; then
+    9)
         echo "\n•${F_Red}${Bold} Reset the Screen Recording permissions for all apps.${No_Attributes}"
         askPassword
         sudo tccutil reset ScreenCapture
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    fi
+    ;;
 
 # Reset the Full Disk Access permissions for all apps
-    if [ "$var" -eq "10" ]; then
+    10)
         echo "\n•${F_Red}${Bold} Reset the Full Disk Access permissions for all apps.${No_Attributes}"
         askPassword
         sudo tccutil reset SystemPolicyAllFiles
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    fi
+    ;;
 
 # Reset the Speech Recognition permissions for all apps
-    if [ "$var" -eq "11" ]; then
+    11)
         echo "\n•${F_Red}${Bold} Reset the Speech Recognition permissions for all apps.${No_Attributes}"
         askPassword
         sudo tccutil reset SpeechRecognition
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    fi
+    ;;
 
 # Reset the Media & Apple Music permissions for all apps
-    if [ "$var" -eq "12" ]; then
+    12)
         echo "\n•${F_Red}${Bold} Reset the Media & Apple Music permissions for all apps.${No_Attributes}"
         askPassword
         sudo tccutil reset MediaLibrary
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    fi
+    ;;
 
 # Reset the Calendars (note the singular, for the Calendars list) permissions for all apps
-    if [ "$var" -eq "13" ]; then
+    13)
         echo "\n•${F_Red}${Bold} Reset the Calendars (note the singular, for the Calendars list) permissions for all apps.${No_Attributes}"
         askPassword
         sudo tccutil reset Calendar
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    fi
+    ;;
 
 # Reset the Address Book (for the Contacts list) permissions for all apps
-    if [ "$var" -eq "14" ]; then
+    14)
         echo "\n•${F_Red}${Bold} Reset the Address Book (for the Contacts list) permissions for all apps.${No_Attributes}"
         askPassword
         sudo tccutil reset AddressBook
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    fi
+    ;;
+
+    *)
+        echo "\n•${F_Red} An unacceptable Command!${F_Red}${Bold}${No_Attributes}"
+        ;;
+    esac
 
     continueMessage
 }
@@ -2042,54 +2063,58 @@ gateKeeperManagement() {
     echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 4${No_Attributes} ${Dim}║${No_Attributes} Remove app from GateKeeper Quarantine                                      ${Dim}║${No_Attributes}"
     echo " ${Dim}╠═══╬════════════════════════════════════════════════════════════════════════════╣${No_Attributes}"
     echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 5${No_Attributes} ${Dim}║${No_Attributes} Self-sign the app. Require Xcode or Xcode CLT (Command Line Tools)         ${Dim}║${No_Attributes}"
-    echo " ${Dim}╚═══╩════════════════════════════════════════════════════════════════════════════╝${No_Attributes}"
+    echo " ${Dim}╚═══╩════════════════════════════════════════════════════════════════════════════╝${No_Attributes}\n"
 
-    printf '
- Please select a Command: '
-    read var
+    read "?  Please select a Command: " CHOICES
+    case $CHOICES in
 
 # ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
 
 # GateKeeper Status
-    if [ "$var" -eq "1" ]; then
+    1)
         echo "\n•${F_Red}${Bold} GateKeeper Status.${No_Attributes}\n"
         spctl --status
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    fi
+    ;;
 
 # Enable GateKeeper
-    if [ "$var" -eq "2" ]; then
+    2)
         echo "\n•${F_Red}${Bold} Enable GateKeeper.${No_Attributes}"
         askPassword
         sudo spctl --master-enable
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    fi
+    ;;
 
 # Disable GateKeeper
-    if [ "$var" -eq "3" ]; then
+    3)
         echo "\n•${F_Red}${Bold} Disable GateKeeper.${No_Attributes}"
         askPassword
         sudo spctl --master-disable
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    fi
+    ;;
 
 # Remove app from GateKeeper Quarantine
-    if [ "$var" -eq "4" ]; then
+    4)
         echo "\n•${F_Red}${Bold} Remove app from GateKeeper Quarantine.${No_Attributes}\n"
         read "? Drag & drop the app on this window and then press Return: " FILEPATH
         askPassword
         sudo xattr -r -d com.apple.quarantine "$FILEPATH"
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    fi
+    ;;
 
 # Self-sign the app. Require Xcode or Xcode CLT (Command Line Tools)
-    if [ "$var" -eq "5" ]; then
+    5)
         echo "\n•${F_Red}${Bold} Self-sign the app. Require Xcode or Xcode CLT (Command Line Tools).${No_Attributes}\n"
         read "? Drag & drop the app on this window and then press Return: " FILEPATH
         askPassword
         sudo codesign -f -v -s - --deep "$FILEPATH"
         echo "\n${F_Red}•${F_Green}${Bold} If you see - replacing existing signature - that means you are done.${No_Attributes}"
-    fi
+    ;;
+
+    *)
+        echo "\n•${F_Red} An unacceptable Command!${F_Red}${Bold}${No_Attributes}"
+        ;;
+    esac
 
     continueMessage
 }
@@ -2107,16 +2132,15 @@ processAndMemoryManagement() {
     echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 2${No_Attributes} ${Dim}║${No_Attributes} Display processes sorted by Memory usage and Kill a process by specifying its PID ${Dim}║${No_Attributes}"
     echo " ${Dim}╠═══╬═══════════════════════════════════════════════════════════════════════════════════╣${No_Attributes}"
     echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 3${No_Attributes} ${Dim}║${No_Attributes} Using purge to free inactive Memory                                               ${Dim}║${No_Attributes}"
-    echo " ${Dim}╚═══╩═══════════════════════════════════════════════════════════════════════════════════╝${No_Attributes}"
+    echo " ${Dim}╚═══╩═══════════════════════════════════════════════════════════════════════════════════╝${No_Attributes}\n"
 
-    printf '
- Please select a Command: '
-    read var
+    read "?  Please select a Command: " CHOICES
+    case $CHOICES in
 
 # ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
 
 # Display processes sorted by CPU usage and Kill a process by specifying its PID
-    if [ "$var" -eq "1" ]; then
+    1)
         echo "\n•${F_Red}${Bold} Display processes sorted by CPU usage and Kill a process by specifying its PID.${No_Attributes}"
         askPassword
         osascript -e 'tell application "Terminal" to do script "top -o cpu -s 2"'; osascript -e 'tell application "Terminal" to set bounds of front window to {990, 20, 1440, 830}'
@@ -2125,10 +2149,10 @@ processAndMemoryManagement() {
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
         echo "\n•${F_Red}${Bold} List of running processes in the system, completed...${No_Attributes}"
         sleep 2 && sudo killall top
-    fi
+    ;;
 
 # Display processes sorted by Memory usage and Kill a process by specifying its PID
-    if [ "$var" -eq "2" ]; then
+    2)
         echo "\n•${F_Red}${Bold} Display processes sorted by Memory usage and Kill a process by specifying its PID.${No_Attributes}"
         askPassword
         osascript -e 'tell app "Terminal" to do script "top -o rsize -s 2"'; osascript -e 'tell application "Terminal" to set bounds of front window to {990, 20, 1440, 830}'
@@ -2137,10 +2161,10 @@ processAndMemoryManagement() {
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
         echo "\n•${F_Red}${Bold} List of running processes in the system, completed...${No_Attributes}"
         sleep 2 && sudo killall top
-    fi
+    ;;
 
 # Using purge to free inactive Memory
-    if [ "$var" -eq "3" ]; then
+    3)
         echo "\n•${F_Red}${Bold} Using purge to free inactive Memory.${No_Attributes}"
         askPassword
         echo "•${F_Red}${Bold} Memory usage:${No_Attributes}"
@@ -2151,7 +2175,12 @@ processAndMemoryManagement() {
         echo "\n•${F_Red}${Bold} Memory usage:${No_Attributes}"
         sleep 2 && top -l 1 -s 0 | grep PhysMem
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    fi
+    ;;
+
+    *)
+        echo "\n•${F_Red} An unacceptable Command!${F_Red}${Bold}${No_Attributes}"
+        ;;
+    esac
 
     continueMessage
 }
@@ -2183,16 +2212,15 @@ uninstallingApplications() {
     echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 14${No_Attributes} ${Dim}║${No_Attributes} Uninstalling the AdGuard for Safari extension                                                                                      ${Dim}║${No_Attributes}"
     echo " ${Dim}╠════╬═════════════════════════════════════════════════════════════════════════════════════════════════════════════════ ${F_Blue}${Bold}Virtual machines ${No_Attributes}${Dim}═╣${No_Attributes}"
     echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 15${No_Attributes} ${Dim}║${No_Attributes} Uninstalling the VMware Fusion                                                                                                     ${Dim}║${No_Attributes}"
-    echo " ${Dim}╚════╩════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝${No_Attributes}"
+    echo " ${Dim}╚════╩════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝${No_Attributes}\n"
 
-    printf '
- Please select a Command: '
-    read var
+    read "?  Please select a Command: " CHOICES
+    case $CHOICES in
 
 # ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
 
 # Uninstalling the Opera Browser
-    if [ "$var" -eq "1" ]; then
+    1)
         echo "\n•${F_Red}${Bold} Uninstalling the Opera Browser.${No_Attributes}"
         terminalWindowSizeNr.1
         askPassword
@@ -2219,7 +2247,7 @@ uninstallingApplications() {
     remove "$HOME/Library/Logs/com.operasoftware.Opera"
 # Preferences
     remove "$HOME/Library/Preferences/com.operasoftware.Opera.plist"
- # Caches
+# Caches
     remove "$HOME/Library/Caches/com.operasoftware.Opera"
 # Application Support
     remove "$HOME/Library/Application Support/Google"
@@ -2229,12 +2257,12 @@ uninstallingApplications() {
 # Purge free inactive memory cache
     sudo purge
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    fi
+    ;;
 
 # ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
 
 # Uninstalling the Yandex Browser
-    if [ "$var" -eq "2" ]; then
+    2)
         echo "\n•${F_Red}${Bold} Uninstalling the Yandex Browser.${No_Attributes}"
         terminalWindowSizeNr.1
         askPassword
@@ -2272,12 +2300,12 @@ uninstallingApplications() {
 # Purge free inactive memory cache
     sudo purge
     echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    fi
+    ;;
 
 # ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
 
 # Uninstalling the Mozilla Firefox
-    if [ "$var" -eq "3" ]; then
+    3)
         echo "\n•${F_Red}${Bold} Uninstalling the Mozilla Firefox.${No_Attributes}"
         terminalWindowSizeNr.1
         askPassword
@@ -2315,12 +2343,12 @@ uninstallingApplications() {
 # Purge free inactive memory cache
     sudo purge
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    fi
+    ;;
 
 # ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
 
 # Uninstalling the Google Chrome
-    if [ "$var" -eq "4" ]; then
+    4)
         echo "\n•${F_Red}${Bold} Uninstalling the Google Chrome.${No_Attributes}"
         terminalWindowSizeNr.1
         askPassword
@@ -2370,12 +2398,12 @@ uninstallingApplications() {
 # Purge free inactive memory cache
     sudo purge
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    fi
+    ;;
 
 # ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
 
 # Uninstalling the Microsoft Edge
-    if [ "$var" -eq "5" ]; then
+    5)
         echo "\n•${F_Red}${Bold} Uninstalling the Microsoft Edge.${No_Attributes}"
         terminalWindowSizeNr.1
         askPassword
@@ -2412,12 +2440,12 @@ uninstallingApplications() {
 # Purge free inactive memory cache
     sudo purge
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    fi
+    ;;
 
 # ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
 
 # Uninstalling the Microsoft Word
-    if [ "$var" -eq "6" ]; then
+    6)
         echo "\n•${F_Red}${Bold} Uninstalling the Microsoft Word.${No_Attributes}"
         terminalWindowSizeNr.3
         askPassword
@@ -2465,12 +2493,12 @@ uninstallingApplications() {
 # Purge free inactive memory cache
     sudo purge
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    fi
+    ;;
 
 # ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
 
 # Uninstalling the Microsoft Excel
-    if [ "$var" -eq "7" ]; then
+    7)
         echo "\n•${F_Red}${Bold} Uninstalling the Microsoft Excel.${No_Attributes}"
         terminalWindowSizeNr.3
         askPassword
@@ -2518,12 +2546,12 @@ uninstallingApplications() {
 # Purge free inactive memory cache
     sudo purge
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    fi
+    ;;
 
 # ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
 
 # Uninstalling the Microsoft PowerPoint
-    if [ "$var" -eq "8" ]; then
+    8)
         echo "\n•${F_Red}${Bold} Uninstalling the Microsoft PowerPoint.${No_Attributes}"
         terminalWindowSizeNr.3
         askPassword
@@ -2571,12 +2599,12 @@ uninstallingApplications() {
 # Purge free inactive memory cache
     sudo purge
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    fi
+    ;;
 
 # ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
 
 # Uninstalling the Microsoft OneNote
-    if [ "$var" -eq "9" ]; then
+    9)
         echo "\n•${F_Red}${Bold} Uninstalling the Microsoft OneNote.${No_Attributes}"
         terminalWindowSizeNr.3
         askPassword
@@ -2625,12 +2653,12 @@ uninstallingApplications() {
 # Purge free inactive memory cache
     sudo purge
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    fi
+    ;;
 
 # ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
 
 # Uninstalling the Microsoft Outlook
-    if [ "$var" -eq "10" ]; then
+    10)
         echo "\n•${F_Red}${Bold} Uninstalling the Microsoft Outlook.${No_Attributes}"
         terminalWindowSizeNr.3
         askPassword
@@ -2682,12 +2710,12 @@ uninstallingApplications() {
 # Purge free inactive memory cache
     sudo purge
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    fi
+    ;;
 
 # ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
 
 # Uninstalling the Microsoft OneDrive
-    if [ "$var" -eq "11" ]; then
+    11)
         echo "\n•${F_Red}${Bold} Uninstalling the Microsoft OneDrive.${No_Attributes}"
         terminalWindowSizeNr.3
         askPassword
@@ -2764,12 +2792,12 @@ uninstallingApplications() {
 # Purge free inactive memory cache
     sudo purge
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    fi
+    ;;
 
 # ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
 
 # Uninstalling the Microsoft AutoUpdate
-    if [ "$var" -eq "12" ]; then
+    12)
         echo "\n•${F_Red}${Bold} Uninstalling the Microsoft AutoUpdate.${No_Attributes}"
         terminalWindowSizeNr.3
         askPassword
@@ -2818,12 +2846,12 @@ uninstallingApplications() {
 # Purge free inactive memory cache
     sudo purge
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    fi
+    ;;
 
 # ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
 
 # Uninstalling the Microsoft Office 2019 (volume licensed versions)
-    if [ "$var" -eq "13" ]; then
+    13)
         echo "\n•${F_Red}${Bold} Uninstalling the Microsoft Office 2019 (volume licensed versions).${No_Attributes}"
         terminalWindowSizeNr.3
         askPassword
@@ -3010,12 +3038,12 @@ uninstallingApplications() {
 # Purge free inactive memory cache
     sudo purge
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    fi
+    ;;
 
 # ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
 
 # Uninstalling the AdGuard for Safari extension
-    if [ "$var" -eq "14" ]; then
+    14)
         echo "\n•${F_Red}${Bold} Uninstalling the AdGuard for Safari extension.${No_Attributes}"
         terminalWindowSizeNr.3
         askPassword
@@ -3079,12 +3107,12 @@ uninstallingApplications() {
 # Purge free inactive memory cache
     sudo purge
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    fi
+    ;;
 
 # ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
 
 # Uninstalling the VMware Fusion
-    if [ "$var" -eq "15" ]; then
+    15)
         echo "\n•${F_Red}${Bold} Uninstalling the VMware Fusion.${No_Attributes}"
         terminalWindowSizeNr.3
         askPassword
@@ -3153,7 +3181,12 @@ uninstallingApplications() {
 # Purge free inactive memory cache
     sudo purge
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    fi
+    ;;
+
+    *)
+        echo "\n•${F_Red} An unacceptable Command!${F_Red}${Bold}${No_Attributes}"
+        ;;
+    esac
 
     continueMessage
 }
