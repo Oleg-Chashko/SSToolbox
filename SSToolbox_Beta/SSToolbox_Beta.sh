@@ -3119,122 +3119,62 @@ startScript() {
         read "?  Please select a Command: " SELECTED_COMMAND
         case $SELECTED_COMMAND in
 # ══════════════════
-        A)
+        A|a)
             clear
             setHomebrew
             ;;
 
-        a)
-            clear
-            setHomebrew
-            ;;
-
-        S)
+        S|s)
             clear
             setPro
             ;;
 
-        s)
-            clear
-            setPro
-            ;;
-
-        D)
+        D|d)
             clear
             setNovel
             ;;
 
-        d)
-            clear
-            setNovel
-            ;;
-
-        F)
+        F|f)
             clear
             setManPage
             ;;
 
-        f)
-            clear
-            setManPage
-            ;;
-
-        G)
+        G|g)
             clear
             setOcean
             ;;
 
-        g)
-            clear
-            setOcean
-            ;;
-
-        H)
-            clear
-            setBasic
-            ;;
-
-        h)
+        H|h)
             clear
             setBasic
             ;;
 # ══════════════════
-        I)
+        I|i)
             clear
             installingXCLT
             ;;
 
-        i)
-            clear
-            installingXCLT
-            ;;
-
-        U)
-            clear
-            uninstallingXCLT
-            ;;
-
-        u)
+        U|u)
             clear
             uninstallingXCLT
             ;;
 # ══════════════════
-        Q)
+        Q|q)
             clear
             quitSSToolbox
             ;;
 
-        q)
-            clear
-            quitSSToolbox
-            ;;
-
-        L)
+        L|l)
             clear
             downloadLatestRelease
             ;;
 
-        l)
-            clear
-            downloadLatestRelease
-            ;;
-
-        B)
+        B|b)
             clear
             downloadBetaRelease
             ;;
 
-        b)
-            clear
-            downloadBetaRelease
-            ;;
-
-        P)
-            clear
-            projectPageOnGitHub
-            ;;
-
-        p)
+        P|p)
             clear
             projectPageOnGitHub
             ;;
