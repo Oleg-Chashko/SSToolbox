@@ -260,7 +260,7 @@ customDNSServersForWi-Fi() {
     terminalWindowSizeNr.2
     echo "•${F_Red}${Bold} Command 1: Custom DNS servers for Wi-Fi.${No_Attributes}"
     askPassword
-# Menu
+# Submenu
     echo " ${Dim}╔═══════════════════╦════════════════════════════════════════════════════════════════════════════════════════╗${No_Attributes}"
     echo " ${Dim}║${No_Attributes} Modes filtering   ${Dim}║${No_Attributes} Description              ${F_Red}${Bold}Note:${No_Attributes} Please don't use them unless you know what you're doing ${Dim}║${No_Attributes}"
     echo " ${Dim}╠═══════════════════╬════════════════════════════════════════════════════════════════════════════════════════╣${No_Attributes}"
@@ -289,16 +289,15 @@ customDNSServersForWi-Fi() {
     echo " ${Dim}╠════╬══════════════════════════╦════════╩══════════════════╩════════════════════╩══════════════════════╩════════════════════════╝${No_Attributes}"
     echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 12${No_Attributes} ${Dim}║${No_Attributes} Show current DNS servers ${Dim}║${No_Attributes}"
     echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 13${No_Attributes} ${Dim}║${No_Attributes} Reset DNS servers        ${Dim}║${No_Attributes}"
-    echo " ${Dim}╚════╩══════════════════════════╝${No_Attributes}"
+    echo " ${Dim}╚════╩══════════════════════════╝${No_Attributes}\n"
 
-    printf '
- Please select a Command: '
-    read var
+    read "?  Please select a Command: " CHOICES
+    case $CHOICES in
 
 # ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
 
 # Cloudflare set as DNS server
-    if [ "$var" -eq "1" ]; then
+    1)
         askPassword
         networksetup -setdnsservers Wi-Fi 8.8.8.8 8.8.4.4 2001:4860:4860::8888 2001:4860:4860::8844
         echo "\n•${F_Green} Cloudflare set as DNS server.${No_Attributes} Checking..."
@@ -306,10 +305,10 @@ customDNSServersForWi-Fi() {
 # Flush DNS cache
         sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder
         checkDNS
-    fi
+    ;;
 
 # Google Public set as DNS server
-    if [ "$var" -eq "2" ]; then
+    2)
         askPassword
         networksetup -setdnsservers Wi-Fi 1.1.1.1 1.0.0.1 2606:4700:4700::1111 2606:4700:4700::1001
         echo "\n•${F_Green} Google Public set as DNS server.${No_Attributes} Checking..."
@@ -317,10 +316,10 @@ customDNSServersForWi-Fi() {
 # Flush DNS cache
         sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder
         checkDNS
-    fi
+    ;;
 
 # Cisco Umbrella set as DNS server
-    if [ "$var" -eq "3" ]; then
+    3)
         askPassword
         networksetup -setdnsservers Wi-Fi 208.67.222.222 208.67.220.220 2620:119:35::35 2620:119:53::53
         echo "\n•${F_Green} Cisco Umbrella set as DNS server.${No_Attributes} Checking..."
@@ -328,10 +327,10 @@ customDNSServersForWi-Fi() {
 # Flush DNS cache
         sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder
         checkDNS
-    fi
+    ;;
 
 # NeuStar (Threat Protection) set as DNS server
-    if [ "$var" -eq "4" ]; then
+    4)
         askPassword
         networksetup -setdnsservers Wi-Fi 156.154.70.2 156.154.71.2 2610:a1:1018::2 2610:a1:1019::2
         echo "\n•${F_Green} NeuStar (Threat Protection) set as DNS server.${No_Attributes} Checking..."
@@ -339,10 +338,10 @@ customDNSServersForWi-Fi() {
 # Flush DNS cache
         sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder
         checkDNS
-    fi
+    ;;
 
 # NeuStar (Family Protection) set as DNS server
-    if [ "$var" -eq "5" ]; then
+    5)
         askPassword
         networksetup -setdnsservers Wi-Fi 156.154.70.3 156.154.71.3 2610:a1:1018::3 2610:a1:1019::3
         echo "\n•${F_Green} NeuStar (Family Protection) set as DNS server.${No_Attributes} Checking..."
@@ -350,10 +349,10 @@ customDNSServersForWi-Fi() {
 # Flush DNS cache
         sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder
         checkDNS
-    fi
+    ;;
 
 # CleanBrowsing (Threat Protection) set as DNS server
-    if [ "$var" -eq "6" ]; then
+    6)
         askPassword
         networksetup -setdnsservers Wi-Fi 185.228.168.9 185.228.169.9 2a0d:2a00:1::2 2a0d:2a00:2::2
         echo "\n•${F_Green} CleanBrowsing (Threat Protection) set as DNS server.${No_Attributes} Checking..."
@@ -361,10 +360,10 @@ customDNSServersForWi-Fi() {
 # Flush DNS cache
         sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder
         checkDNS
-    fi
+    ;;
 
 # CleanBrowsing (Family Protection) set as DNS server
-    if [ "$var" -eq "7" ]; then
+    7)
         askPassword
         networksetup -setdnsservers Wi-Fi 185.228.168.168 185.228.169.168 2a0d:2a00:1:: 2a0d:2a00:2::
         echo "\n•${F_Green} CleanBrowsing (Family Protection) set as DNS server.${No_Attributes} Checking..."
@@ -372,10 +371,10 @@ customDNSServersForWi-Fi() {
 # Flush DNS cache
         sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder
         checkDNS
-    fi
+    ;;
 
 # AdGuard (Threat Protection) set as DNS server
-    if [ "$var" -eq "8" ]; then
+    8)
         askPassword
         networksetup -setdnsservers Wi-Fi 94.140.14.14 94.140.15.15 2a10:50c0::ad1:ff 2a10:50c0::ad2:ff
         echo "\n•${F_Green} AdGuard (Threat Protection) set as DNS server.${No_Attributes} Checking..."
@@ -383,10 +382,10 @@ customDNSServersForWi-Fi() {
 # Flush DNS cache
         sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder
         checkDNS
-    fi
+    ;;
 
 # AdGuard (Family Protection) set as DNS server
-    if [ "$var" -eq "9" ]; then
+    9)
         askPassword
         networksetup -setdnsservers Wi-Fi 94.140.14.15 94.140.15.16 2a10:50c0::bad1:ff 2a10:50c0::bad2:ff
         echo "\n•${F_Green} AdGuard (Family Protection) set as DNS server.${No_Attributes} Checking..."
@@ -394,10 +393,10 @@ customDNSServersForWi-Fi() {
 # Flush DNS cache
         sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder
         checkDNS
-    fi
+    ;;
 
 # YandexDNS (Threat Protection) set as DNS server
-    if [ "$var" -eq "10" ]; then
+    10)
         askPassword
         networksetup -setdnsservers Wi-Fi 77.88.8.88 77.88.8.2 2a02:6b8::feed:bad 2a02:6b8:0:1::feed:bad
         echo "\n•${F_Green} YandexDNS (Threat Protection) set as DNS server.${No_Attributes} Checking..."
@@ -405,10 +404,10 @@ customDNSServersForWi-Fi() {
 # Flush DNS cache
         sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder
         checkDNS
-    fi
+    ;;
 
 # YandexDNS (Family Protection) set as DNS server
-    if [ "$var" -eq "11" ]; then
+    11)
         askPassword
         networksetup -setdnsservers Wi-Fi 77.88.8.7 77.88.8.3 2a02:6b8::feed:a11 2a02:6b8:0:1::feed:a11
         echo "\n•${F_Green} YandexDNS (Family Protection) set as DNS server.${No_Attributes} Checking..."
@@ -416,17 +415,17 @@ customDNSServersForWi-Fi() {
 # Flush DNS cache
         sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder
         checkDNS
-    fi
+    ;;
 
 # Current DNS server
-    if [ "$var" -eq "12" ]; then
+    12)
         askPassword
         echo "\n${F_Red}•${No_Attributes} Current DNS server:\n${F_Cyan}$(networksetup -getdnsservers Wi-Fi)${No_Attributes}"
         checkDNS
-    fi
+    ;;
 
 # Removing these DNS servers
-    if [ "$var" -eq "13" ]; then
+    13)
         askPassword
         echo "\n•${F_Red} Removing${No_Attributes} these DNS servers:\n${F_Cyan}$(networksetup -getdnsservers Wi-Fi)${No_Attributes}"
         sleep 1
@@ -435,7 +434,12 @@ customDNSServersForWi-Fi() {
 # Flush DNS cache
         sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder
         checkDNS
-    fi
+    ;;
+
+    *)
+        echo "\n•${F_Red} An unacceptable Command!${F_Red}${Bold}${No_Attributes}"
+        ;;
+    esac
 
     continueMessage
 }
@@ -447,7 +451,7 @@ customDNSServersForEthernet() {
     terminalWindowSizeNr.2
     echo "•${F_Red}${Bold} Command 2: Custom DNS servers for Ethernet.${No_Attributes}"
     askPassword
-# Menu
+# Submenu
     echo " ${Dim}╔═══════════════════╦════════════════════════════════════════════════════════════════════════════════════════╗${No_Attributes}"
     echo " ${Dim}║${No_Attributes} Modes filtering   ${Dim}║${No_Attributes} Description              ${F_Red}${Bold}Note:${No_Attributes} Please don't use them unless you know what you're doing ${Dim}║${No_Attributes}"
     echo " ${Dim}╠═══════════════════╬════════════════════════════════════════════════════════════════════════════════════════╣${No_Attributes}"
@@ -476,16 +480,15 @@ customDNSServersForEthernet() {
     echo " ${Dim}╠════╬══════════════════════════╦════════╩══════════════════╩════════════════════╩══════════════════════╩════════════════════════╝${No_Attributes}"
     echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 12${No_Attributes} ${Dim}║${No_Attributes} Show current DNS servers ${Dim}║${No_Attributes}"
     echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 13${No_Attributes} ${Dim}║${No_Attributes} Reset DNS servers        ${Dim}║${No_Attributes}"
-    echo " ${Dim}╚════╩══════════════════════════╝${No_Attributes}"
+    echo " ${Dim}╚════╩══════════════════════════╝${No_Attributes}\n"
 
-    printf '
- Please select a Command: '
-    read var
+    read "?  Please select a Command: " CHOICES
+    case $CHOICES in
 
 # ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
 
 # Cloudflare set as DNS server
-    if [ "$var" -eq "1" ]; then
+    1)
         askPassword
         networksetup -setdnsservers Ethernet 8.8.8.8 8.8.4.4 2001:4860:4860::8888 2001:4860:4860::8844
         echo "\n•${F_Green} Cloudflare set as DNS server.${No_Attributes} Checking..."
@@ -493,10 +496,10 @@ customDNSServersForEthernet() {
 # Flush DNS cache
         sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder
         checkDNS
-    fi
+    ;;
 
 # Google Public set as DNS server
-    if [ "$var" -eq "2" ]; then
+    2)
         askPassword
         networksetup -setdnsservers Ethernet 1.1.1.1 1.0.0.1 2606:4700:4700::1111 2606:4700:4700::1001
         echo "\n•${F_Green} Google Public set as DNS server.${No_Attributes} Checking..."
@@ -504,10 +507,10 @@ customDNSServersForEthernet() {
 # Flush DNS cache
         sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder
         checkDNS
-    fi
+    ;;
 
 # Cisco Umbrella set as DNS server
-    if [ "$var" -eq "3" ]; then
+    3)
         askPassword
         networksetup -setdnsservers Ethernet 208.67.222.222 208.67.220.220 2620:119:35::35 2620:119:53::53
         echo "\n•${F_Green} Cisco Umbrella set as DNS server.${No_Attributes} Checking..."
@@ -515,10 +518,10 @@ customDNSServersForEthernet() {
 # Flush DNS cache
         sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder
         checkDNS
-    fi
+    ;;
 
 # NeuStar (Threat Protection) set as DNS server
-    if [ "$var" -eq "4" ]; then
+    4)
         askPassword
         networksetup -setdnsservers Ethernet 156.154.70.2 156.154.71.2 2610:a1:1018::2 2610:a1:1019::2
         echo "\n•${F_Green} NeuStar (Threat Protection) set as DNS server.${No_Attributes} Checking..."
@@ -526,10 +529,10 @@ customDNSServersForEthernet() {
 # Flush DNS cache
         sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder
         checkDNS
-    fi
+    ;;
 
 # NeuStar (Family Protection) set as DNS server
-    if [ "$var" -eq "5" ]; then
+    5)
         askPassword
         networksetup -setdnsservers Ethernet 156.154.70.3 156.154.71.3 2610:a1:1018::3 2610:a1:1019::3
         echo "\n•${F_Green} NeuStar (Family Protection) set as DNS server.${No_Attributes} Checking..."
@@ -537,10 +540,10 @@ customDNSServersForEthernet() {
 # Flush DNS cache
         sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder
         checkDNS
-    fi
+    ;;
 
 # CleanBrowsing (Threat Protection) set as DNS server
-    if [ "$var" -eq "6" ]; then
+    6)
         askPassword
         networksetup -setdnsservers Ethernet 185.228.168.9 185.228.169.9 2a0d:2a00:1::2 2a0d:2a00:2::2
         echo "\n•${F_Green} CleanBrowsing (Threat Protection) set as DNS server.${No_Attributes} Checking..."
@@ -548,10 +551,10 @@ customDNSServersForEthernet() {
 # Flush DNS cache
         sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder
         checkDNS
-    fi
+    ;;
 
 # CleanBrowsing (Family Protection) set as DNS server
-    if [ "$var" -eq "7" ]; then
+    7)
         askPassword
         networksetup -setdnsservers Ethernet 185.228.168.168 185.228.169.168 2a0d:2a00:1:: 2a0d:2a00:2::
         echo "\n•${F_Green} CleanBrowsing (Family Protection) set as DNS server.${No_Attributes} Checking..."
@@ -559,10 +562,10 @@ customDNSServersForEthernet() {
 # Flush DNS cache
         sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder
         checkDNS
-    fi
+    ;;
 
 # AdGuard (Threat Protection) set as DNS server
-    if [ "$var" -eq "8" ]; then
+    8)
         askPassword
         networksetup -setdnsservers Ethernet 94.140.14.14 94.140.15.15 2a10:50c0::ad1:ff 2a10:50c0::ad2:ff
         echo "\n•${F_Green} AdGuard (Threat Protection) set as DNS server.${No_Attributes} Checking..."
@@ -570,10 +573,10 @@ customDNSServersForEthernet() {
 # Flush DNS cache
         sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder
         checkDNS
-    fi
+    ;;
 
 # AdGuard (Family Protection) set as DNS server
-    if [ "$var" -eq "9" ]; then
+    9)
         askPassword
         networksetup -setdnsservers Ethernet 94.140.14.15 94.140.15.16 2a10:50c0::bad1:ff 2a10:50c0::bad2:ff
         echo "\n•${F_Green} AdGuard (Family Protection) set as DNS server.${No_Attributes} Checking..."
@@ -581,10 +584,10 @@ customDNSServersForEthernet() {
 # Flush DNS cache
         sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder
         checkDNS
-    fi
+    ;;
 
 # YandexDNS (Threat Protection) set as DNS server
-    if [ "$var" -eq "10" ]; then
+    10)
         askPassword
         networksetup -setdnsservers Ethernet 77.88.8.88 77.88.8.2 2a02:6b8::feed:bad 2a02:6b8:0:1::feed:bad
         echo "\n•${F_Green} YandexDNS (Threat Protection) set as DNS server.${No_Attributes} Checking..."
@@ -592,10 +595,10 @@ customDNSServersForEthernet() {
 # Flush DNS cache
         sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder
         checkDNS
-    fi
+    ;;
 
 # YandexDNS (Family Protection) set as DNS server
-    if [ "$var" -eq "11" ]; then
+    11)
         askPassword
         networksetup -setdnsservers Ethernet 77.88.8.7 77.88.8.3 2a02:6b8::feed:a11 2a02:6b8:0:1::feed:a11
         echo "\n•${F_Green} YandexDNS (Family Protection) set as DNS server.${No_Attributes} Checking..."
@@ -603,17 +606,17 @@ customDNSServersForEthernet() {
 # Flush DNS cache
         sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder
         checkDNS
-    fi
+    ;;
 
 # Current DNS server
-    if [ "$var" -eq "12" ]; then
+    12)
         askPassword
         echo "\n${F_Red}•${No_Attributes} Current DNS server:\n${F_Cyan}$(networksetup -getdnsservers Ethernet)${No_Attributes}"
         checkDNS
-    fi
+    ;;
 
 # Removing these DNS servers
-    if [ "$var" -eq "13" ]; then
+    13)
         askPassword
         echo "\n•${F_Red} Removing${No_Attributes} these DNS servers:\n${F_Cyan}$(networksetup -getdnsservers Ethernet)${No_Attributes}"
         sleep 1
@@ -622,7 +625,12 @@ customDNSServersForEthernet() {
 # Flush DNS cache
         sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder
         checkDNS
-    fi
+    ;;
+
+    *)
+        echo "\n•${F_Red} An unacceptable Command!${F_Red}${Bold}${No_Attributes}"
+        ;;
+    esac
 
     continueMessage
 }
@@ -633,7 +641,7 @@ customDNSServersForEthernet() {
 customPingAndTraceroutTestIPv4/IPv6() {
     terminalWindowSizeNr.2
     echo "•${F_Red}${Bold} Command 3: Custom ping and tracerout test IPv4/IPv6.${No_Attributes}\n"
-# Menu
+# Submenu
     echo " ${Dim}╔═══╦════════════════════════════════════════════════════╗${No_Attributes}"
     echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 1${No_Attributes} ${Dim}║${No_Attributes} Test Ping IPv4                                     ${Dim}║${No_Attributes}"
     echo " ${Dim}╠═══╬════════════════════════════════════════════════════╣${No_Attributes}"
@@ -642,16 +650,15 @@ customPingAndTraceroutTestIPv4/IPv6() {
     echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 3${No_Attributes} ${Dim}║${No_Attributes} Test Ping IPv6                                     ${Dim}║${No_Attributes}"
     echo " ${Dim}╠═══╬════════════════════════════════════════════════════╣${No_Attributes}"
     echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 4${No_Attributes} ${Dim}║${No_Attributes} Test Traceroute IPv6                               ${Dim}║${No_Attributes}"
-    echo " ${Dim}╚═══╩════════════════════════════════════════════════════╝${No_Attributes}"
+    echo " ${Dim}╚═══╩════════════════════════════════════════════════════╝${No_Attributes}\n"
 
-    printf '
- Please select a Command: '
-    read var
+    read "?  Please select a Command: " CHOICES
+    case $CHOICES in
 
 # ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
 
 # Test Ping IPv4
-    if [ "$var" -eq "1" ]; then
+    1)
         echo "\n${Dim}════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}\n"
         echo " Outgoing data bytes packet size ${F_Green}${Bold}Default: 56${No_Attributes} -> exceeding can trigger a firewall."
         read "? To which IP or Host address you want to send the test packets: " HOST
@@ -661,10 +668,10 @@ customPingAndTraceroutTestIPv4/IPv6() {
         echo "\n•${F_Red}${Bold} Testing Ping IPv4.${No_Attributes}\n"
         ping -i 0.1 "$HOST" -c "$COUNT" -s "$SIZE"
         echo "\n${F_Red}•${F_Green}${Bold} Finish...${No_Attributes}${Dim} ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}"
-    fi
+    ;;
 
 # Test Traceroute IPv4
-    if [ "$var" -eq "2" ]; then
+    2)
         echo "\n${Dim}════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}\n"
         read "? To which IP or Host address you want to send the test packets: " HOST
         read "? Send packets of specified IP protocol supported are: ICMP or UDP: " PROTOCOL
@@ -672,10 +679,10 @@ customPingAndTraceroutTestIPv4/IPv6() {
         echo "\n•${F_Red}${Bold} Testing Traceroute IPv4.${No_Attributes}\n"
         traceroute -w 1 -S -P $PROTOCOL -m 30 "$HOST"
         echo "\n${F_Red}•${F_Green}${Bold} Finish...${No_Attributes}${Dim} ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}"
-    fi
+    ;;
 
 # Test Ping IPv6
-    if [ "$var" -eq "3" ]; then
+    3)
         echo "\n${Dim}════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}\n"
         echo " Outgoing data bytes packet size ${F_Green}${Bold}Default: 56${No_Attributes} -> exceeding can trigger a firewall."
         read "? To which IP or Host address you want to send the test packets: " HOST
@@ -685,10 +692,10 @@ customPingAndTraceroutTestIPv4/IPv6() {
         echo "\n•${F_Red}${Bold} Testing Ping IPv6.${No_Attributes}\n"
         ping6 -i 0.1 "$HOST" -c "$COUNT" -s "$SIZE"
         echo "\n${F_Red}•${F_Green}${Bold} Finish...${No_Attributes}${Dim} ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}"
-    fi
+    ;;
 
 # Test Traceroute IPv6
-    if [ "$var" -eq "4" ]; then
+    4)
         echo "\n${Dim}════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}\n"
         read "? To which IP or Host address you want to send the test packets: " HOST
         read "? Send packets of specified IP protocol supported are: ICMP(-I) or UDP( ): " PROTOCOL
@@ -696,7 +703,12 @@ customPingAndTraceroutTestIPv4/IPv6() {
         echo "\n•${F_Red}${Bold} Testing Traceroute IPv6.${No_Attributes}\n"
         traceroute6 -w 1 -l $PROTOCOL -m 30 "$HOST"
         echo "\n${F_Red}•${F_Green}${Bold} Finish...${No_Attributes}${Dim} ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}"
-    fi
+    ;;
+
+    *)
+        echo "\n•${F_Red} An unacceptable Command!${F_Red}${Bold}${No_Attributes}"
+        ;;
+    esac
 
     continueMessage
 }
@@ -1169,32 +1181,36 @@ showInfoLN_DHCP_IP/MACAddresses() {
 enableOrDisableTheShowOfHiddenFiles() {
     terminalWindowSizeNr.1
     echo "•${F_Red}${Bold} Command 16: Enable or Disable the show of Hidden files.${No_Attributes}\n"
-# Menu
+# Submenu
     echo " ${Dim}╔═══╦════════════════════════════════════════════════════════════════════════════╗${No_Attributes}"
     echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 1${No_Attributes} ${Dim}║${No_Attributes} Enable the show of Hidden files                                            ${Dim}║${No_Attributes}"
     echo " ${Dim}╠═══╬════════════════════════════════════════════════════════════════════════════╣${No_Attributes}"
     echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 2${No_Attributes} ${Dim}║${No_Attributes} Disable the show of Hidden files (Default)                                 ${Dim}║${No_Attributes}"
-    echo " ${Dim}╚═══╩════════════════════════════════════════════════════════════════════════════╝${No_Attributes}"
+    echo " ${Dim}╚═══╩════════════════════════════════════════════════════════════════════════════╝${No_Attributes}\n"
 
-    printf '
- Please select a Command: '
-    read var
+    read "?  Please select a Command: " CHOICES
+    case $CHOICES in
 
 # ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
 
     # Enable the show of Hidden files
-    if [ "$var" -eq "1" ]; then
+    1)
         echo "\n•${F_Red}${Bold} Enable the show of Hidden files.${No_Attributes}"
         defaults write com.apple.finder AppleShowAllFiles true && killall Finder
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    fi
+    ;;
 
     # Disable the show of Hidden files
-    if [ "$var" -eq "2" ]; then
+    2)
         echo "\n•${F_Red}${Bold} Disable the show of Hidden files.${No_Attributes}"
         defaults write com.apple.finder AppleShowAllFiles false && killall Finder
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    fi
+    ;;
+
+    *)
+        echo "\n•${F_Red} An unacceptable Command!${F_Red}${Bold}${No_Attributes}"
+        ;;
+    esac
 
     continueMessage
 }
@@ -1205,32 +1221,36 @@ enableOrDisableTheShowOfHiddenFiles() {
 enableOrDisableTheShowOfAllFileExtensions() {
     terminalWindowSizeNr.1
     echo "•${F_Red}${Bold} Command 17: Enable or Disable the show of all File Extensions.${No_Attributes}\n"
-# Menu
+# Submenu
     echo " ${Dim}╔═══╦════════════════════════════════════════════════════════════════════════════╗${No_Attributes}"
     echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 1${No_Attributes} ${Dim}║${No_Attributes} Enable the show of all File Extensions                                     ${Dim}║${No_Attributes}"
     echo " ${Dim}╠═══╬════════════════════════════════════════════════════════════════════════════╣${No_Attributes}"
     echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 2${No_Attributes} ${Dim}║${No_Attributes} Disable the show of all File Extensions (Default)                          ${Dim}║${No_Attributes}"
-    echo " ${Dim}╚═══╩════════════════════════════════════════════════════════════════════════════╝${No_Attributes}"
+    echo " ${Dim}╚═══╩════════════════════════════════════════════════════════════════════════════╝${No_Attributes}\n"
 
-    printf '
- Please select a Command: '
-    read var
+    read "?  Please select a Command: " CHOICES
+    case $CHOICES in
 
 # ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
 
 # Enable the show of all File Extensions
-    if [ "$var" -eq "1" ]; then
+    1)
         echo "\n•${F_Red}${Bold} Enable the show of all File Extensions.${No_Attributes}"
         defaults write NSGlobalDomain AppleShowAllExtensions true && killall Finder
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    fi
+    ;;
 
 # Disable the show of all File Extensions
-    if [ "$var" -eq "2" ]; then
+    2)
         echo "\n•${F_Red}${Bold} Disable the show of all File Extensions.${No_Attributes}"
         defaults write NSGlobalDomain AppleShowAllExtensions false && killall Finder
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    fi
+    ;;
+
+    *)
+        echo "\n•${F_Red} An unacceptable Command!${F_Red}${Bold}${No_Attributes}"
+        ;;
+    esac
 
     continueMessage
 }
@@ -1241,32 +1261,36 @@ enableOrDisableTheShowOfAllFileExtensions() {
 enableOrDisableTheShowOfAttachmentsAsIconsInTheAppleMailApp() {
     terminalWindowSizeNr.1
     echo "•${F_Red}${Bold} Command 18: Enable or Disable the show of Attachments as Icons in the Apple Mail app.${No_Attributes}\n"
-# Menu
+# Submenu
     echo " ${Dim}╔═══╦════════════════════════════════════════════════════════════════════════════╗${No_Attributes}"
     echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 1${No_Attributes} ${Dim}║${No_Attributes} Enable the show of Attachments as Icons in the Apple Mail app              ${Dim}║${No_Attributes}"
     echo " ${Dim}╠═══╬════════════════════════════════════════════════════════════════════════════╣${No_Attributes}"
     echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 2${No_Attributes} ${Dim}║${No_Attributes} Disable the show of Attachments as Icons in the Apple Mail app (Default)   ${Dim}║${No_Attributes}"
-    echo " ${Dim}╚═══╩════════════════════════════════════════════════════════════════════════════╝${No_Attributes}"
+    echo " ${Dim}╚═══╩════════════════════════════════════════════════════════════════════════════╝${No_Attributes}\n"
 
-    printf '
- Please select a Command: '
-    read var
+    read "?  Please select a Command: " CHOICES
+    case $CHOICES in
 
 # ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
 
 # Enable the show of Attachments as Icons in the Apple Mail app
-    if [ "$var" -eq "1" ]; then
+    1)
         echo "\n•${F_Red}${Bold} Enable the show of Attachments as Icons in the Apple Mail app.${No_Attributes}"
         defaults write com.apple.mail DisableInlineAttachmentViewing -boolean yes
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    fi
+    ;;
 
 # Disable the show of attachments as icons in the Apple Mail app
-    if [ "$var" -eq "2" ]; then
+    2)
         echo "\n•${F_Red}${Bold} Disable the show of Attachments as Icons in the Apple Mail app.${No_Attributes}"
         defaults write com.apple.mail DisableInlineAttachmentViewing -boolean no
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    fi
+    ;;
+
+    *)
+        echo "\n•${F_Red} An unacceptable Command!${F_Red}${Bold}${No_Attributes}"
+        ;;
+    esac
 
     continueMessage
 }
@@ -1277,32 +1301,36 @@ enableOrDisableTheShowOfAttachmentsAsIconsInTheAppleMailApp() {
 enableOrDisableTheShowOfTheFullPathInTheFinderTitleWindow() {
     terminalWindowSizeNr.1
     echo "•${F_Red}${Bold} Command 19: Enable or Disable the show of the full path in the Finder 'Title' window.${No_Attributes}\n"
-# Menu
+# Submenu
     echo " ${Dim}╔═══╦════════════════════════════════════════════════════════════════════════════╗${No_Attributes}"
     echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 1${No_Attributes} ${Dim}║${No_Attributes} Enable the show of the full path in the Finder 'Title' window              ${Dim}║${No_Attributes}"
     echo " ${Dim}╠═══╬════════════════════════════════════════════════════════════════════════════╣${No_Attributes}"
     echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 2${No_Attributes} ${Dim}║${No_Attributes} Disable the show of the full path in the Finder 'Title' window (Default)   ${Dim}║${No_Attributes}"
-    echo " ${Dim}╚═══╩════════════════════════════════════════════════════════════════════════════╝${No_Attributes}"
+    echo " ${Dim}╚═══╩════════════════════════════════════════════════════════════════════════════╝${No_Attributes}\n"
 
-    printf '
- Please select a Command: '
-    read var
+    read "?  Please select a Command: " CHOICES
+    case $CHOICES in
 
 # ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
 
 # Enable the show of the full path in the Finder 'Title' window
-    if [ "$var" -eq "1" ]; then
+    1)
         echo "\n•${F_Red}${Bold} Enable the show of the full path in the Finder 'Title' window.${No_Attributes}"
         defaults write com.apple.finder _FXShowPosixPathInTitle -bool true && killall Finder
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    fi
+    ;;
 
 # Disable the show of the full path in the Finder 'Title' window
-    if [ "$var" -eq "2" ]; then
+    2)
         echo "\n•${F_Red}${Bold} Disable the show of the full path in the Finder 'Title' window.${No_Attributes}"
         defaults write com.apple.finder _FXShowPosixPathInTitle -bool false && killall Finder
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    fi
+    ;;
+
+    *)
+        echo "\n•${F_Red} An unacceptable Command!${F_Red}${Bold}${No_Attributes}"
+        ;;
+    esac
 
     continueMessage
 }
@@ -1313,7 +1341,7 @@ enableOrDisableTheShowOfTheFullPathInTheFinderTitleWindow() {
 changeTheDefaultScreenshotFileFormat() {
     terminalWindowSizeNr.1
     echo "•${F_Red}${Bold} Command 20: Change the default Screenshot file format.${No_Attributes}\n"
-# Menu
+# Submenu
     echo " ${Dim}╔═══╦════════════════════════════════════════════════════════════════════════════╗${No_Attributes}"
     echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 1${No_Attributes} ${Dim}║${No_Attributes} Enable to use default Screenshot BMP file format                           ${Dim}║${No_Attributes}"
     echo " ${Dim}╠═══╬════════════════════════════════════════════════════════════════════════════╣${No_Attributes}"
@@ -1328,62 +1356,66 @@ changeTheDefaultScreenshotFileFormat() {
     echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 6${No_Attributes} ${Dim}║${No_Attributes} Enable to use default Screenshot JPEG file format                          ${Dim}║${No_Attributes}"
     echo " ${Dim}╠═══╬════════════════════════════════════════════════════════════════════════════╣${No_Attributes}"
     echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 7${No_Attributes} ${Dim}║${No_Attributes} Enable to use default Screenshot PNG file format (Default)                 ${Dim}║${No_Attributes}"
-    echo " ${Dim}╚═══╩════════════════════════════════════════════════════════════════════════════╝${No_Attributes}"
+    echo " ${Dim}╚═══╩════════════════════════════════════════════════════════════════════════════╝${No_Attributes}\n"
 
-    printf '
- Please select a Command: '
-    read var
+    read "?  Please select a Command: " CHOICES
+    case $CHOICES in
 
 # ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
 
 # Enable to use default Screenshot BMP file format
-    if [ "$var" -eq "1" ]; then
+    1)
         echo "\n•${F_Red}${Bold} Enable to use default Screenshot BMP file format.${No_Attributes}"
         defaults write com.apple.screencapture type bmp && killall SystemUIServer
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    fi
+    ;;
 
 # Enable to use default Screenshot GIF file format
-    if [ "$var" -eq "2" ]; then
+    2)
         echo "\n•${F_Red}${Bold} Enable to use default Screenshot GIF file format.${No_Attributes}"
         defaults write com.apple.screencapture type gif && killall SystemUIServer
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    fi
+    ;;
 
 # Enable to use default Screenshot PDF file format
-    if [ "$var" -eq "3" ]; then
+    3)
         echo "\n•${F_Red}${Bold} Enable to use default Screenshot PDF file format.${No_Attributes}"
         defaults write com.apple.screencapture type pdf && killall SystemUIServer
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    fi
+    ;;
 
 # Enable to use default Screenshot TIFF file format
-    if [ "$var" -eq "4" ]; then
+    4)
         echo "\n•${F_Red}${Bold} Enable to use default Screenshot TIFF file format.${No_Attributes}"
         defaults write com.apple.screencapture type tiff && killall SystemUIServer
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    fi
+    ;;
 
 # Enable to use default Screenshot JPG file format
-    if [ "$var" -eq "5" ]; then
+    5)
         echo "\n•${F_Red}${Bold} Enable to use default Screenshot JPG file format.${No_Attributes}"
         defaults write com.apple.screencapture type jpg && killall SystemUIServer
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    fi
+    ;;
 
 # Enable to use default Screenshot JPEG file format
-    if [ "$var" -eq "6" ]; then
+    6)
         echo "\n•${F_Red}${Bold} Enable to use default Screenshot JPEG file format.${No_Attributes}"
         defaults write com.apple.screencapture type jpeg && killall SystemUIServer
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    fi
+    ;;
 
 # Enable to use default Screenshot PNG file format (Default)
-    if [ "$var" -eq "7" ]; then
+    7)
         echo "\n•${F_Red}${Bold} Enable to use default Screenshot PNG file format (Default).${No_Attributes}"
         defaults write com.apple.screencapture type png && killall SystemUIServer
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    fi
+    ;;
+
+    *)
+        echo "\n•${F_Red} An unacceptable Command!${F_Red}${Bold}${No_Attributes}"
+        ;;
+    esac
 
     continueMessage
 }
@@ -1394,32 +1426,36 @@ changeTheDefaultScreenshotFileFormat() {
 enableOrDisableScreenshotWithShadowAndAddingExtraPixels() {
     terminalWindowSizeNr.1
     echo "•${F_Red}${Bold} Command 21: Enable or Disable Screenshot with shadow and adding extra pixels.${No_Attributes}\n"
-# Menu
+# Submenu
     echo " ${Dim}╔═══╦════════════════════════════════════════════════════════════════════════════╗${No_Attributes}"
     echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 1${No_Attributes} ${Dim}║${No_Attributes} Disable Screenshot with shadow and adding extra pixels                     ${Dim}║${No_Attributes}"
     echo " ${Dim}╠═══╬════════════════════════════════════════════════════════════════════════════╣${No_Attributes}"
     echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 2${No_Attributes} ${Dim}║${No_Attributes} Enable Screenshot with shadow and adding extra pixels (Default)            ${Dim}║${No_Attributes}"
-    echo " ${Dim}╚═══╩════════════════════════════════════════════════════════════════════════════╝${No_Attributes}"
+    echo " ${Dim}╚═══╩════════════════════════════════════════════════════════════════════════════╝${No_Attributes}\n"
 
-    printf '
- Please select a Command: '
-    read var
+    read "?  Please select a Command: " CHOICES
+    case $CHOICES in
 
 # ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
 
 # Disable Screenshot with shadow and adding extra pixels
-    if [ "$var" -eq "1" ]; then
+    1)
         echo "\n•${F_Red}${Bold} Disable Screenshot with shadow and adding extra pixels.${No_Attributes}"
         defaults write com.apple.screencapture disable-shadow -bool true && killall SystemUIServer
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    fi
+    ;;
 
 # Enable Screenshot with shadow and adding extra pixels (Default)
-    if [ "$var" -eq "2" ]; then
+    2)
         echo "\n•${F_Red}${Bold} Enable Screenshot with shadow and adding extra pixels (Default).${No_Attributes}"
         defaults write com.apple.screencapture disable-shadow -bool false && killall SystemUIServer
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    fi
+    ;;
+
+    *)
+        echo "\n•${F_Red} An unacceptable Command!${F_Red}${Bold}${No_Attributes}"
+        ;;
+    esac
 
     continueMessage
 }
@@ -1430,32 +1466,36 @@ enableOrDisableScreenshotWithShadowAndAddingExtraPixels() {
 enableOrDisableTheWarningBeforeEmptyingTheTrash() {
     terminalWindowSizeNr.1
     echo "•${F_Red}${Bold} Command 22: Enable or Disable the warning before emptying the Trash.${No_Attributes}\n"
-# Menu
+# Submenu
     echo " ${Dim}╔═══╦════════════════════════════════════════════════════════════════════════════╗${No_Attributes}"
     echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 1${No_Attributes} ${Dim}║${No_Attributes} Disable warning before emptying the Trash                                  ${Dim}║${No_Attributes}"
     echo " ${Dim}╠═══╬════════════════════════════════════════════════════════════════════════════╣${No_Attributes}"
     echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 2${No_Attributes} ${Dim}║${No_Attributes} Enable warning before emptying the Trash (Default)                         ${Dim}║${No_Attributes}"
-    echo " ${Dim}╚═══╩════════════════════════════════════════════════════════════════════════════╝${No_Attributes}"
+    echo " ${Dim}╚═══╩════════════════════════════════════════════════════════════════════════════╝${No_Attributes}\n"
 
-    printf '
- Please select a Command: '
-    read var
+    read "?  Please select a Command: " CHOICES
+    case $CHOICES in
 
 # ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
 
 # Disable warning before emptying the Trash
-    if [ "$var" -eq "1" ]; then
+    1)
         echo "\n•${F_Red}${Bold} Disable warning before emptying the Trash.${No_Attributes}"
         defaults write com.apple.finder WarnOnEmptyTrash -bool false
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    fi
+    ;;
 
 # Enable warning before emptying the Trash (Default)
-    if [ "$var" -eq "2" ]; then
+    2)
         echo "\n•${F_Red}${Bold} Enable warning before emptying the Trash (Default).${No_Attributes}"
         defaults write com.apple.finder WarnOnEmptyTrash -bool true
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    fi
+    ;;
+
+    *)
+        echo "\n•${F_Red} An unacceptable Command!${F_Red}${Bold}${No_Attributes}"
+        ;;
+    esac
 
     continueMessage
 }
@@ -1466,32 +1506,36 @@ enableOrDisableTheWarningBeforeEmptyingTheTrash() {
 enableOrDisableWarningWhenChangingAFileExtension() {
     terminalWindowSizeNr.1
     echo "•${F_Red}${Bold} Command 23: Enable or Disable warning when changing a file Extension.${No_Attributes}\n"
-# Menu
+# Submenu
     echo " ${Dim}╔═══╦════════════════════════════════════════════════════════════════════════════╗${No_Attributes}"
     echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 1${No_Attributes} ${Dim}║${No_Attributes} Disable warning when changing a file Extension                             ${Dim}║${No_Attributes}"
     echo " ${Dim}╠═══╬════════════════════════════════════════════════════════════════════════════╣${No_Attributes}"
     echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 2${No_Attributes} ${Dim}║${No_Attributes} Enable warning when changing a file Extension (Default)                    ${Dim}║${No_Attributes}"
-    echo " ${Dim}╚═══╩════════════════════════════════════════════════════════════════════════════╝${No_Attributes}"
+    echo " ${Dim}╚═══╩════════════════════════════════════════════════════════════════════════════╝${No_Attributes}\n"
 
-    printf '
- Please select a Command: '
-    read var
+    read "?  Please select a Command: " CHOICES
+    case $CHOICES in
 
 # ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
 
 # Disable warning when changing a file Extension
-    if [ "$var" -eq "1" ]; then
+    1)
         echo "\n•${F_Red}${Bold} Disable warning when changing a file Extension.${No_Attributes}"
         defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    fi
+    ;;
 
 # Enable warning when changing a file Extension (Default)
-    if [ "$var" -eq "2" ]; then
+    2)
         echo "\n•${F_Red}${Bold} Enable warning when changing a file Extension (Default).${No_Attributes}"
         defaults write com.apple.finder FXEnableExtensionChangeWarning -bool true
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    fi
+    ;;
+
+    *)
+        echo "\n•${F_Red} An unacceptable Command!${F_Red}${Bold}${No_Attributes}"
+        ;;
+    esac
 
     continueMessage
 }
@@ -1502,41 +1546,45 @@ enableOrDisableWarningWhenChangingAFileExtension() {
 searchCurrentOrPreviousScopeOrThisMacFolderByDefault() {
     terminalWindowSizeNr.1
     echo "•${F_Red}${Bold} Command 24: Search (Current or Previous Scope or This Mac) folder by default.${No_Attributes}\n"
-# Menu
+# Submenu
     echo " ${Dim}╔═══╦════════════════════════════════════════════════════════════════════════════╗${No_Attributes}"
     echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 1${No_Attributes} ${Dim}║${No_Attributes} When performing a search, search the Current folder by default             ${Dim}║${No_Attributes}"
     echo " ${Dim}╠═══╬════════════════════════════════════════════════════════════════════════════╣${No_Attributes}"
     echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 2${No_Attributes} ${Dim}║${No_Attributes} When performing a search, search the Previous Scope folder by default      ${Dim}║${No_Attributes}"
     echo " ${Dim}╠═══╬════════════════════════════════════════════════════════════════════════════╣${No_Attributes}"
-    echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 2${No_Attributes} ${Dim}║${No_Attributes} When performing a search, search the This Mac folder by default (Default)  ${Dim}║${No_Attributes}"
-    echo " ${Dim}╚═══╩════════════════════════════════════════════════════════════════════════════╝${No_Attributes}"
+    echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 3${No_Attributes} ${Dim}║${No_Attributes} When performing a search, search the This Mac folder by default (Default)  ${Dim}║${No_Attributes}"
+    echo " ${Dim}╚═══╩════════════════════════════════════════════════════════════════════════════╝${No_Attributes}\n"
 
-    printf '
- Please select a Command: '
-    read var
+    read "?  Please select a Command: " CHOICES
+    case $CHOICES in
 
 # ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
 
 # When performing a search, search the Current folder by default
-    if [ "$var" -eq "1" ]; then
+    1)
         echo "\n•${F_Red}${Bold} When performing a search, search the Current folder by default.${No_Attributes}"
         defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    fi
+    ;;
 
 # When performing a search, search the Previous Scope folder by default
-    if [ "$var" -eq "2" ]; then
+    2)
         echo "\n•${F_Red}${Bold} When performing a search, search the Previous Scope folder by default.${No_Attributes}"
         defaults write com.apple.finder FXDefaultSearchScope -string "SCsp"
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    fi
+    ;;
 
 # When performing a search, search the This Mac folder by default (Default)
-    if [ "$var" -eq "2" ]; then
+    3)
         echo "\n•${F_Red}${Bold} When performing a search, search the This Mac folder by default (Default).${No_Attributes}"
         defaults write com.apple.finder FXDefaultSearchScope -string "SCev"
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    fi
+    ;;
+
+    *)
+        echo "\n•${F_Red} An unacceptable Command!${F_Red}${Bold}${No_Attributes}"
+        ;;
+    esac
 
     continueMessage
 }
@@ -1547,7 +1595,7 @@ searchCurrentOrPreviousScopeOrThisMacFolderByDefault() {
 enableOrDisableInTextEditTheCreateAnUntitledDocumentAtLaunch() {
     terminalWindowSizeNr.1
     echo "•${F_Red}${Bold} Command 25: Enable or Disable in TextEdit the create an Untitled Document at Launch.${No_Attributes}\n"
-# Menu
+# Submenu
     echo " ${Dim}╔═══╦════════════════════════════════════════════════════════════════════════════╗${No_Attributes}"
     echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 1${No_Attributes} ${Dim}║${No_Attributes} Enable in TextEdit the create an Untitled Document at Launch               ${Dim}║${No_Attributes}"
     echo " ${Dim}╠═══╬════════════════════════════════════════════════════════════════════════════╣${No_Attributes}"
@@ -1583,7 +1631,7 @@ enableOrDisableInTextEditTheCreateAnUntitledDocumentAtLaunch() {
 enableOrDisableCopyEmailAddressesAs() {
     terminalWindowSizeNr.1
     echo "•${F_Red}${Bold} Command 26: Enable or Disable copy Email addresses as 'foo@example.com' instead of 'Foo Bar <foo@example.com>' in Apple Mail app.${No_Attributes}\n"
-# Menu
+# Submenu
     echo " ${Dim}╔═══╦══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗${No_Attributes}"
     echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 1${No_Attributes} ${Dim}║${No_Attributes} Enable copy Email addresses as 'foo@example.com' instead of 'Foo Bar <foo@example.com>' in Apple Mail app            ${Dim}║${No_Attributes}"
     echo " ${Dim}╠═══╬══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣${No_Attributes}"
@@ -1652,7 +1700,7 @@ cleaningLogsAndInactiveMemory() {
 deletePluginsInputAndOutputDevice() {
     terminalWindowSizeNr.1
     echo "•${F_Red}${Bold} Command 28: I/O system Management: Manually and Automatic Delete, Plugins Input and Output device.${No_Attributes}\n"
-# Menu
+# Submenu
     echo " ${Dim}╔═══╦═══════════════════════════════════════════════════════════════════════╗${No_Attributes}"
     echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 1${No_Attributes} ${Dim}║${No_Attributes} Automatic Delete All CoreMedia Input/Output Device DAL Video Plug-ins ${Dim}║${No_Attributes}"
     echo " ${Dim}╠═══╬═══════════════════════════════════════════════════════════════════════╣${No_Attributes}"
@@ -1726,7 +1774,7 @@ deletePluginsInputAndOutputDevice() {
 kernelManagement() {
     terminalWindowSizeNr.2
     echo "•${F_Red}${Bold} Command 29: Kernel OS Management: Cleaning kernel Extension, Rebuild Kexts Caches, Repair Permissions of Kexts folders, etc.${No_Attributes}\n"
-# Menu
+# Submenu
     echo " ${Dim}╔═══╦════════════════════════════════════════════════════════════════════════════════════════════════════════╗${No_Attributes}"
     echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 1${No_Attributes} ${Dim}║${No_Attributes} Cleaning the kernel Extension staging area by removing all staged content (Requires a reboot)          ${Dim}║${No_Attributes}"
     echo " ${Dim}╠═══╬════════════════════════════════════════════════════════════════════════════════════════════════════════╣${No_Attributes}"
@@ -1825,7 +1873,7 @@ kernelManagement() {
 privacyDatabaseManagement() {
     terminalWindowSizeNr.2
     echo "•${F_Red}${Bold} Command 30: Privacy Database Management: Custom reset application permissions under Security and Privacy.${No_Attributes}\n"
-# Menu
+# Submenu
     echo " ${Dim}╔════╦═════════════════════════════════════════════════════════════════════════╗${No_Attributes}"
     echo " ${Dim}║${No_Attributes}${F_Red}${Bold}  1${No_Attributes} ${Dim}║${No_Attributes} ${F_Red}Reset the All permissions for all apps${No_Attributes}                                  ${Dim}║${No_Attributes}"
     echo " ${Dim}╠════╬═════════════════════════════════════════════════════════════════════════╣${No_Attributes}"
@@ -1983,7 +2031,7 @@ privacyDatabaseManagement() {
 gateKeeperManagement() {
     terminalWindowSizeNr.1
     echo "•${F_Red}${Bold} Command 31: GateKeeper Management: Status, Enable or Disable, Remove app from quarantine, Self-sign the app.${No_Attributes}\n"
-# Menu
+# Submenu
     echo " ${Dim}╔═══╦════════════════════════════════════════════════════════════════════════════╗${No_Attributes}"
     echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 1${No_Attributes} ${Dim}║${No_Attributes} GateKeeper Status                                                          ${Dim}║${No_Attributes}"
     echo " ${Dim}╠═══╬════════════════════════════════════════════════════════════════════════════╣${No_Attributes}"
@@ -2052,7 +2100,7 @@ gateKeeperManagement() {
 processAndMemoryManagement() {
     terminalWindowSizeNr.1
     echo "•${F_Red}${Bold} Command 32: Process & Memory Management: Manage Processes Using the Terminal, Terminate (Kill) a Process and Purge Memory.${No_Attributes}\n"
-# Menu
+# Submenu
     echo " ${Dim}╔═══╦═══════════════════════════════════════════════════════════════════════════════════╗${No_Attributes}"
     echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 1${No_Attributes} ${Dim}║${No_Attributes} Display processes sorted by CPU usage and Kill a process by specifying its PID    ${Dim}║${No_Attributes}"
     echo " ${Dim}╠═══╬═══════════════════════════════════════════════════════════════════════════════════╣${No_Attributes}"
@@ -2115,7 +2163,7 @@ uninstallingApplications() {
     terminalWindowSizeNr.1
     echo "•${F_Red}${Bold} Command 33: Uninstalling applications: Browsers, Microsoft Office VL, Ad blocking extension, Virtual machines.${No_Attributes}\n"
     echo "${F_Red}${Bold}•${No_Attributes} Warning: The script automatically closes the application to be deleted and all related applications.\n"
-# Menu
+# Submenu
     echo " ${Dim}╔════╦═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════ ${F_Blue}${Bold}Web browsers ${No_Attributes}${Dim}═╗${No_Attributes}"
     echo " ${Dim}║${No_Attributes}${F_Red}${Bold}  1${No_Attributes} ${Dim}║${No_Attributes} Uninstalling the Opera Browser                                                                                                     ${Dim}║${No_Attributes}"
     echo " ${Dim}║${No_Attributes}${F_Red}${Bold}  2${No_Attributes} ${Dim}║${No_Attributes} Uninstalling the Yandex Browser                                                                                                    ${Dim}║${No_Attributes}"
