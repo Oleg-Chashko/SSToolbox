@@ -142,6 +142,7 @@ terminalWindowSizeNr.3() {
 # Command A: Terminal set "Homebrew"
 setHomebrew() {
     osascript -e 'tell application "Terminal" to set current settings of first window to settings set "Homebrew"'
+    osascript -e 'tell application "Terminal" to set background color of first window to {0, 0, 0}'
     osascript -e 'tell application "Terminal" to set font name of first window to "SF Mono"'
     osascript -e 'tell application "Terminal" to set font size of first window to "11"'
 }
