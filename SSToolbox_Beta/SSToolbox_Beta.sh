@@ -149,6 +149,7 @@ setHomebrew() {
 # Command S: Terminal set "Pro"
 setPro() {
     osascript -e 'tell application "Terminal" to set current settings of first window to settings set "Pro"'
+    osascript -e 'tell application "Terminal" to set background color of first window to {0, 0, 0}'
     osascript -e 'tell application "Terminal" to set font name of first window to "SF Mono"'
     osascript -e 'tell application "Terminal" to set font size of first window to "11"'
 }
@@ -156,6 +157,7 @@ setPro() {
 # Command D: Terminal set "Novel"
 setNovel() {
     osascript -e 'tell application "Terminal" to set current settings of first window to settings set "Novel"'
+    osascript -e 'tell application "Terminal" to set background color of first window to {42919, 64507, 43690}'
     osascript -e 'tell application "Terminal" to set font name of first window to "SF Mono"'
     osascript -e 'tell application "Terminal" to set font size of first window to "11"'
 }
@@ -163,6 +165,7 @@ setNovel() {
 # Command F: Terminal set "Man Page"
 setManPage() {
     osascript -e 'tell application "Terminal" to set current settings of first window to settings set "Man Page"'
+    osascript -e 'tell application "Terminal" to set background color of first window to {54998, 54227, 54227}'
     osascript -e 'tell application "Terminal" to set font name of first window to "SF Mono"'
     osascript -e 'tell application "Terminal" to set font size of first window to "11"'
 }
@@ -170,6 +173,7 @@ setManPage() {
 # Command G: Terminal set "Ocean"
 setOcean() {
     osascript -e 'tell application "Terminal" to set current settings of first window to settings set "Ocean"'
+    osascript -e 'tell application "Terminal" to set background color of first window to {3107, 21588, 40092}'
     osascript -e 'tell application "Terminal" to set font name of first window to "SF Mono"'
     osascript -e 'tell application "Terminal" to set font size of first window to "11"'
 }
