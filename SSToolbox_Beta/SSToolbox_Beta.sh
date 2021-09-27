@@ -1,7 +1,7 @@
 #!/bin/zsh
 
 # Attribute
-RELEASE_VERSION="v.0.6.6 build [09.23.2021]"
+RELEASE_VERSION="v.0.6.7 build [09.27.2021]"
 ROOT_PASSWORD=0
 
 # Foreground
@@ -46,7 +46,7 @@ No_Attributes='\033[0m'
 
 # Main Menu
 mainMenu() {
-    terminalWindowSizeMainMenu
+    terminalWindowMainMenuSize:0
     echo "${Dim}                                                 ${Dim}${Bold}SSToolbox${No_Attributes} ${Dim}${RELEASE_VERSION}${No_Attributes}"
     echo "${Dim}╔════╦═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════ ${F_Blue}${Bold}Network ${No_Attributes}${Dim}═╗${No_Attributes}"
     echo "${Dim}║${No_Attributes}${F_Red}${Bold}  1${No_Attributes} ${Dim}║${No_Attributes} Custom DNS servers for Wi-Fi                                                                                                ${Dim}║${No_Attributes}"
@@ -101,7 +101,7 @@ askPassword() {
 
 # ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
 
-terminalWindowSizeMainMenu() {
+terminalWindowMainMenuSize:0() {
 # Dynamic size of Terminal window
 # ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
 # List item 1: The distance in pixels from the left side of the screen to the left side of the Terminal window.
@@ -110,7 +110,7 @@ terminalWindowSizeMainMenu() {
 # List item 4: The distance in pixels from the top of the screen to the bottom of the Terminal window.
 # ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════
 
-# Terminal window the Main Menu size: 0x20x935x620
+# Terminal window the Main Menu size: 132x40 = 0x20x935x620
     clear
     osascript -e 'tell application "Terminal" to set cursor color of first window to {55512, 15163, 12593}'
     osascript -e 'tell application "Terminal" to set bounds of front window to {0, 20, 935, 620}'
@@ -118,20 +118,94 @@ terminalWindowSizeMainMenu() {
     osascript -e 'tell application "Terminal" to set font size of first window to "11"'
 }
 
-# Terminal window size: 0x20x995x590
-terminalWindowSizeNr.1() {
-    osascript -e 'tell application "Terminal" to set bounds of front window to {0, 20, 995, 590}'
+# Terminal window size: 90x25
+terminalWindowSize:1.3() {
+    osascript -e 'tell application "Terminal" to set bounds of front window to {0, 20, 645, 418}'
     clear
 }
 
-# Terminal window size: 0x20x995x830
-terminalWindowSizeNr.2() {
+# Terminal window size: 90x30
+terminalWindowSize:1.5() {
+    osascript -e 'tell application "Terminal" to set bounds of front window to {0, 20, 645, 480}'
+    clear
+}
+
+# Terminal window size: 112x30
+terminalWindowSize:1.1() {
+    osascript -e 'tell application "Terminal" to set bounds of front window to {0, 20, 800, 480}'
+    clear
+}
+
+# Terminal window size: 105x35
+terminalWindowSize:1.2() {
+    osascript -e 'tell application "Terminal" to set bounds of front window to {0, 20, 750, 553}'
+    clear
+}
+
+# Terminal window size: 100x38
+terminalWindowSize:1.4() {
+    osascript -e 'tell application "Terminal" to set bounds of front window to {0, 20, 715, 590}'
+    clear
+}
+
+# Terminal window size: 132x25
+terminalWindowSize:1.6() {
+    osascript -e 'tell application "Terminal" to set bounds of front window to {0, 20, 935, 418}'
+    clear
+}
+
+# Terminal window size: 132x40
+terminalWindowSize:1.7() {
+    osascript -e 'tell application "Terminal" to set bounds of front window to {0, 20, 935, 625}'
+    clear
+}
+
+# Terminal window size: 140x45
+terminalWindowSize:1() {
+    osascript -e 'tell application "Terminal" to set bounds of front window to {0, 20, 995, 700}'
+    clear
+}
+
+# ══════════════════
+
+# Terminal window size: 90x55
+terminalWindowSize:2.2() {
+    osascript -e 'tell application "Terminal" to set bounds of front window to {0, 20, 645, 830}'
+    clear
+}
+
+# Terminal window size: 100x55
+terminalWindowSize:2.3() {
+    osascript -e 'tell application "Terminal" to set bounds of front window to {0, 20, 715, 830}'
+    clear
+}
+
+# Terminal window size: 110x55
+terminalWindowSize:2.4() {
+    osascript -e 'tell application "Terminal" to set bounds of front window to {0, 20, 785, 830}'
+    clear
+}
+
+# Terminal window size: 132x55
+terminalWindowSize:2.1() {
+    osascript -e 'tell application "Terminal" to set bounds of front window to {0, 20, 935, 830}'
+    clear
+}
+
+# Terminal window size: 140x55
+terminalWindowSize:2() {
     osascript -e 'tell application "Terminal" to set bounds of front window to {0, 20, 995, 830}'
     clear
 }
 
-# Terminal window size: 0x20x1340x830
-terminalWindowSizeNr.3() {
+# Terminal window size: 165x55
+terminalWindowSize:3.1() {
+    osascript -e 'tell application "Terminal" to set bounds of front window to {0, 20, 1165, 830}'
+    clear
+}
+
+# Terminal window size: 190x55
+terminalWindowSize:3() {
     osascript -e 'tell application "Terminal" to set bounds of front window to {0, 20, 1340, 830}'
     clear
 }
@@ -204,7 +278,7 @@ showInvalid() {
 
 # Command I: Installing the Xcode CLT
 installingXCLT() {
-    terminalWindowSizeNr.1
+    terminalWindowSize:1
     echo "•${F_Red}${Bold} Command I: Install the Xcode Command Line Tools.${No_Attributes}\n"
     xcode-select --install
     continueMessage
@@ -212,7 +286,7 @@ installingXCLT() {
 
 # Command U: Uninstalling the Xcode CLT
 uninstallingXCLT() {
-    terminalWindowSizeNr.1
+    terminalWindowSize:1
     echo "•${F_Red}${Bold} Command U: Uninstall the Xcode Command Line Tools.${No_Attributes}\n"
     askPassword
     sudo rm -rf /Library/Developer/CommandLineTools
@@ -262,7 +336,7 @@ projectPageOnGitHub() {
 
 # Command 1: Custom DNS servers for Wi-Fi
 customDNSServersForWi-Fi() {
-    terminalWindowSizeNr.2
+    terminalWindowSize:2.1
     echo "•${F_Red}${Bold} Command 1: Custom DNS servers for Wi-Fi.${No_Attributes}"
     askPassword
 # Submenu
@@ -453,7 +527,7 @@ customDNSServersForWi-Fi() {
 
 # Command 2: Custom DNS servers for Ethernet
 customDNSServersForEthernet() {
-    terminalWindowSizeNr.2
+    terminalWindowSize:2.1
     echo "•${F_Red}${Bold} Command 2: Custom DNS servers for Ethernet.${No_Attributes}"
     askPassword
 # Submenu
@@ -644,7 +718,7 @@ customDNSServersForEthernet() {
 
 # Command 3: Custom ping and tracerout test IPv4/IPv6
 customPingAndTraceroutTestIPv4/IPv6() {
-    terminalWindowSizeNr.2
+    terminalWindowSize:2.1
     echo "•${F_Red}${Bold} Command 3: Custom ping and tracerout test IPv4/IPv6.${No_Attributes}\n"
 # Submenu
     echo " ${Dim}╔═══╦════════════════════════════════════════════════════╗${No_Attributes}"
@@ -664,50 +738,50 @@ customPingAndTraceroutTestIPv4/IPv6() {
 
 # Test Ping IPv4
     1)
-        echo "\n${Dim}════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}\n"
+        echo "\n${Dim}════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}\n"
         echo " Outgoing data bytes packet size ${F_Green}${Bold}Default: 56${No_Attributes} -> exceeding can trigger a firewall."
         read "? To which IP or Host address you want to send the test packets: " HOST
         read "? How many times you want to send the test packets: " COUNT
         read "? How many data bytes packet size you would like to send: " SIZE
-        echo "\n${Dim}════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}"
+        echo "\n${Dim}════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}"
         echo "\n•${F_Red}${Bold} Testing Ping IPv4.${No_Attributes}\n"
         ping -i 0.1 "$HOST" -c "$COUNT" -s "$SIZE"
-        echo "\n${F_Red}•${F_Green}${Bold} Finish...${No_Attributes}${Dim} ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}"
+        echo "\n${F_Red}•${F_Green}${Bold} Finish...${No_Attributes}"
     ;;
 
 # Test Traceroute IPv4
     2)
-        echo "\n${Dim}════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}\n"
+        echo "\n${Dim}════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}\n"
         read "? To which IP or Host address you want to send the test packets: " HOST
         read "? Send packets of specified IP protocol supported are: ICMP or UDP: " PROTOCOL
-        echo "\n${Dim}════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}"
+        echo "\n${Dim}════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}"
         echo "\n•${F_Red}${Bold} Testing Traceroute IPv4.${No_Attributes}\n"
         traceroute -w 1 -S -P $PROTOCOL -m 30 "$HOST"
-        echo "\n${F_Red}•${F_Green}${Bold} Finish...${No_Attributes}${Dim} ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}"
+        echo "\n${F_Red}•${F_Green}${Bold} Finish...${No_Attributes}"
     ;;
 
 # Test Ping IPv6
     3)
-        echo "\n${Dim}════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}\n"
+        echo "\n${Dim}════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}\n"
         echo " Outgoing data bytes packet size ${F_Green}${Bold}Default: 56${No_Attributes} -> exceeding can trigger a firewall."
         read "? To which IP or Host address you want to send the test packets: " HOST
         read "? How many times you want to send the test packets: " COUNT
         read "? How many data bytes packet size you would like to send: " SIZE
-        echo "\n${Dim}════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}"
+        echo "\n${Dim}════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}"
         echo "\n•${F_Red}${Bold} Testing Ping IPv6.${No_Attributes}\n"
         ping6 -i 0.1 "$HOST" -c "$COUNT" -s "$SIZE"
-        echo "\n${F_Red}•${F_Green}${Bold} Finish...${No_Attributes}${Dim} ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}"
+        echo "\n${F_Red}•${F_Green}${Bold} Finish...${No_Attributes}"
     ;;
 
 # Test Traceroute IPv6
     4)
-        echo "\n${Dim}════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}\n"
+        echo "\n${Dim}════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}\n"
         read "? To which IP or Host address you want to send the test packets: " HOST
         read "? Send packets of specified IP protocol supported are: ICMP(-I) or UDP( ): " PROTOCOL
-        echo "\n${Dim}════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}"
+        echo "\n${Dim}════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}"
         echo "\n•${F_Red}${Bold} Testing Traceroute IPv6.${No_Attributes}\n"
         traceroute6 -w 1 -l $PROTOCOL -m 30 "$HOST"
-        echo "\n${F_Red}•${F_Green}${Bold} Finish...${No_Attributes}${Dim} ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}"
+        echo "\n${F_Red}•${F_Green}${Bold} Finish...${No_Attributes}"
     ;;
 
     *)
@@ -722,7 +796,7 @@ customPingAndTraceroutTestIPv4/IPv6() {
 
 # Command 4: Automatic ping and tracerout test IPv4/IPv6
 automaticPingAndTraceroutTestIPv4/IPv6() {
-    terminalWindowSizeNr.2
+    terminalWindowSize:2
     echo "•${F_Red}${Bold} Command 4: Automatic ping and tracerout test IPv4/IPv6.${No_Attributes}"
 # Ping test IPv4
     echo "\n${Dim}╔════════════════════════╦═══════════════════════════════════════════════════════════╗${No_Attributes}"
@@ -787,15 +861,15 @@ automaticPingAndTraceroutTestIPv4/IPv6() {
 
 # Command 5: Custom setting a new Computer Name, Hostname, Local Hostname and NetBIOS Name
 customSettingComputerName() {
-    terminalWindowSizeNr.1
+    terminalWindowSize:1.2
     echo "•${F_Red}${Bold} Command 5: Custom setting a new Computer Name, Hostname, Local Hostname and NetBIOS Name.${No_Attributes}"
     askPassword
-    echo "${Dim}════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}"
+    echo "${Dim}═════════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}"
     read "? Hostname (for example: MacBook-Pro): " Hostname
     read "? Computer Name (for example: John_Kennedy): " ComputerName
     read "? Local Hostname (for example: MacBook-Pro-John): " LocalHostname
     echo " NetBIOS Name is automatically generated from Local Hostname: -------"
-    echo "${Dim}════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}\n"
+    echo "${Dim}═════════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}\n"
     sudo scutil --set HostName "$Hostname"
     sudo scutil --set ComputerName "$ComputerName"
     sudo scutil --set LocalHostName "$LocalHostname"
@@ -806,12 +880,12 @@ customSettingComputerName() {
     echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
 # New current information about the Computer Name, Hostname, Local Hostname and NetBIOS Name
     echo "\n${F_Red}•${F_Green}${Bold} Getting information about the new current Computer Name, Hostname, Local Hostname and NetBIOS Name.${No_Attributes}\n"
-    echo "${Dim}════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}"
+    echo "${Dim}═════════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}"
     sleep 1 && scutil --get HostName | awk '{print "Hostname: ", $1}'
     sleep 1 && scutil --get ComputerName | awk '{print "Computer Name: ", $1}'
     sleep 1 && scutil --get LocalHostName | awk '{print "Local Hostname: ", $1}'
     sleep 1 && defaults read /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName | awk '{print "NetBIOS Name: " $1}'
-    echo "${Dim}════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}"
+    echo "${Dim}═════════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}"
     echo "\n${F_Red}•${F_Green}${Bold} Finish...${No_Attributes}"
     continueMessage
 }
@@ -820,10 +894,10 @@ customSettingComputerName() {
 
 # Command 6: Custom editing of the Hosts file and Flush DNS cache
 customEditingHostsFile() {
-    terminalWindowSizeNr.3
+    terminalWindowSize:3.1
     echo "•${F_Red}${Bold} Command 6: Custom editing of the Hosts file and Flush DNS cache.${No_Attributes}\n"
 # 1. How and why to modify my hosts file?
-    echo "${F_Red}•${F_Green}${Bold} How and why to modify my hosts file?${No_Attributes}${Dim} ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}\n"
+    echo "${F_Red}•${F_Green}${Bold} How and why to modify my hosts file?${No_Attributes}${Dim} ══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}\n"
     echo "${F_Red}•${F_Green}${No_Attributes} The hosts file is a computer file used by the operating system to connect host names (domain names) with IP addresses."
     echo "${F_Red}•${F_Green}${No_Attributes} In other words, it allows you to manually point a website address to a desired IP, or block access to a site altogether by pointing to an invalid or internal IP."
     echo "${F_Red}•${F_Green}${No_Attributes} This can come in handy when you have pointed the name-servers of your domain to a new web host and want to work on your website immediately.\n"
@@ -832,7 +906,7 @@ customEditingHostsFile() {
     echo "${F_Red}•${F_Green}${No_Attributes} You can make the local computer resolve e.i. www.facebook.com through an invalid IP and that way prevent people from opening it."
     echo "${F_Red}•${F_Green}${No_Attributes} Since it is necessary to have administrative access to edit the hosts file, it will be really hard for someone to revert this change.\n"
 # Edit Hosts file
-    echo "${F_Red}•${F_Green}${Bold} Custom editing of the Hosts file:${No_Attributes}${Dim} ══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}\n"
+    echo "${F_Red}•${F_Green}${Bold} Custom editing of the Hosts file:${No_Attributes}${Dim} ═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}\n"
     echo "${F_Red}•${F_Green}${No_Attributes} Use the arrow keys on your keyboard, to navigate and edit the file."
     echo "${F_Red}•${F_Green}${No_Attributes} You should just add the desired IP followed by the host name (or domain name)."
     echo "${F_Red}•${F_Green}${No_Attributes} Use the Return key to create some space below the existing records."
@@ -840,25 +914,25 @@ customEditingHostsFile() {
     echo "${F_Red}•${F_Green}${No_Attributes} Enter the IP address you wish to assign, followed by two tabs and the hostname."
     echo "${F_Red}•${F_Green}${No_Attributes} Save the file by pressing Ctrl + O"
     echo "${F_Red}•${F_Green}${No_Attributes} Exit with Ctrl + X\n"
-    echo "${Dim}══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}"
+    echo "${Dim}═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}"
 # Options: Block IP Addresses and Reroute Web Addresses
     echo "${F_Red}•${F_Green}${Bold} Options 1: Block IP Addresses:${No_Attributes}"
     echo "${F_Red}•${F_Green}${No_Attributes}  * For example, The Facebook website to block the IP address 0.0.0.0"
     echo "${F_Red}•${F_Blue}  * Example input: 0.0.0.0       www.facebook.com${No_Attributes}"
     echo "${F_Red}•${F_Green}${No_Attributes}  * Now, whenever we try to go to www.facebook.com from our Mac, the Web browser will fail to load the page."
-    echo "${Dim}═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}"
+    echo "${Dim}═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}"
     echo "${F_Red}•${F_Green}${Bold} Options 2: Reroute Web Addresses:${No_Attributes}"
     echo "${F_Red}•${F_Green}${No_Attributes}  * Make note of the IP address that’s returned and use it in your Mac hosts file mapping."
     echo "${F_Red}•${F_Green}${No_Attributes}  * For example, The New York Times website returns an IP address of 170.149.172.130."
     echo "${F_Red}•${F_Blue}  * Example input: 170.149.172.130       www.facebook.com${No_Attributes}"
     echo "${F_Red}•${F_Green}${No_Attributes}  * If we map that to Facebook in our hosts file, any time someone using the Mac tries to go to Facebook, they’ll see The New York Times load instead."
-    echo "${Dim}══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}"
+    echo "${Dim}═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}"
     askPassword
     sudo nano /private/etc/hosts
 # Flush DNS cache
     echo "\n•${F_Red}${Bold} Flushing DNS...${No_Attributes}"
     sleep 1 && sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder
-    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}${Dim} ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}"
+    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
     continueMessage
 }
 
@@ -866,7 +940,7 @@ customEditingHostsFile() {
 
 # Command 7: Show Wireless Network Password
 wifiShowPassword() {
-    terminalWindowSizeNr.1
+    terminalWindowSize:1.3
     echo "•${F_Red}${Bold} Command 7: Show Wireless Network Password.${No_Attributes}\n"
     echo "•${F_Red} Please provide your Login and Password to proceed.${No_Attributes}\n"
     sleep 2
@@ -884,7 +958,7 @@ wifiShowPassword() {
 
 # Command 8: Search Routers on local Networks, uses the default IP addresses
 searchRoutersLocalNetworks() {
-    terminalWindowSizeNr.2
+    terminalWindowSize:2.2
     echo "•${F_Red}${Bold} Command 8 Search Routers on local Networks, uses the default IP addresses.${No_Attributes}\n"
     declare -a arr=("10.0.0.1" "10.0.0.2" "10.0.0.138" "10.0.1.1" "10.1.1.1" "10.1.10.1" "10.10.1.1" "10.90.90.90" "192.168.0.1" "192.168.0.3" "192.168.0.10" "192.168.0.30" "192.168.0.50" "192.168.0.100" "192.168.0.101" "192.168.0.227" "192.168.0.254" "192.168.1.1" "192.168.1.10" "192.168.1.99" "192.168.1.100" "192.168.1.200" "192.168.1.210" "192.168.1.254" "192.168.2.1" "192.168.2.254" "192.168.3.1" "192.168.4.1" "192.168.8.1" "192.168.10.1" "192.168.10.10" "192.168.10.50" "192.168.10.100" "192.168.11.1" "192.168.15.1" "192.168.16.1" "192.168.20.1" "192.168.30.1" "192.168.50.1" "192.168.55.1" "192.168.62.1" "192.168.100.1" "192.168.100.100" "192.168.102.1" "192.168.123.254" "192.168.168.168" "192.168.223.100" "192.168.251.1" "192.168.254.254" "200.200.200.5")
     for i in "${arr[@]}"; do
@@ -898,7 +972,7 @@ searchRoutersLocalNetworks() {
 
 # Command 9: Flushes local DNS cache, used for problems with loading sites, 404 error
 flushesLocalDNS() {
-    terminalWindowSizeNr.1
+    terminalWindowSize:1.3
     echo "•${F_Red}${Bold} Command 9: Flushes local DNS cache, used for problems with loading sites, 404 error.${No_Attributes}"
     askPassword
     if echo $VERSION | grep -E '^10\.10(\.[0-3])?$' >/dev/null 2>&1; then
@@ -916,28 +990,27 @@ flushesLocalDNS() {
 
 # Command 10: Release and Renew DHCP for all available device interfaces
 releaseAndRenewDHCP() {
-    terminalWindowSizeNr.1
+    terminalWindowSize:1.3
     echo "•${F_Red}${Bold} Command 10: Release and Renew DHCP for all available device interfaces.${No_Attributes}"
     askPassword
 # Release the DHCP assigned IP, DNS server, subnet mask, router/gateway and the lease time
     echo "•${F_Red}${Bold} Release the DHCP assigned IP, DNS server, subnet mask, router/gateway...${No_Attributes}\n"
     sudo ipconfig set en0 DHCP
-    sleep 1 && echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}${Dim} ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}\n"
+    sleep 1 && echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
 # Renew the DHCP assigned IP, DNS server, subnet mask, router/gateway and the lease time
-    echo "•${F_Red}${Bold} Renew the DHCP assigned IP, DNS server, subnet mask, router/gateway...${No_Attributes}\n"
+    echo "•${F_Red}${Bold} Renew the DHCP assigned IP, DNS server, subnet mask, router/gateway...${No_Attributes}"
     sudo ipconfig set en1 DHCP
-    sleep 1 && echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}${Dim} ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}\n"
+    sleep 1 && echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
 # Flush DNS cache
-    echo "•${F_Red}${Bold} Flushing DNS...${No_Attributes}\n"
+    echo "•${F_Red}${Bold} Flushing DNS...${No_Attributes}"
     sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder
-    sleep 1 && echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}${Dim} ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}\n"
+    sleep 1 && echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
 # Deleting macOS terminal command history
     echo "•${F_Red} Deleting macOS terminal command history.${No_Attributes}\n"
     echo "•${F_Red} Restart computer.${No_Attributes}"
     rm -rf .zsh_sessions
     rm -rf .zsh_history
-    sleep 1 && echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}${Dim} ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}"
-    osascript -e 'tell application "loginwindow" to «event aevtrrst»'
+    sleep 1 && osascript -e 'tell application "loginwindow" to «event aevtrrst»'
     continueMessage
 }
 
@@ -945,7 +1018,7 @@ releaseAndRenewDHCP() {
 
 # Command 11: Spoofing the MAC Address of the Wireless network to a randomly generated MAC address
 spoofingMACAddressOfWirelessNetwork() {
-    terminalWindowSizeNr.2
+    terminalWindowSize:1.4
     echo "•${F_Red}${Bold} Command 11: Spoofing the MAC Address of the Wireless network.${No_Attributes}"
     askPassword
     echo "${Dim}╔══════════════════════════════════════════════════════════════════════════════════════════════════╗${No_Attributes}"
@@ -965,10 +1038,10 @@ spoofingMACAddressOfWirelessNetwork() {
     sudo ifconfig en0 ether $NEW_MAC_ADDRESS
     echo "\n• ${F_Red}Spoof New Wireless MAC address:${No_Attributes} $NEW_MAC_ADDRESS"
 # Check New MAC address
-    echo "\n${F_Red}•${F_Green} Check New current Spoof MAC address.${No_Attributes}${Dim} ═════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}\n"
+    echo "\n${F_Red}•${F_Green} Check New current Spoof MAC address.${No_Attributes}\n"
     networksetup -getmacaddress en0 | awk '{print "• System Hardware Wireless MAC address: " $3}'
     ifconfig en0 | grep ether | awk '{print "• Current Spoof Wireless MAC address: " $2}'
-    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}${Dim} ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}\n"
+    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
     continueMessage
 }
 
@@ -976,7 +1049,7 @@ spoofingMACAddressOfWirelessNetwork() {
 
 # Command 12: Check DNS records of the domain, to obtain the mapping between domain name and IP address
 checkDNSRecordsOfTheDomainIPv4/IPv6() {
-    terminalWindowSizeNr.2
+    terminalWindowSize:1.3
     echo "•${F_Red}${Bold} Command 12: Check DNS records of the Domain IPv4/IPv6.${No_Attributes}"
 # NSlookup test
     declare -a arr=("Google.com" "Wikipedia.org" "Facebook.com" "Spotify.com" "Linkedin.com")
@@ -984,15 +1057,13 @@ checkDNSRecordsOfTheDomainIPv4/IPv6() {
     for i in "${arr[@]}"; do
         info=$(host -t A "$i")
         echo "$info"
-        echo "\n${Dim}════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}\n"
     done
-    echo "${F_Red}•${F_Green}${Bold} Check DNS records of the Domain IPv6...\n${No_Attributes}"
+    echo "\n${F_Red}•${F_Green}${Bold} Check DNS records of the Domain IPv6...\n${No_Attributes}"
     for i in "${arr[@]}"; do
         info=$(host -t AAAA "$i")
         echo "$info"
-        echo "\n${Dim}════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}\n"
     done
-    echo "${F_Red}•${F_Green}${Bold} Finish...${No_Attributes}"
+    echo "\n${F_Red}•${F_Green}${Bold} Finish...${No_Attributes}"
     continueMessage
 }
 
@@ -1000,7 +1071,7 @@ checkDNSRecordsOfTheDomainIPv4/IPv6() {
 
 # Command 13: Search all processes for all users and view network data by Internet protocol TCP/UDP and version IPv4/IPv6
 searchProcessesAndNetworkData() {
-    terminalWindowSizeNr.3
+    terminalWindowSize:3
     echo "•${F_Red}${Bold} Command 13: Search all processes for all users and view network data by Internet protocol TCP/UDP and version IPv4/IPv6.${No_Attributes}"
 # Show IPv4 ports TCP information
     echo "\n${Dim}══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}\n"
@@ -1026,19 +1097,19 @@ searchProcessesAndNetworkData() {
 
 # Command 14: Stress Test Network with ICMP-Sweep and ICMP-Flood
 testICMPSweepAndICMP-Flood() {
-    terminalWindowSizeNr.2
+    terminalWindowSize:2.3
     echo "•${F_Red}${Bold} Command 14: Stress Test Network with ICMP-Sweep and ICMP-Flood.${No_Attributes}"
     askPassword
 # ICMP-Sweep
     echo "\n${F_Red}•${F_Green} The scan will run from network 1 to network 254.${No_Attributes}"
     echo "${F_Red}•${F_Green} Example use: In the tab below, enter the first ${Bold}3${No_Attributes}${F_Green} octets: ${Bold}192.168.1${No_Attributes}${F_Red}${Dim}xXX${No_Attributes}${F_Green} or ${Bold}10.10.1${No_Attributes}${F_Red}${Dim}xXX${No_Attributes}${F_Green} and etc.${No_Attributes}\n"
     read "? Enter the address subnet: " SUBNET
-    echo "\n${Dim}════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}"
+    echo "\n${Dim}════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}"
     echo "\n•${F_Red}${Bold} Running a Quick IP sweep to determine live hosts on subnet.${No_Attributes}\n"
     for IP in $(seq 1 254); do
         ping -c 1 $SUBNET.$IP | grep "64 bytes" | cut -d " " -f 4 | tr -d ":" &
     done
-    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}${Dim} ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}"
+    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}${Dim} ════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}"
     echo "\n•${F_Red}${Bold} Broadcast Address.${No_Attributes}\n"
 # Wi-Fi Broadcast Address (en0)
     en0BroadcastAddress=$(ifconfig en0 | awk /inet\ /'{print $6}')
@@ -1046,20 +1117,20 @@ testICMPSweepAndICMP-Flood() {
 # Ethernet Broadcast Address (en1)
     en1BroadcastAddress=$(ifconfig en1 | awk /inet\ /'{print $6}')
     echo "Ethernet Broadcast Address (en1): $en1BroadcastAddress"
-    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}${Dim} ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}\n"
+    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}${Dim} ════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}\n"
 # ICMP-Flood and Broadcast storm is a common Denial of Service (DoS) attack!
     echo "•${F_Red}${Bold} ICMP-Flood is a common Denial of Service (DoS) attack!${No_Attributes}"
     echo "• Outgoing data bytes packet size Default: 56 -> exceeding can trigger a firewall."
     echo "• About 100 packets per second, the speed is affected by packet size and network bandwidth."
-    echo "\n${Dim}════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}\n"
+    echo "\n${Dim}════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}\n"
     read "? To which IP address you want to send the test packets: " HOST
     read "? How many times you want to send the test packets: " COUNT
     read "? How many data bytes packet size you would like to send: " SIZE
-    echo "\n${Dim}════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}"
+    echo "\n${Dim}════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}"
     echo "\n•${F_Red}${Bold} Testing with ICMP-Flood...${No_Attributes}\n"
     sudo ping "$HOST" -c "$COUNT" -f -s "$SIZE" >nFLjLfjveKGdEtWThmRcWfCovc.txt
     rm nFLjLfjveKGdEtWThmRcWfCovc.txt
-    echo "\n${F_Red}•${F_Green}${Bold} Finish...${No_Attributes}${Dim} ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}"
+    echo "\n${F_Red}•${F_Green}${Bold} Finish...${No_Attributes}${Dim} ════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}"
     continueMessage
 }
 
@@ -1067,7 +1138,7 @@ testICMPSweepAndICMP-Flood() {
 
 # Command 15: Show information: Firewall, Wireless, Local Network, DHCP and IP and MAC Addresses of Devices on a Local Network and etc.
 showInfoLN_DHCP_IP/MACAddresses() {
-    terminalWindowSizeNr.2
+    terminalWindowSize:2
     echo "•${F_Red}${Bold} Command 15: Show information: Firewall, Wireless, Local Network, DHCP and IP and MAC Addresses of Devices on a Local Network and etc.${No_Attributes}\n"
 # External IP Address
     ExternalIPv4=$(curl -s https://api.ipify.org)
@@ -1184,7 +1255,7 @@ showInfoLN_DHCP_IP/MACAddresses() {
 
 # Command 16: Enable or Disable the show of Hidden files
 enableOrDisableTheShowOfHiddenFiles() {
-    terminalWindowSizeNr.1
+    terminalWindowSize:1.3
     echo "•${F_Red}${Bold} Command 16: Enable or Disable the show of Hidden files.${No_Attributes}\n"
 # Submenu
     echo " ${Dim}╔═══╦════════════════════════════════════════════════════════════════════════════╗${No_Attributes}"
@@ -1224,7 +1295,7 @@ enableOrDisableTheShowOfHiddenFiles() {
 
 # Command 17: Enable or Disable the show of all File Extensions
 enableOrDisableTheShowOfAllFileExtensions() {
-    terminalWindowSizeNr.1
+    terminalWindowSize:1.3
     echo "•${F_Red}${Bold} Command 17: Enable or Disable the show of all File Extensions.${No_Attributes}\n"
 # Submenu
     echo " ${Dim}╔═══╦════════════════════════════════════════════════════════════════════════════╗${No_Attributes}"
@@ -1264,7 +1335,7 @@ enableOrDisableTheShowOfAllFileExtensions() {
 
 # Command 18: Enable or Disable the show of Attachments as Icons in the Apple Mail app
 enableOrDisableTheShowOfAttachmentsAsIconsInTheAppleMailApp() {
-    terminalWindowSizeNr.1
+    terminalWindowSize:1.3
     echo "•${F_Red}${Bold} Command 18: Enable or Disable the show of Attachments as Icons in the Apple Mail app.${No_Attributes}\n"
 # Submenu
     echo " ${Dim}╔═══╦════════════════════════════════════════════════════════════════════════════╗${No_Attributes}"
@@ -1304,7 +1375,7 @@ enableOrDisableTheShowOfAttachmentsAsIconsInTheAppleMailApp() {
 
 # Command 19: Enable or Disable the show of the full path in the Finder 'Title' window
 enableOrDisableTheShowOfTheFullPathInTheFinderTitleWindow() {
-    terminalWindowSizeNr.1
+    terminalWindowSize:1.3
     echo "•${F_Red}${Bold} Command 19: Enable or Disable the show of the full path in the Finder 'Title' window.${No_Attributes}\n"
 # Submenu
     echo " ${Dim}╔═══╦════════════════════════════════════════════════════════════════════════════╗${No_Attributes}"
@@ -1344,7 +1415,7 @@ enableOrDisableTheShowOfTheFullPathInTheFinderTitleWindow() {
 
 # Command 20: Change the default Screenshot file format
 changeTheDefaultScreenshotFileFormat() {
-    terminalWindowSizeNr.1
+    terminalWindowSize:1.5
     echo "•${F_Red}${Bold} Command 20: Change the default Screenshot file format.${No_Attributes}\n"
 # Submenu
     echo " ${Dim}╔═══╦════════════════════════════════════════════════════════════════════════════╗${No_Attributes}"
@@ -1429,7 +1500,7 @@ changeTheDefaultScreenshotFileFormat() {
 
 # Command 21: Enable or Disable Screenshot with shadow and adding extra pixels
 enableOrDisableScreenshotWithShadowAndAddingExtraPixels() {
-    terminalWindowSizeNr.1
+    terminalWindowSize:1.3
     echo "•${F_Red}${Bold} Command 21: Enable or Disable Screenshot with shadow and adding extra pixels.${No_Attributes}\n"
 # Submenu
     echo " ${Dim}╔═══╦════════════════════════════════════════════════════════════════════════════╗${No_Attributes}"
@@ -1469,7 +1540,7 @@ enableOrDisableScreenshotWithShadowAndAddingExtraPixels() {
 
 # Command 22: Enable or Disable the warning before emptying the Trash
 enableOrDisableTheWarningBeforeEmptyingTheTrash() {
-    terminalWindowSizeNr.1
+    terminalWindowSize:1.3
     echo "•${F_Red}${Bold} Command 22: Enable or Disable the warning before emptying the Trash.${No_Attributes}\n"
 # Submenu
     echo " ${Dim}╔═══╦════════════════════════════════════════════════════════════════════════════╗${No_Attributes}"
@@ -1509,7 +1580,7 @@ enableOrDisableTheWarningBeforeEmptyingTheTrash() {
 
 # Command 23: Enable or Disable warning when changing a file Extension
 enableOrDisableWarningWhenChangingAFileExtension() {
-    terminalWindowSizeNr.1
+    terminalWindowSize:1.3
     echo "•${F_Red}${Bold} Command 23: Enable or Disable warning when changing a file Extension.${No_Attributes}\n"
 # Submenu
     echo " ${Dim}╔═══╦════════════════════════════════════════════════════════════════════════════╗${No_Attributes}"
@@ -1549,7 +1620,7 @@ enableOrDisableWarningWhenChangingAFileExtension() {
 
 # Command 24: Search (Current or Previous Scope or This Mac) folder by default
 searchCurrentOrPreviousScopeOrThisMacFolderByDefault() {
-    terminalWindowSizeNr.1
+    terminalWindowSize:1.3
     echo "•${F_Red}${Bold} Command 24: Search (Current or Previous Scope or This Mac) folder by default.${No_Attributes}\n"
 # Submenu
     echo " ${Dim}╔═══╦════════════════════════════════════════════════════════════════════════════╗${No_Attributes}"
@@ -1598,7 +1669,7 @@ searchCurrentOrPreviousScopeOrThisMacFolderByDefault() {
 
 # Command 25: Enable or Disable in TextEdit the create an Untitled Document at Launch
 enableOrDisableInTextEditTheCreateAnUntitledDocumentAtLaunch() {
-    terminalWindowSizeNr.1
+    terminalWindowSize:1.3
     echo "•${F_Red}${Bold} Command 25: Enable or Disable in TextEdit the create an Untitled Document at Launch.${No_Attributes}\n"
 # Submenu
     echo " ${Dim}╔═══╦════════════════════════════════════════════════════════════════════════════╗${No_Attributes}"
@@ -1638,7 +1709,7 @@ enableOrDisableInTextEditTheCreateAnUntitledDocumentAtLaunch() {
 
 # Command 26: Enable or Disable copy Email addresses as 'foo@example.com' instead of 'Foo Bar <foo@example.com>' in Apple Mail app
 enableOrDisableCopyEmailAddressesAs() {
-    terminalWindowSizeNr.1
+    terminalWindowSize:1.6
     echo "•${F_Red}${Bold} Command 26: Enable or Disable copy Email addresses as 'foo@example.com' instead of 'Foo Bar <foo@example.com>' in Apple Mail app.${No_Attributes}\n"
 # Submenu
     echo " ${Dim}╔═══╦══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗${No_Attributes}"
@@ -1678,7 +1749,7 @@ enableOrDisableCopyEmailAddressesAs() {
 
 # Command 27: Logs system Management: Cleaning the Logs and Inactive memory
 cleaningLogsAndInactiveMemory() {
-    terminalWindowSizeNr.1
+    terminalWindowSize:1.3
     echo "•${F_Red}${Bold} Command 27: Logs system Management: Cleaning the Logs and Inactive memory.${No_Attributes}"
     askPassword
 
@@ -1712,7 +1783,7 @@ cleaningLogsAndInactiveMemory() {
 
 # Command 28: I/O system Management: Manually and Automatic Delete, Plugins Input and Output device
 deletePluginsInputAndOutputDevice() {
-    terminalWindowSizeNr.1
+    terminalWindowSize:1.2
     echo "•${F_Red}${Bold} Command 28: I/O system Management: Manually and Automatic Delete, Plugins Input and Output device.${No_Attributes}\n"
 # Submenu
     echo " ${Dim}╔═══╦═══════════════════════════════════════════════════════════════════════╗${No_Attributes}"
@@ -1790,7 +1861,7 @@ deletePluginsInputAndOutputDevice() {
 
 # Command 29: Kernel Operating system Management
 kernelManagement() {
-    terminalWindowSizeNr.2
+    terminalWindowSize:1.7
     echo "•${F_Red}${Bold} Command 29: Kernel OS Management: Cleaning kernel Extension, Rebuild Kexts Caches, Repair Permissions of Kexts folders, etc.${No_Attributes}\n"
 # Submenu
     echo " ${Dim}╔═══╦════════════════════════════════════════════════════════════════════════════════════════════════════════╗${No_Attributes}"
@@ -1815,13 +1886,13 @@ kernelManagement() {
         echo "\n•${F_Red}${Bold} Cleaning the kernel Extension staging area by removing all staged content. (Requires a reboot)${No_Attributes}"
         askPassword
         sudo kmutil clear-staging
-        sleep 1 && echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}${Dim} ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}\n"
+        sleep 1 && echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
 # Deleting macOS terminal command history
         echo "•${F_Red} Deleting macOS terminal command history.${No_Attributes}\n"
         echo "•${F_Red} Restart computer.${No_Attributes}"
         rm -rf .zsh_sessions
         rm -rf .zsh_history
-        sleep 1 && echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}${Dim} ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}"
+        sleep 1 && echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
         osascript -e 'tell application "loginwindow" to «event aevtrrst»'
     ;;
 
@@ -1830,13 +1901,13 @@ kernelManagement() {
         echo "\n•${F_Red}${Bold} Rebuild out-of-date Caches. (Requires a reboot)${No_Attributes}"
         askPassword
         sudo kmutil install --check-rebuild
-        sleep 1 && echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}${Dim} ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}\n"
+        sleep 1 && echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
 # Deleting macOS terminal command history
         echo "•${F_Red} Deleting macOS terminal command history.${No_Attributes}\n"
         echo "•${F_Red} Restart computer.${No_Attributes}"
         rm -rf .zsh_sessions
         rm -rf .zsh_history
-        sleep 1 && echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}${Dim} ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}"
+        sleep 1 && echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
         osascript -e 'tell application "loginwindow" to «event aevtrrst»'
     ;;
 
@@ -1845,22 +1916,22 @@ kernelManagement() {
         echo "\n•${F_Red}${Bold} Updated the kernel Extension. (Requires a reboot)${No_Attributes}\n"
         askPassword
         sudo kmutil install  --update-all
-        sleep 1 && echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}${Dim} ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}\n"
+        sleep 1 && echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
 # Deleting macOS terminal command history
         echo "•${F_Red} Deleting macOS terminal command history.${No_Attributes}\n"
         echo "•${F_Red} Restart computer.${No_Attributes}"
         rm -rf .zsh_sessions
         rm -rf .zsh_history
-        sleep 1 && echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}${Dim} ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}"
+        sleep 1 && echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
         osascript -e 'tell application "loginwindow" to «event aevtrrst»'
     ;;
 
 # Show the loaded state of the kernel Extensions
     4)
-        terminalWindowSizeNr.3
+        terminalWindowSize:3
         echo "\n•${F_Red}${Bold} Show the loaded state of the kernel Extensions.${No_Attributes}\n"
         sleep 2 && kmutil showloaded
-        sleep 1 && echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}${Dim} ═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}"
+        sleep 1 && echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
     ;;
 
 # Repair Permissions in (System/Library/Extensions) and (Library/Extensions) folders
@@ -1871,13 +1942,13 @@ kernelManagement() {
         sudo chmod -Rf 755 /L*/E*
         sudo chown -Rf 0:0 /S*/L*/E*
         sudo chown -Rf 0:0 /L*/E*
-        sleep 1 && echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}${Dim} ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}\n"
+        sleep 1 && echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
 # Deleting macOS terminal command history
         echo "•${F_Red} Deleting macOS terminal command history.${No_Attributes}\n"
         echo "•${F_Red} Restart computer.${No_Attributes}"
         rm -rf .zsh_sessions
         rm -rf .zsh_history
-        sleep 1 && echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}${Dim} ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}"
+        sleep 1 && echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
         osascript -e 'tell application "loginwindow" to «event aevtrrst»'
     ;;
 
@@ -1893,7 +1964,7 @@ kernelManagement() {
 
 # Command 30: Privacy Database Management: Custom reset application permissions under Security and Privacy
 privacyDatabaseManagement() {
-    terminalWindowSizeNr.2
+    terminalWindowSize:2.4
     echo "•${F_Red}${Bold} Command 30: Privacy Database Management: Custom reset application permissions under Security and Privacy.${No_Attributes}\n"
 # Submenu
     echo " ${Dim}╔════╦═════════════════════════════════════════════════════════════════════════╗${No_Attributes}"
@@ -2055,7 +2126,7 @@ privacyDatabaseManagement() {
 
 # Command 31: GateKeeper Management: Status, Enable or Disable, Remove app from Quarantine, Self-sign the app
 gateKeeperManagement() {
-    terminalWindowSizeNr.1
+    terminalWindowSize:1.7
     echo "•${F_Red}${Bold} Command 31: GateKeeper Management: Status, Enable or Disable, Remove app from quarantine, Self-sign the app.${No_Attributes}\n"
 # Submenu
     echo " ${Dim}╔═══╦════════════════════════════════════════════════════════════════════════════╗${No_Attributes}"
@@ -2128,7 +2199,7 @@ gateKeeperManagement() {
 
 # Command 32: Process & Memory Management: Manage Processes Using the Terminal, Terminate (Kill) a Process and Purge Memory
 processAndMemoryManagement() {
-    terminalWindowSizeNr.1
+    terminalWindowSize:1.7
     echo "•${F_Red}${Bold} Command 32: Process & Memory Management: Manage Processes Using the Terminal, Terminate (Kill) a Process and Purge Memory.${No_Attributes}\n"
 # Submenu
     echo " ${Dim}╔═══╦═══════════════════════════════════════════════════════════════════════════════════╗${No_Attributes}"
@@ -2148,7 +2219,7 @@ processAndMemoryManagement() {
     1)
         echo "\n•${F_Red}${Bold} Display processes sorted by CPU usage and Kill a process by specifying its PID.${No_Attributes}"
         askPassword
-        osascript -e 'tell application "Terminal" to do script "top -o cpu -s 2"'; osascript -e 'tell application "Terminal" to set bounds of front window to {990, 20, 1440, 830}'
+        osascript -e 'tell application "Terminal" to do script "top -o cpu -s 2"'; osascript -e 'tell application "Terminal" to set bounds of front window to {935, 20, 1440, 830}'
         read "? To Terminate (Kill) a Process: " PID
         sudo kill -9 "$PID"
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
@@ -2160,7 +2231,7 @@ processAndMemoryManagement() {
     2)
         echo "\n•${F_Red}${Bold} Display processes sorted by Memory usage and Kill a process by specifying its PID.${No_Attributes}"
         askPassword
-        osascript -e 'tell app "Terminal" to do script "top -o rsize -s 2"'; osascript -e 'tell application "Terminal" to set bounds of front window to {990, 20, 1440, 830}'
+        osascript -e 'tell app "Terminal" to do script "top -o rsize -s 2"'; osascript -e 'tell application "Terminal" to set bounds of front window to {935, 20, 1440, 830}'
         read "? To Terminate (Kill) a Process: " PID
         sudo kill -9 "$PID"
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
@@ -2194,30 +2265,30 @@ processAndMemoryManagement() {
 
 # Command 33: Uninstalling applications: Browsers, Microsoft Office VL, Ad blocking extension, Virtual machines
 uninstallingApplications() {
-    terminalWindowSizeNr.1
+    terminalWindowSize:1.1
     echo "•${F_Red}${Bold} Command 33: Uninstalling applications: Browsers, Microsoft Office VL, Ad blocking extension, Virtual machines.${No_Attributes}\n"
     echo "${F_Red}${Bold}•${No_Attributes} Warning: The script automatically closes the application to be deleted and all related applications.\n"
 # Submenu
-    echo " ${Dim}╔════╦═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════ ${F_Blue}${Bold}Web browsers ${No_Attributes}${Dim}═╗${No_Attributes}"
-    echo " ${Dim}║${No_Attributes}${F_Red}${Bold}  1${No_Attributes} ${Dim}║${No_Attributes} Uninstalling the Opera Browser                                                                                                     ${Dim}║${No_Attributes}"
-    echo " ${Dim}║${No_Attributes}${F_Red}${Bold}  2${No_Attributes} ${Dim}║${No_Attributes} Uninstalling the Yandex Browser                                                                                                    ${Dim}║${No_Attributes}"
-    echo " ${Dim}║${No_Attributes}${F_Red}${Bold}  3${No_Attributes} ${Dim}║${No_Attributes} Uninstalling the Mozilla Firefox                                                                                                   ${Dim}║${No_Attributes}"
-    echo " ${Dim}║${No_Attributes}${F_Red}${Bold}  4${No_Attributes} ${Dim}║${No_Attributes} Uninstalling the Google Chrome                                                                                                     ${Dim}║${No_Attributes}"
-    echo " ${Dim}║${No_Attributes}${F_Red}${Bold}  5${No_Attributes} ${Dim}║${No_Attributes} Uninstalling the Microsoft Edge                                                                                                    ${Dim}║${No_Attributes}"
-    echo " ${Dim}╠════╬═════════════════════════════════════════════════════════════════════════════════════════════════════════════════ ${F_Blue}${Bold}Microsoft Office ${No_Attributes}${Dim}═╣${No_Attributes}"
-    echo " ${Dim}║${No_Attributes}${F_Red}${Bold}  6${No_Attributes} ${Dim}║${No_Attributes} Uninstalling the Microsoft Word                                                                                                    ${Dim}║${No_Attributes}"
-    echo " ${Dim}║${No_Attributes}${F_Red}${Bold}  7${No_Attributes} ${Dim}║${No_Attributes} Uninstalling the Microsoft Excel                                                                                                   ${Dim}║${No_Attributes}"
-    echo " ${Dim}║${No_Attributes}${F_Red}${Bold}  8${No_Attributes} ${Dim}║${No_Attributes} Uninstalling the Microsoft PowerPoint                                                                                              ${Dim}║${No_Attributes}"
-    echo " ${Dim}║${No_Attributes}${F_Red}${Bold}  9${No_Attributes} ${Dim}║${No_Attributes} Uninstalling the Microsoft OneNote                                                                                                 ${Dim}║${No_Attributes}"
-    echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 10${No_Attributes} ${Dim}║${No_Attributes} Uninstalling the Microsoft Outlook                                                                                                 ${Dim}║${No_Attributes}"
-    echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 11${No_Attributes} ${Dim}║${No_Attributes} Uninstalling the Microsoft OneDrive                                                                                                ${Dim}║${No_Attributes}"
-    echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 12${No_Attributes} ${Dim}║${No_Attributes} Uninstalling the Microsoft AutoUpdate                                                                                              ${Dim}║${No_Attributes}"
-    echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 13${No_Attributes} ${Dim}║${No_Attributes} Uninstalling the Microsoft Office 2019 (volume licensed versions)                                                                  ${Dim}║${No_Attributes}"
-    echo " ${Dim}╠════╬═══════════════════════════════════════════════════════════════════════════════════════════════════════════ ${F_Blue}${Bold}Ad blocking extensions ${No_Attributes}${Dim}═╣${No_Attributes}"
-    echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 14${No_Attributes} ${Dim}║${No_Attributes} Uninstalling the AdGuard for Safari extension                                                                                      ${Dim}║${No_Attributes}"
-    echo " ${Dim}╠════╬═════════════════════════════════════════════════════════════════════════════════════════════════════════════════ ${F_Blue}${Bold}Virtual machines ${No_Attributes}${Dim}═╣${No_Attributes}"
-    echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 15${No_Attributes} ${Dim}║${No_Attributes} Uninstalling the VMware Fusion                                                                                                     ${Dim}║${No_Attributes}"
-    echo " ${Dim}╚════╩════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝${No_Attributes}\n"
+    echo " ${Dim}╔════╦═════════════════════════════════════════════════════════════════════════════════════════ ${F_Blue}${Bold}Web browsers ${No_Attributes}${Dim}═╗${No_Attributes}"
+    echo " ${Dim}║${No_Attributes}${F_Red}${Bold}  1${No_Attributes} ${Dim}║${No_Attributes} Uninstalling the Opera Browser                                                                         ${Dim}║${No_Attributes}"
+    echo " ${Dim}║${No_Attributes}${F_Red}${Bold}  2${No_Attributes} ${Dim}║${No_Attributes} Uninstalling the Yandex Browser                                                                        ${Dim}║${No_Attributes}"
+    echo " ${Dim}║${No_Attributes}${F_Red}${Bold}  3${No_Attributes} ${Dim}║${No_Attributes} Uninstalling the Mozilla Firefox                                                                       ${Dim}║${No_Attributes}"
+    echo " ${Dim}║${No_Attributes}${F_Red}${Bold}  4${No_Attributes} ${Dim}║${No_Attributes} Uninstalling the Google Chrome                                                                         ${Dim}║${No_Attributes}"
+    echo " ${Dim}║${No_Attributes}${F_Red}${Bold}  5${No_Attributes} ${Dim}║${No_Attributes} Uninstalling the Microsoft Edge                                                                        ${Dim}║${No_Attributes}"
+    echo " ${Dim}╠════╬═════════════════════════════════════════════════════════════════════════════════════ ${F_Blue}${Bold}Microsoft Office ${No_Attributes}${Dim}═╣${No_Attributes}"
+    echo " ${Dim}║${No_Attributes}${F_Red}${Bold}  6${No_Attributes} ${Dim}║${No_Attributes} Uninstalling the Microsoft Word                                                                        ${Dim}║${No_Attributes}"
+    echo " ${Dim}║${No_Attributes}${F_Red}${Bold}  7${No_Attributes} ${Dim}║${No_Attributes} Uninstalling the Microsoft Excel                                                                       ${Dim}║${No_Attributes}"
+    echo " ${Dim}║${No_Attributes}${F_Red}${Bold}  8${No_Attributes} ${Dim}║${No_Attributes} Uninstalling the Microsoft PowerPoint                                                                  ${Dim}║${No_Attributes}"
+    echo " ${Dim}║${No_Attributes}${F_Red}${Bold}  9${No_Attributes} ${Dim}║${No_Attributes} Uninstalling the Microsoft OneNote                                                                     ${Dim}║${No_Attributes}"
+    echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 10${No_Attributes} ${Dim}║${No_Attributes} Uninstalling the Microsoft Outlook                                                                     ${Dim}║${No_Attributes}"
+    echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 11${No_Attributes} ${Dim}║${No_Attributes} Uninstalling the Microsoft OneDrive                                                                    ${Dim}║${No_Attributes}"
+    echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 12${No_Attributes} ${Dim}║${No_Attributes} Uninstalling the Microsoft AutoUpdate                                                                  ${Dim}║${No_Attributes}"
+    echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 13${No_Attributes} ${Dim}║${No_Attributes} Uninstalling the Microsoft Office 2019 (volume licensed versions)                                      ${Dim}║${No_Attributes}"
+    echo " ${Dim}╠════╬═══════════════════════════════════════════════════════════════════════════════ ${F_Blue}${Bold}Ad blocking extensions ${No_Attributes}${Dim}═╣${No_Attributes}"
+    echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 14${No_Attributes} ${Dim}║${No_Attributes} Uninstalling the AdGuard for Safari extension                                                          ${Dim}║${No_Attributes}"
+    echo " ${Dim}╠════╬═════════════════════════════════════════════════════════════════════════════════════ ${F_Blue}${Bold}Virtual machines ${No_Attributes}${Dim}═╣${No_Attributes}"
+    echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 15${No_Attributes} ${Dim}║${No_Attributes} Uninstalling the VMware Fusion                                                                         ${Dim}║${No_Attributes}"
+    echo " ${Dim}╚════╩════════════════════════════════════════════════════════════════════════════════════════════════════════╝${No_Attributes}\n"
 
     read "?  Please select a Command: " CHOICES
     case $CHOICES in
@@ -2227,7 +2298,7 @@ uninstallingApplications() {
 # Uninstalling the Opera Browser
     1)
         echo "\n•${F_Red}${Bold} Uninstalling the Opera Browser.${No_Attributes}"
-        terminalWindowSizeNr.1
+        terminalWindowSize:1
         askPassword
 # Force Quit Application - If the user hasn't done so
     sudo osascript -e "tell application \"Opera\" to quit"
@@ -2269,7 +2340,7 @@ uninstallingApplications() {
 # Uninstalling the Yandex Browser
     2)
         echo "\n•${F_Red}${Bold} Uninstalling the Yandex Browser.${No_Attributes}"
-        terminalWindowSizeNr.1
+        terminalWindowSize:1
         askPassword
 # Force Quit Application - If the user hasn't done so
     sudo osascript -e "tell application \"Yandex\" to quit"
@@ -2312,7 +2383,7 @@ uninstallingApplications() {
 # Uninstalling the Mozilla Firefox
     3)
         echo "\n•${F_Red}${Bold} Uninstalling the Mozilla Firefox.${No_Attributes}"
-        terminalWindowSizeNr.1
+        terminalWindowSize:1
         askPassword
 # Force Quit Application - If the user hasn't done so
     sudo osascript -e "tell application \"Firefox\" to quit"
@@ -2355,7 +2426,7 @@ uninstallingApplications() {
 # Uninstalling the Google Chrome
     4)
         echo "\n•${F_Red}${Bold} Uninstalling the Google Chrome.${No_Attributes}"
-        terminalWindowSizeNr.1
+        terminalWindowSize:1
         askPassword
 # Force Quit Application - If the user hasn't done so
     sudo osascript -e "tell application \"Google Chrome\" to quit"
@@ -2410,7 +2481,7 @@ uninstallingApplications() {
 # Uninstalling the Microsoft Edge
     5)
         echo "\n•${F_Red}${Bold} Uninstalling the Microsoft Edge.${No_Attributes}"
-        terminalWindowSizeNr.1
+        terminalWindowSize:1
         askPassword
 # Force Quit Application - If the user hasn't done so
     sudo osascript -e "tell application \"Microsoft Edge\" to quit"
@@ -2452,7 +2523,7 @@ uninstallingApplications() {
 # Uninstalling the Microsoft Word
     6)
         echo "\n•${F_Red}${Bold} Uninstalling the Microsoft Word.${No_Attributes}"
-        terminalWindowSizeNr.3
+        terminalWindowSize:3
         askPassword
 # Force Quit Application - If the user hasn't done so
     sudo osascript -e "tell application \"Microsoft AutoUpdate\" to quit" && sleep 2
@@ -2505,7 +2576,7 @@ uninstallingApplications() {
 # Uninstalling the Microsoft Excel
     7)
         echo "\n•${F_Red}${Bold} Uninstalling the Microsoft Excel.${No_Attributes}"
-        terminalWindowSizeNr.3
+        terminalWindowSize:3
         askPassword
 # Force Quit Application - If the user hasn't done so
     sudo osascript -e "tell application \"Microsoft AutoUpdate\" to quit" && sleep 2
@@ -2558,7 +2629,7 @@ uninstallingApplications() {
 # Uninstalling the Microsoft PowerPoint
     8)
         echo "\n•${F_Red}${Bold} Uninstalling the Microsoft PowerPoint.${No_Attributes}"
-        terminalWindowSizeNr.3
+        terminalWindowSize:3
         askPassword
 # Force Quit Application - If the user hasn't done so
     sudo osascript -e "tell application \"Microsoft AutoUpdate\" to quit" && sleep 2
@@ -2611,7 +2682,7 @@ uninstallingApplications() {
 # Uninstalling the Microsoft OneNote
     9)
         echo "\n•${F_Red}${Bold} Uninstalling the Microsoft OneNote.${No_Attributes}"
-        terminalWindowSizeNr.3
+        terminalWindowSize:3
         askPassword
 # Force Quit Application - If the user hasn't done so
     sudo osascript -e "tell application \"Microsoft AutoUpdate\" to quit" && sleep 2
@@ -2665,7 +2736,7 @@ uninstallingApplications() {
 # Uninstalling the Microsoft Outlook
     10)
         echo "\n•${F_Red}${Bold} Uninstalling the Microsoft Outlook.${No_Attributes}"
-        terminalWindowSizeNr.3
+        terminalWindowSize:3
         askPassword
 # Force Quit Application - If the user hasn't done so
     sudo osascript -e "tell application \"Microsoft AutoUpdate\" to quit" && sleep 2
@@ -2722,7 +2793,7 @@ uninstallingApplications() {
 # Uninstalling the Microsoft OneDrive
     11)
         echo "\n•${F_Red}${Bold} Uninstalling the Microsoft OneDrive.${No_Attributes}"
-        terminalWindowSizeNr.3
+        terminalWindowSize:3
         askPassword
 # Force Quit Application - If the user hasn't done so
     sudo osascript -e "tell application \"Microsoft AutoUpdate\" to quit" && sleep 2
@@ -2804,7 +2875,7 @@ uninstallingApplications() {
 # Uninstalling the Microsoft AutoUpdate
     12)
         echo "\n•${F_Red}${Bold} Uninstalling the Microsoft AutoUpdate.${No_Attributes}"
-        terminalWindowSizeNr.3
+        terminalWindowSize:3
         askPassword
 # Force Quit Application - If the user hasn't done so
     sudo osascript -e "tell application \"Microsoft AutoUpdate\" to quit"
@@ -2858,7 +2929,7 @@ uninstallingApplications() {
 # Uninstalling the Microsoft Office 2019 (volume licensed versions)
     13)
         echo "\n•${F_Red}${Bold} Uninstalling the Microsoft Office 2019 (volume licensed versions).${No_Attributes}"
-        terminalWindowSizeNr.3
+        terminalWindowSize:3
         askPassword
 # Force Quit Applications - If the user hasn't done so
     sudo osascript -e "tell application \"Microsoft AutoUpdate\" to quit" && sleep 2
@@ -3050,7 +3121,7 @@ uninstallingApplications() {
 # Uninstalling the AdGuard for Safari extension
     14)
         echo "\n•${F_Red}${Bold} Uninstalling the AdGuard for Safari extension.${No_Attributes}"
-        terminalWindowSizeNr.3
+        terminalWindowSize:3
         askPassword
 # Force Quit Applications - If the user hasn't done so
     sudo osascript -e "tell application \"Safari\" to quit"
@@ -3119,7 +3190,7 @@ uninstallingApplications() {
 # Uninstalling the VMware Fusion
     15)
         echo "\n•${F_Red}${Bold} Uninstalling the VMware Fusion.${No_Attributes}"
-        terminalWindowSizeNr.3
+        terminalWindowSize:3
         askPassword
 # Force Quit Application - If the user hasn't done so
     sudo osascript -e "tell application \"VMware Fusion\" to quit"
@@ -3204,7 +3275,9 @@ startScript() {
         mainMenu
         read "?  Please select a Command: " SELECTED_COMMAND
         case $SELECTED_COMMAND in
+
 # ══════════════════
+
         A|a)
             clear
             setHomebrew
@@ -3234,7 +3307,9 @@ startScript() {
             clear
             setBasic
             ;;
+
 # ══════════════════
+
         I|i)
             clear
             installingXCLT
@@ -3244,11 +3319,8 @@ startScript() {
             clear
             uninstallingXCLT
             ;;
+
 # ══════════════════
-        Q|q)
-            clear
-            quitSSToolbox
-            ;;
 
         L|l)
             clear
@@ -3264,7 +3336,14 @@ startScript() {
             clear
             projectPageOnGitHub
             ;;
+
+        Q|q)
+            clear
+            quitSSToolbox
+            ;;
+
 # ══════════════════
+
         1)
             clear
             customDNSServersForWi-Fi
@@ -3429,7 +3508,9 @@ startScript() {
             clear
             uninstallingApplications
             ;;
+
 # ══════════════════
+
         *)
             clear
             showInvalid
