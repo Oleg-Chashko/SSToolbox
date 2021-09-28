@@ -477,12 +477,12 @@ customDNSServersForWi-Fi() {
     echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 13${No_Attributes} ${Dim}║${No_Attributes} Reset DNS servers        ${Dim}║${No_Attributes}"
     echo " ${Dim}╚════╩══════════════════════════╝${No_Attributes}\n"
 
-    read "?  Please select a Command: " CHOICES
+    read "?  Please enter a command: " CHOICES
     case $CHOICES in
 
     # ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
 
-    # Cloudflare set as DNS server
+        # Cloudflare set as DNS server
     1)
         askPassword
         networksetup -setdnsservers Wi-Fi 8.8.8.8 8.8.4.4 2001:4860:4860::8888 2001:4860:4860::8844
@@ -668,12 +668,12 @@ customDNSServersForEthernet() {
     echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 13${No_Attributes} ${Dim}║${No_Attributes} Reset DNS servers        ${Dim}║${No_Attributes}"
     echo " ${Dim}╚════╩══════════════════════════╝${No_Attributes}\n"
 
-    read "?  Please select a Command: " CHOICES
+    read "?  Please enter a command: " CHOICES
     case $CHOICES in
 
     # ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
 
-    # Cloudflare set as DNS server
+        # Cloudflare set as DNS server
     1)
         askPassword
         networksetup -setdnsservers Ethernet 8.8.8.8 8.8.4.4 2001:4860:4860::8888 2001:4860:4860::8844
@@ -838,12 +838,12 @@ customPingAndTraceroutTestIPv4/IPv6() {
     echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 4${No_Attributes} ${Dim}║${No_Attributes} Test Traceroute IPv6                               ${Dim}║${No_Attributes}"
     echo " ${Dim}╚═══╩════════════════════════════════════════════════════╝${No_Attributes}\n"
 
-    read "?  Please select a Command: " CHOICES
+    read "?  Please enter a command: " CHOICES
     case $CHOICES in
 
     # ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
 
-    # Test Ping IPv4
+        # Test Ping IPv4
     1)
         echo "\n${Dim}════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}\n"
         echo " Outgoing data bytes packet size ${F_Green}${Bold}Default: 56${No_Attributes} -> exceeding can trigger a firewall."
@@ -1367,19 +1367,19 @@ enableOrDisableTheShowOfHiddenFiles() {
     echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 2${No_Attributes} ${Dim}║${No_Attributes} Disable the show of Hidden files (Default)                                 ${Dim}║${No_Attributes}"
     echo " ${Dim}╚═══╩════════════════════════════════════════════════════════════════════════════╝${No_Attributes}\n"
 
-    read "?  Please select a Command: " CHOICES
+    read "?  Please enter a command: " CHOICES
     case $CHOICES in
 
     # ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
 
-    # Enable the show of Hidden files
+        # Enable the show of Hidden files
     1)
         echo "\n•${F_Red}${Bold} Enable the show of Hidden files.${No_Attributes}"
         defaults write com.apple.finder AppleShowAllFiles true && killall Finder
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
         ;;
 
-    # Disable the show of Hidden files
+        # Disable the show of Hidden files
     2)
         echo "\n•${F_Red}${Bold} Disable the show of Hidden files.${No_Attributes}"
         defaults write com.apple.finder AppleShowAllFiles false && killall Finder
@@ -1407,12 +1407,12 @@ enableOrDisableTheShowOfAllFileExtensions() {
     echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 2${No_Attributes} ${Dim}║${No_Attributes} Disable the show of all File Extensions (Default)                          ${Dim}║${No_Attributes}"
     echo " ${Dim}╚═══╩════════════════════════════════════════════════════════════════════════════╝${No_Attributes}\n"
 
-    read "?  Please select a Command: " CHOICES
+    read "?  Please enter a command: " CHOICES
     case $CHOICES in
 
     # ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
 
-    # Enable the show of all File Extensions
+        # Enable the show of all File Extensions
     1)
         echo "\n•${F_Red}${Bold} Enable the show of all File Extensions.${No_Attributes}"
         defaults write NSGlobalDomain AppleShowAllExtensions true && killall Finder
@@ -1447,12 +1447,12 @@ enableOrDisableTheShowOfAttachmentsAsIconsInTheAppleMailApp() {
     echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 2${No_Attributes} ${Dim}║${No_Attributes} Disable the show of Attachments as Icons in the Apple Mail app (Default)   ${Dim}║${No_Attributes}"
     echo " ${Dim}╚═══╩════════════════════════════════════════════════════════════════════════════╝${No_Attributes}\n"
 
-    read "?  Please select a Command: " CHOICES
+    read "?  Please enter a command: " CHOICES
     case $CHOICES in
 
     # ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
 
-    # Enable the show of Attachments as Icons in the Apple Mail app
+        # Enable the show of Attachments as Icons in the Apple Mail app
     1)
         echo "\n•${F_Red}${Bold} Enable the show of Attachments as Icons in the Apple Mail app.${No_Attributes}"
         defaults write com.apple.mail DisableInlineAttachmentViewing -boolean yes
@@ -1487,12 +1487,12 @@ enableOrDisableTheShowOfTheFullPathInTheFinderTitleWindow() {
     echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 2${No_Attributes} ${Dim}║${No_Attributes} Disable the show of the full path in the Finder 'Title' window (Default)   ${Dim}║${No_Attributes}"
     echo " ${Dim}╚═══╩════════════════════════════════════════════════════════════════════════════╝${No_Attributes}\n"
 
-    read "?  Please select a Command: " CHOICES
+    read "?  Please enter a command: " CHOICES
     case $CHOICES in
 
     # ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
 
-    # Enable the show of the full path in the Finder 'Title' window
+        # Enable the show of the full path in the Finder 'Title' window
     1)
         echo "\n•${F_Red}${Bold} Enable the show of the full path in the Finder 'Title' window.${No_Attributes}"
         defaults write com.apple.finder _FXShowPosixPathInTitle -bool true && killall Finder
@@ -1537,12 +1537,12 @@ changeTheDefaultScreenshotFileFormat() {
     echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 7${No_Attributes} ${Dim}║${No_Attributes} Enable to use default Screenshot PNG file format (Default)                 ${Dim}║${No_Attributes}"
     echo " ${Dim}╚═══╩════════════════════════════════════════════════════════════════════════════╝${No_Attributes}\n"
 
-    read "?  Please select a Command: " CHOICES
+    read "?  Please enter a command: " CHOICES
     case $CHOICES in
 
     # ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
 
-    # Enable to use default Screenshot BMP file format
+        # Enable to use default Screenshot BMP file format
     1)
         echo "\n•${F_Red}${Bold} Enable to use default Screenshot BMP file format.${No_Attributes}"
         defaults write com.apple.screencapture type bmp && killall SystemUIServer
@@ -1612,12 +1612,12 @@ enableOrDisableScreenshotWithShadowAndAddingExtraPixels() {
     echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 2${No_Attributes} ${Dim}║${No_Attributes} Enable Screenshot with shadow and adding extra pixels (Default)            ${Dim}║${No_Attributes}"
     echo " ${Dim}╚═══╩════════════════════════════════════════════════════════════════════════════╝${No_Attributes}\n"
 
-    read "?  Please select a Command: " CHOICES
+    read "?  Please enter a command: " CHOICES
     case $CHOICES in
 
     # ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
 
-    # Disable Screenshot with shadow and adding extra pixels
+        # Disable Screenshot with shadow and adding extra pixels
     1)
         echo "\n•${F_Red}${Bold} Disable Screenshot with shadow and adding extra pixels.${No_Attributes}"
         defaults write com.apple.screencapture disable-shadow -bool true && killall SystemUIServer
@@ -1652,12 +1652,12 @@ enableOrDisableTheWarningBeforeEmptyingTheTrash() {
     echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 2${No_Attributes} ${Dim}║${No_Attributes} Enable warning before emptying the Trash (Default)                         ${Dim}║${No_Attributes}"
     echo " ${Dim}╚═══╩════════════════════════════════════════════════════════════════════════════╝${No_Attributes}\n"
 
-    read "?  Please select a Command: " CHOICES
+    read "?  Please enter a command: " CHOICES
     case $CHOICES in
 
     # ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
 
-    # Disable warning before emptying the Trash
+        # Disable warning before emptying the Trash
     1)
         echo "\n•${F_Red}${Bold} Disable warning before emptying the Trash.${No_Attributes}"
         defaults write com.apple.finder WarnOnEmptyTrash -bool false
@@ -1692,12 +1692,12 @@ enableOrDisableWarningWhenChangingAFileExtension() {
     echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 2${No_Attributes} ${Dim}║${No_Attributes} Enable warning when changing a file Extension (Default)                    ${Dim}║${No_Attributes}"
     echo " ${Dim}╚═══╩════════════════════════════════════════════════════════════════════════════╝${No_Attributes}\n"
 
-    read "?  Please select a Command: " CHOICES
+    read "?  Please enter a command: " CHOICES
     case $CHOICES in
 
     # ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
 
-    # Disable warning when changing a file Extension
+        # Disable warning when changing a file Extension
     1)
         echo "\n•${F_Red}${Bold} Disable warning when changing a file Extension.${No_Attributes}"
         defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
@@ -1734,12 +1734,12 @@ searchCurrentOrPreviousScopeOrThisMacFolderByDefault() {
     echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 3${No_Attributes} ${Dim}║${No_Attributes} When performing a search, search the This Mac folder by default (Default)  ${Dim}║${No_Attributes}"
     echo " ${Dim}╚═══╩════════════════════════════════════════════════════════════════════════════╝${No_Attributes}\n"
 
-    read "?  Please select a Command: " CHOICES
+    read "?  Please enter a command: " CHOICES
     case $CHOICES in
 
     # ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
 
-    # When performing a search, search the Current folder by default
+        # When performing a search, search the Current folder by default
     1)
         echo "\n•${F_Red}${Bold} When performing a search, search the Current folder by default.${No_Attributes}"
         defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
@@ -1781,12 +1781,12 @@ enableOrDisableInTextEditTheCreateAnUntitledDocumentAtLaunch() {
     echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 2${No_Attributes} ${Dim}║${No_Attributes} Disable in TextEdit the create an Untitled Document at Launch (Default)    ${Dim}║${No_Attributes}"
     echo " ${Dim}╚═══╩════════════════════════════════════════════════════════════════════════════╝${No_Attributes}\n"
 
-    read "?  Please select a Command: " CHOICES
+    read "?  Please enter a command: " CHOICES
     case $CHOICES in
 
     # ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
 
-    # Enable in TextEdit the create an Untitled Document at Launch
+        # Enable in TextEdit the create an Untitled Document at Launch
     1)
         echo "\n•${F_Red}${Bold} Enable in TextEdit the create an Untitled Document at Launch.${No_Attributes}"
         defaults write com.apple.TextEdit NSShowAppCentricOpenPanelInsteadOfUntitledFile -bool false
@@ -1821,12 +1821,12 @@ enableOrDisableCopyEmailAddressesAs() {
     echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 2${No_Attributes} ${Dim}║${No_Attributes} Disable copy Email addresses as 'foo@example.com' instead of 'Foo Bar <foo@example.com>' in Apple Mail app (Default) ${Dim}║${No_Attributes}"
     echo " ${Dim}╚═══╩══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝${No_Attributes}\n"
 
-    read "?  Please select a Command: " CHOICES
+    read "?  Please enter a command: " CHOICES
     case $CHOICES in
 
     # ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
 
-    # Enable copy Email addresses as 'foo@example.com' instead of 'Foo Bar <foo@example.com>' in Apple Mail app
+        # Enable copy Email addresses as 'foo@example.com' instead of 'Foo Bar <foo@example.com>' in Apple Mail app
     1)
         echo "\n•${F_Red}${Bold} Enable copy Email addresses as 'foo@example.com' instead of 'Foo Bar <foo@example.com>' in Apple Mail app.${No_Attributes}"
         defaults write com.apple.mail AddressesIncludeNameOnPasteboard -bool false
@@ -1899,12 +1899,12 @@ deletePluginsInputAndOutputDevice() {
     echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 4${No_Attributes} ${Dim}║${No_Attributes} Manually Delete Sound Input/Output Device HAL Audio Plug-ins          ${Dim}║${No_Attributes}"
     echo " ${Dim}╚═══╩═══════════════════════════════════════════════════════════════════════╝${No_Attributes}\n"
 
-    read "?  Please select a Command: " CHOICES
+    read "?  Please enter a command: " CHOICES
     case $CHOICES in
 
     # ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
 
-    # Automatic Delete All CoreMedia Input/Output Device DAL Video Plug-ins
+        # Automatic Delete All CoreMedia Input/Output Device DAL Video Plug-ins
     1)
         echo "\n•${F_Red}${Bold} Automatic Delete All CoreMedia Input/Output Device DAL Video Plug-ins.${No_Attributes}"
         askPassword
@@ -1979,12 +1979,12 @@ kernelManagement() {
     echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 5${No_Attributes} ${Dim}║${No_Attributes} Repair Permissions in (System/Library/Extensions) and (Library/Extensions) folders (Requires a reboot) ${Dim}║${No_Attributes}"
     echo " ${Dim}╚═══╩════════════════════════════════════════════════════════════════════════════════════════════════════════╝${No_Attributes}\n"
 
-    read "?  Please select a Command: " CHOICES
+    read "?  Please enter a command: " CHOICES
     case $CHOICES in
 
     # ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
 
-    # Cleaning the kernel Extension staging area by removing all staged content
+        # Cleaning the kernel Extension staging area by removing all staged content
     1)
         echo "\n•${F_Red}${Bold} Cleaning the kernel Extension staging area by removing all staged content. (Requires a reboot)${No_Attributes}"
         askPassword
@@ -2100,12 +2100,12 @@ privacyDatabaseManagement() {
     echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 14${No_Attributes} ${Dim}║${No_Attributes} Reset the Address Book (for the Contacts list) permissions for all apps ${Dim}║${No_Attributes}"
     echo " ${Dim}╚════╩═════════════════════════════════════════════════════════════════════════╝${No_Attributes}\n"
 
-    read "?  Please select a Command: " CHOICES
+    read "?  Please enter a command: " CHOICES
     case $CHOICES in
 
     # ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
 
-    # Reset the All permissions for all apps
+        # Reset the All permissions for all apps
     1)
         echo "\n•${F_Red}${Bold} Reset the All permissions for all apps.${No_Attributes}"
         askPassword
@@ -2244,12 +2244,12 @@ gateKeeperManagement() {
     echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 5${No_Attributes} ${Dim}║${No_Attributes} Self-sign the app. Require Xcode or Xcode CLT (Command Line Tools)         ${Dim}║${No_Attributes}"
     echo " ${Dim}╚═══╩════════════════════════════════════════════════════════════════════════════╝${No_Attributes}\n"
 
-    read "?  Please select a Command: " CHOICES
+    read "?  Please enter a command: " CHOICES
     case $CHOICES in
 
     # ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
 
-    # GateKeeper Status
+        # GateKeeper Status
     1)
         echo "\n•${F_Red}${Bold} GateKeeper Status.${No_Attributes}\n"
         spctl --status
@@ -2313,12 +2313,12 @@ processAndMemoryManagement() {
     echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 3${No_Attributes} ${Dim}║${No_Attributes} Using purge to free inactive Memory                                               ${Dim}║${No_Attributes}"
     echo " ${Dim}╚═══╩═══════════════════════════════════════════════════════════════════════════════════╝${No_Attributes}\n"
 
-    read "?  Please select a Command: " CHOICES
+    read "?  Please enter a command: " CHOICES
     case $CHOICES in
 
     # ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
 
-    # Display processes sorted by CPU usage and Kill a process by specifying its PID
+        # Display processes sorted by CPU usage and Kill a process by specifying its PID
     1)
         echo "\n•${F_Red}${Bold} Display processes sorted by CPU usage and Kill a process by specifying its PID.${No_Attributes}"
         askPassword
@@ -2395,12 +2395,12 @@ uninstallingApplications() {
     echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 15${No_Attributes} ${Dim}║${No_Attributes} Uninstalling the VMware Fusion                                                                         ${Dim}║${No_Attributes}"
     echo " ${Dim}╚════╩════════════════════════════════════════════════════════════════════════════════════════════════════════╝${No_Attributes}\n"
 
-    read "?  Please select a Command: " CHOICES
+    read "?  Please enter a command: " CHOICES
     case $CHOICES in
 
     # ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
 
-    # Uninstalling the Opera Browser
+        # Uninstalling the Opera Browser
     1)
         terminalWindowSize:132x30
         echo "\n•${F_Red}${Bold} Uninstalling the Opera Browser.${No_Attributes}"
@@ -3378,10 +3378,10 @@ uninstallingApplications() {
 startScript() {
     while :; do
         mainMenu
-        read "?  Please select a Command: " SELECTED_COMMAND
+        read "?  Please enter a command: " SELECTED_COMMAND
         case $SELECTED_COMMAND in
 
-        # ═══════════════════════════════════════════════════════════╣
+            # ═══════════════════════════════════════════════════════════╣
 
         A | a)
             clear
