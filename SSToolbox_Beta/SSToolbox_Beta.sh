@@ -1207,15 +1207,16 @@ testICMPSweepAndICMP-Flood() {
     echo "•${F_Red}${Bold} Command 14: Stress Test Network with ICMP-Sweep and ICMP-Flood.${No_Attributes}"
     askPassword
 # ICMP-Sweep
-    echo "\n${F_Red}•${F_Green} The scan will run from network 1 to network 254.${No_Attributes}"
-    echo "${F_Red}•${F_Green} Example use: In the tab below, enter the first ${Bold}3${No_Attributes}${F_Green} octets: ${Bold}192.168.1${No_Attributes}${F_Red}${Dim}xXX${No_Attributes}${F_Green} or ${Bold}10.10.1${No_Attributes}${F_Red}${Dim}xXX${No_Attributes}${F_Green} and etc.${No_Attributes}\n"
+    echo "${Dim}════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}"
+    echo "${F_Red}•${F_Green} The scan will run from network 1 to network 254.${No_Attributes}"
+    echo "${F_Red}•${F_Green} Example use: In the tab below, enter the first ${Bold}3${No_Attributes}${F_Green} octets: ${Bold}192.168.1${No_Attributes}${F_Red}${Dim}xXX${No_Attributes}${F_Green} or ${Bold}10.10.1${No_Attributes}${F_Red}${Dim}xXX${No_Attributes}${F_Green} and etc.${No_Attributes}"
+    echo "${Dim}════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}\n"
     read "? Enter the address subnet: " SUBNET
-    echo "\n${Dim}════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}"
     echo "\n•${F_Red}${Bold} Running a Quick IP sweep to determine live hosts on subnet.${No_Attributes}\n"
     for IP in $(seq 1 254); do
         ping -c 1 $SUBNET.$IP | grep "64 bytes" | cut -d " " -f 4 | tr -d ":" &
     done
-    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}${Dim} ════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}"
+    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
     echo "\n•${F_Red}${Bold} Broadcast Address.${No_Attributes}\n"
 # Wi-Fi Broadcast Address (en0)
     en0BroadcastAddress=$(ifconfig en0 | awk /inet\ /'{print $6}')
@@ -1223,12 +1224,13 @@ testICMPSweepAndICMP-Flood() {
 # Ethernet Broadcast Address (en1)
     en1BroadcastAddress=$(ifconfig en1 | awk /inet\ /'{print $6}')
     echo "Ethernet Broadcast Address (en1): $en1BroadcastAddress"
-    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}${Dim} ════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}\n"
+    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
 # ICMP-Flood and Broadcast storm is a common Denial of Service (DoS) attack!
+    echo "${Dim}════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}"
     echo "•${F_Red}${Bold} ICMP-Flood is a common Denial of Service (DoS) attack!${No_Attributes}"
     echo "• Outgoing data bytes packet size Default: 56 -> exceeding can trigger a firewall."
     echo "• About 100 packets per second, the speed is affected by packet size and network bandwidth."
-    echo "\n${Dim}════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}\n"
+    echo "${Dim}════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}\n"
     read "? To which IP address you want to send the test packets: " HOST
     read "? How many times you want to send the test packets: " COUNT
     read "? How many data bytes packet size you would like to send: " SIZE
@@ -1236,7 +1238,7 @@ testICMPSweepAndICMP-Flood() {
     echo "\n•${F_Red}${Bold} Testing with ICMP-Flood...${No_Attributes}\n"
     sudo ping "$HOST" -c "$COUNT" -f -s "$SIZE" >nFLjLfjveKGdEtWThmRcWfCovc.txt
     rm nFLjLfjveKGdEtWThmRcWfCovc.txt
-    echo "\n${F_Red}•${F_Green}${Bold} Finish...${No_Attributes}${Dim} ════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}"
+    echo "\n${F_Red}•${F_Green}${Bold} Finish...${No_Attributes}"
     continueMessage
 }
 
