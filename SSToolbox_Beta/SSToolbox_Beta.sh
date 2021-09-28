@@ -917,21 +917,21 @@ automaticPingAndTraceroutTestIPv4/IPv6() {
     ping -i 0.4 -c 10 "Spotify.com" | tail -4
     ping -i 0.4 -c 10 "Yahoo.com" | tail -4
     ping -i 0.4 -c 10 "Yandex.com" | tail -4
-    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}${Dim} ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}\n"
+    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
 # Traceroute test IPv4
     echo "${F_Red}•${F_Green}${Bold} Traceroute IPv4 Testing...\n${No_Attributes}"
     traceroute -w 1 -S -m 30 Google.com
-    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}${Dim} ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}\n"
+    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
     traceroute -w 1 -S -m 30 Youtube.com
-    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}${Dim} ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}\n"
+    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
     traceroute -w 1 -S -m 30 Facebook.com
-    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}${Dim} ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}\n"
+    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
     traceroute -w 1 -S -m 30 Spotify.com
-    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}${Dim} ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}\n"
+    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
     traceroute -w 1 -S -m 30 Yahoo.com
-    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}${Dim} ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}\n"
+    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
     traceroute -w 1 -S -m 30 Yandex.com
-    echo "\n${F_Red}•${F_Green}${Bold} Finish.${No_Attributes}${Dim} ══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}"
+    echo "\n${F_Red}•${F_Green}${Bold} Finish.${No_Attributes}"
 
 # Ping and Traceroute test IPv6
 
@@ -947,21 +947,21 @@ automaticPingAndTraceroutTestIPv4/IPv6() {
     ping6 -i 0.4 -c 10 "Spotify.com" | tail -4
     ping6 -i 0.4 -c 10 "Yahoo.com" | tail -4
     ping6 -i 0.4 -c 10 "Yandex.com" | tail -4
-    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}${Dim} ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}\n"
+    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
 # Traceroute test IPv6
     echo "${F_Red}•${F_Green}${Bold} Traceroute IPv6 Testing...\n${No_Attributes}"
     traceroute6 -w 1 -l -m 30 Google.com
-    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}${Dim} ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}\n"
+    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
     traceroute6 -w 1 -l -m 30 Youtube.com
-    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}${Dim} ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}\n"
+    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
     traceroute6 -w 1 -l -m 30 Facebook.com
-    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}${Dim} ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}\n"
+    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
     traceroute6 -w 1 -l -m 30 Spotify.com
-    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}${Dim} ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}\n"
+    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
     traceroute6 -w 1 -l -m 30 Yahoo.com
-    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}${Dim} ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}\n"
+    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
     traceroute6 -w 1 -l -m 30 Yandex.com
-    echo "\n${F_Red}•${F_Green}${Bold} Finish.${No_Attributes}${Dim} ══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}"
+    echo "\n${F_Red}•${F_Green}${Bold} Finish.${No_Attributes}"
     continueMessage
 }
 
@@ -1184,22 +1184,18 @@ searchProcessesAndNetworkData() {
     terminalWindowSize:190x55
     echo "•${F_Red}${Bold} Command 13: Search all processes for all users and view network data by Internet protocol TCP/UDP and version IPv4/IPv6.${No_Attributes}"
 # Show IPv4 ports TCP information
-    echo "\n${Dim}══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}\n"
-    echo "${F_Red}•${F_Green}${Bold} Show Show IPv4 ports TCP information.${No_Attributes}\n"
+    echo "\n${F_Red}•${F_Green}${Bold} Show Show IPv4 ports TCP information.${No_Attributes}\n"
     lsof -n -i 4TCP
 # Show IPv4 ports UDP information
-    echo "\n${Dim}══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}\n"
-    echo "${F_Red}•${F_Green}${Bold} Show Show IPv4 ports UDP information.${No_Attributes}\n"
+    echo "\n${F_Red}•${F_Green}${Bold} Show Show IPv4 ports UDP information.${No_Attributes}\n"
     lsof -n -i 4UDP
 # Show IPv& ports TCP information
-    echo "\n${Dim}══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}\n"
-    echo "${F_Red}•${F_Green}${Bold} Show Show IPv6 ports TCP information.${No_Attributes}\n"
+    echo "\n${F_Red}•${F_Green}${Bold} Show Show IPv6 ports TCP information.${No_Attributes}\n"
     lsof -n -i 6TCP
 # Show IPv& ports UDP information
-    echo "\n${Dim}══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}\n"
-    echo "${F_Red}•${F_Green}${Bold} Show Show IPv6 ports UDP information.${No_Attributes}\n"
+    echo "\n${F_Red}•${F_Green}${Bold} Show Show IPv6 ports UDP information.${No_Attributes}\n"
     lsof -n -i 6UDP
-    echo "\n${Dim}══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}"
+    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
     continueMessage
 }
 
