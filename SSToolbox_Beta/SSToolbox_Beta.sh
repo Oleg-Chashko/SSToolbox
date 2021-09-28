@@ -23,20 +23,20 @@ B_Purple='\033[0;105m' # Light Magenta
 B_Cyan='\033[0;106m'   # Light Cyan
 
 # Bold/Bright
-Bold='\033[1m'       # Bold
-No_Bold='\033[21m'   # Reset Bold
+Bold='\033[1m'     # Bold
+No_Bold='\033[21m' # Reset Bold
 # Dim
-Dim='\033[2m'        # Dim
-No_Dim='\033[22m'    # Reset Dim
+Dim='\033[2m'     # Dim
+No_Dim='\033[22m' # Reset Dim
 # Italic
 Italic='\033[3m'     # Italic
 No_Italic='\033[23m' # Reset Italic
 # Underline
-ULine='\033[4m'      # Underline
-No_ULine='\033[24m'  # Reset Underlined
+ULine='\033[4m'     # Underline
+No_ULine='\033[24m' # Reset Underlined
 # Blink
-Blink='\033[5m'      # Blink
-No_Blink='\033[25m'  # Reset Blink
+Blink='\033[5m'     # Blink
+No_Blink='\033[25m' # Reset Blink
 # Hidden
 Hidden='\033[8m'     # Hidden
 No_Hidden='\033[28m' # Reset Hidden
@@ -406,12 +406,12 @@ uninstallingXCLT() {
 # Command Q: Quit SSToolbox
 quitSSToolbox() {
     terminalWindowSize:90x25
-# Deleting macOS terminal command history and Terminal to quit
+    # Deleting macOS terminal command history and Terminal to quit
     echo "•${F_Red}${Bold} Command Q: Deleting macOS terminal command history.${No_Attributes}"
     rm -rf .zsh_sessions
     rm -rf .zsh_history
     sleep 1 && echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-# Terminal to quit
+    # Terminal to quit
     sleep 1 && osascript -e 'tell application "Terminal" to quit'
     read
 }
@@ -446,7 +446,7 @@ customDNSServersForWi-Fi() {
     terminalWindowSize:132x55
     echo "•${F_Red}${Bold} Command 1: Custom DNS servers for Wi-Fi.${No_Attributes}"
     askPassword
-# Submenu
+    # Submenu
     echo " ${Dim}╔═══════════════════╦════════════════════════════════════════════════════════════════════════════════════════╗${No_Attributes}"
     echo " ${Dim}║${No_Attributes} Modes filtering   ${Dim}║${No_Attributes} Description              ${F_Red}${Bold}Note:${No_Attributes} Please don't use them unless you know what you're doing ${Dim}║${No_Attributes}"
     echo " ${Dim}╠═══════════════════╬════════════════════════════════════════════════════════════════════════════════════════╣${No_Attributes}"
@@ -480,147 +480,147 @@ customDNSServersForWi-Fi() {
     read "?  Please select a Command: " CHOICES
     case $CHOICES in
 
-# ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
+    # ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
 
-# Cloudflare set as DNS server
+    # Cloudflare set as DNS server
     1)
         askPassword
         networksetup -setdnsservers Wi-Fi 8.8.8.8 8.8.4.4 2001:4860:4860::8888 2001:4860:4860::8844
         echo "\n•${F_Green} Cloudflare set as DNS server.${No_Attributes} Checking..."
         echo "\n${F_Red}•${No_Attributes} Current DNS server:\n${F_Cyan}$(networksetup -getdnsservers Wi-Fi)${No_Attributes}"
-# Flush DNS cache
+        # Flush DNS cache
         sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder
         checkDNS
-    ;;
+        ;;
 
-# Google Public set as DNS server
+        # Google Public set as DNS server
     2)
         askPassword
         networksetup -setdnsservers Wi-Fi 1.1.1.1 1.0.0.1 2606:4700:4700::1111 2606:4700:4700::1001
         echo "\n•${F_Green} Google Public set as DNS server.${No_Attributes} Checking..."
         echo "\n${F_Red}•${No_Attributes} Current DNS server:\n${F_Cyan}$(networksetup -getdnsservers Wi-Fi)${No_Attributes}"
-# Flush DNS cache
+        # Flush DNS cache
         sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder
         checkDNS
-    ;;
+        ;;
 
-# Cisco Umbrella set as DNS server
+        # Cisco Umbrella set as DNS server
     3)
         askPassword
         networksetup -setdnsservers Wi-Fi 208.67.222.222 208.67.220.220 2620:119:35::35 2620:119:53::53
         echo "\n•${F_Green} Cisco Umbrella set as DNS server.${No_Attributes} Checking..."
         echo "\n${F_Red}•${No_Attributes} Current DNS server:\n${F_Cyan}$(networksetup -getdnsservers Wi-Fi)${No_Attributes}"
-# Flush DNS cache
+        # Flush DNS cache
         sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder
         checkDNS
-    ;;
+        ;;
 
-# NeuStar (Threat Protection) set as DNS server
+        # NeuStar (Threat Protection) set as DNS server
     4)
         askPassword
         networksetup -setdnsservers Wi-Fi 156.154.70.2 156.154.71.2 2610:a1:1018::2 2610:a1:1019::2
         echo "\n•${F_Green} NeuStar (Threat Protection) set as DNS server.${No_Attributes} Checking..."
         echo "\n${F_Red}•${No_Attributes} Current DNS server:\n${F_Cyan}$(networksetup -getdnsservers Wi-Fi)${No_Attributes}"
-# Flush DNS cache
+        # Flush DNS cache
         sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder
         checkDNS
-    ;;
+        ;;
 
-# NeuStar (Family Protection) set as DNS server
+        # NeuStar (Family Protection) set as DNS server
     5)
         askPassword
         networksetup -setdnsservers Wi-Fi 156.154.70.3 156.154.71.3 2610:a1:1018::3 2610:a1:1019::3
         echo "\n•${F_Green} NeuStar (Family Protection) set as DNS server.${No_Attributes} Checking..."
         echo "\n${F_Red}•${No_Attributes} Current DNS server:\n${F_Cyan}$(networksetup -getdnsservers Wi-Fi)${No_Attributes}"
-# Flush DNS cache
+        # Flush DNS cache
         sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder
         checkDNS
-    ;;
+        ;;
 
-# CleanBrowsing (Threat Protection) set as DNS server
+        # CleanBrowsing (Threat Protection) set as DNS server
     6)
         askPassword
         networksetup -setdnsservers Wi-Fi 185.228.168.9 185.228.169.9 2a0d:2a00:1::2 2a0d:2a00:2::2
         echo "\n•${F_Green} CleanBrowsing (Threat Protection) set as DNS server.${No_Attributes} Checking..."
         echo "\n${F_Red}•${No_Attributes} Current DNS server:\n${F_Cyan}$(networksetup -getdnsservers Wi-Fi)${No_Attributes}"
-# Flush DNS cache
+        # Flush DNS cache
         sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder
         checkDNS
-    ;;
+        ;;
 
-# CleanBrowsing (Family Protection) set as DNS server
+        # CleanBrowsing (Family Protection) set as DNS server
     7)
         askPassword
         networksetup -setdnsservers Wi-Fi 185.228.168.168 185.228.169.168 2a0d:2a00:1:: 2a0d:2a00:2::
         echo "\n•${F_Green} CleanBrowsing (Family Protection) set as DNS server.${No_Attributes} Checking..."
         echo "\n${F_Red}•${No_Attributes} Current DNS server:\n${F_Cyan}$(networksetup -getdnsservers Wi-Fi)${No_Attributes}"
-# Flush DNS cache
+        # Flush DNS cache
         sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder
         checkDNS
-    ;;
+        ;;
 
-# AdGuard (Threat Protection) set as DNS server
+        # AdGuard (Threat Protection) set as DNS server
     8)
         askPassword
         networksetup -setdnsservers Wi-Fi 94.140.14.14 94.140.15.15 2a10:50c0::ad1:ff 2a10:50c0::ad2:ff
         echo "\n•${F_Green} AdGuard (Threat Protection) set as DNS server.${No_Attributes} Checking..."
         echo "\n${F_Red}•${No_Attributes} Current DNS server:\n${F_Cyan}$(networksetup -getdnsservers Wi-Fi)${No_Attributes}"
-# Flush DNS cache
+        # Flush DNS cache
         sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder
         checkDNS
-    ;;
+        ;;
 
-# AdGuard (Family Protection) set as DNS server
+        # AdGuard (Family Protection) set as DNS server
     9)
         askPassword
         networksetup -setdnsservers Wi-Fi 94.140.14.15 94.140.15.16 2a10:50c0::bad1:ff 2a10:50c0::bad2:ff
         echo "\n•${F_Green} AdGuard (Family Protection) set as DNS server.${No_Attributes} Checking..."
         echo "\n${F_Red}•${No_Attributes} Current DNS server:\n${F_Cyan}$(networksetup -getdnsservers Wi-Fi)${No_Attributes}"
-# Flush DNS cache
+        # Flush DNS cache
         sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder
         checkDNS
-    ;;
+        ;;
 
-# YandexDNS (Threat Protection) set as DNS server
+        # YandexDNS (Threat Protection) set as DNS server
     10)
         askPassword
         networksetup -setdnsservers Wi-Fi 77.88.8.88 77.88.8.2 2a02:6b8::feed:bad 2a02:6b8:0:1::feed:bad
         echo "\n•${F_Green} YandexDNS (Threat Protection) set as DNS server.${No_Attributes} Checking..."
         echo "\n${F_Red}•${No_Attributes} Current DNS server:\n${F_Cyan}$(networksetup -getdnsservers Wi-Fi)${No_Attributes}"
-# Flush DNS cache
+        # Flush DNS cache
         sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder
         checkDNS
-    ;;
+        ;;
 
-# YandexDNS (Family Protection) set as DNS server
+        # YandexDNS (Family Protection) set as DNS server
     11)
         askPassword
         networksetup -setdnsservers Wi-Fi 77.88.8.7 77.88.8.3 2a02:6b8::feed:a11 2a02:6b8:0:1::feed:a11
         echo "\n•${F_Green} YandexDNS (Family Protection) set as DNS server.${No_Attributes} Checking..."
         echo "\n${F_Red}•${No_Attributes} Current DNS server:\n${F_Cyan}$(networksetup -getdnsservers Wi-Fi)${No_Attributes}"
-# Flush DNS cache
+        # Flush DNS cache
         sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder
         checkDNS
-    ;;
+        ;;
 
-# Current DNS server
+        # Current DNS server
     12)
         askPassword
         echo "\n${F_Red}•${No_Attributes} Current DNS server:\n${F_Cyan}$(networksetup -getdnsservers Wi-Fi)${No_Attributes}"
         checkDNS
-    ;;
+        ;;
 
-# Removing these DNS servers
+        # Removing these DNS servers
     13)
         askPassword
         echo "\n•${F_Red} Removing${No_Attributes} these DNS servers:\n${F_Cyan}$(networksetup -getdnsservers Wi-Fi)${No_Attributes}"
         sleep 1
         networksetup -setdnsservers Wi-Fi empty
         echo "\n${F_Red}•${F_Green}${Bold} Done:${No_Attributes} DNS servers are reset to your DHCP."
-# Flush DNS cache
+        # Flush DNS cache
         sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder
         checkDNS
-    ;;
+        ;;
 
     *)
         echo "\n•${F_Red} An unacceptable Command!${F_Red}${Bold}${No_Attributes}"
@@ -637,7 +637,7 @@ customDNSServersForEthernet() {
     terminalWindowSize:132x55
     echo "•${F_Red}${Bold} Command 2: Custom DNS servers for Ethernet.${No_Attributes}"
     askPassword
-# Submenu
+    # Submenu
     echo " ${Dim}╔═══════════════════╦════════════════════════════════════════════════════════════════════════════════════════╗${No_Attributes}"
     echo " ${Dim}║${No_Attributes} Modes filtering   ${Dim}║${No_Attributes} Description              ${F_Red}${Bold}Note:${No_Attributes} Please don't use them unless you know what you're doing ${Dim}║${No_Attributes}"
     echo " ${Dim}╠═══════════════════╬════════════════════════════════════════════════════════════════════════════════════════╣${No_Attributes}"
@@ -671,147 +671,147 @@ customDNSServersForEthernet() {
     read "?  Please select a Command: " CHOICES
     case $CHOICES in
 
-# ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
+    # ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
 
-# Cloudflare set as DNS server
+    # Cloudflare set as DNS server
     1)
         askPassword
         networksetup -setdnsservers Ethernet 8.8.8.8 8.8.4.4 2001:4860:4860::8888 2001:4860:4860::8844
         echo "\n•${F_Green} Cloudflare set as DNS server.${No_Attributes} Checking..."
         echo "\n${F_Red}•${No_Attributes} Current DNS server:\n${F_Cyan}$(networksetup -getdnsservers Ethernet)${No_Attributes}"
-# Flush DNS cache
+        # Flush DNS cache
         sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder
         checkDNS
-    ;;
+        ;;
 
-# Google Public set as DNS server
+        # Google Public set as DNS server
     2)
         askPassword
         networksetup -setdnsservers Ethernet 1.1.1.1 1.0.0.1 2606:4700:4700::1111 2606:4700:4700::1001
         echo "\n•${F_Green} Google Public set as DNS server.${No_Attributes} Checking..."
         echo "\n${F_Red}•${No_Attributes} Current DNS server:\n${F_Cyan}$(networksetup -getdnsservers Ethernet)${No_Attributes}"
-# Flush DNS cache
+        # Flush DNS cache
         sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder
         checkDNS
-    ;;
+        ;;
 
-# Cisco Umbrella set as DNS server
+        # Cisco Umbrella set as DNS server
     3)
         askPassword
         networksetup -setdnsservers Ethernet 208.67.222.222 208.67.220.220 2620:119:35::35 2620:119:53::53
         echo "\n•${F_Green} Cisco Umbrella set as DNS server.${No_Attributes} Checking..."
         echo "\n${F_Red}•${No_Attributes} Current DNS server:\n${F_Cyan}$(networksetup -getdnsservers Ethernet)${No_Attributes}"
-# Flush DNS cache
+        # Flush DNS cache
         sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder
         checkDNS
-    ;;
+        ;;
 
-# NeuStar (Threat Protection) set as DNS server
+        # NeuStar (Threat Protection) set as DNS server
     4)
         askPassword
         networksetup -setdnsservers Ethernet 156.154.70.2 156.154.71.2 2610:a1:1018::2 2610:a1:1019::2
         echo "\n•${F_Green} NeuStar (Threat Protection) set as DNS server.${No_Attributes} Checking..."
         echo "\n${F_Red}•${No_Attributes} Current DNS server:\n${F_Cyan}$(networksetup -getdnsservers Ethernet)${No_Attributes}"
-# Flush DNS cache
+        # Flush DNS cache
         sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder
         checkDNS
-    ;;
+        ;;
 
-# NeuStar (Family Protection) set as DNS server
+        # NeuStar (Family Protection) set as DNS server
     5)
         askPassword
         networksetup -setdnsservers Ethernet 156.154.70.3 156.154.71.3 2610:a1:1018::3 2610:a1:1019::3
         echo "\n•${F_Green} NeuStar (Family Protection) set as DNS server.${No_Attributes} Checking..."
         echo "\n${F_Red}•${No_Attributes} Current DNS server:\n${F_Cyan}$(networksetup -getdnsservers Ethernet)${No_Attributes}"
-# Flush DNS cache
+        # Flush DNS cache
         sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder
         checkDNS
-    ;;
+        ;;
 
-# CleanBrowsing (Threat Protection) set as DNS server
+        # CleanBrowsing (Threat Protection) set as DNS server
     6)
         askPassword
         networksetup -setdnsservers Ethernet 185.228.168.9 185.228.169.9 2a0d:2a00:1::2 2a0d:2a00:2::2
         echo "\n•${F_Green} CleanBrowsing (Threat Protection) set as DNS server.${No_Attributes} Checking..."
         echo "\n${F_Red}•${No_Attributes} Current DNS server:\n${F_Cyan}$(networksetup -getdnsservers Ethernet)${No_Attributes}"
-# Flush DNS cache
+        # Flush DNS cache
         sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder
         checkDNS
-    ;;
+        ;;
 
-# CleanBrowsing (Family Protection) set as DNS server
+        # CleanBrowsing (Family Protection) set as DNS server
     7)
         askPassword
         networksetup -setdnsservers Ethernet 185.228.168.168 185.228.169.168 2a0d:2a00:1:: 2a0d:2a00:2::
         echo "\n•${F_Green} CleanBrowsing (Family Protection) set as DNS server.${No_Attributes} Checking..."
         echo "\n${F_Red}•${No_Attributes} Current DNS server:\n${F_Cyan}$(networksetup -getdnsservers Ethernet)${No_Attributes}"
-# Flush DNS cache
+        # Flush DNS cache
         sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder
         checkDNS
-    ;;
+        ;;
 
-# AdGuard (Threat Protection) set as DNS server
+        # AdGuard (Threat Protection) set as DNS server
     8)
         askPassword
         networksetup -setdnsservers Ethernet 94.140.14.14 94.140.15.15 2a10:50c0::ad1:ff 2a10:50c0::ad2:ff
         echo "\n•${F_Green} AdGuard (Threat Protection) set as DNS server.${No_Attributes} Checking..."
         echo "\n${F_Red}•${No_Attributes} Current DNS server:\n${F_Cyan}$(networksetup -getdnsservers Ethernet)${No_Attributes}"
-# Flush DNS cache
+        # Flush DNS cache
         sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder
         checkDNS
-    ;;
+        ;;
 
-# AdGuard (Family Protection) set as DNS server
+        # AdGuard (Family Protection) set as DNS server
     9)
         askPassword
         networksetup -setdnsservers Ethernet 94.140.14.15 94.140.15.16 2a10:50c0::bad1:ff 2a10:50c0::bad2:ff
         echo "\n•${F_Green} AdGuard (Family Protection) set as DNS server.${No_Attributes} Checking..."
         echo "\n${F_Red}•${No_Attributes} Current DNS server:\n${F_Cyan}$(networksetup -getdnsservers Ethernet)${No_Attributes}"
-# Flush DNS cache
+        # Flush DNS cache
         sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder
         checkDNS
-    ;;
+        ;;
 
-# YandexDNS (Threat Protection) set as DNS server
+        # YandexDNS (Threat Protection) set as DNS server
     10)
         askPassword
         networksetup -setdnsservers Ethernet 77.88.8.88 77.88.8.2 2a02:6b8::feed:bad 2a02:6b8:0:1::feed:bad
         echo "\n•${F_Green} YandexDNS (Threat Protection) set as DNS server.${No_Attributes} Checking..."
         echo "\n${F_Red}•${No_Attributes} Current DNS server:\n${F_Cyan}$(networksetup -getdnsservers Ethernet)${No_Attributes}"
-# Flush DNS cache
+        # Flush DNS cache
         sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder
         checkDNS
-    ;;
+        ;;
 
-# YandexDNS (Family Protection) set as DNS server
+        # YandexDNS (Family Protection) set as DNS server
     11)
         askPassword
         networksetup -setdnsservers Ethernet 77.88.8.7 77.88.8.3 2a02:6b8::feed:a11 2a02:6b8:0:1::feed:a11
         echo "\n•${F_Green} YandexDNS (Family Protection) set as DNS server.${No_Attributes} Checking..."
         echo "\n${F_Red}•${No_Attributes} Current DNS server:\n${F_Cyan}$(networksetup -getdnsservers Ethernet)${No_Attributes}"
-# Flush DNS cache
+        # Flush DNS cache
         sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder
         checkDNS
-    ;;
+        ;;
 
-# Current DNS server
+        # Current DNS server
     12)
         askPassword
         echo "\n${F_Red}•${No_Attributes} Current DNS server:\n${F_Cyan}$(networksetup -getdnsservers Ethernet)${No_Attributes}"
         checkDNS
-    ;;
+        ;;
 
-# Removing these DNS servers
+        # Removing these DNS servers
     13)
         askPassword
         echo "\n•${F_Red} Removing${No_Attributes} these DNS servers:\n${F_Cyan}$(networksetup -getdnsservers Ethernet)${No_Attributes}"
         sleep 1
         networksetup -setdnsservers Ethernet empty
         echo "\n${F_Red}•${F_Green}${Bold} Done:${No_Attributes} DNS servers are reset to your DHCP."
-# Flush DNS cache
+        # Flush DNS cache
         sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder
         checkDNS
-    ;;
+        ;;
 
     *)
         echo "\n•${F_Red} An unacceptable Command!${F_Red}${Bold}${No_Attributes}"
@@ -827,7 +827,7 @@ customDNSServersForEthernet() {
 customPingAndTraceroutTestIPv4/IPv6() {
     terminalWindowSize:132x55
     echo "•${F_Red}${Bold} Command 3: Custom ping and tracerout test IPv4/IPv6.${No_Attributes}\n"
-# Submenu
+    # Submenu
     echo " ${Dim}╔═══╦════════════════════════════════════════════════════╗${No_Attributes}"
     echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 1${No_Attributes} ${Dim}║${No_Attributes} Test Ping IPv4                                     ${Dim}║${No_Attributes}"
     echo " ${Dim}╠═══╬════════════════════════════════════════════════════╣${No_Attributes}"
@@ -841,9 +841,9 @@ customPingAndTraceroutTestIPv4/IPv6() {
     read "?  Please select a Command: " CHOICES
     case $CHOICES in
 
-# ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
+    # ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
 
-# Test Ping IPv4
+    # Test Ping IPv4
     1)
         echo "\n${Dim}════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}\n"
         echo " Outgoing data bytes packet size ${F_Green}${Bold}Default: 56${No_Attributes} -> exceeding can trigger a firewall."
@@ -854,9 +854,9 @@ customPingAndTraceroutTestIPv4/IPv6() {
         echo "\n•${F_Red}${Bold} Testing Ping IPv4.${No_Attributes}\n"
         ping -i 0.1 "$HOST" -c "$COUNT" -s "$SIZE"
         echo "\n${F_Red}•${F_Green}${Bold} Finish...${No_Attributes}"
-    ;;
+        ;;
 
-# Test Traceroute IPv4
+        # Test Traceroute IPv4
     2)
         echo "\n${Dim}════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}\n"
         read "? To which IP or Host address you want to send the test packets: " HOST
@@ -865,9 +865,9 @@ customPingAndTraceroutTestIPv4/IPv6() {
         echo "\n•${F_Red}${Bold} Testing Traceroute IPv4.${No_Attributes}\n"
         traceroute -w 1 -S -P $PROTOCOL -m 30 "$HOST"
         echo "\n${F_Red}•${F_Green}${Bold} Finish...${No_Attributes}"
-    ;;
+        ;;
 
-# Test Ping IPv6
+        # Test Ping IPv6
     3)
         echo "\n${Dim}════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}\n"
         echo " Outgoing data bytes packet size ${F_Green}${Bold}Default: 56${No_Attributes} -> exceeding can trigger a firewall."
@@ -878,9 +878,9 @@ customPingAndTraceroutTestIPv4/IPv6() {
         echo "\n•${F_Red}${Bold} Testing Ping IPv6.${No_Attributes}\n"
         ping6 -i 0.1 "$HOST" -c "$COUNT" -s "$SIZE"
         echo "\n${F_Red}•${F_Green}${Bold} Finish...${No_Attributes}"
-    ;;
+        ;;
 
-# Test Traceroute IPv6
+        # Test Traceroute IPv6
     4)
         echo "\n${Dim}════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}\n"
         read "? To which IP or Host address you want to send the test packets: " HOST
@@ -889,7 +889,7 @@ customPingAndTraceroutTestIPv4/IPv6() {
         echo "\n•${F_Red}${Bold} Testing Traceroute IPv6.${No_Attributes}\n"
         traceroute6 -w 1 -l $PROTOCOL -m 30 "$HOST"
         echo "\n${F_Red}•${F_Green}${Bold} Finish...${No_Attributes}"
-    ;;
+        ;;
 
     *)
         echo "\n•${F_Red} An unacceptable Command!${F_Red}${Bold}${No_Attributes}"
@@ -905,7 +905,7 @@ customPingAndTraceroutTestIPv4/IPv6() {
 automaticPingAndTraceroutTestIPv4/IPv6() {
     terminalWindowSize:140x55
     echo "•${F_Red}${Bold} Command 4: Automatic ping and tracerout test IPv4/IPv6.${No_Attributes}"
-# Ping test IPv4
+    # Ping test IPv4
     echo "\n${Dim}╔════════════════════════╦═══════════════════════════════════════════════════════════╗${No_Attributes}"
     echo "${Dim}║${No_Attributes} Server- or IP- address ${Dim}║${No_Attributes} Response time: Minimum/Average/Maximum/Standard_deviation ${Dim}║${No_Attributes}"
     echo "${Dim}╚════════════════════════╩═══════════════════════════════════════════════════════════╝${No_Attributes}\n"
@@ -918,7 +918,7 @@ automaticPingAndTraceroutTestIPv4/IPv6() {
     ping -i 0.4 -c 10 "Yahoo.com" | tail -4
     ping -i 0.4 -c 10 "Yandex.com" | tail -4
     echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
-# Traceroute test IPv4
+    # Traceroute test IPv4
     echo "${F_Red}•${F_Green}${Bold} Traceroute IPv4 Testing...\n${No_Attributes}"
     traceroute -w 1 -S -m 30 Google.com
     echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
@@ -933,9 +933,9 @@ automaticPingAndTraceroutTestIPv4/IPv6() {
     traceroute -w 1 -S -m 30 Yandex.com
     echo "\n${F_Red}•${F_Green}${Bold} Finish.${No_Attributes}"
 
-# Ping and Traceroute test IPv6
+    # Ping and Traceroute test IPv6
 
-# Ping test IPv6
+    # Ping test IPv6
     echo "\n${Dim}╔════════════════════════╦═══════════════════════════════════════════════════════════╗${No_Attributes}"
     echo "${Dim}║${No_Attributes} Server- or IP- address ${Dim}║${No_Attributes} Response time: Minimum/Average/Maximum/Standard_deviation ${Dim}║${No_Attributes}"
     echo "${Dim}╚════════════════════════╩═══════════════════════════════════════════════════════════╝${No_Attributes}\n"
@@ -948,7 +948,7 @@ automaticPingAndTraceroutTestIPv4/IPv6() {
     ping6 -i 0.4 -c 10 "Yahoo.com" | tail -4
     ping6 -i 0.4 -c 10 "Yandex.com" | tail -4
     echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
-# Traceroute test IPv6
+    # Traceroute test IPv6
     echo "${F_Red}•${F_Green}${Bold} Traceroute IPv6 Testing...\n${No_Attributes}"
     traceroute6 -w 1 -l -m 30 Google.com
     echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
@@ -982,11 +982,11 @@ customSettingComputerName() {
     sudo scutil --set ComputerName "$ComputerName"
     sudo scutil --set LocalHostName "$LocalHostname"
     sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName $(scutil --get LocalHostName)
-# Flush DNS cache
+    # Flush DNS cache
     echo "\n•${F_Red}${Bold} Flushing DNS...${No_Attributes}"
     sleep 1 && sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder
     echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-# New current information about the Computer Name, Hostname, Local Hostname and NetBIOS Name
+    # New current information about the Computer Name, Hostname, Local Hostname and NetBIOS Name
     echo "\n${F_Red}•${F_Green}${Bold} Getting information about the new current Computer Name, Hostname, Local Hostname and NetBIOS Name.${No_Attributes}\n"
     echo "${Dim}═════════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}"
     sleep 1 && scutil --get HostName | awk '{print "Hostname: ", $1}'
@@ -1004,16 +1004,16 @@ customSettingComputerName() {
 customEditingHostsFile() {
     terminalWindowSize:165x55
     echo "•${F_Red}${Bold} Command 6: Custom editing of the Hosts file and Flush DNS cache.${No_Attributes}\n"
-# 1. How and why to modify my hosts file?
+    # 1. How and why to modify my hosts file?
     echo "${F_Red}•${F_Green}${Bold} How and why to modify my hosts file?${No_Attributes}${Dim} ══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}\n"
     echo "${F_Red}•${F_Green}${No_Attributes} The hosts file is a computer file used by the operating system to connect host names (domain names) with IP addresses."
     echo "${F_Red}•${F_Green}${No_Attributes} In other words, it allows you to manually point a website address to a desired IP, or block access to a site altogether by pointing to an invalid or internal IP."
     echo "${F_Red}•${F_Green}${No_Attributes} This can come in handy when you have pointed the name-servers of your domain to a new web host and want to work on your website immediately.\n"
-# 2. How and why to modify my hosts file?
+    # 2. How and why to modify my hosts file?
     echo "${F_Red}•${F_Green}${No_Attributes} Another thing you can use it for is to block access to malicious sites or specific sites to your employees or children for example."
     echo "${F_Red}•${F_Green}${No_Attributes} You can make the local computer resolve e.i. www.facebook.com through an invalid IP and that way prevent people from opening it."
     echo "${F_Red}•${F_Green}${No_Attributes} Since it is necessary to have administrative access to edit the hosts file, it will be really hard for someone to revert this change.\n"
-# Edit Hosts file
+    # Edit Hosts file
     echo "${F_Red}•${F_Green}${Bold} Custom editing of the Hosts file:${No_Attributes}${Dim} ═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}\n"
     echo "${F_Red}•${F_Green}${No_Attributes} Use the arrow keys on your keyboard, to navigate and edit the file."
     echo "${F_Red}•${F_Green}${No_Attributes} You should just add the desired IP followed by the host name (or domain name)."
@@ -1023,7 +1023,7 @@ customEditingHostsFile() {
     echo "${F_Red}•${F_Green}${No_Attributes} Save the file by pressing Ctrl + O"
     echo "${F_Red}•${F_Green}${No_Attributes} Exit with Ctrl + X\n"
     echo "${Dim}═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}"
-# Options: Block IP Addresses and Reroute Web Addresses
+    # Options: Block IP Addresses and Reroute Web Addresses
     echo "${F_Red}•${F_Green}${Bold} Options 1: Block IP Addresses:${No_Attributes}"
     echo "${F_Red}•${F_Green}${No_Attributes}  * For example, The Facebook website to block the IP address 0.0.0.0"
     echo "${F_Red}•${F_Blue}  * Example input: 0.0.0.0       www.facebook.com${No_Attributes}"
@@ -1039,7 +1039,7 @@ customEditingHostsFile() {
     read
     askPassword
     sudo nano /private/etc/hosts
-# Flush DNS cache
+    # Flush DNS cache
     echo "\n•${F_Red}${Bold} Flushing DNS...${No_Attributes}"
     sleep 1 && sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder
     echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
@@ -1103,19 +1103,19 @@ releaseAndRenewDHCP() {
     terminalWindowSize:90x25
     echo "•${F_Red}${Bold} Command 10: Release and Renew DHCP for all available device interfaces.${No_Attributes}"
     askPassword
-# Release the DHCP assigned IP, DNS server, subnet mask, router/gateway and the lease time
+    # Release the DHCP assigned IP, DNS server, subnet mask, router/gateway and the lease time
     echo "•${F_Red}${Bold} Release the DHCP assigned IP, DNS server, subnet mask, router/gateway...${No_Attributes}\n"
     sudo ipconfig set en0 DHCP
     sleep 1 && echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
-# Renew the DHCP assigned IP, DNS server, subnet mask, router/gateway and the lease time
+    # Renew the DHCP assigned IP, DNS server, subnet mask, router/gateway and the lease time
     echo "•${F_Red}${Bold} Renew the DHCP assigned IP, DNS server, subnet mask, router/gateway...${No_Attributes}"
     sudo ipconfig set en1 DHCP
     sleep 1 && echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
-# Flush DNS cache
+    # Flush DNS cache
     echo "•${F_Red}${Bold} Flushing DNS...${No_Attributes}"
     sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder
     sleep 1 && echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
-# Deleting macOS terminal command history
+    # Deleting macOS terminal command history
     echo "•${F_Red} Deleting macOS terminal command history.${No_Attributes}\n"
     echo "•${F_Red} Restart computer.${No_Attributes}"
     rm -rf .zsh_sessions
@@ -1141,13 +1141,13 @@ spoofingMACAddressOfWirelessNetwork() {
     echo "${Dim}╚══════════════════════════════════════════════════════════════════════════════════════════════════╝${No_Attributes}\n"
     OLD_MAC_ADDRESS=$(ifconfig en0 | grep ether | grep -oE '[0-9abcdef:]{17}')
     NEW_MAC_ADDRESS=$(openssl rand 6 | xxd -p | sed 's/\(..\)/\1:/g; s/:$//')
-# Check Old MAC address
+    # Check Old MAC address
     echo "• ${F_Red}Current Old Wireless MAC address:${No_Attributes} $OLD_MAC_ADDRESS"
-# Setting New random MAC address
+    # Setting New random MAC address
     echo "\n${F_Red}•${F_Green} Setting New Spoof random MAC address.${No_Attributes}\n"
     sudo ifconfig en0 ether $NEW_MAC_ADDRESS
     echo "\n• ${F_Red}Spoof New Wireless MAC address:${No_Attributes} $NEW_MAC_ADDRESS"
-# Check New MAC address
+    # Check New MAC address
     echo "\n${F_Red}•${F_Green} Check New current Spoof MAC address.${No_Attributes}\n"
     networksetup -getmacaddress en0 | awk '{print "• System Hardware Wireless MAC address: " $3}'
     ifconfig en0 | grep ether | awk '{print "• Current Spoof Wireless MAC address: " $2}'
@@ -1161,7 +1161,7 @@ spoofingMACAddressOfWirelessNetwork() {
 checkDNSRecordsOfTheDomainIPv4/IPv6() {
     terminalWindowSize:90x25
     echo "•${F_Red}${Bold} Command 12: Check DNS records of the Domain IPv4/IPv6.${No_Attributes}"
-# NSlookup test
+    # NSlookup test
     declare -a arr=("Google.com" "Wikipedia.org" "Facebook.com" "Spotify.com" "Linkedin.com")
     echo "\n${F_Red}•${F_Green}${Bold} Check DNS records of the Domain IPv4...\n${No_Attributes}"
     for i in "${arr[@]}"; do
@@ -1183,16 +1183,16 @@ checkDNSRecordsOfTheDomainIPv4/IPv6() {
 searchProcessesAndNetworkData() {
     terminalWindowSize:190x55
     echo "•${F_Red}${Bold} Command 13: Search all processes for all users and view network data by Internet protocol TCP/UDP and version IPv4/IPv6.${No_Attributes}"
-# Show IPv4 ports TCP information
+    # Show IPv4 ports TCP information
     echo "\n${F_Red}•${F_Green}${Bold} Show Show IPv4 ports TCP information.${No_Attributes}\n"
     lsof -n -i 4TCP
-# Show IPv4 ports UDP information
+    # Show IPv4 ports UDP information
     echo "\n${F_Red}•${F_Green}${Bold} Show Show IPv4 ports UDP information.${No_Attributes}\n"
     lsof -n -i 4UDP
-# Show IPv& ports TCP information
+    # Show IPv& ports TCP information
     echo "\n${F_Red}•${F_Green}${Bold} Show Show IPv6 ports TCP information.${No_Attributes}\n"
     lsof -n -i 6TCP
-# Show IPv& ports UDP information
+    # Show IPv& ports UDP information
     echo "\n${F_Red}•${F_Green}${Bold} Show Show IPv6 ports UDP information.${No_Attributes}\n"
     lsof -n -i 6UDP
     echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
@@ -1206,7 +1206,7 @@ testICMPSweepAndICMP-Flood() {
     terminalWindowSize:100x55
     echo "•${F_Red}${Bold} Command 14: Stress Test Network with ICMP-Sweep and ICMP-Flood.${No_Attributes}"
     askPassword
-# ICMP-Sweep
+    # ICMP-Sweep
     echo "${Dim}════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}"
     echo "${F_Red}•${F_Green} The scan will run from network 1 to network 254.${No_Attributes}"
     echo "${F_Red}•${F_Green} Example use: In the tab below, enter the first ${Bold}3${No_Attributes}${F_Green} octets: ${Bold}192.168.1${No_Attributes}${F_Red}${Dim}xXX${No_Attributes}${F_Green} or ${Bold}10.10.1${No_Attributes}${F_Red}${Dim}xXX${No_Attributes}${F_Green} and etc.${No_Attributes}"
@@ -1218,14 +1218,14 @@ testICMPSweepAndICMP-Flood() {
     done
     echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
     echo "\n•${F_Red}${Bold} Broadcast Address.${No_Attributes}\n"
-# Wi-Fi Broadcast Address (en0)
+    # Wi-Fi Broadcast Address (en0)
     en0BroadcastAddress=$(ifconfig en0 | awk /inet\ /'{print $6}')
     echo "Wi-Fi Broadcast Address (en0): $en0BroadcastAddress"
-# Ethernet Broadcast Address (en1)
+    # Ethernet Broadcast Address (en1)
     en1BroadcastAddress=$(ifconfig en1 | awk /inet\ /'{print $6}')
     echo "Ethernet Broadcast Address (en1): $en1BroadcastAddress"
     echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
-# ICMP-Flood and Broadcast storm is a common Denial of Service (DoS) attack!
+    # ICMP-Flood and Broadcast storm is a common Denial of Service (DoS) attack!
     echo "${Dim}════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}"
     echo "•${F_Red}${Bold} ICMP-Flood is a common Denial of Service (DoS) attack!${No_Attributes}"
     echo "• Outgoing data bytes packet size Default: 56 -> exceeding can trigger a firewall."
@@ -1248,16 +1248,16 @@ testICMPSweepAndICMP-Flood() {
 showInfoLN_DHCP_IP/MACAddresses() {
     terminalWindowSize:140x55
     echo "•${F_Red}${Bold} Command 15: Show information: Firewall, Wireless, Local Network, DHCP and IP and MAC Addresses of Devices on a Local Network and etc.${No_Attributes}\n"
-# External IP Address
+    # External IP Address
     ExternalIPv4=$(curl -s https://api.ipify.org)
     ExternalIPv6=$(curl -s https://api64.ipify.org)
     echo "${F_Red}•${F_Green}${Bold} External IP Address.${No_Attributes}"
     echo "External IPv4: $ExternalIPv4"
     echo "External IPv6: $ExternalIPv6"
-# DNS configuration
+    # DNS configuration
     DNSServers=$(scutil --dns | grep nameserver | sort | uniq)
     echo "\n${F_Red}•${F_Green}${Bold} DNS Servers.${No_Attributes}\n$DNSServers"
-# Wi-Fi (en0)
+    # Wi-Fi (en0)
     en0Interface=$(networksetup -listnetworkserviceorder | grep en0)
     en0Status=$(ifconfig en0 | grep status: | awk '{print $2}')
     en0InternalIPv4=$(ifconfig en0 | awk /inet\ /'{print $2}')
@@ -1275,16 +1275,16 @@ showInfoLN_DHCP_IP/MACAddresses() {
     echo "Current Spoof Wi-Fi MAC address: $en0CurrentMACAddress"
     echo "Subnet Mask: $en0SubnetMask"
     echo "Broadcast Address: $en0BroadcastAddress"
-# Default Gateway IPv4/IPv6 Address Wi-Fi (en0)
+    # Default Gateway IPv4/IPv6 Address Wi-Fi (en0)
     en0DefaultGatewayIPv4=$(netstat -rn | grep UGScg | grep en0 | awk '{print $2}')
     en0DefaultGatewayIPv6=$(netstat -rn | grep UGcg | grep en0 | awk '{print $2}')
     echo "\n${F_Red}•${F_Green}${Bold} Default Gateway IPv4/IPv6 Address Wi-Fi network ${F_Red}(en0)${F_Green}.${No_Attributes}"
     echo "Default Gateway IPv4: $en0DefaultGatewayIPv4"
     echo "Default Gateway IPv6: $en0DefaultGatewayIPv6"
-# Show IP addresses of devices in the Wi-Fi network (en0)
+    # Show IP addresses of devices in the Wi-Fi network (en0)
     echo "\n${F_Red}•${F_Green}${Bold} Show IP and MAC Addresses of devices in the Wi-Fi network ${F_Red}(en0)${F_Green}.${No_Attributes}"
     arp -a | grep en0 | awk '{print $1, $2, $3, $4, $6}'
-# Ethernet (en1)
+    # Ethernet (en1)
     en1Interface=$(networksetup -listnetworkserviceorder | grep en1)
     en1Status=$(ifconfig en1 | grep status: | awk '{print $2}')
     en1InternalIPv4=$(ifconfig en1 | awk /inet\ /'{print $2}')
@@ -1302,16 +1302,16 @@ showInfoLN_DHCP_IP/MACAddresses() {
     echo "Current Spoof Ethernet MAC address: $en1CurrentMACAddress"
     echo "Subnet Mask: $en1SubnetMask"
     echo "Broadcast Address: $en1BroadcastAddress"
-# Default Gateway IPv4/IPv6 Address Ethernet (en1)
+    # Default Gateway IPv4/IPv6 Address Ethernet (en1)
     en1DefaultGatewayIPv4=$(netstat -rn | grep UGScg | grep en1 | awk '{print $2}')
     en1DefaultGatewayIPv6=$(netstat -rn | grep UGcg | grep en1 | awk '{print $2}')
     echo "\n${F_Red}•${F_Green}${Bold} Default Gateway IPv4/IPv6 Address Ethernet network ${F_Red}(en1)${F_Green}.${No_Attributes}"
     echo "Default Gateway IPv4: $en1DefaultGatewayIPv4"
     echo "Default Gateway IPv6: $en1DefaultGatewayIPv6"
-# Show IP addresses of devices in the Wi-Fi network (en1)
+    # Show IP addresses of devices in the Wi-Fi network (en1)
     echo "\n${F_Red}•${F_Green}${Bold} Show IP and MAC Addresses of devices in the Ethernet network ${F_Red}(en1)${F_Green}.${No_Attributes}"
     arp -a | grep en1 | awk '{print $1, $2, $3, $4, $6}'
-# Show Wireless Networks information
+    # Show Wireless Networks information
     echo "\n${F_Red}•${F_Green}${Bold} Your current preferred Wireless network.${No_Attributes}"
     SSID=$(airport -I | awk -F' SSID: ' '/ SSID: / {print $2}')
     OperationMode=$(airport -I | grep op | grep mode | awk '{print $3}')
@@ -1331,23 +1331,23 @@ showInfoLN_DHCP_IP/MACAddresses() {
     echo "Wireless Gateway MAC-Adresse: $BSSID"
     echo "Maximum possible Transmit rate: $TxRate MBit/s"
     echo "MCS Index: $MCS"
-# Scan Wireless Networks
+    # Scan Wireless Networks
     echo "\n${F_Red}•${F_Green}${Bold} Scan Wireless Networks.${No_Attributes}"
     /System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport -s
-# Show Firewall information
+    # Show Firewall information
     echo "\n${F_Red}•${F_Green}${Bold} Show Firewall information.${No_Attributes}"
     /usr/libexec/ApplicationFirewall/socketfilterfw --getglobalstate
     echo "\n${F_Red}•${F_Green}${Bold} Show whether block all is enabled or not.${No_Attributes}"
     /usr/libexec/ApplicationFirewall/socketfilterfw --getblockall
     echo "\n${F_Red}•${F_Green}${Bold} List applications handled by firewall.${No_Attributes}"
     /usr/libexec/ApplicationFirewall/socketfilterfw --list
-# ComputerName, HostName, LocalHostName and NetBIOSName
+    # ComputerName, HostName, LocalHostName and NetBIOSName
     echo "${F_Red}•${F_Green}${Bold} Show ComputerName, HostName, LocalHostName and NetBIOSName.${No_Attributes}"
     scutil --get ComputerName | awk '{print "Computer Name: ", $1}'
     scutil --get HostName | awk '{print "Hostname: ", $1}'
     scutil --get LocalHostName | awk '{print "local Hostname: ", $1}'
     defaults read /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName | awk '{print "NetBIOS Name: " $1}'
-# Show list all network devices on mac
+    # Show list all network devices on mac
     echo "\n${F_Red}•${F_Green}${Bold} Show list all network devices on mac.${No_Attributes}"
     networksetup -listallhardwareports
     echo "\n${F_Red}•${F_Green}${Bold} Finish.${No_Attributes}"
@@ -1360,7 +1360,7 @@ showInfoLN_DHCP_IP/MACAddresses() {
 enableOrDisableTheShowOfHiddenFiles() {
     terminalWindowSize:90x25
     echo "•${F_Red}${Bold} Command 16: Enable or Disable the show of Hidden files.${No_Attributes}\n"
-# Submenu
+    # Submenu
     echo " ${Dim}╔═══╦════════════════════════════════════════════════════════════════════════════╗${No_Attributes}"
     echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 1${No_Attributes} ${Dim}║${No_Attributes} Enable the show of Hidden files                                            ${Dim}║${No_Attributes}"
     echo " ${Dim}╠═══╬════════════════════════════════════════════════════════════════════════════╣${No_Attributes}"
@@ -1370,21 +1370,21 @@ enableOrDisableTheShowOfHiddenFiles() {
     read "?  Please select a Command: " CHOICES
     case $CHOICES in
 
-# ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
+    # ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
 
     # Enable the show of Hidden files
     1)
         echo "\n•${F_Red}${Bold} Enable the show of Hidden files.${No_Attributes}"
         defaults write com.apple.finder AppleShowAllFiles true && killall Finder
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    ;;
+        ;;
 
     # Disable the show of Hidden files
     2)
         echo "\n•${F_Red}${Bold} Disable the show of Hidden files.${No_Attributes}"
         defaults write com.apple.finder AppleShowAllFiles false && killall Finder
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    ;;
+        ;;
 
     *)
         echo "\n•${F_Red} An unacceptable Command!${F_Red}${Bold}${No_Attributes}"
@@ -1400,7 +1400,7 @@ enableOrDisableTheShowOfHiddenFiles() {
 enableOrDisableTheShowOfAllFileExtensions() {
     terminalWindowSize:90x25
     echo "•${F_Red}${Bold} Command 17: Enable or Disable the show of all File Extensions.${No_Attributes}\n"
-# Submenu
+    # Submenu
     echo " ${Dim}╔═══╦════════════════════════════════════════════════════════════════════════════╗${No_Attributes}"
     echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 1${No_Attributes} ${Dim}║${No_Attributes} Enable the show of all File Extensions                                     ${Dim}║${No_Attributes}"
     echo " ${Dim}╠═══╬════════════════════════════════════════════════════════════════════════════╣${No_Attributes}"
@@ -1410,21 +1410,21 @@ enableOrDisableTheShowOfAllFileExtensions() {
     read "?  Please select a Command: " CHOICES
     case $CHOICES in
 
-# ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
+    # ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
 
-# Enable the show of all File Extensions
+    # Enable the show of all File Extensions
     1)
         echo "\n•${F_Red}${Bold} Enable the show of all File Extensions.${No_Attributes}"
         defaults write NSGlobalDomain AppleShowAllExtensions true && killall Finder
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    ;;
+        ;;
 
-# Disable the show of all File Extensions
+        # Disable the show of all File Extensions
     2)
         echo "\n•${F_Red}${Bold} Disable the show of all File Extensions.${No_Attributes}"
         defaults write NSGlobalDomain AppleShowAllExtensions false && killall Finder
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    ;;
+        ;;
 
     *)
         echo "\n•${F_Red} An unacceptable Command!${F_Red}${Bold}${No_Attributes}"
@@ -1440,7 +1440,7 @@ enableOrDisableTheShowOfAllFileExtensions() {
 enableOrDisableTheShowOfAttachmentsAsIconsInTheAppleMailApp() {
     terminalWindowSize:90x25
     echo "•${F_Red}${Bold} Command 18: Enable or Disable the show of Attachments as Icons in the Apple Mail app.${No_Attributes}\n"
-# Submenu
+    # Submenu
     echo " ${Dim}╔═══╦════════════════════════════════════════════════════════════════════════════╗${No_Attributes}"
     echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 1${No_Attributes} ${Dim}║${No_Attributes} Enable the show of Attachments as Icons in the Apple Mail app              ${Dim}║${No_Attributes}"
     echo " ${Dim}╠═══╬════════════════════════════════════════════════════════════════════════════╣${No_Attributes}"
@@ -1450,21 +1450,21 @@ enableOrDisableTheShowOfAttachmentsAsIconsInTheAppleMailApp() {
     read "?  Please select a Command: " CHOICES
     case $CHOICES in
 
-# ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
+    # ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
 
-# Enable the show of Attachments as Icons in the Apple Mail app
+    # Enable the show of Attachments as Icons in the Apple Mail app
     1)
         echo "\n•${F_Red}${Bold} Enable the show of Attachments as Icons in the Apple Mail app.${No_Attributes}"
         defaults write com.apple.mail DisableInlineAttachmentViewing -boolean yes
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    ;;
+        ;;
 
-# Disable the show of attachments as icons in the Apple Mail app
+        # Disable the show of attachments as icons in the Apple Mail app
     2)
         echo "\n•${F_Red}${Bold} Disable the show of Attachments as Icons in the Apple Mail app.${No_Attributes}"
         defaults write com.apple.mail DisableInlineAttachmentViewing -boolean no
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    ;;
+        ;;
 
     *)
         echo "\n•${F_Red} An unacceptable Command!${F_Red}${Bold}${No_Attributes}"
@@ -1480,7 +1480,7 @@ enableOrDisableTheShowOfAttachmentsAsIconsInTheAppleMailApp() {
 enableOrDisableTheShowOfTheFullPathInTheFinderTitleWindow() {
     terminalWindowSize:90x25
     echo "•${F_Red}${Bold} Command 19: Enable or Disable the show of the full path in the Finder 'Title' window.${No_Attributes}\n"
-# Submenu
+    # Submenu
     echo " ${Dim}╔═══╦════════════════════════════════════════════════════════════════════════════╗${No_Attributes}"
     echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 1${No_Attributes} ${Dim}║${No_Attributes} Enable the show of the full path in the Finder 'Title' window              ${Dim}║${No_Attributes}"
     echo " ${Dim}╠═══╬════════════════════════════════════════════════════════════════════════════╣${No_Attributes}"
@@ -1490,21 +1490,21 @@ enableOrDisableTheShowOfTheFullPathInTheFinderTitleWindow() {
     read "?  Please select a Command: " CHOICES
     case $CHOICES in
 
-# ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
+    # ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
 
-# Enable the show of the full path in the Finder 'Title' window
+    # Enable the show of the full path in the Finder 'Title' window
     1)
         echo "\n•${F_Red}${Bold} Enable the show of the full path in the Finder 'Title' window.${No_Attributes}"
         defaults write com.apple.finder _FXShowPosixPathInTitle -bool true && killall Finder
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    ;;
+        ;;
 
-# Disable the show of the full path in the Finder 'Title' window
+        # Disable the show of the full path in the Finder 'Title' window
     2)
         echo "\n•${F_Red}${Bold} Disable the show of the full path in the Finder 'Title' window.${No_Attributes}"
         defaults write com.apple.finder _FXShowPosixPathInTitle -bool false && killall Finder
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    ;;
+        ;;
 
     *)
         echo "\n•${F_Red} An unacceptable Command!${F_Red}${Bold}${No_Attributes}"
@@ -1520,7 +1520,7 @@ enableOrDisableTheShowOfTheFullPathInTheFinderTitleWindow() {
 changeTheDefaultScreenshotFileFormat() {
     terminalWindowSize:90x30
     echo "•${F_Red}${Bold} Command 20: Change the default Screenshot file format.${No_Attributes}\n"
-# Submenu
+    # Submenu
     echo " ${Dim}╔═══╦════════════════════════════════════════════════════════════════════════════╗${No_Attributes}"
     echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 1${No_Attributes} ${Dim}║${No_Attributes} Enable to use default Screenshot BMP file format                           ${Dim}║${No_Attributes}"
     echo " ${Dim}╠═══╬════════════════════════════════════════════════════════════════════════════╣${No_Attributes}"
@@ -1540,56 +1540,56 @@ changeTheDefaultScreenshotFileFormat() {
     read "?  Please select a Command: " CHOICES
     case $CHOICES in
 
-# ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
+    # ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
 
-# Enable to use default Screenshot BMP file format
+    # Enable to use default Screenshot BMP file format
     1)
         echo "\n•${F_Red}${Bold} Enable to use default Screenshot BMP file format.${No_Attributes}"
         defaults write com.apple.screencapture type bmp && killall SystemUIServer
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    ;;
+        ;;
 
-# Enable to use default Screenshot GIF file format
+        # Enable to use default Screenshot GIF file format
     2)
         echo "\n•${F_Red}${Bold} Enable to use default Screenshot GIF file format.${No_Attributes}"
         defaults write com.apple.screencapture type gif && killall SystemUIServer
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    ;;
+        ;;
 
-# Enable to use default Screenshot PDF file format
+        # Enable to use default Screenshot PDF file format
     3)
         echo "\n•${F_Red}${Bold} Enable to use default Screenshot PDF file format.${No_Attributes}"
         defaults write com.apple.screencapture type pdf && killall SystemUIServer
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    ;;
+        ;;
 
-# Enable to use default Screenshot TIFF file format
+        # Enable to use default Screenshot TIFF file format
     4)
         echo "\n•${F_Red}${Bold} Enable to use default Screenshot TIFF file format.${No_Attributes}"
         defaults write com.apple.screencapture type tiff && killall SystemUIServer
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    ;;
+        ;;
 
-# Enable to use default Screenshot JPG file format
+        # Enable to use default Screenshot JPG file format
     5)
         echo "\n•${F_Red}${Bold} Enable to use default Screenshot JPG file format.${No_Attributes}"
         defaults write com.apple.screencapture type jpg && killall SystemUIServer
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    ;;
+        ;;
 
-# Enable to use default Screenshot JPEG file format
+        # Enable to use default Screenshot JPEG file format
     6)
         echo "\n•${F_Red}${Bold} Enable to use default Screenshot JPEG file format.${No_Attributes}"
         defaults write com.apple.screencapture type jpeg && killall SystemUIServer
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    ;;
+        ;;
 
-# Enable to use default Screenshot PNG file format (Default)
+        # Enable to use default Screenshot PNG file format (Default)
     7)
         echo "\n•${F_Red}${Bold} Enable to use default Screenshot PNG file format (Default).${No_Attributes}"
         defaults write com.apple.screencapture type png && killall SystemUIServer
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    ;;
+        ;;
 
     *)
         echo "\n•${F_Red} An unacceptable Command!${F_Red}${Bold}${No_Attributes}"
@@ -1605,7 +1605,7 @@ changeTheDefaultScreenshotFileFormat() {
 enableOrDisableScreenshotWithShadowAndAddingExtraPixels() {
     terminalWindowSize:90x25
     echo "•${F_Red}${Bold} Command 21: Enable or Disable Screenshot with shadow and adding extra pixels.${No_Attributes}\n"
-# Submenu
+    # Submenu
     echo " ${Dim}╔═══╦════════════════════════════════════════════════════════════════════════════╗${No_Attributes}"
     echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 1${No_Attributes} ${Dim}║${No_Attributes} Disable Screenshot with shadow and adding extra pixels                     ${Dim}║${No_Attributes}"
     echo " ${Dim}╠═══╬════════════════════════════════════════════════════════════════════════════╣${No_Attributes}"
@@ -1615,21 +1615,21 @@ enableOrDisableScreenshotWithShadowAndAddingExtraPixels() {
     read "?  Please select a Command: " CHOICES
     case $CHOICES in
 
-# ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
+    # ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
 
-# Disable Screenshot with shadow and adding extra pixels
+    # Disable Screenshot with shadow and adding extra pixels
     1)
         echo "\n•${F_Red}${Bold} Disable Screenshot with shadow and adding extra pixels.${No_Attributes}"
         defaults write com.apple.screencapture disable-shadow -bool true && killall SystemUIServer
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    ;;
+        ;;
 
-# Enable Screenshot with shadow and adding extra pixels (Default)
+        # Enable Screenshot with shadow and adding extra pixels (Default)
     2)
         echo "\n•${F_Red}${Bold} Enable Screenshot with shadow and adding extra pixels (Default).${No_Attributes}"
         defaults write com.apple.screencapture disable-shadow -bool false && killall SystemUIServer
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    ;;
+        ;;
 
     *)
         echo "\n•${F_Red} An unacceptable Command!${F_Red}${Bold}${No_Attributes}"
@@ -1645,7 +1645,7 @@ enableOrDisableScreenshotWithShadowAndAddingExtraPixels() {
 enableOrDisableTheWarningBeforeEmptyingTheTrash() {
     terminalWindowSize:90x25
     echo "•${F_Red}${Bold} Command 22: Enable or Disable the warning before emptying the Trash.${No_Attributes}\n"
-# Submenu
+    # Submenu
     echo " ${Dim}╔═══╦════════════════════════════════════════════════════════════════════════════╗${No_Attributes}"
     echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 1${No_Attributes} ${Dim}║${No_Attributes} Disable warning before emptying the Trash                                  ${Dim}║${No_Attributes}"
     echo " ${Dim}╠═══╬════════════════════════════════════════════════════════════════════════════╣${No_Attributes}"
@@ -1655,21 +1655,21 @@ enableOrDisableTheWarningBeforeEmptyingTheTrash() {
     read "?  Please select a Command: " CHOICES
     case $CHOICES in
 
-# ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
+    # ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
 
-# Disable warning before emptying the Trash
+    # Disable warning before emptying the Trash
     1)
         echo "\n•${F_Red}${Bold} Disable warning before emptying the Trash.${No_Attributes}"
         defaults write com.apple.finder WarnOnEmptyTrash -bool false
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    ;;
+        ;;
 
-# Enable warning before emptying the Trash (Default)
+        # Enable warning before emptying the Trash (Default)
     2)
         echo "\n•${F_Red}${Bold} Enable warning before emptying the Trash (Default).${No_Attributes}"
         defaults write com.apple.finder WarnOnEmptyTrash -bool true
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    ;;
+        ;;
 
     *)
         echo "\n•${F_Red} An unacceptable Command!${F_Red}${Bold}${No_Attributes}"
@@ -1685,7 +1685,7 @@ enableOrDisableTheWarningBeforeEmptyingTheTrash() {
 enableOrDisableWarningWhenChangingAFileExtension() {
     terminalWindowSize:90x25
     echo "•${F_Red}${Bold} Command 23: Enable or Disable warning when changing a file Extension.${No_Attributes}\n"
-# Submenu
+    # Submenu
     echo " ${Dim}╔═══╦════════════════════════════════════════════════════════════════════════════╗${No_Attributes}"
     echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 1${No_Attributes} ${Dim}║${No_Attributes} Disable warning when changing a file Extension                             ${Dim}║${No_Attributes}"
     echo " ${Dim}╠═══╬════════════════════════════════════════════════════════════════════════════╣${No_Attributes}"
@@ -1695,21 +1695,21 @@ enableOrDisableWarningWhenChangingAFileExtension() {
     read "?  Please select a Command: " CHOICES
     case $CHOICES in
 
-# ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
+    # ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
 
-# Disable warning when changing a file Extension
+    # Disable warning when changing a file Extension
     1)
         echo "\n•${F_Red}${Bold} Disable warning when changing a file Extension.${No_Attributes}"
         defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    ;;
+        ;;
 
-# Enable warning when changing a file Extension (Default)
+        # Enable warning when changing a file Extension (Default)
     2)
         echo "\n•${F_Red}${Bold} Enable warning when changing a file Extension (Default).${No_Attributes}"
         defaults write com.apple.finder FXEnableExtensionChangeWarning -bool true
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    ;;
+        ;;
 
     *)
         echo "\n•${F_Red} An unacceptable Command!${F_Red}${Bold}${No_Attributes}"
@@ -1725,7 +1725,7 @@ enableOrDisableWarningWhenChangingAFileExtension() {
 searchCurrentOrPreviousScopeOrThisMacFolderByDefault() {
     terminalWindowSize:90x25
     echo "•${F_Red}${Bold} Command 24: Search (Current or Previous Scope or This Mac) folder by default.${No_Attributes}\n"
-# Submenu
+    # Submenu
     echo " ${Dim}╔═══╦════════════════════════════════════════════════════════════════════════════╗${No_Attributes}"
     echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 1${No_Attributes} ${Dim}║${No_Attributes} When performing a search, search the Current folder by default             ${Dim}║${No_Attributes}"
     echo " ${Dim}╠═══╬════════════════════════════════════════════════════════════════════════════╣${No_Attributes}"
@@ -1737,28 +1737,28 @@ searchCurrentOrPreviousScopeOrThisMacFolderByDefault() {
     read "?  Please select a Command: " CHOICES
     case $CHOICES in
 
-# ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
+    # ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
 
-# When performing a search, search the Current folder by default
+    # When performing a search, search the Current folder by default
     1)
         echo "\n•${F_Red}${Bold} When performing a search, search the Current folder by default.${No_Attributes}"
         defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    ;;
+        ;;
 
-# When performing a search, search the Previous Scope folder by default
+        # When performing a search, search the Previous Scope folder by default
     2)
         echo "\n•${F_Red}${Bold} When performing a search, search the Previous Scope folder by default.${No_Attributes}"
         defaults write com.apple.finder FXDefaultSearchScope -string "SCsp"
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    ;;
+        ;;
 
-# When performing a search, search the This Mac folder by default (Default)
+        # When performing a search, search the This Mac folder by default (Default)
     3)
         echo "\n•${F_Red}${Bold} When performing a search, search the This Mac folder by default (Default).${No_Attributes}"
         defaults write com.apple.finder FXDefaultSearchScope -string "SCev"
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    ;;
+        ;;
 
     *)
         echo "\n•${F_Red} An unacceptable Command!${F_Red}${Bold}${No_Attributes}"
@@ -1774,7 +1774,7 @@ searchCurrentOrPreviousScopeOrThisMacFolderByDefault() {
 enableOrDisableInTextEditTheCreateAnUntitledDocumentAtLaunch() {
     terminalWindowSize:90x25
     echo "•${F_Red}${Bold} Command 25: Enable or Disable in TextEdit the create an Untitled Document at Launch.${No_Attributes}\n"
-# Submenu
+    # Submenu
     echo " ${Dim}╔═══╦════════════════════════════════════════════════════════════════════════════╗${No_Attributes}"
     echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 1${No_Attributes} ${Dim}║${No_Attributes} Enable in TextEdit the create an Untitled Document at Launch               ${Dim}║${No_Attributes}"
     echo " ${Dim}╠═══╬════════════════════════════════════════════════════════════════════════════╣${No_Attributes}"
@@ -1784,21 +1784,21 @@ enableOrDisableInTextEditTheCreateAnUntitledDocumentAtLaunch() {
     read "?  Please select a Command: " CHOICES
     case $CHOICES in
 
-# ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
+    # ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
 
-# Enable in TextEdit the create an Untitled Document at Launch
+    # Enable in TextEdit the create an Untitled Document at Launch
     1)
         echo "\n•${F_Red}${Bold} Enable in TextEdit the create an Untitled Document at Launch.${No_Attributes}"
         defaults write com.apple.TextEdit NSShowAppCentricOpenPanelInsteadOfUntitledFile -bool false
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    ;;
+        ;;
 
-# Disable in TextEdit the create an Untitled Document at Launch (Default)
+        # Disable in TextEdit the create an Untitled Document at Launch (Default)
     2)
         echo "\n•${F_Red}${Bold} Disable in TextEdit the create an Untitled Document at Launch (Default).${No_Attributes}"
         defaults write com.apple.TextEdit NSShowAppCentricOpenPanelInsteadOfUntitledFile -bool true
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    ;;
+        ;;
 
     *)
         echo "\n•${F_Red} An unacceptable Command!${F_Red}${Bold}${No_Attributes}"
@@ -1814,7 +1814,7 @@ enableOrDisableInTextEditTheCreateAnUntitledDocumentAtLaunch() {
 enableOrDisableCopyEmailAddressesAs() {
     terminalWindowSize:132x30
     echo "•${F_Red}${Bold} Command 26: Enable or Disable copy Email addresses as 'foo@example.com' instead of 'Foo Bar <foo@example.com>' in Apple Mail app.${No_Attributes}\n"
-# Submenu
+    # Submenu
     echo " ${Dim}╔═══╦══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗${No_Attributes}"
     echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 1${No_Attributes} ${Dim}║${No_Attributes} Enable copy Email addresses as 'foo@example.com' instead of 'Foo Bar <foo@example.com>' in Apple Mail app            ${Dim}║${No_Attributes}"
     echo " ${Dim}╠═══╬══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣${No_Attributes}"
@@ -1824,21 +1824,21 @@ enableOrDisableCopyEmailAddressesAs() {
     read "?  Please select a Command: " CHOICES
     case $CHOICES in
 
-# ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
+    # ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
 
-# Enable copy Email addresses as 'foo@example.com' instead of 'Foo Bar <foo@example.com>' in Apple Mail app
+    # Enable copy Email addresses as 'foo@example.com' instead of 'Foo Bar <foo@example.com>' in Apple Mail app
     1)
         echo "\n•${F_Red}${Bold} Enable copy Email addresses as 'foo@example.com' instead of 'Foo Bar <foo@example.com>' in Apple Mail app.${No_Attributes}"
         defaults write com.apple.mail AddressesIncludeNameOnPasteboard -bool false
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    ;;
+        ;;
 
-# Disable copy Email addresses as 'foo@example.com' instead of 'Foo Bar <foo@example.com>' in Apple Mail app (Default)
+        # Disable copy Email addresses as 'foo@example.com' instead of 'Foo Bar <foo@example.com>' in Apple Mail app (Default)
     2)
         echo "\n•${F_Red}${Bold} Disable copy Email addresses as 'foo@example.com' instead of 'Foo Bar <foo@example.com>' in Apple Mail app (Default).${No_Attributes}"
         defaults write com.apple.mail AddressesIncludeNameOnPasteboard -bool true
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    ;;
+        ;;
 
     *)
         echo "\n•${F_Red} An unacceptable Command!${F_Red}${Bold}${No_Attributes}"
@@ -1856,7 +1856,7 @@ cleaningLogsAndInactiveMemory() {
     echo "•${F_Red}${Bold} Command 27: Logs system Management: Cleaning the Logs and Inactive memory.${No_Attributes}"
     askPassword
 
-# The script
+    # The script
     remove() {
         entry="$1"
         if test -e "$entry"; then
@@ -1866,7 +1866,7 @@ cleaningLogsAndInactiveMemory() {
         fi
     }
 
-# Clean the Logs
+    # Clean the Logs
     sudo sleep 1
     echo "\n•${F_Red}${Bold} Cleaning the system log files.${No_Attributes}\n"
     remove "/var/log/"
@@ -1875,7 +1875,7 @@ cleaningLogsAndInactiveMemory() {
     remove "$HOME/Library/Logs/"
     remove "$HOME/Library/Application Support/CrashReporter"
 
-# Purge free inactive memory cache
+    # Purge free inactive memory cache
     echo "\n•${F_Red}${Bold} Cleaning inactive memory.${No_Attributes}"
     sudo purge
     echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
@@ -1888,7 +1888,7 @@ cleaningLogsAndInactiveMemory() {
 deletePluginsInputAndOutputDevice() {
     terminalWindowSize:112x35
     echo "•${F_Red}${Bold} Command 28: I/O system Management: Manually and Automatic Delete, Plugins Input and Output device.${No_Attributes}\n"
-# Submenu
+    # Submenu
     echo " ${Dim}╔═══╦═══════════════════════════════════════════════════════════════════════╗${No_Attributes}"
     echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 1${No_Attributes} ${Dim}║${No_Attributes} Automatic Delete All CoreMedia Input/Output Device DAL Video Plug-ins ${Dim}║${No_Attributes}"
     echo " ${Dim}╠═══╬═══════════════════════════════════════════════════════════════════════╣${No_Attributes}"
@@ -1902,13 +1902,13 @@ deletePluginsInputAndOutputDevice() {
     read "?  Please select a Command: " CHOICES
     case $CHOICES in
 
-# ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
+    # ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
 
-# Automatic Delete All CoreMedia Input/Output Device DAL Video Plug-ins
+    # Automatic Delete All CoreMedia Input/Output Device DAL Video Plug-ins
     1)
         echo "\n•${F_Red}${Bold} Automatic Delete All CoreMedia Input/Output Device DAL Video Plug-ins.${No_Attributes}"
         askPassword
-# The script
+        # The script
         remove() {
             entry="$1"
             if test -e "$entry"; then
@@ -1919,13 +1919,13 @@ deletePluginsInputAndOutputDevice() {
         }
         remove "/Library/CoreMediaIO/Plug-Ins/DAL/"
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    ;;
+        ;;
 
-# Automatic Delete All Sound Input/Output Device HAL Audio Plug-ins
+        # Automatic Delete All Sound Input/Output Device HAL Audio Plug-ins
     2)
         echo "\n•${F_Red}${Bold} Automatic Delete All Sound Input/Output Device HAL Audio Plug-ins.${No_Attributes}"
         askPassword
-# The script
+        # The script
         remove() {
             entry="$1"
             if test -e "$entry"; then
@@ -1936,21 +1936,21 @@ deletePluginsInputAndOutputDevice() {
         }
         remove "/Library/Audio/Plug-Ins/HAL/"
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    ;;
+        ;;
 
-# Manually Delete CoreMedia Input/Output Device DAL Video Plug-ins
+        # Manually Delete CoreMedia Input/Output Device DAL Video Plug-ins
     3)
         echo "\n•${F_Red}${Bold} Manually Delete CoreMedia Input/Output Device DAL Video Plug-ins.${No_Attributes}\n"
         open /Library/CoreMediaIO/Plug-Ins/DAL/
         echo "${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    ;;
+        ;;
 
-# Manually Delete Sound Input/Output Device HAL Audio Plug-ins
+        # Manually Delete Sound Input/Output Device HAL Audio Plug-ins
     4)
         echo "\n•${F_Red}${Bold} Manually Delete Sound Input/Output Device HAL Audio Plug-ins.${No_Attributes}\n"
         open /Library/Audio/Plug-Ins/HAL/
         echo "${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    ;;
+        ;;
 
     *)
         echo "\n•${F_Red} An unacceptable Command!${F_Red}${Bold}${No_Attributes}"
@@ -1966,7 +1966,7 @@ deletePluginsInputAndOutputDevice() {
 kernelManagement() {
     terminalWindowSize:132x40
     echo "•${F_Red}${Bold} Command 29: Kernel OS Management: Cleaning kernel Extension, Rebuild Kexts Caches, Repair Permissions of Kexts folders, etc.${No_Attributes}\n"
-# Submenu
+    # Submenu
     echo " ${Dim}╔═══╦════════════════════════════════════════════════════════════════════════════════════════════════════════╗${No_Attributes}"
     echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 1${No_Attributes} ${Dim}║${No_Attributes} Cleaning the kernel Extension staging area by removing all staged content (Requires a reboot)          ${Dim}║${No_Attributes}"
     echo " ${Dim}╠═══╬════════════════════════════════════════════════════════════════════════════════════════════════════════╣${No_Attributes}"
@@ -1982,62 +1982,62 @@ kernelManagement() {
     read "?  Please select a Command: " CHOICES
     case $CHOICES in
 
-# ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
+    # ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
 
-# Cleaning the kernel Extension staging area by removing all staged content
+    # Cleaning the kernel Extension staging area by removing all staged content
     1)
         echo "\n•${F_Red}${Bold} Cleaning the kernel Extension staging area by removing all staged content. (Requires a reboot)${No_Attributes}"
         askPassword
         sudo kmutil clear-staging
         sleep 1 && echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
-# Deleting macOS terminal command history
+        # Deleting macOS terminal command history
         echo "•${F_Red} Deleting macOS terminal command history.${No_Attributes}\n"
         echo "•${F_Red} Restart computer.${No_Attributes}"
         rm -rf .zsh_sessions
         rm -rf .zsh_history
         sleep 1 && echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
         osascript -e 'tell application "loginwindow" to «event aevtrrst»'
-    ;;
+        ;;
 
-# Rebuild out-of-date Caches
+        # Rebuild out-of-date Caches
     2)
         echo "\n•${F_Red}${Bold} Rebuild out-of-date Caches. (Requires a reboot)${No_Attributes}"
         askPassword
         sudo kmutil install --check-rebuild
         sleep 1 && echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
-# Deleting macOS terminal command history
+        # Deleting macOS terminal command history
         echo "•${F_Red} Deleting macOS terminal command history.${No_Attributes}\n"
         echo "•${F_Red} Restart computer.${No_Attributes}"
         rm -rf .zsh_sessions
         rm -rf .zsh_history
         sleep 1 && echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
         osascript -e 'tell application "loginwindow" to «event aevtrrst»'
-    ;;
+        ;;
 
-# Updated the kernel Extension
+        # Updated the kernel Extension
     3)
         echo "\n•${F_Red}${Bold} Updated the kernel Extension. (Requires a reboot)${No_Attributes}\n"
         askPassword
-        sudo kmutil install  --update-all
+        sudo kmutil install --update-all
         sleep 1 && echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
-# Deleting macOS terminal command history
+        # Deleting macOS terminal command history
         echo "•${F_Red} Deleting macOS terminal command history.${No_Attributes}\n"
         echo "•${F_Red} Restart computer.${No_Attributes}"
         rm -rf .zsh_sessions
         rm -rf .zsh_history
         sleep 1 && echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
         osascript -e 'tell application "loginwindow" to «event aevtrrst»'
-    ;;
+        ;;
 
-# Show the loaded state of the kernel Extensions
+        # Show the loaded state of the kernel Extensions
     4)
         terminalWindowSize:190x55
         echo "\n•${F_Red}${Bold} Show the loaded state of the kernel Extensions.${No_Attributes}\n"
         sleep 2 && kmutil showloaded
         sleep 1 && echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    ;;
+        ;;
 
-# Repair Permissions in (System/Library/Extensions) and (Library/Extensions) folders
+        # Repair Permissions in (System/Library/Extensions) and (Library/Extensions) folders
     5)
         echo "\n•${F_Red}${Bold} Repair Permissions in (System/Library/Extensions) and (Library/Extensions) folders. (Requires a reboot)${No_Attributes}"
         askPassword
@@ -2046,14 +2046,14 @@ kernelManagement() {
         sudo chown -Rf 0:0 /S*/L*/E*
         sudo chown -Rf 0:0 /L*/E*
         sleep 1 && echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
-# Deleting macOS terminal command history
+        # Deleting macOS terminal command history
         echo "•${F_Red} Deleting macOS terminal command history.${No_Attributes}\n"
         echo "•${F_Red} Restart computer.${No_Attributes}"
         rm -rf .zsh_sessions
         rm -rf .zsh_history
         sleep 1 && echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
         osascript -e 'tell application "loginwindow" to «event aevtrrst»'
-    ;;
+        ;;
 
     *)
         echo "\n•${F_Red} An unacceptable Command!${F_Red}${Bold}${No_Attributes}"
@@ -2069,7 +2069,7 @@ kernelManagement() {
 privacyDatabaseManagement() {
     terminalWindowSize:112x55
     echo "•${F_Red}${Bold} Command 30: Privacy Database Management: Custom reset application permissions under Security and Privacy.${No_Attributes}\n"
-# Submenu
+    # Submenu
     echo " ${Dim}╔════╦═════════════════════════════════════════════════════════════════════════╗${No_Attributes}"
     echo " ${Dim}║${No_Attributes}${F_Red}${Bold}  1${No_Attributes} ${Dim}║${No_Attributes} ${F_Red}Reset the All permissions for all apps${No_Attributes}                                  ${Dim}║${No_Attributes}"
     echo " ${Dim}╠════╬═════════════════════════════════════════════════════════════════════════╣${No_Attributes}"
@@ -2103,71 +2103,71 @@ privacyDatabaseManagement() {
     read "?  Please select a Command: " CHOICES
     case $CHOICES in
 
-# ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
+    # ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
 
-# Reset the All permissions for all apps
+    # Reset the All permissions for all apps
     1)
         echo "\n•${F_Red}${Bold} Reset the All permissions for all apps.${No_Attributes}"
         askPassword
         sudo tccutil reset All
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    ;;
+        ;;
 
-# Reset the Photos permissions for all apps
+        # Reset the Photos permissions for all apps
     2)
         echo "\n•${F_Red}${Bold} Reset the Photos permissions for all apps.${No_Attributes}"
         askPassword
         sudo tccutil reset Photos
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    ;;
+        ;;
 
-# Reset the Camera permissions for all apps
+        # Reset the Camera permissions for all apps
     3)
         echo "\n•${F_Red}${Bold} Reset the Camera permissions for all apps.${No_Attributes}"
         askPassword
         sudo tccutil reset Camera
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    ;;
+        ;;
 
-# Reset the Reminders permissions for all apps
+        # Reset the Reminders permissions for all apps
     4)
         echo "\n•${F_Red}${Bold} Reset the Reminders permissions for all apps.${No_Attributes}"
         askPassword
         sudo tccutil reset Reminders
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    ;;
+        ;;
 
-# Reset the Microphone permissions for all apps
+        # Reset the Microphone permissions for all apps
     5)
         echo "\n•${F_Red}${Bold} Reset the Microphone permissions for all apps.${No_Attributes}"
         askPassword
         sudo tccutil reset Microphone
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    ;;
+        ;;
 
-# Reset the Automation permissions for all apps
+        # Reset the Automation permissions for all apps
     6)
         echo "\n•${F_Red}${Bold} Reset the Automation permissions for all apps.${No_Attributes}"
         askPassword
         sudo tccutil reset AppleEvents
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    ;;
+        ;;
 
-# Reset the Accessibility permissions for all apps
+        # Reset the Accessibility permissions for all apps
     7)
         echo "\n•${F_Red}${Bold} Reset the Accessibility permissions for all apps.${No_Attributes}"
         askPassword
         sudo tccutil reset Accessibility
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    ;;
+        ;;
 
-# Reset the Developer Tools permissions for all apps
+        # Reset the Developer Tools permissions for all apps
     8)
         echo "\n•${F_Red}${Bold} Reset the Developer Tools permissions for all apps.${No_Attributes}"
         askPassword
         sudo tccutil reset DeveloperTool
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    ;;
+        ;;
 
     # Reset the Screen Recording permissions for all apps
     9)
@@ -2175,47 +2175,47 @@ privacyDatabaseManagement() {
         askPassword
         sudo tccutil reset ScreenCapture
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    ;;
+        ;;
 
-# Reset the Full Disk Access permissions for all apps
+        # Reset the Full Disk Access permissions for all apps
     10)
         echo "\n•${F_Red}${Bold} Reset the Full Disk Access permissions for all apps.${No_Attributes}"
         askPassword
         sudo tccutil reset SystemPolicyAllFiles
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    ;;
+        ;;
 
-# Reset the Speech Recognition permissions for all apps
+        # Reset the Speech Recognition permissions for all apps
     11)
         echo "\n•${F_Red}${Bold} Reset the Speech Recognition permissions for all apps.${No_Attributes}"
         askPassword
         sudo tccutil reset SpeechRecognition
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    ;;
+        ;;
 
-# Reset the Media & Apple Music permissions for all apps
+        # Reset the Media & Apple Music permissions for all apps
     12)
         echo "\n•${F_Red}${Bold} Reset the Media & Apple Music permissions for all apps.${No_Attributes}"
         askPassword
         sudo tccutil reset MediaLibrary
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    ;;
+        ;;
 
-# Reset the Calendars (note the singular, for the Calendars list) permissions for all apps
+        # Reset the Calendars (note the singular, for the Calendars list) permissions for all apps
     13)
         echo "\n•${F_Red}${Bold} Reset the Calendars (note the singular, for the Calendars list) permissions for all apps.${No_Attributes}"
         askPassword
         sudo tccutil reset Calendar
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    ;;
+        ;;
 
-# Reset the Address Book (for the Contacts list) permissions for all apps
+        # Reset the Address Book (for the Contacts list) permissions for all apps
     14)
         echo "\n•${F_Red}${Bold} Reset the Address Book (for the Contacts list) permissions for all apps.${No_Attributes}"
         askPassword
         sudo tccutil reset AddressBook
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    ;;
+        ;;
 
     *)
         echo "\n•${F_Red} An unacceptable Command!${F_Red}${Bold}${No_Attributes}"
@@ -2231,7 +2231,7 @@ privacyDatabaseManagement() {
 gateKeeperManagement() {
     terminalWindowSize:132x40
     echo "•${F_Red}${Bold} Command 31: GateKeeper Management: Status, Enable or Disable, Remove app from quarantine, Self-sign the app.${No_Attributes}\n"
-# Submenu
+    # Submenu
     echo " ${Dim}╔═══╦════════════════════════════════════════════════════════════════════════════╗${No_Attributes}"
     echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 1${No_Attributes} ${Dim}║${No_Attributes} GateKeeper Status                                                          ${Dim}║${No_Attributes}"
     echo " ${Dim}╠═══╬════════════════════════════════════════════════════════════════════════════╣${No_Attributes}"
@@ -2247,48 +2247,48 @@ gateKeeperManagement() {
     read "?  Please select a Command: " CHOICES
     case $CHOICES in
 
-# ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
+    # ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
 
-# GateKeeper Status
+    # GateKeeper Status
     1)
         echo "\n•${F_Red}${Bold} GateKeeper Status.${No_Attributes}\n"
         spctl --status
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    ;;
+        ;;
 
-# Enable GateKeeper
+        # Enable GateKeeper
     2)
         echo "\n•${F_Red}${Bold} Enable GateKeeper.${No_Attributes}"
         askPassword
         sudo spctl --master-enable
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    ;;
+        ;;
 
-# Disable GateKeeper
+        # Disable GateKeeper
     3)
         echo "\n•${F_Red}${Bold} Disable GateKeeper.${No_Attributes}"
         askPassword
         sudo spctl --master-disable
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    ;;
+        ;;
 
-# Remove app from GateKeeper Quarantine
+        # Remove app from GateKeeper Quarantine
     4)
         echo "\n•${F_Red}${Bold} Remove app from GateKeeper Quarantine.${No_Attributes}\n"
         read "? Drag & drop the app on this window and then press Return: " FILEPATH
         askPassword
         sudo xattr -r -d com.apple.quarantine "$FILEPATH"
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    ;;
+        ;;
 
-# Self-sign the app. Require Xcode or Xcode CLT (Command Line Tools)
+        # Self-sign the app. Require Xcode or Xcode CLT (Command Line Tools)
     5)
         echo "\n•${F_Red}${Bold} Self-sign the app. Require Xcode or Xcode CLT (Command Line Tools).${No_Attributes}\n"
         read "? Drag & drop the app on this window and then press Return: " FILEPATH
         askPassword
         sudo codesign -f -v -s - --deep "$FILEPATH"
         echo "\n${F_Red}•${F_Green}${Bold} If you see - replacing existing signature - that means you are done.${No_Attributes}"
-    ;;
+        ;;
 
     *)
         echo "\n•${F_Red} An unacceptable Command!${F_Red}${Bold}${No_Attributes}"
@@ -2304,7 +2304,7 @@ gateKeeperManagement() {
 processAndMemoryManagement() {
     terminalWindowSize:132x40
     echo "•${F_Red}${Bold} Command 32: Process & Memory Management: Manage Processes Using the Terminal, Terminate (Kill) a Process and Purge Memory.${No_Attributes}\n"
-# Submenu
+    # Submenu
     echo " ${Dim}╔═══╦═══════════════════════════════════════════════════════════════════════════════════╗${No_Attributes}"
     echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 1${No_Attributes} ${Dim}║${No_Attributes} Display processes sorted by CPU usage and Kill a process by specifying its PID    ${Dim}║${No_Attributes}"
     echo " ${Dim}╠═══╬═══════════════════════════════════════════════════════════════════════════════════╣${No_Attributes}"
@@ -2316,33 +2316,35 @@ processAndMemoryManagement() {
     read "?  Please select a Command: " CHOICES
     case $CHOICES in
 
-# ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
+    # ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
 
-# Display processes sorted by CPU usage and Kill a process by specifying its PID
+    # Display processes sorted by CPU usage and Kill a process by specifying its PID
     1)
         echo "\n•${F_Red}${Bold} Display processes sorted by CPU usage and Kill a process by specifying its PID.${No_Attributes}"
         askPassword
-        osascript -e 'tell application "Terminal" to do script "top -o cpu -s 2"'; osascript -e 'tell application "Terminal" to set bounds of front window to {935, 20, 1440, 830}'
+        osascript -e 'tell application "Terminal" to do script "top -o cpu -s 2"'
+        osascript -e 'tell application "Terminal" to set bounds of front window to {935, 20, 1440, 830}'
         read "? To Terminate (Kill) a Process: " PID
         sudo kill -9 "$PID"
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
         echo "\n•${F_Red}${Bold} List of running processes in the system, completed...${No_Attributes}"
         sleep 2 && sudo killall top
-    ;;
+        ;;
 
-# Display processes sorted by Memory usage and Kill a process by specifying its PID
+        # Display processes sorted by Memory usage and Kill a process by specifying its PID
     2)
         echo "\n•${F_Red}${Bold} Display processes sorted by Memory usage and Kill a process by specifying its PID.${No_Attributes}"
         askPassword
-        osascript -e 'tell app "Terminal" to do script "top -o rsize -s 2"'; osascript -e 'tell application "Terminal" to set bounds of front window to {935, 20, 1440, 830}'
+        osascript -e 'tell app "Terminal" to do script "top -o rsize -s 2"'
+        osascript -e 'tell application "Terminal" to set bounds of front window to {935, 20, 1440, 830}'
         read "? To Terminate (Kill) a Process: " PID
         sudo kill -9 "$PID"
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
         echo "\n•${F_Red}${Bold} List of running processes in the system, completed...${No_Attributes}"
         sleep 2 && sudo killall top
-    ;;
+        ;;
 
-# Using purge to free inactive Memory
+        # Using purge to free inactive Memory
     3)
         echo "\n•${F_Red}${Bold} Using purge to free inactive Memory.${No_Attributes}"
         askPassword
@@ -2354,7 +2356,7 @@ processAndMemoryManagement() {
         echo "\n•${F_Red}${Bold} Memory usage:${No_Attributes}"
         sleep 2 && top -l 1 -s 0 | grep PhysMem
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    ;;
+        ;;
 
     *)
         echo "\n•${F_Red} An unacceptable Command!${F_Red}${Bold}${No_Attributes}"
@@ -2371,7 +2373,7 @@ uninstallingApplications() {
     terminalWindowSize:112x30
     echo "•${F_Red}${Bold} Command 33: Uninstalling applications: Browsers, Microsoft Office VL, Ad blocking extension, Virtual machines.${No_Attributes}\n"
     echo "${F_Red}${Bold}•${No_Attributes} Warning: The script automatically closes the application to be deleted and all related applications.\n"
-# Submenu
+    # Submenu
     echo " ${Dim}╔════╦═════════════════════════════════════════════════════════════════════════════════════════ ${F_Blue}${Bold}Web browsers ${No_Attributes}${Dim}═╗${No_Attributes}"
     echo " ${Dim}║${No_Attributes}${F_Red}${Bold}  1${No_Attributes} ${Dim}║${No_Attributes} Uninstalling the Opera Browser                                                                         ${Dim}║${No_Attributes}"
     echo " ${Dim}║${No_Attributes}${F_Red}${Bold}  2${No_Attributes} ${Dim}║${No_Attributes} Uninstalling the Yandex Browser                                                                        ${Dim}║${No_Attributes}"
@@ -2396,971 +2398,971 @@ uninstallingApplications() {
     read "?  Please select a Command: " CHOICES
     case $CHOICES in
 
-# ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
+    # ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
 
-# Uninstalling the Opera Browser
+    # Uninstalling the Opera Browser
     1)
         terminalWindowSize:132x30
         echo "\n•${F_Red}${Bold} Uninstalling the Opera Browser.${No_Attributes}"
         askPassword
-# Force Quit Application - If the user hasn't done so
-    sudo osascript -e "tell application \"Opera\" to quit"
-    echo "${No_Attributes}"
-# Warning about Automatically close Opera Browser application.
-    echo "•${F_Red} Automatically close Opera Browser application.${No_Attributes}"
-    sleep 2 && echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
-# Warning about Removal of Opera Browser application.
-    sleep 1 && echo "•${F_Red} Removal of Opera Browser application.${No_Attributes}\n"
-# The script
-    remove() {
-        entry="$1"
-        if test -e "$entry"; then
-            sudo rm -rf "$entry" && echo -e "Removing $entry  [${F_Green}${Bold}Success${No_Attributes}]"
-        else
-            echo -e "Removing $entry  [${F_Yellow}${Bold}File does not exist${No_Attributes}]"
-        fi
-    }
-# Executables
-    remove "/Applications/Opera.app"
-# Application logs
-    remove "$HOME/Library/Logs/com.operasoftware.Opera"
-# Preferences
-    remove "$HOME/Library/Preferences/com.operasoftware.Opera.plist"
-# Caches
-    remove "$HOME/Library/Caches/com.operasoftware.Opera"
-# Application Support
-    remove "$HOME/Library/Application Support/Google"
-    remove "$HOME/Library/Application Support/com.operasoftware.Opera"
-# Saved Application State
-    remove "$HOME/Library/Saved Application State/com.operasoftware.Opera.savedState"
-# Purge free inactive memory cache
-    sudo purge
+        # Force Quit Application - If the user hasn't done so
+        sudo osascript -e "tell application \"Opera\" to quit"
+        echo "${No_Attributes}"
+        # Warning about Automatically close Opera Browser application.
+        echo "•${F_Red} Automatically close Opera Browser application.${No_Attributes}"
+        sleep 2 && echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
+        # Warning about Removal of Opera Browser application.
+        sleep 1 && echo "•${F_Red} Removal of Opera Browser application.${No_Attributes}\n"
+        # The script
+        remove() {
+            entry="$1"
+            if test -e "$entry"; then
+                sudo rm -rf "$entry" && echo -e "Removing $entry  [${F_Green}${Bold}Success${No_Attributes}]"
+            else
+                echo -e "Removing $entry  [${F_Yellow}${Bold}File does not exist${No_Attributes}]"
+            fi
+        }
+        # Executables
+        remove "/Applications/Opera.app"
+        # Application logs
+        remove "$HOME/Library/Logs/com.operasoftware.Opera"
+        # Preferences
+        remove "$HOME/Library/Preferences/com.operasoftware.Opera.plist"
+        # Caches
+        remove "$HOME/Library/Caches/com.operasoftware.Opera"
+        # Application Support
+        remove "$HOME/Library/Application Support/Google"
+        remove "$HOME/Library/Application Support/com.operasoftware.Opera"
+        # Saved Application State
+        remove "$HOME/Library/Saved Application State/com.operasoftware.Opera.savedState"
+        # Purge free inactive memory cache
+        sudo purge
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    ;;
+        ;;
 
-# ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
+        # ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
 
-# Uninstalling the Yandex Browser
+        # Uninstalling the Yandex Browser
     2)
         terminalWindowSize:132x30
         echo "\n•${F_Red}${Bold} Uninstalling the Yandex Browser.${No_Attributes}"
         askPassword
-# Force Quit Application - If the user hasn't done so
-    sudo osascript -e "tell application \"Yandex\" to quit"
-    echo "${No_Attributes}"
-# Warning about Automatically close Yandex Browser application.
-    echo "•${F_Red} Automatically close Yandex Browser application.${No_Attributes}"
-    sleep 2 && echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
-# Warning about Removal of Yandex Browser application.
-    sleep 1 && echo "•${F_Red} Removal of Yandex Browser application.${No_Attributes}\n"
-# The script
-    remove() {
-        entry="$1"
-        if test -e "$entry"; then
-            sudo rm -rf "$entry" && echo -e "Removing $entry  [${F_Green}${Bold}Success${No_Attributes}]"
-        else
-            echo -e "Removing $entry  [${F_Yellow}${Bold}File does not exist${No_Attributes}]"
-        fi
-    }
-# Executables
-    remove "/Applications/Yandex.app"
-# Application logs
-    remove "$HOME/Library/Logs/Yandex"
-# Preferences
-    remove "$HOME/Library/Preferences/ru.yandex.desktop.yandex-browser.plist"
-# Caches
-    remove "$HOME/.yandex"
-    remove "$HOME/Library/Caches/Yandex"
-# Application Support
-    remove "$HOME/Library/Application Support/Google"
-    remove "$HOME/Library/Application Support/Yandex"
-# Saved Application State
-    remove "$HOME/Library/Saved Application State/ru.yandex.desktop.yandex-browser.savedState"
-# Purge free inactive memory cache
-    sudo purge
-    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    ;;
+        # Force Quit Application - If the user hasn't done so
+        sudo osascript -e "tell application \"Yandex\" to quit"
+        echo "${No_Attributes}"
+        # Warning about Automatically close Yandex Browser application.
+        echo "•${F_Red} Automatically close Yandex Browser application.${No_Attributes}"
+        sleep 2 && echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
+        # Warning about Removal of Yandex Browser application.
+        sleep 1 && echo "•${F_Red} Removal of Yandex Browser application.${No_Attributes}\n"
+        # The script
+        remove() {
+            entry="$1"
+            if test -e "$entry"; then
+                sudo rm -rf "$entry" && echo -e "Removing $entry  [${F_Green}${Bold}Success${No_Attributes}]"
+            else
+                echo -e "Removing $entry  [${F_Yellow}${Bold}File does not exist${No_Attributes}]"
+            fi
+        }
+        # Executables
+        remove "/Applications/Yandex.app"
+        # Application logs
+        remove "$HOME/Library/Logs/Yandex"
+        # Preferences
+        remove "$HOME/Library/Preferences/ru.yandex.desktop.yandex-browser.plist"
+        # Caches
+        remove "$HOME/.yandex"
+        remove "$HOME/Library/Caches/Yandex"
+        # Application Support
+        remove "$HOME/Library/Application Support/Google"
+        remove "$HOME/Library/Application Support/Yandex"
+        # Saved Application State
+        remove "$HOME/Library/Saved Application State/ru.yandex.desktop.yandex-browser.savedState"
+        # Purge free inactive memory cache
+        sudo purge
+        echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
+        ;;
 
-# ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
+        # ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
 
-# Uninstalling the Mozilla Firefox
+        # Uninstalling the Mozilla Firefox
     3)
         terminalWindowSize:132x30
         echo "\n•${F_Red}${Bold} Uninstalling the Mozilla Firefox.${No_Attributes}"
         askPassword
-# Force Quit Application - If the user hasn't done so
-    sudo osascript -e "tell application \"Firefox\" to quit"
-    echo "${No_Attributes}"
-# Warning about Automatically close Mozilla Firefox application.
-    echo "•${F_Red} Automatically close Mozilla Firefox application.${No_Attributes}"
-    sleep 2 && echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
-# Warning about Removal of Mozilla Firefox application.
-    sleep 1 && echo "•${F_Red} Removal of Mozilla Firefox application.${No_Attributes}\n"
-# The script
-    remove() {
-        entry="$1"
-        if test -e "$entry"; then
-            sudo rm -rf "$entry" && echo -e "Removing $entry  [${F_Green}${Bold}Success${No_Attributes}]"
-        else
-            echo -e "Removing $entry  [${F_Yellow}${Bold}File does not exist${No_Attributes}]"
-        fi
-    }
-# Executables
-    remove "/Applications/Firefox.app"
-# Application logs
-    remove "$HOME/Library/Logs/Firefox"
-# Preferences
-    remove "$HOME/Library/Preferences/org.mozilla.firefox.plist"
-# Caches
-    remove "$HOME/Library/Caches/Firefox"
-    remove "$HOME/Library/Caches/Mozilla"
-# Application Support
-    remove "$HOME/Library/Application Support/Firefox"
-    remove "$HOME/Library/Application Support/Mozilla"
-# Saved Application State
-    remove "$HOME/Library/Saved Application State/org.mozilla.firefox.savedState"
-# Purge free inactive memory cache
-    sudo purge
+        # Force Quit Application - If the user hasn't done so
+        sudo osascript -e "tell application \"Firefox\" to quit"
+        echo "${No_Attributes}"
+        # Warning about Automatically close Mozilla Firefox application.
+        echo "•${F_Red} Automatically close Mozilla Firefox application.${No_Attributes}"
+        sleep 2 && echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
+        # Warning about Removal of Mozilla Firefox application.
+        sleep 1 && echo "•${F_Red} Removal of Mozilla Firefox application.${No_Attributes}\n"
+        # The script
+        remove() {
+            entry="$1"
+            if test -e "$entry"; then
+                sudo rm -rf "$entry" && echo -e "Removing $entry  [${F_Green}${Bold}Success${No_Attributes}]"
+            else
+                echo -e "Removing $entry  [${F_Yellow}${Bold}File does not exist${No_Attributes}]"
+            fi
+        }
+        # Executables
+        remove "/Applications/Firefox.app"
+        # Application logs
+        remove "$HOME/Library/Logs/Firefox"
+        # Preferences
+        remove "$HOME/Library/Preferences/org.mozilla.firefox.plist"
+        # Caches
+        remove "$HOME/Library/Caches/Firefox"
+        remove "$HOME/Library/Caches/Mozilla"
+        # Application Support
+        remove "$HOME/Library/Application Support/Firefox"
+        remove "$HOME/Library/Application Support/Mozilla"
+        # Saved Application State
+        remove "$HOME/Library/Saved Application State/org.mozilla.firefox.savedState"
+        # Purge free inactive memory cache
+        sudo purge
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    ;;
+        ;;
 
-# ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
+        # ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
 
-# Uninstalling the Google Chrome
+        # Uninstalling the Google Chrome
     4)
         terminalWindowSize:132x40
         echo "\n•${F_Red}${Bold} Uninstalling the Google Chrome.${No_Attributes}"
         askPassword
-# Force Quit Application - If the user hasn't done so
-    sudo osascript -e "tell application \"Google Chrome\" to quit"
-    echo "${No_Attributes}"
-# Warning about Automatically close Google Chrome application.
-    echo "•${F_Red} Automatically close Google Chrome application.${No_Attributes}"
-    sleep 2 && echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
-# Warning about Removal of Google Chrome application.
-    sleep 1 && echo "•${F_Red} Removal of Google Chrome application.${No_Attributes}\n"
-# The script
-    remove() {
-        entry="$1"
-        if test -e "$entry"; then
-            sudo rm -rf "$entry" && echo -e "Removing $entry  [${F_Green}${Bold}Success${No_Attributes}]"
-        else
-            echo -e "Removing $entry  [${F_Yellow}${Bold}File does not exist${No_Attributes}]"
-        fi
-    }
-# Executables
-    remove "/Applications/Google Chrome.app"
-# Application Launch Daemons
-    remove "/Library/LaunchDaemons/com.google.keystone.daemon.plist"
-# Application Launch Agents
-    remove "/Library/LaunchAgents/com.google.keystone.agent.plist"
-    remove "/Library/LaunchAgents/com.google.keystone.xpcservice.plist"
-# Application tmp Keyston
-    remove "/private/tmp/com.google.Keystone"
-# Application logs
-    remove "$HOME/Library/Logs/Google Chrome"
-# Preferences
-    remove "$HOME/Library/Preferences/com.google.Chrome.plist"
-    remove "$HOME/Library/Preferences/com.google.Keystone.Agent.plist"
-# Caches
-    remove "/Library/Google"
-    remove "$HOME/Library/Google"
-    remove "$HOME/Library/Caches/Google"
-    remove "$HOME/Library/Caches/chrome_crashpad_handler"
-# Application Support
-    remove "/Library/Application Support/Google"
-    remove "$HOME/Library/Application Support/Google"
-# Application Update
-    remove "$HOME/Library/Google/GoogleSoftwareUpdate"
-# Saved Application State
-    remove "$HOME/Library/Saved Application State/com.google.Chrome.savedState"
-# Purge free inactive memory cache
-    sudo purge
+        # Force Quit Application - If the user hasn't done so
+        sudo osascript -e "tell application \"Google Chrome\" to quit"
+        echo "${No_Attributes}"
+        # Warning about Automatically close Google Chrome application.
+        echo "•${F_Red} Automatically close Google Chrome application.${No_Attributes}"
+        sleep 2 && echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
+        # Warning about Removal of Google Chrome application.
+        sleep 1 && echo "•${F_Red} Removal of Google Chrome application.${No_Attributes}\n"
+        # The script
+        remove() {
+            entry="$1"
+            if test -e "$entry"; then
+                sudo rm -rf "$entry" && echo -e "Removing $entry  [${F_Green}${Bold}Success${No_Attributes}]"
+            else
+                echo -e "Removing $entry  [${F_Yellow}${Bold}File does not exist${No_Attributes}]"
+            fi
+        }
+        # Executables
+        remove "/Applications/Google Chrome.app"
+        # Application Launch Daemons
+        remove "/Library/LaunchDaemons/com.google.keystone.daemon.plist"
+        # Application Launch Agents
+        remove "/Library/LaunchAgents/com.google.keystone.agent.plist"
+        remove "/Library/LaunchAgents/com.google.keystone.xpcservice.plist"
+        # Application tmp Keyston
+        remove "/private/tmp/com.google.Keystone"
+        # Application logs
+        remove "$HOME/Library/Logs/Google Chrome"
+        # Preferences
+        remove "$HOME/Library/Preferences/com.google.Chrome.plist"
+        remove "$HOME/Library/Preferences/com.google.Keystone.Agent.plist"
+        # Caches
+        remove "/Library/Google"
+        remove "$HOME/Library/Google"
+        remove "$HOME/Library/Caches/Google"
+        remove "$HOME/Library/Caches/chrome_crashpad_handler"
+        # Application Support
+        remove "/Library/Application Support/Google"
+        remove "$HOME/Library/Application Support/Google"
+        # Application Update
+        remove "$HOME/Library/Google/GoogleSoftwareUpdate"
+        # Saved Application State
+        remove "$HOME/Library/Saved Application State/com.google.Chrome.savedState"
+        # Purge free inactive memory cache
+        sudo purge
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    ;;
+        ;;
 
-# ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
+        # ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
 
-# Uninstalling the Microsoft Edge
+        # Uninstalling the Microsoft Edge
     5)
         terminalWindowSize:132x30
         echo "\n•${F_Red}${Bold} Uninstalling the Microsoft Edge.${No_Attributes}"
         askPassword
-# Force Quit Application - If the user hasn't done so
-    sudo osascript -e "tell application \"Microsoft Edge\" to quit"
-    echo "${No_Attributes}"
-# Warning about Automatically close Microsoft Edge application.
-    echo "•${F_Red} Automatically close Microsoft Edge application.${No_Attributes}"
-    sleep 2 && echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
-# Warning about Removal of Microsoft Edge application.
-    sleep 1 && echo "•${F_Red} Removal of Microsoft Edge application.${No_Attributes}\n"
-# The script
-    remove() {
-        entry="$1"
-        if test -e "$entry"; then
-            sudo rm -rf "$entry" && echo -e "Removing $entry  [${F_Green}${Bold}Success${No_Attributes}]"
-        else
-            echo -e "Removing $entry  [${F_Yellow}${Bold}File does not exist${No_Attributes}]"
-        fi
-    }
-# Executables
-    remove "/Applications/Microsoft Edge.app"
-# Application logs
-    remove "$HOME/Library/Logs/Microsoft Edge"
-# Preferences
-    remove "$HOME/Library/Preferences/com.microsoft.edgemac.plist"
-# Caches
-    remove "$HOME/Library/Caches/Microsoft Edge"
-    remove "$HOME/Library/Caches/com.microsoft.edgemac"
-# Application Support
-    remove "$HOME/Library/Application Support/Microsoft Edge"
-# Saved Application State
-    remove "$HOME/Library/Saved Application State/com.microsoft.edgemac.savedState"
-# Purge free inactive memory cache
-    sudo purge
+        # Force Quit Application - If the user hasn't done so
+        sudo osascript -e "tell application \"Microsoft Edge\" to quit"
+        echo "${No_Attributes}"
+        # Warning about Automatically close Microsoft Edge application.
+        echo "•${F_Red} Automatically close Microsoft Edge application.${No_Attributes}"
+        sleep 2 && echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
+        # Warning about Removal of Microsoft Edge application.
+        sleep 1 && echo "•${F_Red} Removal of Microsoft Edge application.${No_Attributes}\n"
+        # The script
+        remove() {
+            entry="$1"
+            if test -e "$entry"; then
+                sudo rm -rf "$entry" && echo -e "Removing $entry  [${F_Green}${Bold}Success${No_Attributes}]"
+            else
+                echo -e "Removing $entry  [${F_Yellow}${Bold}File does not exist${No_Attributes}]"
+            fi
+        }
+        # Executables
+        remove "/Applications/Microsoft Edge.app"
+        # Application logs
+        remove "$HOME/Library/Logs/Microsoft Edge"
+        # Preferences
+        remove "$HOME/Library/Preferences/com.microsoft.edgemac.plist"
+        # Caches
+        remove "$HOME/Library/Caches/Microsoft Edge"
+        remove "$HOME/Library/Caches/com.microsoft.edgemac"
+        # Application Support
+        remove "$HOME/Library/Application Support/Microsoft Edge"
+        # Saved Application State
+        remove "$HOME/Library/Saved Application State/com.microsoft.edgemac.savedState"
+        # Purge free inactive memory cache
+        sudo purge
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    ;;
+        ;;
 
-# ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
+        # ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
 
-# Uninstalling the Microsoft Word
+        # Uninstalling the Microsoft Word
     6)
         terminalWindowSize:190x55
         echo "\n•${F_Red}${Bold} Uninstalling the Microsoft Word.${No_Attributes}"
         askPassword
-# Force Quit Application - If the user hasn't done so
-    sudo osascript -e "tell application \"Microsoft AutoUpdate\" to quit" && sleep 2
-    sudo osascript -e "tell application \"Microsoft Word\" to quit"
-    echo "${No_Attributes}"
-# Warning about Automatically close Microsoft Word application.
-    echo "•${F_Red} Automatically close Microsoft Word application.${No_Attributes}"
-    sleep 2 && echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
-# Warning about Removal of Microsoft Word application.
-    sleep 1 && echo "•${F_Red} Removal of Microsoft Word application.${No_Attributes}\n"
-# The script
-    remove() {
-        entry="$1"
-        if test -e "$entry"; then
-            sudo rm -rf "$entry" && echo -e "Removing $entry  [${F_Green}${Bold}Success${No_Attributes}]"
-        else
-            echo -e "Removing $entry  [${F_Yellow}${Bold}File does not exist${No_Attributes}]"
-        fi
-    }
-# Executables
-    remove "/Applications/Microsoft Word.app"
-# Application Receipts
-    remove "/private/var/db/receipts/com.microsoft.package.Microsoft_Word.app.bom"
-    remove "/private/var/db/receipts/com.microsoft.package.Microsoft_Word.app.plist"
-# Preferences
-    remove "$HOME/Library/Preferences/com.microsoft.Word.plist"
-# Caches
-    remove "$HOME/Library/Caches/com.microsoft.Word"
-# Application Scripts
-    remove "$HOME/Library/Application Scripts/com.microsoft.Word"
-    remove "$HOME/Library/Application Scripts/com.microsoft.openxml.word.app"
-# Application Support
-    remove "$HOME/Library/Application Support/CloudDocs/session/containers/iCloud.com.microsoft.Office.Word"
-    remove "$HOME/Library/Application Support/CloudDocs/session/containers/iCloud.com.microsoft.Office.Word.plist"
-    remove "$HOME/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.microsoft.word.sfl2"
-# Application Containers
-    remove "$HOME/Library/Containers/com.microsoft.Word"
-    remove "$HOME/Library/Containers/com.microsoft.openxml.Word.app"
-# Application Group Containers
-    remove "$HOME/Library/Group Containers/UBF8T346G9.ms/Microsoft Word.MERP.params.txt"
-    remove "$HOME/Library/Group Containers/UBF8T346G9.ms/cloudPolicy/WordCloudPolicyState.plist"
-    remove "$HOME/Library/Group Containers/UBF8T346G9.Office/User Content.localized/Startup.localized/Word"
-# Purge free inactive memory cache
-    sudo purge
+        # Force Quit Application - If the user hasn't done so
+        sudo osascript -e "tell application \"Microsoft AutoUpdate\" to quit" && sleep 2
+        sudo osascript -e "tell application \"Microsoft Word\" to quit"
+        echo "${No_Attributes}"
+        # Warning about Automatically close Microsoft Word application.
+        echo "•${F_Red} Automatically close Microsoft Word application.${No_Attributes}"
+        sleep 2 && echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
+        # Warning about Removal of Microsoft Word application.
+        sleep 1 && echo "•${F_Red} Removal of Microsoft Word application.${No_Attributes}\n"
+        # The script
+        remove() {
+            entry="$1"
+            if test -e "$entry"; then
+                sudo rm -rf "$entry" && echo -e "Removing $entry  [${F_Green}${Bold}Success${No_Attributes}]"
+            else
+                echo -e "Removing $entry  [${F_Yellow}${Bold}File does not exist${No_Attributes}]"
+            fi
+        }
+        # Executables
+        remove "/Applications/Microsoft Word.app"
+        # Application Receipts
+        remove "/private/var/db/receipts/com.microsoft.package.Microsoft_Word.app.bom"
+        remove "/private/var/db/receipts/com.microsoft.package.Microsoft_Word.app.plist"
+        # Preferences
+        remove "$HOME/Library/Preferences/com.microsoft.Word.plist"
+        # Caches
+        remove "$HOME/Library/Caches/com.microsoft.Word"
+        # Application Scripts
+        remove "$HOME/Library/Application Scripts/com.microsoft.Word"
+        remove "$HOME/Library/Application Scripts/com.microsoft.openxml.word.app"
+        # Application Support
+        remove "$HOME/Library/Application Support/CloudDocs/session/containers/iCloud.com.microsoft.Office.Word"
+        remove "$HOME/Library/Application Support/CloudDocs/session/containers/iCloud.com.microsoft.Office.Word.plist"
+        remove "$HOME/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.microsoft.word.sfl2"
+        # Application Containers
+        remove "$HOME/Library/Containers/com.microsoft.Word"
+        remove "$HOME/Library/Containers/com.microsoft.openxml.Word.app"
+        # Application Group Containers
+        remove "$HOME/Library/Group Containers/UBF8T346G9.ms/Microsoft Word.MERP.params.txt"
+        remove "$HOME/Library/Group Containers/UBF8T346G9.ms/cloudPolicy/WordCloudPolicyState.plist"
+        remove "$HOME/Library/Group Containers/UBF8T346G9.Office/User Content.localized/Startup.localized/Word"
+        # Purge free inactive memory cache
+        sudo purge
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    ;;
+        ;;
 
-# ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
+        # ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
 
-# Uninstalling the Microsoft Excel
+        # Uninstalling the Microsoft Excel
     7)
         terminalWindowSize:190x55
         echo "\n•${F_Red}${Bold} Uninstalling the Microsoft Excel.${No_Attributes}"
         askPassword
-# Force Quit Application - If the user hasn't done so
-    sudo osascript -e "tell application \"Microsoft AutoUpdate\" to quit" && sleep 2
-    sudo osascript -e "tell application \"Microsoft Excel\" to quit"
-    echo "${No_Attributes}"
-# Warning about Automatically close Microsoft Excel application.
-    echo "•${F_Red} Automatically close Microsoft Excel application.${No_Attributes}"
-    sleep 2 && echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
-# Warning about Removal of Microsoft Excel application.
-    sleep 1 && echo "•${F_Red} Removal of Microsoft Excel application.${No_Attributes}\n"
-# The script
-    remove() {
-        entry="$1"
-        if test -e "$entry"; then
-            sudo rm -rf "$entry" && echo -e "Removing $entry  [${F_Green}${Bold}Success${No_Attributes}]"
-        else
-            echo -e "Removing $entry  [${F_Yellow}${Bold}File does not exist${No_Attributes}]"
-        fi
-    }
-# Executables
-    remove "/Applications/Microsoft Excel.app"
-# Application Receipts
-    remove "/private/var/db/receipts/com.microsoft.package.Microsoft_Excel.app.bom"
-    remove "/private/var/db/receipts/com.microsoft.package.Microsoft_Excel.app.plist"
-# Preferences
-    remove "$HOME/Library/Preferences/com.microsoft.Excel.plist"
-# Caches
-    remove "$HOME/Library/Caches/com.microsoft.Excel"
-# Application Scripts
-    remove "$HOME/Library/Application Scripts/com.microsoft.Excel"
-    remove "$HOME/Library/Application Scripts/com.microsoft.openxml.excel.app"
-# Application Support
-    remove "$HOME/Library/Application Support/CloudDocs/session/containers/iCloud.com.microsoft.Office.Excel"
-    remove "$HOME/Library/Application Support/CloudDocs/session/containers/iCloud.com.microsoft.Office.Excel.plist"
-    remove "$HOME/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.microsoft.excel.sfl2"
-# Application Containers
-    remove "$HOME/Library/Containers/com.microsoft.Excel"
-    remove "$HOME/Library/Containers/com.microsoft.openxml.excel.app"
-# Application Group Containers
-    remove "$HOME/Library/Group Containers/UBF8T346G9.ms/Microsoft Excel.MERP.params.txt"
-    remove "$HOME/Library/Group Containers/UBF8T346G9.ms/cloudPolicy/ExcelCloudPolicyState.plist"
-    remove "$HOME/Library/Group Containers/UBF8T346G9.Office/User Content.localized/Startup.localized/Excel"
-# Purge free inactive memory cache
-    sudo purge
+        # Force Quit Application - If the user hasn't done so
+        sudo osascript -e "tell application \"Microsoft AutoUpdate\" to quit" && sleep 2
+        sudo osascript -e "tell application \"Microsoft Excel\" to quit"
+        echo "${No_Attributes}"
+        # Warning about Automatically close Microsoft Excel application.
+        echo "•${F_Red} Automatically close Microsoft Excel application.${No_Attributes}"
+        sleep 2 && echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
+        # Warning about Removal of Microsoft Excel application.
+        sleep 1 && echo "•${F_Red} Removal of Microsoft Excel application.${No_Attributes}\n"
+        # The script
+        remove() {
+            entry="$1"
+            if test -e "$entry"; then
+                sudo rm -rf "$entry" && echo -e "Removing $entry  [${F_Green}${Bold}Success${No_Attributes}]"
+            else
+                echo -e "Removing $entry  [${F_Yellow}${Bold}File does not exist${No_Attributes}]"
+            fi
+        }
+        # Executables
+        remove "/Applications/Microsoft Excel.app"
+        # Application Receipts
+        remove "/private/var/db/receipts/com.microsoft.package.Microsoft_Excel.app.bom"
+        remove "/private/var/db/receipts/com.microsoft.package.Microsoft_Excel.app.plist"
+        # Preferences
+        remove "$HOME/Library/Preferences/com.microsoft.Excel.plist"
+        # Caches
+        remove "$HOME/Library/Caches/com.microsoft.Excel"
+        # Application Scripts
+        remove "$HOME/Library/Application Scripts/com.microsoft.Excel"
+        remove "$HOME/Library/Application Scripts/com.microsoft.openxml.excel.app"
+        # Application Support
+        remove "$HOME/Library/Application Support/CloudDocs/session/containers/iCloud.com.microsoft.Office.Excel"
+        remove "$HOME/Library/Application Support/CloudDocs/session/containers/iCloud.com.microsoft.Office.Excel.plist"
+        remove "$HOME/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.microsoft.excel.sfl2"
+        # Application Containers
+        remove "$HOME/Library/Containers/com.microsoft.Excel"
+        remove "$HOME/Library/Containers/com.microsoft.openxml.excel.app"
+        # Application Group Containers
+        remove "$HOME/Library/Group Containers/UBF8T346G9.ms/Microsoft Excel.MERP.params.txt"
+        remove "$HOME/Library/Group Containers/UBF8T346G9.ms/cloudPolicy/ExcelCloudPolicyState.plist"
+        remove "$HOME/Library/Group Containers/UBF8T346G9.Office/User Content.localized/Startup.localized/Excel"
+        # Purge free inactive memory cache
+        sudo purge
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    ;;
+        ;;
 
-# ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
+        # ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
 
-# Uninstalling the Microsoft PowerPoint
+        # Uninstalling the Microsoft PowerPoint
     8)
         terminalWindowSize:190x35
         echo "\n•${F_Red}${Bold} Uninstalling the Microsoft PowerPoint.${No_Attributes}"
         askPassword
-# Force Quit Application - If the user hasn't done so
-    sudo osascript -e "tell application \"Microsoft AutoUpdate\" to quit" && sleep 2
-    sudo osascript -e "tell application \"Microsoft PowerPoint\" to quit"
-    echo "${No_Attributes}"
-# Warning about Automatically close Microsoft PowerPoint application.
-    echo "•${F_Red} Automatically close Microsoft PowerPoint application.${No_Attributes}"
-    sleep 2 && echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
-# Warning about Removal of Microsoft PowerPoint application.
-    sleep 1 && echo "•${F_Red} Removal of Microsoft PowerPoint application.${No_Attributes}\n"
-# The script
-    remove() {
-        entry="$1"
-        if test -e "$entry"; then
-            sudo rm -rf "$entry" && echo -e "Removing $entry  [${F_Green}${Bold}Success${No_Attributes}]"
-        else
-            echo -e "Removing $entry  [${F_Yellow}${Bold}File does not exist${No_Attributes}]"
-        fi
-    }
-# Executables
-    remove "/Applications/Microsoft PowerPoint.app"
-# Application Receipts
-    remove "/private/var/db/receipts/com.microsoft.package.Microsoft_PowerPoint.app.bom"
-    remove "/private/var/db/receipts/com.microsoft.package.Microsoft_PowerPoint.app.plist"
-# Preferences
-    remove "$HOME/Library/Preferences/com.microsoft.PowerPoint.plist"
-# Caches
-    remove "$HOME/Library/Caches/com.microsoft.PowerPoint"
-# Application Scripts
-    remove "$HOME/Library/Application Scripts/com.microsoft.Powerpoint"
-    remove "$HOME/Library/Application Scripts/com.microsoft.openxml.powerpoint.app"
-# Application Support
-    remove "$HOME/Library/Application Support/CloudDocs/session/containers/iCloud.com.microsoft.Office.PowerPoint"
-    remove "$HOME/Library/Application Support/CloudDocs/session/containers/iCloud.com.microsoft.Office.PowerPoint.plist"
-    remove "$HOME/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.microsoft.powerpoint.sfl2"
-# Application Containers
-    remove "$HOME/Library/Containers/com.microsoft.Powerpoint"
-    remove "$HOME/Library/Containers/com.microsoft.openxml.Powerpoint.app"
-# Application Group Containers
-    remove "$HOME/Library/Group Containers/UBF8T346G9.ms/Microsoft PowerPoint.MERP.params.txt"
-    remove "$HOME/Library/Group Containers/UBF8T346G9.ms/cloudPolicy/PowerPointCloudPolicyState.plist"
-    remove "$HOME/Library/Group Containers/UBF8T346G9.Office/User Content.localized/Startup.localized/PowerPoint"
-# Purge free inactive memory cache
-    sudo purge
+        # Force Quit Application - If the user hasn't done so
+        sudo osascript -e "tell application \"Microsoft AutoUpdate\" to quit" && sleep 2
+        sudo osascript -e "tell application \"Microsoft PowerPoint\" to quit"
+        echo "${No_Attributes}"
+        # Warning about Automatically close Microsoft PowerPoint application.
+        echo "•${F_Red} Automatically close Microsoft PowerPoint application.${No_Attributes}"
+        sleep 2 && echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
+        # Warning about Removal of Microsoft PowerPoint application.
+        sleep 1 && echo "•${F_Red} Removal of Microsoft PowerPoint application.${No_Attributes}\n"
+        # The script
+        remove() {
+            entry="$1"
+            if test -e "$entry"; then
+                sudo rm -rf "$entry" && echo -e "Removing $entry  [${F_Green}${Bold}Success${No_Attributes}]"
+            else
+                echo -e "Removing $entry  [${F_Yellow}${Bold}File does not exist${No_Attributes}]"
+            fi
+        }
+        # Executables
+        remove "/Applications/Microsoft PowerPoint.app"
+        # Application Receipts
+        remove "/private/var/db/receipts/com.microsoft.package.Microsoft_PowerPoint.app.bom"
+        remove "/private/var/db/receipts/com.microsoft.package.Microsoft_PowerPoint.app.plist"
+        # Preferences
+        remove "$HOME/Library/Preferences/com.microsoft.PowerPoint.plist"
+        # Caches
+        remove "$HOME/Library/Caches/com.microsoft.PowerPoint"
+        # Application Scripts
+        remove "$HOME/Library/Application Scripts/com.microsoft.Powerpoint"
+        remove "$HOME/Library/Application Scripts/com.microsoft.openxml.powerpoint.app"
+        # Application Support
+        remove "$HOME/Library/Application Support/CloudDocs/session/containers/iCloud.com.microsoft.Office.PowerPoint"
+        remove "$HOME/Library/Application Support/CloudDocs/session/containers/iCloud.com.microsoft.Office.PowerPoint.plist"
+        remove "$HOME/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.microsoft.powerpoint.sfl2"
+        # Application Containers
+        remove "$HOME/Library/Containers/com.microsoft.Powerpoint"
+        remove "$HOME/Library/Containers/com.microsoft.openxml.Powerpoint.app"
+        # Application Group Containers
+        remove "$HOME/Library/Group Containers/UBF8T346G9.ms/Microsoft PowerPoint.MERP.params.txt"
+        remove "$HOME/Library/Group Containers/UBF8T346G9.ms/cloudPolicy/PowerPointCloudPolicyState.plist"
+        remove "$HOME/Library/Group Containers/UBF8T346G9.Office/User Content.localized/Startup.localized/PowerPoint"
+        # Purge free inactive memory cache
+        sudo purge
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    ;;
+        ;;
 
-# ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
+        # ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
 
-# Uninstalling the Microsoft OneNote
+        # Uninstalling the Microsoft OneNote
     9)
         terminalWindowSize:190x55
         echo "\n•${F_Red}${Bold} Uninstalling the Microsoft OneNote.${No_Attributes}"
         askPassword
-# Force Quit Application - If the user hasn't done so
-    sudo osascript -e "tell application \"Microsoft AutoUpdate\" to quit" && sleep 2
-    sudo osascript -e "tell application \"Microsoft OneNote\" to quit"
-    echo "${No_Attributes}"
-# Warning about Automatically close Microsoft OneNote application.
-    echo "•${F_Red} Automatically close Microsoft OneNote application.${No_Attributes}"
-    sleep 2 && echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
-# Warning about Removal of Microsoft OneNote application.
-    sleep 1 && echo "•${F_Red} Removal of Microsoft OneNote application.${No_Attributes}\n"
-# The script
-    remove() {
-        entry="$1"
-        if test -e "$entry"; then
-            sudo rm -rf "$entry" && echo -e "Removing $entry  [${F_Green}${Bold}Success${No_Attributes}]"
-        else
-            echo -e "Removing $entry  [${F_Yellow}${Bold}File does not exist${No_Attributes}]"
-        fi
-    }
-# Executables
-    remove "/Applications/Microsoft OneNote.app"
-# Application Receipts
-    remove "/private/var/db/receipts/com.microsoft.package.Microsoft_OneNote.app.bom"
-    remove "/private/var/db/receipts/com.microsoft.package.Microsoft_OneNote.app.plist"
-# Preferences
-    remove "$HOME/Library/Preferences/com.microsoft.OneNote.plist"
-# Caches
-    remove "$HOME/Library/Caches/com.microsoft.OneNote"
-# Application Scripts
-    remove "$HOME/Library/Application Scripts/com.microsoft.onenote.mac"
-    remove "$HOME/Library/Application Scripts/com.microsoft.onenote.mac.shareextension"
-# Application Support
-    remove "$HOME/Library/Application Support/CloudDocs/session/containers/iCloud.com.microsoft.Office.OneNote"
-    remove "$HOME/Library/Application Support/CloudDocs/session/containers/iCloud.com.microsoft.Office.OneNote.plist"
-    remove "$HOME/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.microsoft.onenote.sfl2"
-# Application Containers
-    remove "$HOME/Library/Containers/com.microsoft.onenote.mac"
-    remove "$HOME/Library/Containers/com.microsoft.onenote.mac.shareextension"
-# Application Group Containers
-    remove "$HOME/Library/Group Containers/UBF8T346G9.ms/Microsoft OneNote.MERP.params.txt"
-    remove "$HOME/Library/Group Containers/UBF8T346G9.ms/cloudPolicy/OneNoteCloudPolicyState.plist"
-    remove "$HOME/Library/Group Containers/UBF8T346G9.Office/OneNote"
-    remove "$HOME/Library/Group Containers/UBF8T346G9.Office/User Content.localized/Startup.localized/OneNote"
-# Purge free inactive memory cache
-    sudo purge
+        # Force Quit Application - If the user hasn't done so
+        sudo osascript -e "tell application \"Microsoft AutoUpdate\" to quit" && sleep 2
+        sudo osascript -e "tell application \"Microsoft OneNote\" to quit"
+        echo "${No_Attributes}"
+        # Warning about Automatically close Microsoft OneNote application.
+        echo "•${F_Red} Automatically close Microsoft OneNote application.${No_Attributes}"
+        sleep 2 && echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
+        # Warning about Removal of Microsoft OneNote application.
+        sleep 1 && echo "•${F_Red} Removal of Microsoft OneNote application.${No_Attributes}\n"
+        # The script
+        remove() {
+            entry="$1"
+            if test -e "$entry"; then
+                sudo rm -rf "$entry" && echo -e "Removing $entry  [${F_Green}${Bold}Success${No_Attributes}]"
+            else
+                echo -e "Removing $entry  [${F_Yellow}${Bold}File does not exist${No_Attributes}]"
+            fi
+        }
+        # Executables
+        remove "/Applications/Microsoft OneNote.app"
+        # Application Receipts
+        remove "/private/var/db/receipts/com.microsoft.package.Microsoft_OneNote.app.bom"
+        remove "/private/var/db/receipts/com.microsoft.package.Microsoft_OneNote.app.plist"
+        # Preferences
+        remove "$HOME/Library/Preferences/com.microsoft.OneNote.plist"
+        # Caches
+        remove "$HOME/Library/Caches/com.microsoft.OneNote"
+        # Application Scripts
+        remove "$HOME/Library/Application Scripts/com.microsoft.onenote.mac"
+        remove "$HOME/Library/Application Scripts/com.microsoft.onenote.mac.shareextension"
+        # Application Support
+        remove "$HOME/Library/Application Support/CloudDocs/session/containers/iCloud.com.microsoft.Office.OneNote"
+        remove "$HOME/Library/Application Support/CloudDocs/session/containers/iCloud.com.microsoft.Office.OneNote.plist"
+        remove "$HOME/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.microsoft.onenote.sfl2"
+        # Application Containers
+        remove "$HOME/Library/Containers/com.microsoft.onenote.mac"
+        remove "$HOME/Library/Containers/com.microsoft.onenote.mac.shareextension"
+        # Application Group Containers
+        remove "$HOME/Library/Group Containers/UBF8T346G9.ms/Microsoft OneNote.MERP.params.txt"
+        remove "$HOME/Library/Group Containers/UBF8T346G9.ms/cloudPolicy/OneNoteCloudPolicyState.plist"
+        remove "$HOME/Library/Group Containers/UBF8T346G9.Office/OneNote"
+        remove "$HOME/Library/Group Containers/UBF8T346G9.Office/User Content.localized/Startup.localized/OneNote"
+        # Purge free inactive memory cache
+        sudo purge
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    ;;
+        ;;
 
-# ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
+        # ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
 
-# Uninstalling the Microsoft Outlook
+        # Uninstalling the Microsoft Outlook
     10)
         terminalWindowSize:190x55
         echo "\n•${F_Red}${Bold} Uninstalling the Microsoft Outlook.${No_Attributes}"
         askPassword
-# Force Quit Application - If the user hasn't done so
-    sudo osascript -e "tell application \"Microsoft AutoUpdate\" to quit" && sleep 2
-    sudo osascript -e "tell application \"Microsoft Outlook\" to quit"
-    echo "${No_Attributes}"
-# Warning about Automatically close Microsoft Outlook application.
-    echo "•${F_Red} Automatically close Microsoft Outlook application.${No_Attributes}"
-    sleep 2 && echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
-# Warning about Removal of Microsoft Outlook application.
-    sleep 1 && echo "•${F_Red} Removal of Microsoft Outlook application.${No_Attributes}\n"
-# The script
-    remove() {
-        entry="$1"
-        if test -e "$entry"; then
-            sudo rm -rf "$entry" && echo -e "Removing $entry  [${F_Green}${Bold}Success${No_Attributes}]"
-        else
-            echo -e "Removing $entry  [${F_Yellow}${Bold}File does not exist${No_Attributes}]"
-        fi
-    }
-# Executables
-    remove "/Applications/Microsoft Outlook.app"
-# Application Receipts
-    remove "/private/var/db/receipts/com.microsoft.package.Microsoft_Outlook.app.bom"
-    remove "/private/var/db/receipts/com.microsoft.package.Microsoft_Outlook.app.plist"
-# Preferences
-    remove "$HOME/Library/Preferences/com.microsoft.Outlook.plist"
-# Caches
-    remove "$HOME/Library/Caches/com.microsoft.Outlook"
-# Application Scripts
-    remove "$HOME/Library/Application Scripts/com.microsoft.Outlook"
-    remove "$HOME/Library/Application Scripts/com.microsoft.Outlook.CalendarWidget"
-# Application Support
-    remove "$HOME/Library/Application Support/CloudDocs/session/containers/iCloud.com.microsoft.Office.Outlook"
-    remove "$HOME/Library/Application Support/CloudDocs/session/containers/iCloud.com.microsoft.Office.Outlook.plist"
-    remove "$HOME/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.microsoft.outlook.sfl2"
-# Application Containers
-    remove "$HOME/Library/Containers/com.microsoft.Outlook"
-    remove "$HOME/Library/Containers/com.microsoft.Outlook.CalendarWidget"
-# Application Group Containers
-    remove "$HOME/Library/Group Containers/UBF8T346G9.Office/Outlook"
-    remove "$HOME/Library/Group Containers/UBF8T346G9.Office/OutlookProfile.plist"
-    remove "$HOME/Library/Group Containers/UBF8T346G9.ms/Microsoft Outlook.MERP.params.txt"
-    remove "$HOME/Library/Group Containers/UBF8T346G9.ms/cloudPolicy/OutlookCloudPolicyState.plist"
-    remove "$HOME/Library/Group Containers/UBF8T346G9.Office/User Content.localized/Startup.localized/Outlook"
-# Delete a Login Item
-    osascript -e 'tell application "System Events" to delete login item "Microsoft Outlook"'
-# Purge free inactive memory cache
-    sudo purge
+        # Force Quit Application - If the user hasn't done so
+        sudo osascript -e "tell application \"Microsoft AutoUpdate\" to quit" && sleep 2
+        sudo osascript -e "tell application \"Microsoft Outlook\" to quit"
+        echo "${No_Attributes}"
+        # Warning about Automatically close Microsoft Outlook application.
+        echo "•${F_Red} Automatically close Microsoft Outlook application.${No_Attributes}"
+        sleep 2 && echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
+        # Warning about Removal of Microsoft Outlook application.
+        sleep 1 && echo "•${F_Red} Removal of Microsoft Outlook application.${No_Attributes}\n"
+        # The script
+        remove() {
+            entry="$1"
+            if test -e "$entry"; then
+                sudo rm -rf "$entry" && echo -e "Removing $entry  [${F_Green}${Bold}Success${No_Attributes}]"
+            else
+                echo -e "Removing $entry  [${F_Yellow}${Bold}File does not exist${No_Attributes}]"
+            fi
+        }
+        # Executables
+        remove "/Applications/Microsoft Outlook.app"
+        # Application Receipts
+        remove "/private/var/db/receipts/com.microsoft.package.Microsoft_Outlook.app.bom"
+        remove "/private/var/db/receipts/com.microsoft.package.Microsoft_Outlook.app.plist"
+        # Preferences
+        remove "$HOME/Library/Preferences/com.microsoft.Outlook.plist"
+        # Caches
+        remove "$HOME/Library/Caches/com.microsoft.Outlook"
+        # Application Scripts
+        remove "$HOME/Library/Application Scripts/com.microsoft.Outlook"
+        remove "$HOME/Library/Application Scripts/com.microsoft.Outlook.CalendarWidget"
+        # Application Support
+        remove "$HOME/Library/Application Support/CloudDocs/session/containers/iCloud.com.microsoft.Office.Outlook"
+        remove "$HOME/Library/Application Support/CloudDocs/session/containers/iCloud.com.microsoft.Office.Outlook.plist"
+        remove "$HOME/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.microsoft.outlook.sfl2"
+        # Application Containers
+        remove "$HOME/Library/Containers/com.microsoft.Outlook"
+        remove "$HOME/Library/Containers/com.microsoft.Outlook.CalendarWidget"
+        # Application Group Containers
+        remove "$HOME/Library/Group Containers/UBF8T346G9.Office/Outlook"
+        remove "$HOME/Library/Group Containers/UBF8T346G9.Office/OutlookProfile.plist"
+        remove "$HOME/Library/Group Containers/UBF8T346G9.ms/Microsoft Outlook.MERP.params.txt"
+        remove "$HOME/Library/Group Containers/UBF8T346G9.ms/cloudPolicy/OutlookCloudPolicyState.plist"
+        remove "$HOME/Library/Group Containers/UBF8T346G9.Office/User Content.localized/Startup.localized/Outlook"
+        # Delete a Login Item
+        osascript -e 'tell application "System Events" to delete login item "Microsoft Outlook"'
+        # Purge free inactive memory cache
+        sudo purge
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    ;;
+        ;;
 
-# ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
+        # ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
 
-# Uninstalling the Microsoft OneDrive
+        # Uninstalling the Microsoft OneDrive
     11)
         terminalWindowSize:190x55
         echo "\n•${F_Red}${Bold} Uninstalling the Microsoft OneDrive.${No_Attributes}"
         askPassword
-# Force Quit Application - If the user hasn't done so
-    sudo osascript -e "tell application \"Microsoft AutoUpdate\" to quit" && sleep 2
-    sudo osascript -e "tell application \"OneDrive\" to quit"
-    echo "${No_Attributes}"
-# Warning about Automatically close Microsoft OneDrive application.
-    echo "•${F_Red} Automatically close Microsoft OneDrive application.${No_Attributes}"
-    sleep 2 && echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
-# Warning about Removal of Microsoft Outlook application.
-    sleep 1 && echo "•${F_Red} Removal of Microsoft OneDrive application.${No_Attributes}\n"
-# The script
-    remove() {
-        entry="$1"
-        if test -e "$entry"; then
-            sudo rm -rf "$entry" && echo -e "Removing $entry  [${F_Green}${Bold}Success${No_Attributes}]"
-        else
-            echo -e "Removing $entry  [${F_Yellow}${Bold}File does not exist${No_Attributes}]"
-        fi
-    }
-# Executables
-    remove "/Applications/OneDrive.app"
-# Application Receipts
-    remove "/private/var/db/receipts/com.microsoft.OneDrive.bom"
-    remove "/private/var/db/receipts/com.microsoft.OneDrive.plist"
-# Application Launch Daemons and Agents
-    remove "/Library/LaunchDaemons/com.microsoft.OneDriveUpdaterDaemon.plist"
-    remove "/Library/LaunchDaemons/com.microsoft.OneDriveStandaloneUpdaterDaemon.plist"
-    remove "/Library/LaunchAgents/com.microsoft.OneDriveStandaloneUpdater.plist"
-# Application logs
-    remove "/Library/Logs/Microsoft/OneDrive"
-    remove "$HOME/Library/Logs/OneDrive"
-# Preferences
-    remove "$HOME/Library/Preferences/com.microsoft.OneDrive.plist"
-    remove "$HOME/Library/Preferences/com.microsoft.OneDriveUpdater.plist"
-    remove "$HOME/Library/Preferences/com.microsoft.OneDriveStandaloneUpdater.plist"
-    remove "$HOME/Library/Preferences/UBF8T346G9.OfficeOneDriveSyncIntegration.plist"
-# Caches
-    remove "$HOME/Library/Caches/OneDrive"
-    remove "$HOME/Library/Caches/com.microsoft.OneDrive"
-    remove "$HOME/Library/Caches/com.microsoft.OneDriveStandaloneUpdater"
-    remove "$HOME/Library/Caches/com.microsoft.OneDriveUpdater"
-    remove "$HOME/Library/Caches/com.plausiblelabs.crashreporter.data/com.microsoft.OneDriveUpdater"
-    remove "$HOME/Library/Caches/com.plausiblelabs.crashreporter.data/com.microsoft.OneDrive"
-    remove "$HOME/Library/Caches/com.plausiblelabs.crashreporter.data/com.microsoft.OneDriveStandaloneUpdater"
-# Application Scripts
-    remove "$HOME/Library/Application Scripts/com.microsoft.OneDriveLauncher"
-    remove "$HOME/Library/Application Scripts/com.microsoft.OneDrive.FinderSync"
-    remove "$HOME/Library/Application Scripts/com.microsoft.OneDrive.FileProvider"
-# Application Support
-    remove "$HOME/Library/Application Support/com.microsoft.OneDrive"
-    remove "$HOME/Library/Application Support/com.microsoft.OneDriveUpdater"
-    remove "$HOME/Library/Application Support/com.microsoft.OneDriveStandaloneUpdater"
-    remove "$HOME/Library/Application Support/OneDrive"
-    remove "$HOME/Library/Application Support/OneDriveUpdater"
-    remove "$HOME/Library/Application Support/OneDriveStandaloneUpdater"
-    remove "$HOME/Library/Application Support/FileProvider/com.microsoft.OneDrive.FileProvider"
-# Application Containers
-    remove "$HOME/Library/Containers/com.microsoft.OneDriveLauncher"
-    remove "$HOME/Library/Containers/com.microsoft.OneDrive.FinderSync"
-    remove "$HOME/Library/Containers/com.microsoft.OneDrive.FileProvider"
-# Application Group Containers
-    remove "$HOME/Library/Group Containers/UBF8T346G9.OneDriveStandaloneSuite"
-    remove "$HOME/Library/Group Containers/UBF8T346G9.OfficeOneDriveSyncIntegration"
-# Application HTTPStorages
-    remove "$HOME/Library/HTTPStorages/com.microsoft.OneDrive.binarycookies"
-    remove "$HOME/Library/HTTPStorages/com.microsoft.OneDriveUpdater.binarycookies"
-    remove "$HOME/Library/HTTPStorages/com.microsoft.OneDriveStandaloneUpdater.binarycookies"
-# Application WebKit
-    remove "$HOME/Library/WebKit/com.microsoft.OneDrive"
-# Delete a Login Item
-    osascript -e 'tell application "System Events" to delete login item "OneDrive"'
-# Purge free inactive memory cache
-    sudo purge
+        # Force Quit Application - If the user hasn't done so
+        sudo osascript -e "tell application \"Microsoft AutoUpdate\" to quit" && sleep 2
+        sudo osascript -e "tell application \"OneDrive\" to quit"
+        echo "${No_Attributes}"
+        # Warning about Automatically close Microsoft OneDrive application.
+        echo "•${F_Red} Automatically close Microsoft OneDrive application.${No_Attributes}"
+        sleep 2 && echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
+        # Warning about Removal of Microsoft Outlook application.
+        sleep 1 && echo "•${F_Red} Removal of Microsoft OneDrive application.${No_Attributes}\n"
+        # The script
+        remove() {
+            entry="$1"
+            if test -e "$entry"; then
+                sudo rm -rf "$entry" && echo -e "Removing $entry  [${F_Green}${Bold}Success${No_Attributes}]"
+            else
+                echo -e "Removing $entry  [${F_Yellow}${Bold}File does not exist${No_Attributes}]"
+            fi
+        }
+        # Executables
+        remove "/Applications/OneDrive.app"
+        # Application Receipts
+        remove "/private/var/db/receipts/com.microsoft.OneDrive.bom"
+        remove "/private/var/db/receipts/com.microsoft.OneDrive.plist"
+        # Application Launch Daemons and Agents
+        remove "/Library/LaunchDaemons/com.microsoft.OneDriveUpdaterDaemon.plist"
+        remove "/Library/LaunchDaemons/com.microsoft.OneDriveStandaloneUpdaterDaemon.plist"
+        remove "/Library/LaunchAgents/com.microsoft.OneDriveStandaloneUpdater.plist"
+        # Application logs
+        remove "/Library/Logs/Microsoft/OneDrive"
+        remove "$HOME/Library/Logs/OneDrive"
+        # Preferences
+        remove "$HOME/Library/Preferences/com.microsoft.OneDrive.plist"
+        remove "$HOME/Library/Preferences/com.microsoft.OneDriveUpdater.plist"
+        remove "$HOME/Library/Preferences/com.microsoft.OneDriveStandaloneUpdater.plist"
+        remove "$HOME/Library/Preferences/UBF8T346G9.OfficeOneDriveSyncIntegration.plist"
+        # Caches
+        remove "$HOME/Library/Caches/OneDrive"
+        remove "$HOME/Library/Caches/com.microsoft.OneDrive"
+        remove "$HOME/Library/Caches/com.microsoft.OneDriveStandaloneUpdater"
+        remove "$HOME/Library/Caches/com.microsoft.OneDriveUpdater"
+        remove "$HOME/Library/Caches/com.plausiblelabs.crashreporter.data/com.microsoft.OneDriveUpdater"
+        remove "$HOME/Library/Caches/com.plausiblelabs.crashreporter.data/com.microsoft.OneDrive"
+        remove "$HOME/Library/Caches/com.plausiblelabs.crashreporter.data/com.microsoft.OneDriveStandaloneUpdater"
+        # Application Scripts
+        remove "$HOME/Library/Application Scripts/com.microsoft.OneDriveLauncher"
+        remove "$HOME/Library/Application Scripts/com.microsoft.OneDrive.FinderSync"
+        remove "$HOME/Library/Application Scripts/com.microsoft.OneDrive.FileProvider"
+        # Application Support
+        remove "$HOME/Library/Application Support/com.microsoft.OneDrive"
+        remove "$HOME/Library/Application Support/com.microsoft.OneDriveUpdater"
+        remove "$HOME/Library/Application Support/com.microsoft.OneDriveStandaloneUpdater"
+        remove "$HOME/Library/Application Support/OneDrive"
+        remove "$HOME/Library/Application Support/OneDriveUpdater"
+        remove "$HOME/Library/Application Support/OneDriveStandaloneUpdater"
+        remove "$HOME/Library/Application Support/FileProvider/com.microsoft.OneDrive.FileProvider"
+        # Application Containers
+        remove "$HOME/Library/Containers/com.microsoft.OneDriveLauncher"
+        remove "$HOME/Library/Containers/com.microsoft.OneDrive.FinderSync"
+        remove "$HOME/Library/Containers/com.microsoft.OneDrive.FileProvider"
+        # Application Group Containers
+        remove "$HOME/Library/Group Containers/UBF8T346G9.OneDriveStandaloneSuite"
+        remove "$HOME/Library/Group Containers/UBF8T346G9.OfficeOneDriveSyncIntegration"
+        # Application HTTPStorages
+        remove "$HOME/Library/HTTPStorages/com.microsoft.OneDrive.binarycookies"
+        remove "$HOME/Library/HTTPStorages/com.microsoft.OneDriveUpdater.binarycookies"
+        remove "$HOME/Library/HTTPStorages/com.microsoft.OneDriveStandaloneUpdater.binarycookies"
+        # Application WebKit
+        remove "$HOME/Library/WebKit/com.microsoft.OneDrive"
+        # Delete a Login Item
+        osascript -e 'tell application "System Events" to delete login item "OneDrive"'
+        # Purge free inactive memory cache
+        sudo purge
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    ;;
+        ;;
 
-# ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
+        # ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
 
-# Uninstalling the Microsoft AutoUpdate
+        # Uninstalling the Microsoft AutoUpdate
     12)
         terminalWindowSize:190x55
         echo "\n•${F_Red}${Bold} Uninstalling the Microsoft AutoUpdate.${No_Attributes}"
         askPassword
-# Force Quit Application - If the user hasn't done so
-    sudo osascript -e "tell application \"Microsoft AutoUpdate\" to quit"
-    echo "${No_Attributes}"
-# Warning about Automatically close Microsoft AutoUpdate application.
-    echo "•${F_Red} Automatically close Microsoft AutoUpdate application.${No_Attributes}"
-    sleep 2 && echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
-# Warning about Removal of Microsoft AutoUpdate application.
-    sleep 1 && echo "•${F_Red} Removal of Microsoft AutoUpdate application.${No_Attributes}\n"
-# The script
-    remove() {
-        entry="$1"
-        if test -e "$entry"; then
-            sudo rm -rf "$entry" && echo -e "Removing $entry  [${F_Green}${Bold}Success${No_Attributes}]"
-        else
-            echo -e "Removing $entry  [${F_Yellow}${Bold}File does not exist${No_Attributes}]"
-        fi
-    }
-# Executables
-    remove "/Library/Application Support/Microsoft/MAU2.0/Microsoft AutoUpdate.app"
-# Application Receipts
-    remove "/private/var/db/receipts/com.microsoft.package.Microsoft_AutoUpdate.app.bom"
-    remove "/private/var/db/receipts/com.microsoft.package.Microsoft_AutoUpdate.app.plist"
-# Application Launch Daemons and Agents
-    remove "/Library/LaunchDaemons/com.microsoft.autoupdate.helper.plist"
-# Application Privileged Helper Tools
-    remove "/Library/PrivilegedHelperTools/com.microsoft.autoupdate.helper"
-# Application Logs
-    remove "/Library/Logs/Microsoft/autoupdate.log"
-# Preferences
-    remove "/Library/Preferences/com.microsoft.autoupdate2.plist"
-    remove "$HOME/Library/Preferences/com.microsoft.autoupdate2.plist"
-    remove "$HOME/Library/Preferences/com.microsoft.autoupdate.fba.plist"
-# Caches
-    remove "/Library/Caches/com.microsoft.autoupdate.helper"
-    remove "$HOME/Library/Caches/com.microsoft.autoupdate2"
-    remove "$HOME/Library/Caches/com.microsoft.autoupdate.fba"
-    remove "$HOME/Library/Caches/Microsoft/uls/com.microsoft.autoupdate2"
-    remove "$HOME/Library/Caches/Microsoft/uls/com.microsoft.autoupdate.fba"
-# Application Group Containers
-    remove "$HOME/Library/Group Containers/UBF8T346G9.ms/com.microsoft.autoupdate.fba"
-    remove "$HOME/Library/Group Containers/UBF8T346G9.ms/com.microsoft.autoupdate2"
-    remove "$HOME/Library/Group Containers/UBF8T346G9.ms/Microsoft AutoUpdate.MERP.params.txt"
-# Purge free inactive memory cache
-    sudo purge
+        # Force Quit Application - If the user hasn't done so
+        sudo osascript -e "tell application \"Microsoft AutoUpdate\" to quit"
+        echo "${No_Attributes}"
+        # Warning about Automatically close Microsoft AutoUpdate application.
+        echo "•${F_Red} Automatically close Microsoft AutoUpdate application.${No_Attributes}"
+        sleep 2 && echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
+        # Warning about Removal of Microsoft AutoUpdate application.
+        sleep 1 && echo "•${F_Red} Removal of Microsoft AutoUpdate application.${No_Attributes}\n"
+        # The script
+        remove() {
+            entry="$1"
+            if test -e "$entry"; then
+                sudo rm -rf "$entry" && echo -e "Removing $entry  [${F_Green}${Bold}Success${No_Attributes}]"
+            else
+                echo -e "Removing $entry  [${F_Yellow}${Bold}File does not exist${No_Attributes}]"
+            fi
+        }
+        # Executables
+        remove "/Library/Application Support/Microsoft/MAU2.0/Microsoft AutoUpdate.app"
+        # Application Receipts
+        remove "/private/var/db/receipts/com.microsoft.package.Microsoft_AutoUpdate.app.bom"
+        remove "/private/var/db/receipts/com.microsoft.package.Microsoft_AutoUpdate.app.plist"
+        # Application Launch Daemons and Agents
+        remove "/Library/LaunchDaemons/com.microsoft.autoupdate.helper.plist"
+        # Application Privileged Helper Tools
+        remove "/Library/PrivilegedHelperTools/com.microsoft.autoupdate.helper"
+        # Application Logs
+        remove "/Library/Logs/Microsoft/autoupdate.log"
+        # Preferences
+        remove "/Library/Preferences/com.microsoft.autoupdate2.plist"
+        remove "$HOME/Library/Preferences/com.microsoft.autoupdate2.plist"
+        remove "$HOME/Library/Preferences/com.microsoft.autoupdate.fba.plist"
+        # Caches
+        remove "/Library/Caches/com.microsoft.autoupdate.helper"
+        remove "$HOME/Library/Caches/com.microsoft.autoupdate2"
+        remove "$HOME/Library/Caches/com.microsoft.autoupdate.fba"
+        remove "$HOME/Library/Caches/Microsoft/uls/com.microsoft.autoupdate2"
+        remove "$HOME/Library/Caches/Microsoft/uls/com.microsoft.autoupdate.fba"
+        # Application Group Containers
+        remove "$HOME/Library/Group Containers/UBF8T346G9.ms/com.microsoft.autoupdate.fba"
+        remove "$HOME/Library/Group Containers/UBF8T346G9.ms/com.microsoft.autoupdate2"
+        remove "$HOME/Library/Group Containers/UBF8T346G9.ms/Microsoft AutoUpdate.MERP.params.txt"
+        # Purge free inactive memory cache
+        sudo purge
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    ;;
+        ;;
 
-# ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
+        # ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
 
-# Uninstalling the Microsoft Office 2019 (volume licensed versions)
+        # Uninstalling the Microsoft Office 2019 (volume licensed versions)
     13)
         terminalWindowSize:190x55
         echo "\n•${F_Red}${Bold} Uninstalling the Microsoft Office 2019 (volume licensed versions).${No_Attributes}"
         askPassword
-# Force Quit Applications - If the user hasn't done so
-    sudo osascript -e "tell application \"Microsoft AutoUpdate\" to quit" && sleep 2
-    sudo osascript -e "tell application \"Microsoft Word\" to quit"
-    sudo osascript -e "tell application \"Microsoft Excel\" to quit"
-    sudo osascript -e "tell application \"Microsoft PowerPoint\" to quit"
-    sudo osascript -e "tell application \"Microsoft OneNote\" to quit"
-    sudo osascript -e "tell application \"Microsoft Outlook\" to quit"
-    sudo osascript -e "tell application \"OneDrive\" to quit"
-    echo "${No_Attributes}"
-# Warning about Automatically close Microsoft Office VL applications.
-    echo "•${F_Red} Automatically close Microsoft Office VL applications.${No_Attributes}"
-    sleep 2 && echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
-# Warning about Removal of Microsoft Office VL applications.
-    sleep 1 && echo "•${F_Red} Removal of Microsoft Office VL: Word, Excel, PowerPoint, OneNote, Outlook, OneDrive, Microsoft AutoUpdate and Office Volume License applications.${No_Attributes}\n"
-# The script
-    remove() {
-        entry="$1"
-        if test -e "$entry"; then
-            sudo rm -rf "$entry" && echo -e "Removing $entry  [${F_Green}${Bold}Success${No_Attributes}]"
-        else
-            echo -e "Removing $entry  [${F_Yellow}${Bold}File does not exist${No_Attributes}]"
-        fi
-    }
-# Executables
-    remove "/Library/Application Support/Microsoft/MAU2.0/Microsoft AutoUpdate.app" && sleep 2
-    remove "/Applications/Microsoft Word.app"
-    remove "/Applications/Microsoft Excel.app"
-    remove "/Applications/Microsoft PowerPoint.app"
-    remove "/Applications/Microsoft OneNote.app"
-    remove "/Applications/Microsoft Outlook.app"
-    remove "/Applications/OneDrive.app"
-# Application Receipts
-    remove "/private/var/db/receipts/com.microsoft.package.Microsoft_Word.app.bom"
-    remove "/private/var/db/receipts/com.microsoft.package.Microsoft_Word.app.plist"
-    remove "/private/var/db/receipts/com.microsoft.package.Microsoft_Excel.app.bom"
-    remove "/private/var/db/receipts/com.microsoft.package.Microsoft_Excel.app.plist"
-    remove "/private/var/db/receipts/com.microsoft.package.Microsoft_PowerPoint.app.bom"
-    remove "/private/var/db/receipts/com.microsoft.package.Microsoft_PowerPoint.app.plist"
-    remove "/private/var/db/receipts/com.microsoft.package.Microsoft_OneNote.app.bom"
-    remove "/private/var/db/receipts/com.microsoft.package.Microsoft_OneNote.app.plist"
-    remove "/private/var/db/receipts/com.microsoft.package.Microsoft_Outlook.app.bom"
-    remove "/private/var/db/receipts/com.microsoft.package.Microsoft_Outlook.app.plist"
-    remove "/private/var/db/receipts/com.microsoft.OneDrive.bom"
-    remove "/private/var/db/receipts/com.microsoft.OneDrive.plist"
-    remove "/private/var/db/receipts/com.microsoft.package.Microsoft_AutoUpdate.app.bom"
-    remove "/private/var/db/receipts/com.microsoft.package.Microsoft_AutoUpdate.app.plist"
-# Application Launch Daemons and Agents
-    remove "/Library/LaunchAgents/com.microsoft.update.agent.plist"
-    remove "/Library/LaunchDaemons/com.microsoft.OneDriveUpdaterDaemon.plist"
-    remove "/Library/LaunchDaemons/com.microsoft.OneDriveStandaloneUpdaterDaemon.plist"
-    remove "/Library/LaunchAgents/com.microsoft.OneDriveStandaloneUpdater.plist"
-    remove "/Library/LaunchDaemons/com.microsoft.autoupdate.helper.plist"
-# Application Privileged Helper Tools
-    remove "/Library/PrivilegedHelperTools/com.microsoft.autoupdate.helper"
-# Application logs
-    remove "/Library/Logs/Microsoft"
-    remove "/Library/Logs/Microsoft/OneDrive"
-    remove "$HOME/Library/Logs/OneDrive"
-    remove "/Library/Logs/Microsoft/autoupdate.log"
-# Preferences
-    remove "$HOME/Library/Preferences/com.microsoft.shared.plist"
-    remove "$HOME/Library/Preferences/com.microsoft.office.plist"
-    remove "$HOME/Library/Preferences/com.microsoft.Word.plist"
-    remove "$HOME/Library/Preferences/com.microsoft.Excel.plist"
-    remove "$HOME/Library/Preferences/com.microsoft.PowerPoint.plist"
-    remove "$HOME/Library/Preferences/com.microsoft.OneNote.plist"
-    remove "$HOME/Library/Preferences/com.microsoft.Outlook.plist"
-    remove "$HOME/Library/Preferences/com.microsoft.OneDrive.plist"
-    remove "$HOME/Library/Preferences/com.microsoft.OneDriveUpdater.plist"
-    remove "$HOME/Library/Preferences/com.microsoft.OneDriveStandaloneUpdater.plist"
-    remove "$HOME/Library/Preferences/UBF8T346G9.OfficeOneDriveSyncIntegration.plist"
-    remove "/Library/Preferences/com.microsoft.autoupdate2.plist"
-    remove "$HOME/Library/Preferences/com.microsoft.autoupdate2.plist"
-    remove "$HOME/Library/Preferences/com.microsoft.autoupdate.fba.plist"
-# Caches
-    remove "$HOME/Library/Caches/Microsoft"
-    remove "$HOME/Library/Caches/com.microsoft.Word"
-    remove "$HOME/Library/Caches/com.microsoft.Excel"
-    remove "$HOME/Library/Caches/com.microsoft.PowerPoint"
-    remove "$HOME/Library/Caches/com.microsoft.OneNote"
-    remove "$HOME/Library/Caches/com.microsoft.Outlook"
-    remove "$HOME/Library/Caches/OneDrive"
-    remove "$HOME/Library/Caches/com.microsoft.OneDrive"
-    remove "$HOME/Library/Caches/com.microsoft.OneDriveStandaloneUpdater"
-    remove "$HOME/Library/Caches/com.microsoft.OneDriveUpdater"
-    remove "$HOME/Library/Caches/com.plausiblelabs.crashreporter.data/com.microsoft.OneDriveUpdater"
-    remove "$HOME/Library/Caches/com.plausiblelabs.crashreporter.data/com.microsoft.OneDrive"
-    remove "$HOME/Library/Caches/com.plausiblelabs.crashreporter.data/com.microsoft.OneDriveStandaloneUpdater"
-    remove "/Library/Caches/com.microsoft.autoupdate.helper"
-    remove "$HOME/Library/Caches/com.microsoft.autoupdate2"
-    remove "$HOME/Library/Caches/com.microsoft.autoupdate.fba"
-    remove "$HOME/Library/Caches/Microsoft/uls/com.microsoft.autoupdate2"
-    remove "$HOME/Library/Caches/Microsoft/uls/com.microsoft.autoupdate.fba"
-# Application Scripts
-    remove "$HOME/Library/Application Scripts/com.microsoft.errorreporting"
-    remove "$HOME/Library/Application Scripts/com.microsoft.SkyDriveLauncher"
-    remove "$HOME/Library/Application Scripts/com.microsoft.Microsoft-Mashup-Container"
-    remove "$HOME/Library/Application Scripts/com.microsoft.Word"
-    remove "$HOME/Library/Application Scripts/com.microsoft.openxml.word.app"
-    remove "$HOME/Library/Application Scripts/com.microsoft.Excel"
-    remove "$HOME/Library/Application Scripts/com.microsoft.openxml.excel.app"
-    remove "$HOME/Library/Application Scripts/com.microsoft.Powerpoint"
-    remove "$HOME/Library/Application Scripts/com.microsoft.openxml.powerpoint.app"
-    remove "$HOME/Library/Application Scripts/com.microsoft.onenote.mac"
-    remove "$HOME/Library/Application Scripts/com.microsoft.onenote.mac.shareextension"
-    remove "$HOME/Library/Application Scripts/com.microsoft.Outlook"
-    remove "$HOME/Library/Application Scripts/com.microsoft.Outlook.CalendarWidget"
-    remove "$HOME/Library/Application Scripts/com.microsoft.OneDriveLauncher"
-    remove "$HOME/Library/Application Scripts/com.microsoft.OneDrive.FinderSync"
-    remove "$HOME/Library/Application Scripts/com.microsoft.OneDrive.FileProvider"
-# Application Support
-    remove "/Library/Application Support/Microsoft"
-    remove "$HOME/Library/Application Support/Microsoft"
-    remove "$HOME/Library/Application Support/CloudDocs/session/containers/iCloud.com.microsoft.skydrive"
-    remove "$HOME/Library/Application Support/CloudDocs/session/containers/iCloud.com.microsoft.skydrive.plist"
-    remove "$HOME/Library/Application Support/CloudDocs/session/containers/iCloud.com.microsoft.lync2013.iphone"
-    remove "$HOME/Library/Application Support/CloudDocs/session/containers/iCloud.com.microsoft.lync2013.iphone.plist"
-    remove "$HOME/Library/Application Support/CloudDocs/session/containers/iCloud.com.microsoft.Office.Word"
-    remove "$HOME/Library/Application Support/CloudDocs/session/containers/iCloud.com.microsoft.Office.Word.plist"
-    remove "$HOME/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.microsoft.word.sfl2"
-    remove "$HOME/Library/Application Support/CloudDocs/session/containers/iCloud.com.microsoft.Office.Excel"
-    remove "$HOME/Library/Application Support/CloudDocs/session/containers/iCloud.com.microsoft.Office.Excel.plist"
-    remove "$HOME/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.microsoft.excel.sfl2"
-    remove "$HOME/Library/Application Support/CloudDocs/session/containers/iCloud.com.microsoft.Office.PowerPoint"
-    remove "$HOME/Library/Application Support/CloudDocs/session/containers/iCloud.com.microsoft.Office.PowerPoint.plist"
-    remove "$HOME/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.microsoft.powerpoint.sfl2"
-    remove "$HOME/Library/Application Support/CloudDocs/session/containers/iCloud.com.microsoft.Office.OneNote"
-    remove "$HOME/Library/Application Support/CloudDocs/session/containers/iCloud.com.microsoft.Office.OneNote.plist"
-    remove "$HOME/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.microsoft.onenote.sfl2"
-    remove "$HOME/Library/Application Support/CloudDocs/session/containers/iCloud.com.microsoft.Office.Outlook"
-    remove "$HOME/Library/Application Support/CloudDocs/session/containers/iCloud.com.microsoft.Office.Outlook.plist"
-    remove "$HOME/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.microsoft.outlook.sfl2"
-    remove "$HOME/Library/Application Support/com.microsoft.OneDrive"
-    remove "$HOME/Library/Application Support/com.microsoft.OneDriveUpdater"
-    remove "$HOME/Library/Application Support/com.microsoft.OneDriveStandaloneUpdater"
-    remove "$HOME/Library/Application Support/OneDrive"
-    remove "$HOME/Library/Application Support/OneDriveUpdater"
-    remove "$HOME/Library/Application Support/OneDriveStandaloneUpdater"
-    remove "$HOME/Library/Application Support/FileProvider/com.microsoft.OneDrive.FileProvider"
-# Application Containers
-    remove "$HOME/Library/Containers/com.microsoft.errorreporting"
-    remove "$HOME/Library/Containers/com.microsoft.SkyDriveLauncher"
-    remove "$HOME/Library/Containers/com.microsoft.Microsoft-Mashup-Container"
-    remove "$HOME/Library/Containers/com.microsoft.Word"
-    remove "$HOME/Library/Containers/com.microsoft.openxml.Word.app"
-    remove "$HOME/Library/Containers/com.microsoft.Excel"
-    remove "$HOME/Library/Containers/com.microsoft.openxml.excel.app"
-    remove "$HOME/Library/Containers/com.microsoft.Powerpoint"
-    remove "$HOME/Library/Containers/com.microsoft.openxml.Powerpoint.app"
-    remove "$HOME/Library/Containers/com.microsoft.onenote.mac"
-    remove "$HOME/Library/Containers/com.microsoft.onenote.mac.shareextension"
-    remove "$HOME/Library/Containers/com.microsoft.Outlook"
-    remove "$HOME/Library/Containers/com.microsoft.Outlook.CalendarWidget"
-    remove "$HOME/Library/Containers/com.microsoft.OneDriveLauncher"
-    remove "$HOME/Library/Containers/com.microsoft.OneDrive.FinderSync"
-    remove "$HOME/Library/Containers/com.microsoft.OneDrive.FileProvider"
-# Application Group Containers
-    remove "$HOME/Library/Group Containers/UBF8T346G9.ms"
-    remove "$HOME/Library/Group Containers/UBF8T346G9.Office"
-    remove "$HOME/Library/Group Containers/UBF8T346G9.OfficeOsfWebHost"
-    remove "$HOME/Library/Group Containers/UBF8T346G9.OneDriveStandaloneSuite"
-    remove "$HOME/Library/Group Containers/UBF8T346G9.OfficeOneDriveSyncintegration"
-# Application HTTPStorages
-    remove "$HOME/Library/HTTPStorages/com.microsoft.OneDrive.binarycookies"
-    remove "$HOME/Library/HTTPStorages/com.microsoft.OneDriveUpdater.binarycookies"
-    remove "$HOME/Library/HTTPStorages/com.microsoft.OneDriveStandaloneUpdater.binarycookies"
-# Application WebKit
-    remove "$HOME/Library/WebKit/com.microsoft.OneDrive"
-# Keychains
-    remove "$HOME/Library/Keychains/Microsoft_Entity_Certificates-db"
-# Microsoft Office Volume License (VL) Serializer
-# Application Preferences
-    remove "/Library/Preferences/com.microsoft.office.licensingV2.plist"
-# Application Launch Daemons
-    remove "/Library/LaunchDaemons/com.microsoft.office.licensingV2.helper.plist"
-# Application Privileged Helper Tools
-    remove "/Library/PrivilegedHelperTools/com.microsoft.office.licensingV2.helper"
-# Delete a Login Item
-    osascript -e 'tell application "System Events" to delete login item "Microsoft Outlook"'
-    osascript -e 'tell application "System Events" to delete login item "OneDrive"'
-# Purge free inactive memory cache
-    sudo purge
+        # Force Quit Applications - If the user hasn't done so
+        sudo osascript -e "tell application \"Microsoft AutoUpdate\" to quit" && sleep 2
+        sudo osascript -e "tell application \"Microsoft Word\" to quit"
+        sudo osascript -e "tell application \"Microsoft Excel\" to quit"
+        sudo osascript -e "tell application \"Microsoft PowerPoint\" to quit"
+        sudo osascript -e "tell application \"Microsoft OneNote\" to quit"
+        sudo osascript -e "tell application \"Microsoft Outlook\" to quit"
+        sudo osascript -e "tell application \"OneDrive\" to quit"
+        echo "${No_Attributes}"
+        # Warning about Automatically close Microsoft Office VL applications.
+        echo "•${F_Red} Automatically close Microsoft Office VL applications.${No_Attributes}"
+        sleep 2 && echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
+        # Warning about Removal of Microsoft Office VL applications.
+        sleep 1 && echo "•${F_Red} Removal of Microsoft Office VL: Word, Excel, PowerPoint, OneNote, Outlook, OneDrive, Microsoft AutoUpdate and Office Volume License applications.${No_Attributes}\n"
+        # The script
+        remove() {
+            entry="$1"
+            if test -e "$entry"; then
+                sudo rm -rf "$entry" && echo -e "Removing $entry  [${F_Green}${Bold}Success${No_Attributes}]"
+            else
+                echo -e "Removing $entry  [${F_Yellow}${Bold}File does not exist${No_Attributes}]"
+            fi
+        }
+        # Executables
+        remove "/Library/Application Support/Microsoft/MAU2.0/Microsoft AutoUpdate.app" && sleep 2
+        remove "/Applications/Microsoft Word.app"
+        remove "/Applications/Microsoft Excel.app"
+        remove "/Applications/Microsoft PowerPoint.app"
+        remove "/Applications/Microsoft OneNote.app"
+        remove "/Applications/Microsoft Outlook.app"
+        remove "/Applications/OneDrive.app"
+        # Application Receipts
+        remove "/private/var/db/receipts/com.microsoft.package.Microsoft_Word.app.bom"
+        remove "/private/var/db/receipts/com.microsoft.package.Microsoft_Word.app.plist"
+        remove "/private/var/db/receipts/com.microsoft.package.Microsoft_Excel.app.bom"
+        remove "/private/var/db/receipts/com.microsoft.package.Microsoft_Excel.app.plist"
+        remove "/private/var/db/receipts/com.microsoft.package.Microsoft_PowerPoint.app.bom"
+        remove "/private/var/db/receipts/com.microsoft.package.Microsoft_PowerPoint.app.plist"
+        remove "/private/var/db/receipts/com.microsoft.package.Microsoft_OneNote.app.bom"
+        remove "/private/var/db/receipts/com.microsoft.package.Microsoft_OneNote.app.plist"
+        remove "/private/var/db/receipts/com.microsoft.package.Microsoft_Outlook.app.bom"
+        remove "/private/var/db/receipts/com.microsoft.package.Microsoft_Outlook.app.plist"
+        remove "/private/var/db/receipts/com.microsoft.OneDrive.bom"
+        remove "/private/var/db/receipts/com.microsoft.OneDrive.plist"
+        remove "/private/var/db/receipts/com.microsoft.package.Microsoft_AutoUpdate.app.bom"
+        remove "/private/var/db/receipts/com.microsoft.package.Microsoft_AutoUpdate.app.plist"
+        # Application Launch Daemons and Agents
+        remove "/Library/LaunchAgents/com.microsoft.update.agent.plist"
+        remove "/Library/LaunchDaemons/com.microsoft.OneDriveUpdaterDaemon.plist"
+        remove "/Library/LaunchDaemons/com.microsoft.OneDriveStandaloneUpdaterDaemon.plist"
+        remove "/Library/LaunchAgents/com.microsoft.OneDriveStandaloneUpdater.plist"
+        remove "/Library/LaunchDaemons/com.microsoft.autoupdate.helper.plist"
+        # Application Privileged Helper Tools
+        remove "/Library/PrivilegedHelperTools/com.microsoft.autoupdate.helper"
+        # Application logs
+        remove "/Library/Logs/Microsoft"
+        remove "/Library/Logs/Microsoft/OneDrive"
+        remove "$HOME/Library/Logs/OneDrive"
+        remove "/Library/Logs/Microsoft/autoupdate.log"
+        # Preferences
+        remove "$HOME/Library/Preferences/com.microsoft.shared.plist"
+        remove "$HOME/Library/Preferences/com.microsoft.office.plist"
+        remove "$HOME/Library/Preferences/com.microsoft.Word.plist"
+        remove "$HOME/Library/Preferences/com.microsoft.Excel.plist"
+        remove "$HOME/Library/Preferences/com.microsoft.PowerPoint.plist"
+        remove "$HOME/Library/Preferences/com.microsoft.OneNote.plist"
+        remove "$HOME/Library/Preferences/com.microsoft.Outlook.plist"
+        remove "$HOME/Library/Preferences/com.microsoft.OneDrive.plist"
+        remove "$HOME/Library/Preferences/com.microsoft.OneDriveUpdater.plist"
+        remove "$HOME/Library/Preferences/com.microsoft.OneDriveStandaloneUpdater.plist"
+        remove "$HOME/Library/Preferences/UBF8T346G9.OfficeOneDriveSyncIntegration.plist"
+        remove "/Library/Preferences/com.microsoft.autoupdate2.plist"
+        remove "$HOME/Library/Preferences/com.microsoft.autoupdate2.plist"
+        remove "$HOME/Library/Preferences/com.microsoft.autoupdate.fba.plist"
+        # Caches
+        remove "$HOME/Library/Caches/Microsoft"
+        remove "$HOME/Library/Caches/com.microsoft.Word"
+        remove "$HOME/Library/Caches/com.microsoft.Excel"
+        remove "$HOME/Library/Caches/com.microsoft.PowerPoint"
+        remove "$HOME/Library/Caches/com.microsoft.OneNote"
+        remove "$HOME/Library/Caches/com.microsoft.Outlook"
+        remove "$HOME/Library/Caches/OneDrive"
+        remove "$HOME/Library/Caches/com.microsoft.OneDrive"
+        remove "$HOME/Library/Caches/com.microsoft.OneDriveStandaloneUpdater"
+        remove "$HOME/Library/Caches/com.microsoft.OneDriveUpdater"
+        remove "$HOME/Library/Caches/com.plausiblelabs.crashreporter.data/com.microsoft.OneDriveUpdater"
+        remove "$HOME/Library/Caches/com.plausiblelabs.crashreporter.data/com.microsoft.OneDrive"
+        remove "$HOME/Library/Caches/com.plausiblelabs.crashreporter.data/com.microsoft.OneDriveStandaloneUpdater"
+        remove "/Library/Caches/com.microsoft.autoupdate.helper"
+        remove "$HOME/Library/Caches/com.microsoft.autoupdate2"
+        remove "$HOME/Library/Caches/com.microsoft.autoupdate.fba"
+        remove "$HOME/Library/Caches/Microsoft/uls/com.microsoft.autoupdate2"
+        remove "$HOME/Library/Caches/Microsoft/uls/com.microsoft.autoupdate.fba"
+        # Application Scripts
+        remove "$HOME/Library/Application Scripts/com.microsoft.errorreporting"
+        remove "$HOME/Library/Application Scripts/com.microsoft.SkyDriveLauncher"
+        remove "$HOME/Library/Application Scripts/com.microsoft.Microsoft-Mashup-Container"
+        remove "$HOME/Library/Application Scripts/com.microsoft.Word"
+        remove "$HOME/Library/Application Scripts/com.microsoft.openxml.word.app"
+        remove "$HOME/Library/Application Scripts/com.microsoft.Excel"
+        remove "$HOME/Library/Application Scripts/com.microsoft.openxml.excel.app"
+        remove "$HOME/Library/Application Scripts/com.microsoft.Powerpoint"
+        remove "$HOME/Library/Application Scripts/com.microsoft.openxml.powerpoint.app"
+        remove "$HOME/Library/Application Scripts/com.microsoft.onenote.mac"
+        remove "$HOME/Library/Application Scripts/com.microsoft.onenote.mac.shareextension"
+        remove "$HOME/Library/Application Scripts/com.microsoft.Outlook"
+        remove "$HOME/Library/Application Scripts/com.microsoft.Outlook.CalendarWidget"
+        remove "$HOME/Library/Application Scripts/com.microsoft.OneDriveLauncher"
+        remove "$HOME/Library/Application Scripts/com.microsoft.OneDrive.FinderSync"
+        remove "$HOME/Library/Application Scripts/com.microsoft.OneDrive.FileProvider"
+        # Application Support
+        remove "/Library/Application Support/Microsoft"
+        remove "$HOME/Library/Application Support/Microsoft"
+        remove "$HOME/Library/Application Support/CloudDocs/session/containers/iCloud.com.microsoft.skydrive"
+        remove "$HOME/Library/Application Support/CloudDocs/session/containers/iCloud.com.microsoft.skydrive.plist"
+        remove "$HOME/Library/Application Support/CloudDocs/session/containers/iCloud.com.microsoft.lync2013.iphone"
+        remove "$HOME/Library/Application Support/CloudDocs/session/containers/iCloud.com.microsoft.lync2013.iphone.plist"
+        remove "$HOME/Library/Application Support/CloudDocs/session/containers/iCloud.com.microsoft.Office.Word"
+        remove "$HOME/Library/Application Support/CloudDocs/session/containers/iCloud.com.microsoft.Office.Word.plist"
+        remove "$HOME/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.microsoft.word.sfl2"
+        remove "$HOME/Library/Application Support/CloudDocs/session/containers/iCloud.com.microsoft.Office.Excel"
+        remove "$HOME/Library/Application Support/CloudDocs/session/containers/iCloud.com.microsoft.Office.Excel.plist"
+        remove "$HOME/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.microsoft.excel.sfl2"
+        remove "$HOME/Library/Application Support/CloudDocs/session/containers/iCloud.com.microsoft.Office.PowerPoint"
+        remove "$HOME/Library/Application Support/CloudDocs/session/containers/iCloud.com.microsoft.Office.PowerPoint.plist"
+        remove "$HOME/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.microsoft.powerpoint.sfl2"
+        remove "$HOME/Library/Application Support/CloudDocs/session/containers/iCloud.com.microsoft.Office.OneNote"
+        remove "$HOME/Library/Application Support/CloudDocs/session/containers/iCloud.com.microsoft.Office.OneNote.plist"
+        remove "$HOME/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.microsoft.onenote.sfl2"
+        remove "$HOME/Library/Application Support/CloudDocs/session/containers/iCloud.com.microsoft.Office.Outlook"
+        remove "$HOME/Library/Application Support/CloudDocs/session/containers/iCloud.com.microsoft.Office.Outlook.plist"
+        remove "$HOME/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.microsoft.outlook.sfl2"
+        remove "$HOME/Library/Application Support/com.microsoft.OneDrive"
+        remove "$HOME/Library/Application Support/com.microsoft.OneDriveUpdater"
+        remove "$HOME/Library/Application Support/com.microsoft.OneDriveStandaloneUpdater"
+        remove "$HOME/Library/Application Support/OneDrive"
+        remove "$HOME/Library/Application Support/OneDriveUpdater"
+        remove "$HOME/Library/Application Support/OneDriveStandaloneUpdater"
+        remove "$HOME/Library/Application Support/FileProvider/com.microsoft.OneDrive.FileProvider"
+        # Application Containers
+        remove "$HOME/Library/Containers/com.microsoft.errorreporting"
+        remove "$HOME/Library/Containers/com.microsoft.SkyDriveLauncher"
+        remove "$HOME/Library/Containers/com.microsoft.Microsoft-Mashup-Container"
+        remove "$HOME/Library/Containers/com.microsoft.Word"
+        remove "$HOME/Library/Containers/com.microsoft.openxml.Word.app"
+        remove "$HOME/Library/Containers/com.microsoft.Excel"
+        remove "$HOME/Library/Containers/com.microsoft.openxml.excel.app"
+        remove "$HOME/Library/Containers/com.microsoft.Powerpoint"
+        remove "$HOME/Library/Containers/com.microsoft.openxml.Powerpoint.app"
+        remove "$HOME/Library/Containers/com.microsoft.onenote.mac"
+        remove "$HOME/Library/Containers/com.microsoft.onenote.mac.shareextension"
+        remove "$HOME/Library/Containers/com.microsoft.Outlook"
+        remove "$HOME/Library/Containers/com.microsoft.Outlook.CalendarWidget"
+        remove "$HOME/Library/Containers/com.microsoft.OneDriveLauncher"
+        remove "$HOME/Library/Containers/com.microsoft.OneDrive.FinderSync"
+        remove "$HOME/Library/Containers/com.microsoft.OneDrive.FileProvider"
+        # Application Group Containers
+        remove "$HOME/Library/Group Containers/UBF8T346G9.ms"
+        remove "$HOME/Library/Group Containers/UBF8T346G9.Office"
+        remove "$HOME/Library/Group Containers/UBF8T346G9.OfficeOsfWebHost"
+        remove "$HOME/Library/Group Containers/UBF8T346G9.OneDriveStandaloneSuite"
+        remove "$HOME/Library/Group Containers/UBF8T346G9.OfficeOneDriveSyncintegration"
+        # Application HTTPStorages
+        remove "$HOME/Library/HTTPStorages/com.microsoft.OneDrive.binarycookies"
+        remove "$HOME/Library/HTTPStorages/com.microsoft.OneDriveUpdater.binarycookies"
+        remove "$HOME/Library/HTTPStorages/com.microsoft.OneDriveStandaloneUpdater.binarycookies"
+        # Application WebKit
+        remove "$HOME/Library/WebKit/com.microsoft.OneDrive"
+        # Keychains
+        remove "$HOME/Library/Keychains/Microsoft_Entity_Certificates-db"
+        # Microsoft Office Volume License (VL) Serializer
+        # Application Preferences
+        remove "/Library/Preferences/com.microsoft.office.licensingV2.plist"
+        # Application Launch Daemons
+        remove "/Library/LaunchDaemons/com.microsoft.office.licensingV2.helper.plist"
+        # Application Privileged Helper Tools
+        remove "/Library/PrivilegedHelperTools/com.microsoft.office.licensingV2.helper"
+        # Delete a Login Item
+        osascript -e 'tell application "System Events" to delete login item "Microsoft Outlook"'
+        osascript -e 'tell application "System Events" to delete login item "OneDrive"'
+        # Purge free inactive memory cache
+        sudo purge
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    ;;
+        ;;
 
-# ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
+        # ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
 
-# Uninstalling the AdGuard for Safari extension
+        # Uninstalling the AdGuard for Safari extension
     14)
         terminalWindowSize:190x55
         echo "\n•${F_Red}${Bold} Uninstalling the AdGuard for Safari extension.${No_Attributes}"
         askPassword
-# Force Quit Applications - If the user hasn't done so
-    sudo osascript -e "tell application \"Safari\" to quit"
-    sudo osascript -e "tell application \"AdGuard for Safari\" to quit"
-    echo "${No_Attributes}"
-# Warning about Automatically close Safari and the AdGuard applications.
-    echo "•${F_Red} Automatically close Safari and the AdGuard applications.${No_Attributes}"
-    sleep 2 && echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
-# Warning about Removal of AdGuard application.
-    sleep 1 && echo "•${F_Red} Removal of AdGuard application.${No_Attributes}\n"
-# The script
-    remove() {
-        entry="$1"
-        if test -e "$entry"; then
-            sudo rm -rf "$entry" && echo -e "Removing $entry  [${F_Green}${Bold}Success${No_Attributes}]"
-        else
-            echo -e "Removing $entry  [${F_Yellow}${Bold}File does not exist${No_Attributes}]"
-        fi
-    }
-# Executables
-    remove "/Applications/AdGuard for Safari.app"
-# Application logs
-    remove "$HOME/Library/Logs/AdGuardSafariApp"
-# Preferences
-    remove "$HOME/Library/Preferences/com.adguard.safari.AdGuard.plist"
-# Caches
-    remove "$HOME/Library/Saved Application State/com.adguard.safari.AdGuard.savedState"
-# Application Scripts
-    remove "$HOME/Library/Application Scripts/com.adguard.safari.AdGuard.Extension"
-    remove "$HOME/Library/Application Scripts/com.adguard.safari.AdGuard.login-helper"
-    remove "$HOME/Library/Application Scripts/com.adguard.safari.AdGuard.BlockerOther"
-    remove "$HOME/Library/Application Scripts/com.adguard.safari.AdGuard.BlockerSocial"
-    remove "$HOME/Library/Application Scripts/com.adguard.safari.AdGuard.BlockerCustom"
-    remove "$HOME/Library/Application Scripts/com.adguard.safari.AdGuard.BlockerPrivacy"
-    remove "$HOME/Library/Application Scripts/com.adguard.safari.AdGuard.BlockerSecurity"
-    remove "$HOME/Library/Application Scripts/com.adguard.safari.AdGuard.AdvancedBlocking"
-    remove "$HOME/Library/Application Scripts/com.adguard.safari.AdGuard.BlockerExtension"
-# Application Support
-    remove "$HOME/Library/Application Support/AdGuardSafariApp"
-# Application Containers
-    remove "$HOME/Library/Containers/com.adguard.safari.AdGuard.Extension"
-    remove "$HOME/Library/Containers/com.adguard.safari.AdGuard.BlockerOther"
-    remove "$HOME/Library/Containers/com.adguard.safari.AdGuard.login-helper"
-    remove "$HOME/Library/Containers/com.adguard.safari.AdGuard.BlockerCustom"
-    remove "$HOME/Library/Containers/com.adguard.safari.AdGuard.BlockerSocial"
-    remove "$HOME/Library/Containers/com.adguard.safari.AdGuard.BlockerPrivacy"
-    remove "$HOME/Library/Containers/com.adguard.safari.AdGuard.BlockerSecurity"
-    remove "$HOME/Library/Containers/com.adguard.safari.AdGuard.BlockerExtension"
-    remove "$HOME/Library/Containers/com.adguard.safari.AdGuard.AdvancedBlocking"
-# Application Group Containers
-    remove "$HOME/Library/Group Containers/TC3Q7MAJXF.com.adguard.safari.AdGuard"
-# Web Browser Extensions
-    remove "$HOME/Library/Containers/com.apple.Safari/Data/Library/WebKit/ContentExtensions/ContentExtension-com.adguard.safari.AdGuard.BlockerOther"
-    remove "$HOME/Library/Containers/com.apple.Safari/Data/Library/WebKit/ContentExtensions/ContentExtension-com.adguard.safari.AdGuard.BlockerSocial"
-    remove "$HOME/Library/Containers/com.apple.Safari/Data/Library/WebKit/ContentExtensions/ContentExtension-com.adguard.safari.AdGuard.BlockerCustom"
-    remove "$HOME/Library/Containers/com.apple.Safari/Data/Library/WebKit/ContentExtensions/ContentExtension-com.adguard.safari.AdGuard.BlockerPrivacy"
-    remove "$HOME/Library/Containers/com.apple.Safari/Data/Library/WebKit/ContentExtensions/ContentExtension-com.adguard.safari.AdGuard.BlockerSecurity"
-    remove "$HOME/Library/Containers/com.apple.Safari/Data/Library/WebKit/ContentExtensions/ContentExtension-com.adguard.safari.AdGuard.BlockerExtension"
-# Purge free inactive memory cache
-    sudo purge
+        # Force Quit Applications - If the user hasn't done so
+        sudo osascript -e "tell application \"Safari\" to quit"
+        sudo osascript -e "tell application \"AdGuard for Safari\" to quit"
+        echo "${No_Attributes}"
+        # Warning about Automatically close Safari and the AdGuard applications.
+        echo "•${F_Red} Automatically close Safari and the AdGuard applications.${No_Attributes}"
+        sleep 2 && echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
+        # Warning about Removal of AdGuard application.
+        sleep 1 && echo "•${F_Red} Removal of AdGuard application.${No_Attributes}\n"
+        # The script
+        remove() {
+            entry="$1"
+            if test -e "$entry"; then
+                sudo rm -rf "$entry" && echo -e "Removing $entry  [${F_Green}${Bold}Success${No_Attributes}]"
+            else
+                echo -e "Removing $entry  [${F_Yellow}${Bold}File does not exist${No_Attributes}]"
+            fi
+        }
+        # Executables
+        remove "/Applications/AdGuard for Safari.app"
+        # Application logs
+        remove "$HOME/Library/Logs/AdGuardSafariApp"
+        # Preferences
+        remove "$HOME/Library/Preferences/com.adguard.safari.AdGuard.plist"
+        # Caches
+        remove "$HOME/Library/Saved Application State/com.adguard.safari.AdGuard.savedState"
+        # Application Scripts
+        remove "$HOME/Library/Application Scripts/com.adguard.safari.AdGuard.Extension"
+        remove "$HOME/Library/Application Scripts/com.adguard.safari.AdGuard.login-helper"
+        remove "$HOME/Library/Application Scripts/com.adguard.safari.AdGuard.BlockerOther"
+        remove "$HOME/Library/Application Scripts/com.adguard.safari.AdGuard.BlockerSocial"
+        remove "$HOME/Library/Application Scripts/com.adguard.safari.AdGuard.BlockerCustom"
+        remove "$HOME/Library/Application Scripts/com.adguard.safari.AdGuard.BlockerPrivacy"
+        remove "$HOME/Library/Application Scripts/com.adguard.safari.AdGuard.BlockerSecurity"
+        remove "$HOME/Library/Application Scripts/com.adguard.safari.AdGuard.AdvancedBlocking"
+        remove "$HOME/Library/Application Scripts/com.adguard.safari.AdGuard.BlockerExtension"
+        # Application Support
+        remove "$HOME/Library/Application Support/AdGuardSafariApp"
+        # Application Containers
+        remove "$HOME/Library/Containers/com.adguard.safari.AdGuard.Extension"
+        remove "$HOME/Library/Containers/com.adguard.safari.AdGuard.BlockerOther"
+        remove "$HOME/Library/Containers/com.adguard.safari.AdGuard.login-helper"
+        remove "$HOME/Library/Containers/com.adguard.safari.AdGuard.BlockerCustom"
+        remove "$HOME/Library/Containers/com.adguard.safari.AdGuard.BlockerSocial"
+        remove "$HOME/Library/Containers/com.adguard.safari.AdGuard.BlockerPrivacy"
+        remove "$HOME/Library/Containers/com.adguard.safari.AdGuard.BlockerSecurity"
+        remove "$HOME/Library/Containers/com.adguard.safari.AdGuard.BlockerExtension"
+        remove "$HOME/Library/Containers/com.adguard.safari.AdGuard.AdvancedBlocking"
+        # Application Group Containers
+        remove "$HOME/Library/Group Containers/TC3Q7MAJXF.com.adguard.safari.AdGuard"
+        # Web Browser Extensions
+        remove "$HOME/Library/Containers/com.apple.Safari/Data/Library/WebKit/ContentExtensions/ContentExtension-com.adguard.safari.AdGuard.BlockerOther"
+        remove "$HOME/Library/Containers/com.apple.Safari/Data/Library/WebKit/ContentExtensions/ContentExtension-com.adguard.safari.AdGuard.BlockerSocial"
+        remove "$HOME/Library/Containers/com.apple.Safari/Data/Library/WebKit/ContentExtensions/ContentExtension-com.adguard.safari.AdGuard.BlockerCustom"
+        remove "$HOME/Library/Containers/com.apple.Safari/Data/Library/WebKit/ContentExtensions/ContentExtension-com.adguard.safari.AdGuard.BlockerPrivacy"
+        remove "$HOME/Library/Containers/com.apple.Safari/Data/Library/WebKit/ContentExtensions/ContentExtension-com.adguard.safari.AdGuard.BlockerSecurity"
+        remove "$HOME/Library/Containers/com.apple.Safari/Data/Library/WebKit/ContentExtensions/ContentExtension-com.adguard.safari.AdGuard.BlockerExtension"
+        # Purge free inactive memory cache
+        sudo purge
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    ;;
+        ;;
 
-# ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
+        # ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
 
-# Uninstalling the VMware Fusion
+        # Uninstalling the VMware Fusion
     15)
         terminalWindowSize:190x55
         echo "\n•${F_Red}${Bold} Uninstalling the VMware Fusion.${No_Attributes}"
         askPassword
-# Force Quit Application - If the user hasn't done so
-    sudo osascript -e "tell application \"VMware Fusion\" to quit"
-    echo "${No_Attributes}"
-# Warning about Automatically close VMware Fusion application.
-    echo "•${F_Red} Automatically close VMware Fusion application.${No_Attributes}"
-    sleep 2 && echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
-# Warning about Removal of VMware Fusion application.
-    sleep 1 && echo "•${F_Red} Removal of VMware Fusion application.${No_Attributes}\n"
-# The script
-    remove() {
-        entry="$1"
-        if test -e "$entry"; then
-            sudo rm -rf "$entry" && echo -e "Removing $entry  [${F_Green}${Bold}Success${No_Attributes}]"
-        else
-            echo -e "Removing $entry  [${F_Yellow}${Bold}File does not exist${No_Attributes}]"
-        fi
-    }
-# Executables
-    remove "/Applications/VMware Fusion.app"
-# Application var and etc.
-    remove "/private/var/db/vmware"
-    remove "/private/var/run/vmware"
-    remove "/private/var/run/VMware Fusion Services.lock"
-    remove "/private/var/run/VMware Fusion Services.sock"
-    remove "/private/var/root/Library/Logs/VMware"
-    remove "/private/var/root/Library/Preferences/VMware Fusion"
-    remove "/private/etc/paths.d/com.vmware.fusion.public"
-# Application BootCaches
-    remove "/var/db/BootCaches/*/app.com.vmware.fusion.playlist"
-# Application logs
-    remove "/Library/Logs/VMware"
-    remove "/Library/Logs/VMware Fusion Services.log"
-    remove "$HOME/Library/Logs/VMware"
-    remove "$HOME/Library/Logs/VMware Fusion"
-    remove "$HOME/Library/Logs/VMware Graphics Service.log"
-    remove "$HOME/Library/Logs/VMware Fusion Applications Menu"
-# Preferences
-    remove "/Library/Preferences/VMware Fusion"
-    remove "$HOME/Library/Preferences/VMware Fusion"
-    remove "$HOME/Library/Preferences/com.vmware.fusion.plist"
-    remove "$HOME/Library/Preferences/com.vmware.fusion.plist.lockfile"
-    remove "$HOME/Library/Preferences/com.vmware.fusion.LSSharedFileList.plist"
-    remove "$HOME/Library/Preferences/com.vmware.fusion.LSSharedFileList.plist.lockfile"
-    remove "$HOME/Library/Preferences/com.vmware.fusionApplicationsMenu.plist"
-    remove "$HOME/Library/Preferences/com.vmware.fusionApplicationsMenu.helper.plist"
-    remove "$HOME/Library/Preferences/com.vmware.fusionDaemon.plist"
-    remove "$HOME/Library/Preferences/com.vmware.fusionDaemon.plist.lockfile"
-    remove "$HOME/Library/Preferences/com.vmware.fusionStartMenu.plist"
-    remove "$HOME/Library/Preferences/com.vmware.fusionStartMenu.plist.lockfile"
-# Caches
-    remove "$HOME/Library/Caches/com.vmware.fusion"
-    remove "$HOME/Library/Caches/com.apple.helpd/Generated/VMware Fusion Help*12.1.2"
-# Application Support
-    remove "/Library/Application Support/VMware"
-    remove "$HOME/Library/Application Support/VMware"
-    remove "$HOME/Library/Application Support/VMware Fusion"
-    remove "$HOME/Library/Application Support/VMware Fusion Applications Menu"
-    remove "$HOME/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.vmware.fusion.sfl2"
-# Folder Virtual Machines
-    remove "$HOME/Virtual Machines"
-# Application WebKit
-    remove "$HOME/Library/WebKit/com.vmware.fusion"
-# Purge free inactive memory cache
-    sudo purge
+        # Force Quit Application - If the user hasn't done so
+        sudo osascript -e "tell application \"VMware Fusion\" to quit"
+        echo "${No_Attributes}"
+        # Warning about Automatically close VMware Fusion application.
+        echo "•${F_Red} Automatically close VMware Fusion application.${No_Attributes}"
+        sleep 2 && echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
+        # Warning about Removal of VMware Fusion application.
+        sleep 1 && echo "•${F_Red} Removal of VMware Fusion application.${No_Attributes}\n"
+        # The script
+        remove() {
+            entry="$1"
+            if test -e "$entry"; then
+                sudo rm -rf "$entry" && echo -e "Removing $entry  [${F_Green}${Bold}Success${No_Attributes}]"
+            else
+                echo -e "Removing $entry  [${F_Yellow}${Bold}File does not exist${No_Attributes}]"
+            fi
+        }
+        # Executables
+        remove "/Applications/VMware Fusion.app"
+        # Application var and etc.
+        remove "/private/var/db/vmware"
+        remove "/private/var/run/vmware"
+        remove "/private/var/run/VMware Fusion Services.lock"
+        remove "/private/var/run/VMware Fusion Services.sock"
+        remove "/private/var/root/Library/Logs/VMware"
+        remove "/private/var/root/Library/Preferences/VMware Fusion"
+        remove "/private/etc/paths.d/com.vmware.fusion.public"
+        # Application BootCaches
+        remove "/var/db/BootCaches/*/app.com.vmware.fusion.playlist"
+        # Application logs
+        remove "/Library/Logs/VMware"
+        remove "/Library/Logs/VMware Fusion Services.log"
+        remove "$HOME/Library/Logs/VMware"
+        remove "$HOME/Library/Logs/VMware Fusion"
+        remove "$HOME/Library/Logs/VMware Graphics Service.log"
+        remove "$HOME/Library/Logs/VMware Fusion Applications Menu"
+        # Preferences
+        remove "/Library/Preferences/VMware Fusion"
+        remove "$HOME/Library/Preferences/VMware Fusion"
+        remove "$HOME/Library/Preferences/com.vmware.fusion.plist"
+        remove "$HOME/Library/Preferences/com.vmware.fusion.plist.lockfile"
+        remove "$HOME/Library/Preferences/com.vmware.fusion.LSSharedFileList.plist"
+        remove "$HOME/Library/Preferences/com.vmware.fusion.LSSharedFileList.plist.lockfile"
+        remove "$HOME/Library/Preferences/com.vmware.fusionApplicationsMenu.plist"
+        remove "$HOME/Library/Preferences/com.vmware.fusionApplicationsMenu.helper.plist"
+        remove "$HOME/Library/Preferences/com.vmware.fusionDaemon.plist"
+        remove "$HOME/Library/Preferences/com.vmware.fusionDaemon.plist.lockfile"
+        remove "$HOME/Library/Preferences/com.vmware.fusionStartMenu.plist"
+        remove "$HOME/Library/Preferences/com.vmware.fusionStartMenu.plist.lockfile"
+        # Caches
+        remove "$HOME/Library/Caches/com.vmware.fusion"
+        remove "$HOME/Library/Caches/com.apple.helpd/Generated/VMware Fusion Help*12.1.2"
+        # Application Support
+        remove "/Library/Application Support/VMware"
+        remove "$HOME/Library/Application Support/VMware"
+        remove "$HOME/Library/Application Support/VMware Fusion"
+        remove "$HOME/Library/Application Support/VMware Fusion Applications Menu"
+        remove "$HOME/Library/Application Support/com.apple.sharedfilelist/com.apple.LSSharedFileList.ApplicationRecentDocuments/com.vmware.fusion.sfl2"
+        # Folder Virtual Machines
+        remove "$HOME/Virtual Machines"
+        # Application WebKit
+        remove "$HOME/Library/WebKit/com.vmware.fusion"
+        # Purge free inactive memory cache
+        sudo purge
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    ;;
+        ;;
 
     *)
         echo "\n•${F_Red} An unacceptable Command!${F_Red}${Bold}${No_Attributes}"
@@ -3379,73 +3381,73 @@ startScript() {
         read "?  Please select a Command: " SELECTED_COMMAND
         case $SELECTED_COMMAND in
 
-# ═══════════════════════════════════════════════════════════╣
+        # ═══════════════════════════════════════════════════════════╣
 
-        A|a)
+        A | a)
             clear
             setHomebrew
             ;;
 
-        S|s)
+        S | s)
             clear
             setPro
             ;;
 
-        D|d)
+        D | d)
             clear
             setNovel
             ;;
 
-        F|f)
+        F | f)
             clear
             setManPage
             ;;
 
-        G|g)
+        G | g)
             clear
             setOcean
             ;;
 
-        H|h)
+        H | h)
             clear
             setBasic
             ;;
 
-# ═════════════════════════════╣
+            # ═════════════════════════════╣
 
-        I|i)
+        I | i)
             clear
             installingXCLT
             ;;
 
-        U|u)
+        U | u)
             clear
             uninstallingXCLT
             ;;
 
-# ═════════════════════════════╣
+            # ═════════════════════════════╣
 
-        L|l)
+        L | l)
             clear
             downloadLatestRelease
             ;;
 
-        B|b)
+        B | b)
             clear
             downloadBetaRelease
             ;;
 
-        P|p)
+        P | p)
             clear
             projectPageOnGitHub
             ;;
 
-        Q|q)
+        Q | q)
             clear
             quitSSToolbox
             ;;
 
-# ═════════════════════════════╣
+            # ═════════════════════════════╣
 
         1)
             clear
@@ -3612,7 +3614,7 @@ startScript() {
             uninstallingApplications
             ;;
 
-# ═════════════════════════════╣
+            # ═════════════════════════════╣
 
         *)
             clear
