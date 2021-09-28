@@ -1257,7 +1257,6 @@ showInfoLN_DHCP_IP/MACAddresses() {
 # DNS configuration
     DNSServers=$(scutil --dns | grep nameserver | sort | uniq)
     echo "\n${F_Red}•${F_Green}${Bold} DNS Servers.${No_Attributes}\n$DNSServers"
-    echo "\n${Dim}════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}\n"
 # Wi-Fi (en0)
     en0Interface=$(networksetup -listnetworkserviceorder | grep en0)
     en0Status=$(ifconfig en0 | grep status: | awk '{print $2}')
@@ -1267,7 +1266,7 @@ showInfoLN_DHCP_IP/MACAddresses() {
     en0CurrentMACAddress=$(ifconfig en0 | grep ether | awk '{print $2}')
     en0SubnetMask=$(ipconfig getoption en0 subnet_mask)
     en0BroadcastAddress=$(ifconfig en0 | awk /inet\ /'{print $6}')
-    echo "${F_Red}•${F_Green}${Bold} Internal Wi-Fi network ${F_Red}(en0)${F_Green}.${No_Attributes}"
+    echo "\n${F_Red}•${F_Green}${Bold} Internal Wi-Fi network ${F_Red}(en0)${F_Green}.${No_Attributes}"
     echo "Interface: $en0Interface"
     echo "Status: $en0Status"
     echo "Internal IPv4: $en0InternalIPv4"
@@ -1285,7 +1284,6 @@ showInfoLN_DHCP_IP/MACAddresses() {
 # Show IP addresses of devices in the Wi-Fi network (en0)
     echo "\n${F_Red}•${F_Green}${Bold} Show IP and MAC Addresses of devices in the Wi-Fi network ${F_Red}(en0)${F_Green}.${No_Attributes}"
     arp -a | grep en0 | awk '{print $1, $2, $3, $4, $6}'
-    echo "\n${Dim}════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}\n"
 # Ethernet (en1)
     en1Interface=$(networksetup -listnetworkserviceorder | grep en1)
     en1Status=$(ifconfig en1 | grep status: | awk '{print $2}')
@@ -1295,7 +1293,7 @@ showInfoLN_DHCP_IP/MACAddresses() {
     en1CurrentMACAddress=$(ifconfig en1 | grep ether | awk '{print $2}')
     en1SubnetMask=$(ipconfig getoption en1 subnet_mask)
     en1BroadcastAddress=$(ifconfig en1 | awk /inet\ /'{print $6}')
-    echo "${F_Red}•${F_Green}${Bold} Internal Ethernet network ${F_Red}(en1)${F_Green}.${No_Attributes}"
+    echo "\n${F_Red}•${F_Green}${Bold} Internal Ethernet network ${F_Red}(en1)${F_Green}.${No_Attributes}"
     echo "Interface: $en1Interface"
     echo "Status: $en1Status"
     echo "Internal IPv4: $en1InternalIPv4"
@@ -1313,7 +1311,6 @@ showInfoLN_DHCP_IP/MACAddresses() {
 # Show IP addresses of devices in the Wi-Fi network (en1)
     echo "\n${F_Red}•${F_Green}${Bold} Show IP and MAC Addresses of devices in the Ethernet network ${F_Red}(en1)${F_Green}.${No_Attributes}"
     arp -a | grep en1 | awk '{print $1, $2, $3, $4, $6}'
-    echo "\n${F_Red}•${F_Green}${Bold} Finish.${No_Attributes}${Dim} ══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}"
 # Show Wireless Networks information
     echo "\n${F_Red}•${F_Green}${Bold} Your current preferred Wireless network.${No_Attributes}"
     SSID=$(airport -I | awk -F' SSID: ' '/ SSID: / {print $2}')
@@ -1337,7 +1334,6 @@ showInfoLN_DHCP_IP/MACAddresses() {
 # Scan Wireless Networks
     echo "\n${F_Red}•${F_Green}${Bold} Scan Wireless Networks.${No_Attributes}"
     /System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport -s
-    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}${Dim} ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}"
 # Show Firewall information
     echo "\n${F_Red}•${F_Green}${Bold} Show Firewall information.${No_Attributes}"
     /usr/libexec/ApplicationFirewall/socketfilterfw --getglobalstate
@@ -1345,7 +1341,6 @@ showInfoLN_DHCP_IP/MACAddresses() {
     /usr/libexec/ApplicationFirewall/socketfilterfw --getblockall
     echo "\n${F_Red}•${F_Green}${Bold} List applications handled by firewall.${No_Attributes}"
     /usr/libexec/ApplicationFirewall/socketfilterfw --list
-    echo "${F_Red}•${F_Green}${Bold} Done.${No_Attributes}${Dim} ════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}\n"
 # ComputerName, HostName, LocalHostName and NetBIOSName
     echo "${F_Red}•${F_Green}${Bold} Show ComputerName, HostName, LocalHostName and NetBIOSName.${No_Attributes}"
     scutil --get ComputerName | awk '{print "Computer Name: ", $1}'
@@ -1355,7 +1350,7 @@ showInfoLN_DHCP_IP/MACAddresses() {
 # Show list all network devices on mac
     echo "\n${F_Red}•${F_Green}${Bold} Show list all network devices on mac.${No_Attributes}"
     networksetup -listallhardwareports
-    echo "\n${F_Red}•${F_Green}${Bold} Finish.${No_Attributes}${Dim} ══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}"
+    echo "\n${F_Red}•${F_Green}${Bold} Finish.${No_Attributes}"
     continueMessage
 }
 
