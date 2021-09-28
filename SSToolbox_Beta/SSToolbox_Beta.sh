@@ -1,10 +1,10 @@
 #!/bin/zsh
 
 # Attribute
-RELEASE_VERSION="v.0.6.7 build [09.27.2021]"
+RELEASE_VERSION="v.0.6.8 build [09.28.2021]"
 ROOT_PASSWORD=0
 
-# ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
+# ═══════════════════════════════════════════════════════════╣
 
 # Foreground
 F_Red='\033[0;31m'    # Red
@@ -44,9 +44,8 @@ No_Hidden='\033[28m' # Reset Hidden
 # Resets all colors and formatting
 No_Attributes='\033[0m'
 
-# ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
+# ═══════════════════════════════════════════════════════════╣
 
-terminalWindowMainMenuSize:0() {
 # Dynamic size of Terminal window
 # ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
 # List item 1: The distance in pixels from the left side of the screen to the left side of the Terminal window.      ║
@@ -56,6 +55,7 @@ terminalWindowMainMenuSize:0() {
 # ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
 
 # Terminal window the Main Menu size: 132x40
+terminalWindowMainMenuSize:0() {
     clear
     osascript -e 'tell application "Terminal" to set cursor color of first window to {55512, 15163, 12593}'
     osascript -e 'tell application "Terminal" to set bounds of front window to {0, 20, 935, 620}'
@@ -63,7 +63,7 @@ terminalWindowMainMenuSize:0() {
     osascript -e 'tell application "Terminal" to set font size of first window to "11"'
 }
 
-# ══════════════════
+# ═══════════════════════════════════════════════════════════╣
 
 # Terminal window size: 90x25
 terminalWindowSize:90x25() {
@@ -96,7 +96,7 @@ terminalWindowSize:90x55() {
     clear
 }
 
-# ══════════════════
+# ═════════════════════════════╣
 
 # Terminal window size: 100x25
 terminalWindowSize:100x25() {
@@ -129,7 +129,7 @@ terminalWindowSize:100x55() {
     clear
 }
 
-# ══════════════════
+# ═════════════════════════════╣
 
 # Terminal window size: 112x30
 terminalWindowSize:112x30() {
@@ -157,7 +157,7 @@ terminalWindowSize:112x55() {
     clear
 }
 
-# ══════════════════
+# ═════════════════════════════╣
 
 # Terminal window size: 132x30
 terminalWindowSize:132x30() {
@@ -185,7 +185,7 @@ terminalWindowSize:132x55() {
     clear
 }
 
-# ══════════════════
+# ═════════════════════════════╣
 
 # Terminal window size: 140x35
 terminalWindowSize:140x35() {
@@ -208,7 +208,7 @@ terminalWindowSize:140x55() {
     clear
 }
 
-# ══════════════════
+# ═════════════════════════════╣
 
 # Terminal window size: 165x35
 terminalWindowSize:165x35() {
@@ -231,7 +231,7 @@ terminalWindowSize:165x55() {
     clear
 }
 
-# ══════════════════
+# ═════════════════════════════╣
 
 # Terminal window size: 190x35
 terminalWindowSize:190x35() {
@@ -254,7 +254,7 @@ terminalWindowSize:190x55() {
     clear
 }
 
-# ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
+# ═══════════════════════════════════════════════════════════╣
 
 # Color themes for the Terminal.app
 
@@ -305,7 +305,7 @@ setBasic() {
     osascript -e 'tell application "Terminal" to set font size of first window to "11"'
 }
 
-# ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
+# ═══════════════════════════════════════════════════════════╣
 
 # Asks password
 askPassword() {
@@ -319,7 +319,7 @@ askPassword() {
 
 # Shows continue message
 continueMessage() {
-    echo "\n Press any key to return to the menu."
+    echo "\n Press Return key to return to the menu."
     read
 }
 
@@ -336,7 +336,7 @@ checkDNS() {
     echo "${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
 }
 
-# ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
+# ═══════════════════════════════════════════════════════════╣
 
 # Main Menu
 mainMenu() {
@@ -934,6 +934,7 @@ automaticPingAndTraceroutTestIPv4/IPv6() {
     echo "\n${F_Red}•${F_Green}${Bold} Finish.${No_Attributes}${Dim} ══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}"
 
 # Ping and Traceroute test IPv6
+
 # Ping test IPv6
     echo "\n${Dim}╔════════════════════════╦═══════════════════════════════════════════════════════════╗${No_Attributes}"
     echo "${Dim}║${No_Attributes} Server- or IP- address ${Dim}║${No_Attributes} Response time: Minimum/Average/Maximum/Standard_deviation ${Dim}║${No_Attributes}"
@@ -1034,6 +1035,8 @@ customEditingHostsFile() {
     echo "${F_Red}•${F_Blue}  * Example input: 170.149.172.130       www.facebook.com${No_Attributes}"
     echo "${F_Red}•${F_Green}${No_Attributes}  * If we map that to Facebook in our hosts file, any time someone using the Mac tries to go to Facebook, they’ll see The New York Times load instead."
     echo "${Dim}═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}"
+    echo "\n Press Return key to Edit Hosts file."
+    read
     askPassword
     sudo nano /private/etc/hosts
 # Flush DNS cache
@@ -3383,7 +3386,7 @@ startScript() {
         read "?  Please select a Command: " SELECTED_COMMAND
         case $SELECTED_COMMAND in
 
-# ══════════════════
+# ═══════════════════════════════════════════════════════════╣
 
         A|a)
             clear
@@ -3415,7 +3418,7 @@ startScript() {
             setBasic
             ;;
 
-# ══════════════════
+# ═════════════════════════════╣
 
         I|i)
             clear
@@ -3427,7 +3430,7 @@ startScript() {
             uninstallingXCLT
             ;;
 
-# ══════════════════
+# ═════════════════════════════╣
 
         L|l)
             clear
@@ -3449,7 +3452,7 @@ startScript() {
             quitSSToolbox
             ;;
 
-# ══════════════════
+# ═════════════════════════════╣
 
         1)
             clear
@@ -3616,7 +3619,7 @@ startScript() {
             uninstallingApplications
             ;;
 
-# ══════════════════
+# ═════════════════════════════╣
 
         *)
             clear
