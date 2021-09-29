@@ -2447,9 +2447,9 @@ uninstallingApplications() {
     read "?  Please enter a command: " CHOICES
     case $CHOICES in
 
-        # ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
+    # ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
 
-        # Uninstalling the Brave Browser
+    # Uninstalling the Brave Browser
     1)
         terminalWindowSize:112x25
         echo "\n•${F_Red}${Bold} Uninstalling the Brave Browser.${No_Attributes}"
@@ -2474,7 +2474,7 @@ uninstallingApplications() {
         # Executables
         remove "/Applications/Brave Browser.app"
         # Application logs
-        remove "$HOME/Library/Logs/com.brave.Browser"
+        remove "$HOME/Library/Logs/Brave Browser"
         # Preferences
         remove "$HOME/Library/Preferences/com.brave.Browser.plist"
         # Caches
@@ -2575,19 +2575,19 @@ uninstallingApplications() {
 
         # ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
 
-        # Uninstalling the --------------
+        # Uninstalling the Vivaldi Browser
     4)
-        terminalWindowSize:132x30
-        echo "\n•${F_Red}${Bold} Uninstalling the ---------------.${No_Attributes}"
+        terminalWindowSize:132x25
+        echo "\n•${F_Red}${Bold} Uninstalling the Vivaldi Browser.${No_Attributes}"
         askPassword
         # Force Quit Application - If the user hasn't done so
-        sudo osascript -e "tell application \"Microsoft Edge\" to quit"
+        sudo osascript -e "tell application \"Vivaldi\" to quit"
         echo "${No_Attributes}"
-        # Warning about Automatically close Microsoft Edge application.
-        echo "•${F_Red} Automatically close Microsoft Edge application.${No_Attributes}"
+        # Warning about Automatically close Vivaldi Browser application.
+        echo "•${F_Red} Automatically close Vivaldi Browser application.${No_Attributes}"
         sleep 2 && echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
-        # Warning about Removal of Microsoft Edge application.
-        sleep 1 && echo "•${F_Red} Removal of Microsoft Edge application.${No_Attributes}\n"
+        # Warning about Removal of Vivaldi Browser application.
+        sleep 1 && echo "•${F_Red} Removal of Vivaldi Browser application.${No_Attributes}\n"
         # The script
         remove() {
             entry="$1"
@@ -2598,18 +2598,19 @@ uninstallingApplications() {
             fi
         }
         # Executables
-        remove "/Applications/Microsoft Edge.app"
+        remove "/Applications/Vivaldi.app"
         # Application logs
-        remove "$HOME/Library/Logs/Microsoft Edge"
+        remove "$HOME/Library/Logs/Vivaldi"
         # Preferences
-        remove "$HOME/Library/Preferences/com.microsoft.edgemac.plist"
+        remove "$HOME/Library/Preferences/com.vivaldi.Vivaldi.plist"
         # Caches
-        remove "$HOME/Library/Caches/Microsoft Edge"
-        remove "$HOME/Library/Caches/com.microsoft.edgemac"
+        remove "$HOME/Library/Caches/Vivaldi"
+        # Reporting data
+        remove "$HOME/.local/share/.vivaldi_reporting_data"
         # Application Support
-        remove "$HOME/Library/Application Support/Microsoft Edge"
+        remove "$HOME/Library/Application Support/Vivaldi"
         # Saved Application State
-        remove "$HOME/Library/Saved Application State/com.microsoft.edgemac.savedState"
+        remove "$HOME/Library/Saved Application State/com.vivaldi.Vivaldi.savedState"
         # Purge free inactive memory cache
         sudo purge
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
