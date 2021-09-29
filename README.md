@@ -63,7 +63,7 @@
 |**`12`**|Check DNS records of the domain, to obtain the mapping between domain name, IPv4/IPv6|
 |**`13`**|Search all processes for all users and view network data by protocol TCP/UDP, IPv4/IPv6|
 |**`14`**|Stress Test Network with ICMP-Sweep and ICMP-Flood.|
-|**`15`**|Show information: Firewall, Wireless, Local Network, DHCP, IP, MAC addresses and etc.|
+|**`15`**|Show information: Firewall, Wireless, Local Network, DHCP-/IP-/MAC-Addresses and etc.|
 |*Tweaks*|
 |**`16`**|Enable or Disable the show of Hidden files|
 |**`17`**|Enable or Disable the show of all File Extensions|
@@ -84,13 +84,15 @@
 |**`31`**|GateKeeper Management: Status, Enable or Disable, Remove app from Quarantine, Self-sign the app|
 |**`32`**|Process & Memory Management: Manage Processes, Terminate (Kill) a Process and Purge Memory|
 |**`33`**|Uninstalling applications: Browsers, Microsoft Office, Ad blocking extension, Virtual machines|
+|*Color profiles*|
+|**`A`** • **`S`** • **`D`** • **`F`** • **`G`** • **`H`**|Color scheme for your terminal|
 |*Xcode*|
 |**`I`**|Installing the Xcode CLT (Command Line Tools)|
 |**`U`**|Uninstalling the Xcode CLT (Command Line Tools)|
 |*Download*|
-|**`R`** / **`N`**|Release/Nightly Download to your Mac's desktop|
+|**`L`** / **`B`**|Latest-/Beta-Release Download to your Mac's desktop|
 |*About*|
-|**`A`**|About GitHub|
+|**`P`**|Project page on GitHub|
 |*Quit*|
 |**`Q`**|Deleting terminal command history and terminal to quit|
 
@@ -181,15 +183,6 @@
 
 <p align="center">
   <img width="800px" src="https://raw.githubusercontent.com/Oleg-Chashko/SSToolbox/main/Images/Running.gif" />
-</p>
-<br>
-
----
-
-#### Selecting the themes for the Terminal
-
-<p align="center">
-  <img width="800px" src="https://raw.githubusercontent.com/Oleg-Chashko/SSToolbox/main/Images/Selecting_Themes_Terminal.png" />
 </p>
 
 ## Localization
