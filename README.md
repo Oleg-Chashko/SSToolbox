@@ -95,6 +95,31 @@
 |**`P`**|Project page on GitHub|
 |*Quit*|
 |**`Q`**|Deleting terminal command history and terminal to quit|
+## Command 33: Uninstalling applications List
+
+|Command|Description|
+|:----------:|----------|
+|*Web browsers*|
+|**`1`**|Uninstalling the Brave Browser|
+|**`2`**|Uninstalling the Opera Browser|
+|**`3`**|Uninstalling the Yandex Browser|
+|**`4`**|Uninstalling the Vivaldi Browser|
+|**`5`**|Uninstalling the Mozilla Firefox|
+|**`6`**|Uninstalling the Google Chrome|
+|**`7`**|Uninstalling the Microsoft Edge|
+|*Microsoft Office VL*|
+|**`8`**|Uninstalling the Microsoft Word|
+|**`9`**|Uninstalling the Microsoft Excel|
+|**`10`**|Uninstalling the Microsoft PowerPoint|
+|**`11`**|Uninstalling the Microsoft OneNote|
+|**`12`**|Uninstalling the Microsoft Outlook|
+|**`13`**|Uninstalling the Microsoft OneDrive|
+|**`14`**|Uninstalling the Microsoft AutoUpdate|
+|**`15`**|Uninstalling the Microsoft Office 2019 (volume licensed versions)|
+|*Ad blocking extensions*|
+|**`16`**|Uninstalling the AdGuard for Safari extension|
+|*Virtual machines*|
+|**`17`**|Uninstalling the VMware Fusion|
 
 ## Download
 
