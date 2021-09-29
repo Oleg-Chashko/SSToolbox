@@ -87,7 +87,7 @@ terminalWindowSize:90x40() {
 }
 # Terminal window size: 90x45
 terminalWindowSize:90x45() {
-    osascript -e 'tell application "Terminal" to set bounds of front window to {0, 20, 645, 700}'
+    osascript -e 'tell application "Terminal" to set bounds of front window to {0, 20, 645, 690}'
     clear
 }
 # Terminal window size: 90x55
@@ -120,7 +120,7 @@ terminalWindowSize:100x40() {
 }
 # Terminal window size: 100x45
 terminalWindowSize:100x45() {
-    osascript -e 'tell application "Terminal" to set bounds of front window to {0, 20, 715, 700}'
+    osascript -e 'tell application "Terminal" to set bounds of front window to {0, 20, 715, 690}'
     clear
 }
 # Terminal window size: 100x55
@@ -131,6 +131,11 @@ terminalWindowSize:100x55() {
 
 # ═════════════════════════════╣
 
+# Terminal window size: 112x25
+terminalWindowSize:112x25() {
+    osascript -e 'tell application "Terminal" to set bounds of front window to {0, 20, 800, 415}'
+    clear
+}
 # Terminal window size: 112x30
 terminalWindowSize:112x30() {
     osascript -e 'tell application "Terminal" to set bounds of front window to {0, 20, 800, 480}'
@@ -148,7 +153,7 @@ terminalWindowSize:112x40() {
 }
 # Terminal window size: 112x45
 terminalWindowSize:112x45() {
-    osascript -e 'tell application "Terminal" to set bounds of front window to {0, 20, 800, 700}'
+    osascript -e 'tell application "Terminal" to set bounds of front window to {0, 20, 800, 690}'
     clear
 }
 # Terminal window size: 112x55
@@ -159,6 +164,11 @@ terminalWindowSize:112x55() {
 
 # ═════════════════════════════╣
 
+# Terminal window size: 132x25
+terminalWindowSize:132x25() {
+    osascript -e 'tell application "Terminal" to set bounds of front window to {0, 20, 935, 415}'
+    clear
+}
 # Terminal window size: 132x30
 terminalWindowSize:132x30() {
     osascript -e 'tell application "Terminal" to set bounds of front window to {0, 20, 935, 480}'
@@ -176,7 +186,7 @@ terminalWindowSize:132x40() {
 }
 # Terminal window size: 132x45
 terminalWindowSize:132x45() {
-    osascript -e 'tell application "Terminal" to set bounds of front window to {0, 20, 935, 700}'
+    osascript -e 'tell application "Terminal" to set bounds of front window to {0, 20, 935, 690}'
     clear
 }
 # Terminal window size: 132x55
@@ -187,6 +197,16 @@ terminalWindowSize:132x55() {
 
 # ═════════════════════════════╣
 
+# Terminal window size: 140x25
+terminalWindowSize:140x25() {
+    osascript -e 'tell application "Terminal" to set bounds of front window to {0, 20, 995, 415}'
+    clear
+}
+# Terminal window size: 140x30
+terminalWindowSize:140x30() {
+    osascript -e 'tell application "Terminal" to set bounds of front window to {0, 20, 995, 480}'
+    clear
+}
 # Terminal window size: 140x35
 terminalWindowSize:140x35() {
     osascript -e 'tell application "Terminal" to set bounds of front window to {0, 20, 995, 550}'
@@ -199,7 +219,7 @@ terminalWindowSize:140x40() {
 }
 # Terminal window size: 140x45
 terminalWindowSize:140x45() {
-    osascript -e 'tell application "Terminal" to set bounds of front window to {0, 20, 995, 700}'
+    osascript -e 'tell application "Terminal" to set bounds of front window to {0, 20, 995, 690}'
     clear
 }
 # Terminal window size: 140x55
@@ -210,6 +230,16 @@ terminalWindowSize:140x55() {
 
 # ═════════════════════════════╣
 
+# Terminal window size: 165x25
+terminalWindowSize:165x25() {
+    osascript -e 'tell application "Terminal" to set bounds of front window to {0, 20, 1165, 415}'
+    clear
+}
+# Terminal window size: 165x30
+terminalWindowSize:165x30() {
+    osascript -e 'tell application "Terminal" to set bounds of front window to {0, 20, 1165, 480}'
+    clear
+}
 # Terminal window size: 165x35
 terminalWindowSize:165x35() {
     osascript -e 'tell application "Terminal" to set bounds of front window to {0, 20, 1165, 550}'
@@ -222,7 +252,7 @@ terminalWindowSize:165x40() {
 }
 # Terminal window size: 165x45
 terminalWindowSize:165x45() {
-    osascript -e 'tell application "Terminal" to set bounds of front window to {0, 20, 1165, 700}'
+    osascript -e 'tell application "Terminal" to set bounds of front window to {0, 20, 1165, 690}'
     clear
 }
 # Terminal window size: 165x55
@@ -233,6 +263,16 @@ terminalWindowSize:165x55() {
 
 # ═════════════════════════════╣
 
+# Terminal window size: 190x25
+terminalWindowSize:190x25() {
+    osascript -e 'tell application "Terminal" to set bounds of front window to {0, 20, 1340, 415}'
+    clear
+}
+# Terminal window size: 190x30
+terminalWindowSize:190x30() {
+    osascript -e 'tell application "Terminal" to set bounds of front window to {0, 20, 1340, 480}'
+    clear
+}
 # Terminal window size: 190x35
 terminalWindowSize:190x35() {
     osascript -e 'tell application "Terminal" to set bounds of front window to {0, 20, 1340, 550}'
@@ -245,7 +285,7 @@ terminalWindowSize:190x40() {
 }
 # Terminal window size: 190x45
 terminalWindowSize:190x45() {
-    osascript -e 'tell application "Terminal" to set bounds of front window to {0, 20, 1340, 700}'
+    osascript -e 'tell application "Terminal" to set bounds of front window to {0, 20, 1340, 690}'
     clear
 }
 # Terminal window size: 190x55
@@ -357,7 +397,7 @@ mainMenu() {
     echo "${Dim}║${No_Attributes}${F_Red}${Bold} 12${No_Attributes} ${Dim}║${No_Attributes} Check DNS records of the domain, to obtain the mapping between domain name and IPv4/IPv6 address                            ${Dim}║${No_Attributes}"
     echo "${Dim}║${No_Attributes}${F_Red}${Bold} 13${No_Attributes} ${Dim}║${No_Attributes} Search all processes for all users and view network data by Internet protocol TCP/UDP and version IPv4/IPv6                 ${Dim}║${No_Attributes}"
     echo "${Dim}║${No_Attributes}${F_Red}${Bold} 14${No_Attributes} ${Dim}║${No_Attributes} Stress Test Network with ICMP-Sweep and ICMP-Flood. (This can be very hard on a network and should be used with caution)    ${Dim}║${No_Attributes}"
-    echo "${Dim}║${No_Attributes}${F_Red}${Bold} 15${No_Attributes} ${Dim}║${No_Attributes} Show information: Firewall, Wireless, Local Network, DHCP and IP and MAC Addresses of Devices on a Local Network and etc.   ${Dim}║${No_Attributes}"
+    echo "${Dim}║${No_Attributes}${F_Red}${Bold} 15${No_Attributes} ${Dim}║${No_Attributes} Show information: Firewall, Wireless, Local Network, DHCP-/IP-/MAC-Addresses of Devices on a Local Network and etc.         ${Dim}║${No_Attributes}"
     echo "${Dim}╠════╬════════════════════════════════════════════════════════════════════════════════════════════════════════════════════ ${F_Blue}${Bold}Tweaks ${No_Attributes}${Dim}═╣${No_Attributes}"
     echo "${Dim}║${No_Attributes}${F_Red}${Bold} 16${No_Attributes} ${Dim}║${No_Attributes} Enable or Disable the show of Hidden files                                                                                  ${Dim}║${No_Attributes}"
     echo "${Dim}║${No_Attributes}${F_Red}${Bold} 17${No_Attributes} ${Dim}║${No_Attributes} Enable or Disable the show of all File Extensions                                                                           ${Dim}║${No_Attributes}"
@@ -413,6 +453,7 @@ quitSSToolbox() {
     sleep 1 && echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
     # Terminal to quit
     sleep 1 && osascript -e 'tell application "Terminal" to quit'
+    #sleep 1 && osascript -e "do shell script \"osascript -e \\\"tell application \\\\\\\"Terminal\\\\\\\" to quit\\\" &> /dev/null &\""; exit
     read
 }
 
@@ -482,7 +523,7 @@ customDNSServersForWi-Fi() {
 
     # ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
 
-        # Cloudflare set as DNS server
+    # Cloudflare set as DNS server
     1)
         askPassword
         networksetup -setdnsservers Wi-Fi 8.8.8.8 8.8.4.4 2001:4860:4860::8888 2001:4860:4860::8844
@@ -673,7 +714,7 @@ customDNSServersForEthernet() {
 
     # ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
 
-        # Cloudflare set as DNS server
+    # Cloudflare set as DNS server
     1)
         askPassword
         networksetup -setdnsservers Ethernet 8.8.8.8 8.8.4.4 2001:4860:4860::8888 2001:4860:4860::8844
@@ -825,7 +866,7 @@ customDNSServersForEthernet() {
 
 # Command 3: Custom ping and tracerout test IPv4/IPv6
 customPingAndTraceroutTestIPv4/IPv6() {
-    terminalWindowSize:132x55
+    terminalWindowSize:90x25
     echo "•${F_Red}${Bold} Command 3: Custom ping and tracerout test IPv4/IPv6.${No_Attributes}\n"
     # Submenu
     echo " ${Dim}╔═══╦════════════════════════════════════════════════════╗${No_Attributes}"
@@ -843,14 +884,16 @@ customPingAndTraceroutTestIPv4/IPv6() {
 
     # ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
 
-        # Test Ping IPv4
+    # Test Ping IPv4
     1)
-        echo "\n${Dim}════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}\n"
+        terminalWindowSize:90x55
+        echo "•${F_Red}${Bold} Test Ping IPv4.${No_Attributes}"
+        echo "\n${Dim}═════════════════════════════════════════════════════════════════════════════════════════╗${No_Attributes}"
         echo " Outgoing data bytes packet size ${F_Green}${Bold}Default: 56${No_Attributes} -> exceeding can trigger a firewall."
         read "? To which IP or Host address you want to send the test packets: " HOST
         read "? How many times you want to send the test packets: " COUNT
         read "? How many data bytes packet size you would like to send: " SIZE
-        echo "\n${Dim}════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}"
+        echo "${Dim}═════════════════════════════════════════════════════════════════════════════════════════╝${No_Attributes}"
         echo "\n•${F_Red}${Bold} Testing Ping IPv4.${No_Attributes}\n"
         ping -i 0.1 "$HOST" -c "$COUNT" -s "$SIZE"
         echo "\n${F_Red}•${F_Green}${Bold} Finish...${No_Attributes}"
@@ -858,10 +901,12 @@ customPingAndTraceroutTestIPv4/IPv6() {
 
         # Test Traceroute IPv4
     2)
-        echo "\n${Dim}════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}\n"
+        terminalWindowSize:112x45
+        echo "•${F_Red}${Bold} Test Traceroute IPv4.${No_Attributes}"
+        echo "\n${Dim}═══════════════════════════════════════════════════════════════════════════════════════════════════════════════╗${No_Attributes}"
         read "? To which IP or Host address you want to send the test packets: " HOST
         read "? Send packets of specified IP protocol supported are: ICMP or UDP: " PROTOCOL
-        echo "\n${Dim}════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}"
+        echo "${Dim}═══════════════════════════════════════════════════════════════════════════════════════════════════════════════╝${No_Attributes}"
         echo "\n•${F_Red}${Bold} Testing Traceroute IPv4.${No_Attributes}\n"
         traceroute -w 1 -S -P $PROTOCOL -m 30 "$HOST"
         echo "\n${F_Red}•${F_Green}${Bold} Finish...${No_Attributes}"
@@ -869,12 +914,14 @@ customPingAndTraceroutTestIPv4/IPv6() {
 
         # Test Ping IPv6
     3)
-        echo "\n${Dim}════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}\n"
+        terminalWindowSize:112x55
+        echo "•${F_Red}${Bold} Test Ping IPv6.${No_Attributes}"
+        echo "\n${Dim}═══════════════════════════════════════════════════════════════════════════════════════════════════════════════╗${No_Attributes}"
         echo " Outgoing data bytes packet size ${F_Green}${Bold}Default: 56${No_Attributes} -> exceeding can trigger a firewall."
         read "? To which IP or Host address you want to send the test packets: " HOST
         read "? How many times you want to send the test packets: " COUNT
         read "? How many data bytes packet size you would like to send: " SIZE
-        echo "\n${Dim}════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}"
+        echo "${Dim}═══════════════════════════════════════════════════════════════════════════════════════════════════════════════╝${No_Attributes}"
         echo "\n•${F_Red}${Bold} Testing Ping IPv6.${No_Attributes}\n"
         ping6 -i 0.1 "$HOST" -c "$COUNT" -s "$SIZE"
         echo "\n${F_Red}•${F_Green}${Bold} Finish...${No_Attributes}"
@@ -882,10 +929,12 @@ customPingAndTraceroutTestIPv4/IPv6() {
 
         # Test Traceroute IPv6
     4)
-        echo "\n${Dim}════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}\n"
+        terminalWindowSize:132x45
+        echo "•${F_Red}${Bold} Test Traceroute IPv6.${No_Attributes}"
+        echo "\n${Dim}══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗${No_Attributes}"
         read "? To which IP or Host address you want to send the test packets: " HOST
         read "? Send packets of specified IP protocol supported are: ICMP(-I) or UDP( ): " PROTOCOL
-        echo "\n${Dim}════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}"
+        echo "${Dim}══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝${No_Attributes}"
         echo "\n•${F_Red}${Bold} Testing Traceroute IPv6.${No_Attributes}\n"
         traceroute6 -w 1 -l $PROTOCOL -m 30 "$HOST"
         echo "\n${F_Red}•${F_Green}${Bold} Finish...${No_Attributes}"
@@ -969,15 +1018,15 @@ automaticPingAndTraceroutTestIPv4/IPv6() {
 
 # Command 5: Custom setting a new Computer Name, Hostname, Local Hostname and NetBIOS Name
 customSettingComputerName() {
-    terminalWindowSize:112x35
+    terminalWindowSize:100x30
     echo "•${F_Red}${Bold} Command 5: Custom setting a new Computer Name, Hostname, Local Hostname and NetBIOS Name.${No_Attributes}"
     askPassword
-    echo "${Dim}═════════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}"
+    echo "${Dim}════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}"
     read "? Hostname (for example: MacBook-Pro): " Hostname
     read "? Computer Name (for example: John_Kennedy): " ComputerName
     read "? Local Hostname (for example: MacBook-Pro-John): " LocalHostname
     echo " NetBIOS Name is automatically generated from Local Hostname: -------"
-    echo "${Dim}═════════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}\n"
+    echo "${Dim}════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}\n"
     sudo scutil --set HostName "$Hostname"
     sudo scutil --set ComputerName "$ComputerName"
     sudo scutil --set LocalHostName "$LocalHostname"
@@ -987,13 +1036,13 @@ customSettingComputerName() {
     sleep 1 && sudo dscacheutil -flushcache && sudo killall -HUP mDNSResponder
     echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
     # New current information about the Computer Name, Hostname, Local Hostname and NetBIOS Name
-    echo "\n${F_Red}•${F_Green}${Bold} Getting information about the new current Computer Name, Hostname, Local Hostname and NetBIOS Name.${No_Attributes}\n"
-    echo "${Dim}═════════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}"
+    echo "\n${F_Red}•${F_Green}${Bold} Getting information about the new current Computer Name, Hostname, Local Hostname and NetBIOS Name${No_Attributes}\n"
+    echo "${Dim}════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}"
     sleep 1 && scutil --get HostName | awk '{print "Hostname: ", $1}'
     sleep 1 && scutil --get ComputerName | awk '{print "Computer Name: ", $1}'
     sleep 1 && scutil --get LocalHostName | awk '{print "Local Hostname: ", $1}'
     sleep 1 && defaults read /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName | awk '{print "NetBIOS Name: " $1}'
-    echo "${Dim}═════════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}"
+    echo "${Dim}════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}"
     echo "\n${F_Red}•${F_Green}${Bold} Finish...${No_Attributes}"
     continueMessage
 }
@@ -1052,7 +1101,7 @@ customEditingHostsFile() {
 wifiShowPassword() {
     terminalWindowSize:90x25
     echo "•${F_Red}${Bold} Command 7: Show Wireless Network Password.${No_Attributes}\n"
-    echo "•${F_Red} Please provide your Login and Password to proceed.${No_Attributes}\n"
+    echo "${F_Red}•${F_Green}${Bold} Please provide your Login and Password to proceed.${No_Attributes}\n"
     sleep 2
     if [ -z "$1" ]; then
         ssid="$(/System/Library/PrivateFrameworks/Apple80211.framework/Versions/Current/Resources/airport -I | awk '/ SSID/ {print substr($0, index($0, $2))}')"
@@ -1128,7 +1177,7 @@ releaseAndRenewDHCP() {
 
 # Command 11: Spoofing the MAC Address of the Wireless network to a randomly generated MAC address
 spoofingMACAddressOfWirelessNetwork() {
-    terminalWindowSize:100x40
+    terminalWindowSize:100x30
     echo "•${F_Red}${Bold} Command 11: Spoofing the MAC Address of the Wireless network.${No_Attributes}"
     askPassword
     echo "${Dim}╔══════════════════════════════════════════════════════════════════════════════════════════════════╗${No_Attributes}"
@@ -1151,7 +1200,7 @@ spoofingMACAddressOfWirelessNetwork() {
     echo "\n${F_Red}•${F_Green} Check New current Spoof MAC address.${No_Attributes}\n"
     networksetup -getmacaddress en0 | awk '{print "• System Hardware Wireless MAC address: " $3}'
     ifconfig en0 | grep ether | awk '{print "• Current Spoof Wireless MAC address: " $2}'
-    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
+    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
     continueMessage
 }
 
@@ -1203,20 +1252,19 @@ searchProcessesAndNetworkData() {
 
 # Command 14: Stress Test Network with ICMP-Sweep and ICMP-Flood
 testICMPSweepAndICMP-Flood() {
-    terminalWindowSize:100x55
+    terminalWindowSize:100x45
     echo "•${F_Red}${Bold} Command 14: Stress Test Network with ICMP-Sweep and ICMP-Flood.${No_Attributes}"
     askPassword
     # ICMP-Sweep
     echo "${Dim}════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}"
-    echo "${F_Red}•${F_Green} The scan will run from network 1 to network 254.${No_Attributes}"
-    echo "${F_Red}•${F_Green} Example use: In the tab below, enter the first ${Bold}3${No_Attributes}${F_Green} octets: ${Bold}192.168.1${No_Attributes}${F_Red}${Dim}xXX${No_Attributes}${F_Green} or ${Bold}10.10.1${No_Attributes}${F_Red}${Dim}xXX${No_Attributes}${F_Green} and etc.${No_Attributes}"
+    echo "• The scan will run from network 1 to network 254."
+    echo "• Example use: In the tab below, enter the first ${Bold}3${No_Attributes} octets: ${Bold}192.168.1${No_Attributes}${F_Red}${Dim}xXX${No_Attributes} or ${Bold}10.10.1${No_Attributes}${F_Red}${Dim}xXX${No_Attributes} and etc."
     echo "${Dim}════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}\n"
     read "? Enter the address subnet: " SUBNET
     echo "\n•${F_Red}${Bold} Running a Quick IP sweep to determine live hosts on subnet.${No_Attributes}\n"
     for IP in $(seq 1 254); do
         ping -c 1 $SUBNET.$IP | grep "64 bytes" | cut -d " " -f 4 | tr -d ":" &
     done
-    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
     echo "\n•${F_Red}${Bold} Broadcast Address.${No_Attributes}\n"
     # Wi-Fi Broadcast Address (en0)
     en0BroadcastAddress=$(ifconfig en0 | awk /inet\ /'{print $6}')
@@ -1224,17 +1272,16 @@ testICMPSweepAndICMP-Flood() {
     # Ethernet Broadcast Address (en1)
     en1BroadcastAddress=$(ifconfig en1 | awk /inet\ /'{print $6}')
     echo "Ethernet Broadcast Address (en1): $en1BroadcastAddress"
-    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
     # ICMP-Flood and Broadcast storm is a common Denial of Service (DoS) attack!
-    echo "${Dim}════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}"
+    echo "\n${Dim}════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}"
     echo "•${F_Red}${Bold} ICMP-Flood is a common Denial of Service (DoS) attack!${No_Attributes}"
-    echo "• Outgoing data bytes packet size Default: 56 -> exceeding can trigger a firewall."
-    echo "• About 100 packets per second, the speed is affected by packet size and network bandwidth."
+    echo "• Outgoing data bytes packet size Default: ${F_Red}${Bold}56${No_Attributes} -> exceeding can trigger a firewall."
+    echo "• About ${F_Red}${Bold}100${No_Attributes} packets per second, the speed is affected by packet size and network bandwidth."
     echo "${Dim}════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}\n"
     read "? To which IP address you want to send the test packets: " HOST
     read "? How many times you want to send the test packets: " COUNT
     read "? How many data bytes packet size you would like to send: " SIZE
-    echo "\n${Dim}════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}"
+    echo "${Dim}════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}"
     echo "\n•${F_Red}${Bold} Testing with ICMP-Flood...${No_Attributes}\n"
     sudo ping "$HOST" -c "$COUNT" -f -s "$SIZE" >nFLjLfjveKGdEtWThmRcWfCovc.txt
     rm nFLjLfjveKGdEtWThmRcWfCovc.txt
@@ -1244,10 +1291,10 @@ testICMPSweepAndICMP-Flood() {
 
 # ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
 
-# Command 15: Show information: Firewall, Wireless, Local Network, DHCP and IP and MAC Addresses of Devices on a Local Network and etc.
+# Command 15: Show information: Firewall, Wireless, Local Network, DHCP-/IP-/MAC-Addresses of Devices on a Local Network and etc.
 showInfoLN_DHCP_IP/MACAddresses() {
-    terminalWindowSize:140x55
-    echo "•${F_Red}${Bold} Command 15: Show information: Firewall, Wireless, Local Network, DHCP and IP and MAC Addresses of Devices on a Local Network and etc.${No_Attributes}\n"
+    terminalWindowSize:132x55
+    echo "•${F_Red}${Bold} Command 15: Show information: Firewall, Wireless, Local Network, DHCP-/IP-/MAC-Addresses of Devices on a Local Network and etc.${No_Attributes}\n"
     # External IP Address
     ExternalIPv4=$(curl -s https://api.ipify.org)
     ExternalIPv6=$(curl -s https://api64.ipify.org)
@@ -1372,7 +1419,7 @@ enableOrDisableTheShowOfHiddenFiles() {
 
     # ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
 
-        # Enable the show of Hidden files
+    # Enable the show of Hidden files
     1)
         echo "\n•${F_Red}${Bold} Enable the show of Hidden files.${No_Attributes}"
         defaults write com.apple.finder AppleShowAllFiles true && killall Finder
@@ -1412,7 +1459,7 @@ enableOrDisableTheShowOfAllFileExtensions() {
 
     # ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
 
-        # Enable the show of all File Extensions
+    # Enable the show of all File Extensions
     1)
         echo "\n•${F_Red}${Bold} Enable the show of all File Extensions.${No_Attributes}"
         defaults write NSGlobalDomain AppleShowAllExtensions true && killall Finder
@@ -1452,7 +1499,7 @@ enableOrDisableTheShowOfAttachmentsAsIconsInTheAppleMailApp() {
 
     # ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
 
-        # Enable the show of Attachments as Icons in the Apple Mail app
+    # Enable the show of Attachments as Icons in the Apple Mail app
     1)
         echo "\n•${F_Red}${Bold} Enable the show of Attachments as Icons in the Apple Mail app.${No_Attributes}"
         defaults write com.apple.mail DisableInlineAttachmentViewing -boolean yes
@@ -1492,7 +1539,7 @@ enableOrDisableTheShowOfTheFullPathInTheFinderTitleWindow() {
 
     # ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
 
-        # Enable the show of the full path in the Finder 'Title' window
+    # Enable the show of the full path in the Finder 'Title' window
     1)
         echo "\n•${F_Red}${Bold} Enable the show of the full path in the Finder 'Title' window.${No_Attributes}"
         defaults write com.apple.finder _FXShowPosixPathInTitle -bool true && killall Finder
@@ -1542,7 +1589,7 @@ changeTheDefaultScreenshotFileFormat() {
 
     # ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
 
-        # Enable to use default Screenshot BMP file format
+    # Enable to use default Screenshot BMP file format
     1)
         echo "\n•${F_Red}${Bold} Enable to use default Screenshot BMP file format.${No_Attributes}"
         defaults write com.apple.screencapture type bmp && killall SystemUIServer
@@ -1617,7 +1664,7 @@ enableOrDisableScreenshotWithShadowAndAddingExtraPixels() {
 
     # ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
 
-        # Disable Screenshot with shadow and adding extra pixels
+    # Disable Screenshot with shadow and adding extra pixels
     1)
         echo "\n•${F_Red}${Bold} Disable Screenshot with shadow and adding extra pixels.${No_Attributes}"
         defaults write com.apple.screencapture disable-shadow -bool true && killall SystemUIServer
@@ -1657,7 +1704,7 @@ enableOrDisableTheWarningBeforeEmptyingTheTrash() {
 
     # ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
 
-        # Disable warning before emptying the Trash
+    # Disable warning before emptying the Trash
     1)
         echo "\n•${F_Red}${Bold} Disable warning before emptying the Trash.${No_Attributes}"
         defaults write com.apple.finder WarnOnEmptyTrash -bool false
@@ -1697,7 +1744,7 @@ enableOrDisableWarningWhenChangingAFileExtension() {
 
     # ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
 
-        # Disable warning when changing a file Extension
+    # Disable warning when changing a file Extension
     1)
         echo "\n•${F_Red}${Bold} Disable warning when changing a file Extension.${No_Attributes}"
         defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
@@ -1739,7 +1786,7 @@ searchCurrentOrPreviousScopeOrThisMacFolderByDefault() {
 
     # ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
 
-        # When performing a search, search the Current folder by default
+    # When performing a search, search the Current folder by default
     1)
         echo "\n•${F_Red}${Bold} When performing a search, search the Current folder by default.${No_Attributes}"
         defaults write com.apple.finder FXDefaultSearchScope -string "SCcf"
@@ -1786,7 +1833,7 @@ enableOrDisableInTextEditTheCreateAnUntitledDocumentAtLaunch() {
 
     # ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
 
-        # Enable in TextEdit the create an Untitled Document at Launch
+    # Enable in TextEdit the create an Untitled Document at Launch
     1)
         echo "\n•${F_Red}${Bold} Enable in TextEdit the create an Untitled Document at Launch.${No_Attributes}"
         defaults write com.apple.TextEdit NSShowAppCentricOpenPanelInsteadOfUntitledFile -bool false
@@ -1826,7 +1873,7 @@ enableOrDisableCopyEmailAddressesAs() {
 
     # ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
 
-        # Enable copy Email addresses as 'foo@example.com' instead of 'Foo Bar <foo@example.com>' in Apple Mail app
+    # Enable copy Email addresses as 'foo@example.com' instead of 'Foo Bar <foo@example.com>' in Apple Mail app
     1)
         echo "\n•${F_Red}${Bold} Enable copy Email addresses as 'foo@example.com' instead of 'Foo Bar <foo@example.com>' in Apple Mail app.${No_Attributes}"
         defaults write com.apple.mail AddressesIncludeNameOnPasteboard -bool false
@@ -1886,7 +1933,7 @@ cleaningLogsAndInactiveMemory() {
 
 # Command 28: I/O system Management: Manually and Automatic Delete, Plugins Input and Output device
 deletePluginsInputAndOutputDevice() {
-    terminalWindowSize:112x35
+    terminalWindowSize:100x25
     echo "•${F_Red}${Bold} Command 28: I/O system Management: Manually and Automatic Delete, Plugins Input and Output device.${No_Attributes}\n"
     # Submenu
     echo " ${Dim}╔═══╦═══════════════════════════════════════════════════════════════════════╗${No_Attributes}"
@@ -1904,7 +1951,7 @@ deletePluginsInputAndOutputDevice() {
 
     # ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
 
-        # Automatic Delete All CoreMedia Input/Output Device DAL Video Plug-ins
+    # Automatic Delete All CoreMedia Input/Output Device DAL Video Plug-ins
     1)
         echo "\n•${F_Red}${Bold} Automatic Delete All CoreMedia Input/Output Device DAL Video Plug-ins.${No_Attributes}"
         askPassword
@@ -1984,7 +2031,7 @@ kernelManagement() {
 
     # ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
 
-        # Cleaning the kernel Extension staging area by removing all staged content
+    # Cleaning the kernel Extension staging area by removing all staged content
     1)
         echo "\n•${F_Red}${Bold} Cleaning the kernel Extension staging area by removing all staged content. (Requires a reboot)${No_Attributes}"
         askPassword
@@ -2067,7 +2114,7 @@ kernelManagement() {
 
 # Command 30: Privacy Database Management: Custom reset application permissions under Security and Privacy
 privacyDatabaseManagement() {
-    terminalWindowSize:112x55
+    terminalWindowSize:112x45
     echo "•${F_Red}${Bold} Command 30: Privacy Database Management: Custom reset application permissions under Security and Privacy.${No_Attributes}\n"
     # Submenu
     echo " ${Dim}╔════╦═════════════════════════════════════════════════════════════════════════╗${No_Attributes}"
@@ -2105,7 +2152,7 @@ privacyDatabaseManagement() {
 
     # ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
 
-        # Reset the All permissions for all apps
+    # Reset the All permissions for all apps
     1)
         echo "\n•${F_Red}${Bold} Reset the All permissions for all apps.${No_Attributes}"
         askPassword
@@ -2229,7 +2276,7 @@ privacyDatabaseManagement() {
 
 # Command 31: GateKeeper Management: Status, Enable or Disable, Remove app from Quarantine, Self-sign the app
 gateKeeperManagement() {
-    terminalWindowSize:132x40
+    terminalWindowSize:112x30
     echo "•${F_Red}${Bold} Command 31: GateKeeper Management: Status, Enable or Disable, Remove app from quarantine, Self-sign the app.${No_Attributes}\n"
     # Submenu
     echo " ${Dim}╔═══╦════════════════════════════════════════════════════════════════════════════╗${No_Attributes}"
@@ -2249,7 +2296,7 @@ gateKeeperManagement() {
 
     # ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
 
-        # GateKeeper Status
+    # GateKeeper Status
     1)
         echo "\n•${F_Red}${Bold} GateKeeper Status.${No_Attributes}\n"
         spctl --status
@@ -2300,10 +2347,10 @@ gateKeeperManagement() {
 
 # ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
 
-# Command 32: Process & Memory Management: Manage Processes Using the Terminal, Terminate (Kill) a Process and Purge Memory
+# Command 32: Process & Memory Management: Terminate (Kill) a Process and Purge Memory
 processAndMemoryManagement() {
-    terminalWindowSize:132x40
-    echo "•${F_Red}${Bold} Command 32: Process & Memory Management: Manage Processes Using the Terminal, Terminate (Kill) a Process and Purge Memory.${No_Attributes}\n"
+    terminalWindowSize:90x30
+    echo "•${F_Red}${Bold} Command 32: Process & Memory Management: Terminate (Kill) a Process and Purge Memory.${No_Attributes}\n"
     # Submenu
     echo " ${Dim}╔═══╦═══════════════════════════════════════════════════════════════════════════════════╗${No_Attributes}"
     echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 1${No_Attributes} ${Dim}║${No_Attributes} Display processes sorted by CPU usage and Kill a process by specifying its PID    ${Dim}║${No_Attributes}"
@@ -2318,12 +2365,12 @@ processAndMemoryManagement() {
 
     # ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
 
-        # Display processes sorted by CPU usage and Kill a process by specifying its PID
+    # Display processes sorted by CPU usage and Kill a process by specifying its PID
     1)
         echo "\n•${F_Red}${Bold} Display processes sorted by CPU usage and Kill a process by specifying its PID.${No_Attributes}"
         askPassword
         osascript -e 'tell application "Terminal" to do script "top -o cpu -s 2"'
-        osascript -e 'tell application "Terminal" to set bounds of front window to {935, 20, 1440, 830}'
+        osascript -e 'tell application "Terminal" to set bounds of front window to {645, 20, 1440, 830}'
         read "? To Terminate (Kill) a Process: " PID
         sudo kill -9 "$PID"
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
@@ -2336,7 +2383,7 @@ processAndMemoryManagement() {
         echo "\n•${F_Red}${Bold} Display processes sorted by Memory usage and Kill a process by specifying its PID.${No_Attributes}"
         askPassword
         osascript -e 'tell app "Terminal" to do script "top -o rsize -s 2"'
-        osascript -e 'tell application "Terminal" to set bounds of front window to {935, 20, 1440, 830}'
+        osascript -e 'tell application "Terminal" to set bounds of front window to {645, 20, 1440, 830}'
         read "? To Terminate (Kill) a Process: " PID
         sudo kill -9 "$PID"
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
@@ -2400,7 +2447,7 @@ uninstallingApplications() {
 
     # ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
 
-        # Uninstalling the Opera Browser
+    # Uninstalling the Opera Browser
     1)
         terminalWindowSize:132x30
         echo "\n•${F_Red}${Bold} Uninstalling the Opera Browser.${No_Attributes}"
@@ -2530,7 +2577,7 @@ uninstallingApplications() {
 
         # Uninstalling the Google Chrome
     4)
-        terminalWindowSize:132x40
+        terminalWindowSize:132x35
         echo "\n•${F_Red}${Bold} Uninstalling the Google Chrome.${No_Attributes}"
         askPassword
         # Force Quit Application - If the user hasn't done so
@@ -2786,7 +2833,7 @@ uninstallingApplications() {
 
         # Uninstalling the Microsoft OneNote
     9)
-        terminalWindowSize:190x55
+        terminalWindowSize:190x35
         echo "\n•${F_Red}${Bold} Uninstalling the Microsoft OneNote.${No_Attributes}"
         askPassword
         # Force Quit Application - If the user hasn't done so
@@ -2840,7 +2887,7 @@ uninstallingApplications() {
 
         # Uninstalling the Microsoft Outlook
     10)
-        terminalWindowSize:190x55
+        terminalWindowSize:190x40
         echo "\n•${F_Red}${Bold} Uninstalling the Microsoft Outlook.${No_Attributes}"
         askPassword
         # Force Quit Application - If the user hasn't done so
@@ -3381,7 +3428,7 @@ startScript() {
         read "?  Please enter a command: " SELECTED_COMMAND
         case $SELECTED_COMMAND in
 
-            # ═══════════════════════════════════════════════════════════╣
+        # ═══════════════════════════════════════════════════════════╣
 
         A | a)
             clear
