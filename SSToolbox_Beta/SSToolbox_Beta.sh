@@ -1,7 +1,7 @@
 #!/bin/zsh
 
 # Attribute
-RELEASE_VERSION="v.0.6.9 build [09.29.2021]"
+RELEASE_VERSION="v.0.7.0 build [09.30.2021]"
 ROOT_PASSWORD=0
 
 # ═══════════════════════════════════════════════════════════╣
@@ -2417,7 +2417,7 @@ processAndMemoryManagement() {
 
 # Command 33: Uninstalling applications: Browsers, Microsoft Office VL, Ad blocking extension, Virtual machines
 uninstallingApplications() {
-    terminalWindowSize:112x30
+    terminalWindowSize:112x35
     echo "•${F_Red}${Bold} Command 33: Uninstalling applications: Browsers, Microsoft Office VL, Ad blocking extension, Virtual machines.${No_Attributes}\n"
     echo "${F_Red}${Bold}•${No_Attributes} Warning: The script automatically closes the application to be deleted and all related applications.\n"
     # Submenu
