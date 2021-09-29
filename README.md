@@ -85,7 +85,7 @@
 |**`32`**|Process & Memory Management: Manage Processes, Terminate (Kill) a Process and Purge Memory|
 |**`33`**|Uninstalling applications: Browsers, Microsoft Office, Ad blocking extension, Virtual machines|
 |*Color profiles*|
-|**`A`** • **`S`** • **`D`** • **`F`** • **`G`** • **`H`**|Color scheme for your terminal|
+|**`A`** / **`S`** / **`D`** / **`F`** / **`G`** / **`H`**|Color scheme for your terminal|
 |*Xcode*|
 |**`I`**|Installing the Xcode CLT (Command Line Tools)|
 |**`U`**|Uninstalling the Xcode CLT (Command Line Tools)|
