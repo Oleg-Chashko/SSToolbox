@@ -1,7 +1,7 @@
 #!/bin/zsh
 
 # Attribute
-RELEASE_VERSION="v.0.6.8 build [09.28.2021]"
+RELEASE_VERSION="v.0.6.9 build [09.29.2021]"
 ROOT_PASSWORD=0
 
 # ═══════════════════════════════════════════════════════════╣
@@ -425,7 +425,7 @@ mainMenu() {
 
 # Command I: Installing the Xcode CLT
 installingXCLT() {
-    terminalWindowSize:112x35
+    terminalWindowSize:90x25
     echo "•${F_Red}${Bold} Command I: Install the Xcode Command Line Tools.${No_Attributes}\n"
     xcode-select --install
     continueMessage
@@ -433,7 +433,7 @@ installingXCLT() {
 
 # Command U: Uninstalling the Xcode CLT
 uninstallingXCLT() {
-    terminalWindowSize:112x35
+    terminalWindowSize:90x25
     echo "•${F_Red}${Bold} Command U: Uninstall the Xcode Command Line Tools.${No_Attributes}"
     askPassword
     sudo rm -rf /Library/Developer/CommandLineTools
@@ -2449,7 +2449,7 @@ uninstallingApplications() {
 
     # Uninstalling the Opera Browser
     1)
-        terminalWindowSize:132x30
+        terminalWindowSize:132x25
         echo "\n•${F_Red}${Bold} Uninstalling the Opera Browser.${No_Attributes}"
         askPassword
         # Force Quit Application - If the user hasn't done so
@@ -2577,7 +2577,7 @@ uninstallingApplications() {
 
         # Uninstalling the Google Chrome
     4)
-        terminalWindowSize:132x35
+        terminalWindowSize:112x35
         echo "\n•${F_Red}${Bold} Uninstalling the Google Chrome.${No_Attributes}"
         askPassword
         # Force Quit Application - If the user hasn't done so
@@ -2674,7 +2674,7 @@ uninstallingApplications() {
 
         # Uninstalling the Microsoft Word
     6)
-        terminalWindowSize:190x55
+        terminalWindowSize:190x35
         echo "\n•${F_Red}${Bold} Uninstalling the Microsoft Word.${No_Attributes}"
         askPassword
         # Force Quit Application - If the user hasn't done so
@@ -2727,7 +2727,7 @@ uninstallingApplications() {
 
         # Uninstalling the Microsoft Excel
     7)
-        terminalWindowSize:190x55
+        terminalWindowSize:190x35
         echo "\n•${F_Red}${Bold} Uninstalling the Microsoft Excel.${No_Attributes}"
         askPassword
         # Force Quit Application - If the user hasn't done so
@@ -2944,7 +2944,7 @@ uninstallingApplications() {
 
         # Uninstalling the Microsoft OneDrive
     11)
-        terminalWindowSize:190x55
+        terminalWindowSize:165x55
         echo "\n•${F_Red}${Bold} Uninstalling the Microsoft OneDrive.${No_Attributes}"
         askPassword
         # Force Quit Application - If the user hasn't done so
@@ -3026,7 +3026,7 @@ uninstallingApplications() {
 
         # Uninstalling the Microsoft AutoUpdate
     12)
-        terminalWindowSize:190x55
+        terminalWindowSize:132x35
         echo "\n•${F_Red}${Bold} Uninstalling the Microsoft AutoUpdate.${No_Attributes}"
         askPassword
         # Force Quit Application - If the user hasn't done so
