@@ -2422,33 +2422,76 @@ uninstallingApplications() {
     echo "${F_Red}${Bold}•${No_Attributes} Warning: The script automatically closes the application to be deleted and all related applications.\n"
     # Submenu
     echo " ${Dim}╔════╦═════════════════════════════════════════════════════════════════════════════════════════ ${F_Blue}${Bold}Web browsers ${No_Attributes}${Dim}═╗${No_Attributes}"
-    echo " ${Dim}║${No_Attributes}${F_Red}${Bold}  1${No_Attributes} ${Dim}║${No_Attributes} Uninstalling the Opera Browser                                                                         ${Dim}║${No_Attributes}"
-    echo " ${Dim}║${No_Attributes}${F_Red}${Bold}  2${No_Attributes} ${Dim}║${No_Attributes} Uninstalling the Yandex Browser                                                                        ${Dim}║${No_Attributes}"
-    echo " ${Dim}║${No_Attributes}${F_Red}${Bold}  3${No_Attributes} ${Dim}║${No_Attributes} Uninstalling the Mozilla Firefox                                                                       ${Dim}║${No_Attributes}"
-    echo " ${Dim}║${No_Attributes}${F_Red}${Bold}  4${No_Attributes} ${Dim}║${No_Attributes} Uninstalling the Google Chrome                                                                         ${Dim}║${No_Attributes}"
-    echo " ${Dim}║${No_Attributes}${F_Red}${Bold}  5${No_Attributes} ${Dim}║${No_Attributes} Uninstalling the Microsoft Edge                                                                        ${Dim}║${No_Attributes}"
+    echo " ${Dim}║${No_Attributes}${F_Red}${Bold}  1${No_Attributes} ${Dim}║${No_Attributes} Uninstalling the Brave Browser                                                                         ${Dim}║${No_Attributes}"
+    echo " ${Dim}║${No_Attributes}${F_Red}${Bold}  2${No_Attributes} ${Dim}║${No_Attributes} Uninstalling the Opera Browser                                                                         ${Dim}║${No_Attributes}"
+    echo " ${Dim}║${No_Attributes}${F_Red}${Bold}  3${No_Attributes} ${Dim}║${No_Attributes} Uninstalling the Yandex Browser                                                                        ${Dim}║${No_Attributes}"
+    echo " ${Dim}║${No_Attributes}${F_Red}${Bold}  4${No_Attributes} ${Dim}║${No_Attributes} Uninstalling the Vivaldi Browser                                                                       ${Dim}║${No_Attributes}"
+    echo " ${Dim}║${No_Attributes}${F_Red}${Bold}  5${No_Attributes} ${Dim}║${No_Attributes} Uninstalling the Mozilla Firefox                                                                       ${Dim}║${No_Attributes}"
+    echo " ${Dim}║${No_Attributes}${F_Red}${Bold}  6${No_Attributes} ${Dim}║${No_Attributes} Uninstalling the Google Chrome                                                                         ${Dim}║${No_Attributes}"
+    echo " ${Dim}║${No_Attributes}${F_Red}${Bold}  7${No_Attributes} ${Dim}║${No_Attributes} Uninstalling the Microsoft Edge                                                                        ${Dim}║${No_Attributes}"
     echo " ${Dim}╠════╬═════════════════════════════════════════════════════════════════════════════════════ ${F_Blue}${Bold}Microsoft Office ${No_Attributes}${Dim}═╣${No_Attributes}"
-    echo " ${Dim}║${No_Attributes}${F_Red}${Bold}  6${No_Attributes} ${Dim}║${No_Attributes} Uninstalling the Microsoft Word                                                                        ${Dim}║${No_Attributes}"
-    echo " ${Dim}║${No_Attributes}${F_Red}${Bold}  7${No_Attributes} ${Dim}║${No_Attributes} Uninstalling the Microsoft Excel                                                                       ${Dim}║${No_Attributes}"
-    echo " ${Dim}║${No_Attributes}${F_Red}${Bold}  8${No_Attributes} ${Dim}║${No_Attributes} Uninstalling the Microsoft PowerPoint                                                                  ${Dim}║${No_Attributes}"
-    echo " ${Dim}║${No_Attributes}${F_Red}${Bold}  9${No_Attributes} ${Dim}║${No_Attributes} Uninstalling the Microsoft OneNote                                                                     ${Dim}║${No_Attributes}"
-    echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 10${No_Attributes} ${Dim}║${No_Attributes} Uninstalling the Microsoft Outlook                                                                     ${Dim}║${No_Attributes}"
-    echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 11${No_Attributes} ${Dim}║${No_Attributes} Uninstalling the Microsoft OneDrive                                                                    ${Dim}║${No_Attributes}"
-    echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 12${No_Attributes} ${Dim}║${No_Attributes} Uninstalling the Microsoft AutoUpdate                                                                  ${Dim}║${No_Attributes}"
-    echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 13${No_Attributes} ${Dim}║${No_Attributes} Uninstalling the Microsoft Office 2019 (volume licensed versions)                                      ${Dim}║${No_Attributes}"
+    echo " ${Dim}║${No_Attributes}${F_Red}${Bold}  8${No_Attributes} ${Dim}║${No_Attributes} Uninstalling the Microsoft Word                                                                        ${Dim}║${No_Attributes}"
+    echo " ${Dim}║${No_Attributes}${F_Red}${Bold}  9${No_Attributes} ${Dim}║${No_Attributes} Uninstalling the Microsoft Excel                                                                       ${Dim}║${No_Attributes}"
+    echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 10${No_Attributes} ${Dim}║${No_Attributes} Uninstalling the Microsoft PowerPoint                                                                  ${Dim}║${No_Attributes}"
+    echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 11${No_Attributes} ${Dim}║${No_Attributes} Uninstalling the Microsoft OneNote                                                                     ${Dim}║${No_Attributes}"
+    echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 12${No_Attributes} ${Dim}║${No_Attributes} Uninstalling the Microsoft Outlook                                                                     ${Dim}║${No_Attributes}"
+    echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 13${No_Attributes} ${Dim}║${No_Attributes} Uninstalling the Microsoft OneDrive                                                                    ${Dim}║${No_Attributes}"
+    echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 14${No_Attributes} ${Dim}║${No_Attributes} Uninstalling the Microsoft AutoUpdate                                                                  ${Dim}║${No_Attributes}"
+    echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 15${No_Attributes} ${Dim}║${No_Attributes} Uninstalling the Microsoft Office 2019 (volume licensed versions)                                      ${Dim}║${No_Attributes}"
     echo " ${Dim}╠════╬═══════════════════════════════════════════════════════════════════════════════ ${F_Blue}${Bold}Ad blocking extensions ${No_Attributes}${Dim}═╣${No_Attributes}"
-    echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 14${No_Attributes} ${Dim}║${No_Attributes} Uninstalling the AdGuard for Safari extension                                                          ${Dim}║${No_Attributes}"
+    echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 16${No_Attributes} ${Dim}║${No_Attributes} Uninstalling the AdGuard for Safari extension                                                          ${Dim}║${No_Attributes}"
     echo " ${Dim}╠════╬═════════════════════════════════════════════════════════════════════════════════════ ${F_Blue}${Bold}Virtual machines ${No_Attributes}${Dim}═╣${No_Attributes}"
-    echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 15${No_Attributes} ${Dim}║${No_Attributes} Uninstalling the VMware Fusion                                                                         ${Dim}║${No_Attributes}"
+    echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 17${No_Attributes} ${Dim}║${No_Attributes} Uninstalling the VMware Fusion                                                                         ${Dim}║${No_Attributes}"
     echo " ${Dim}╚════╩════════════════════════════════════════════════════════════════════════════════════════════════════════╝${No_Attributes}\n"
 
     read "?  Please enter a command: " CHOICES
     case $CHOICES in
 
-    # ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
+        # ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
+
+        # Uninstalling the Brave Browser
+    1)
+        terminalWindowSize:112x25
+        echo "\n•${F_Red}${Bold} Uninstalling the Brave Browser.${No_Attributes}"
+        askPassword
+        # Force Quit Application - If the user hasn't done so
+        sudo osascript -e "tell application \"Brave Browser\" to quit"
+        echo "${No_Attributes}"
+        # Warning about Automatically close Brave Browser application.
+        echo "•${F_Red} Automatically close Brave Browser application.${No_Attributes}"
+        sleep 2 && echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
+        # Warning about Removal of Brave Browser application.
+        sleep 1 && echo "•${F_Red} Removal of Brave Browser application.${No_Attributes}\n"
+        # The script
+        remove() {
+            entry="$1"
+            if test -e "$entry"; then
+                sudo rm -rf "$entry" && echo -e "Removing $entry  [${F_Green}${Bold}Success${No_Attributes}]"
+            else
+                echo -e "Removing $entry  [${F_Yellow}${Bold}File does not exist${No_Attributes}]"
+            fi
+        }
+        # Executables
+        remove "/Applications/Brave Browser.app"
+        # Application logs
+        remove "$HOME/Library/Logs/com.brave.Browser"
+        # Preferences
+        remove "$HOME/Library/Preferences/com.brave.Browser.plist"
+        # Caches
+        remove "$HOME/Library/Caches/BraveSoftware"
+        # Application Support
+        remove "$HOME/Library/Application Support/BraveSoftware"
+        # Saved Application State
+        remove "$HOME/Library/Saved Application State/com.brave.Browser.savedState"
+        # Purge free inactive memory cache
+        sudo purge
+        echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
+        ;;
+
+        # ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
 
     # Uninstalling the Opera Browser
-    1)
+    2)
         terminalWindowSize:132x25
         echo "\n•${F_Red}${Bold} Uninstalling the Opera Browser.${No_Attributes}"
         askPassword
@@ -2490,7 +2533,7 @@ uninstallingApplications() {
         # ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
 
         # Uninstalling the Yandex Browser
-    2)
+    3)
         terminalWindowSize:132x30
         echo "\n•${F_Red}${Bold} Uninstalling the Yandex Browser.${No_Attributes}"
         askPassword
@@ -2532,8 +2575,50 @@ uninstallingApplications() {
 
         # ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
 
+        # Uninstalling the --------------
+    4)
+        terminalWindowSize:132x30
+        echo "\n•${F_Red}${Bold} Uninstalling the ---------------.${No_Attributes}"
+        askPassword
+        # Force Quit Application - If the user hasn't done so
+        sudo osascript -e "tell application \"Microsoft Edge\" to quit"
+        echo "${No_Attributes}"
+        # Warning about Automatically close Microsoft Edge application.
+        echo "•${F_Red} Automatically close Microsoft Edge application.${No_Attributes}"
+        sleep 2 && echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
+        # Warning about Removal of Microsoft Edge application.
+        sleep 1 && echo "•${F_Red} Removal of Microsoft Edge application.${No_Attributes}\n"
+        # The script
+        remove() {
+            entry="$1"
+            if test -e "$entry"; then
+                sudo rm -rf "$entry" && echo -e "Removing $entry  [${F_Green}${Bold}Success${No_Attributes}]"
+            else
+                echo -e "Removing $entry  [${F_Yellow}${Bold}File does not exist${No_Attributes}]"
+            fi
+        }
+        # Executables
+        remove "/Applications/Microsoft Edge.app"
+        # Application logs
+        remove "$HOME/Library/Logs/Microsoft Edge"
+        # Preferences
+        remove "$HOME/Library/Preferences/com.microsoft.edgemac.plist"
+        # Caches
+        remove "$HOME/Library/Caches/Microsoft Edge"
+        remove "$HOME/Library/Caches/com.microsoft.edgemac"
+        # Application Support
+        remove "$HOME/Library/Application Support/Microsoft Edge"
+        # Saved Application State
+        remove "$HOME/Library/Saved Application State/com.microsoft.edgemac.savedState"
+        # Purge free inactive memory cache
+        sudo purge
+        echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
+        ;;
+
+        # ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
+
         # Uninstalling the Mozilla Firefox
-    3)
+    5)
         terminalWindowSize:132x30
         echo "\n•${F_Red}${Bold} Uninstalling the Mozilla Firefox.${No_Attributes}"
         askPassword
@@ -2576,7 +2661,7 @@ uninstallingApplications() {
         # ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
 
         # Uninstalling the Google Chrome
-    4)
+    6)
         terminalWindowSize:112x35
         echo "\n•${F_Red}${Bold} Uninstalling the Google Chrome.${No_Attributes}"
         askPassword
@@ -2631,7 +2716,7 @@ uninstallingApplications() {
         # ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
 
         # Uninstalling the Microsoft Edge
-    5)
+    7)
         terminalWindowSize:132x30
         echo "\n•${F_Red}${Bold} Uninstalling the Microsoft Edge.${No_Attributes}"
         askPassword
@@ -2673,7 +2758,7 @@ uninstallingApplications() {
         # ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
 
         # Uninstalling the Microsoft Word
-    6)
+    8)
         terminalWindowSize:190x35
         echo "\n•${F_Red}${Bold} Uninstalling the Microsoft Word.${No_Attributes}"
         askPassword
@@ -2726,7 +2811,7 @@ uninstallingApplications() {
         # ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
 
         # Uninstalling the Microsoft Excel
-    7)
+    9)
         terminalWindowSize:190x35
         echo "\n•${F_Red}${Bold} Uninstalling the Microsoft Excel.${No_Attributes}"
         askPassword
@@ -2779,7 +2864,7 @@ uninstallingApplications() {
         # ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
 
         # Uninstalling the Microsoft PowerPoint
-    8)
+    10)
         terminalWindowSize:190x35
         echo "\n•${F_Red}${Bold} Uninstalling the Microsoft PowerPoint.${No_Attributes}"
         askPassword
@@ -2832,7 +2917,7 @@ uninstallingApplications() {
         # ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
 
         # Uninstalling the Microsoft OneNote
-    9)
+    11)
         terminalWindowSize:190x35
         echo "\n•${F_Red}${Bold} Uninstalling the Microsoft OneNote.${No_Attributes}"
         askPassword
@@ -2886,7 +2971,7 @@ uninstallingApplications() {
         # ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
 
         # Uninstalling the Microsoft Outlook
-    10)
+    12)
         terminalWindowSize:190x40
         echo "\n•${F_Red}${Bold} Uninstalling the Microsoft Outlook.${No_Attributes}"
         askPassword
@@ -2943,7 +3028,7 @@ uninstallingApplications() {
         # ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
 
         # Uninstalling the Microsoft OneDrive
-    11)
+    13)
         terminalWindowSize:165x55
         echo "\n•${F_Red}${Bold} Uninstalling the Microsoft OneDrive.${No_Attributes}"
         askPassword
@@ -3025,7 +3110,7 @@ uninstallingApplications() {
         # ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
 
         # Uninstalling the Microsoft AutoUpdate
-    12)
+    14)
         terminalWindowSize:132x35
         echo "\n•${F_Red}${Bold} Uninstalling the Microsoft AutoUpdate.${No_Attributes}"
         askPassword
@@ -3079,7 +3164,7 @@ uninstallingApplications() {
         # ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
 
         # Uninstalling the Microsoft Office 2019 (volume licensed versions)
-    13)
+    15)
         terminalWindowSize:190x55
         echo "\n•${F_Red}${Bold} Uninstalling the Microsoft Office 2019 (volume licensed versions).${No_Attributes}"
         askPassword
@@ -3271,7 +3356,7 @@ uninstallingApplications() {
         # ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
 
         # Uninstalling the AdGuard for Safari extension
-    14)
+    16)
         terminalWindowSize:190x55
         echo "\n•${F_Red}${Bold} Uninstalling the AdGuard for Safari extension.${No_Attributes}"
         askPassword
@@ -3340,7 +3425,7 @@ uninstallingApplications() {
         # ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
 
         # Uninstalling the VMware Fusion
-    15)
+    17)
         terminalWindowSize:190x55
         echo "\n•${F_Red}${Bold} Uninstalling the VMware Fusion.${No_Attributes}"
         askPassword
