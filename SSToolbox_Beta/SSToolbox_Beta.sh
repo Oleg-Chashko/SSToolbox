@@ -3,7 +3,7 @@
 # Attribute
 RELEASE_VERSION="v.0.7.0 build [09.30.2021]"
 ROOT_PASSWORD=0
-    # ───────────────────────────────────────────────────────────┤
+# ───────────────────────────────────────────────────────────┤
 # Foreground color
 F_Red='\U1b[38;5;1m'    # Red
 F_Green='\U1b[38;5;2m'  # Green
@@ -19,7 +19,7 @@ B_Yellow='\U1b[48;5;11m' # Bright Yellow
 B_Blue='\U1b[48;5;12m'   # Bright Blue
 B_Purple='\U1b[48;5;13m' # Bright Magenta
 B_Cyan='\U1b[48;5;14m'   # Bright Cyan
-    # ───────────────────────────────────────────────────────────┤
+# ───────────────────────────────────────────────────────────┤
 # Bold/Bright
 Bold='\U1b[1m'     # Bold
 No_Bold='\U1b[21m' # Reset Bold
@@ -41,7 +41,7 @@ No_Hidden='\U1b[28m' # Reset Hidden
 
 # Resets all colors and formatting
 No_Attributes='\U1b[0m'
-    # ───────────────────────────────────────────────────────────┤
+# ───────────────────────────────────────────────────────────┤
 # Dynamic size of Terminal window
 # ╭──────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
 # │ List item 1: The distance in pixels from the left side of the screen to the left side of the Terminal window.    │
@@ -58,7 +58,7 @@ terminalWindowMainMenuSize:0() {
     osascript -e 'tell application "Terminal" to set font name of first window to "SF Mono"'
     osascript -e 'tell application "Terminal" to set font size of first window to "11"'
 }
-    # ───────────────────────────────────────────────────────────┤
+# ───────────────────────────────────────────────────────────┤
 # Terminal window size: 90x25
 terminalWindowSize:90x25() {
     osascript -e 'tell application "Terminal" to set bounds of front window to {0, 20, 645, 415}'
@@ -89,7 +89,7 @@ terminalWindowSize:90x55() {
     osascript -e 'tell application "Terminal" to set bounds of front window to {0, 20, 645, 830}'
     clear
 }
-    # ───────────────────────────────────────────────────────────┤
+# ───────────────────────────────────────────────────────────┤
 # Terminal window size: 100x25
 terminalWindowSize:100x25() {
     osascript -e 'tell application "Terminal" to set bounds of front window to {0, 20, 715, 415}'
@@ -120,7 +120,7 @@ terminalWindowSize:100x55() {
     osascript -e 'tell application "Terminal" to set bounds of front window to {0, 20, 715, 830}'
     clear
 }
-    # ───────────────────────────────────────────────────────────┤
+# ───────────────────────────────────────────────────────────┤
 # Terminal window size: 112x25
 terminalWindowSize:112x25() {
     osascript -e 'tell application "Terminal" to set bounds of front window to {0, 20, 800, 415}'
@@ -151,7 +151,7 @@ terminalWindowSize:112x55() {
     osascript -e 'tell application "Terminal" to set bounds of front window to {0, 20, 800, 830}'
     clear
 }
-    # ───────────────────────────────────────────────────────────┤
+# ───────────────────────────────────────────────────────────┤
 # Terminal window size: 132x25
 terminalWindowSize:132x25() {
     osascript -e 'tell application "Terminal" to set bounds of front window to {0, 20, 935, 415}'
@@ -182,7 +182,7 @@ terminalWindowSize:132x55() {
     osascript -e 'tell application "Terminal" to set bounds of front window to {0, 20, 935, 830}'
     clear
 }
-    # ───────────────────────────────────────────────────────────┤
+# ───────────────────────────────────────────────────────────┤
 # Terminal window size: 140x25
 terminalWindowSize:140x25() {
     osascript -e 'tell application "Terminal" to set bounds of front window to {0, 20, 995, 415}'
@@ -213,7 +213,7 @@ terminalWindowSize:140x55() {
     osascript -e 'tell application "Terminal" to set bounds of front window to {0, 20, 995, 830}'
     clear
 }
-    # ───────────────────────────────────────────────────────────┤
+# ───────────────────────────────────────────────────────────┤
 # Terminal window size: 165x25
 terminalWindowSize:165x25() {
     osascript -e 'tell application "Terminal" to set bounds of front window to {0, 20, 1165, 415}'
@@ -244,7 +244,7 @@ terminalWindowSize:165x55() {
     osascript -e 'tell application "Terminal" to set bounds of front window to {0, 20, 1165, 830}'
     clear
 }
-    # ───────────────────────────────────────────────────────────┤
+# ───────────────────────────────────────────────────────────┤
 # Terminal window size: 190x25
 terminalWindowSize:190x25() {
     osascript -e 'tell application "Terminal" to set bounds of front window to {0, 20, 1340, 415}'
@@ -275,7 +275,7 @@ terminalWindowSize:190x55() {
     osascript -e 'tell application "Terminal" to set bounds of front window to {0, 20, 1340, 830}'
     clear
 }
-    # ───────────────────────────────────────────────────────────┤
+# ───────────────────────────────────────────────────────────┤
 # Command A: Color themes for the Terminal set "Homebrew"
 setHomebrew() {
     osascript -e 'tell application "Terminal" to set current settings of first window to settings set "Homebrew"'
@@ -317,7 +317,7 @@ setBasic() {
     osascript -e 'tell application "Terminal" to set font name of first window to "SF Mono"'
     osascript -e 'tell application "Terminal" to set font size of first window to "11"'
 }
-    # ───────────────────────────────────────────────────────────┤
+# ───────────────────────────────────────────────────────────┤
 # Command I: Installing the Xcode CLT
 installingXCLT() {
     terminalWindowSize:90x25
@@ -367,7 +367,7 @@ downloadBetaRelease() {
 projectPageOnGitHub() {
     open https://github.com/Oleg-Chashko/SSToolbox
 }
-    # ───────────────────────────────────────────────────────────┤
+# ───────────────────────────────────────────────────────────┤
 # Asks password
 askPassword() {
     case $ROOT_PASSWORD in
@@ -393,7 +393,7 @@ checkDNS() {
     dig google.com +noall +answer +stats | awk '$3 == "IN" && $4 == "A"{ip=$5}/Query time:/{t=$4 " " $5}/SERVER:/{serv=$3} END{print "IP (Google): "ip, "\nRequest execution time: "t, "\nIP DNS server: "serv}'
     echo "${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
 }
-    # ───────────────────────────────────────────────────────────┤
+# ───────────────────────────────────────────────────────────┤
 # Main Menu
 mainMenu() {
     terminalWindowMainMenuSize:0
