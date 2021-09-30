@@ -4,66 +4,60 @@
 RELEASE_VERSION="v.0.7.0 build [09.30.2021]"
 ROOT_PASSWORD=0
 
-# ═══════════════════════════════════════════════════════════╣
+# Foreground color
+F_Red='\U1b[38;5;1m'    # Red
+F_Green='\U1b[38;5;2m'  # Green
+F_Yellow='\U1b[38;5;3m' # Yellow
+F_Blue='\U1b[38;5;4m'   # Blue
+F_Purple='\U1b[38;5;5m' # Magenta
+F_Cyan='\U1b[38;5;6m'   # Cyan
 
-# Foreground
-F_Red='\033[0;31m'    # Red
-F_Green='\033[0;32m'  # Green
-F_Yellow='\033[0;33m' # Yellow
-F_Blue='\033[0;34m'   # Blue
-F_Purple='\033[0;35m' # Magenta
-F_Cyan='\033[0;36m'   # Cyan
-
-# Background
-B_Red='\033[0;101m'    # Light Red
-B_Green='\033[0;102m'  # Light Green
-B_Yellow='\033[0;103m' # Light Yellow
-B_Blue='\033[0;104m'   # Light Blue
-B_Purple='\033[0;105m' # Light Magenta
-B_Cyan='\033[0;106m'   # Light Cyan
+# Background color
+B_Red='\U1b[48;5;9m'     # Bright Red
+B_Green='\U1b[48;5;10m'  # Bright Green
+B_Yellow='\U1b[48;5;11m' # Bright Yellow
+B_Blue='\U1b[48;5;12m'   # Bright Blue
+B_Purple='\U1b[48;5;13m' # Bright Magenta
+B_Cyan='\U1b[48;5;14m'   # Bright Cyan
 
 # Bold/Bright
-Bold='\033[1m'     # Bold
-No_Bold='\033[21m' # Reset Bold
+Bold='\U1b[1m'     # Bold
+No_Bold='\U1b[21m' # Reset Bold
 # Dim
-Dim='\033[2m'     # Dim
-No_Dim='\033[22m' # Reset Dim
+Dim='\U1b[2m'     # Dim
+No_Dim='\U1b[22m' # Reset Dim
 # Italic
-Italic='\033[3m'     # Italic
-No_Italic='\033[23m' # Reset Italic
+Italic='\U1b[3m'     # Italic
+No_Italic='\U1b[23m' # Reset Italic
 # Underline
-ULine='\033[4m'     # Underline
-No_ULine='\033[24m' # Reset Underlined
+ULine='\U1b[4m'     # Underline
+No_ULine='\U1b[24m' # Reset Underlined
 # Blink
-Blink='\033[5m'     # Blink
-No_Blink='\033[25m' # Reset Blink
+Blink='\U1b[5m'     # Blink
+No_Blink='\U1b[25m' # Reset Blink
 # Hidden
-Hidden='\033[8m'     # Hidden
-No_Hidden='\033[28m' # Reset Hidden
+Hidden='\U1b[8m'     # Hidden
+No_Hidden='\U1b[28m' # Reset Hidden
 
 # Resets all colors and formatting
-No_Attributes='\033[0m'
-
-# ═══════════════════════════════════════════════════════════╣
+No_Attributes='\U1b[0m'
 
 # Dynamic size of Terminal window
-# ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗
-# List item 1: The distance in pixels from the left side of the screen to the left side of the Terminal window.      ║
-# List item 2: The distance in pixels from the top of the screen to the top of the Terminal window.                  ║
-# List item 3: The distance in pixels from the left side of the screen to the right side of the Terminal window.     ║
-# List item 4: The distance in pixels from the top of the screen to the bottom of the Terminal window.               ║
-# ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝
+# ╭──────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
+# │ List item 1: The distance in pixels from the left side of the screen to the left side of the Terminal window.    │
+# │ List item 2: The distance in pixels from the top of the screen to the top of the Terminal window.                │
+# │ List item 3: The distance in pixels from the left side of the screen to the right side of the Terminal window.   │
+# │ List item 4: The distance in pixels from the top of the screen to the bottom of the Terminal window.             │
+# ╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
 
-# Terminal window the Main Menu size: 132x40
+# Terminal window the Main Menu size: 132x41
 terminalWindowMainMenuSize:0() {
     clear
     osascript -e 'tell application "Terminal" to set cursor color of first window to {55512, 15163, 12593}'
-    osascript -e 'tell application "Terminal" to set bounds of front window to {0, 20, 935, 620}'
+    osascript -e 'tell application "Terminal" to set bounds of front window to {0, 20, 935, 640}'
     osascript -e 'tell application "Terminal" to set font name of first window to "SF Mono"'
     osascript -e 'tell application "Terminal" to set font size of first window to "11"'
 }
-
-# ═══════════════════════════════════════════════════════════╣
 
 # Terminal window size: 90x25
 terminalWindowSize:90x25() {
@@ -95,9 +89,7 @@ terminalWindowSize:90x55() {
     osascript -e 'tell application "Terminal" to set bounds of front window to {0, 20, 645, 830}'
     clear
 }
-
-# ═════════════════════════════╣
-
+# ───────────────────────────────────────────────────────────┤
 # Terminal window size: 100x25
 terminalWindowSize:100x25() {
     osascript -e 'tell application "Terminal" to set bounds of front window to {0, 20, 715, 415}'
@@ -128,9 +120,7 @@ terminalWindowSize:100x55() {
     osascript -e 'tell application "Terminal" to set bounds of front window to {0, 20, 715, 830}'
     clear
 }
-
-# ═════════════════════════════╣
-
+# ───────────────────────────────────────────────────────────┤
 # Terminal window size: 112x25
 terminalWindowSize:112x25() {
     osascript -e 'tell application "Terminal" to set bounds of front window to {0, 20, 800, 415}'
@@ -161,9 +151,7 @@ terminalWindowSize:112x55() {
     osascript -e 'tell application "Terminal" to set bounds of front window to {0, 20, 800, 830}'
     clear
 }
-
-# ═════════════════════════════╣
-
+# ───────────────────────────────────────────────────────────┤
 # Terminal window size: 132x25
 terminalWindowSize:132x25() {
     osascript -e 'tell application "Terminal" to set bounds of front window to {0, 20, 935, 415}'
@@ -194,9 +182,7 @@ terminalWindowSize:132x55() {
     osascript -e 'tell application "Terminal" to set bounds of front window to {0, 20, 935, 830}'
     clear
 }
-
-# ═════════════════════════════╣
-
+# ───────────────────────────────────────────────────────────┤
 # Terminal window size: 140x25
 terminalWindowSize:140x25() {
     osascript -e 'tell application "Terminal" to set bounds of front window to {0, 20, 995, 415}'
@@ -227,9 +213,7 @@ terminalWindowSize:140x55() {
     osascript -e 'tell application "Terminal" to set bounds of front window to {0, 20, 995, 830}'
     clear
 }
-
-# ═════════════════════════════╣
-
+# ───────────────────────────────────────────────────────────┤
 # Terminal window size: 165x25
 terminalWindowSize:165x25() {
     osascript -e 'tell application "Terminal" to set bounds of front window to {0, 20, 1165, 415}'
@@ -260,9 +244,7 @@ terminalWindowSize:165x55() {
     osascript -e 'tell application "Terminal" to set bounds of front window to {0, 20, 1165, 830}'
     clear
 }
-
-# ═════════════════════════════╣
-
+# ───────────────────────────────────────────────────────────┤
 # Terminal window size: 190x25
 terminalWindowSize:190x25() {
     osascript -e 'tell application "Terminal" to set bounds of front window to {0, 20, 1340, 415}'
@@ -293,9 +275,7 @@ terminalWindowSize:190x55() {
     osascript -e 'tell application "Terminal" to set bounds of front window to {0, 20, 1340, 830}'
     clear
 }
-
-# ═══════════════════════════════════════════════════════════╣
-
+# ───────────────────────────────────────────────────────────┤
 # Color themes for the Terminal.app
 
 # Command A: Terminal set "Homebrew"
@@ -344,9 +324,7 @@ setBasic() {
     osascript -e 'tell application "Terminal" to set font name of first window to "SF Mono"'
     osascript -e 'tell application "Terminal" to set font size of first window to "11"'
 }
-
-# ═══════════════════════════════════════════════════════════╣
-
+# ───────────────────────────────────────────────────────────┤
 # Asks password
 askPassword() {
     case $ROOT_PASSWORD in
@@ -375,54 +353,53 @@ checkDNS() {
     dig google.com +noall +answer +stats | awk '$3 == "IN" && $4 == "A"{ip=$5}/Query time:/{t=$4 " " $5}/SERVER:/{serv=$3} END{print "IP (Google): "ip, "\nRequest execution time: "t, "\nIP DNS server: "serv}'
     echo "${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
 }
-
-# ═══════════════════════════════════════════════════════════╣
+# ───────────────────────────────────────────────────────────┤
 
 # Main Menu
 mainMenu() {
     terminalWindowMainMenuSize:0
-    echo "${Dim}                                                 ${Dim}${Bold}SSToolbox${No_Attributes} ${Dim}${RELEASE_VERSION}${No_Attributes}"
-    echo "${Dim}╔════╦═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════ ${F_Blue}${Bold}Network ${No_Attributes}${Dim}═╗${No_Attributes}"
-    echo "${Dim}║${No_Attributes}${F_Red}${Bold}  1${No_Attributes} ${Dim}║${No_Attributes} Custom DNS servers for Wi-Fi                                                                                                ${Dim}║${No_Attributes}"
-    echo "${Dim}║${No_Attributes}${F_Red}${Bold}  2${No_Attributes} ${Dim}║${No_Attributes} Custom DNS servers for Ethernet                                                                                             ${Dim}║${No_Attributes}"
-    echo "${Dim}║${No_Attributes}${F_Red}${Bold}  3${No_Attributes} ${Dim}║${No_Attributes} Custom ping and tracerout test IPv4/IPv6                                                                                    ${Dim}║${No_Attributes}"
-    echo "${Dim}║${No_Attributes}${F_Red}${Bold}  4${No_Attributes} ${Dim}║${No_Attributes} Automatic ping and tracerout test IPv4/IPv6                                                                                 ${Dim}║${No_Attributes}"
-    echo "${Dim}║${No_Attributes}${F_Red}${Bold}  5${No_Attributes} ${Dim}║${No_Attributes} Custom setting a new Computer Name, Hostname, Local Hostname and NetBIOS Name                                               ${Dim}║${No_Attributes}"
-    echo "${Dim}║${No_Attributes}${F_Red}${Bold}  6${No_Attributes} ${Dim}║${No_Attributes} Custom editing of the Hosts file: (Block IP Addresses and Reroute Web Addresses)                                            ${Dim}║${No_Attributes}"
-    echo "${Dim}║${No_Attributes}${F_Red}${Bold}  7${No_Attributes} ${Dim}║${No_Attributes} Show Wireless Network Password                                                                                              ${Dim}║${No_Attributes}"
-    echo "${Dim}║${No_Attributes}${F_Red}${Bold}  8${No_Attributes} ${Dim}║${No_Attributes} Search Routers on local Networks, uses the default IP addresses                                                             ${Dim}║${No_Attributes}"
-    echo "${Dim}║${No_Attributes}${F_Red}${Bold}  9${No_Attributes} ${Dim}║${No_Attributes} Flushes local DNS cache, used for problems with loading sites, 404 error                                                    ${Dim}║${No_Attributes}"
-    echo "${Dim}║${No_Attributes}${F_Red}${Bold} 10${No_Attributes} ${Dim}║${No_Attributes} Release and Renew DHCP for all available device interfaces. (Requires a reboot)                                             ${Dim}║${No_Attributes}"
-    echo "${Dim}║${No_Attributes}${F_Red}${Bold} 11${No_Attributes} ${Dim}║${No_Attributes} Spoofing the MAC Address of the Wireless network to a randomly generated MAC address                                        ${Dim}║${No_Attributes}"
-    echo "${Dim}║${No_Attributes}${F_Red}${Bold} 12${No_Attributes} ${Dim}║${No_Attributes} Check DNS records of the domain, to obtain the mapping between domain name and IPv4/IPv6 address                            ${Dim}║${No_Attributes}"
-    echo "${Dim}║${No_Attributes}${F_Red}${Bold} 13${No_Attributes} ${Dim}║${No_Attributes} Search all processes for all users and view network data by Internet protocol TCP/UDP and version IPv4/IPv6                 ${Dim}║${No_Attributes}"
-    echo "${Dim}║${No_Attributes}${F_Red}${Bold} 14${No_Attributes} ${Dim}║${No_Attributes} Stress Test Network with ICMP-Sweep and ICMP-Flood. (This can be very hard on a network and should be used with caution)    ${Dim}║${No_Attributes}"
-    echo "${Dim}║${No_Attributes}${F_Red}${Bold} 15${No_Attributes} ${Dim}║${No_Attributes} Show information: Firewall, Wireless, Local Network, DHCP-/IP-/MAC-Addresses of Devices on a Local Network and etc.         ${Dim}║${No_Attributes}"
-    echo "${Dim}╠════╬════════════════════════════════════════════════════════════════════════════════════════════════════════════════════ ${F_Blue}${Bold}Tweaks ${No_Attributes}${Dim}═╣${No_Attributes}"
-    echo "${Dim}║${No_Attributes}${F_Red}${Bold} 16${No_Attributes} ${Dim}║${No_Attributes} Enable or Disable the show of Hidden files                                                                                  ${Dim}║${No_Attributes}"
-    echo "${Dim}║${No_Attributes}${F_Red}${Bold} 17${No_Attributes} ${Dim}║${No_Attributes} Enable or Disable the show of all File Extensions                                                                           ${Dim}║${No_Attributes}"
-    echo "${Dim}║${No_Attributes}${F_Red}${Bold} 18${No_Attributes} ${Dim}║${No_Attributes} Enable or Disable the show of Attachments as Icons in the Apple Mail app                                                    ${Dim}║${No_Attributes}"
-    echo "${Dim}║${No_Attributes}${F_Red}${Bold} 19${No_Attributes} ${Dim}║${No_Attributes} Enable or Disable the show of the full path in the Finder 'Title' window                                                    ${Dim}║${No_Attributes}"
-    echo "${Dim}║${No_Attributes}${F_Red}${Bold} 20${No_Attributes} ${Dim}║${No_Attributes} Change the default Screenshot file format                                                                                   ${Dim}║${No_Attributes}"
-    echo "${Dim}║${No_Attributes}${F_Red}${Bold} 21${No_Attributes} ${Dim}║${No_Attributes} Enable or Disable Screenshot with shadow and adding extra pixels                                                            ${Dim}║${No_Attributes}"
-    echo "${Dim}║${No_Attributes}${F_Red}${Bold} 22${No_Attributes} ${Dim}║${No_Attributes} Enable or Disable the warning before emptying the Trash                                                                     ${Dim}║${No_Attributes}"
-    echo "${Dim}║${No_Attributes}${F_Red}${Bold} 23${No_Attributes} ${Dim}║${No_Attributes} Enable or Disable warning when changing a file Extension                                                                    ${Dim}║${No_Attributes}"
-    echo "${Dim}║${No_Attributes}${F_Red}${Bold} 24${No_Attributes} ${Dim}║${No_Attributes} Search (Current or Previous Scope or This Mac) folder by default                                                            ${Dim}║${No_Attributes}"
-    echo "${Dim}║${No_Attributes}${F_Red}${Bold} 25${No_Attributes} ${Dim}║${No_Attributes} Enable or Disable in TextEdit the create an Untitled Document at Launch                                                     ${Dim}║${No_Attributes}"
-    echo "${Dim}║${No_Attributes}${F_Red}${Bold} 26${No_Attributes} ${Dim}║${No_Attributes} Enable or Disable copy Email addresses as 'foo@example.com' instead of 'Foo Bar <foo@example.com>' in Apple Mail app        ${Dim}║${No_Attributes}"
-    echo "${Dim}╠════╬═════════════════════════════════════════════════════════════════════════════ ${F_Red}${Dim}Caution: Use At Your Own Risk${No_Attributes} ${Dim}═${No_Attributes} ${F_Blue}${Bold}OS Management ${No_Attributes}${Dim}═╣${No_Attributes}"
-    echo "${Dim}║${No_Attributes}${F_Red}${Bold} 27${No_Attributes} ${Dim}║${No_Attributes} Logs system Management: Cleaning the Logs and Inactive memory                                  ${Dim}╔════════════════════════════╣${No_Attributes}"
-    echo "${Dim}║${No_Attributes}${F_Red}${Bold} 28${No_Attributes} ${Dim}║${No_Attributes} I/O system Management: Manually and Automatic Delete, Plugins Input and Output device          ${Dim}║${No_Attributes} ${F_Red}${Bold}A${No_Attributes}${Dim}•${F_Red}${Bold}S${No_Attributes}${Dim}•${F_Red}${Bold}D${No_Attributes}${Dim}•${F_Red}${Bold}F${No_Attributes}${Dim}•${F_Red}${Bold}G${No_Attributes}${Dim}•${F_Red}${Bold}H${No_Attributes} Color profiles ${Dim}║${No_Attributes}"
-    echo "${Dim}║${No_Attributes}${F_Red}${Bold} 29${No_Attributes} ${Dim}║${No_Attributes} Kernel OS Management: Cleaning kernel Extension, Rebuild Kexts Caches, etc. (Requires a reboot)${Dim}║${No_Attributes} ${F_Red}${Bold}I${No_Attributes}nstalling Xcode CLT       ${Dim}║${No_Attributes}"
-    echo "${Dim}║${No_Attributes}${F_Red}${Bold} 30${No_Attributes} ${Dim}║${No_Attributes} Privacy Database Management: Custom reset apps permissions under Security and Privacy          ${Dim}║${No_Attributes} ${F_Red}${Bold}U${No_Attributes}ninstalling Xcode CLT     ${Dim}║${No_Attributes}"
-    echo "${Dim}║${No_Attributes}${F_Red}${Bold} 31${No_Attributes} ${Dim}║${No_Attributes} GateKeeper Management: Status, Enable or Disable, Remove app from Quarantine, Self-sign the app${Dim}║${No_Attributes} ${F_Red}${Bold}L${No_Attributes}atest-/${F_Red}${Bold}B${No_Attributes}eta-Release ${ULine}▽${No_Attributes}     ${Dim}║${No_Attributes}"
-    echo "${Dim}║${No_Attributes}${F_Red}${Bold} 32${No_Attributes} ${Dim}║${No_Attributes} Process & Memory Management: Manage Processes, Terminate (Kill) a Process and Purge Memory     ${Dim}║${No_Attributes} ${F_Red}${Bold}P${No_Attributes}roject page on GitHub     ${Dim}║${No_Attributes}"
-    echo "${Dim}║${No_Attributes}${F_Red}${Bold} 33${No_Attributes} ${Dim}║${No_Attributes} Uninstalling applications: Browsers, Microsoft Office, Ad blocking extension, Virtual machines ${Dim}║${No_Attributes} ${F_Red}${Bold}Q${No_Attributes}uit SSToolbox             ${Dim}║${No_Attributes}"
-    echo "${Dim}╚════╩════════════════════════════════════════════════════════════════════════════════════════════════╩════════════════════════════╝${No_Attributes}\n"
+    echo "${Dim}                                                ╭────────────────────────────────────╮${No_Attributes}"
+    echo "${Dim}                                                │${Dim}${Bold}SSToolbox${No_Attributes} ${Dim}${RELEASE_VERSION}│${No_Attributes}"
+    echo "${Dim}╭────┬──────────────────────────────────────────┴────────────────────────────────────┴─────────────────────────────────── ${No_Attributes}${F_Blue}${Bold}Network ${No_Attributes}${Dim}─╮${No_Attributes}"
+    echo "${Dim}│${No_Attributes}${F_Red}${Bold}  1${No_Attributes} ${Dim}│${No_Attributes} Custom DNS servers for Wi-Fi                                                                                                ${Dim}│${No_Attributes}"
+    echo "${Dim}│${No_Attributes}${F_Red}${Bold}  2${No_Attributes} ${Dim}│${No_Attributes} Custom DNS servers for Ethernet                                                                                             ${Dim}│${No_Attributes}"
+    echo "${Dim}│${No_Attributes}${F_Red}${Bold}  3${No_Attributes} ${Dim}│${No_Attributes} Custom ping and tracerout test IPv4/IPv6                                                                                    ${Dim}│${No_Attributes}"
+    echo "${Dim}│${No_Attributes}${F_Red}${Bold}  4${No_Attributes} ${Dim}│${No_Attributes} Automatic ping and tracerout test IPv4/IPv6                                                                                 ${Dim}│${No_Attributes}"
+    echo "${Dim}│${No_Attributes}${F_Red}${Bold}  5${No_Attributes} ${Dim}│${No_Attributes} Custom setting a new Computer Name, Hostname, Local Hostname and NetBIOS Name                                               ${Dim}│${No_Attributes}"
+    echo "${Dim}│${No_Attributes}${F_Red}${Bold}  6${No_Attributes} ${Dim}│${No_Attributes} Custom editing of the Hosts file: (Block IP Addresses and Reroute Web Addresses)                                            ${Dim}│${No_Attributes}"
+    echo "${Dim}│${No_Attributes}${F_Red}${Bold}  7${No_Attributes} ${Dim}│${No_Attributes} Show Wireless Network Password                                                                                              ${Dim}│${No_Attributes}"
+    echo "${Dim}│${No_Attributes}${F_Red}${Bold}  8${No_Attributes} ${Dim}│${No_Attributes} Search Routers on local Networks, uses the default IP addresses                                                             ${Dim}│${No_Attributes}"
+    echo "${Dim}│${No_Attributes}${F_Red}${Bold}  9${No_Attributes} ${Dim}│${No_Attributes} Flushes local DNS cache, used for problems with loading sites, 404 error                                                    ${Dim}│${No_Attributes}"
+    echo "${Dim}│${No_Attributes}${F_Red}${Bold} 10${No_Attributes} ${Dim}│${No_Attributes} Release and Renew DHCP for all available device interfaces. (Requires a reboot)                                             ${Dim}│${No_Attributes}"
+    echo "${Dim}│${No_Attributes}${F_Red}${Bold} 11${No_Attributes} ${Dim}│${No_Attributes} Spoofing the MAC Address of the Wireless network to a randomly generated MAC address                                        ${Dim}│${No_Attributes}"
+    echo "${Dim}│${No_Attributes}${F_Red}${Bold} 12${No_Attributes} ${Dim}│${No_Attributes} Check DNS records of the domain, to obtain the mapping between domain name and IPv4/IPv6 address                            ${Dim}│${No_Attributes}"
+    echo "${Dim}│${No_Attributes}${F_Red}${Bold} 13${No_Attributes} ${Dim}│${No_Attributes} Search all processes for all users and view network data by Internet protocol TCP/UDP and version IPv4/IPv6                 ${Dim}│${No_Attributes}"
+    echo "${Dim}│${No_Attributes}${F_Red}${Bold} 14${No_Attributes} ${Dim}│${No_Attributes} Stress Test Network with ICMP-Sweep and ICMP-Flood. (This can be very hard on a network and should be used with caution)    ${Dim}│${No_Attributes}"
+    echo "${Dim}│${No_Attributes}${F_Red}${Bold} 15${No_Attributes} ${Dim}│${No_Attributes} Show information: Firewall, Wireless, Local Network, DHCP-/IP-/MAC-Addresses of Devices on a Local Network and etc.         ${Dim}│${No_Attributes}"
+    echo "${Dim}├────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────── ${No_Attributes}${F_Blue}${Bold}Tweaks ${No_Attributes}${Dim}─┤${No_Attributes}"
+    echo "${Dim}│${No_Attributes}${F_Red}${Bold} 16${No_Attributes} ${Dim}│${No_Attributes} Enable or Disable the show of Hidden files                                                                                  ${Dim}│${No_Attributes}"
+    echo "${Dim}│${No_Attributes}${F_Red}${Bold} 17${No_Attributes} ${Dim}│${No_Attributes} Enable or Disable the show of all File Extensions                                                                           ${Dim}│${No_Attributes}"
+    echo "${Dim}│${No_Attributes}${F_Red}${Bold} 18${No_Attributes} ${Dim}│${No_Attributes} Enable or Disable the show of Attachments as Icons in the Apple Mail app                                                    ${Dim}│${No_Attributes}"
+    echo "${Dim}│${No_Attributes}${F_Red}${Bold} 19${No_Attributes} ${Dim}│${No_Attributes} Enable or Disable the show of the full path in the Finder 'Title' window                                                    ${Dim}│${No_Attributes}"
+    echo "${Dim}│${No_Attributes}${F_Red}${Bold} 20${No_Attributes} ${Dim}│${No_Attributes} Change the default Screenshot file format                                                                                   ${Dim}│${No_Attributes}"
+    echo "${Dim}│${No_Attributes}${F_Red}${Bold} 21${No_Attributes} ${Dim}│${No_Attributes} Enable or Disable Screenshot with shadow and adding extra pixels                                                            ${Dim}│${No_Attributes}"
+    echo "${Dim}│${No_Attributes}${F_Red}${Bold} 22${No_Attributes} ${Dim}│${No_Attributes} Enable or Disable the warning before emptying the Trash                                                                     ${Dim}│${No_Attributes}"
+    echo "${Dim}│${No_Attributes}${F_Red}${Bold} 23${No_Attributes} ${Dim}│${No_Attributes} Enable or Disable warning when changing a file Extension                                                                    ${Dim}│${No_Attributes}"
+    echo "${Dim}│${No_Attributes}${F_Red}${Bold} 24${No_Attributes} ${Dim}│${No_Attributes} Search (Current or Previous Scope or This Mac) folder by default                                                            ${Dim}│${No_Attributes}"
+    echo "${Dim}│${No_Attributes}${F_Red}${Bold} 25${No_Attributes} ${Dim}│${No_Attributes} Enable or Disable in TextEdit the create an Untitled Document at Launch                                                     ${Dim}│${No_Attributes}"
+    echo "${Dim}│${No_Attributes}${F_Red}${Bold} 26${No_Attributes} ${Dim}│${No_Attributes} Enable or Disable copy Email addresses as 'foo@example.com' instead of 'Foo Bar <foo@example.com>' in Apple Mail app        ${Dim}│${No_Attributes}"
+    echo "${Dim}├────┼───────────────────────────────────────────────────────────────────────────── ${F_Red}${Dim}Caution: Use At Your Own Risk${No_Attributes} ${Dim}─${No_Attributes} ${F_Blue}${Bold}OS Management ${No_Attributes}${Dim}─┤${No_Attributes}"
+    echo "${Dim}│${No_Attributes}${F_Red}${Bold} 27${No_Attributes} ${Dim}│${No_Attributes} Logs system Management: Cleaning the Logs and Inactive memory                                  ${Dim}╭────────────────────────────┤${No_Attributes}"
+    echo "${Dim}│${No_Attributes}${F_Red}${Bold} 28${No_Attributes} ${Dim}│${No_Attributes} I/O system Management: Manually and Automatic Delete, Plugins Input and Output device          ${Dim}│${No_Attributes} ${F_Red}${Bold}A${No_Attributes}${Dim}•${No_Attributes}${F_Red}${Bold}S${No_Attributes}${Dim}•${No_Attributes}${F_Red}${Bold}D${No_Attributes}${Dim}•${No_Attributes}${F_Red}${Bold}F${No_Attributes}${Dim}•${No_Attributes}${F_Red}${Bold}G${No_Attributes}${Dim}•${No_Attributes}${F_Red}${Bold}H${No_Attributes} Color profiles ${Dim}│${No_Attributes}"
+    echo "${Dim}│${No_Attributes}${F_Red}${Bold} 29${No_Attributes} ${Dim}│${No_Attributes} Kernel OS Management: Cleaning kernel Extension, Rebuild Kexts Caches, etc. (Requires a reboot)${Dim}│${No_Attributes} ${F_Red}${Bold}I${No_Attributes}nstalling Xcode CLT       ${Dim}│${No_Attributes}"
+    echo "${Dim}│${No_Attributes}${F_Red}${Bold} 30${No_Attributes} ${Dim}│${No_Attributes} Privacy Database Management: Custom reset apps permissions under Security and Privacy          ${Dim}│${No_Attributes} ${F_Red}${Bold}U${No_Attributes}ninstalling Xcode CLT     ${Dim}│${No_Attributes}"
+    echo "${Dim}│${No_Attributes}${F_Red}${Bold} 31${No_Attributes} ${Dim}│${No_Attributes} GateKeeper Management: Status, Enable or Disable, Remove app from Quarantine, Self-sign the app${Dim}│${No_Attributes} ${F_Red}${Bold}L${No_Attributes}atest-/${F_Red}${Bold}B${No_Attributes}eta-Release ↆ     ${Dim}│${No_Attributes}"
+    echo "${Dim}│${No_Attributes}${F_Red}${Bold} 32${No_Attributes} ${Dim}│${No_Attributes} Process & Memory Management: Manage Processes, Terminate (Kill) a Process and Purge Memory     ${Dim}│${No_Attributes} ${F_Red}${Bold}P${No_Attributes}roject page on GitHub     ${Dim}│${No_Attributes}"
+    echo "${Dim}│${No_Attributes}${F_Red}${Bold} 33${No_Attributes} ${Dim}│${No_Attributes} Uninstalling applications: Browsers, Microsoft Office, Ad blocking extension, Virtual machines ${Dim}│${No_Attributes} ${F_Red}${Bold}Q${No_Attributes}uit SSToolbox           𓃠 ${Dim}│${No_Attributes}"
+    echo "${Dim}╰────┴────────────────────────────────────────────────────────────────────────────────────────────────┴────────────────────────────╯${No_Attributes}\n"
 }
 
-# ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-
+# ───────────────────────────────────────────────────────────┤
 # Command I: Installing the Xcode CLT
 installingXCLT() {
     terminalWindowSize:90x25
@@ -441,8 +418,7 @@ uninstallingXCLT() {
     continueMessage
 }
 
-# ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-
+# ───────────────────────────────────────────────────────────┤
 # Command Q: Quit SSToolbox
 quitSSToolbox() {
     terminalWindowSize:90x25
@@ -480,8 +456,7 @@ projectPageOnGitHub() {
     open https://github.com/Oleg-Chashko/SSToolbox
 }
 
-# ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-
+# ───────────────────────────────────────────────────────────┤
 # Command 1: Custom DNS servers for Wi-Fi
 customDNSServersForWi-Fi() {
     terminalWindowSize:132x55
@@ -521,8 +496,7 @@ customDNSServersForWi-Fi() {
     read "?  Please enter a command: " CHOICES
     case $CHOICES in
 
-    # ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-
+    # ───────────────────────────────────────────────────────────┤
     # Cloudflare set as DNS server
     1)
         askPassword
@@ -671,8 +645,7 @@ customDNSServersForWi-Fi() {
     continueMessage
 }
 
-# ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-
+# ───────────────────────────────────────────────────────────┤
 # Command 2: Custom DNS servers for Ethernet
 customDNSServersForEthernet() {
     terminalWindowSize:132x55
@@ -712,8 +685,7 @@ customDNSServersForEthernet() {
     read "?  Please enter a command: " CHOICES
     case $CHOICES in
 
-    # ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-
+    # ───────────────────────────────────────────────────────────┤
     # Cloudflare set as DNS server
     1)
         askPassword
@@ -862,8 +834,7 @@ customDNSServersForEthernet() {
     continueMessage
 }
 
-# ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-
+# ───────────────────────────────────────────────────────────┤
 # Command 3: Custom ping and tracerout test IPv4/IPv6
 customPingAndTraceroutTestIPv4/IPv6() {
     terminalWindowSize:90x25
@@ -882,8 +853,7 @@ customPingAndTraceroutTestIPv4/IPv6() {
     read "?  Please enter a command: " CHOICES
     case $CHOICES in
 
-    # ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-
+    # ───────────────────────────────────────────────────────────┤
     # Test Ping IPv4
     1)
         terminalWindowSize:90x55
@@ -948,8 +918,7 @@ customPingAndTraceroutTestIPv4/IPv6() {
     continueMessage
 }
 
-# ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-
+# ───────────────────────────────────────────────────────────┤
 # Command 4: Automatic ping and tracerout test IPv4/IPv6
 automaticPingAndTraceroutTestIPv4/IPv6() {
     terminalWindowSize:140x55
@@ -1014,8 +983,7 @@ automaticPingAndTraceroutTestIPv4/IPv6() {
     continueMessage
 }
 
-# ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-
+# ───────────────────────────────────────────────────────────┤
 # Command 5: Custom setting a new Computer Name, Hostname, Local Hostname and NetBIOS Name
 customSettingComputerName() {
     terminalWindowSize:100x30
@@ -1047,8 +1015,7 @@ customSettingComputerName() {
     continueMessage
 }
 
-# ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-
+# ───────────────────────────────────────────────────────────┤
 # Command 6: Custom editing of the Hosts file and Flush DNS cache
 customEditingHostsFile() {
     terminalWindowSize:165x55
@@ -1095,8 +1062,7 @@ customEditingHostsFile() {
     continueMessage
 }
 
-# ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-
+# ───────────────────────────────────────────────────────────┤
 # Command 7: Show Wireless Network Password
 wifiShowPassword() {
     terminalWindowSize:90x25
@@ -1113,8 +1079,7 @@ wifiShowPassword() {
     continueMessage
 }
 
-# ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-
+# ───────────────────────────────────────────────────────────┤
 # Command 8: Search Routers on local Networks, uses the default IP addresses
 searchRoutersLocalNetworks() {
     terminalWindowSize:90x55
@@ -1127,8 +1092,7 @@ searchRoutersLocalNetworks() {
     continueMessage
 }
 
-# ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-
+# ───────────────────────────────────────────────────────────┤
 # Command 9: Flushes local DNS cache, used for problems with loading sites, 404 error
 flushesLocalDNS() {
     terminalWindowSize:90x25
@@ -1145,8 +1109,7 @@ flushesLocalDNS() {
     continueMessage
 }
 
-# ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-
+# ───────────────────────────────────────────────────────────┤
 # Command 10: Release and Renew DHCP for all available device interfaces
 releaseAndRenewDHCP() {
     terminalWindowSize:90x25
@@ -1173,8 +1136,7 @@ releaseAndRenewDHCP() {
     continueMessage
 }
 
-# ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-
+# ───────────────────────────────────────────────────────────┤
 # Command 11: Spoofing the MAC Address of the Wireless network to a randomly generated MAC address
 spoofingMACAddressOfWirelessNetwork() {
     terminalWindowSize:100x30
@@ -1204,8 +1166,7 @@ spoofingMACAddressOfWirelessNetwork() {
     continueMessage
 }
 
-# ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-
+# ───────────────────────────────────────────────────────────┤
 # Command 12: Check DNS records of the domain, to obtain the mapping between domain name and IP address
 checkDNSRecordsOfTheDomainIPv4/IPv6() {
     terminalWindowSize:90x25
@@ -1226,8 +1187,7 @@ checkDNSRecordsOfTheDomainIPv4/IPv6() {
     continueMessage
 }
 
-# ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-
+# ───────────────────────────────────────────────────────────┤
 # Command 13: Search all processes for all users and view network data by Internet protocol TCP/UDP and version IPv4/IPv6
 searchProcessesAndNetworkData() {
     terminalWindowSize:190x55
@@ -1248,8 +1208,7 @@ searchProcessesAndNetworkData() {
     continueMessage
 }
 
-# ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-
+# ───────────────────────────────────────────────────────────┤
 # Command 14: Stress Test Network with ICMP-Sweep and ICMP-Flood
 testICMPSweepAndICMP-Flood() {
     terminalWindowSize:100x45
@@ -1289,8 +1248,7 @@ testICMPSweepAndICMP-Flood() {
     continueMessage
 }
 
-# ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-
+# ───────────────────────────────────────────────────────────┤
 # Command 15: Show information: Firewall, Wireless, Local Network, DHCP-/IP-/MAC-Addresses of Devices on a Local Network and etc.
 showInfoLN_DHCP_IP/MACAddresses() {
     terminalWindowSize:132x55
@@ -1401,8 +1359,7 @@ showInfoLN_DHCP_IP/MACAddresses() {
     continueMessage
 }
 
-# ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-
+# ───────────────────────────────────────────────────────────┤
 # Command 16: Enable or Disable the show of Hidden files
 enableOrDisableTheShowOfHiddenFiles() {
     terminalWindowSize:90x25
@@ -1417,8 +1374,7 @@ enableOrDisableTheShowOfHiddenFiles() {
     read "?  Please enter a command: " CHOICES
     case $CHOICES in
 
-    # ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-
+    # ───────────────────────────────────────────────────────────┤
     # Enable the show of Hidden files
     1)
         echo "\n•${F_Red}${Bold} Enable the show of Hidden files.${No_Attributes}"
@@ -1441,8 +1397,7 @@ enableOrDisableTheShowOfHiddenFiles() {
     continueMessage
 }
 
-# ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-
+# ───────────────────────────────────────────────────────────┤
 # Command 17: Enable or Disable the show of all File Extensions
 enableOrDisableTheShowOfAllFileExtensions() {
     terminalWindowSize:90x25
@@ -1457,8 +1412,7 @@ enableOrDisableTheShowOfAllFileExtensions() {
     read "?  Please enter a command: " CHOICES
     case $CHOICES in
 
-    # ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-
+    # ───────────────────────────────────────────────────────────┤
     # Enable the show of all File Extensions
     1)
         echo "\n•${F_Red}${Bold} Enable the show of all File Extensions.${No_Attributes}"
@@ -1481,8 +1435,7 @@ enableOrDisableTheShowOfAllFileExtensions() {
     continueMessage
 }
 
-# ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-
+# ───────────────────────────────────────────────────────────┤
 # Command 18: Enable or Disable the show of Attachments as Icons in the Apple Mail app
 enableOrDisableTheShowOfAttachmentsAsIconsInTheAppleMailApp() {
     terminalWindowSize:90x25
@@ -1497,8 +1450,7 @@ enableOrDisableTheShowOfAttachmentsAsIconsInTheAppleMailApp() {
     read "?  Please enter a command: " CHOICES
     case $CHOICES in
 
-    # ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-
+    # ───────────────────────────────────────────────────────────┤
     # Enable the show of Attachments as Icons in the Apple Mail app
     1)
         echo "\n•${F_Red}${Bold} Enable the show of Attachments as Icons in the Apple Mail app.${No_Attributes}"
@@ -1521,8 +1473,7 @@ enableOrDisableTheShowOfAttachmentsAsIconsInTheAppleMailApp() {
     continueMessage
 }
 
-# ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-
+# ───────────────────────────────────────────────────────────┤
 # Command 19: Enable or Disable the show of the full path in the Finder 'Title' window
 enableOrDisableTheShowOfTheFullPathInTheFinderTitleWindow() {
     terminalWindowSize:90x25
@@ -1537,8 +1488,7 @@ enableOrDisableTheShowOfTheFullPathInTheFinderTitleWindow() {
     read "?  Please enter a command: " CHOICES
     case $CHOICES in
 
-    # ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-
+    # ───────────────────────────────────────────────────────────┤
     # Enable the show of the full path in the Finder 'Title' window
     1)
         echo "\n•${F_Red}${Bold} Enable the show of the full path in the Finder 'Title' window.${No_Attributes}"
@@ -1561,8 +1511,7 @@ enableOrDisableTheShowOfTheFullPathInTheFinderTitleWindow() {
     continueMessage
 }
 
-# ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-
+# ───────────────────────────────────────────────────────────┤
 # Command 20: Change the default Screenshot file format
 changeTheDefaultScreenshotFileFormat() {
     terminalWindowSize:90x30
@@ -1587,8 +1536,7 @@ changeTheDefaultScreenshotFileFormat() {
     read "?  Please enter a command: " CHOICES
     case $CHOICES in
 
-    # ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-
+    # ───────────────────────────────────────────────────────────┤
     # Enable to use default Screenshot BMP file format
     1)
         echo "\n•${F_Red}${Bold} Enable to use default Screenshot BMP file format.${No_Attributes}"
@@ -1646,8 +1594,7 @@ changeTheDefaultScreenshotFileFormat() {
     continueMessage
 }
 
-# ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-
+# ───────────────────────────────────────────────────────────┤
 # Command 21: Enable or Disable Screenshot with shadow and adding extra pixels
 enableOrDisableScreenshotWithShadowAndAddingExtraPixels() {
     terminalWindowSize:90x25
@@ -1662,8 +1609,7 @@ enableOrDisableScreenshotWithShadowAndAddingExtraPixels() {
     read "?  Please enter a command: " CHOICES
     case $CHOICES in
 
-    # ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-
+    # ───────────────────────────────────────────────────────────┤
     # Disable Screenshot with shadow and adding extra pixels
     1)
         echo "\n•${F_Red}${Bold} Disable Screenshot with shadow and adding extra pixels.${No_Attributes}"
@@ -1686,8 +1632,7 @@ enableOrDisableScreenshotWithShadowAndAddingExtraPixels() {
     continueMessage
 }
 
-# ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-
+# ───────────────────────────────────────────────────────────┤
 # Command 22: Enable or Disable the warning before emptying the Trash
 enableOrDisableTheWarningBeforeEmptyingTheTrash() {
     terminalWindowSize:90x25
@@ -1702,8 +1647,7 @@ enableOrDisableTheWarningBeforeEmptyingTheTrash() {
     read "?  Please enter a command: " CHOICES
     case $CHOICES in
 
-    # ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-
+    # ───────────────────────────────────────────────────────────┤
     # Disable warning before emptying the Trash
     1)
         echo "\n•${F_Red}${Bold} Disable warning before emptying the Trash.${No_Attributes}"
@@ -1726,8 +1670,7 @@ enableOrDisableTheWarningBeforeEmptyingTheTrash() {
     continueMessage
 }
 
-# ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-
+# ───────────────────────────────────────────────────────────┤
 # Command 23: Enable or Disable warning when changing a file Extension
 enableOrDisableWarningWhenChangingAFileExtension() {
     terminalWindowSize:90x25
@@ -1742,8 +1685,7 @@ enableOrDisableWarningWhenChangingAFileExtension() {
     read "?  Please enter a command: " CHOICES
     case $CHOICES in
 
-    # ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-
+    # ───────────────────────────────────────────────────────────┤
     # Disable warning when changing a file Extension
     1)
         echo "\n•${F_Red}${Bold} Disable warning when changing a file Extension.${No_Attributes}"
@@ -1766,8 +1708,7 @@ enableOrDisableWarningWhenChangingAFileExtension() {
     continueMessage
 }
 
-# ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-
+# ───────────────────────────────────────────────────────────┤
 # Command 24: Search (Current or Previous Scope or This Mac) folder by default
 searchCurrentOrPreviousScopeOrThisMacFolderByDefault() {
     terminalWindowSize:90x25
@@ -1784,8 +1725,7 @@ searchCurrentOrPreviousScopeOrThisMacFolderByDefault() {
     read "?  Please enter a command: " CHOICES
     case $CHOICES in
 
-    # ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-
+    # ───────────────────────────────────────────────────────────┤
     # When performing a search, search the Current folder by default
     1)
         echo "\n•${F_Red}${Bold} When performing a search, search the Current folder by default.${No_Attributes}"
@@ -1815,8 +1755,7 @@ searchCurrentOrPreviousScopeOrThisMacFolderByDefault() {
     continueMessage
 }
 
-# ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-
+# ───────────────────────────────────────────────────────────┤
 # Command 25: Enable or Disable in TextEdit the create an Untitled Document at Launch
 enableOrDisableInTextEditTheCreateAnUntitledDocumentAtLaunch() {
     terminalWindowSize:90x25
@@ -1831,8 +1770,7 @@ enableOrDisableInTextEditTheCreateAnUntitledDocumentAtLaunch() {
     read "?  Please enter a command: " CHOICES
     case $CHOICES in
 
-    # ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-
+    # ───────────────────────────────────────────────────────────┤
     # Enable in TextEdit the create an Untitled Document at Launch
     1)
         echo "\n•${F_Red}${Bold} Enable in TextEdit the create an Untitled Document at Launch.${No_Attributes}"
@@ -1855,8 +1793,7 @@ enableOrDisableInTextEditTheCreateAnUntitledDocumentAtLaunch() {
     continueMessage
 }
 
-# ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-
+# ───────────────────────────────────────────────────────────┤
 # Command 26: Enable or Disable copy Email addresses as 'foo@example.com' instead of 'Foo Bar <foo@example.com>' in Apple Mail app
 enableOrDisableCopyEmailAddressesAs() {
     terminalWindowSize:132x30
@@ -1871,8 +1808,7 @@ enableOrDisableCopyEmailAddressesAs() {
     read "?  Please enter a command: " CHOICES
     case $CHOICES in
 
-    # ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-
+    # ───────────────────────────────────────────────────────────┤
     # Enable copy Email addresses as 'foo@example.com' instead of 'Foo Bar <foo@example.com>' in Apple Mail app
     1)
         echo "\n•${F_Red}${Bold} Enable copy Email addresses as 'foo@example.com' instead of 'Foo Bar <foo@example.com>' in Apple Mail app.${No_Attributes}"
@@ -1895,8 +1831,7 @@ enableOrDisableCopyEmailAddressesAs() {
     continueMessage
 }
 
-# ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-
+# ───────────────────────────────────────────────────────────┤
 # Command 27: Logs system Management: Cleaning the Logs and Inactive memory
 cleaningLogsAndInactiveMemory() {
     terminalWindowSize:90x25
@@ -1929,8 +1864,7 @@ cleaningLogsAndInactiveMemory() {
     continueMessage
 }
 
-# ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-
+# ───────────────────────────────────────────────────────────┤
 # Command 28: I/O system Management: Manually and Automatic Delete, Plugins Input and Output device
 deletePluginsInputAndOutputDevice() {
     terminalWindowSize:100x25
@@ -1949,8 +1883,7 @@ deletePluginsInputAndOutputDevice() {
     read "?  Please enter a command: " CHOICES
     case $CHOICES in
 
-    # ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-
+    # ───────────────────────────────────────────────────────────┤
     # Automatic Delete All CoreMedia Input/Output Device DAL Video Plug-ins
     1)
         echo "\n•${F_Red}${Bold} Automatic Delete All CoreMedia Input/Output Device DAL Video Plug-ins.${No_Attributes}"
@@ -2007,8 +1940,7 @@ deletePluginsInputAndOutputDevice() {
     continueMessage
 }
 
-# ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-
+# ───────────────────────────────────────────────────────────┤
 # Command 29: Kernel Operating system Management
 kernelManagement() {
     terminalWindowSize:132x40
@@ -2029,8 +1961,7 @@ kernelManagement() {
     read "?  Please enter a command: " CHOICES
     case $CHOICES in
 
-    # ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-
+    # ───────────────────────────────────────────────────────────┤
     # Cleaning the kernel Extension staging area by removing all staged content
     1)
         echo "\n•${F_Red}${Bold} Cleaning the kernel Extension staging area by removing all staged content. (Requires a reboot)${No_Attributes}"
@@ -2110,8 +2041,7 @@ kernelManagement() {
     continueMessage
 }
 
-# ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-
+# ───────────────────────────────────────────────────────────┤
 # Command 30: Privacy Database Management: Custom reset application permissions under Security and Privacy
 privacyDatabaseManagement() {
     terminalWindowSize:112x45
@@ -2150,8 +2080,7 @@ privacyDatabaseManagement() {
     read "?  Please enter a command: " CHOICES
     case $CHOICES in
 
-    # ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-
+    # ───────────────────────────────────────────────────────────┤
     # Reset the All permissions for all apps
     1)
         echo "\n•${F_Red}${Bold} Reset the All permissions for all apps.${No_Attributes}"
@@ -2272,8 +2201,7 @@ privacyDatabaseManagement() {
     continueMessage
 }
 
-# ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-
+# ───────────────────────────────────────────────────────────┤
 # Command 31: GateKeeper Management: Status, Enable or Disable, Remove app from Quarantine, Self-sign the app
 gateKeeperManagement() {
     terminalWindowSize:112x30
@@ -2294,8 +2222,7 @@ gateKeeperManagement() {
     read "?  Please enter a command: " CHOICES
     case $CHOICES in
 
-    # ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-
+    # ───────────────────────────────────────────────────────────┤
     # GateKeeper Status
     1)
         echo "\n•${F_Red}${Bold} GateKeeper Status.${No_Attributes}\n"
@@ -2345,8 +2272,7 @@ gateKeeperManagement() {
     continueMessage
 }
 
-# ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-
+# ───────────────────────────────────────────────────────────┤
 # Command 32: Process & Memory Management: Terminate (Kill) a Process and Purge Memory
 processAndMemoryManagement() {
     terminalWindowSize:90x30
@@ -2363,8 +2289,7 @@ processAndMemoryManagement() {
     read "?  Please enter a command: " CHOICES
     case $CHOICES in
 
-    # ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-
+    # ───────────────────────────────────────────────────────────┤
     # Display processes sorted by CPU usage and Kill a process by specifying its PID
     1)
         echo "\n•${F_Red}${Bold} Display processes sorted by CPU usage and Kill a process by specifying its PID.${No_Attributes}"
@@ -2413,8 +2338,7 @@ processAndMemoryManagement() {
     continueMessage
 }
 
-# ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-
+# ───────────────────────────────────────────────────────────┤
 # Command 33: Uninstalling applications: Browsers, Microsoft Office VL, Ad blocking extension, Virtual machines
 uninstallingApplications() {
     terminalWindowSize:112x35
@@ -2447,8 +2371,7 @@ uninstallingApplications() {
     read "?  Please enter a command: " CHOICES
     case $CHOICES in
 
-    # ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-
+    # ───────────────────────────────────────────────────────────┤
     # Uninstalling the Brave Browser
     1)
         terminalWindowSize:112x25
@@ -2488,8 +2411,7 @@ uninstallingApplications() {
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
         ;;
 
-        # ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-
+        # ───────────────────────────────────────────────────────────┤
     # Uninstalling the Opera Browser
     2)
         terminalWindowSize:132x25
@@ -2530,8 +2452,7 @@ uninstallingApplications() {
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
         ;;
 
-        # ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-
+        # ───────────────────────────────────────────────────────────┤
         # Uninstalling the Yandex Browser
     3)
         terminalWindowSize:132x30
@@ -2573,8 +2494,7 @@ uninstallingApplications() {
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
         ;;
 
-        # ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-
+        # ───────────────────────────────────────────────────────────┤
         # Uninstalling the Vivaldi Browser
     4)
         terminalWindowSize:132x25
@@ -2616,8 +2536,7 @@ uninstallingApplications() {
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
         ;;
 
-        # ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-
+        # ───────────────────────────────────────────────────────────┤
         # Uninstalling the Mozilla Firefox
     5)
         terminalWindowSize:132x30
@@ -2659,8 +2578,7 @@ uninstallingApplications() {
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
         ;;
 
-        # ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-
+        # ───────────────────────────────────────────────────────────┤
         # Uninstalling the Google Chrome
     6)
         terminalWindowSize:112x35
@@ -2714,8 +2632,7 @@ uninstallingApplications() {
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
         ;;
 
-        # ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-
+        # ───────────────────────────────────────────────────────────┤
         # Uninstalling the Microsoft Edge
     7)
         terminalWindowSize:132x30
@@ -2756,8 +2673,7 @@ uninstallingApplications() {
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
         ;;
 
-        # ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-
+        # ───────────────────────────────────────────────────────────┤
         # Uninstalling the Microsoft Word
     8)
         terminalWindowSize:190x35
@@ -2809,8 +2725,7 @@ uninstallingApplications() {
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
         ;;
 
-        # ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-
+        # ───────────────────────────────────────────────────────────┤
         # Uninstalling the Microsoft Excel
     9)
         terminalWindowSize:190x35
@@ -2862,8 +2777,7 @@ uninstallingApplications() {
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
         ;;
 
-        # ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-
+        # ───────────────────────────────────────────────────────────┤
         # Uninstalling the Microsoft PowerPoint
     10)
         terminalWindowSize:190x35
@@ -2915,8 +2829,7 @@ uninstallingApplications() {
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
         ;;
 
-        # ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-
+        # ───────────────────────────────────────────────────────────┤
         # Uninstalling the Microsoft OneNote
     11)
         terminalWindowSize:190x35
@@ -2969,8 +2882,7 @@ uninstallingApplications() {
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
         ;;
 
-        # ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-
+        # ───────────────────────────────────────────────────────────┤
         # Uninstalling the Microsoft Outlook
     12)
         terminalWindowSize:190x40
@@ -3026,8 +2938,7 @@ uninstallingApplications() {
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
         ;;
 
-        # ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-
+        # ───────────────────────────────────────────────────────────┤
         # Uninstalling the Microsoft OneDrive
     13)
         terminalWindowSize:165x55
@@ -3108,8 +3019,7 @@ uninstallingApplications() {
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
         ;;
 
-        # ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-
+        # ───────────────────────────────────────────────────────────┤
         # Uninstalling the Microsoft AutoUpdate
     14)
         terminalWindowSize:132x35
@@ -3162,8 +3072,7 @@ uninstallingApplications() {
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
         ;;
 
-        # ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-
+        # ───────────────────────────────────────────────────────────┤
         # Uninstalling the Microsoft Office 2019 (volume licensed versions)
     15)
         terminalWindowSize:190x55
@@ -3354,8 +3263,7 @@ uninstallingApplications() {
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
         ;;
 
-        # ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-
+        # ───────────────────────────────────────────────────────────┤
         # Uninstalling the AdGuard for Safari extension
     16)
         terminalWindowSize:190x55
@@ -3423,8 +3331,7 @@ uninstallingApplications() {
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
         ;;
 
-        # ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-
+        # ───────────────────────────────────────────────────────────┤
         # Uninstalling the VMware Fusion
     17)
         terminalWindowSize:190x55
@@ -3505,16 +3412,13 @@ uninstallingApplications() {
     continueMessage
 }
 
-# ═══════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣
-
+# ───────────────────────────────────────────────────────────┤
 # Main function of the script
 startScript() {
     while :; do
         mainMenu
         read "?  Please enter a command: " SELECTED_COMMAND
         case $SELECTED_COMMAND in
-
-        # ═══════════════════════════════════════════════════════════╣
 
         A | a)
             clear
@@ -3546,8 +3450,6 @@ startScript() {
             setBasic
             ;;
 
-            # ═════════════════════════════╣
-
         I | i)
             clear
             installingXCLT
@@ -3557,8 +3459,6 @@ startScript() {
             clear
             uninstallingXCLT
             ;;
-
-            # ═════════════════════════════╣
 
         L | l)
             clear
@@ -3580,7 +3480,7 @@ startScript() {
             quitSSToolbox
             ;;
 
-            # ═════════════════════════════╣
+            # ───────────────────────────────────────────────────────────┤
 
         1)
             clear
@@ -3747,7 +3647,7 @@ startScript() {
             uninstallingApplications
             ;;
 
-            # ═════════════════════════════╣
+            # ───────────────────────────────────────────────────────────┤
 
         *)
             clear
