@@ -3,7 +3,7 @@
 # Attribute
 RELEASE_VERSION="v.0.7.0 build [09.30.2021]"
 ROOT_PASSWORD=0
-
+    # ───────────────────────────────────────────────────────────┤
 # Foreground color
 F_Red='\U1b[38;5;1m'    # Red
 F_Green='\U1b[38;5;2m'  # Green
@@ -19,7 +19,7 @@ B_Yellow='\U1b[48;5;11m' # Bright Yellow
 B_Blue='\U1b[48;5;12m'   # Bright Blue
 B_Purple='\U1b[48;5;13m' # Bright Magenta
 B_Cyan='\U1b[48;5;14m'   # Bright Cyan
-
+    # ───────────────────────────────────────────────────────────┤
 # Bold/Bright
 Bold='\U1b[1m'     # Bold
 No_Bold='\U1b[21m' # Reset Bold
@@ -41,7 +41,7 @@ No_Hidden='\U1b[28m' # Reset Hidden
 
 # Resets all colors and formatting
 No_Attributes='\U1b[0m'
-
+    # ───────────────────────────────────────────────────────────┤
 # Dynamic size of Terminal window
 # ╭──────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮
 # │ List item 1: The distance in pixels from the left side of the screen to the left side of the Terminal window.    │
@@ -58,7 +58,7 @@ terminalWindowMainMenuSize:0() {
     osascript -e 'tell application "Terminal" to set font name of first window to "SF Mono"'
     osascript -e 'tell application "Terminal" to set font size of first window to "11"'
 }
-
+    # ───────────────────────────────────────────────────────────┤
 # Terminal window size: 90x25
 terminalWindowSize:90x25() {
     osascript -e 'tell application "Terminal" to set bounds of front window to {0, 20, 645, 415}'
@@ -89,7 +89,7 @@ terminalWindowSize:90x55() {
     osascript -e 'tell application "Terminal" to set bounds of front window to {0, 20, 645, 830}'
     clear
 }
-# ───────────────────────────────────────────────────────────┤
+    # ───────────────────────────────────────────────────────────┤
 # Terminal window size: 100x25
 terminalWindowSize:100x25() {
     osascript -e 'tell application "Terminal" to set bounds of front window to {0, 20, 715, 415}'
@@ -120,7 +120,7 @@ terminalWindowSize:100x55() {
     osascript -e 'tell application "Terminal" to set bounds of front window to {0, 20, 715, 830}'
     clear
 }
-# ───────────────────────────────────────────────────────────┤
+    # ───────────────────────────────────────────────────────────┤
 # Terminal window size: 112x25
 terminalWindowSize:112x25() {
     osascript -e 'tell application "Terminal" to set bounds of front window to {0, 20, 800, 415}'
@@ -151,7 +151,7 @@ terminalWindowSize:112x55() {
     osascript -e 'tell application "Terminal" to set bounds of front window to {0, 20, 800, 830}'
     clear
 }
-# ───────────────────────────────────────────────────────────┤
+    # ───────────────────────────────────────────────────────────┤
 # Terminal window size: 132x25
 terminalWindowSize:132x25() {
     osascript -e 'tell application "Terminal" to set bounds of front window to {0, 20, 935, 415}'
@@ -182,7 +182,7 @@ terminalWindowSize:132x55() {
     osascript -e 'tell application "Terminal" to set bounds of front window to {0, 20, 935, 830}'
     clear
 }
-# ───────────────────────────────────────────────────────────┤
+    # ───────────────────────────────────────────────────────────┤
 # Terminal window size: 140x25
 terminalWindowSize:140x25() {
     osascript -e 'tell application "Terminal" to set bounds of front window to {0, 20, 995, 415}'
@@ -213,7 +213,7 @@ terminalWindowSize:140x55() {
     osascript -e 'tell application "Terminal" to set bounds of front window to {0, 20, 995, 830}'
     clear
 }
-# ───────────────────────────────────────────────────────────┤
+    # ───────────────────────────────────────────────────────────┤
 # Terminal window size: 165x25
 terminalWindowSize:165x25() {
     osascript -e 'tell application "Terminal" to set bounds of front window to {0, 20, 1165, 415}'
@@ -244,7 +244,7 @@ terminalWindowSize:165x55() {
     osascript -e 'tell application "Terminal" to set bounds of front window to {0, 20, 1165, 830}'
     clear
 }
-# ───────────────────────────────────────────────────────────┤
+    # ───────────────────────────────────────────────────────────┤
 # Terminal window size: 190x25
 terminalWindowSize:190x25() {
     osascript -e 'tell application "Terminal" to set bounds of front window to {0, 20, 1340, 415}'
@@ -275,56 +275,99 @@ terminalWindowSize:190x55() {
     osascript -e 'tell application "Terminal" to set bounds of front window to {0, 20, 1340, 830}'
     clear
 }
-# ───────────────────────────────────────────────────────────┤
-# Color themes for the Terminal.app
-
-# Command A: Terminal set "Homebrew"
+    # ───────────────────────────────────────────────────────────┤
+# Command A: Color themes for the Terminal set "Homebrew"
 setHomebrew() {
     osascript -e 'tell application "Terminal" to set current settings of first window to settings set "Homebrew"'
     osascript -e 'tell application "Terminal" to set background color of first window to {0, 0, 0}'
     osascript -e 'tell application "Terminal" to set font name of first window to "SF Mono"'
     osascript -e 'tell application "Terminal" to set font size of first window to "11"'
 }
-
-# Command S: Terminal set "Pro"
+# Command S: Color themes for the Terminal set "Pro"
 setPro() {
     osascript -e 'tell application "Terminal" to set current settings of first window to settings set "Pro"'
     osascript -e 'tell application "Terminal" to set background color of first window to {0, 0, 0}'
     osascript -e 'tell application "Terminal" to set font name of first window to "SF Mono"'
     osascript -e 'tell application "Terminal" to set font size of first window to "11"'
 }
-
-# Command D: Terminal set "Novel"
+# Command D: Color themes for the Terminal set "Novel"
 setNovel() {
     osascript -e 'tell application "Terminal" to set current settings of first window to settings set "Novel"'
     osascript -e 'tell application "Terminal" to set background color of first window to {42919, 64507, 43690}'
     osascript -e 'tell application "Terminal" to set font name of first window to "SF Mono"'
     osascript -e 'tell application "Terminal" to set font size of first window to "11"'
 }
-
-# Command F: Terminal set "Man Page"
+# Command F: Color themes for the Terminal set "Man Page"
 setManPage() {
     osascript -e 'tell application "Terminal" to set current settings of first window to settings set "Man Page"'
     osascript -e 'tell application "Terminal" to set background color of first window to {54998, 54227, 54227}'
     osascript -e 'tell application "Terminal" to set font name of first window to "SF Mono"'
     osascript -e 'tell application "Terminal" to set font size of first window to "11"'
 }
-
-# Command G: Terminal set "Ocean"
+# Command G: Color themes for the Terminal set "Ocean"
 setOcean() {
     osascript -e 'tell application "Terminal" to set current settings of first window to settings set "Ocean"'
     osascript -e 'tell application "Terminal" to set background color of first window to {3107, 21588, 40092}'
     osascript -e 'tell application "Terminal" to set font name of first window to "SF Mono"'
     osascript -e 'tell application "Terminal" to set font size of first window to "11"'
 }
-
-# Command H: Terminal set "Basic" (Default)
+# Command H: Color themes for the Terminal set "Basic" (Default)
 setBasic() {
     osascript -e 'tell application "Terminal" to set current settings of first window to settings set "Basic"'
     osascript -e 'tell application "Terminal" to set font name of first window to "SF Mono"'
     osascript -e 'tell application "Terminal" to set font size of first window to "11"'
 }
-# ───────────────────────────────────────────────────────────┤
+    # ───────────────────────────────────────────────────────────┤
+# Command I: Installing the Xcode CLT
+installingXCLT() {
+    terminalWindowSize:90x25
+    echo "•${F_Red}${Bold} Command I: Install the Xcode Command Line Tools.${No_Attributes}\n"
+    xcode-select --install
+    continueMessage
+}
+# Command U: Uninstalling the Xcode CLT
+uninstallingXCLT() {
+    terminalWindowSize:90x25
+    echo "•${F_Red}${Bold} Command U: Uninstall the Xcode Command Line Tools.${No_Attributes}"
+    askPassword
+    sudo rm -rf /Library/Developer/CommandLineTools
+    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
+    continueMessage
+}
+# Command Q: Quit SSToolbox
+quitSSToolbox() {
+    terminalWindowSize:90x25
+    # Deleting macOS terminal command history and Terminal to quit
+    echo "•${F_Red}${Bold} Command Q: Deleting macOS terminal command history.${No_Attributes}"
+    rm -rf .zsh_sessions
+    rm -rf .zsh_history
+    sleep 1 && echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
+    # Terminal to quit
+    sleep 1 && osascript -e 'tell application "Terminal" to quit'
+    #sleep 1 && osascript -e "do shell script \"osascript -e \\\"tell application \\\\\\\"Terminal\\\\\\\" to quit\\\" &> /dev/null &\""; exit
+    read
+}
+# Command L: Download Latest Release on GitHub
+downloadLatestRelease() {
+    terminalWindowSize:90x25
+    echo "•${F_Red}${Bold} Download Latest Release on GitHub...${No_Attributes}"
+    cd ~/Desktop
+    curl -OL -s https://github.com/Oleg-Chashko/SSToolbox/releases/latest/download/SSToolbox.sh
+    sleep 2 && echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}" && sleep 2
+}
+# Command B: Download Beta Release on GitHub
+downloadBetaRelease() {
+    terminalWindowSize:90x25
+    echo "•${F_Red}${Bold} Download Beta Release on GitHub...${No_Attributes}"
+    cd ~/Desktop
+    curl -OL -s https://raw.githubusercontent.com/Oleg-Chashko/SSToolbox/main/SSToolbox_Beta/SSToolbox_Beta.sh
+    sleep 2 && echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}" && sleep 2
+}
+# Command P: Project page on GitHub
+projectPageOnGitHub() {
+    open https://github.com/Oleg-Chashko/SSToolbox
+}
+    # ───────────────────────────────────────────────────────────┤
 # Asks password
 askPassword() {
     case $ROOT_PASSWORD in
@@ -334,32 +377,28 @@ askPassword() {
         ;;
     esac
 }
-
 # Shows continue message
 continueMessage() {
     echo "\n Press Return key to return to the menu."
     read
 }
-
 # Shows invalid Command message
 showInvalid() {
     echo "•${F_Red} An unacceptable Command has been selected: ${F_Red}${Bold}${SELECTED_COMMAND}${No_Attributes}"
     continueMessage
 }
-
 # Check DNS server
 checkDNS() {
     echo "\n${F_Cyan}•${No_Attributes} Checking the DNS resolution:"
     dig google.com +noall +answer +stats | awk '$3 == "IN" && $4 == "A"{ip=$5}/Query time:/{t=$4 " " $5}/SERVER:/{serv=$3} END{print "IP (Google): "ip, "\nRequest execution time: "t, "\nIP DNS server: "serv}'
     echo "${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
 }
-# ───────────────────────────────────────────────────────────┤
-
+    # ───────────────────────────────────────────────────────────┤
 # Main Menu
 mainMenu() {
     terminalWindowMainMenuSize:0
     echo "${Dim}                                                ╭────────────────────────────────────╮${No_Attributes}"
-    echo "${Dim}                                                │${Dim}${Bold}SSToolbox${No_Attributes} ${Dim}${RELEASE_VERSION}│${No_Attributes}"
+    echo "${Dim}                                                │${Bold}SSToolbox${No_Attributes} ${Dim}${RELEASE_VERSION}│${No_Attributes}"
     echo "${Dim}╭────┬──────────────────────────────────────────┴────────────────────────────────────┴─────────────────────────────────── ${No_Attributes}${F_Blue}${Bold}Network ${No_Attributes}${Dim}─╮${No_Attributes}"
     echo "${Dim}│${No_Attributes}${F_Red}${Bold}  1${No_Attributes} ${Dim}│${No_Attributes} Custom DNS servers for Wi-Fi                                                                                                ${Dim}│${No_Attributes}"
     echo "${Dim}│${No_Attributes}${F_Red}${Bold}  2${No_Attributes} ${Dim}│${No_Attributes} Custom DNS servers for Ethernet                                                                                             ${Dim}│${No_Attributes}"
@@ -397,63 +436,6 @@ mainMenu() {
     echo "${Dim}│${No_Attributes}${F_Red}${Bold} 32${No_Attributes} ${Dim}│${No_Attributes} Process & Memory Management: Manage Processes, Terminate (Kill) a Process and Purge Memory     ${Dim}│${No_Attributes} ${F_Red}${Bold}P${No_Attributes}roject page on GitHub     ${Dim}│${No_Attributes}"
     echo "${Dim}│${No_Attributes}${F_Red}${Bold} 33${No_Attributes} ${Dim}│${No_Attributes} Uninstalling applications: Browsers, Microsoft Office, Ad blocking extension, Virtual machines ${Dim}│${No_Attributes} ${F_Red}${Bold}Q${No_Attributes}uit SSToolbox           𓃠 ${Dim}│${No_Attributes}"
     echo "${Dim}╰────┴────────────────────────────────────────────────────────────────────────────────────────────────┴────────────────────────────╯${No_Attributes}\n"
-}
-
-# ───────────────────────────────────────────────────────────┤
-# Command I: Installing the Xcode CLT
-installingXCLT() {
-    terminalWindowSize:90x25
-    echo "•${F_Red}${Bold} Command I: Install the Xcode Command Line Tools.${No_Attributes}\n"
-    xcode-select --install
-    continueMessage
-}
-
-# Command U: Uninstalling the Xcode CLT
-uninstallingXCLT() {
-    terminalWindowSize:90x25
-    echo "•${F_Red}${Bold} Command U: Uninstall the Xcode Command Line Tools.${No_Attributes}"
-    askPassword
-    sudo rm -rf /Library/Developer/CommandLineTools
-    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    continueMessage
-}
-
-# ───────────────────────────────────────────────────────────┤
-# Command Q: Quit SSToolbox
-quitSSToolbox() {
-    terminalWindowSize:90x25
-    # Deleting macOS terminal command history and Terminal to quit
-    echo "•${F_Red}${Bold} Command Q: Deleting macOS terminal command history.${No_Attributes}"
-    rm -rf .zsh_sessions
-    rm -rf .zsh_history
-    sleep 1 && echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    # Terminal to quit
-    sleep 1 && osascript -e 'tell application "Terminal" to quit'
-    #sleep 1 && osascript -e "do shell script \"osascript -e \\\"tell application \\\\\\\"Terminal\\\\\\\" to quit\\\" &> /dev/null &\""; exit
-    read
-}
-
-# Command L: Download Latest Release on GitHub
-downloadLatestRelease() {
-    terminalWindowSize:90x25
-    echo "•${F_Red}${Bold} Download Latest Release on GitHub...${No_Attributes}"
-    cd ~/Desktop
-    curl -OL -s https://github.com/Oleg-Chashko/SSToolbox/releases/latest/download/SSToolbox.sh
-    sleep 2 && echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}" && sleep 2
-}
-
-# Command B: Download Beta Release on GitHub
-downloadBetaRelease() {
-    terminalWindowSize:90x25
-    echo "•${F_Red}${Bold} Download Beta Release on GitHub...${No_Attributes}"
-    cd ~/Desktop
-    curl -OL -s https://raw.githubusercontent.com/Oleg-Chashko/SSToolbox/main/SSToolbox_Beta/SSToolbox_Beta.sh
-    sleep 2 && echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}" && sleep 2
-}
-
-# Command P: Project page on GitHub
-projectPageOnGitHub() {
-    open https://github.com/Oleg-Chashko/SSToolbox
 }
 
 # ───────────────────────────────────────────────────────────┤
