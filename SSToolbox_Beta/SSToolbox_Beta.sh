@@ -1,16 +1,16 @@
 #!/bin/zsh
 
 # Attribute
-RELEASE_VERSION="v.0.7.0 build [09.30.2021]"
+RELEASE_VERSION="v.0.7.1 build [10.01.2021]"
 ROOT_PASSWORD=0
 # ───────────────────────────────────────────────────────────┤
 # Foreground color
-F_Red='\U1b[38;5;1m'    # Red
-F_Green='\U1b[38;5;2m'  # Green
-F_Yellow='\U1b[38;5;3m' # Yellow
-F_Blue='\U1b[38;5;4m'   # Blue
-F_Purple='\U1b[38;5;5m' # Magenta
-F_Cyan='\U1b[38;5;6m'   # Cyan
+F_Red='\U1b[38;5;9m'     # Bright Red
+F_Green='\U1b[38;5;10m'  # Bright Green
+F_Yellow='\U1b[38;5;11m' # Bright Yellow
+F_Blue='\U1b[38;5;12m'   # Bright Blue
+F_Purple='\U1b[38;5;13m' # Bright Magenta
+F_Cyan='\U1b[38;5;14m'   # Bright Cyan
 
 # Background color
 B_Red='\U1b[48;5;9m'     # Bright Red
