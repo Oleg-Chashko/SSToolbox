@@ -397,45 +397,45 @@ checkDNS() {
 # Main Menu
 mainMenu() {
     terminalWindowMainMenuSize:0
-    echo "${Dim}                                                ╭────────────────────────────────────╮${No_Attributes}"
-    echo "${Dim}                                                │${Bold}SSToolbox${No_Attributes} ${Dim}${RELEASE_VERSION}│${No_Attributes}"
-    echo "${Dim}╭────┬──────────────────────────────────────────┴────────────────────────────────────┴─────────────────────────────────── ${No_Attributes}${F_Blue}${Bold}Network ${No_Attributes}${Dim}─╮${No_Attributes}"
-    echo "${Dim}│${No_Attributes}${F_Red}${Bold}  1${No_Attributes} ${Dim}│${No_Attributes} Custom DNS servers for Wi-Fi                                                                                                ${Dim}│${No_Attributes}"
-    echo "${Dim}│${No_Attributes}${F_Red}${Bold}  2${No_Attributes} ${Dim}│${No_Attributes} Custom DNS servers for Ethernet                                                                                             ${Dim}│${No_Attributes}"
-    echo "${Dim}│${No_Attributes}${F_Red}${Bold}  3${No_Attributes} ${Dim}│${No_Attributes} Custom ping and tracerout test IPv4/IPv6                                                                                    ${Dim}│${No_Attributes}"
-    echo "${Dim}│${No_Attributes}${F_Red}${Bold}  4${No_Attributes} ${Dim}│${No_Attributes} Automatic ping and tracerout test IPv4/IPv6                                                                                 ${Dim}│${No_Attributes}"
-    echo "${Dim}│${No_Attributes}${F_Red}${Bold}  5${No_Attributes} ${Dim}│${No_Attributes} Custom setting a new Computer Name, Hostname, Local Hostname and NetBIOS Name                                               ${Dim}│${No_Attributes}"
-    echo "${Dim}│${No_Attributes}${F_Red}${Bold}  6${No_Attributes} ${Dim}│${No_Attributes} Custom editing of the Hosts file: (Block IP Addresses and Reroute Web Addresses)                                            ${Dim}│${No_Attributes}"
-    echo "${Dim}│${No_Attributes}${F_Red}${Bold}  7${No_Attributes} ${Dim}│${No_Attributes} Show Wireless Network Password                                                                                              ${Dim}│${No_Attributes}"
-    echo "${Dim}│${No_Attributes}${F_Red}${Bold}  8${No_Attributes} ${Dim}│${No_Attributes} Search Routers on local Networks, uses the default IP addresses                                                             ${Dim}│${No_Attributes}"
-    echo "${Dim}│${No_Attributes}${F_Red}${Bold}  9${No_Attributes} ${Dim}│${No_Attributes} Flushes local DNS cache, used for problems with loading sites, 404 error                                                    ${Dim}│${No_Attributes}"
-    echo "${Dim}│${No_Attributes}${F_Red}${Bold} 10${No_Attributes} ${Dim}│${No_Attributes} Release and Renew DHCP for all available device interfaces. (Requires a reboot)                                             ${Dim}│${No_Attributes}"
-    echo "${Dim}│${No_Attributes}${F_Red}${Bold} 11${No_Attributes} ${Dim}│${No_Attributes} Spoofing the MAC Address of the Wireless network to a randomly generated MAC address                                        ${Dim}│${No_Attributes}"
-    echo "${Dim}│${No_Attributes}${F_Red}${Bold} 12${No_Attributes} ${Dim}│${No_Attributes} Check DNS records of the domain, to obtain the mapping between domain name and IPv4/IPv6 address                            ${Dim}│${No_Attributes}"
-    echo "${Dim}│${No_Attributes}${F_Red}${Bold} 13${No_Attributes} ${Dim}│${No_Attributes} Search all processes for all users and view network data by Internet protocol TCP/UDP and version IPv4/IPv6                 ${Dim}│${No_Attributes}"
-    echo "${Dim}│${No_Attributes}${F_Red}${Bold} 14${No_Attributes} ${Dim}│${No_Attributes} Stress Test Network with ICMP-Sweep and ICMP-Flood. (This can be very hard on a network and should be used with caution)    ${Dim}│${No_Attributes}"
-    echo "${Dim}│${No_Attributes}${F_Red}${Bold} 15${No_Attributes} ${Dim}│${No_Attributes} Show information: Firewall, Wireless, Local Network, DHCP-/IP-/MAC-Addresses of Devices on a Local Network and etc.         ${Dim}│${No_Attributes}"
-    echo "${Dim}├────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────── ${No_Attributes}${F_Blue}${Bold}Tweaks ${No_Attributes}${Dim}─┤${No_Attributes}"
-    echo "${Dim}│${No_Attributes}${F_Red}${Bold} 16${No_Attributes} ${Dim}│${No_Attributes} Enable or Disable the show of Hidden files                                                                                  ${Dim}│${No_Attributes}"
-    echo "${Dim}│${No_Attributes}${F_Red}${Bold} 17${No_Attributes} ${Dim}│${No_Attributes} Enable or Disable the show of all File Extensions                                                                           ${Dim}│${No_Attributes}"
-    echo "${Dim}│${No_Attributes}${F_Red}${Bold} 18${No_Attributes} ${Dim}│${No_Attributes} Enable or Disable the show of Attachments as Icons in the Apple Mail app                                                    ${Dim}│${No_Attributes}"
-    echo "${Dim}│${No_Attributes}${F_Red}${Bold} 19${No_Attributes} ${Dim}│${No_Attributes} Enable or Disable the show of the full path in the Finder 'Title' window                                                    ${Dim}│${No_Attributes}"
-    echo "${Dim}│${No_Attributes}${F_Red}${Bold} 20${No_Attributes} ${Dim}│${No_Attributes} Change the default Screenshot file format                                                                                   ${Dim}│${No_Attributes}"
-    echo "${Dim}│${No_Attributes}${F_Red}${Bold} 21${No_Attributes} ${Dim}│${No_Attributes} Enable or Disable Screenshot with shadow and adding extra pixels                                                            ${Dim}│${No_Attributes}"
-    echo "${Dim}│${No_Attributes}${F_Red}${Bold} 22${No_Attributes} ${Dim}│${No_Attributes} Enable or Disable the warning before emptying the Trash                                                                     ${Dim}│${No_Attributes}"
-    echo "${Dim}│${No_Attributes}${F_Red}${Bold} 23${No_Attributes} ${Dim}│${No_Attributes} Enable or Disable warning when changing a file Extension                                                                    ${Dim}│${No_Attributes}"
-    echo "${Dim}│${No_Attributes}${F_Red}${Bold} 24${No_Attributes} ${Dim}│${No_Attributes} Search (Current or Previous Scope or This Mac) folder by default                                                            ${Dim}│${No_Attributes}"
-    echo "${Dim}│${No_Attributes}${F_Red}${Bold} 25${No_Attributes} ${Dim}│${No_Attributes} Enable or Disable in TextEdit the create an Untitled Document at Launch                                                     ${Dim}│${No_Attributes}"
-    echo "${Dim}│${No_Attributes}${F_Red}${Bold} 26${No_Attributes} ${Dim}│${No_Attributes} Enable or Disable copy Email addresses as 'foo@example.com' instead of 'Foo Bar <foo@example.com>' in Apple Mail app        ${Dim}│${No_Attributes}"
-    echo "${Dim}├────┼───────────────────────────────────────────────────────────────────────────── ${F_Red}${Dim}Caution: Use At Your Own Risk${No_Attributes} ${Dim}─${No_Attributes} ${F_Blue}${Bold}OS Management ${No_Attributes}${Dim}─┤${No_Attributes}"
-    echo "${Dim}│${No_Attributes}${F_Red}${Bold} 27${No_Attributes} ${Dim}│${No_Attributes} Logs system Management: Cleaning the Logs and Inactive memory                                  ${Dim}╭────────────────────────────┤${No_Attributes}"
-    echo "${Dim}│${No_Attributes}${F_Red}${Bold} 28${No_Attributes} ${Dim}│${No_Attributes} I/O system Management: Manually and Automatic Delete, Plugins Input and Output device          ${Dim}│${No_Attributes} ${F_Red}${Bold}A${No_Attributes}${Dim}•${No_Attributes}${F_Red}${Bold}S${No_Attributes}${Dim}•${No_Attributes}${F_Red}${Bold}D${No_Attributes}${Dim}•${No_Attributes}${F_Red}${Bold}F${No_Attributes}${Dim}•${No_Attributes}${F_Red}${Bold}G${No_Attributes}${Dim}•${No_Attributes}${F_Red}${Bold}H${No_Attributes} Color profiles ${Dim}│${No_Attributes}"
-    echo "${Dim}│${No_Attributes}${F_Red}${Bold} 29${No_Attributes} ${Dim}│${No_Attributes} Kernel OS Management: Cleaning kernel Extension, Rebuild Kexts Caches, etc. (Requires a reboot)${Dim}│${No_Attributes} ${F_Red}${Bold}I${No_Attributes}nstalling Xcode CLT       ${Dim}│${No_Attributes}"
-    echo "${Dim}│${No_Attributes}${F_Red}${Bold} 30${No_Attributes} ${Dim}│${No_Attributes} Privacy Database Management: Custom reset apps permissions under Security and Privacy          ${Dim}│${No_Attributes} ${F_Red}${Bold}U${No_Attributes}ninstalling Xcode CLT     ${Dim}│${No_Attributes}"
-    echo "${Dim}│${No_Attributes}${F_Red}${Bold} 31${No_Attributes} ${Dim}│${No_Attributes} GateKeeper Management: Status, Enable or Disable, Remove app from Quarantine, Self-sign the app${Dim}│${No_Attributes} ${F_Red}${Bold}L${No_Attributes}atest-/${F_Red}${Bold}B${No_Attributes}eta-Release ↆ     ${Dim}│${No_Attributes}"
-    echo "${Dim}│${No_Attributes}${F_Red}${Bold} 32${No_Attributes} ${Dim}│${No_Attributes} Process & Memory Management: Manage Processes, Terminate (Kill) a Process and Purge Memory     ${Dim}│${No_Attributes} ${F_Red}${Bold}P${No_Attributes}roject page on GitHub     ${Dim}│${No_Attributes}"
-    echo "${Dim}│${No_Attributes}${F_Red}${Bold} 33${No_Attributes} ${Dim}│${No_Attributes} Uninstalling applications: Browsers, Microsoft Office, Ad blocking extension, Virtual machines ${Dim}│${No_Attributes} ${F_Red}${Bold}Q${No_Attributes}uit SSToolbox           𓃠 ${Dim}│${No_Attributes}"
-    echo "${Dim}╰────┴────────────────────────────────────────────────────────────────────────────────────────────────┴────────────────────────────╯${No_Attributes}\n"
+    echo "                                                ╭────────────────────────────────────╮${No_Attributes}"
+    echo "                                                │SSToolbox ${RELEASE_VERSION}│"
+    echo "╭────┬──────────────────────────────────────────┴────────────────────────────────────┴─────────────────────────────────── ${F_Blue}${Bold}Network ${No_Attributes}─╮"
+    echo "│${F_Red}${Bold}  1${No_Attributes} │ Custom DNS servers for Wi-Fi                                                                                                │"
+    echo "│${F_Red}${Bold}  2${No_Attributes} │ Custom DNS servers for Ethernet                                                                                             │"
+    echo "│${F_Red}${Bold}  3${No_Attributes} │ Custom ping and tracerout test IPv4/IPv6                                                                                    │"
+    echo "│${F_Red}${Bold}  4${No_Attributes} │ Automatic ping and tracerout test IPv4/IPv6                                                                                 │"
+    echo "│${F_Red}${Bold}  5${No_Attributes} │ Custom setting a new Computer Name, Hostname, Local Hostname and NetBIOS Name                                               │"
+    echo "│${F_Red}${Bold}  6${No_Attributes} │ Custom editing of the Hosts file: (Block IP Addresses and Reroute Web Addresses)                                            │"
+    echo "│${F_Red}${Bold}  7${No_Attributes} │ Show Wireless Network Password                                                                                              │"
+    echo "│${F_Red}${Bold}  8${No_Attributes} │ Search Routers on local Networks, uses the default IP addresses                                                             │"
+    echo "│${F_Red}${Bold}  9${No_Attributes} │ Flushes local DNS cache, used for problems with loading sites, 404 error                                                    │"
+    echo "│${F_Red}${Bold} 10${No_Attributes} │ Release and Renew DHCP for all available device interfaces. (Requires a reboot)                                             │"
+    echo "│${F_Red}${Bold} 11${No_Attributes} │ Spoofing the MAC Address of the Wireless network to a randomly generated MAC address                                        │"
+    echo "│${F_Red}${Bold} 12${No_Attributes} │ Check DNS records of the domain, to obtain the mapping between domain name and IPv4/IPv6 address                            │"
+    echo "│${F_Red}${Bold} 13${No_Attributes} │ Search all processes for all users and view network data by Internet protocol TCP/UDP and version IPv4/IPv6                 │"
+    echo "│${F_Red}${Bold} 14${No_Attributes} │ Stress Test Network with ICMP-Sweep and ICMP-Flood. (This can be very hard on a network and should be used with caution)    │"
+    echo "│${F_Red}${Bold} 15${No_Attributes} │ Show information: Firewall, Wireless, Local Network, DHCP-/IP-/MAC-Addresses of Devices on a Local Network and etc.         │"
+    echo "├────┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────── ${F_Blue}${Bold}Tweaks ${No_Attributes}─┤"
+    echo "│${F_Red}${Bold} 16${No_Attributes} │ Enable or Disable the show of Hidden files                                                                                  │"
+    echo "│${F_Red}${Bold} 17${No_Attributes} │ Enable or Disable the show of all File Extensions                                                                           │"
+    echo "│${F_Red}${Bold} 18${No_Attributes} │ Enable or Disable the show of Attachments as Icons in the Apple Mail app                                                    │"
+    echo "│${F_Red}${Bold} 19${No_Attributes} │ Enable or Disable the show of the full path in the Finder 'Title' window                                                    │"
+    echo "│${F_Red}${Bold} 20${No_Attributes} │ Change the default Screenshot file format                                                                                   │"
+    echo "│${F_Red}${Bold} 21${No_Attributes} │ Enable or Disable Screenshot with shadow and adding extra pixels                                                            │"
+    echo "│${F_Red}${Bold} 22${No_Attributes} │ Enable or Disable the warning before emptying the Trash                                                                     │"
+    echo "│${F_Red}${Bold} 23${No_Attributes} │ Enable or Disable warning when changing a file Extension                                                                    │"
+    echo "│${F_Red}${Bold} 24${No_Attributes} │ Search (Current or Previous Scope or This Mac) folder by default                                                            │"
+    echo "│${F_Red}${Bold} 25${No_Attributes} │ Enable or Disable in TextEdit the create an Untitled Document at Launch                                                     │"
+    echo "│${F_Red}${Bold} 26${No_Attributes} │ Enable or Disable copy Email addresses as 'foo@example.com' instead of 'Foo Bar <foo@example.com>' in Apple Mail app        │"
+    echo "├────┼───────────────────────────────────────────────────────────────────────────── ${F_Red}Caution: Use At Your Own Risk${No_Attributes} ─ ${F_Blue}${Bold}OS Management ${No_Attributes}─┤"
+    echo "│${F_Red}${Bold} 27${No_Attributes} │ Logs system Management: Cleaning the Logs and Inactive memory                                  ╭────────────────────────────┤"
+    echo "│${F_Red}${Bold} 28${No_Attributes} │ I/O system Management: Manually and Automatic Delete, Plugins Input and Output device          │ ${F_Red}${Bold}A${No_Attributes}${Dim}•${No_Attributes}${F_Red}${Bold}S${No_Attributes}${Dim}•${No_Attributes}${F_Red}${Bold}D${No_Attributes}${Dim}•${No_Attributes}${F_Red}${Bold}F${No_Attributes}${Dim}•${No_Attributes}${F_Red}${Bold}G${No_Attributes}${Dim}•${No_Attributes}${F_Red}${Bold}H${No_Attributes} Color profiles │"
+    echo "│${F_Red}${Bold} 29${No_Attributes} │ Kernel OS Management: Cleaning kernel Extension, Rebuild Kexts Caches, etc. (Requires a reboot)│ ${F_Red}${Bold}I${No_Attributes}nstalling Xcode CLT       │"
+    echo "│${F_Red}${Bold} 30${No_Attributes} │ Privacy Database Management: Custom reset apps permissions under Security and Privacy          │ ${F_Red}${Bold}U${No_Attributes}ninstalling Xcode CLT     │"
+    echo "│${F_Red}${Bold} 31${No_Attributes} │ GateKeeper Management: Status, Enable or Disable, Remove app from Quarantine, Self-sign the app│ ${F_Red}${Bold}L${No_Attributes}atest-/${F_Red}${Bold}B${No_Attributes}eta-Release ↆ     │"
+    echo "│${F_Red}${Bold} 32${No_Attributes} │ Process & Memory Management: Manage Processes, Terminate (Kill) a Process and Purge Memory     │ ${F_Red}${Bold}P${No_Attributes}roject page on GitHub     │"
+    echo "│${F_Red}${Bold} 33${No_Attributes} │ Uninstalling applications: Browsers, Microsoft Office, Ad blocking extension, Virtual machines │ ${F_Red}${Bold}Q${No_Attributes}uit SSToolbox           𓃠 │"
+    echo "╰────┴────────────────────────────────────────────────────────────────────────────────────────────────┴────────────────────────────╯\n"
 }
 
 # ───────────────────────────────────────────────────────────┤
@@ -445,35 +445,35 @@ customDNSServersForWi-Fi() {
     echo "•${F_Red}${Bold} Command 1: Custom DNS servers for Wi-Fi.${No_Attributes}"
     askPassword
     # Submenu
-    echo " ${Dim}╔═══════════════════╦════════════════════════════════════════════════════════════════════════════════════════╗${No_Attributes}"
-    echo " ${Dim}║${No_Attributes} Modes filtering   ${Dim}║${No_Attributes} Description              ${F_Red}${Bold}Note:${No_Attributes} Please don't use them unless you know what you're doing ${Dim}║${No_Attributes}"
-    echo " ${Dim}╠═══════════════════╬════════════════════════════════════════════════════════════════════════════════════════╣${No_Attributes}"
-    echo " ${Dim}║${No_Attributes}${F_Purple}${Bold} Non-filtering     ${No_Attributes}${Dim}║${No_Attributes} Reliable and fast DNS lookup without blocking any specific categories                  ${Dim}║${No_Attributes}"
-    echo " ${Dim}║${No_Attributes}${F_Yellow}${Bold} Threat Protection ${No_Attributes}${Dim}║${No_Attributes} Mode is for blocking ads, trackers, malware, ransomware, spyware and phishing websites ${Dim}║${No_Attributes}"
-    echo " ${Dim}║${No_Attributes}${F_Green}${Bold} Family Protection ${No_Attributes}${Dim}║${No_Attributes} Does the same as (Threat Protection), but also blocks websites with adult content      ${Dim}║${No_Attributes}"
-    echo " ${Dim}╚═══════════════════╩════════════════════════════════════════════════════════════════════════════════════════╝${No_Attributes}\n"
-    echo "      ${Dim}╔═══════════════╦═══════════════════╦══════════════════╦════════════════════╦══════════════════════╦════════════════════════╗${No_Attributes}"
-    echo "      ${Dim}║${No_Attributes} DNS Providers ${Dim}║${No_Attributes} Modes filtering   ${Dim}║${No_Attributes} Primary DNS IPv4 ${Dim}║${No_Attributes} Secondary DNS IPv4 ${Dim}║${No_Attributes} Primary DNS IPv6     ${Dim}║${No_Attributes} Secondary DNS IPv6     ${Dim}║${No_Attributes}"
-    echo " ${Dim}╔════╬═══════════════╩═══════════════════╬══════════════════╬════════════════════╬══════════════════════╬════════════════════════╣${No_Attributes}"
-    echo " ${Dim}║${No_Attributes}${F_Red}${Bold}  1${No_Attributes} ${Dim}║${No_Attributes} Google Public     ${F_Purple}${Bold}(Non-filtering) ${No_Attributes}${Dim}║${No_Attributes} 8.8.8.8          ${Dim}║${No_Attributes} 8.8.4.4            ${Dim}║${No_Attributes} 2001:4860:4860::8888 ${Dim}║${No_Attributes} 2001:4860:4860::8844   ${Dim}║${No_Attributes}"
-    echo " ${Dim}║${No_Attributes}${F_Red}${Bold}  2${No_Attributes} ${Dim}║${No_Attributes} Cloudflare        ${F_Purple}${Bold}(Non-filtering) ${No_Attributes}${Dim}║${No_Attributes} 1.1.1.1          ${Dim}║${No_Attributes} 1.0.0.1            ${Dim}║${No_Attributes} 2606:4700:4700::1111 ${Dim}║${No_Attributes} 2606:4700:4700::1001   ${Dim}║${No_Attributes}"
-    echo " ${Dim}║${No_Attributes}${F_Red}${Bold}  3${No_Attributes} ${Dim}║${No_Attributes} Cisco Umbrella    ${F_Purple}${Bold}(Non-filtering) ${No_Attributes}${Dim}║${No_Attributes} 208.67.222.222   ${Dim}║${No_Attributes} 208.67.220.220     ${Dim}║${No_Attributes} 2620:119:35::35      ${Dim}║${No_Attributes} 2620:119:53::53        ${Dim}║${No_Attributes}"
-    echo " ${Dim}╠════╬═══════════════════════════════════╬══════════════════╬════════════════════╬══════════════════════╬════════════════════════╣${No_Attributes}"
-    echo " ${Dim}║${No_Attributes}${F_Red}${Bold}  4${No_Attributes} ${Dim}║${No_Attributes} NeuStar       ${F_Yellow}${Bold}(Threat Protection) ${No_Attributes}${Dim}║${No_Attributes} 156.154.70.2     ${Dim}║${No_Attributes} 156.154.71.2       ${Dim}║${No_Attributes} 2610:a1:1018::2      ${Dim}║${No_Attributes} 2610:a1:1019::2        ${Dim}║${No_Attributes}"
-    echo " ${Dim}║${No_Attributes}${F_Red}${Bold}  5${No_Attributes} ${Dim}║${No_Attributes} NeuStar       ${F_Green}${Bold}(Family Protection) ${No_Attributes}${Dim}║${No_Attributes} 156.154.70.3     ${Dim}║${No_Attributes} 156.154.71.3       ${Dim}║${No_Attributes} 2610:a1:1018::3      ${Dim}║${No_Attributes} 2610:a1:1019::3        ${Dim}║${No_Attributes}"
-    echo " ${Dim}╠════╬═══════════════════════════════════╬══════════════════╬════════════════════╬══════════════════════╬════════════════════════╣${No_Attributes}"
-    echo " ${Dim}║${No_Attributes}${F_Red}${Bold}  6${No_Attributes} ${Dim}║${No_Attributes} CleanBrowsing ${F_Yellow}${Bold}(Threat Protection) ${No_Attributes}${Dim}║${No_Attributes} 185.228.168.9    ${Dim}║${No_Attributes} 185.228.169.9      ${Dim}║${No_Attributes} 2a0d:2a00:1::2       ${Dim}║${No_Attributes} 2a0d:2a00:2::2         ${Dim}║${No_Attributes}"
-    echo " ${Dim}║${No_Attributes}${F_Red}${Bold}  7${No_Attributes} ${Dim}║${No_Attributes} CleanBrowsing ${F_Green}${Bold}(Family Protection) ${No_Attributes}${Dim}║${No_Attributes} 185.228.168.168  ${Dim}║${No_Attributes} 185.228.169.168    ${Dim}║${No_Attributes} 2a0d:2a00:1::        ${Dim}║${No_Attributes} 2a0d:2a00:2::          ${Dim}║${No_Attributes}"
-    echo " ${Dim}╠════╬═══════════════════════════════════╬══════════════════╬════════════════════╬══════════════════════╬════════════════════════╣${No_Attributes}"
-    echo " ${Dim}║${No_Attributes}${F_Red}${Bold}  8${No_Attributes} ${Dim}║${No_Attributes} AdGuard       ${F_Yellow}${Bold}(Threat Protection) ${No_Attributes}${Dim}║${No_Attributes} 94.140.14.14     ${Dim}║${No_Attributes} 94.140.15.15       ${Dim}║${No_Attributes} 2a10:50c0::ad1:ff    ${Dim}║${No_Attributes} 2a10:50c0::ad2:ff      ${Dim}║${No_Attributes}"
-    echo " ${Dim}║${No_Attributes}${F_Red}${Bold}  9${No_Attributes} ${Dim}║${No_Attributes} AdGuard       ${F_Green}${Bold}(Family Protection) ${No_Attributes}${Dim}║${No_Attributes} 94.140.14.15     ${Dim}║${No_Attributes} 94.140.15.16       ${Dim}║${No_Attributes} 2a10:50c0::bad1:ff   ${Dim}║${No_Attributes} 2a10:50c0::bad2:ff     ${Dim}║${No_Attributes}"
-    echo " ${Dim}╠════╬═══════════════════════════════════╬══════════════════╬════════════════════╬══════════════════════╬════════════════════════╣${No_Attributes}"
-    echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 10${No_Attributes} ${Dim}║${No_Attributes} YandexDNS     ${F_Yellow}${Bold}(Threat Protection) ${No_Attributes}${Dim}║${No_Attributes} 77.88.8.88       ${Dim}║${No_Attributes} 77.88.8.2          ${Dim}║${No_Attributes} 2a02:6b8::feed:bad   ${Dim}║${No_Attributes} 2a02:6b8:0:1::feed:bad ${Dim}║${No_Attributes}"
-    echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 11${No_Attributes} ${Dim}║${No_Attributes} YandexDNS     ${F_Green}${Bold}(Family Protection) ${No_Attributes}${Dim}║${No_Attributes} 77.88.8.7        ${Dim}║${No_Attributes} 77.88.8.3          ${Dim}║${No_Attributes} 2a02:6b8::feed:a11   ${Dim}║${No_Attributes} 2a02:6b8:0:1::feed:a11 ${Dim}║${No_Attributes}"
-    echo " ${Dim}╠════╬══════════════════════════╦════════╩══════════════════╩════════════════════╩══════════════════════╩════════════════════════╝${No_Attributes}"
-    echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 12${No_Attributes} ${Dim}║${No_Attributes} Show current DNS servers ${Dim}║${No_Attributes}"
-    echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 13${No_Attributes} ${Dim}║${No_Attributes} Reset DNS servers        ${Dim}║${No_Attributes}"
-    echo " ${Dim}╚════╩══════════════════════════╝${No_Attributes}\n"
+    echo " ╭───────────────────┬────────────────────────────────────────────────────────────────────────────────────────╮"
+    echo " │ Modes filtering   │ Description              ${F_Red}${Bold}Note:${No_Attributes} Please don't use them unless you know what you're doing │"
+    echo " ├───────────────────┼────────────────────────────────────────────────────────────────────────────────────────┤"
+    echo " │${F_Purple}${Bold} Non-filtering     ${No_Attributes}│ Reliable and fast DNS lookup without blocking any specific categories                  │"
+    echo " │${F_Yellow}${Bold} Threat Protection ${No_Attributes}│ Mode is for blocking ads, trackers, malware, ransomware, spyware and phishing websites │"
+    echo " │${F_Green}${Bold} Family Protection ${No_Attributes}│ Does the same as (Threat Protection), but also blocks websites with adult content      │"
+    echo " ╰───────────────────┴────────────────────────────────────────────────────────────────────────────────────────╯\n"
+    echo "      ╭───────────────┬───────────────────┬──────────────────┬────────────────────┬──────────────────────┬────────────────────────╮"
+    echo "      │ DNS Providers │ Modes filtering   │ Primary DNS IPv4 │ Secondary DNS IPv4 │ Primary DNS IPv6     │ Secondary DNS IPv6     │"
+    echo " ╭────┼───────────────┴───────────────────┼──────────────────┼────────────────────┼──────────────────────┼────────────────────────┤"
+    echo " │${F_Red}${Bold}  1${No_Attributes} │ Google Public     ${F_Purple}${Bold}(Non-filtering) ${No_Attributes}│ 8.8.8.8          │ 8.8.4.4            │ 2001:4860:4860::8888 │ 2001:4860:4860::8844   │"
+    echo " │${F_Red}${Bold}  2${No_Attributes} │ Cloudflare        ${F_Purple}${Bold}(Non-filtering) ${No_Attributes}│ 1.1.1.1          │ 1.0.0.1            │ 2606:4700:4700::1111 │ 2606:4700:4700::1001   │"
+    echo " │${F_Red}${Bold}  3${No_Attributes} │ Cisco Umbrella    ${F_Purple}${Bold}(Non-filtering) ${No_Attributes}│ 208.67.222.222   │ 208.67.220.220     │ 2620:119:35::35      │ 2620:119:53::53        │"
+    echo " ├────┼───────────────────────────────────┼──────────────────┼────────────────────┼──────────────────────┼────────────────────────┤"
+    echo " │${F_Red}${Bold}  4${No_Attributes} │ NeuStar       ${F_Yellow}${Bold}(Threat Protection) ${No_Attributes}│ 156.154.70.2     │ 156.154.71.2       │ 2610:a1:1018::2      │ 2610:a1:1019::2        │"
+    echo " │${F_Red}${Bold}  5${No_Attributes} │ NeuStar       ${F_Green}${Bold}(Family Protection) ${No_Attributes}│ 156.154.70.3     │ 156.154.71.3       │ 2610:a1:1018::3      │ 2610:a1:1019::3        │"
+    echo " ├────┼───────────────────────────────────┼──────────────────┼────────────────────┼──────────────────────┼────────────────────────┤"
+    echo " │${F_Red}${Bold}  6${No_Attributes} │ CleanBrowsing ${F_Yellow}${Bold}(Threat Protection) ${No_Attributes}│ 185.228.168.9    │ 185.228.169.9      │ 2a0d:2a00:1::2       │ 2a0d:2a00:2::2         │"
+    echo " │${F_Red}${Bold}  7${No_Attributes} │ CleanBrowsing ${F_Green}${Bold}(Family Protection) ${No_Attributes}│ 185.228.168.168  │ 185.228.169.168    │ 2a0d:2a00:1::        │ 2a0d:2a00:2::          │"
+    echo " ├────┼───────────────────────────────────┼──────────────────┼────────────────────┼──────────────────────┼────────────────────────┤"
+    echo " │${F_Red}${Bold}  8${No_Attributes} │ AdGuard       ${F_Yellow}${Bold}(Threat Protection) ${No_Attributes}│ 94.140.14.14     │ 94.140.15.15       │ 2a10:50c0::ad1:ff    │ 2a10:50c0::ad2:ff      │"
+    echo " │${F_Red}${Bold}  9${No_Attributes} │ AdGuard       ${F_Green}${Bold}(Family Protection) ${No_Attributes}│ 94.140.14.15     │ 94.140.15.16       │ 2a10:50c0::bad1:ff   │ 2a10:50c0::bad2:ff     │"
+    echo " ├────┼───────────────────────────────────┼──────────────────┼────────────────────┼──────────────────────┼────────────────────────┤"
+    echo " │${F_Red}${Bold} 10${No_Attributes} │ YandexDNS     ${F_Yellow}${Bold}(Threat Protection) ${No_Attributes}│ 77.88.8.88       │ 77.88.8.2          │ 2a02:6b8::feed:bad   │ 2a02:6b8:0:1::feed:bad │"
+    echo " │${F_Red}${Bold} 11${No_Attributes} │ YandexDNS     ${F_Green}${Bold}(Family Protection) ${No_Attributes}│ 77.88.8.7        │ 77.88.8.3          │ 2a02:6b8::feed:a11   │ 2a02:6b8:0:1::feed:a11 │"
+    echo " ├────┼──────────────────────────┬────────┴──────────────────┴────────────────────┴──────────────────────┴────────────────────────╯"
+    echo " │${F_Red}${Bold} 12${No_Attributes} │ Show current DNS servers │"
+    echo " │${F_Red}${Bold} 13${No_Attributes} │ Reset DNS servers        │"
+    echo " ╰────┴──────────────────────────╯\n"
 
     read "?  Please enter a command: " CHOICES
     case $CHOICES in
@@ -634,35 +634,35 @@ customDNSServersForEthernet() {
     echo "•${F_Red}${Bold} Command 2: Custom DNS servers for Ethernet.${No_Attributes}"
     askPassword
     # Submenu
-    echo " ${Dim}╔═══════════════════╦════════════════════════════════════════════════════════════════════════════════════════╗${No_Attributes}"
-    echo " ${Dim}║${No_Attributes} Modes filtering   ${Dim}║${No_Attributes} Description              ${F_Red}${Bold}Note:${No_Attributes} Please don't use them unless you know what you're doing ${Dim}║${No_Attributes}"
-    echo " ${Dim}╠═══════════════════╬════════════════════════════════════════════════════════════════════════════════════════╣${No_Attributes}"
-    echo " ${Dim}║${No_Attributes}${F_Purple}${Bold} Non-filtering     ${No_Attributes}${Dim}║${No_Attributes} Reliable and fast DNS lookup without blocking any specific categories                  ${Dim}║${No_Attributes}"
-    echo " ${Dim}║${No_Attributes}${F_Yellow}${Bold} Threat Protection ${No_Attributes}${Dim}║${No_Attributes} Mode is for blocking ads, trackers, malware, ransomware, spyware and phishing websites ${Dim}║${No_Attributes}"
-    echo " ${Dim}║${No_Attributes}${F_Green}${Bold} Family Protection ${No_Attributes}${Dim}║${No_Attributes} Does the same as (Threat Protection), but also blocks websites with adult content      ${Dim}║${No_Attributes}"
-    echo " ${Dim}╚═══════════════════╩════════════════════════════════════════════════════════════════════════════════════════╝${No_Attributes}\n"
-    echo "      ${Dim}╔═══════════════╦═══════════════════╦══════════════════╦════════════════════╦══════════════════════╦════════════════════════╗${No_Attributes}"
-    echo "      ${Dim}║${No_Attributes} DNS Providers ${Dim}║${No_Attributes} Modes filtering   ${Dim}║${No_Attributes} Primary DNS IPv4 ${Dim}║${No_Attributes} Secondary DNS IPv4 ${Dim}║${No_Attributes} Primary DNS IPv6     ${Dim}║${No_Attributes} Secondary DNS IPv6     ${Dim}║${No_Attributes}"
-    echo " ${Dim}╔════╬═══════════════╩═══════════════════╬══════════════════╬════════════════════╬══════════════════════╬════════════════════════╣${No_Attributes}"
-    echo " ${Dim}║${No_Attributes}${F_Red}${Bold}  1${No_Attributes} ${Dim}║${No_Attributes} Google Public     ${F_Purple}${Bold}(Non-filtering) ${No_Attributes}${Dim}║${No_Attributes} 8.8.8.8          ${Dim}║${No_Attributes} 8.8.4.4            ${Dim}║${No_Attributes} 2001:4860:4860::8888 ${Dim}║${No_Attributes} 2001:4860:4860::8844   ${Dim}║${No_Attributes}"
-    echo " ${Dim}║${No_Attributes}${F_Red}${Bold}  2${No_Attributes} ${Dim}║${No_Attributes} Cloudflare        ${F_Purple}${Bold}(Non-filtering) ${No_Attributes}${Dim}║${No_Attributes} 1.1.1.1          ${Dim}║${No_Attributes} 1.0.0.1            ${Dim}║${No_Attributes} 2606:4700:4700::1111 ${Dim}║${No_Attributes} 2606:4700:4700::1001   ${Dim}║${No_Attributes}"
-    echo " ${Dim}║${No_Attributes}${F_Red}${Bold}  3${No_Attributes} ${Dim}║${No_Attributes} Cisco Umbrella    ${F_Purple}${Bold}(Non-filtering) ${No_Attributes}${Dim}║${No_Attributes} 208.67.222.222   ${Dim}║${No_Attributes} 208.67.220.220     ${Dim}║${No_Attributes} 2620:119:35::35      ${Dim}║${No_Attributes} 2620:119:53::53        ${Dim}║${No_Attributes}"
-    echo " ${Dim}╠════╬═══════════════════════════════════╬══════════════════╬════════════════════╬══════════════════════╬════════════════════════╣${No_Attributes}"
-    echo " ${Dim}║${No_Attributes}${F_Red}${Bold}  4${No_Attributes} ${Dim}║${No_Attributes} NeuStar       ${F_Yellow}${Bold}(Threat Protection) ${No_Attributes}${Dim}║${No_Attributes} 156.154.70.2     ${Dim}║${No_Attributes} 156.154.71.2       ${Dim}║${No_Attributes} 2610:a1:1018::2      ${Dim}║${No_Attributes} 2610:a1:1019::2        ${Dim}║${No_Attributes}"
-    echo " ${Dim}║${No_Attributes}${F_Red}${Bold}  5${No_Attributes} ${Dim}║${No_Attributes} NeuStar       ${F_Green}${Bold}(Family Protection) ${No_Attributes}${Dim}║${No_Attributes} 156.154.70.3     ${Dim}║${No_Attributes} 156.154.71.3       ${Dim}║${No_Attributes} 2610:a1:1018::3      ${Dim}║${No_Attributes} 2610:a1:1019::3        ${Dim}║${No_Attributes}"
-    echo " ${Dim}╠════╬═══════════════════════════════════╬══════════════════╬════════════════════╬══════════════════════╬════════════════════════╣${No_Attributes}"
-    echo " ${Dim}║${No_Attributes}${F_Red}${Bold}  6${No_Attributes} ${Dim}║${No_Attributes} CleanBrowsing ${F_Yellow}${Bold}(Threat Protection) ${No_Attributes}${Dim}║${No_Attributes} 185.228.168.9    ${Dim}║${No_Attributes} 185.228.169.9      ${Dim}║${No_Attributes} 2a0d:2a00:1::2       ${Dim}║${No_Attributes} 2a0d:2a00:2::2         ${Dim}║${No_Attributes}"
-    echo " ${Dim}║${No_Attributes}${F_Red}${Bold}  7${No_Attributes} ${Dim}║${No_Attributes} CleanBrowsing ${F_Green}${Bold}(Family Protection) ${No_Attributes}${Dim}║${No_Attributes} 185.228.168.168  ${Dim}║${No_Attributes} 185.228.169.168    ${Dim}║${No_Attributes} 2a0d:2a00:1::        ${Dim}║${No_Attributes} 2a0d:2a00:2::          ${Dim}║${No_Attributes}"
-    echo " ${Dim}╠════╬═══════════════════════════════════╬══════════════════╬════════════════════╬══════════════════════╬════════════════════════╣${No_Attributes}"
-    echo " ${Dim}║${No_Attributes}${F_Red}${Bold}  8${No_Attributes} ${Dim}║${No_Attributes} AdGuard       ${F_Yellow}${Bold}(Threat Protection) ${No_Attributes}${Dim}║${No_Attributes} 94.140.14.14     ${Dim}║${No_Attributes} 94.140.15.15       ${Dim}║${No_Attributes} 2a10:50c0::ad1:ff    ${Dim}║${No_Attributes} 2a10:50c0::ad2:ff      ${Dim}║${No_Attributes}"
-    echo " ${Dim}║${No_Attributes}${F_Red}${Bold}  9${No_Attributes} ${Dim}║${No_Attributes} AdGuard       ${F_Green}${Bold}(Family Protection) ${No_Attributes}${Dim}║${No_Attributes} 94.140.14.15     ${Dim}║${No_Attributes} 94.140.15.16       ${Dim}║${No_Attributes} 2a10:50c0::bad1:ff   ${Dim}║${No_Attributes} 2a10:50c0::bad2:ff     ${Dim}║${No_Attributes}"
-    echo " ${Dim}╠════╬═══════════════════════════════════╬══════════════════╬════════════════════╬══════════════════════╬════════════════════════╣${No_Attributes}"
-    echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 10${No_Attributes} ${Dim}║${No_Attributes} YandexDNS     ${F_Yellow}${Bold}(Threat Protection) ${No_Attributes}${Dim}║${No_Attributes} 77.88.8.88       ${Dim}║${No_Attributes} 77.88.8.2          ${Dim}║${No_Attributes} 2a02:6b8::feed:bad   ${Dim}║${No_Attributes} 2a02:6b8:0:1::feed:bad ${Dim}║${No_Attributes}"
-    echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 11${No_Attributes} ${Dim}║${No_Attributes} YandexDNS     ${F_Green}${Bold}(Family Protection) ${No_Attributes}${Dim}║${No_Attributes} 77.88.8.7        ${Dim}║${No_Attributes} 77.88.8.3          ${Dim}║${No_Attributes} 2a02:6b8::feed:a11   ${Dim}║${No_Attributes} 2a02:6b8:0:1::feed:a11 ${Dim}║${No_Attributes}"
-    echo " ${Dim}╠════╬══════════════════════════╦════════╩══════════════════╩════════════════════╩══════════════════════╩════════════════════════╝${No_Attributes}"
-    echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 12${No_Attributes} ${Dim}║${No_Attributes} Show current DNS servers ${Dim}║${No_Attributes}"
-    echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 13${No_Attributes} ${Dim}║${No_Attributes} Reset DNS servers        ${Dim}║${No_Attributes}"
-    echo " ${Dim}╚════╩══════════════════════════╝${No_Attributes}\n"
+    echo " ╭───────────────────┬────────────────────────────────────────────────────────────────────────────────────────╮"
+    echo " │ Modes filtering   │ Description              ${F_Red}${Bold}Note:${No_Attributes} Please don't use them unless you know what you're doing │"
+    echo " ├───────────────────┼────────────────────────────────────────────────────────────────────────────────────────┤"
+    echo " │${F_Purple}${Bold} Non-filtering     ${No_Attributes}│ Reliable and fast DNS lookup without blocking any specific categories                  │"
+    echo " │${F_Yellow}${Bold} Threat Protection ${No_Attributes}│ Mode is for blocking ads, trackers, malware, ransomware, spyware and phishing websites │"
+    echo " │${F_Green}${Bold} Family Protection ${No_Attributes}│ Does the same as (Threat Protection), but also blocks websites with adult content      │"
+    echo " ╰───────────────────┴────────────────────────────────────────────────────────────────────────────────────────╯\n"
+    echo "      ╭───────────────┬───────────────────┬──────────────────┬────────────────────┬──────────────────────┬────────────────────────╮"
+    echo "      │ DNS Providers │ Modes filtering   │ Primary DNS IPv4 │ Secondary DNS IPv4 │ Primary DNS IPv6     │ Secondary DNS IPv6     │"
+    echo " ╭────┼───────────────┴───────────────────┼──────────────────┼────────────────────┼──────────────────────┼────────────────────────┤"
+    echo " │${F_Red}${Bold}  1${No_Attributes} │ Google Public     ${F_Purple}${Bold}(Non-filtering) ${No_Attributes}│ 8.8.8.8          │ 8.8.4.4            │ 2001:4860:4860::8888 │ 2001:4860:4860::8844   │"
+    echo " │${F_Red}${Bold}  2${No_Attributes} │ Cloudflare        ${F_Purple}${Bold}(Non-filtering) ${No_Attributes}│ 1.1.1.1          │ 1.0.0.1            │ 2606:4700:4700::1111 │ 2606:4700:4700::1001   │"
+    echo " │${F_Red}${Bold}  3${No_Attributes} │ Cisco Umbrella    ${F_Purple}${Bold}(Non-filtering) ${No_Attributes}│ 208.67.222.222   │ 208.67.220.220     │ 2620:119:35::35      │ 2620:119:53::53        │"
+    echo " ├────┼───────────────────────────────────┼──────────────────┼────────────────────┼──────────────────────┼────────────────────────┤"
+    echo " │${F_Red}${Bold}  4${No_Attributes} │ NeuStar       ${F_Yellow}${Bold}(Threat Protection) ${No_Attributes}│ 156.154.70.2     │ 156.154.71.2       │ 2610:a1:1018::2      │ 2610:a1:1019::2        │"
+    echo " │${F_Red}${Bold}  5${No_Attributes} │ NeuStar       ${F_Green}${Bold}(Family Protection) ${No_Attributes}│ 156.154.70.3     │ 156.154.71.3       │ 2610:a1:1018::3      │ 2610:a1:1019::3        │"
+    echo " ├────┼───────────────────────────────────┼──────────────────┼────────────────────┼──────────────────────┼────────────────────────┤"
+    echo " │${F_Red}${Bold}  6${No_Attributes} │ CleanBrowsing ${F_Yellow}${Bold}(Threat Protection) ${No_Attributes}│ 185.228.168.9    │ 185.228.169.9      │ 2a0d:2a00:1::2       │ 2a0d:2a00:2::2         │"
+    echo " │${F_Red}${Bold}  7${No_Attributes} │ CleanBrowsing ${F_Green}${Bold}(Family Protection) ${No_Attributes}│ 185.228.168.168  │ 185.228.169.168    │ 2a0d:2a00:1::        │ 2a0d:2a00:2::          │"
+    echo " ├────┼───────────────────────────────────┼──────────────────┼────────────────────┼──────────────────────┼────────────────────────┤"
+    echo " │${F_Red}${Bold}  8${No_Attributes} │ AdGuard       ${F_Yellow}${Bold}(Threat Protection) ${No_Attributes}│ 94.140.14.14     │ 94.140.15.15       │ 2a10:50c0::ad1:ff    │ 2a10:50c0::ad2:ff      │"
+    echo " │${F_Red}${Bold}  9${No_Attributes} │ AdGuard       ${F_Green}${Bold}(Family Protection) ${No_Attributes}│ 94.140.14.15     │ 94.140.15.16       │ 2a10:50c0::bad1:ff   │ 2a10:50c0::bad2:ff     │"
+    echo " ├────┼───────────────────────────────────┼──────────────────┼────────────────────┼──────────────────────┼────────────────────────┤"
+    echo " │${F_Red}${Bold} 10${No_Attributes} │ YandexDNS     ${F_Yellow}${Bold}(Threat Protection) ${No_Attributes}│ 77.88.8.88       │ 77.88.8.2          │ 2a02:6b8::feed:bad   │ 2a02:6b8:0:1::feed:bad │"
+    echo " │${F_Red}${Bold} 11${No_Attributes} │ YandexDNS     ${F_Green}${Bold}(Family Protection) ${No_Attributes}│ 77.88.8.7        │ 77.88.8.3          │ 2a02:6b8::feed:a11   │ 2a02:6b8:0:1::feed:a11 │"
+    echo " ├────┼──────────────────────────┬────────┴──────────────────┴────────────────────┴──────────────────────┴────────────────────────╯"
+    echo " │${F_Red}${Bold} 12${No_Attributes} │ Show current DNS servers │"
+    echo " │${F_Red}${Bold} 13${No_Attributes} │ Reset DNS servers        │"
+    echo " ╰────┴──────────────────────────╯\n"
 
     read "?  Please enter a command: " CHOICES
     case $CHOICES in
@@ -822,15 +822,15 @@ customPingAndTraceroutTestIPv4/IPv6() {
     terminalWindowSize:90x25
     echo "•${F_Red}${Bold} Command 3: Custom ping and tracerout test IPv4/IPv6.${No_Attributes}\n"
     # Submenu
-    echo " ${Dim}╔═══╦════════════════════════════════════════════════════╗${No_Attributes}"
-    echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 1${No_Attributes} ${Dim}║${No_Attributes} Test Ping IPv4                                     ${Dim}║${No_Attributes}"
-    echo " ${Dim}╠═══╬════════════════════════════════════════════════════╣${No_Attributes}"
-    echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 2${No_Attributes} ${Dim}║${No_Attributes} Test Traceroute IPv4                               ${Dim}║${No_Attributes}"
-    echo " ${Dim}╠═══╬════════════════════════════════════════════════════╣${No_Attributes}"
-    echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 3${No_Attributes} ${Dim}║${No_Attributes} Test Ping IPv6                                     ${Dim}║${No_Attributes}"
-    echo " ${Dim}╠═══╬════════════════════════════════════════════════════╣${No_Attributes}"
-    echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 4${No_Attributes} ${Dim}║${No_Attributes} Test Traceroute IPv6                               ${Dim}║${No_Attributes}"
-    echo " ${Dim}╚═══╩════════════════════════════════════════════════════╝${No_Attributes}\n"
+    echo " ╭───┬────────────────────────────────────────────────────╮"
+    echo " │${F_Red}${Bold} 1${No_Attributes} │ Test Ping IPv4                                     │"
+    echo " ├───┼────────────────────────────────────────────────────┤"
+    echo " │${F_Red}${Bold} 2${No_Attributes} │ Test Traceroute IPv4                               │"
+    echo " ├───┼────────────────────────────────────────────────────┤"
+    echo " │${F_Red}${Bold} 3${No_Attributes} │ Test Ping IPv6                                     │"
+    echo " ├───┼────────────────────────────────────────────────────┤"
+    echo " │${F_Red}${Bold} 4${No_Attributes} │ Test Traceroute IPv6                               │"
+    echo " ╰───┴────────────────────────────────────────────────────╯\n"
 
     read "?  Please enter a command: " CHOICES
     case $CHOICES in
@@ -840,12 +840,12 @@ customPingAndTraceroutTestIPv4/IPv6() {
     1)
         terminalWindowSize:90x55
         echo "•${F_Red}${Bold} Test Ping IPv4.${No_Attributes}"
-        echo "\n${Dim}═════════════════════════════════════════════════════════════════════════════════════════╗${No_Attributes}"
+        echo "\n─────────────────────────────────────────────────────────────────────────────────────────╮"
         echo " Outgoing data bytes packet size ${F_Green}${Bold}Default: 56${No_Attributes} -> exceeding can trigger a firewall."
         read "? To which IP or Host address you want to send the test packets: " HOST
         read "? How many times you want to send the test packets: " COUNT
         read "? How many data bytes packet size you would like to send: " SIZE
-        echo "${Dim}═════════════════════════════════════════════════════════════════════════════════════════╝${No_Attributes}"
+        echo "─────────────────────────────────────────────────────────────────────────────────────────╯"
         echo "\n•${F_Red}${Bold} Testing Ping IPv4.${No_Attributes}\n"
         ping -i 0.1 "$HOST" -c "$COUNT" -s "$SIZE"
         echo "\n${F_Red}•${F_Green}${Bold} Finish...${No_Attributes}"
@@ -855,10 +855,10 @@ customPingAndTraceroutTestIPv4/IPv6() {
     2)
         terminalWindowSize:112x45
         echo "•${F_Red}${Bold} Test Traceroute IPv4.${No_Attributes}"
-        echo "\n${Dim}═══════════════════════════════════════════════════════════════════════════════════════════════════════════════╗${No_Attributes}"
+        echo "\n───────────────────────────────────────────────────────────────────────────────────────────────────────────────╮"
         read "? To which IP or Host address you want to send the test packets: " HOST
         read "? Send packets of specified IP protocol supported are: ICMP or UDP: " PROTOCOL
-        echo "${Dim}═══════════════════════════════════════════════════════════════════════════════════════════════════════════════╝${No_Attributes}"
+        echo "───────────────────────────────────────────────────────────────────────────────────────────────────────────────╯"
         echo "\n•${F_Red}${Bold} Testing Traceroute IPv4.${No_Attributes}\n"
         traceroute -w 1 -S -P $PROTOCOL -m 30 "$HOST"
         echo "\n${F_Red}•${F_Green}${Bold} Finish...${No_Attributes}"
@@ -868,12 +868,12 @@ customPingAndTraceroutTestIPv4/IPv6() {
     3)
         terminalWindowSize:112x55
         echo "•${F_Red}${Bold} Test Ping IPv6.${No_Attributes}"
-        echo "\n${Dim}═══════════════════════════════════════════════════════════════════════════════════════════════════════════════╗${No_Attributes}"
+        echo "\n───────────────────────────────────────────────────────────────────────────────────────────────────────────────╮"
         echo " Outgoing data bytes packet size ${F_Green}${Bold}Default: 56${No_Attributes} -> exceeding can trigger a firewall."
         read "? To which IP or Host address you want to send the test packets: " HOST
         read "? How many times you want to send the test packets: " COUNT
         read "? How many data bytes packet size you would like to send: " SIZE
-        echo "${Dim}═══════════════════════════════════════════════════════════════════════════════════════════════════════════════╝${No_Attributes}"
+        echo "───────────────────────────────────────────────────────────────────────────────────────────────────────────────╯"
         echo "\n•${F_Red}${Bold} Testing Ping IPv6.${No_Attributes}\n"
         ping6 -i 0.1 "$HOST" -c "$COUNT" -s "$SIZE"
         echo "\n${F_Red}•${F_Green}${Bold} Finish...${No_Attributes}"
@@ -883,10 +883,10 @@ customPingAndTraceroutTestIPv4/IPv6() {
     4)
         terminalWindowSize:132x45
         echo "•${F_Red}${Bold} Test Traceroute IPv6.${No_Attributes}"
-        echo "\n${Dim}══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗${No_Attributes}"
+        echo "\n──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮"
         read "? To which IP or Host address you want to send the test packets: " HOST
         read "? Send packets of specified IP protocol supported are: ICMP(-I) or UDP( ): " PROTOCOL
-        echo "${Dim}══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝${No_Attributes}"
+        echo "──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯"
         echo "\n•${F_Red}${Bold} Testing Traceroute IPv6.${No_Attributes}\n"
         traceroute6 -w 1 -l $PROTOCOL -m 30 "$HOST"
         echo "\n${F_Red}•${F_Green}${Bold} Finish...${No_Attributes}"
@@ -906,9 +906,9 @@ automaticPingAndTraceroutTestIPv4/IPv6() {
     terminalWindowSize:140x55
     echo "•${F_Red}${Bold} Command 4: Automatic ping and tracerout test IPv4/IPv6.${No_Attributes}"
     # Ping test IPv4
-    echo "\n${Dim}╔════════════════════════╦═══════════════════════════════════════════════════════════╗${No_Attributes}"
-    echo "${Dim}║${No_Attributes} Server- or IP- address ${Dim}║${No_Attributes} Response time: Minimum/Average/Maximum/Standard_deviation ${Dim}║${No_Attributes}"
-    echo "${Dim}╚════════════════════════╩═══════════════════════════════════════════════════════════╝${No_Attributes}\n"
+    echo "\n╭────────────────────────┬───────────────────────────────────────────────────────────╮"
+    echo "│ Server- or IP- address │ Response time: Minimum/Average/Maximum/Standard_deviation │"
+    echo "╰────────────────────────┴───────────────────────────────────────────────────────────╯\n"
     echo "${F_Red}•${F_Green}${Bold} Ping IPv4 Testing...\n${No_Attributes}"
     ping -i 0.4 -c 10 "Google.com" | tail -3
     ping -i 0.4 -c 10 "Youtube.com" | tail -4
@@ -936,9 +936,9 @@ automaticPingAndTraceroutTestIPv4/IPv6() {
     # Ping and Traceroute test IPv6
 
     # Ping test IPv6
-    echo "\n${Dim}╔════════════════════════╦═══════════════════════════════════════════════════════════╗${No_Attributes}"
-    echo "${Dim}║${No_Attributes} Server- or IP- address ${Dim}║${No_Attributes} Response time: Minimum/Average/Maximum/Standard_deviation ${Dim}║${No_Attributes}"
-    echo "${Dim}╚════════════════════════╩═══════════════════════════════════════════════════════════╝${No_Attributes}\n"
+    echo "\n╭────────────────────────┬───────────────────────────────────────────────────────────╮"
+    echo "│ Server- or IP- address │ Response time: Minimum/Average/Maximum/Standard_deviation │"
+    echo "╰────────────────────────┴───────────────────────────────────────────────────────────╯\n"
     echo "${F_Red}•${F_Green}${Bold} Ping IPv6 Testing...\n${No_Attributes}"
     ping6 -i 0.4 -c 10 "Google.com" | tail -3
     ping6 -i 0.4 -c 10 "Youtube.com" | tail -4
@@ -971,12 +971,12 @@ customSettingComputerName() {
     terminalWindowSize:100x30
     echo "•${F_Red}${Bold} Command 5: Custom setting a new Computer Name, Hostname, Local Hostname and NetBIOS Name.${No_Attributes}"
     askPassword
-    echo "${Dim}════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}"
+    echo "───────────────────────────────────────────────────────────────────────────────────────────────────╮"
     read "? Hostname (for example: MacBook-Pro): " Hostname
     read "? Computer Name (for example: John_Kennedy): " ComputerName
     read "? Local Hostname (for example: MacBook-Pro-John): " LocalHostname
-    echo " NetBIOS Name is automatically generated from Local Hostname: -------"
-    echo "${Dim}════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}\n"
+    echo " NetBIOS Name is automatically generated from Local Hostname: ------------"
+    echo "───────────────────────────────────────────────────────────────────────────────────────────────────╯\n"
     sudo scutil --set HostName "$Hostname"
     sudo scutil --set ComputerName "$ComputerName"
     sudo scutil --set LocalHostName "$LocalHostname"
@@ -987,12 +987,12 @@ customSettingComputerName() {
     echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
     # New current information about the Computer Name, Hostname, Local Hostname and NetBIOS Name
     echo "\n${F_Red}•${F_Green}${Bold} Getting information about the new current Computer Name, Hostname, Local Hostname and NetBIOS Name${No_Attributes}\n"
-    echo "${Dim}════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}"
+    echo "───────────────────────────────────────────────────────────────────────────────────────────────────╮"
     sleep 1 && scutil --get HostName | awk '{print "Hostname: ", $1}'
     sleep 1 && scutil --get ComputerName | awk '{print "Computer Name: ", $1}'
     sleep 1 && scutil --get LocalHostName | awk '{print "Local Hostname: ", $1}'
     sleep 1 && defaults read /Library/Preferences/SystemConfiguration/com.apple.smb.server NetBIOSName | awk '{print "NetBIOS Name: " $1}'
-    echo "${Dim}════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}"
+    echo "───────────────────────────────────────────────────────────────────────────────────────────────────╯"
     echo "\n${F_Red}•${F_Green}${Bold} Finish...${No_Attributes}"
     continueMessage
 }
@@ -1003,7 +1003,7 @@ customEditingHostsFile() {
     terminalWindowSize:165x55
     echo "•${F_Red}${Bold} Command 6: Custom editing of the Hosts file and Flush DNS cache.${No_Attributes}\n"
     # 1. How and why to modify my hosts file?
-    echo "${F_Red}•${F_Green}${Bold} How and why to modify my hosts file?${No_Attributes}${Dim} ══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}\n"
+    echo "${F_Red}•${F_Green}${Bold} How and why to modify my hosts file?${No_Attributes}\n"
     echo "${F_Red}•${F_Green}${No_Attributes} The hosts file is a computer file used by the operating system to connect host names (domain names) with IP addresses."
     echo "${F_Red}•${F_Green}${No_Attributes} In other words, it allows you to manually point a website address to a desired IP, or block access to a site altogether by pointing to an invalid or internal IP."
     echo "${F_Red}•${F_Green}${No_Attributes} This can come in handy when you have pointed the name-servers of your domain to a new web host and want to work on your website immediately.\n"
@@ -1012,7 +1012,7 @@ customEditingHostsFile() {
     echo "${F_Red}•${F_Green}${No_Attributes} You can make the local computer resolve e.i. www.facebook.com through an invalid IP and that way prevent people from opening it."
     echo "${F_Red}•${F_Green}${No_Attributes} Since it is necessary to have administrative access to edit the hosts file, it will be really hard for someone to revert this change.\n"
     # Edit Hosts file
-    echo "${F_Red}•${F_Green}${Bold} Custom editing of the Hosts file:${No_Attributes}${Dim} ═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}\n"
+    echo "${F_Red}•${F_Green}${Bold} Custom editing of the Hosts file:${No_Attributes}\n"
     echo "${F_Red}•${F_Green}${No_Attributes} Use the arrow keys on your keyboard, to navigate and edit the file."
     echo "${F_Red}•${F_Green}${No_Attributes} You should just add the desired IP followed by the host name (or domain name)."
     echo "${F_Red}•${F_Green}${No_Attributes} Use the Return key to create some space below the existing records."
@@ -1020,19 +1020,16 @@ customEditingHostsFile() {
     echo "${F_Red}•${F_Green}${No_Attributes} Enter the IP address you wish to assign, followed by two tabs and the hostname."
     echo "${F_Red}•${F_Green}${No_Attributes} Save the file by pressing Ctrl + O"
     echo "${F_Red}•${F_Green}${No_Attributes} Exit with Ctrl + X\n"
-    echo "${Dim}═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}"
     # Options: Block IP Addresses and Reroute Web Addresses
     echo "${F_Red}•${F_Green}${Bold} Options 1: Block IP Addresses:${No_Attributes}"
     echo "${F_Red}•${F_Green}${No_Attributes}  * For example, The Facebook website to block the IP address 0.0.0.0"
     echo "${F_Red}•${F_Blue}  * Example input: 0.0.0.0       www.facebook.com${No_Attributes}"
-    echo "${F_Red}•${F_Green}${No_Attributes}  * Now, whenever we try to go to www.facebook.com from our Mac, the Web browser will fail to load the page."
-    echo "${Dim}═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}"
+    echo "${F_Red}•${F_Green}${No_Attributes}  * Now, whenever we try to go to www.facebook.com from our Mac, the Web browser will fail to load the page.\n"
     echo "${F_Red}•${F_Green}${Bold} Options 2: Reroute Web Addresses:${No_Attributes}"
     echo "${F_Red}•${F_Green}${No_Attributes}  * Make note of the IP address that’s returned and use it in your Mac hosts file mapping."
     echo "${F_Red}•${F_Green}${No_Attributes}  * For example, The New York Times website returns an IP address of 170.149.172.130."
     echo "${F_Red}•${F_Blue}  * Example input: 170.149.172.130       www.facebook.com${No_Attributes}"
     echo "${F_Red}•${F_Green}${No_Attributes}  * If we map that to Facebook in our hosts file, any time someone using the Mac tries to go to Facebook, they’ll see The New York Times load instead."
-    echo "${Dim}═════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}"
     echo "\n Press Return key to Edit Hosts file."
     read
     askPassword
@@ -1124,14 +1121,14 @@ spoofingMACAddressOfWirelessNetwork() {
     terminalWindowSize:100x30
     echo "•${F_Red}${Bold} Command 11: Spoofing the MAC Address of the Wireless network.${No_Attributes}"
     askPassword
-    echo "${Dim}╔══════════════════════════════════════════════════════════════════════════════════════════════════╗${No_Attributes}"
-    echo "${Dim}║${No_Attributes} MAC addresses are used as a way to identify devices by many advertising technology providers.    ${Dim}║${No_Attributes}"
-    echo "${Dim}║${No_Attributes} In most free timeout-based Internet services, MAC addresses are identifier that services use.    ${Dim}║${No_Attributes}"
-    echo "${Dim}║${No_Attributes} Spoofing, changes the MAC address of the Wi-Fi, and this is recognized as a new service user.    ${Dim}║${No_Attributes}"
-    echo "${Dim}╠══════════════════════════════════════════════════════════════════════════════════════════════════╣${No_Attributes}"
-    echo "${Dim}║${No_Attributes} Note that the hardware 'ether' MAC values that never change.                                     ${Dim}║${No_Attributes}"
-    echo "${Dim}║${No_Attributes} Note that the spoofed MAC address will change to hardware after reboot, since it never changes.  ${Dim}║${No_Attributes}"
-    echo "${Dim}╚══════════════════════════════════════════════════════════════════════════════════════════════════╝${No_Attributes}\n"
+    echo "╭──────────────────────────────────────────────────────────────────────────────────────────────────╮"
+    echo "│ MAC addresses are used as a way to identify devices by many advertising technology providers.    │"
+    echo "│ In most free timeout-based Internet services, MAC addresses are identifier that services use.    │"
+    echo "│ Spoofing, changes the MAC address of the Wi-Fi, and this is recognized as a new service user.    │"
+    echo "├──────────────────────────────────────────────────────────────────────────────────────────────────┤"
+    echo "│ Note that the hardware 'ether' MAC values that never change.                                     │"
+    echo "│ Note that the spoofed MAC address will change to hardware after reboot, since it never changes.  │"
+    echo "╰──────────────────────────────────────────────────────────────────────────────────────────────────╯\n"
     OLD_MAC_ADDRESS=$(ifconfig en0 | grep ether | grep -oE '[0-9abcdef:]{17}')
     NEW_MAC_ADDRESS=$(openssl rand 6 | xxd -p | sed 's/\(..\)/\1:/g; s/:$//')
     # Check Old MAC address
@@ -1197,10 +1194,10 @@ testICMPSweepAndICMP-Flood() {
     echo "•${F_Red}${Bold} Command 14: Stress Test Network with ICMP-Sweep and ICMP-Flood.${No_Attributes}"
     askPassword
     # ICMP-Sweep
-    echo "${Dim}════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}"
+    echo "───────────────────────────────────────────────────────────────────────────────────────────────────╮"
     echo "• The scan will run from network 1 to network 254."
     echo "• Example use: In the tab below, enter the first ${Bold}3${No_Attributes} octets: ${Bold}192.168.1${No_Attributes}${F_Red}${Dim}xXX${No_Attributes} or ${Bold}10.10.1${No_Attributes}${F_Red}${Dim}xXX${No_Attributes} and etc."
-    echo "${Dim}════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}\n"
+    echo "───────────────────────────────────────────────────────────────────────────────────────────────────╯\n"
     read "? Enter the address subnet: " SUBNET
     echo "\n•${F_Red}${Bold} Running a Quick IP sweep to determine live hosts on subnet.${No_Attributes}\n"
     for IP in $(seq 1 254); do
@@ -1214,15 +1211,15 @@ testICMPSweepAndICMP-Flood() {
     en1BroadcastAddress=$(ifconfig en1 | awk /inet\ /'{print $6}')
     echo "Ethernet Broadcast Address (en1): $en1BroadcastAddress"
     # ICMP-Flood and Broadcast storm is a common Denial of Service (DoS) attack!
-    echo "\n${Dim}════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}"
+    echo "\n───────────────────────────────────────────────────────────────────────────────────────────────────╮"
     echo "•${F_Red}${Bold} ICMP-Flood is a common Denial of Service (DoS) attack!${No_Attributes}"
     echo "• Outgoing data bytes packet size Default: ${F_Red}${Bold}56${No_Attributes} -> exceeding can trigger a firewall."
     echo "• About ${F_Red}${Bold}100${No_Attributes} packets per second, the speed is affected by packet size and network bandwidth."
-    echo "${Dim}════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}\n"
+    echo "───────────────────────────────────────────────────────────────────────────────────────────────────┤"
     read "? To which IP address you want to send the test packets: " HOST
     read "? How many times you want to send the test packets: " COUNT
     read "? How many data bytes packet size you would like to send: " SIZE
-    echo "${Dim}════════════════════════════════════════════════════════════════════════════════════════════════════${No_Attributes}"
+    echo "───────────────────────────────────────────────────────────────────────────────────────────────────╯"
     echo "\n•${F_Red}${Bold} Testing with ICMP-Flood...${No_Attributes}\n"
     sudo ping "$HOST" -c "$COUNT" -f -s "$SIZE" >nFLjLfjveKGdEtWThmRcWfCovc.txt
     rm nFLjLfjveKGdEtWThmRcWfCovc.txt
@@ -1347,11 +1344,11 @@ enableOrDisableTheShowOfHiddenFiles() {
     terminalWindowSize:90x25
     echo "•${F_Red}${Bold} Command 16: Enable or Disable the show of Hidden files.${No_Attributes}\n"
     # Submenu
-    echo " ${Dim}╔═══╦════════════════════════════════════════════════════════════════════════════╗${No_Attributes}"
-    echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 1${No_Attributes} ${Dim}║${No_Attributes} Enable the show of Hidden files                                            ${Dim}║${No_Attributes}"
-    echo " ${Dim}╠═══╬════════════════════════════════════════════════════════════════════════════╣${No_Attributes}"
-    echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 2${No_Attributes} ${Dim}║${No_Attributes} Disable the show of Hidden files (Default)                                 ${Dim}║${No_Attributes}"
-    echo " ${Dim}╚═══╩════════════════════════════════════════════════════════════════════════════╝${No_Attributes}\n"
+    echo " ╭───┬────────────────────────────────────────────────────────────────────────────╮"
+    echo " │${F_Red}${Bold} 1${No_Attributes} │ Enable the show of Hidden files                                            │"
+    echo " ├───┼────────────────────────────────────────────────────────────────────────────┤"
+    echo " │${F_Red}${Bold} 2${No_Attributes} │ Disable the show of Hidden files (Default)                                 │"
+    echo " ╰───┴────────────────────────────────────────────────────────────────────────────╯\n"
 
     read "?  Please enter a command: " CHOICES
     case $CHOICES in
@@ -1385,11 +1382,11 @@ enableOrDisableTheShowOfAllFileExtensions() {
     terminalWindowSize:90x25
     echo "•${F_Red}${Bold} Command 17: Enable or Disable the show of all File Extensions.${No_Attributes}\n"
     # Submenu
-    echo " ${Dim}╔═══╦════════════════════════════════════════════════════════════════════════════╗${No_Attributes}"
-    echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 1${No_Attributes} ${Dim}║${No_Attributes} Enable the show of all File Extensions                                     ${Dim}║${No_Attributes}"
-    echo " ${Dim}╠═══╬════════════════════════════════════════════════════════════════════════════╣${No_Attributes}"
-    echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 2${No_Attributes} ${Dim}║${No_Attributes} Disable the show of all File Extensions (Default)                          ${Dim}║${No_Attributes}"
-    echo " ${Dim}╚═══╩════════════════════════════════════════════════════════════════════════════╝${No_Attributes}\n"
+    echo " ╭───┬────────────────────────────────────────────────────────────────────────────╮"
+    echo " │${F_Red}${Bold} 1${No_Attributes} │ Enable the show of all File Extensions                                     │"
+    echo " ├───┼────────────────────────────────────────────────────────────────────────────┤"
+    echo " │${F_Red}${Bold} 2${No_Attributes} │ Disable the show of all File Extensions (Default)                          │"
+    echo " ╰───┴────────────────────────────────────────────────────────────────────────────╯\n"
 
     read "?  Please enter a command: " CHOICES
     case $CHOICES in
@@ -1423,11 +1420,11 @@ enableOrDisableTheShowOfAttachmentsAsIconsInTheAppleMailApp() {
     terminalWindowSize:90x25
     echo "•${F_Red}${Bold} Command 18: Enable or Disable the show of Attachments as Icons in the Apple Mail app.${No_Attributes}\n"
     # Submenu
-    echo " ${Dim}╔═══╦════════════════════════════════════════════════════════════════════════════╗${No_Attributes}"
-    echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 1${No_Attributes} ${Dim}║${No_Attributes} Enable the show of Attachments as Icons in the Apple Mail app              ${Dim}║${No_Attributes}"
-    echo " ${Dim}╠═══╬════════════════════════════════════════════════════════════════════════════╣${No_Attributes}"
-    echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 2${No_Attributes} ${Dim}║${No_Attributes} Disable the show of Attachments as Icons in the Apple Mail app (Default)   ${Dim}║${No_Attributes}"
-    echo " ${Dim}╚═══╩════════════════════════════════════════════════════════════════════════════╝${No_Attributes}\n"
+    echo " ╭───┬────────────────────────────────────────────────────────────────────────────╮"
+    echo " │${F_Red}${Bold} 1${No_Attributes} │ Enable the show of Attachments as Icons in the Apple Mail app              │"
+    echo " ├───┼────────────────────────────────────────────────────────────────────────────┤"
+    echo " │${F_Red}${Bold} 2${No_Attributes} │ Disable the show of Attachments as Icons in the Apple Mail app (Default)   │"
+    echo " ╰───┴────────────────────────────────────────────────────────────────────────────╯\n"
 
     read "?  Please enter a command: " CHOICES
     case $CHOICES in
@@ -1461,11 +1458,11 @@ enableOrDisableTheShowOfTheFullPathInTheFinderTitleWindow() {
     terminalWindowSize:90x25
     echo "•${F_Red}${Bold} Command 19: Enable or Disable the show of the full path in the Finder 'Title' window.${No_Attributes}\n"
     # Submenu
-    echo " ${Dim}╔═══╦════════════════════════════════════════════════════════════════════════════╗${No_Attributes}"
-    echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 1${No_Attributes} ${Dim}║${No_Attributes} Enable the show of the full path in the Finder 'Title' window              ${Dim}║${No_Attributes}"
-    echo " ${Dim}╠═══╬════════════════════════════════════════════════════════════════════════════╣${No_Attributes}"
-    echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 2${No_Attributes} ${Dim}║${No_Attributes} Disable the show of the full path in the Finder 'Title' window (Default)   ${Dim}║${No_Attributes}"
-    echo " ${Dim}╚═══╩════════════════════════════════════════════════════════════════════════════╝${No_Attributes}\n"
+    echo " ╭───┬────────────────────────────────────────────────────────────────────────────╮"
+    echo " │${F_Red}${Bold} 1${No_Attributes} │ Enable the show of the full path in the Finder 'Title' window              │"
+    echo " ├───┼────────────────────────────────────────────────────────────────────────────┤"
+    echo " │${F_Red}${Bold} 2${No_Attributes} │ Disable the show of the full path in the Finder 'Title' window (Default)   │"
+    echo " ╰───┴────────────────────────────────────────────────────────────────────────────╯\n"
 
     read "?  Please enter a command: " CHOICES
     case $CHOICES in
@@ -1499,21 +1496,21 @@ changeTheDefaultScreenshotFileFormat() {
     terminalWindowSize:90x30
     echo "•${F_Red}${Bold} Command 20: Change the default Screenshot file format.${No_Attributes}\n"
     # Submenu
-    echo " ${Dim}╔═══╦════════════════════════════════════════════════════════════════════════════╗${No_Attributes}"
-    echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 1${No_Attributes} ${Dim}║${No_Attributes} Enable to use default Screenshot BMP file format                           ${Dim}║${No_Attributes}"
-    echo " ${Dim}╠═══╬════════════════════════════════════════════════════════════════════════════╣${No_Attributes}"
-    echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 2${No_Attributes} ${Dim}║${No_Attributes} Enable to use default Screenshot GIF file format                           ${Dim}║${No_Attributes}"
-    echo " ${Dim}╠═══╬════════════════════════════════════════════════════════════════════════════╣${No_Attributes}"
-    echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 3${No_Attributes} ${Dim}║${No_Attributes} Enable to use default Screenshot PDF file format                           ${Dim}║${No_Attributes}"
-    echo " ${Dim}╠═══╬════════════════════════════════════════════════════════════════════════════╣${No_Attributes}"
-    echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 4${No_Attributes} ${Dim}║${No_Attributes} Enable to use default Screenshot TIFF file format                          ${Dim}║${No_Attributes}"
-    echo " ${Dim}╠═══╬════════════════════════════════════════════════════════════════════════════╣${No_Attributes}"
-    echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 5${No_Attributes} ${Dim}║${No_Attributes} Enable to use default Screenshot JPG file format                           ${Dim}║${No_Attributes}"
-    echo " ${Dim}╠═══╬════════════════════════════════════════════════════════════════════════════╣${No_Attributes}"
-    echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 6${No_Attributes} ${Dim}║${No_Attributes} Enable to use default Screenshot JPEG file format                          ${Dim}║${No_Attributes}"
-    echo " ${Dim}╠═══╬════════════════════════════════════════════════════════════════════════════╣${No_Attributes}"
-    echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 7${No_Attributes} ${Dim}║${No_Attributes} Enable to use default Screenshot PNG file format (Default)                 ${Dim}║${No_Attributes}"
-    echo " ${Dim}╚═══╩════════════════════════════════════════════════════════════════════════════╝${No_Attributes}\n"
+    echo " ╭───┬────────────────────────────────────────────────────────────────────────────╮"
+    echo " │${F_Red}${Bold} 1${No_Attributes} │ Enable to use default Screenshot BMP file format                           │"
+    echo " ├───┼────────────────────────────────────────────────────────────────────────────┤"
+    echo " │${F_Red}${Bold} 2${No_Attributes} │ Enable to use default Screenshot GIF file format                           │"
+    echo " ├───┼────────────────────────────────────────────────────────────────────────────┤"
+    echo " │${F_Red}${Bold} 3${No_Attributes} │ Enable to use default Screenshot PDF file format                           │"
+    echo " ├───┼────────────────────────────────────────────────────────────────────────────┤"
+    echo " │${F_Red}${Bold} 4${No_Attributes} │ Enable to use default Screenshot TIFF file format                          │"
+    echo " ├───┼────────────────────────────────────────────────────────────────────────────┤"
+    echo " │${F_Red}${Bold} 5${No_Attributes} │ Enable to use default Screenshot JPG file format                           │"
+    echo " ├───┼────────────────────────────────────────────────────────────────────────────┤"
+    echo " │${F_Red}${Bold} 6${No_Attributes} │ Enable to use default Screenshot JPEG file format                          │"
+    echo " ├───┼────────────────────────────────────────────────────────────────────────────┤"
+    echo " │${F_Red}${Bold} 7${No_Attributes} │ Enable to use default Screenshot PNG file format (Default)                 │"
+    echo " ╰───┴────────────────────────────────────────────────────────────────────────────╯\n"
 
     read "?  Please enter a command: " CHOICES
     case $CHOICES in
@@ -1582,11 +1579,11 @@ enableOrDisableScreenshotWithShadowAndAddingExtraPixels() {
     terminalWindowSize:90x25
     echo "•${F_Red}${Bold} Command 21: Enable or Disable Screenshot with shadow and adding extra pixels.${No_Attributes}\n"
     # Submenu
-    echo " ${Dim}╔═══╦════════════════════════════════════════════════════════════════════════════╗${No_Attributes}"
-    echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 1${No_Attributes} ${Dim}║${No_Attributes} Disable Screenshot with shadow and adding extra pixels                     ${Dim}║${No_Attributes}"
-    echo " ${Dim}╠═══╬════════════════════════════════════════════════════════════════════════════╣${No_Attributes}"
-    echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 2${No_Attributes} ${Dim}║${No_Attributes} Enable Screenshot with shadow and adding extra pixels (Default)            ${Dim}║${No_Attributes}"
-    echo " ${Dim}╚═══╩════════════════════════════════════════════════════════════════════════════╝${No_Attributes}\n"
+    echo " ╭───┬────────────────────────────────────────────────────────────────────────────╮"
+    echo " │${F_Red}${Bold} 1${No_Attributes} │ Disable Screenshot with shadow and adding extra pixels                     │"
+    echo " ├───┼────────────────────────────────────────────────────────────────────────────┤"
+    echo " │${F_Red}${Bold} 2${No_Attributes} │ Enable Screenshot with shadow and adding extra pixels (Default)            │"
+    echo " ╰───┴────────────────────────────────────────────────────────────────────────────╯\n"
 
     read "?  Please enter a command: " CHOICES
     case $CHOICES in
@@ -1620,11 +1617,11 @@ enableOrDisableTheWarningBeforeEmptyingTheTrash() {
     terminalWindowSize:90x25
     echo "•${F_Red}${Bold} Command 22: Enable or Disable the warning before emptying the Trash.${No_Attributes}\n"
     # Submenu
-    echo " ${Dim}╔═══╦════════════════════════════════════════════════════════════════════════════╗${No_Attributes}"
-    echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 1${No_Attributes} ${Dim}║${No_Attributes} Disable warning before emptying the Trash                                  ${Dim}║${No_Attributes}"
-    echo " ${Dim}╠═══╬════════════════════════════════════════════════════════════════════════════╣${No_Attributes}"
-    echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 2${No_Attributes} ${Dim}║${No_Attributes} Enable warning before emptying the Trash (Default)                         ${Dim}║${No_Attributes}"
-    echo " ${Dim}╚═══╩════════════════════════════════════════════════════════════════════════════╝${No_Attributes}\n"
+    echo " ╭───┬────────────────────────────────────────────────────────────────────────────╮"
+    echo " │${F_Red}${Bold} 1${No_Attributes} │ Disable warning before emptying the Trash                                  │"
+    echo " ├───┼────────────────────────────────────────────────────────────────────────────┤"
+    echo " │${F_Red}${Bold} 2${No_Attributes} │ Enable warning before emptying the Trash (Default)                         │"
+    echo " ╰───┴────────────────────────────────────────────────────────────────────────────╯\n"
 
     read "?  Please enter a command: " CHOICES
     case $CHOICES in
@@ -1658,11 +1655,11 @@ enableOrDisableWarningWhenChangingAFileExtension() {
     terminalWindowSize:90x25
     echo "•${F_Red}${Bold} Command 23: Enable or Disable warning when changing a file Extension.${No_Attributes}\n"
     # Submenu
-    echo " ${Dim}╔═══╦════════════════════════════════════════════════════════════════════════════╗${No_Attributes}"
-    echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 1${No_Attributes} ${Dim}║${No_Attributes} Disable warning when changing a file Extension                             ${Dim}║${No_Attributes}"
-    echo " ${Dim}╠═══╬════════════════════════════════════════════════════════════════════════════╣${No_Attributes}"
-    echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 2${No_Attributes} ${Dim}║${No_Attributes} Enable warning when changing a file Extension (Default)                    ${Dim}║${No_Attributes}"
-    echo " ${Dim}╚═══╩════════════════════════════════════════════════════════════════════════════╝${No_Attributes}\n"
+    echo " ╭───┬────────────────────────────────────────────────────────────────────────────╮"
+    echo " │${F_Red}${Bold} 1${No_Attributes} │ Disable warning when changing a file Extension                             │"
+    echo " ├───┼────────────────────────────────────────────────────────────────────────────┤"
+    echo " │${F_Red}${Bold} 2${No_Attributes} │ Enable warning when changing a file Extension (Default)                    │"
+    echo " ╰───┴────────────────────────────────────────────────────────────────────────────╯\n"
 
     read "?  Please enter a command: " CHOICES
     case $CHOICES in
@@ -1696,13 +1693,13 @@ searchCurrentOrPreviousScopeOrThisMacFolderByDefault() {
     terminalWindowSize:90x25
     echo "•${F_Red}${Bold} Command 24: Search (Current or Previous Scope or This Mac) folder by default.${No_Attributes}\n"
     # Submenu
-    echo " ${Dim}╔═══╦════════════════════════════════════════════════════════════════════════════╗${No_Attributes}"
-    echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 1${No_Attributes} ${Dim}║${No_Attributes} When performing a search, search the Current folder by default             ${Dim}║${No_Attributes}"
-    echo " ${Dim}╠═══╬════════════════════════════════════════════════════════════════════════════╣${No_Attributes}"
-    echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 2${No_Attributes} ${Dim}║${No_Attributes} When performing a search, search the Previous Scope folder by default      ${Dim}║${No_Attributes}"
-    echo " ${Dim}╠═══╬════════════════════════════════════════════════════════════════════════════╣${No_Attributes}"
-    echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 3${No_Attributes} ${Dim}║${No_Attributes} When performing a search, search the This Mac folder by default (Default)  ${Dim}║${No_Attributes}"
-    echo " ${Dim}╚═══╩════════════════════════════════════════════════════════════════════════════╝${No_Attributes}\n"
+    echo " ╭───┬────────────────────────────────────────────────────────────────────────────╮"
+    echo " │${F_Red}${Bold} 1${No_Attributes} │ When performing a search, search the Current folder by default             │"
+    echo " ├───┼────────────────────────────────────────────────────────────────────────────┤"
+    echo " │${F_Red}${Bold} 2${No_Attributes} │ When performing a search, search the Previous Scope folder by default      │"
+    echo " ├───┼────────────────────────────────────────────────────────────────────────────┤"
+    echo " │${F_Red}${Bold} 3${No_Attributes} │ When performing a search, search the This Mac folder by default (Default)  │"
+    echo " ╰───┴────────────────────────────────────────────────────────────────────────────╯\n"
 
     read "?  Please enter a command: " CHOICES
     case $CHOICES in
@@ -1743,11 +1740,11 @@ enableOrDisableInTextEditTheCreateAnUntitledDocumentAtLaunch() {
     terminalWindowSize:90x25
     echo "•${F_Red}${Bold} Command 25: Enable or Disable in TextEdit the create an Untitled Document at Launch.${No_Attributes}\n"
     # Submenu
-    echo " ${Dim}╔═══╦════════════════════════════════════════════════════════════════════════════╗${No_Attributes}"
-    echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 1${No_Attributes} ${Dim}║${No_Attributes} Enable in TextEdit the create an Untitled Document at Launch               ${Dim}║${No_Attributes}"
-    echo " ${Dim}╠═══╬════════════════════════════════════════════════════════════════════════════╣${No_Attributes}"
-    echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 2${No_Attributes} ${Dim}║${No_Attributes} Disable in TextEdit the create an Untitled Document at Launch (Default)    ${Dim}║${No_Attributes}"
-    echo " ${Dim}╚═══╩════════════════════════════════════════════════════════════════════════════╝${No_Attributes}\n"
+    echo " ╭───┬────────────────────────────────────────────────────────────────────────────╮"
+    echo " │${F_Red}${Bold} 1${No_Attributes} │ Enable in TextEdit the create an Untitled Document at Launch               │"
+    echo " ├───┼────────────────────────────────────────────────────────────────────────────┤"
+    echo " │${F_Red}${Bold} 2${No_Attributes} │ Disable in TextEdit the create an Untitled Document at Launch (Default)    │"
+    echo " ╰───┴────────────────────────────────────────────────────────────────────────────╯\n"
 
     read "?  Please enter a command: " CHOICES
     case $CHOICES in
@@ -1781,11 +1778,11 @@ enableOrDisableCopyEmailAddressesAs() {
     terminalWindowSize:132x30
     echo "•${F_Red}${Bold} Command 26: Enable or Disable copy Email addresses as 'foo@example.com' instead of 'Foo Bar <foo@example.com>' in Apple Mail app.${No_Attributes}\n"
     # Submenu
-    echo " ${Dim}╔═══╦══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╗${No_Attributes}"
-    echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 1${No_Attributes} ${Dim}║${No_Attributes} Enable copy Email addresses as 'foo@example.com' instead of 'Foo Bar <foo@example.com>' in Apple Mail app            ${Dim}║${No_Attributes}"
-    echo " ${Dim}╠═══╬══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╣${No_Attributes}"
-    echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 2${No_Attributes} ${Dim}║${No_Attributes} Disable copy Email addresses as 'foo@example.com' instead of 'Foo Bar <foo@example.com>' in Apple Mail app (Default) ${Dim}║${No_Attributes}"
-    echo " ${Dim}╚═══╩══════════════════════════════════════════════════════════════════════════════════════════════════════════════════════╝${No_Attributes}\n"
+    echo " ╭───┬──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮"
+    echo " │${F_Red}${Bold} 1${No_Attributes} │ Enable copy Email addresses as 'foo@example.com' instead of 'Foo Bar <foo@example.com>' in Apple Mail app            │"
+    echo " ├───┼──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┤"
+    echo " │${F_Red}${Bold} 2${No_Attributes} │ Disable copy Email addresses as 'foo@example.com' instead of 'Foo Bar <foo@example.com>' in Apple Mail app (Default) │"
+    echo " ╰───┴──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯\n"
 
     read "?  Please enter a command: " CHOICES
     case $CHOICES in
@@ -1852,15 +1849,15 @@ deletePluginsInputAndOutputDevice() {
     terminalWindowSize:100x25
     echo "•${F_Red}${Bold} Command 28: I/O system Management: Manually and Automatic Delete, Plugins Input and Output device.${No_Attributes}\n"
     # Submenu
-    echo " ${Dim}╔═══╦═══════════════════════════════════════════════════════════════════════╗${No_Attributes}"
-    echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 1${No_Attributes} ${Dim}║${No_Attributes} Automatic Delete All CoreMedia Input/Output Device DAL Video Plug-ins ${Dim}║${No_Attributes}"
-    echo " ${Dim}╠═══╬═══════════════════════════════════════════════════════════════════════╣${No_Attributes}"
-    echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 2${No_Attributes} ${Dim}║${No_Attributes} Automatic Delete All Sound Input/Output Device HAL Audio Plug-ins     ${Dim}║${No_Attributes}"
-    echo " ${Dim}╠═══╬═══════════════════════════════════════════════════════════════════════╣${No_Attributes}"
-    echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 3${No_Attributes} ${Dim}║${No_Attributes} Manually Delete CoreMedia Input/Output Device DAL Video Plug-ins      ${Dim}║${No_Attributes}"
-    echo " ${Dim}╠═══╬═══════════════════════════════════════════════════════════════════════╣${No_Attributes}"
-    echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 4${No_Attributes} ${Dim}║${No_Attributes} Manually Delete Sound Input/Output Device HAL Audio Plug-ins          ${Dim}║${No_Attributes}"
-    echo " ${Dim}╚═══╩═══════════════════════════════════════════════════════════════════════╝${No_Attributes}\n"
+    echo " ╭───┬───────────────────────────────────────────────────────────────────────╮"
+    echo " │${F_Red}${Bold} 1${No_Attributes} │ Automatic Delete All CoreMedia Input/Output Device DAL Video Plug-ins │"
+    echo " ├───┼───────────────────────────────────────────────────────────────────────┤"
+    echo " │${F_Red}${Bold} 2${No_Attributes} │ Automatic Delete All Sound Input/Output Device HAL Audio Plug-ins     │"
+    echo " ├───┼───────────────────────────────────────────────────────────────────────┤"
+    echo " │${F_Red}${Bold} 3${No_Attributes} │ Manually Delete CoreMedia Input/Output Device DAL Video Plug-ins      │"
+    echo " ├───┼───────────────────────────────────────────────────────────────────────┤"
+    echo " │${F_Red}${Bold} 4${No_Attributes} │ Manually Delete Sound Input/Output Device HAL Audio Plug-ins          │"
+    echo " ╰───┴───────────────────────────────────────────────────────────────────────╯\n"
 
     read "?  Please enter a command: " CHOICES
     case $CHOICES in
@@ -1928,17 +1925,17 @@ kernelManagement() {
     terminalWindowSize:132x40
     echo "•${F_Red}${Bold} Command 29: Kernel OS Management: Cleaning kernel Extension, Rebuild Kexts Caches, Repair Permissions of Kexts folders, etc.${No_Attributes}\n"
     # Submenu
-    echo " ${Dim}╔═══╦════════════════════════════════════════════════════════════════════════════════════════════════════════╗${No_Attributes}"
-    echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 1${No_Attributes} ${Dim}║${No_Attributes} Cleaning the kernel Extension staging area by removing all staged content (Requires a reboot)          ${Dim}║${No_Attributes}"
-    echo " ${Dim}╠═══╬════════════════════════════════════════════════════════════════════════════════════════════════════════╣${No_Attributes}"
-    echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 2${No_Attributes} ${Dim}║${No_Attributes} Rebuild out-of-date Caches (Requires a reboot)                                                         ${Dim}║${No_Attributes}"
-    echo " ${Dim}╠═══╬════════════════════════════════════════════════════════════════════════════════════════════════════════╣${No_Attributes}"
-    echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 3${No_Attributes} ${Dim}║${No_Attributes} Updated the kernel Extension (Requires a reboot)                                                       ${Dim}║${No_Attributes}"
-    echo " ${Dim}╠═══╬════════════════════════════════════════════════════════════════════════════════════════════════════════╣${No_Attributes}"
-    echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 4${No_Attributes} ${Dim}║${No_Attributes} Show the loaded state of the kernel Extensions                                                         ${Dim}║${No_Attributes}"
-    echo " ${Dim}╠═══╬════════════════════════════════════════════════════════════════════════════════════════════════════════╣${No_Attributes}"
-    echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 5${No_Attributes} ${Dim}║${No_Attributes} Repair Permissions in (System/Library/Extensions) and (Library/Extensions) folders (Requires a reboot) ${Dim}║${No_Attributes}"
-    echo " ${Dim}╚═══╩════════════════════════════════════════════════════════════════════════════════════════════════════════╝${No_Attributes}\n"
+    echo " ╭───┬────────────────────────────────────────────────────────────────────────────────────────────────────────╮"
+    echo " │${F_Red}${Bold} 1${No_Attributes} │ Cleaning the kernel Extension staging area by removing all staged content (Requires a reboot)          │"
+    echo " ├───┼────────────────────────────────────────────────────────────────────────────────────────────────────────┤"
+    echo " │${F_Red}${Bold} 2${No_Attributes} │ Rebuild out-of-date Caches (Requires a reboot)                                                         │"
+    echo " ├───┼────────────────────────────────────────────────────────────────────────────────────────────────────────┤"
+    echo " │${F_Red}${Bold} 3${No_Attributes} │ Updated the kernel Extension (Requires a reboot)                                                       │"
+    echo " ├───┼────────────────────────────────────────────────────────────────────────────────────────────────────────┤"
+    echo " │${F_Red}${Bold} 4${No_Attributes} │ Show the loaded state of the kernel Extensions                                                         │"
+    echo " ├───┼────────────────────────────────────────────────────────────────────────────────────────────────────────┤"
+    echo " │${F_Red}${Bold} 5${No_Attributes} │ Repair Permissions in (System/Library/Extensions) and (Library/Extensions) folders (Requires a reboot) │"
+    echo " ╰───┴────────────────────────────────────────────────────────────────────────────────────────────────────────╯\n"
 
     read "?  Please enter a command: " CHOICES
     case $CHOICES in
@@ -2029,35 +2026,35 @@ privacyDatabaseManagement() {
     terminalWindowSize:112x45
     echo "•${F_Red}${Bold} Command 30: Privacy Database Management: Custom reset application permissions under Security and Privacy.${No_Attributes}\n"
     # Submenu
-    echo " ${Dim}╔════╦═════════════════════════════════════════════════════════════════════════╗${No_Attributes}"
-    echo " ${Dim}║${No_Attributes}${F_Red}${Bold}  1${No_Attributes} ${Dim}║${No_Attributes} ${F_Red}Reset the All permissions for all apps${No_Attributes}                                  ${Dim}║${No_Attributes}"
-    echo " ${Dim}╠════╬═════════════════════════════════════════════════════════════════════════╣${No_Attributes}"
-    echo " ${Dim}║${No_Attributes}${F_Red}${Bold}  2${No_Attributes} ${Dim}║${No_Attributes} Reset the Photos permissions for all apps                               ${Dim}║${No_Attributes}"
-    echo " ${Dim}╠════╬═════════════════════════════════════════════════════════════════════════╣${No_Attributes}"
-    echo " ${Dim}║${No_Attributes}${F_Red}${Bold}  3${No_Attributes} ${Dim}║${No_Attributes} Reset the Camera permissions for all apps                               ${Dim}║${No_Attributes}"
-    echo " ${Dim}╠════╬═════════════════════════════════════════════════════════════════════════╣${No_Attributes}"
-    echo " ${Dim}║${No_Attributes}${F_Red}${Bold}  4${No_Attributes} ${Dim}║${No_Attributes} Reset the Reminders permissions for all apps                            ${Dim}║${No_Attributes}"
-    echo " ${Dim}╠════╬═════════════════════════════════════════════════════════════════════════╣${No_Attributes}"
-    echo " ${Dim}║${No_Attributes}${F_Red}${Bold}  5${No_Attributes} ${Dim}║${No_Attributes} Reset the Microphone permissions for all apps                           ${Dim}║${No_Attributes}"
-    echo " ${Dim}╠════╬═════════════════════════════════════════════════════════════════════════╣${No_Attributes}"
-    echo " ${Dim}║${No_Attributes}${F_Red}${Bold}  6${No_Attributes} ${Dim}║${No_Attributes} Reset the Automation permissions for all apps                           ${Dim}║${No_Attributes}"
-    echo " ${Dim}╠════╬═════════════════════════════════════════════════════════════════════════╣${No_Attributes}"
-    echo " ${Dim}║${No_Attributes}${F_Red}${Bold}  7${No_Attributes} ${Dim}║${No_Attributes} Reset the Accessibility permissions for all apps                        ${Dim}║${No_Attributes}"
-    echo " ${Dim}╠════╬═════════════════════════════════════════════════════════════════════════╣${No_Attributes}"
-    echo " ${Dim}║${No_Attributes}${F_Red}${Bold}  8${No_Attributes} ${Dim}║${No_Attributes} Reset the Developer Tools permissions for all apps                      ${Dim}║${No_Attributes}"
-    echo " ${Dim}╠════╬═════════════════════════════════════════════════════════════════════════╣${No_Attributes}"
-    echo " ${Dim}║${No_Attributes}${F_Red}${Bold}  9${No_Attributes} ${Dim}║${No_Attributes} Reset the Screen Recording permissions for all apps                     ${Dim}║${No_Attributes}"
-    echo " ${Dim}╠════╬═════════════════════════════════════════════════════════════════════════╣${No_Attributes}"
-    echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 10${No_Attributes} ${Dim}║${No_Attributes} Reset the Full Disk Access permissions for all apps                     ${Dim}║${No_Attributes}"
-    echo " ${Dim}╠════╬═════════════════════════════════════════════════════════════════════════╣${No_Attributes}"
-    echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 11${No_Attributes} ${Dim}║${No_Attributes} Reset the Speech Recognition permissions for all apps                   ${Dim}║${No_Attributes}"
-    echo " ${Dim}╠════╬═════════════════════════════════════════════════════════════════════════╣${No_Attributes}"
-    echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 12${No_Attributes} ${Dim}║${No_Attributes} Reset the Media & Apple Music permissions for all apps                  ${Dim}║${No_Attributes}"
-    echo " ${Dim}╠════╬═════════════════════════════════════════════════════════════════════════╣${No_Attributes}"
-    echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 13${No_Attributes} ${Dim}║${No_Attributes} Reset the Calendars (for the Calendars list) permissions for all apps   ${Dim}║${No_Attributes}"
-    echo " ${Dim}╠════╬═════════════════════════════════════════════════════════════════════════╣${No_Attributes}"
-    echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 14${No_Attributes} ${Dim}║${No_Attributes} Reset the Address Book (for the Contacts list) permissions for all apps ${Dim}║${No_Attributes}"
-    echo " ${Dim}╚════╩═════════════════════════════════════════════════════════════════════════╝${No_Attributes}\n"
+    echo " ╭────┬─────────────────────────────────────────────────────────────────────────╮"
+    echo " │${F_Red}${Bold}  1${No_Attributes} │ ${F_Red}Reset the All permissions for all apps${No_Attributes}                                  │"
+    echo " ├────┼─────────────────────────────────────────────────────────────────────────┤"
+    echo " │${F_Red}${Bold}  2${No_Attributes} │ Reset the Photos permissions for all apps                               │"
+    echo " ├────┼─────────────────────────────────────────────────────────────────────────┤"
+    echo " │${F_Red}${Bold}  3${No_Attributes} │ Reset the Camera permissions for all apps                               │"
+    echo " ├────┼─────────────────────────────────────────────────────────────────────────┤"
+    echo " │${F_Red}${Bold}  4${No_Attributes} │ Reset the Reminders permissions for all apps                            │"
+    echo " ├────┼─────────────────────────────────────────────────────────────────────────┤"
+    echo " │${F_Red}${Bold}  5${No_Attributes} │ Reset the Microphone permissions for all apps                           │"
+    echo " ├────┼─────────────────────────────────────────────────────────────────────────┤"
+    echo " │${F_Red}${Bold}  6${No_Attributes} │ Reset the Automation permissions for all apps                           │"
+    echo " ├────┼─────────────────────────────────────────────────────────────────────────┤"
+    echo " │${F_Red}${Bold}  7${No_Attributes} │ Reset the Accessibility permissions for all apps                        │"
+    echo " ├────┼─────────────────────────────────────────────────────────────────────────┤"
+    echo " │${F_Red}${Bold}  8${No_Attributes} │ Reset the Developer Tools permissions for all apps                      │"
+    echo " ├────┼─────────────────────────────────────────────────────────────────────────┤"
+    echo " │${F_Red}${Bold}  9${No_Attributes} │ Reset the Screen Recording permissions for all apps                     │"
+    echo " ├────┼─────────────────────────────────────────────────────────────────────────┤"
+    echo " │${F_Red}${Bold} 10${No_Attributes} │ Reset the Full Disk Access permissions for all apps                     │"
+    echo " ├────┼─────────────────────────────────────────────────────────────────────────┤"
+    echo " │${F_Red}${Bold} 11${No_Attributes} │ Reset the Speech Recognition permissions for all apps                   │"
+    echo " ├────┼─────────────────────────────────────────────────────────────────────────┤"
+    echo " │${F_Red}${Bold} 12${No_Attributes} │ Reset the Media & Apple Music permissions for all apps                  │"
+    echo " ├────┼─────────────────────────────────────────────────────────────────────────┤"
+    echo " │${F_Red}${Bold} 13${No_Attributes} │ Reset the Calendars (for the Calendars list) permissions for all apps   │"
+    echo " ├────┼─────────────────────────────────────────────────────────────────────────┤"
+    echo " │${F_Red}${Bold} 14${No_Attributes} │ Reset the Address Book (for the Contacts list) permissions for all apps │"
+    echo " ╰────┴─────────────────────────────────────────────────────────────────────────╯\n"
 
     read "?  Please enter a command: " CHOICES
     case $CHOICES in
@@ -2189,17 +2186,17 @@ gateKeeperManagement() {
     terminalWindowSize:112x30
     echo "•${F_Red}${Bold} Command 31: GateKeeper Management: Status, Enable or Disable, Remove app from quarantine, Self-sign the app.${No_Attributes}\n"
     # Submenu
-    echo " ${Dim}╔═══╦════════════════════════════════════════════════════════════════════════════╗${No_Attributes}"
-    echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 1${No_Attributes} ${Dim}║${No_Attributes} GateKeeper Status                                                          ${Dim}║${No_Attributes}"
-    echo " ${Dim}╠═══╬════════════════════════════════════════════════════════════════════════════╣${No_Attributes}"
-    echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 2${No_Attributes} ${Dim}║${No_Attributes} Enable GateKeeper                                                          ${Dim}║${No_Attributes}"
-    echo " ${Dim}╠═══╬════════════════════════════════════════════════════════════════════════════╣${No_Attributes}"
-    echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 3${No_Attributes} ${Dim}║${No_Attributes} Disable GateKeeper                                                         ${Dim}║${No_Attributes}"
-    echo " ${Dim}╠═══╬════════════════════════════════════════════════════════════════════════════╣${No_Attributes}"
-    echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 4${No_Attributes} ${Dim}║${No_Attributes} Remove app from GateKeeper Quarantine                                      ${Dim}║${No_Attributes}"
-    echo " ${Dim}╠═══╬════════════════════════════════════════════════════════════════════════════╣${No_Attributes}"
-    echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 5${No_Attributes} ${Dim}║${No_Attributes} Self-sign the app. Require Xcode or Xcode CLT (Command Line Tools)         ${Dim}║${No_Attributes}"
-    echo " ${Dim}╚═══╩════════════════════════════════════════════════════════════════════════════╝${No_Attributes}\n"
+    echo " ╭───┬────────────────────────────────────────────────────────────────────────────╮"
+    echo " │${F_Red}${Bold} 1${No_Attributes} │ GateKeeper Status                                                          │"
+    echo " ├───┼────────────────────────────────────────────────────────────────────────────┤"
+    echo " │${F_Red}${Bold} 2${No_Attributes} │ Enable GateKeeper                                                          │"
+    echo " ├───┼────────────────────────────────────────────────────────────────────────────┤"
+    echo " │${F_Red}${Bold} 3${No_Attributes} │ Disable GateKeeper                                                         │"
+    echo " ├───┼────────────────────────────────────────────────────────────────────────────┤"
+    echo " │${F_Red}${Bold} 4${No_Attributes} │ Remove app from GateKeeper Quarantine                                      │"
+    echo " ├───┼────────────────────────────────────────────────────────────────────────────┤"
+    echo " │${F_Red}${Bold} 5${No_Attributes} │ Self-sign the app. Require Xcode or Xcode CLT (Command Line Tools)         │"
+    echo " ╰───┴────────────────────────────────────────────────────────────────────────────╯\n"
 
     read "?  Please enter a command: " CHOICES
     case $CHOICES in
@@ -2260,13 +2257,13 @@ processAndMemoryManagement() {
     terminalWindowSize:90x30
     echo "•${F_Red}${Bold} Command 32: Process & Memory Management: Terminate (Kill) a Process and Purge Memory.${No_Attributes}\n"
     # Submenu
-    echo " ${Dim}╔═══╦═══════════════════════════════════════════════════════════════════════════════════╗${No_Attributes}"
-    echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 1${No_Attributes} ${Dim}║${No_Attributes} Display processes sorted by CPU usage and Kill a process by specifying its PID    ${Dim}║${No_Attributes}"
-    echo " ${Dim}╠═══╬═══════════════════════════════════════════════════════════════════════════════════╣${No_Attributes}"
-    echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 2${No_Attributes} ${Dim}║${No_Attributes} Display processes sorted by Memory usage and Kill a process by specifying its PID ${Dim}║${No_Attributes}"
-    echo " ${Dim}╠═══╬═══════════════════════════════════════════════════════════════════════════════════╣${No_Attributes}"
-    echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 3${No_Attributes} ${Dim}║${No_Attributes} Using purge to free inactive Memory                                               ${Dim}║${No_Attributes}"
-    echo " ${Dim}╚═══╩═══════════════════════════════════════════════════════════════════════════════════╝${No_Attributes}\n"
+    echo " ╭───┬───────────────────────────────────────────────────────────────────────────────────╮"
+    echo " │${F_Red}${Bold} 1${No_Attributes} │ Display processes sorted by CPU usage and Kill a process by specifying its PID    │"
+    echo " ├───┼───────────────────────────────────────────────────────────────────────────────────┤"
+    echo " │${F_Red}${Bold} 2${No_Attributes} │ Display processes sorted by Memory usage and Kill a process by specifying its PID │"
+    echo " ├───┼───────────────────────────────────────────────────────────────────────────────────┤"
+    echo " │${F_Red}${Bold} 3${No_Attributes} │ Using purge to free inactive Memory                                               │"
+    echo " ╰───┴───────────────────────────────────────────────────────────────────────────────────╯\n"
 
     read "?  Please enter a command: " CHOICES
     case $CHOICES in
@@ -2327,28 +2324,28 @@ uninstallingApplications() {
     echo "•${F_Red}${Bold} Command 33: Uninstalling applications: Browsers, Microsoft Office VL, Ad blocking extension, Virtual machines.${No_Attributes}\n"
     echo "${F_Red}${Bold}•${No_Attributes} Warning: The script automatically closes the application to be deleted and all related applications.\n"
     # Submenu
-    echo " ${Dim}╔════╦═════════════════════════════════════════════════════════════════════════════════════════ ${F_Blue}${Bold}Web browsers ${No_Attributes}${Dim}═╗${No_Attributes}"
-    echo " ${Dim}║${No_Attributes}${F_Red}${Bold}  1${No_Attributes} ${Dim}║${No_Attributes} Uninstalling the Brave Browser                                                                         ${Dim}║${No_Attributes}"
-    echo " ${Dim}║${No_Attributes}${F_Red}${Bold}  2${No_Attributes} ${Dim}║${No_Attributes} Uninstalling the Opera Browser                                                                         ${Dim}║${No_Attributes}"
-    echo " ${Dim}║${No_Attributes}${F_Red}${Bold}  3${No_Attributes} ${Dim}║${No_Attributes} Uninstalling the Yandex Browser                                                                        ${Dim}║${No_Attributes}"
-    echo " ${Dim}║${No_Attributes}${F_Red}${Bold}  4${No_Attributes} ${Dim}║${No_Attributes} Uninstalling the Vivaldi Browser                                                                       ${Dim}║${No_Attributes}"
-    echo " ${Dim}║${No_Attributes}${F_Red}${Bold}  5${No_Attributes} ${Dim}║${No_Attributes} Uninstalling the Mozilla Firefox                                                                       ${Dim}║${No_Attributes}"
-    echo " ${Dim}║${No_Attributes}${F_Red}${Bold}  6${No_Attributes} ${Dim}║${No_Attributes} Uninstalling the Google Chrome                                                                         ${Dim}║${No_Attributes}"
-    echo " ${Dim}║${No_Attributes}${F_Red}${Bold}  7${No_Attributes} ${Dim}║${No_Attributes} Uninstalling the Microsoft Edge                                                                        ${Dim}║${No_Attributes}"
-    echo " ${Dim}╠════╬═════════════════════════════════════════════════════════════════════════════════════ ${F_Blue}${Bold}Microsoft Office ${No_Attributes}${Dim}═╣${No_Attributes}"
-    echo " ${Dim}║${No_Attributes}${F_Red}${Bold}  8${No_Attributes} ${Dim}║${No_Attributes} Uninstalling the Microsoft Word                                                                        ${Dim}║${No_Attributes}"
-    echo " ${Dim}║${No_Attributes}${F_Red}${Bold}  9${No_Attributes} ${Dim}║${No_Attributes} Uninstalling the Microsoft Excel                                                                       ${Dim}║${No_Attributes}"
-    echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 10${No_Attributes} ${Dim}║${No_Attributes} Uninstalling the Microsoft PowerPoint                                                                  ${Dim}║${No_Attributes}"
-    echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 11${No_Attributes} ${Dim}║${No_Attributes} Uninstalling the Microsoft OneNote                                                                     ${Dim}║${No_Attributes}"
-    echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 12${No_Attributes} ${Dim}║${No_Attributes} Uninstalling the Microsoft Outlook                                                                     ${Dim}║${No_Attributes}"
-    echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 13${No_Attributes} ${Dim}║${No_Attributes} Uninstalling the Microsoft OneDrive                                                                    ${Dim}║${No_Attributes}"
-    echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 14${No_Attributes} ${Dim}║${No_Attributes} Uninstalling the Microsoft AutoUpdate                                                                  ${Dim}║${No_Attributes}"
-    echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 15${No_Attributes} ${Dim}║${No_Attributes} Uninstalling the Microsoft Office 2019 (volume licensed versions)                                      ${Dim}║${No_Attributes}"
-    echo " ${Dim}╠════╬═══════════════════════════════════════════════════════════════════════════════ ${F_Blue}${Bold}Ad blocking extensions ${No_Attributes}${Dim}═╣${No_Attributes}"
-    echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 16${No_Attributes} ${Dim}║${No_Attributes} Uninstalling the AdGuard for Safari extension                                                          ${Dim}║${No_Attributes}"
-    echo " ${Dim}╠════╬═════════════════════════════════════════════════════════════════════════════════════ ${F_Blue}${Bold}Virtual machines ${No_Attributes}${Dim}═╣${No_Attributes}"
-    echo " ${Dim}║${No_Attributes}${F_Red}${Bold} 17${No_Attributes} ${Dim}║${No_Attributes} Uninstalling the VMware Fusion                                                                         ${Dim}║${No_Attributes}"
-    echo " ${Dim}╚════╩════════════════════════════════════════════════════════════════════════════════════════════════════════╝${No_Attributes}\n"
+    echo " ╭────┬───────────────────────────────────────────────────────────────────────────────────────── ${F_Blue}${Bold}Web browsers ${No_Attributes}─╮"
+    echo " │${F_Red}${Bold}  1${No_Attributes} │ Uninstalling the Brave Browser                                                                         │"
+    echo " │${F_Red}${Bold}  2${No_Attributes} │ Uninstalling the Opera Browser                                                                         │"
+    echo " │${F_Red}${Bold}  3${No_Attributes} │ Uninstalling the Yandex Browser                                                                        │"
+    echo " │${F_Red}${Bold}  4${No_Attributes} │ Uninstalling the Vivaldi Browser                                                                       │"
+    echo " │${F_Red}${Bold}  5${No_Attributes} │ Uninstalling the Mozilla Firefox                                                                       │"
+    echo " │${F_Red}${Bold}  6${No_Attributes} │ Uninstalling the Google Chrome                                                                         │"
+    echo " │${F_Red}${Bold}  7${No_Attributes} │ Uninstalling the Microsoft Edge                                                                        │"
+    echo " ├────┼───────────────────────────────────────────────────────────────────────────────────── ${F_Blue}${Bold}Microsoft Office ${No_Attributes}─┤"
+    echo " │${F_Red}${Bold}  8${No_Attributes} │ Uninstalling the Microsoft Word                                                                        │"
+    echo " │${F_Red}${Bold}  9${No_Attributes} │ Uninstalling the Microsoft Excel                                                                       │"
+    echo " │${F_Red}${Bold} 10${No_Attributes} │ Uninstalling the Microsoft PowerPoint                                                                  │"
+    echo " │${F_Red}${Bold} 11${No_Attributes} │ Uninstalling the Microsoft OneNote                                                                     │"
+    echo " │${F_Red}${Bold} 12${No_Attributes} │ Uninstalling the Microsoft Outlook                                                                     │"
+    echo " │${F_Red}${Bold} 13${No_Attributes} │ Uninstalling the Microsoft OneDrive                                                                    │"
+    echo " │${F_Red}${Bold} 14${No_Attributes} │ Uninstalling the Microsoft AutoUpdate                                                                  │"
+    echo " │${F_Red}${Bold} 15${No_Attributes} │ Uninstalling the Microsoft Office 2019 (volume licensed versions)                                      │"
+    echo " ├────┼─────────────────────────────────────────────────────────────────────────────── ${F_Blue}${Bold}Ad blocking extensions ${No_Attributes}─┤"
+    echo " │${F_Red}${Bold} 16${No_Attributes} │ Uninstalling the AdGuard for Safari extension                                                          │"
+    echo " ├────┼───────────────────────────────────────────────────────────────────────────────────── ${F_Blue}${Bold}Virtual machines ${No_Attributes}─┤"
+    echo " │${F_Red}${Bold} 17${No_Attributes} │ Uninstalling the VMware Fusion                                                                         │"
+    echo " ╰────┴────────────────────────────────────────────────────────────────────────────────────────────────────────╯\n"
 
     read "?  Please enter a command: " CHOICES
     case $CHOICES in
