@@ -1,7 +1,7 @@
 #!/bin/zsh
 
 # Attribute
-RELEASE_VERSION="v.0.7.1 build [10.01.2021]"
+RELEASE_VERSION="Version 0.7.1 build [10.01.2021]"
 ROOT_PASSWORD=0
 # ───────────────────────────────────────────────────────────┤
 # Foreground color
@@ -278,15 +278,16 @@ terminalWindowSize:190x55() {
 # ───────────────────────────────────────────────────────────┤
 # Command A: About SSToolbox
 aboutSSToolbox() {
-    osascript -e 'tell application "Terminal" to set bounds of front window to {570, 160, 870, 360}'
+    osascript -e 'tell application "Terminal" to set bounds of front window to {555, 160, 885, 375}'
     clear
-    echo "\n${F_Red}${Bold}                 •About•${No_Attributes}\n"
-    echo "                SSToolbox"
-    echo "        ${RELEASE_VERSION}"
-    echo "\n         Project page on GitHub"
-    echo "https://github.com/Oleg-Chashko/SSToolbox"
+    echo "\n${F_Red}${Bold}                  SSToolbox${No_Attributes}\n"
+    echo "      ${RELEASE_VERSION}"
+    echo "\n            Project page on GitHub"
+    echo "  https://github.com/Oleg-Chashko/SSToolbox"
+    echo "\n Copyright © 2020-2021 The SSToolbox Project."
+    echo "\n      Developer, designer: Oleg Chashko"
     #echo "\n Press Return key to return to the menu."
-    sleep 5 
+    sleep 50
     #read
 
 }
