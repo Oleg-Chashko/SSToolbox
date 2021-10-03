@@ -2170,11 +2170,6 @@ gateKeeperManagement() {
     terminalWindowSize:112x25
     echo "•${F_Red}${Bold} Command 31: GateKeeper Management: Status, Enable or Disable, Remove app from quarantine, Self-sign the app.${No_Attributes}\n"
     # Submenu
-    echo " ╭───┬───────────────────────────────────────────╮"
-    echo " │${F_Red}${Bold} I${No_Attributes} │ Installing the Xcode Command Line Tools   │"
-    echo " ├───┼───────────────────────────────────────────┤"
-    echo " │${F_Red}${Bold} U${No_Attributes} │ Uninstalling the Xcode Command Line Tools │"
-    echo " ╰───┴───────────────────────────────────────────╯\n"
     echo " ╭───┬────────────────────────────────────────────────────────────────────────────╮"
     echo " │${F_Red}${Bold} 1${No_Attributes} │ GateKeeper Status                                                          │"
     echo " ├───┼────────────────────────────────────────────────────────────────────────────┤"
@@ -2185,8 +2180,12 @@ gateKeeperManagement() {
     echo " │${F_Red}${Bold} 4${No_Attributes} │ Remove app from GateKeeper Quarantine                                      │"
     echo " ├───┼────────────────────────────────────────────────────────────────────────────┤"
     echo " │${F_Red}${Bold} 5${No_Attributes} │ Self-sign the app. Require Xcode or Xcode Command Line Tool                │"
-    echo " ╰───┴────────────────────────────────────────────────────────────────────────────╯\n"
-
+    echo " ╰───┴────────────────────────────────────────────────────────────────────────────╯"
+    echo " ╭───┬───────────────────────────────────────────╮"
+    echo " │${F_Red}${Bold} I${No_Attributes} │ Installing the Xcode Command Line Tools   │"
+    echo " ├───┼───────────────────────────────────────────┤"
+    echo " │${F_Red}${Bold} U${No_Attributes} │ Uninstalling the Xcode Command Line Tools │"
+    echo " ╰───┴───────────────────────────────────────────╯\n"
     read "?  Please enter a command: " CHOICES
     case $CHOICES in
 
