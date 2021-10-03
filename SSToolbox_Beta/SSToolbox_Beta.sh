@@ -286,9 +286,9 @@ aboutSSToolbox() {
     echo "  https://github.com/Oleg-Chashko/SSToolbox"
     echo "\n Copyright © 2020-2021 The SSToolbox Project."
     echo "\n      Developer, designer: Oleg Chashko"
-    #echo "\n Press Return key to return to the menu."
-    sleep 50
-    #read
+    echo "\n${F_Green}${Bold}   Press Return key to return to the menu.${No_Attributes}${Hidden}"
+    read
+    echo "${No_Attributes}"
 
 }
 # ───────────────────────────────────────────────────────────┤
