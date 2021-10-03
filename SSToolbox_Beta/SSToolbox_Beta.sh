@@ -50,11 +50,11 @@ No_Attributes='\U1b[0m'
 # │ List item 4: The distance in pixels from the top of the screen to the bottom of the Terminal window.             │
 # ╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
 
-# Terminal window the Main Menu size: 132x41
+# Terminal window the Main Menu size: 132x40
 terminalWindowMainMenuSize:0() {
     clear
     osascript -e 'tell application "Terminal" to set cursor color of first window to {55512, 15163, 12593}'
-    osascript -e 'tell application "Terminal" to set bounds of front window to {0, 20, 935, 640}'
+    osascript -e 'tell application "Terminal" to set bounds of front window to {0, 20, 935, 625}'
     osascript -e 'tell application "Terminal" to set font name of first window to "SF Mono"'
     osascript -e 'tell application "Terminal" to set font size of first window to "11"'
 }
@@ -276,48 +276,160 @@ terminalWindowSize:190x55() {
     clear
 }
 # ───────────────────────────────────────────────────────────┤
-# Command A: Color themes for the Terminal set "Homebrew"
-setHomebrew() {
-    osascript -e 'tell application "Terminal" to set current settings of first window to settings set "Homebrew"'
-    osascript -e 'tell application "Terminal" to set background color of first window to {0, 0, 0}'
-    osascript -e 'tell application "Terminal" to set font name of first window to "SF Mono"'
-    osascript -e 'tell application "Terminal" to set font size of first window to "11"'
-}
-# Command S: Color themes for the Terminal set "Pro"
-setPro() {
-    osascript -e 'tell application "Terminal" to set current settings of first window to settings set "Pro"'
-    osascript -e 'tell application "Terminal" to set background color of first window to {0, 0, 0}'
-    osascript -e 'tell application "Terminal" to set font name of first window to "SF Mono"'
-    osascript -e 'tell application "Terminal" to set font size of first window to "11"'
-}
-# Command D: Color themes for the Terminal set "Novel"
-setNovel() {
-    osascript -e 'tell application "Terminal" to set current settings of first window to settings set "Novel"'
-    osascript -e 'tell application "Terminal" to set background color of first window to {42919, 64507, 43690}'
-    osascript -e 'tell application "Terminal" to set font name of first window to "SF Mono"'
-    osascript -e 'tell application "Terminal" to set font size of first window to "11"'
-}
-# Command F: Color themes for the Terminal set "Man Page"
-setManPage() {
-    osascript -e 'tell application "Terminal" to set current settings of first window to settings set "Man Page"'
-    osascript -e 'tell application "Terminal" to set background color of first window to {54998, 54227, 54227}'
-    osascript -e 'tell application "Terminal" to set font name of first window to "SF Mono"'
-    osascript -e 'tell application "Terminal" to set font size of first window to "11"'
-}
-# Command G: Color themes for the Terminal set "Ocean"
-setOcean() {
-    osascript -e 'tell application "Terminal" to set current settings of first window to settings set "Ocean"'
-    osascript -e 'tell application "Terminal" to set background color of first window to {3107, 21588, 40092}'
-    osascript -e 'tell application "Terminal" to set font name of first window to "SF Mono"'
-    osascript -e 'tell application "Terminal" to set font size of first window to "11"'
-}
-# Command H: Color themes for the Terminal set "Basic" (Default)
-setBasic() {
-    osascript -e 'tell application "Terminal" to set current settings of first window to settings set "Basic"'
-    osascript -e 'tell application "Terminal" to set font name of first window to "SF Mono"'
-    osascript -e 'tell application "Terminal" to set font size of first window to "11"'
+# Command A: About SSToolbox
+aboutSSToolbox() {
+    osascript -e 'tell application "Terminal" to set bounds of front window to {570, 160, 870, 360}'
+    clear
+    echo "\n${F_Red}${Bold}                 •About•${No_Attributes}\n"
+    echo "                SSToolbox"
+    echo "        ${RELEASE_VERSION}"
+    echo "\n         Project page on GitHub"
+    echo "https://github.com/Oleg-Chashko/SSToolbox"
+    #echo "\n Press Return key to return to the menu."
+    sleep 5 
+    #read
+
 }
 # ───────────────────────────────────────────────────────────┤
+# Command P: Preferences...
+preferences() {
+    terminalWindowSize:90x25
+    echo "•${F_Red}${Bold} Command P: Preferences...${No_Attributes}\n"
+    # Submenu
+    echo "${F_Red}•${F_Green}${Bold} Color themes for the Terminal${No_Attributes}\n"
+    echo " ╭───┬───────────────────────────────────────────────────╮"
+    echo " │${F_Red}${Bold} 1${No_Attributes} │ Color themes for the Terminal set "Homebrew"        │"
+    echo " ├───┼───────────────────────────────────────────────────┤"
+    echo " │${F_Red}${Bold} 2${No_Attributes} │ Color themes for the Terminal set "Pro"             │"
+    echo " ├───┼───────────────────────────────────────────────────┤"
+    echo " │${F_Red}${Bold} 3${No_Attributes} │ Color themes for the Terminal set "Novel"           │"
+    echo " ├───┼───────────────────────────────────────────────────┤"
+    echo " │${F_Red}${Bold} 4${No_Attributes} │ Color themes for the Terminal set "Man Page"        │"
+    echo " ├───┼───────────────────────────────────────────────────┤"
+    echo " │${F_Red}${Bold} 5${No_Attributes} │ Color themes for the Terminal set "Ocean"           │"
+    echo " ├───┼───────────────────────────────────────────────────┤"
+    echo " │${F_Red}${Bold} 6${No_Attributes} │ Color themes for the Terminal set "Basic" (Default) │"
+    echo " ╰───┴───────────────────────────────────────────────────╯\n"
+
+    read "?  Please enter a command: " CHOICES
+    case $CHOICES in
+
+    # ───────────────────────────────────────────────────────────┤
+    # Color themes for the Terminal set "Homebrew"
+    1)
+        osascript -e 'tell application "Terminal" to set current settings of first window to settings set "Homebrew"'
+        osascript -e 'tell application "Terminal" to set background color of first window to {0, 0, 0}'
+        osascript -e 'tell application "Terminal" to set font name of first window to "SF Mono"'
+        osascript -e 'tell application "Terminal" to set font size of first window to "11"'
+        clear
+        ;;
+
+        # Color themes for the Terminal set "Pro"
+    2)
+        osascript -e 'tell application "Terminal" to set current settings of first window to settings set "Pro"'
+        osascript -e 'tell application "Terminal" to set background color of first window to {0, 0, 0}'
+        osascript -e 'tell application "Terminal" to set font name of first window to "SF Mono"'
+        osascript -e 'tell application "Terminal" to set font size of first window to "11"'
+        clear
+        ;;
+
+        # Color themes for the Terminal set "Novel"
+    3)
+        osascript -e 'tell application "Terminal" to set current settings of first window to settings set "Novel"'
+        osascript -e 'tell application "Terminal" to set background color of first window to {42919, 64507, 43690}'
+        osascript -e 'tell application "Terminal" to set font name of first window to "SF Mono"'
+        osascript -e 'tell application "Terminal" to set font size of first window to "11"'
+        clear
+        ;;
+
+        # Color themes for the Terminal set "Man Page"
+    4)
+        osascript -e 'tell application "Terminal" to set current settings of first window to settings set "Man Page"'
+        osascript -e 'tell application "Terminal" to set background color of first window to {54998, 54227, 54227}'
+        osascript -e 'tell application "Terminal" to set font name of first window to "SF Mono"'
+        osascript -e 'tell application "Terminal" to set font size of first window to "11"'
+        clear
+        ;;
+
+        # Color themes for the Terminal set "Ocean"
+    5)
+        osascript -e 'tell application "Terminal" to set current settings of first window to settings set "Ocean"'
+        osascript -e 'tell application "Terminal" to set background color of first window to {3107, 21588, 40092}'
+        osascript -e 'tell application "Terminal" to set font name of first window to "SF Mono"'
+        osascript -e 'tell application "Terminal" to set font size of first window to "11"'
+        clear
+        ;;
+
+        # Color themes for the Terminal set "Basic" (Default)
+    6)
+        osascript -e 'tell application "Terminal" to set current settings of first window to settings set "Basic"'
+        osascript -e 'tell application "Terminal" to set font name of first window to "SF Mono"'
+        osascript -e 'tell application "Terminal" to set font size of first window to "11"'
+        clear
+        ;;
+
+    *)
+        echo "\n•${F_Red} An unacceptable Command!${F_Red}${Bold}${No_Attributes}"
+        continueMessage
+        clear
+        ;;
+    esac
+
+}
+# ───────────────────────────────────────────────────────────┤
+# Command C: Check for updates
+checkForUpdates() {
+    terminalWindowSize:90x25
+    echo "•${F_Red}${Bold} Command C: Check for updates.${No_Attributes}\n"
+    # Submenu
+    echo " ╭───┬────────────────────────────────────────────────────╮"
+    echo " │${F_Red}${Bold} 1${No_Attributes} │ Download Latest Release on GitHub                  │"
+    echo " ├───┼────────────────────────────────────────────────────┤"
+    echo " │${F_Red}${Bold} 2${No_Attributes} │ Download Beta Release on GitHub                    │"
+    echo " ├───┼────────────────────────────────────────────────────┤"
+    echo " │${F_Red}${Bold} 3${No_Attributes} │ Open Project page on GitHub                        │"
+    echo " ╰───┴────────────────────────────────────────────────────╯\n"
+
+    read "?  Please enter a command: " CHOICES
+    case $CHOICES in
+
+    # ───────────────────────────────────────────────────────────┤
+    # Download Latest Release on GitHub
+    1)
+        terminalWindowSize:90x25
+        echo "•${F_Red}${Bold} Download Latest Release on GitHub.${No_Attributes}"
+        cd ~/Desktop
+        curl -OL -s https://github.com/Oleg-Chashko/SSToolbox/releases/latest/download/SSToolbox.sh
+        sleep 3 && echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}" && sleep 2
+        clear
+        ;;
+
+        # Download Beta Release on GitHub
+    2)
+        terminalWindowSize:90x25
+        echo "•${F_Red}${Bold} Download Beta Release on GitHub.${No_Attributes}"
+        cd ~/Desktop
+        curl -OL -s https://raw.githubusercontent.com/Oleg-Chashko/SSToolbox/main/SSToolbox_Beta/SSToolbox_Beta.sh
+        sleep 3 && echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}" && sleep 2
+        clear
+        ;;
+
+        # Open Project page on GitHub
+    3)
+        terminalWindowSize:90x25
+        open https://github.com/Oleg-Chashko/SSToolbox
+        clear
+        ;;
+
+    *)
+        echo "\n•${F_Red} An unacceptable Command!${F_Red}${Bold}${No_Attributes}"
+        continueMessage
+        clear
+        ;;
+    esac
+
+}
+
 # Command Q: Quit SSToolbox
 quitSSToolbox() {
     terminalWindowSize:90x25
@@ -330,26 +442,6 @@ quitSSToolbox() {
     sleep 1 && osascript -e 'tell application "Terminal" to quit'
     #sleep 1 && osascript -e "do shell script \"osascript -e \\\"tell application \\\\\\\"Terminal\\\\\\\" to quit\\\" &> /dev/null &\""; exit
     read
-}
-# Command L: Download Latest Release on GitHub
-downloadLatestRelease() {
-    terminalWindowSize:90x25
-    echo "•${F_Red}${Bold} Download Latest Release on GitHub...${No_Attributes}"
-    cd ~/Desktop
-    curl -OL -s https://github.com/Oleg-Chashko/SSToolbox/releases/latest/download/SSToolbox.sh
-    sleep 2 && echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}" && sleep 2
-}
-# Command B: Download Beta Release on GitHub
-downloadBetaRelease() {
-    terminalWindowSize:90x25
-    echo "•${F_Red}${Bold} Download Beta Release on GitHub...${No_Attributes}"
-    cd ~/Desktop
-    curl -OL -s https://raw.githubusercontent.com/Oleg-Chashko/SSToolbox/main/SSToolbox_Beta/SSToolbox_Beta.sh
-    sleep 2 && echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}" && sleep 2
-}
-# Command P: Project page on GitHub
-projectPageOnGitHub() {
-    open https://github.com/Oleg-Chashko/SSToolbox
 }
 # ───────────────────────────────────────────────────────────┤
 # Asks password
@@ -381,9 +473,7 @@ checkDNS() {
 # Main Menu
 mainMenu() {
     terminalWindowMainMenuSize:0
-    echo "                                                ╭────────────────────────────────────╮${No_Attributes}"
-    echo "                                                │SSToolbox ${RELEASE_VERSION}│"
-    echo "╭────┬──────────────────────────────────────────┴────────────────────────────────────┴─────────────────────────────────── ${F_Blue}${Bold}Network ${No_Attributes}─╮"
+    echo "╭────┬─────────────────────────────────────────────────────── ${F_Red}${Bold}${ULine}SSToolbox${No_Attributes} ───────────────────────────────────────────────── ${F_Blue}${Bold}Network ${No_Attributes}─╮"
     echo "│${F_Red}${Bold}  1${No_Attributes} │ Custom DNS servers for Wi-Fi                                                                                                │"
     echo "│${F_Red}${Bold}  2${No_Attributes} │ Custom DNS servers for Ethernet                                                                                             │"
     echo "│${F_Red}${Bold}  3${No_Attributes} │ Custom ping and tracerout test IPv4/IPv6                                                                                    │"
@@ -414,12 +504,12 @@ mainMenu() {
     echo "├────┼───────────────────────────────────────────────────────────────────────────── ${F_Red}Caution: Use At Your Own Risk${No_Attributes} ─ ${F_Blue}${Bold}OS Management ${No_Attributes}─┤"
     echo "│${F_Red}${Bold} 27${No_Attributes} │ Logs system Management: Cleaning the Logs and Inactive memory                                                               │"
     echo "│${F_Red}${Bold} 28${No_Attributes} │ I/O system Management: Manually and Automatic Delete, Plugins Input and Output device                                       │"
-    echo "│${F_Red}${Bold} 29${No_Attributes} │ Kernel OS Management: Cleaning kernel Extension, Rebuild Kexts Caches, etc. (Requires a reboot)╭────────────────────────────┤"
-    echo "│${F_Red}${Bold} 30${No_Attributes} │ Privacy Database Management: Custom reset apps permissions under Security and Privacy          │ ${F_Red}${Bold}A${No_Attributes}${Dim}•${No_Attributes}${F_Red}${Bold}S${No_Attributes}${Dim}•${No_Attributes}${F_Red}${Bold}D${No_Attributes}${Dim}•${No_Attributes}${F_Red}${Bold}F${No_Attributes}${Dim}•${No_Attributes}${F_Red}${Bold}G${No_Attributes}${Dim}•${No_Attributes}${F_Red}${Bold}H${No_Attributes} Color profiles │"
-    echo "│${F_Red}${Bold} 31${No_Attributes} │ GateKeeper Management: Status, Enable or Disable, Remove app from Quarantine, Self-sign the app│ ${F_Red}${Bold}L${No_Attributes}atest-/${F_Red}${Bold}B${No_Attributes}eta-Release ↆ     │"
-    echo "│${F_Red}${Bold} 32${No_Attributes} │ Process & Memory Management: Manage Processes, Terminate (Kill) a Process and Purge Memory     │ ${F_Red}${Bold}P${No_Attributes}roject page on GitHub     │"
-    echo "│${F_Red}${Bold} 33${No_Attributes} │ Uninstalling applications: Browsers, Microsoft Office, Ad blocking extension, Virtual machines │ ${F_Red}${Bold}Q${No_Attributes}uit SSToolbox           𓃠 │"
-    echo "╰────┴────────────────────────────────────────────────────────────────────────────────────────────────┴────────────────────────────╯\n"
+    echo "│${F_Red}${Bold} 29${No_Attributes} │ Kernel OS Management: Cleaning kernel Extension, Rebuild Kexts Caches, etc. (Requires a reboot)         ╭───────────────────┤"
+    echo "│${F_Red}${Bold} 30${No_Attributes} │ Privacy Database Management: Custom reset apps permissions under Security and Privacy                   │ ${F_Red}${Bold}A${No_Attributes}bout SSToolbox   │"
+    echo "│${F_Red}${Bold} 31${No_Attributes} │ GateKeeper Management: Status, Enable or Disable, Remove app from Quarantine, Self-sign the app         │ ${F_Red}${Bold}P${No_Attributes}references...    │"
+    echo "│${F_Red}${Bold} 32${No_Attributes} │ Process & Memory Management: Manage Processes, Terminate (Kill) a Process and Purge Memory              │ ${F_Red}${Bold}C${No_Attributes}heck for updates │"
+    echo "│${F_Red}${Bold} 33${No_Attributes} │ Uninstalling applications: Browsers, Microsoft Office, Ad blocking extension, Virtual machines          │ ${F_Red}${Bold}Q${No_Attributes}uit SSToolbox    │"
+    echo "╰────┴─────────────────────────────────────────────────────────────────────────────────────────────────────────┴───────────────────╯\n"
 }
 
 # ───────────────────────────────────────────────────────────┤
@@ -2190,7 +2280,7 @@ gateKeeperManagement() {
     case $CHOICES in
 
     # ───────────────────────────────────────────────────────────┤
-        # GateKeeper Status
+    # GateKeeper Status
     1)
         terminalWindowSize:90x25
         echo "\n•${F_Red}${Bold} GateKeeper Status.${No_Attributes}\n"
@@ -3410,47 +3500,17 @@ startScript() {
 
         A | a)
             clear
-            setHomebrew
-            ;;
-
-        S | s)
-            clear
-            setPro
-            ;;
-
-        D | d)
-            clear
-            setNovel
-            ;;
-
-        F | f)
-            clear
-            setManPage
-            ;;
-
-        G | g)
-            clear
-            setOcean
-            ;;
-
-        H | h)
-            clear
-            setBasic
-            ;;
-
-        L | l)
-            clear
-            downloadLatestRelease
-            ;;
-
-        B | b)
-            clear
-            downloadBetaRelease
+            aboutSSToolbox
             ;;
 
         P | p)
             clear
-            projectPageOnGitHub
+            preferences
+            ;;
+
+        C | c)
+            clear
+            checkForUpdates
             ;;
 
         Q | q)
