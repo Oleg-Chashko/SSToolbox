@@ -318,22 +318,6 @@ setBasic() {
     osascript -e 'tell application "Terminal" to set font size of first window to "11"'
 }
 # ───────────────────────────────────────────────────────────┤
-# Command I: Installing the Xcode CLT
-installingXCLT() {
-    terminalWindowSize:90x25
-    echo "•${F_Red}${Bold} Command I: Install the Xcode Command Line Tools.${No_Attributes}\n"
-    xcode-select --install
-    continueMessage
-}
-# Command U: Uninstalling the Xcode CLT
-uninstallingXCLT() {
-    terminalWindowSize:90x25
-    echo "•${F_Red}${Bold} Command U: Uninstall the Xcode Command Line Tools.${No_Attributes}"
-    askPassword
-    sudo rm -rf /Library/Developer/CommandLineTools
-    echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
-    continueMessage
-}
 # Command Q: Quit SSToolbox
 quitSSToolbox() {
     terminalWindowSize:90x25
@@ -428,10 +412,10 @@ mainMenu() {
     echo "│${F_Red}${Bold} 25${No_Attributes} │ Enable or Disable in TextEdit the create an Untitled Document at Launch                                                     │"
     echo "│${F_Red}${Bold} 26${No_Attributes} │ Enable or Disable copy Email addresses as 'foo@example.com' instead of 'Foo Bar <foo@example.com>' in Apple Mail app        │"
     echo "├────┼───────────────────────────────────────────────────────────────────────────── ${F_Red}Caution: Use At Your Own Risk${No_Attributes} ─ ${F_Blue}${Bold}OS Management ${No_Attributes}─┤"
-    echo "│${F_Red}${Bold} 27${No_Attributes} │ Logs system Management: Cleaning the Logs and Inactive memory                                  ╭────────────────────────────┤"
-    echo "│${F_Red}${Bold} 28${No_Attributes} │ I/O system Management: Manually and Automatic Delete, Plugins Input and Output device          │ ${F_Red}${Bold}A${No_Attributes}${Dim}•${No_Attributes}${F_Red}${Bold}S${No_Attributes}${Dim}•${No_Attributes}${F_Red}${Bold}D${No_Attributes}${Dim}•${No_Attributes}${F_Red}${Bold}F${No_Attributes}${Dim}•${No_Attributes}${F_Red}${Bold}G${No_Attributes}${Dim}•${No_Attributes}${F_Red}${Bold}H${No_Attributes} Color profiles │"
-    echo "│${F_Red}${Bold} 29${No_Attributes} │ Kernel OS Management: Cleaning kernel Extension, Rebuild Kexts Caches, etc. (Requires a reboot)│ ${F_Red}${Bold}I${No_Attributes}nstalling Xcode CLT       │"
-    echo "│${F_Red}${Bold} 30${No_Attributes} │ Privacy Database Management: Custom reset apps permissions under Security and Privacy          │ ${F_Red}${Bold}U${No_Attributes}ninstalling Xcode CLT     │"
+    echo "│${F_Red}${Bold} 27${No_Attributes} │ Logs system Management: Cleaning the Logs and Inactive memory                                                               │"
+    echo "│${F_Red}${Bold} 28${No_Attributes} │ I/O system Management: Manually and Automatic Delete, Plugins Input and Output device                                       │"
+    echo "│${F_Red}${Bold} 29${No_Attributes} │ Kernel OS Management: Cleaning kernel Extension, Rebuild Kexts Caches, etc. (Requires a reboot)╭────────────────────────────┤"
+    echo "│${F_Red}${Bold} 30${No_Attributes} │ Privacy Database Management: Custom reset apps permissions under Security and Privacy          │ ${F_Red}${Bold}A${No_Attributes}${Dim}•${No_Attributes}${F_Red}${Bold}S${No_Attributes}${Dim}•${No_Attributes}${F_Red}${Bold}D${No_Attributes}${Dim}•${No_Attributes}${F_Red}${Bold}F${No_Attributes}${Dim}•${No_Attributes}${F_Red}${Bold}G${No_Attributes}${Dim}•${No_Attributes}${F_Red}${Bold}H${No_Attributes} Color profiles │"
     echo "│${F_Red}${Bold} 31${No_Attributes} │ GateKeeper Management: Status, Enable or Disable, Remove app from Quarantine, Self-sign the app│ ${F_Red}${Bold}L${No_Attributes}atest-/${F_Red}${Bold}B${No_Attributes}eta-Release ↆ     │"
     echo "│${F_Red}${Bold} 32${No_Attributes} │ Process & Memory Management: Manage Processes, Terminate (Kill) a Process and Purge Memory     │ ${F_Red}${Bold}P${No_Attributes}roject page on GitHub     │"
     echo "│${F_Red}${Bold} 33${No_Attributes} │ Uninstalling applications: Browsers, Microsoft Office, Ad blocking extension, Virtual machines │ ${F_Red}${Bold}Q${No_Attributes}uit SSToolbox           𓃠 │"
@@ -2183,9 +2167,14 @@ privacyDatabaseManagement() {
 # ───────────────────────────────────────────────────────────┤
 # Command 31: GateKeeper Management: Status, Enable or Disable, Remove app from Quarantine, Self-sign the app
 gateKeeperManagement() {
-    terminalWindowSize:112x30
+    terminalWindowSize:112x25
     echo "•${F_Red}${Bold} Command 31: GateKeeper Management: Status, Enable or Disable, Remove app from quarantine, Self-sign the app.${No_Attributes}\n"
     # Submenu
+    echo " ╭───┬───────────────────────────────────────────╮"
+    echo " │${F_Red}${Bold} I${No_Attributes} │ Installing the Xcode Command Line Tools   │"
+    echo " ├───┼───────────────────────────────────────────┤"
+    echo " │${F_Red}${Bold} U${No_Attributes} │ Uninstalling the Xcode Command Line Tools │"
+    echo " ╰───┴───────────────────────────────────────────╯\n"
     echo " ╭───┬────────────────────────────────────────────────────────────────────────────╮"
     echo " │${F_Red}${Bold} 1${No_Attributes} │ GateKeeper Status                                                          │"
     echo " ├───┼────────────────────────────────────────────────────────────────────────────┤"
@@ -2195,15 +2184,16 @@ gateKeeperManagement() {
     echo " ├───┼────────────────────────────────────────────────────────────────────────────┤"
     echo " │${F_Red}${Bold} 4${No_Attributes} │ Remove app from GateKeeper Quarantine                                      │"
     echo " ├───┼────────────────────────────────────────────────────────────────────────────┤"
-    echo " │${F_Red}${Bold} 5${No_Attributes} │ Self-sign the app. Require Xcode or Xcode CLT (Command Line Tools)         │"
+    echo " │${F_Red}${Bold} 5${No_Attributes} │ Self-sign the app. Require Xcode or Xcode Command Line Tool                │"
     echo " ╰───┴────────────────────────────────────────────────────────────────────────────╯\n"
 
     read "?  Please enter a command: " CHOICES
     case $CHOICES in
 
     # ───────────────────────────────────────────────────────────┤
-    # GateKeeper Status
+        # GateKeeper Status
     1)
+        terminalWindowSize:90x25
         echo "\n•${F_Red}${Bold} GateKeeper Status.${No_Attributes}\n"
         spctl --status
         echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
@@ -2211,6 +2201,7 @@ gateKeeperManagement() {
 
         # Enable GateKeeper
     2)
+        terminalWindowSize:90x25
         echo "\n•${F_Red}${Bold} Enable GateKeeper.${No_Attributes}"
         askPassword
         sudo spctl --master-enable
@@ -2219,6 +2210,7 @@ gateKeeperManagement() {
 
         # Disable GateKeeper
     3)
+        terminalWindowSize:90x25
         echo "\n•${F_Red}${Bold} Disable GateKeeper.${No_Attributes}"
         askPassword
         sudo spctl --master-disable
@@ -2227,6 +2219,7 @@ gateKeeperManagement() {
 
         # Remove app from GateKeeper Quarantine
     4)
+        terminalWindowSize:90x25
         echo "\n•${F_Red}${Bold} Remove app from GateKeeper Quarantine.${No_Attributes}\n"
         read "? Drag & drop the app on this window and then press Return: " FILEPATH
         askPassword
@@ -2236,11 +2229,28 @@ gateKeeperManagement() {
 
         # Self-sign the app. Require Xcode or Xcode CLT (Command Line Tools)
     5)
+        terminalWindowSize:90x25
         echo "\n•${F_Red}${Bold} Self-sign the app. Require Xcode or Xcode CLT (Command Line Tools).${No_Attributes}\n"
         read "? Drag & drop the app on this window and then press Return: " FILEPATH
         askPassword
         sudo codesign -f -v -s - --deep "$FILEPATH"
         echo "\n${F_Red}•${F_Green}${Bold} If you see - replacing existing signature - that means you are done.${No_Attributes}"
+        ;;
+
+        # Installing the Xcode Command Line Tools
+    I | i)
+        terminalWindowSize:90x25
+        echo "•${F_Red}${Bold} Command I: Install the Xcode Command Line Tools.${No_Attributes}\n"
+        xcode-select --install
+        ;;
+
+        # Uninstalling the Xcode Command Line Tools
+    U | u)
+        terminalWindowSize:90x25
+        echo "•${F_Red}${Bold} Command U: Uninstall the Xcode Command Line Tools.${No_Attributes}"
+        askPassword
+        sudo rm -rf /Library/Developer/CommandLineTools
+        echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
         ;;
 
     *)
@@ -3427,16 +3437,6 @@ startScript() {
         H | h)
             clear
             setBasic
-            ;;
-
-        I | i)
-            clear
-            installingXCLT
-            ;;
-
-        U | u)
-            clear
-            uninstallingXCLT
             ;;
 
         L | l)
