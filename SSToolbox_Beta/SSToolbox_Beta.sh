@@ -286,8 +286,11 @@ aboutSSToolbox() {
     echo "  https://github.com/Oleg-Chashko/SSToolbox"
     echo "\n Copyright © 2020-2021 The SSToolbox Project."
     echo "\n           Developer: Oleg Chashko"
-    echo "\n${F_Green}${Bold}   Press Return key to return to the menu.${No_Attributes}" && tput civis
-    read && tput cnorm
+    echo "\n${F_Green}${Bold}   Press Return key to return to the menu.${No_Attributes}"
+    tput civis
+    read
+    tput cnorm
+    clear
 }
 # ───────────────────────────────────────────────────────────┤
 # Command P: Preferences...
