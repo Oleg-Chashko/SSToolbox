@@ -278,18 +278,16 @@ terminalWindowSize:190x55() {
 # ───────────────────────────────────────────────────────────┤
 # Command A: About SSToolbox
 aboutSSToolbox() {
-    osascript -e 'tell application "Terminal" to set bounds of front window to {555, 160, 885, 375}'
+    osascript -e 'tell application "Terminal" to set bounds of front window to {555, 160, 885, 405}'
     clear
     echo "\n${F_Red}${Bold}                  SSToolbox${No_Attributes}\n"
     echo "      ${RELEASE_VERSION}"
     echo "\n            Project page on GitHub"
     echo "  https://github.com/Oleg-Chashko/SSToolbox"
     echo "\n Copyright © 2020-2021 The SSToolbox Project."
-    echo "\n      Developer, designer: Oleg Chashko"
-    echo "\n${F_Green}${Bold}   Press Return key to return to the menu.${No_Attributes}${Hidden}"
-    read
-    echo "${No_Attributes}"
-
+    echo "\n           Developer: Oleg Chashko"
+    echo "\n${F_Green}${Bold}   Press Return key to return to the menu.${No_Attributes}" && tput civis
+    read && tput cnorm
 }
 # ───────────────────────────────────────────────────────────┤
 # Command P: Preferences...
