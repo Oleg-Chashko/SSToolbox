@@ -1,7 +1,7 @@
 #!/bin/zsh
 
 # Attribute
-RELEASE_VERSION="Version 0.7.1 build [10.01.2021]"
+RELEASE_VERSION="Version 0.7.2 build [10.04.2021]"
 ROOT_PASSWORD=0
 # ───────────────────────────────────────────────────────────┤
 # Foreground color
@@ -281,12 +281,12 @@ aboutSSToolbox() {
     osascript -e 'tell application "Terminal" to set bounds of front window to {555, 160, 885, 405}'
     clear
     echo "\n${F_Red}${Bold}                  SSToolbox${No_Attributes}\n"
-    echo "      ${RELEASE_VERSION}"
+    echo "       ${RELEASE_VERSION}"
     echo "\n            Project page on GitHub"
     echo "  https://github.com/Oleg-Chashko/SSToolbox"
     echo "\n Copyright © 2020-2021 The SSToolbox Project."
     echo "\n           Developer: Oleg Chashko"
-    echo "\n${F_Green}${Bold}   Press Return key to return to the menu.${No_Attributes}"
+    echo "\n${F_Blue}${Bold}   Press Return key to return to the menu.${No_Attributes}"
     tput civis
     read
     tput cnorm
