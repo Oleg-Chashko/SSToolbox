@@ -284,11 +284,16 @@ aboutSSToolbox() {
     echo "       ${RELEASE_VERSION}"
     echo "\n            Project page on GitHub"
     echo "  https://github.com/Oleg-Chashko/SSToolbox"
-    echo "\n Copyright © 2020-2021 The SSToolbox Project."
     echo "\n           Developer: Oleg Chashko"
-    echo "\n${F_Blue}${Bold}   Press Return key to return to the menu.${No_Attributes}"
+    echo "     Feedback: family.chashko@outlook.com"
+    echo "\n Copyright © 2020-2021 The SSToolbox Project.\n"
     tput civis
-    read
+    cnt=10
+    until [ $cnt -eq 0 ]; do
+        printf "\r  ${F_Blue}${Bold}The window about will close in $cnt seconds. ${No_Attributes}"
+        sleep 1
+        cnt=$(expr $cnt - 1)
+    done
     tput cnorm
     clear
 }
