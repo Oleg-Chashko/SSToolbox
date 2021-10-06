@@ -389,13 +389,13 @@ checkForUpdates() {
     terminalWindowSize:90x25
     echo "•${F_Red}${Bold} Command C: Check for updates.${No_Attributes}\n"
     # Submenu
-    echo " ╭───┬────────────────────────────────────────────────────╮"
-    echo " │${F_Red}${Bold} 1${No_Attributes} │ Download Latest Release on GitHub                  │"
-    echo " ├───┼────────────────────────────────────────────────────┤"
-    echo " │${F_Red}${Bold} 2${No_Attributes} │ Download Beta Release on GitHub                    │"
-    echo " ├───┼────────────────────────────────────────────────────┤"
-    echo " │${F_Red}${Bold} 3${No_Attributes} │ Open Project page on GitHub                        │"
-    echo " ╰───┴────────────────────────────────────────────────────╯\n"
+    echo " ╭───┬─────────────────────────────────────────────────────────────────────╮"
+    echo " │${F_Red}${Bold} 1${No_Attributes} │ Download the Latest Release version on GitHub to your Mac's desktop │"
+    echo " ├───┼─────────────────────────────────────────────────────────────────────┤"
+    echo " │${F_Red}${Bold} 2${No_Attributes} │ Download the Beta Release version on GitHub to your Mac's desktop   │"
+    echo " ├───┼─────────────────────────────────────────────────────────────────────┤"
+    echo " │${F_Red}${Bold} 3${No_Attributes} │ Open Project page on GitHub                                         │"
+    echo " ╰───┴─────────────────────────────────────────────────────────────────────╯\n"
 
     read "?  Please enter a command: " CHOICES
     case $CHOICES in
