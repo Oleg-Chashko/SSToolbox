@@ -436,7 +436,7 @@ checkForUpdates() {
     esac
 
 }
-
+# ───────────────────────────────────────────────────────────┤
 # Command Q: Quit SSToolbox
 quitSSToolbox() {
     terminalWindowSize:90x25
@@ -483,7 +483,7 @@ mainMenu() {
     echo "╭────┬─────────────────────────────────────────────────────── ${F_Red}${Bold}${ULine}SSToolbox${No_Attributes} ───────────────────────────────────────────────── ${F_Blue}${Bold}Network ${No_Attributes}─╮"
     echo "│${F_Red}${Bold}  1${No_Attributes} │ Custom DNS servers for Wi-Fi                                                                                                │"
     echo "│${F_Red}${Bold}  2${No_Attributes} │ Custom DNS servers for Ethernet                                                                                             │"
-    echo "│${F_Red}${Bold}  3${No_Attributes} │ Custom ping and tracerout test IPv4/IPv6                                                                                    │"
+    echo "│${F_Red}${Bold}  3${No_Attributes} │ Custom ping and tracerout test IPv4/IPv6 and Port Scanner                                                                   │"
     echo "│${F_Red}${Bold}  4${No_Attributes} │ Automatic ping and tracerout test IPv4/IPv6                                                                                 │"
     echo "│${F_Red}${Bold}  5${No_Attributes} │ Custom setting a new Computer Name, Hostname, Local Hostname and NetBIOS Name                                               │"
     echo "│${F_Red}${Bold}  6${No_Attributes} │ Custom editing of the Hosts file: (Block IP Addresses and Reroute Web Addresses)                                            │"
@@ -901,7 +901,7 @@ customDNSServersForEthernet() {
 # Command 3: Custom ping and tracerout test IPv4/IPv6
 customPingAndTraceroutTestIPv4/IPv6() {
     terminalWindowSize:90x25
-    echo "•${F_Red}${Bold} Command 3: Custom ping and tracerout test IPv4/IPv6.${No_Attributes}\n"
+    echo "•${F_Red}${Bold} Command 3: Custom ping and tracerout test IPv4/IPv6 and Scanner to search for open ports.${No_Attributes}\n"
     # Submenu
     echo " ╭───┬────────────────────────────────────────────────────╮"
     echo " │${F_Red}${Bold} 1${No_Attributes} │ Test Ping IPv4                                     │"
@@ -911,6 +911,8 @@ customPingAndTraceroutTestIPv4/IPv6() {
     echo " │${F_Red}${Bold} 3${No_Attributes} │ Test Ping IPv6                                     │"
     echo " ├───┼────────────────────────────────────────────────────┤"
     echo " │${F_Red}${Bold} 4${No_Attributes} │ Test Traceroute IPv6                               │"
+    echo " ├───┼────────────────────────────────────────────────────┤"
+    echo " │${F_Red}${Bold} 5${No_Attributes} │ Port Scanner TCP/IPv4/IPv6                         │"
     echo " ╰───┴────────────────────────────────────────────────────╯\n"
 
     read "?  Please enter a command: " CHOICES
@@ -973,6 +975,19 @@ customPingAndTraceroutTestIPv4/IPv6() {
         echo "\n${F_Red}•${F_Green}${Bold} Finish...${No_Attributes}"
         ;;
 
+    # Port Scanner TCP/IPv4/IPv6
+    5)
+        terminalWindowSize:90x55
+        echo "•${F_Red}${Bold} Port Scanner TCP/IPv4/IPv6.${No_Attributes}"
+        echo "\n─────────────────────────────────────────────────────────────────────────────────────────╮"
+        echo " Port[s] can be single integers or ranges, for example: 80 or 1-100"
+        read "? To which IP or Host address you want to port scanner: " HOST
+        read "? Port Scanning: " PORTS
+        echo "─────────────────────────────────────────────────────────────────────────────────────────╯"
+        echo "\n•${F_Red}${Bold} Port Scanning...${No_Attributes}\n"
+        nc -z -G1 "$HOST" "$PORTS"
+        echo "\n${F_Red}•${F_Green}${Bold} Finish...${No_Attributes}"
+        ;;
     *)
         echo "\n•${F_Red} An unacceptable Command!${F_Red}${Bold}${No_Attributes}"
         ;;
@@ -1013,7 +1028,7 @@ automaticPingAndTraceroutTestIPv4/IPv6() {
     echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
     traceroute -w 1 -S -m 30 Yandex.com
     echo "\n${F_Red}•${F_Green}${Bold} Finish.${No_Attributes}"
-
+# ───────────────────────────────────────────────────────────┤
     # Ping and Traceroute test IPv6
 
     # Ping test IPv6
