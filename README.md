@@ -51,7 +51,7 @@
 |*Network*|
 |**`1`**|Custom DNS servers for Wi-Fi|
 |**`2`**|Custom DNS servers for Ethernet|
-|**`3`**|Custom ping and tracerout test IPv4/IPv6|
+|**`3`**|Custom ping and tracerout test IPv4/IPv6 and Port Scanner|
 |**`4`**|Automatic ping and tracerout test IPv4/IPv6|
 |**`5`**|Custom setting a new Computer Name, Hostname, Local Hostname and NetBIOS Name|
 |**`6`**|Custom editing of the Hosts file: (Block IP addresses and Reroute Web addresses)|
