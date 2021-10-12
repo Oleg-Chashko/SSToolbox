@@ -124,27 +124,11 @@
 
 ## Note
 
-⚠ _You will need to enter a password to obtain elevated rights._<br>
-⚠ _Some functions require Xcode or Xcode Command Line Tools._<br>
-⚠ _Enabling Full Disk Access in macOS for the terminal._<br>
 ⚠ _Give permission for this script to run._<br>
-🟢 The Xcode Command Line Tools can be installed using the Script or manually through the Terminal.
+⚠ _Enabling Full Disk Access in macOS for the terminal._<br>
+⚠ _You will need to enter a password to obtain elevated rights._<br>
+
 ## Tips
-#### Manual installation of the Xcode Command Line Tools:
-
-1. Press `Command` + `Space Bar` on your Mac Keyboard.
-2. Type in `Terminal`
-3. When you see Terminal in the Spotlight search list, click it to open the app.
-4. Input the following command string in Terminal: `xcode-select --install`
-5. Select confirm by clicking Install and accept the license agreement.
-6. Wait for the Xcode Command Line Tools package to install, once everything is installed, press the `Done` button.
-
-#### Manual uninstallation of the Xcode Command Line Tools:
-
-1. Input the following command string in Terminal: `sudo rm -rf /Library/Developer/CommandLineTools`
-2. Wait for the Xcode Command Line Tools package to uninstall, once everything is uninstalled, you can close the terminal window.
-
----
 
 #### Terminal error: "permission denied"
 
