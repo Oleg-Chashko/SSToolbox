@@ -405,8 +405,7 @@ checkForUpdates() {
     1)
         terminalWindowSize:90x25
         echo "•${F_Red}${Bold} Download Latest Release on GitHub.${No_Attributes}"
-        cd ~/Desktop || exit
-        curl -OL -s https://github.com/Oleg-Chashko/SSToolbox/releases/latest/download/SSToolbox.sh
+        cd ~/Desktop && curl -OL -s https://github.com/Oleg-Chashko/SSToolbox/releases/latest/download/SSToolbox.sh
         sleep 3 && echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}" && sleep 2
         clear
         ;;
@@ -415,8 +414,7 @@ checkForUpdates() {
     2)
         terminalWindowSize:90x25
         echo "•${F_Red}${Bold} Download Beta Release on GitHub.${No_Attributes}"
-        cd ~/Desktop || exit
-        curl -OL -s https://raw.githubusercontent.com/Oleg-Chashko/SSToolbox/main/SSToolbox_Beta/SSToolbox_Beta.sh
+        cd ~/Desktop && curl -OL -s https://raw.githubusercontent.com/Oleg-Chashko/SSToolbox/main/SSToolbox_Beta/SSToolbox_Beta.sh
         sleep 3 && echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}" && sleep 2
         clear
         ;;
