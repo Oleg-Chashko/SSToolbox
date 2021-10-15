@@ -304,19 +304,19 @@ preferences() {
     echo "•${F_Red}${Bold} Command P: Preferences...${No_Attributes}\n"
     # Submenu
     echo "${F_Red}•${F_Green}${Bold} Color themes for the Terminal${No_Attributes}\n"
-    echo " ╭───┬───────────────────────────────────────────────────╮"
-    echo " │${F_Red}${Bold} 1${No_Attributes} │ Color themes for the Terminal set "Homebrew"        │"
-    echo " ├───┼───────────────────────────────────────────────────┤"
-    echo " │${F_Red}${Bold} 2${No_Attributes} │ Color themes for the Terminal set "Pro"             │"
-    echo " ├───┼───────────────────────────────────────────────────┤"
-    echo " │${F_Red}${Bold} 3${No_Attributes} │ Color themes for the Terminal set "Novel"           │"
-    echo " ├───┼───────────────────────────────────────────────────┤"
-    echo " │${F_Red}${Bold} 4${No_Attributes} │ Color themes for the Terminal set "Man Page"        │"
-    echo " ├───┼───────────────────────────────────────────────────┤"
-    echo " │${F_Red}${Bold} 5${No_Attributes} │ Color themes for the Terminal set "Ocean"           │"
-    echo " ├───┼───────────────────────────────────────────────────┤"
-    echo " │${F_Red}${Bold} 6${No_Attributes} │ Color themes for the Terminal set "Basic" (Default) │"
-    echo " ╰───┴───────────────────────────────────────────────────╯\n"
+    echo " ╭───┬─────────────────────────────────────────────────────╮"
+    echo " │${F_Red}${Bold} 1${No_Attributes} │ Color themes for the Terminal set 'Homebrew'        │"
+    echo " ├───┼─────────────────────────────────────────────────────┤"
+    echo " │${F_Red}${Bold} 2${No_Attributes} │ Color themes for the Terminal set 'Pro'             │"
+    echo " ├───┼─────────────────────────────────────────────────────┤"
+    echo " │${F_Red}${Bold} 3${No_Attributes} │ Color themes for the Terminal set 'Novel'           │"
+    echo " ├───┼─────────────────────────────────────────────────────┤"
+    echo " │${F_Red}${Bold} 4${No_Attributes} │ Color themes for the Terminal set 'Man Page'        │"
+    echo " ├───┼─────────────────────────────────────────────────────┤"
+    echo " │${F_Red}${Bold} 5${No_Attributes} │ Color themes for the Terminal set 'Ocean'           │"
+    echo " ├───┼─────────────────────────────────────────────────────┤"
+    echo " │${F_Red}${Bold} 6${No_Attributes} │ Color themes for the Terminal set 'Basic' (Default) │"
+    echo " ╰───┴─────────────────────────────────────────────────────╯\n"
 
     read "?  Please enter a command: " CHOICES
     case $CHOICES in
@@ -405,7 +405,7 @@ checkForUpdates() {
     1)
         terminalWindowSize:90x25
         echo "•${F_Red}${Bold} Download Latest Release on GitHub.${No_Attributes}"
-        cd ~/Desktop
+        cd ~/Desktop || exit
         curl -OL -s https://github.com/Oleg-Chashko/SSToolbox/releases/latest/download/SSToolbox.sh
         sleep 3 && echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}" && sleep 2
         clear
@@ -415,7 +415,7 @@ checkForUpdates() {
     2)
         terminalWindowSize:90x25
         echo "•${F_Red}${Bold} Download Beta Release on GitHub.${No_Attributes}"
-        cd ~/Desktop
+        cd ~/Desktop || exit
         curl -OL -s https://raw.githubusercontent.com/Oleg-Chashko/SSToolbox/main/SSToolbox_Beta/SSToolbox_Beta.sh
         sleep 3 && echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}" && sleep 2
         clear
@@ -483,8 +483,8 @@ mainMenu() {
     echo "╭────┬─────────────────────────────────────────────────────── ${F_Red}${Bold}${ULine}SSToolbox${No_Attributes} ───────────────────────────────────────────────── ${F_Blue}${Bold}Network ${No_Attributes}─╮"
     echo "│${F_Red}${Bold}  1${No_Attributes} │ Custom DNS servers for Wi-Fi                                                                                                │"
     echo "│${F_Red}${Bold}  2${No_Attributes} │ Custom DNS servers for Ethernet                                                                                             │"
-    echo "│${F_Red}${Bold}  3${No_Attributes} │ Custom ping and tracerout test IPv4/IPv6 and Port Scanner                                                                   │"
-    echo "│${F_Red}${Bold}  4${No_Attributes} │ Automatic ping and tracerout test IPv4/IPv6                                                                                 │"
+    echo "│${F_Red}${Bold}  3${No_Attributes} │ Custom ping, traceroute test IPv4/IPv6 and Port Scanner                                                                     │"
+    echo "│${F_Red}${Bold}  4${No_Attributes} │ Automatic ping and traceroute IPv4/IPv6                                                                                     │"
     echo "│${F_Red}${Bold}  5${No_Attributes} │ Custom setting a new Computer Name, Hostname, Local Hostname and NetBIOS Name                                               │"
     echo "│${F_Red}${Bold}  6${No_Attributes} │ Custom editing of the Hosts file: (Block IP Addresses and Reroute Web Addresses)                                            │"
     echo "│${F_Red}${Bold}  7${No_Attributes} │ Show Wireless Network Password                                                                                              │"
@@ -898,10 +898,10 @@ customDNSServersForEthernet() {
 }
 
 # ───────────────────────────────────────────────────────────┤
-# Command 3: Custom ping and tracerout test IPv4/IPv6
-customPingAndTraceroutTestIPv4/IPv6() {
+# Command 3: Custom ping, traceroute test IPv4/IPv6 and Scanner to search for open ports
+customPingAndTracerouteTestIPv4/IPv6() {
     terminalWindowSize:90x25
-    echo "•${F_Red}${Bold} Command 3: Custom ping and tracerout test IPv4/IPv6 and Scanner to search for open ports.${No_Attributes}\n"
+    echo "•${F_Red}${Bold} Command 3: Custom ping, traceroute test IPv4/IPv6 and Scanner to search for open ports.${No_Attributes}\n"
     # Submenu
     echo " ╭───┬────────────────────────────────────────────────────╮"
     echo " │${F_Red}${Bold} 1${No_Attributes} │ Test Ping IPv4                                     │"
@@ -971,7 +971,7 @@ customPingAndTraceroutTestIPv4/IPv6() {
         read "? Send packets of specified IP protocol supported are: ICMP(-I) or UDP( ): " PROTOCOL
         echo "──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯"
         echo "\n•${F_Red}${Bold} Testing Traceroute IPv6.${No_Attributes}\n"
-        traceroute6 -w 1 -l $PROTOCOL -m 30 "$HOST"
+        traceroute6 -w 1 -l "$PROTOCOL" -m 30 "$HOST"
         echo "\n${F_Red}•${F_Green}${Bold} Finish...${No_Attributes}"
         ;;
 
@@ -997,10 +997,10 @@ customPingAndTraceroutTestIPv4/IPv6() {
 }
 
 # ───────────────────────────────────────────────────────────┤
-# Command 4: Automatic ping and tracerout test IPv4/IPv6
-automaticPingAndTraceroutTestIPv4/IPv6() {
+# Command 4: Automatic ping and traceroute test IPv4/IPv6
+automaticPingAndTracerouteTestIPv4/IPv6() {
     terminalWindowSize:140x55
-    echo "•${F_Red}${Bold} Command 4: Automatic ping and tracerout test IPv4/IPv6.${No_Attributes}"
+    echo "•${F_Red}${Bold} Command 4: Automatic ping and traceroute test IPv4/IPv6.${No_Attributes}"
     # Ping test IPv4
     echo "\n╭────────────────────────┬───────────────────────────────────────────────────────────╮"
     echo "│ Server- or IP- address │ Response time: Minimum/Average/Maximum/Standard_deviation │"
@@ -1246,7 +1246,7 @@ spoofingMACAddressOfWirelessNetwork() {
 checkDNSRecordsOfTheDomainIPv4/IPv6() {
     terminalWindowSize:90x25
     echo "•${F_Red}${Bold} Command 12: Check DNS records of the Domain IPv4/IPv6.${No_Attributes}"
-    # NSlookup test
+    # DNS lookup test
     declare -a arr=("Google.com" "Wikipedia.org" "Facebook.com" "Spotify.com" "Linkedin.com")
     echo "\n${F_Red}•${F_Green}${Bold} Check DNS records of the Domain IPv4...\n${No_Attributes}"
     for i in "${arr[@]}"; do
@@ -1408,7 +1408,7 @@ showInfoLN_DHCP_IP/MACAddresses() {
     echo "Channel/Width: $Channel MHz"
     echo "Received Signal strength: $RSSI dBm"
     echo "Noise level: $Noise dBm"
-    echo "Wireless Gateway MAC-Adresse: $BSSID"
+    echo "Wireless Gateway MAC-Address: $BSSID"
     echo "Maximum possible Transmit rate: $TxRate MBit/s"
     echo "MCS Index: $MCS"
     # Scan Wireless Networks
@@ -2708,7 +2708,7 @@ uninstallingApplications() {
         # Application Launch Agents
         remove "/Library/LaunchAgents/com.google.keystone.agent.plist"
         remove "/Library/LaunchAgents/com.google.keystone.xpcservice.plist"
-        # Application tmp Keyston
+        # Application tmp Keystone
         remove "/private/tmp/com.google.Keystone"
         # Application logs
         remove "$HOME/Library/Logs/Google Chrome"
@@ -3554,12 +3554,12 @@ startScript() {
 
         3)
             clear
-            customPingAndTraceroutTestIPv4/IPv6
+            customPingAndTracerouteTestIPv4/IPv6
             ;;
 
         4)
             clear
-            automaticPingAndTraceroutTestIPv4/IPv6
+            automaticPingAndTracerouteTestIPv4/IPv6
             ;;
 
         5)
