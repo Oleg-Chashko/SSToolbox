@@ -2459,11 +2459,12 @@ uninstallingApplications() {
     echo " │${F_Red}${Bold} 12${No_Attributes} │ Uninstalling the Microsoft Outlook                                                                     │"
     echo " │${F_Red}${Bold} 13${No_Attributes} │ Uninstalling the Microsoft OneDrive                                                                    │"
     echo " │${F_Red}${Bold} 14${No_Attributes} │ Uninstalling the Microsoft AutoUpdate                                                                  │"
-    echo " │${F_Red}${Bold} 15${No_Attributes} │ Uninstalling the Microsoft Office 2019 (volume licensed versions)                                      │"
+    echo " │${F_Red}${Bold} 15${No_Attributes} │ Uninstalling the Microsoft Office Volume License (VL) Serializer                                       │"
+    echo " │${F_Red}${Bold} 16${No_Attributes} │ Uninstalling the Microsoft Office 2019-2021 (volume licensed versions)                                 │"
     echo " ├────┼─────────────────────────────────────────────────────────────────────────────── ${F_Blue}${Bold}Ad blocking extensions ${No_Attributes}─┤"
-    echo " │${F_Red}${Bold} 16${No_Attributes} │ Uninstalling the AdGuard for Safari extension                                                          │"
+    echo " │${F_Red}${Bold} 17${No_Attributes} │ Uninstalling the AdGuard for Safari extension                                                          │"
     echo " ├────┼───────────────────────────────────────────────────────────────────────────────────── ${F_Blue}${Bold}Virtual machines ${No_Attributes}─┤"
-    echo " │${F_Red}${Bold} 17${No_Attributes} │ Uninstalling the VMware Fusion                                                                         │"
+    echo " │${F_Red}${Bold} 18${No_Attributes} │ Uninstalling the VMware Fusion                                                                         │"
     echo " ╰────┴────────────────────────────────────────────────────────────────────────────────────────────────────────╯\n"
 
     read "?  Please enter a command: " CHOICES
@@ -3171,10 +3172,49 @@ uninstallingApplications() {
         ;;
 
         # ───────────────────────────────────────────────────────────┤
-        # Uninstalling the Microsoft Office 2019 (volume licensed versions)
+        # Uninstalling the Microsoft Office Volume License (VL) Serializer
     15)
+        terminalWindowSize:112x25
+        echo "\n•${F_Red}${Bold} Uninstalling the Microsoft Office Volume License (VL) Serializer.${No_Attributes}"
+        askPassword
+        # Force Quit Applications - If the user hasn't done so
+        sudo osascript -e "tell application \"Microsoft Word\" to quit"
+        sudo osascript -e "tell application \"Microsoft Excel\" to quit"
+        sudo osascript -e "tell application \"Microsoft PowerPoint\" to quit"
+        sudo osascript -e "tell application \"Microsoft OneNote\" to quit"
+        sudo osascript -e "tell application \"Microsoft Outlook\" to quit"
+        echo "${No_Attributes}"
+        # Warning about Automatically close Microsoft Office VL applications.
+        echo "•${F_Red} Automatically close Microsoft Office VL applications.${No_Attributes}"
+        sleep 2 && echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}\n"
+        # Warning about Removal of Microsoft Office VL applications.
+        sleep 1 && echo "•${F_Red} Removal of Microsoft Office Volume License (VL) Serializer.${No_Attributes}\n"
+        # The script
+        remove() {
+            entry="$1"
+            if test -e "$entry"; then
+                sudo rm -rf "$entry" && echo -e "Removing $entry  [${F_Green}${Bold}Success${No_Attributes}]"
+            else
+                echo -e "Removing $entry  [${F_Yellow}${Bold}File does not exist${No_Attributes}]"
+            fi
+        }
+        # Microsoft Office Volume License (VL) Serializer
+        # Application Preferences
+        remove "/Library/Preferences/com.microsoft.office.licensingV2.plist"
+        # Application Launch Daemons
+        remove "/Library/LaunchDaemons/com.microsoft.office.licensingV2.helper.plist"
+        # Application Privileged Helper Tools
+        remove "/Library/PrivilegedHelperTools/com.microsoft.office.licensingV2.helper"
+        # Purge free inactive memory cache
+        sudo purge
+        echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}"
+        ;;
+
+        # ───────────────────────────────────────────────────────────┤
+        # Uninstalling the Microsoft Office 2019-2021 (volume licensed versions)
+    16)
         terminalWindowSize:190x55
-        echo "\n•${F_Red}${Bold} Uninstalling the Microsoft Office 2019 (volume licensed versions).${No_Attributes}"
+        echo "\n•${F_Red}${Bold} Uninstalling the Microsoft Office 2019-2021 (volume licensed versions).${No_Attributes}"
         askPassword
         # Force Quit Applications - If the user hasn't done so
         sudo osascript -e "tell application \"Microsoft AutoUpdate\" to quit" && sleep 2
@@ -3363,7 +3403,7 @@ uninstallingApplications() {
 
         # ───────────────────────────────────────────────────────────┤
         # Uninstalling the AdGuard for Safari extension
-    16)
+    17)
         terminalWindowSize:190x55
         echo "\n•${F_Red}${Bold} Uninstalling the AdGuard for Safari extension.${No_Attributes}"
         askPassword
@@ -3431,7 +3471,7 @@ uninstallingApplications() {
 
         # ───────────────────────────────────────────────────────────┤
         # Uninstalling the VMware Fusion
-    17)
+    18)
         terminalWindowSize:190x55
         echo "\n•${F_Red}${Bold} Uninstalling the VMware Fusion.${No_Attributes}"
         askPassword

@@ -51,12 +51,12 @@
 |*Network*|
 |**`1`**|Custom DNS servers for Wi-Fi|
 |**`2`**|Custom DNS servers for Ethernet|
-|**`3`**|Custom ping and tracerout test IPv4/IPv6 and Port Scanner|
-|**`4`**|Automatic ping and tracerout test IPv4/IPv6|
+|**`3`**|Custom ping, traceroute test IPv4/IPv6 and Port Scanner|
+|**`4`**|Automatic ping and traceroute test IPv4/IPv6|
 |**`5`**|Custom setting a new Computer Name, Hostname, Local Hostname and NetBIOS Name|
 |**`6`**|Custom editing of the Hosts file: (Block IP addresses and Reroute Web addresses)|
 |**`7`**|Show Wireless Network Password|
-|**`8`**|Search Routers on local Networks, uses the default IP addresse|
+|**`8`**|Search Routers on local Networks, uses the default IP addresses|
 |**`9`**|Flushes local DNS cache, used for problems with loading sites, 404 error|
 |**`10`**|Release and Renew DHCP for all available device interfaces. (Requires a reboot)|
 |**`11`**|Spoofing the MAC address of the Wireless network to a randomly generated MAC address|
@@ -112,11 +112,12 @@
 |**`12`**|Uninstalling the Microsoft Outlook|
 |**`13`**|Uninstalling the Microsoft OneDrive|
 |**`14`**|Uninstalling the Microsoft AutoUpdate|
-|**`15`**|Uninstalling the Microsoft Office 2019 (volume licensed versions)|
+|**`15`**|Uninstalling the Microsoft Office Volume License (VL) Serializer|
+|**`16`**|Uninstalling the Microsoft Office 2019-2021 (volume licensed versions)|
 |*Ad blocking extensions*|
-|**`16`**|Uninstalling the AdGuard for Safari extension|
+|**`17`**|Uninstalling the AdGuard for Safari extension|
 |*Virtual machines*|
-|**`17`**|Uninstalling the VMware Fusion|
+|**`18`**|Uninstalling the VMware Fusion|
 
 ## Download
 
