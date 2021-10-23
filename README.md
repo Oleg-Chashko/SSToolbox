@@ -129,12 +129,6 @@
   <img width="800px" src="https://raw.githubusercontent.com/Oleg-Chashko/SSToolbox/main/Images/Installation_and_First_Start.gif" />
 </p>
 
-
-## Terminal error: Permission denied
-
-1. Running the terminal.
-2. Type the command `chmod u+x`, press the `Space bar`, drag the script file to the terminal window and press the `Return` key.
-
 ## Terminal error: Operation not permitted
 
 1. Pull down the ` Apple menu` and choose `System Preferences`.
@@ -144,3 +138,14 @@
 5. Now click the `[+]` plus button to add an application with full disk access.
 6. Navigate to the `/Applications/Utilities/` folder.
 7. Choose `Terminal` to grant Terminal with `Full Disk Access` privileges.
+
+## Running the script: ******.sh
+#### Terminal error: Permission denied
+
+1. Running the terminal.
+2. Type the command `chmod u+x`, press the `Space bar`, drag the script file to the terminal window and press the `Return` key.
+
+#### Running the script
+
+1. Drag the script `******.sh` to the terminal window.
+2. Press the `Return` key.
