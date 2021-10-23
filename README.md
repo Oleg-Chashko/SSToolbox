@@ -123,6 +123,12 @@
 
 - (Latest stable release) [Download](https://github.com/Oleg-Chashko/SSToolbox/releases)
 
+## Installation and First Start
+
+<p align="center">
+  <img width="800px" src="https://raw.githubusercontent.com/Oleg-Chashko/SSToolbox/main/Images/Installation_and_First_Start.gif" />
+</p>
+
 ## Note
 
 ⚠ _Give permission for this script to run._<br>
