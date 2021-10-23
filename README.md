@@ -143,7 +143,8 @@
 #### Terminal error: Permission denied
 
 1. Running the terminal.
-2. Type the command `chmod u+x`, press the `Space bar`, drag the script file to the terminal window and press the `Return` key.
+2. Type the command `chmod u+x` and press the `Space bar`.
+3. Drag the script file to the terminal window and press the `Return` key.
 
 #### Running the script
 
