@@ -389,38 +389,58 @@ checkForUpdates() {
     terminalWindowSize:90x25
     echo "•${F_Red}${Bold} Command C: Check for updates.${No_Attributes}\n"
     # Submenu
-    echo " ╭───┬─────────────────────────────────────────────────────────────────────╮"
-    echo " │${F_Red}${Bold} 1${No_Attributes} │ Download the Latest Release version on GitHub to your Mac's desktop │"
-    echo " ├───┼─────────────────────────────────────────────────────────────────────┤"
-    echo " │${F_Red}${Bold} 2${No_Attributes} │ Download the Beta Release version on GitHub to your Mac's desktop   │"
-    echo " ├───┼─────────────────────────────────────────────────────────────────────┤"
-    echo " │${F_Red}${Bold} 3${No_Attributes} │ Open Project page on GitHub                                         │"
-    echo " ╰───┴─────────────────────────────────────────────────────────────────────╯\n"
+    echo " ╭───┬───────────────────────────────────────────────────────────────────────────╮"
+    echo " │${F_Red}${Bold} 1${No_Attributes} │ Download the Latest Release '.DMG format' on GitHub to your Mac's desktop │"
+    echo " ├───┼───────────────────────────────────────────────────────────────────────────┤"
+    echo " │${F_Red}${Bold} 2${No_Attributes} │ Download the Latest Release '.SH format' on GitHub to your Mac's desktop  │"
+    echo " ├───┼───────────────────────────────────────────────────────────────────────────┤"
+    echo " │${F_Red}${Bold} 3${No_Attributes} │ Download the Beta Release '.SH format' on GitHub to your Mac's desktop    │"
+    echo " ├───┼───────────────────────────────────────────────────────────────────────────┤"
+    echo " │${F_Red}${Bold} 4${No_Attributes} │ Open a page of All Releases on GitHub                                     │"
+    echo " ├───┼───────────────────────────────────────────────────────────────────────────┤"
+    echo " │${F_Red}${Bold} 5${No_Attributes} │ Open Project page on GitHub                                               │"
+    echo " ╰───┴───────────────────────────────────────────────────────────────────────────╯\n"
 
     read "?  Please enter a command: " CHOICES
     case $CHOICES in
 
     # ───────────────────────────────────────────────────────────┤
-    # Download Latest Release on GitHub
+    # Download the Latest Release '.DMG format' on GitHub
     1)
         terminalWindowSize:90x25
-        echo "•${F_Red}${Bold} Download Latest Release on GitHub.${No_Attributes}"
+        echo "•${F_Red}${Bold} Download the Latest Release '.SH format' on GitHub.${No_Attributes}"
+        cd ~/Desktop && curl -OL -s https://github.com/Oleg-Chashko/SSToolbox/releases/latest/download/SSToolbox.dmg
+        sleep 3 && echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}" && sleep 2
+        clear
+        ;;
+
+        # Download the Latest Release '.SH format' on GitHub
+    2)
+        terminalWindowSize:90x25
+        echo "•${F_Red}${Bold} Download the Latest Release '.SH format' on GitHub.${No_Attributes}"
         cd ~/Desktop && curl -OL -s https://github.com/Oleg-Chashko/SSToolbox/releases/latest/download/SSToolbox.sh
         sleep 3 && echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}" && sleep 2
         clear
         ;;
 
-        # Download Beta Release on GitHub
-    2)
+        # Download Beta Release '.SH format' on GitHub
+    3)
         terminalWindowSize:90x25
-        echo "•${F_Red}${Bold} Download Beta Release on GitHub.${No_Attributes}"
+        echo "•${F_Red}${Bold} Download Beta Release '.SH format' on GitHub.${No_Attributes}"
         cd ~/Desktop && curl -OL -s https://raw.githubusercontent.com/Oleg-Chashko/SSToolbox/main/SSToolbox_Beta/SSToolbox_Beta.sh
         sleep 3 && echo "\n${F_Red}•${F_Green}${Bold} Done.${No_Attributes}" && sleep 2
         clear
         ;;
 
+        # Open a page of All Releases on GitHub
+    4)
+        terminalWindowSize:90x25
+        open https://github.com/Oleg-Chashko/SSToolbox/releases
+        clear
+        ;;
+
         # Open Project page on GitHub
-    3)
+    5)
         terminalWindowSize:90x25
         open https://github.com/Oleg-Chashko/SSToolbox
         clear
