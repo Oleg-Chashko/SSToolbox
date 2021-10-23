@@ -46,79 +46,80 @@
 
 ## Commands List
 
-|Command|Description|
-|:----------:|----------|
-|*Network*|
-|**`1`**|Custom DNS servers for Wi-Fi|
-|**`2`**|Custom DNS servers for Ethernet|
-|**`3`**|Custom ping, traceroute test IPv4/IPv6 and Port Scanner|
-|**`4`**|Automatic ping and traceroute test IPv4/IPv6|
-|**`5`**|Custom setting a new Computer Name, Hostname, Local Hostname and NetBIOS Name|
-|**`6`**|Custom editing of the Hosts file: (Block IP addresses and Reroute Web addresses)|
-|**`7`**|Show Wireless Network Password|
-|**`8`**|Search Routers on local Networks, uses the default IP addresses|
-|**`9`**|Flushes local DNS cache, used for problems with loading sites, 404 error|
-|**`10`**|Release and Renew DHCP for all available device interfaces. (Requires a reboot)|
-|**`11`**|Spoofing the MAC address of the Wireless network to a randomly generated MAC address|
-|**`12`**|Check DNS records of the domain, to obtain the mapping between domain name, IPv4/IPv6|
-|**`13`**|Search all processes for all users and view network data by protocol TCP/UDP, IPv4/IPv6|
-|**`14`**|Stress Test Network with ICMP-Sweep and ICMP-Flood.|
-|**`15`**|Show information: Firewall, Wireless, Local Network, DHCP-/IP-/MAC-Addresses and etc.|
-|*Tweaks*|
-|**`16`**|Enable or Disable the show of Hidden files|
-|**`17`**|Enable or Disable the show of all File Extensions|
-|**`18`**|Enable or Disable the show of Attachments as Icons in the Apple Mail app|
-|**`19`**|Enable or Disable the show of the full path in the Finder 'Title' window|
-|**`20`**|Change the default Screenshot file format|
-|**`21`**|Enable or Disable Screenshot with shadow and adding extra pixels|
-|**`22`**|Enable or Disable the warning before emptying the Trash|
-|**`23`**|Enable or Disable warning when changing a file Extension|
-|**`24`**|Search (Current or Previous Scope or This Mac) folder by default|
-|**`25`**|Enable or Disable in TextEdit the create an Untitled Document at Launch|
-|**`26`**|Enable or Disable copy Email addresses as "foo@example.com" instead of "Foo Bar foo@example.com" in Apple Mail app|
-|*OS Management*|
-|**`27`**|Logs system Management: Cleaning the Logs and Inactive memory|
-|**`28`**|I/O system Management: Manually and Automatic Delete, Plugins Input and Output device|
-|**`29`**|Kernel OS Management: Cleaning kernel Extension, Rebuild Kexts Caches, etc. (Requires a reboot)|
-|**`30`**|Privacy Database Management: Custom reset apps permissions under Security and Privacy|
-|**`31`**|GateKeeper Management: Status, Enable or Disable, Remove app from Quarantine, Self-sign the app|
-|**`32`**|Process & Memory Management: Manage Processes, Terminate (Kill) a Process and Purge Memory|
-|**`33`**|Uninstalling applications: Browsers, Microsoft Office, Ad blocking extension, Virtual machines|
-|*About*|
-|**`A`**|About SSToolbox|
-|*Preferences*|
-|**`P`**|Color themes for the Terminal|
-|*Check for updates*|
-|**`C`**|Latest-/Beta-Release, Download to your Mac's desktop|
-|*Quit*|
-|**`Q`**|Deleting terminal command history and terminal to quit|
-## Command 33: Uninstalling applications List
-
-|Command|Description|
-|:----------:|----------|
-|*Web browsers*|
-|**`1`**|Uninstalling the Brave Browser|
-|**`2`**|Uninstalling the Opera Browser|
-|**`3`**|Uninstalling the Yandex Browser|
-|**`4`**|Uninstalling the Vivaldi Browser|
-|**`5`**|Uninstalling the Mozilla Firefox|
-|**`6`**|Uninstalling the Google Chrome|
-|**`7`**|Uninstalling the Microsoft Edge|
-|*Microsoft Office VL*|
-|**`8`**|Uninstalling the Microsoft Word|
-|**`9`**|Uninstalling the Microsoft Excel|
-|**`10`**|Uninstalling the Microsoft PowerPoint|
-|**`11`**|Uninstalling the Microsoft OneNote|
-|**`12`**|Uninstalling the Microsoft Outlook|
-|**`13`**|Uninstalling the Microsoft OneDrive|
-|**`14`**|Uninstalling the Microsoft AutoUpdate|
-|**`15`**|Uninstalling the Microsoft Office Volume License (VL) Serializer|
-|**`16`**|Uninstalling the Microsoft Office 2019-2021 (volume licensed versions)|
-|*Ad blocking extensions*|
-|**`17`**|Uninstalling the AdGuard for Safari extension|
-|*Virtual machines*|
-|**`18`**|Uninstalling the VMware Fusion|
-
+```
+🁢
+|__Network
+[1]___Custom DNS servers for Wi-Fi
+[2]___Custom DNS servers for Ethernet
+[3]___Custom ping, traceroute test IPv4/IPv6 and Port Scanner
+[4]___Automatic ping and traceroute test IPv4/IPv6
+[5]___Custom setting a new Computer Name, Hostname, Local Hostname and NetBIOS Name
+[6]___Custom editing of the Hosts file: (Block IP addresses and Reroute Web addresses)
+[7]___Show Wireless Network Password
+[8]___Search Routers on local Networks, uses the default IP addresses
+[9]___Flushes local DNS cache, used for problems with loading sites, 404 error
+[10]__Release and Renew DHCP for all available device interfaces. (Requires a reboot)
+[11]__Spoofing the MAC address of the Wireless network to a randomly generated MAC address
+[12]__Check DNS records of the domain, to obtain the mapping between domain name, IPv4/IPv6
+[13]__Search all processes for all users and view network data by protocol TCP/UDP, IPv4/IPv6
+[14]__Stress Test Network with ICMP-Sweep and ICMP-Flood
+[15]__Show information: Firewall, Wireless, Local Network, DHCP-/IP-/MAC-Addresses and etc.
+🁢
+|__Tweaks
+[16]__Enable or Disable the show of Hidden files
+[17]__Enable or Disable the show of all File Extensions
+[18]__Enable or Disable the show of Attachments as Icons in the Apple Mail app
+[19]__Enable or Disable the show of the full path in the Finder 'Title' window
+[20]__Change the default Screenshot file format
+[21]__Enable or Disable Screenshot with shadow and adding extra pixels
+[22]__Enable or Disable the warning before emptying the Trash
+[23]__Enable or Disable warning when changing a file Extension
+[24]__Search (Current or Previous Scope or This Mac) folder by default
+[25]__Enable or Disable in TextEdit the create an Untitled Document at Launch
+[26]__Enable or Disable copy Email addresses as "foo@example.com" instead of "Foo Bar foo@example.com" in Apple Mail app
+🁢
+|__OS Management
+[27]__Logs system Management: Cleaning the Logs and Inactive memory
+[28]__I/O system Management: Manually and Automatic Delete, Plugins Input and Output device
+[29]__Kernel OS Management: Cleaning kernel Extension, Rebuild Kexts Caches, etc. (Requires a reboot)
+[30]__Privacy Database Management: Custom reset apps permissions under Security and Privacy
+[31]__GateKeeper Management: Status, Enable or Disable, Remove app from Quarantine, Self-sign the app
+[32]__Process & Memory Management: Manage Processes, Terminate (Kill) a Process and Purge Memory
+[33]__Uninstalling applications: Browsers, Microsoft Office, Ad blocking extension, Virtual machines
+|     🁢
+|     |__Web browsers
+|     [1]___Uninstalling the Brave Browser
+|     [2]___Uninstalling the Opera Browser
+|     [3]___Uninstalling the Yandex Browser
+|     [4]___Uninstalling the Vivaldi Browser
+|     [5]___Uninstalling the Mozilla Firefox
+|     [6]___Uninstalling the Google Chrome
+|     [7]___Uninstalling the Microsoft Edge
+|     🁢
+|     |__Microsoft Office VL
+|     [8]___Uninstalling the Microsoft Word
+|     [9]___Uninstalling the Microsoft Excel
+|     [10]__Uninstalling the Microsoft PowerPoint
+|     [11]__Uninstalling the Microsoft OneNote
+|     [12]__Uninstalling the Microsoft Outlook
+|     [13]__Uninstalling the Microsoft OneDrive
+|     [14]__Uninstalling the Microsoft AutoUpdate
+|     [15]__Uninstalling the Microsoft Office Volume License (VL) Serializer
+|     [16]__Uninstalling the Microsoft Office 2019-2021 (volume licensed versions)
+|     🁢
+|     |__Ad blocking extensions
+|     [17]__Uninstalling the AdGuard for Safari extension
+|     🁢
+|     |__Virtual machines
+|     [18]__Uninstalling the VMware Fusion
+|     🁢
+🁢
+[A]bout SSToolbox
+[P]references...: Color themes for the Terminal
+[C]heck for updates: Latest-/Beta-Release, Download to your Mac's desktop
+[Q]uit SSToolbox: Deleting terminal command history and terminal to quit
+🁢
+```
 ## Download
 
 - (All releases) [Releases](https://github.com/Oleg-Chashko/SSToolbox/releases)
