@@ -125,30 +125,36 @@
 - (Latest stable release `.SH format`) [Download](https://github.com/Oleg-Chashko/SSToolbox/releases/latest/download/SSToolbox.sh)
 - (Latest stable release `.DMG format`) [Download](https://github.com/Oleg-Chashko/SSToolbox/releases/latest/download/SSToolbox.dmg)
 
-## Installation and First Start
+## Installation and First Start: `.DMG format`
 
 <p align="center">
   <img width="800px" src="https://raw.githubusercontent.com/Oleg-Chashko/SSToolbox/main/Images/Installation_and_First_Start.gif" />
 </p>
 
-## Terminal error: Operation not permitted
-
-1. Pull down the ` Apple menu` and choose `System Preferences`.
-2. Choose `Security & Privacy` control panel.
-3. Now select the `Privacy` tab, then from the left-side menu select `Full Disk Access`.
-4. Click the lock icon in the lower left corner of the preference panel and authenticate with an admin level login.
-5. Now click the `[+]` plus button to add an application with full disk access.
-6. Navigate to the `/Applications/Utilities/` folder.
-7. Choose `Terminal` to grant Terminal with `Full Disk Access` privileges.
-
-## Running the script: ******.sh
-#### Terminal error: Permission denied
-
+## First Start: `.SH format`
+#### Permission denied
 1. Running the terminal.
-2. Type the command `chmod u+x` and press the `Space bar`.
+2. Type the command `chmod u+x` and press the `Space bar`
 3. Drag the script file to the terminal window and press the `Return` key.
-
 #### Running the script
-
-1. Drag the script `******.sh` to the terminal window.
+1. Drag the script `SSToolbox.sh` to the terminal window.
 2. Press the `Return` key.
+
+## Note
+⚠ _Enabling Full Disk Access in macOS for the terminal._<br>
+⚠ _Some functions require Xcode or Xcode Command Line Tools._<br>
+🟢 _The Xcode Command Line Tools can be installed using the `Command 31`_
+
+## Tips
+#### Terminal error: Operation not permitted
+1. Pull down the ` Apple menu` and choose `System Preferences`
+2. Choose `Security & Privacy` control panel.
+3. Now select the `Privacy` tab, then from the left-side menu select `Full Disk Access`
+4. Click the lock icon in the lower left corner of the preference panel.
+5. Authenticate with an administrator level login.
+6. Now click the `[+]` plus button to add an application with full disk access.
+7. Navigate to the `/Applications/Utilities/` folder.
+8. Choose `Terminal` to grant Terminal with `Full Disk Access` privileges.
+
+#### Not working: Self-sign the app `Command 31`
+1. Install Xcode Command Line Tools or Xcode.
