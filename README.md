@@ -144,8 +144,3 @@
 5. Now click the `[+]` plus button to add an application with full disk access.
 6. Navigate to the `/Applications/Utilities/` folder.
 7. Choose `Terminal` to grant Terminal with `Full Disk Access` privileges.
-
-## Running the script: ######.sh
-
-1. Drag the script `######.sh` to the terminal window.
-2. Press the `Return` key.
