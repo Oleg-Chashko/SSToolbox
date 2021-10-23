@@ -121,7 +121,9 @@
 
 ## Download
 
-- (Latest stable release) [Download](https://github.com/Oleg-Chashko/SSToolbox/releases)
+- (All releases) [Releases](https://github.com/Oleg-Chashko/SSToolbox/releases)
+- (Latest stable release `.SH format`) [Download](https://github.com/Oleg-Chashko/SSToolbox/releases/latest/download/SSToolbox.sh)
+- (Latest stable release `.DMG format`) [Download](https://github.com/Oleg-Chashko/SSToolbox/releases/latest/download/SSToolbox.dmg)
 
 ## Installation and First Start
 
