@@ -129,75 +129,23 @@
   <img width="800px" src="https://raw.githubusercontent.com/Oleg-Chashko/SSToolbox/main/Images/Installation_and_First_Start.gif" />
 </p>
 
-## Note
 
-⚠ _Give permission for this script to run._<br>
-⚠ _Enabling Full Disk Access in macOS for the terminal._<br>
-⚠ _You will need to enter a password to obtain elevated rights._<br>
-
-## Tips
-
-#### Terminal error: "permission denied"
-
-<p align="center">
-  <img width="800px" src="https://raw.githubusercontent.com/Oleg-Chashko/SSToolbox/main/Images/Permission_denied.png" />
-</p>
-
-#### Give permission for this script to run:
+## Terminal error: Permission denied
 
 1. Running the terminal.
 2. Type the command `chmod u+x`, press the `Space bar`, drag the script file to the terminal window and press the `Return` key.
-   <br><br>
 
-<p align="center">
-  <img width="800px" src="https://raw.githubusercontent.com/Oleg-Chashko/SSToolbox/main/Images/Terminal_chmod_u+x.gif" />
-</p>
-<br>
-
----
-
-#### Terminal error: “Operation not permitted”
-
-<p align="center">
-  <img width="800px" src="https://raw.githubusercontent.com/Oleg-Chashko/SSToolbox/main/Images/Operation_not_permitted.png" />
-</p>
-
-#### Enabling Full Disk Access in macOS for the terminal:
+## Terminal error: Operation not permitted
 
 1. Pull down the ` Apple menu` and choose `System Preferences`.
 2. Choose `Security & Privacy` control panel.
 3. Now select the `Privacy` tab, then from the left-side menu select `Full Disk Access`.
 4. Click the lock icon in the lower left corner of the preference panel and authenticate with an admin level login.
 5. Now click the `[+]` plus button to add an application with full disk access.
-
-<p align="center">
-  <img width="800px" src="https://raw.githubusercontent.com/Oleg-Chashko/SSToolbox/main/Images/Terminal_1.png" />
-</p>
-
 6. Navigate to the `/Applications/Utilities/` folder.
-
-<p align="center">
-  <img width="800px" src="https://raw.githubusercontent.com/Oleg-Chashko/SSToolbox/main/Images/Terminal_2.png" />
-</p>
-
 7. Choose `Terminal` to grant Terminal with `Full Disk Access` privileges.
 
-<p align="center">
-  <img width="800px" src="https://raw.githubusercontent.com/Oleg-Chashko/SSToolbox/main/Images/Terminal_3.png" />
-</p>
+## Running the script: ######.sh
 
----
-
-#### Running the script:
-
-1. Drag the `script` to the terminal window.
+1. Drag the script `######.sh` to the terminal window.
 2. Press the `Return` key.
-   <br><br>
-
-<p align="center">
-  <img width="800px" src="https://raw.githubusercontent.com/Oleg-Chashko/SSToolbox/main/Images/Running.gif" />
-</p>
-
-## Localization
-
-Localization were done using [DeepL](https://www.deepl.com/translator) and Google Translate.
