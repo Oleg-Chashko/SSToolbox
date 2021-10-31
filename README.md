@@ -128,6 +128,11 @@
 
 ## Installation and First Start: `.DMG format`
 
+⚠ Due to the fact that the application is not digitally signed,<br>
+the operating system will try to prevent you to run it because of security concerns.<br>
+🟢 To run it you can hold the ⌥ (Alt/Option) key and right click on the SSToolbox icon,<br>
+then Always Open With, open in the Terminal and then click open.
+
 <p align="center">
   <img width="800px" src="https://raw.githubusercontent.com/Oleg-Chashko/SSToolbox/main/Images/Installation_and_First_Start.gif" />
 </p>
