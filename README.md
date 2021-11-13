@@ -17,12 +17,6 @@
   <a href="https://github.com/Oleg-Chashko/SSToolbox/issues">
   <img alt="GitHub issues" src="https://img.shields.io/github/issues-raw/Oleg-Chashko/SSToolbox.svg?style=flat" />
 </a>
-  <a href="https://github.com/Oleg-Chashko/SSToolbox/stargazers">
-  <img alt="Stars" src="https://img.shields.io/github/stars/Oleg-Chashko/SSToolbox.svg?style=flat" />
-</a>
-  <a href="https://github.com/Oleg-Chashko/SSToolbox/network/members">
-  <img alt="Forks" src="https://img.shields.io/github/forks/Oleg-Chashko/SSToolbox.svg?style=flat" />
-</a>
 </p>
 
 ## Preview
