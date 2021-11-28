@@ -2348,7 +2348,7 @@ gateKeeperManagement() {
 
         # Remove app from GateKeeper Quarantine
     4)
-        terminalWindowSize:90x25
+        terminalWindowSize:112x25
         echo "\n•${F_Red}${Bold} Remove app from GateKeeper Quarantine.${No_Attributes}\n"
         read "? Drag & drop the app on this window and then press Return: " FILEPATH
         askPassword
@@ -2358,7 +2358,7 @@ gateKeeperManagement() {
 
         # Self-sign the app. Require Xcode or Xcode CLT (Command Line Tools)
     5)
-        terminalWindowSize:90x25
+        terminalWindowSize:112x25
         echo "\n•${F_Red}${Bold} Self-sign the app. Require Xcode or Xcode CLT (Command Line Tools).${No_Attributes}\n"
         read "? Drag & drop the app on this window and then press Return: " FILEPATH
         askPassword
