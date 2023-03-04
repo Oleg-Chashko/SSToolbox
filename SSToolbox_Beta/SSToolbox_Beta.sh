@@ -986,7 +986,7 @@ customPingAndTracerouteTestIPv4/IPv6() {
         echo "•${F_Red}${Bold} Test Traceroute IPv6.${No_Attributes}"
         echo "\n──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╮"
         read "? To which IP or Host address you want to send the test packets: " HOST
-        read "? Send packets of specified IP protocol supported are: ICMP(-I) or UDP( ): " PROTOCOL
+        read "? Send packets of specified IP protocol supported are: ICMP(-I) or UDP(-U): " PROTOCOL
         echo "──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯"
         echo "\n•${F_Red}${Bold} Testing Traceroute IPv6.${No_Attributes}\n"
         traceroute6 -w 1 -l "$PROTOCOL" -m 30 "$HOST"
