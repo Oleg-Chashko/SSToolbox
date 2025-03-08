@@ -134,7 +134,7 @@ the operating system will try to prevent you to run it because of security conce
 > 1. Running the terminal.
 > 2. Type the command `chmod u+x` and press the `Space bar`
 > 3. Drag the script file to the terminal window and press the `Return` key.
-
+>
 > #### Running the script
 > 1. Drag the script `SSToolbox.sh` to the terminal window.
 > 2. Press the `Return` key.
