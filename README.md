@@ -156,6 +156,6 @@ then `Always Open With`, open in the `Terminal` and then choose `Open`
 > 6. Now click the `[+]` plus button to add an application with full disk access.
 > 7. Navigate to the `/Applications/Utilities/` folder.
 > 8. Choose `Terminal` to grant Terminal with `Full Disk Access` privileges.
-> 
+
 > #### Not working: Self-sign the app `Command 31`
 > Install Xcode Command Line Tools or Xcode.
