@@ -118,9 +118,11 @@
 
 ## Installation and First Start: `.DMG format`
 
-⚠ Due to the fact that the application is not digitally signed,<br>
+> [!IMPORTANT]
+> 
+> Due to the fact that the application is not digitally signed,<br>
 the operating system will try to prevent you to run it because of security concerns.<br>
-🟢 To run it you can hold the `⌥` aka `Alt/Option` key and right click the `SSToolbox`,<br>
+> To run it you can hold the `⌥` aka `Alt/Option` key and right click the `SSToolbox`,<br>
 then `Always Open With`, open in the `Terminal` and then choose `Open`
 
 <p align="center">
