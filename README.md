@@ -159,5 +159,4 @@ the operating system will try to prevent you to run it because of security conce
 > - Install Xcode Command Line Tools or Xcode.
 
 > [!CAUTION]
-
 > - Before creating Issues, we strongly recommend that you read the [REDME](https://github.com/Oleg-Chashko/SSToolbox/blob/main/README.md) section.
