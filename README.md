@@ -119,11 +119,9 @@
 ## Installation and First Start: `.DMG format`
 
 > [!IMPORTANT]
-> 
-> Due to the fact that the application is not digitally signed,<br>
-the operating system will try to prevent you to run it because of security concerns.<br>
-> To run it you can hold the `⌥` aka `Alt/Option` key and right click the `SSToolbox`,<br>
-then `Always Open With`, open in the `Terminal` and then choose `Open`
+> - Due to the fact that the application is not digitally signed,
+the operating system will try to prevent you to run it because of security concerns.
+> - To run it you can hold the `⌥` aka `Alt/Option` key and right click the `SSToolbox`, then `Always Open With`, open in the `Terminal` and then choose `Open`
 
 <p align="center">
   <img width="800px" src="https://raw.githubusercontent.com/Oleg-Chashko/SSToolbox/main/Images/Installation_and_First_Start.gif" />
@@ -141,10 +139,10 @@ then `Always Open With`, open in the `Terminal` and then choose `Open`
 > 1. Drag the script `SSToolbox.sh` to the terminal window.
 > 2. Press the `Return` key.
 
-> [!NOTE]\
-> _Enabling Full Disk Access in macOS for the terminal._<br>
-> _Some functions require Xcode or Xcode Command Line Tools._<br>
-> _The Xcode Command Line Tools can be installed using the `Command 31`_
+> [!NOTE]
+> - Enabling Full Disk Access in macOS for the terminal.
+> - Some functions require Xcode or Xcode Command Line Tools.
+> - The Xcode Command Line Tools can be installed using the `Command 31`
 
 > [!TIP]
 > #### Terminal error: Operation not permitted
@@ -158,4 +156,8 @@ then `Always Open With`, open in the `Terminal` and then choose `Open`
 > 8. Choose `Terminal` to grant Terminal with `Full Disk Access` privileges.
 
 > #### Not working: Self-sign the app `Command 31`
-> Install Xcode Command Line Tools or Xcode.
+> - Install Xcode Command Line Tools or Xcode.
+
+> [!CAUTION]
+
+> - Before creating Issues, we strongly recommend that you read the [REDME](https://github.com/Oleg-Chashko/SSToolbox/blob/main/README.md) section.
