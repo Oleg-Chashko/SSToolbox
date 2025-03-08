@@ -6,13 +6,13 @@
 
 <p align="center">
   <a href="https://github.com/Oleg-Chashko/SSToolbox/releases/latest">
-  <img alt="Latest stable release" src="https://img.shields.io/github/release/Oleg-Chashko/SSToolbox.svg?style=flat" /></a>
+  <img alt="Latest stable release" src="https://img.shields.io/github/release/Oleg-Chashko/SSToolbox.svg?color=%2300834a" /></a>
   <a href="https://github.com/Oleg-Chashko/SSToolbox/releases/latest">
-  <img alt="Download count" src="https://img.shields.io/github/downloads/Oleg-Chashko/SSToolbox/total.svg?style=flat" /></a>
+  <img alt="Download count" src="https://img.shields.io/github/downloads/Oleg-Chashko/SSToolbox/total.svg?color=%2300834a" /></a>
   <a href="https://github.com/Oleg-Chashko/SSToolbox/commits">
-  <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/Oleg-Chashko/SSToolbox.svg?style=flat" /></a>
+  <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/Oleg-Chashko/SSToolbox.svg?color=%2300834a" /></a>
   <a href="https://github.com/Oleg-Chashko/SSToolbox/issues">
-  <img alt="GitHub issues" src="https://img.shields.io/github/issues-raw/Oleg-Chashko/SSToolbox.svg?style=flat" /></a>
+  <img alt="GitHub issues" src="https://img.shields.io/github/issues-raw/Oleg-Chashko/SSToolbox.svg?color=%2300834a" /></a>
 </p>
 
 ## Preview
