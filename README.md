@@ -9,12 +9,15 @@
   <img alt="Latest stable release" src="https://img.shields.io/github/release/Oleg-Chashko/SSToolbox.svg?style=for-the-badge" /></a>
   <a href="https://github.com/Oleg-Chashko/SSToolbox/releases/latest">
   <img alt="Download count" src="https://img.shields.io/github/downloads/Oleg-Chashko/SSToolbox/total.svg?style=for-the-badge" /></a>
+  <a href="https://github.com/Oleg-Chashko?tab=repositories">
+  <img src="https://img.shields.io/github/stars/Oleg-Chashko/SSToolbox.svg?style=for-the-badge"></a>
+  <br>
   <a href="https://github.com/Oleg-Chashko/SSToolbox/commits">
   <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/Oleg-Chashko/SSToolbox.svg?style=for-the-badge" /></a>
   <a href="https://github.com/Oleg-Chashko/SSToolbox/issues">
   <img alt="GitHub issues" src="https://img.shields.io/github/issues-raw/Oleg-Chashko/SSToolbox.svg?style=for-the-badge" /></a>
-  <a href="https://github.com/Oleg-Chashko?tab=repositories">
-  <img src="https://img.shields.io/github/stars/Oleg-Chashko/SSToolbox.svg?style=for-the-badge">
+  <a href="https://github.com/Oleg-Chashko/SSToolbox/issues?q=is%3Aissue%20state%3Aclosed">
+  <img alt="GitHub closed issues" src="https://img.shields.io/github/issues-closed-raw/Oleg-Chashko/SSToolbox.svg?style=for-the-badge" /></a>
 </p>
 
 ## Preview
