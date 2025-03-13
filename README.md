@@ -11,8 +11,8 @@
   <img alt="GitHub total downloads" src="https://img.shields.io/github/downloads/Oleg-Chashko/SSToolbox/total?label=total%20downloads&color=3567AD&style=for-the-badge" /></a>
   <a href="https://github.com/Oleg-Chashko/SSToolbox/releases/latest">
   <img alt="GitHub latest version downloads" src="https://img.shields.io/github/downloads/Oleg-Chashko/SSToolbox/latest/total?label=latest%20version%20downloads&color=3567AD&style=for-the-badge" /></a>
-  <a href="https://github.com/Oleg-Chashko?tab=repositories">
-  <img alt="GitHub stars" src="https://img.shields.io/github/stars/Oleg-Chashko/SSToolbox?color=3567AD&style=for-the-badge"></a>
+  <a href="https://github.com/Oleg-Chashko/SSToolbox/stargazers">
+  <img alt="GitHub stargazers" src="https://img.shields.io/github/stars/Oleg-Chashko/SSToolbox?color=3567AD&style=for-the-badge"></a>
   <br>
   <a href="https://github.com/Oleg-Chashko/SSToolbox/commits">
   <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/Oleg-Chashko/SSToolbox?color=3567AD&style=for-the-badge" /></a>
