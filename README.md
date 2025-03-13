@@ -2,7 +2,7 @@
   <img width="280px" src="https://raw.githubusercontent.com/Oleg-Chashko/SSToolbox/main/Images/SSToolbox_logo.png" />
 </p>
 
-<h3 align="center">SSToolbox is a toolkit for managing your Mac</h3>
+<h3 align="center">SSToolbox is a toolkit for managing your macOS</h3>
 
 <p align="center">
   <a href="https://github.com/Oleg-Chashko/SSToolbox/releases/latest">
