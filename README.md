@@ -15,7 +15,9 @@
   <img alt="GitHub stargazers" src="https://img.shields.io/github/stars/Oleg-Chashko/SSToolbox?color=3567AD&style=for-the-badge"></a>
   <br>
   <a href="https://github.com/Oleg-Chashko/SSToolbox/graphs/contributors">
-  <img alt="Github Contributors" src="https://img.shields.io/github/contributors/Oleg-Chashko/SSToolbox?color=3567AD&style=for-the-badge" /></a>
+  <img alt="Github contributors" src="https://img.shields.io/github/contributors/Oleg-Chashko/SSToolbox?color=3567AD&style=for-the-badge" /></a>
+  <a href="https://github.com/Oleg-Chashko/SSToolbox/discussions">
+  <img alt="Github discussions" src="https://img.shields.io/github/discussions/Oleg-Chashko/SSToolbox?color=3567AD&style=for-the-badge" /></a>
   <a href="https://github.com/Oleg-Chashko/SSToolbox/commits">
   <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/Oleg-Chashko/SSToolbox?color=3567AD&style=for-the-badge" /></a>
   <a href="https://github.com/Oleg-Chashko/SSToolbox/issues">
