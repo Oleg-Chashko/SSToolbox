@@ -6,24 +6,24 @@
 
 <p align="center">
   <a href="https://github.com/Oleg-Chashko/SSToolbox/releases/latest">
-  <img alt="GitHub latest stable release" src="https://img.shields.io/github/release/Oleg-Chashko/SSToolbox?color=3567AD&style=for-the-badge" /></a>
+  <img alt="GitHub latest stable release" src="https://img.shields.io/github/release/Oleg-Chashko/SSToolbox?color=3567AD&style=flat-square" /></a>
   <a href="https://github.com/Oleg-Chashko/SSToolbox/releases">
-  <img alt="GitHub total downloads" src="https://img.shields.io/github/downloads/Oleg-Chashko/SSToolbox/total?label=total%20downloads&color=3567AD&style=for-the-badge" /></a>
+  <img alt="GitHub total downloads" src="https://img.shields.io/github/downloads/Oleg-Chashko/SSToolbox/total?label=total%20downloads&color=3567AD&style=flat-square" /></a>
   <a href="https://github.com/Oleg-Chashko/SSToolbox/releases/latest">
-  <img alt="GitHub latest version downloads" src="https://img.shields.io/github/downloads/Oleg-Chashko/SSToolbox/latest/total?label=latest%20version%20downloads&color=3567AD&style=for-the-badge" /></a>
+  <img alt="GitHub latest version downloads" src="https://img.shields.io/github/downloads/Oleg-Chashko/SSToolbox/latest/total?label=latest%20version%20downloads&color=3567AD&style=flat-square" /></a>
   <a href="https://github.com/Oleg-Chashko/SSToolbox/stargazers">
-  <img alt="GitHub stargazers" src="https://img.shields.io/github/stars/Oleg-Chashko/SSToolbox?color=3567AD&style=for-the-badge"></a>
+  <img alt="GitHub stargazers" src="https://img.shields.io/github/stars/Oleg-Chashko/SSToolbox?color=3567AD&style=flat-square"></a>
   <br>
   <a href="https://github.com/Oleg-Chashko/SSToolbox/graphs/contributors">
-  <img alt="Github contributors" src="https://img.shields.io/github/contributors/Oleg-Chashko/SSToolbox?color=3567AD&style=for-the-badge" /></a>
+  <img alt="Github contributors" src="https://img.shields.io/github/contributors/Oleg-Chashko/SSToolbox?color=3567AD&style=flat-square" /></a>
   <a href="https://github.com/Oleg-Chashko/SSToolbox/discussions">
-  <img alt="Github discussions" src="https://img.shields.io/github/discussions/Oleg-Chashko/SSToolbox?color=3567AD&style=for-the-badge" /></a>
+  <img alt="Github discussions" src="https://img.shields.io/github/discussions/Oleg-Chashko/SSToolbox?color=3567AD&style=flat-square" /></a>
   <a href="https://github.com/Oleg-Chashko/SSToolbox/commits">
-  <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/Oleg-Chashko/SSToolbox?color=3567AD&style=for-the-badge" /></a>
+  <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/Oleg-Chashko/SSToolbox?color=3567AD&style=flat-square" /></a>
   <a href="https://github.com/Oleg-Chashko/SSToolbox/issues">
-  <img alt="GitHub issues" src="https://img.shields.io/github/issues-raw/Oleg-Chashko/SSToolbox?color=3567AD&style=for-the-badge" /></a>
+  <img alt="GitHub issues" src="https://img.shields.io/github/issues-raw/Oleg-Chashko/SSToolbox?color=3567AD&style=flat-square" /></a>
   <a href="https://github.com/Oleg-Chashko/SSToolbox/issues?q=is%3Aissue%20state%3Aclosed">
-  <img alt="GitHub closed issues" src="https://img.shields.io/github/issues-closed-raw/Oleg-Chashko/SSToolbox?color=3567AD&style=for-the-badge" /></a>
+  <img alt="GitHub closed issues" src="https://img.shields.io/github/issues-closed-raw/Oleg-Chashko/SSToolbox?color=3567AD&style=flat-square" /></a>
 </p>
 
 ## Preview
