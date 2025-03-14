@@ -26,26 +26,23 @@
   <img alt="GitHub closed issues" src="https://img.shields.io/github/issues-closed-raw/Oleg-Chashko/SSToolbox?color=3567AD&style=flat-square" /></a>
 </p>
 
-## Preview
-
-### Main menu
+<h2 align="left">Preview</h2>
+<h3 align="left">Main menu</h3>
 <p align="center">
   <img width="800px" src="https://raw.githubusercontent.com/Oleg-Chashko/SSToolbox/main/Images/Preview_1.png" />
 </p>
 
-### Adding custom DNS servers
-
+<h3 align="left">Adding custom DNS servers</h3>
 <p align="center">
   <img width="800px" src="https://raw.githubusercontent.com/Oleg-Chashko/SSToolbox/main/Images/Preview_2.png" />
 </p>
 
-### Uninstalling applications
-
+<h3 align="left">Uninstalling applications</h3>
 <p align="center">
   <img width="800px" src="https://raw.githubusercontent.com/Oleg-Chashko/SSToolbox/main/Images/Preview_3.png" />
 </p>
 
-## Commands List
+<h2 align="left">Commands List</h2>
 
 ```
 🁢
@@ -121,7 +118,7 @@
 [Q]uit SSToolbox: Deleting terminal command history and terminal to quit
 🁢
 ```
-## Download
+<h2 align="left">Download</h2>
 
 - (All releases) [Releases](https://github.com/Oleg-Chashko/SSToolbox/releases)
 - (Latest stable release `.SH format`) [Download](https://github.com/Oleg-Chashko/SSToolbox/releases/latest/download/SSToolbox.sh)
