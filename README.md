@@ -1,5 +1,5 @@
 <p align="center">
-  <img width="280px" src="https://raw.githubusercontent.com/Oleg-Chashko/SSToolbox/main/Images/SSToolbox_logo.png" />
+  <img width="160" height="160" src="https://raw.githubusercontent.com/Oleg-Chashko/SSToolbox/main/Images/SSToolbox_logo.png" />
 </p>
 
 <h3 align="center">SSToolbox is a toolkit for managing your macOS</h3>
