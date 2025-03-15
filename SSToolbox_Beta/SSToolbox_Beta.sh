@@ -530,10 +530,10 @@ mainMenu() {
     echo "│${F_Red}${Bold} 27${No_Attributes} │ Logs system Management: Cleaning the Logs and Inactive memory                                                               │"
     echo "│${F_Red}${Bold} 28${No_Attributes} │ I/O system Management: Manually and Automatic Delete, Plugins Input and Output device                                       │"
     echo "│${F_Red}${Bold} 29${No_Attributes} │ Kernel OS Management: Cleaning kernel Extension, Rebuild Kexts Caches, etc. (Requires a reboot)         ╭───────────────────┤"
-    echo "│${F_Red}${Bold} 30${No_Attributes} │ Privacy Database Management: Custom reset apps permissions under Security and Privacy                   │ ${F_Red}${Bold}A${No_Attributes}bout SSToolbox   │"
-    echo "│${F_Red}${Bold} 31${No_Attributes} │ GateKeeper Management: Status, Enable or Disable, Remove app from Quarantine, Self-sign the app         │ ${F_Red}${Bold}P${No_Attributes}references...    │"
-    echo "│${F_Red}${Bold} 32${No_Attributes} │ Process & Memory Management: Manage Processes, Terminate (Kill) a Process and Purge Memory              │ ${F_Red}${Bold}C${No_Attributes}heck for updates │"
-    echo "│${F_Red}${Bold} 33${No_Attributes} │ Uninstalling applications: Browsers, Microsoft Office, Ad blocking extension, Virtual machines          │ ${F_Red}${Bold}Q${No_Attributes}uit SSToolbox    │"
+    echo "│${F_Red}${Bold} 30${No_Attributes} │ Privacy Database Management: Custom reset apps permissions under Security and Privacy                   │ ${F_Red}${Bold}P${No_Attributes}references       │"
+    echo "│${F_Red}${Bold} 31${No_Attributes} │ GateKeeper Management: Status, Enable or Disable, Remove app from Quarantine, Self-sign the app         │ ${F_Red}${Bold}C${No_Attributes}heck for updates │"
+    echo "│${F_Red}${Bold} 32${No_Attributes} │ Process & Memory Management: Manage Processes, Terminate (Kill) a Process and Purge Memory              │ ${F_Red}${Bold}A${No_Attributes}bout             │"
+    echo "│${F_Red}${Bold} 33${No_Attributes} │ Uninstalling applications: Browsers, Microsoft Office, Ad blocking extension, Virtual machines          │ ${F_Red}${Bold}Q${No_Attributes}uit              │"
     echo "╰────┴─────────────────────────────────────────────────────────────────────────────────────────────────────────┴───────────────────╯\n"
 }
 
